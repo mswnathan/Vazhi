@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+
+# Claude Code local state (per-environment, may contain settings.local.json with secrets)
+.claude/
+
+# Local data mount (not part of the static site)
+mnt/
+
+# Editor + OS noise
+*.swp
+*~
+.vscode/
+.idea/
+
+# Local backups
+*.bak
+*.bak.*

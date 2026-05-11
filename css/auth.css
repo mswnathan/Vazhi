@@ -1,0 +1,219 @@
+/* Vazhi — Auth UI styles */
+
+.vz-auth-btn {
+  position: fixed;
+  top: 14px;
+  right: 18px;
+  z-index: 1000;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  border: 1px solid rgba(255,255,255,.6);
+  background: rgba(0,0,0,.35);
+  color: #fff;
+  font: 600 14px 'Plus Jakarta Sans', sans-serif;
+  border-radius: 999px;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: background .15s;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.vz-auth-btn:hover { background: rgba(255,255,255,.22); }
+.vz-auth-btn.signed-in { background: rgba(255,255,255,.92); color: #1a1a1a; border-color: transparent; }
+.vz-auth-avatar {
+  width: 24px; height: 24px; border-radius: 50%;
+  background: linear-gradient(135deg,#6c5ce7,#0984e3);
+  color: #fff; display: inline-flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 700;
+}
+.vz-auth-label { white-space: nowrap; }
+.vz-auth-icon { font-size: 16px; line-height: 1; }
+
+/* User menu */
+.vz-user-menu {
+  position: fixed;
+  display: none;
+  min-width: 220px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,.15);
+  padding: 14px;
+  z-index: 9999;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.vz-user-menu.open { display: block; }
+.vz-user-menu-name { font-weight: 700; font-size: 14px; color: #111; }
+.vz-user-menu-email { font-size: 12px; color: #666; margin-top: 2px; word-break: break-all; }
+.vz-user-menu hr { border: 0; border-top: 1px solid #eee; margin: 10px 0; }
+.vz-user-menu button {
+  width: 100%;
+  padding: 8px 10px;
+  background: #f5f5f7;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font: 600 13px 'Plus Jakarta Sans', sans-serif;
+  color: #c0392b;
+}
+.vz-user-menu button:hover { background: #fbeaea; }
+
+/* Modal */
+.vz-auth-modal {
+  position: fixed; inset: 0;
+  background: rgba(15,17,23,.55);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 20px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.vz-auth-modal.open { display: flex; }
+.vz-auth-box {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 32px 28px 26px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.3);
+  max-height: 92vh;
+  overflow-y: auto;
+}
+.vz-auth-x {
+  position: absolute; top: 12px; right: 14px;
+  background: transparent; border: 0; font-size: 18px;
+  color: #999; cursor: pointer;
+}
+.vz-auth-title { font: 700 22px 'Fraunces', serif; color: #111; }
+.vz-auth-sub { color: #555; font-size: 13px; margin: 6px 0 18px; line-height: 1.5; }
+.vz-auth-tabs { display: flex; gap: 6px; background: #f3f4f6; border-radius: 10px; padding: 4px; margin-bottom: 18px; }
+.vz-auth-tab {
+  flex: 1; padding: 8px; border: 0; background: transparent;
+  border-radius: 7px; cursor: pointer;
+  font: 600 13px 'Plus Jakarta Sans', sans-serif; color: #555;
+}
+.vz-auth-tab.active { background: #fff; color: #111; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+.vz-auth-google {
+  width: 100%; padding: 11px;
+  border: 1px solid #ddd; border-radius: 10px;
+  background: #fff; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  font: 600 14px 'Plus Jakarta Sans', sans-serif;
+  color: #222;
+}
+.vz-auth-google:hover { background: #fafafa; }
+.vz-google-g {
+  width: 20px; height: 20px; border-radius: 50%;
+  background: conic-gradient(from -45deg, #ea4335 0 25%, #fbbc05 0 50%, #34a853 0 75%, #4285f4 0);
+  color: #fff; display: inline-flex; align-items: center; justify-content: center;
+  font: 700 12px 'Plus Jakarta Sans', sans-serif;
+}
+.vz-auth-or {
+  text-align: center; color: #999; font-size: 12px;
+  margin: 14px 0; position: relative;
+}
+.vz-auth-or::before, .vz-auth-or::after {
+  content: ''; position: absolute; top: 50%; width: 42%; height: 1px; background: #eee;
+}
+.vz-auth-or::before { left: 0; } .vz-auth-or::after { right: 0; }
+
+.vz-auth-modal form { display: flex; flex-direction: column; gap: 10px; }
+.vz-auth-modal input {
+  padding: 11px 13px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font: 400 14px 'Plus Jakarta Sans', sans-serif;
+  outline: none;
+}
+.vz-auth-modal input:focus { border-color: #6c5ce7; box-shadow: 0 0 0 3px rgba(108,92,231,.15); }
+.vz-auth-primary {
+  padding: 11px;
+  background: linear-gradient(135deg,#6c5ce7,#0984e3);
+  color: #fff; border: 0; border-radius: 10px; cursor: pointer;
+  font: 700 14px 'Plus Jakarta Sans', sans-serif; margin-top: 4px;
+}
+.vz-auth-primary:hover { filter: brightness(1.05); }
+.vz-auth-link {
+  background: transparent; border: 0; color: #6c5ce7; cursor: pointer;
+  font: 500 12px 'Plus Jakarta Sans', sans-serif; align-self: center;
+}
+.vz-auth-fine { color: #777; font-size: 12px; line-height: 1.5; }
+.vz-auth-err {
+  display: none; margin-top: 12px;
+  padding: 10px 12px; border-radius: 8px;
+  background: #fdecea; color: #b71c1c;
+  font-size: 13px;
+}
+
+/* Shortlist toggle button in colleges filter bar */
+.vz-shortlist-btn {
+  padding: 8px 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  background: #fff;
+  color: #6b7280;
+  cursor: pointer;
+  font: 600 13px 'Plus Jakarta Sans', sans-serif;
+  white-space: nowrap;
+  transition: all .15s;
+}
+.vz-shortlist-btn:hover { border-color: #ef4444; color: #ef4444; }
+.vz-shortlist-btn.active {
+  background: linear-gradient(135deg,#ef4444,#dc2626);
+  color: #fff;
+  border-color: #dc2626;
+}
+.vz-shortlist-count { font-weight: 700; }
+
+/* Save college button (heart) */
+.vz-save-btn {
+  background: transparent;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font: 600 12px 'Plus Jakarta Sans', sans-serif;
+  color: #6b7280;
+  display: inline-flex; align-items: center; gap: 4px;
+  transition: all .15s;
+}
+.vz-save-btn:hover { border-color: #ef4444; color: #ef4444; }
+.vz-save-btn.saved { background: #fee2e2; border-color: #ef4444; color: #b91c1c; }
+
+/* Psychometric sign-in gate */
+.psy-gate {
+  max-width: 520px;
+  margin: 60px auto;
+  text-align: center;
+  padding: 40px 28px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.06);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.psy-gate-ico { font-size: 42px; margin-bottom: 12px; }
+.psy-gate h2 { font: 700 22px 'Fraunces', serif; color: #111; margin: 0 0 10px; }
+.psy-gate p { color: #555; font-size: 14px; line-height: 1.6; margin: 0 0 22px; }
+.psy-gate-btn {
+  padding: 12px 24px;
+  background: linear-gradient(135deg,#6c5ce7,#0984e3);
+  color: #fff; border: 0; border-radius: 10px; cursor: pointer;
+  font: 700 14px 'Plus Jakarta Sans', sans-serif;
+}
+.psy-gate-link {
+  display: block; margin: 14px auto 0;
+  background: transparent; border: 0; color: #6c5ce7; cursor: pointer;
+  font: 500 13px 'Plus Jakarta Sans', sans-serif;
+}
+
+@media (max-width: 600px) {
+  .vz-auth-label { display: none; }
+  .vz-auth-btn { padding: 6px 10px; }
+  .vz-auth-box { padding: 26px 20px 20px; }
+}

@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vazhi வழி — Your Guide from Class 12 to Career</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Noto+Sans+Tamil:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/vazhi.css?v=3">
+<link rel="stylesheet" href="css/auth.css?v=1">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════
+     VAZHI HEADER
+════════════════════════════════════════════════ -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo-wrap" href="#" onclick="switchTab('home');return false;">
+      <div class="logo-icon">வ</div>
+      <div class="logo-text-wrap">
+        <span class="logo-en">Vazhi</span>
+        <span class="logo-ta">வழி</span>
+      </div>
+    </a>
+    <nav class="tab-nav">
+<button class="tab-btn" onclick="switchTab('psychometric')">🧠 Know Yourself</button>
+<button class="tab-btn" onclick="switchTab('find')">🔍 Find My Path</button>
+      <button class="tab-btn" onclick="switchTab('courses')">📚 After Class 12</button>
+      <button class="tab-btn" onclick="switchTab('after-ug')">🎓 After UG</button>
+      <button class="tab-btn" onclick="switchTab('scholarships')">💰 Scholarships</button>
+      <button class="tab-btn" onclick="switchTab('internships')">🌐 Internships</button>
+      <button class="tab-btn" onclick="switchTab('market')">📈 Salaries & Trends</button>
+    </nav>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════
+     COURSES SUB-NAV (shown only when Courses & Exams tab is active)
+════════════════════════════════════════════════ -->
+<div id="courses-subnav" style="display:none">
+  <div class="exam-mode-tabs courses-mode-tabs">
+    <button class="exam-mode-btn active" data-cmode="explore" onclick="setCoursesMode('explore')">📚 UG Courses</button>
+    <button class="exam-mode-btn" data-cmode="exams" onclick="setCoursesMode('exams')">📝 Entrance Exams</button>
+    <button class="exam-mode-btn" data-cmode="colleges" onclick="setCoursesMode('colleges')">🏛 Colleges</button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     FILTER BAR (Explore tab only)
+════════════════════════════════════════════════ -->
+<div class="filter-section" id="filter-section">
+  <div class="filter-inner">
+    <div class="filter-bar">
+      <div class="fg">
+        <label>Your Class 12 Subjects</label>
+        <select id="f-subj" onchange="applyFilters()">
+          <option value="">All combinations</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label>Stream / Field of Interest</label>
+        <select id="f-stream" onchange="applyFilters()">
+          <option value="">All streams</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label>Search course or exam</label>
+        <input type="text" id="f-search" placeholder="e.g. NEET, B.Des, IISER, CLAT…" oninput="applyFilters()">
+      </div>
+      <button class="btn-reset" onclick="resetFilters()">Reset</button>
+    </div>
+    <div class="active-chips" id="chips"></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     MAIN CONTENT TABS
+════════════════════════════════════════════════ -->
+<div class="main">
+
+  <!-- TAB: KNOW YOURSELF (Psychometric Test) -->
+  <div class="tab-content" id="tab-psychometric"></div>
+
+  <!-- TAB 0: HOME -->
+  <div class="tab-content active" id="tab-home">
+
+    <!-- Hero -->
+    <div class="home-hero">
+      <img src="images/vazhi-logo.png" alt="Vazhi வழி — Every Dream Deserves the Right Direction" class="home-logo-img">
+    </div>
+
+    <!-- Body -->
+    <div class="home-body">
+
+      <!-- Mission -->
+      <div class="home-mission">
+        <div class="home-mission-lbl">About Vazhi</div>
+        <div class="home-mission-text">
+          <p>This website is designed for students and parents to help them explore and understand a wide range of career opportunities. Our goal is to provide clear insights into various courses, entrance exams, and educational pathways, enabling students to analyse their options and make informed career decisions.</p>
+          <p>We primarily focus on State Government, Central Government, and affiliated colleges. While many students concentrate only on a few highly competitive entrance exams, this platform aims to present a broader spectrum of courses and opportunities — offering a <strong>"buffet" of career choices</strong> that students can explore based on their interests and aspirations.</p>
+        </div>
+      </div>
+
+      <!-- Guided entry -->
+      <div class="home-guide">
+        <div class="home-guide-title">Where would you like to go?</div>
+        <div class="home-guide-cards">
+          <button class="home-path-card" onclick="switchTab('find')">
+            <div class="home-path-ico">🔍</div>
+            <div class="home-path-label">I don't know where to start</div>
+            <div class="home-path-desc">Pick your Class 12 subjects — we'll suggest courses and careers that match your interests.</div>
+            <div class="home-path-cta">Find my path →</div>
+          </button>
+          <button class="home-path-card" onclick="switchTab('courses')">
+            <div class="home-path-ico">📚</div>
+            <div class="home-path-label">I just finished Class 12</div>
+            <div class="home-path-desc">Explore UG courses, entrance exams (JEE, NEET, CLAT…) and colleges across India.</div>
+            <div class="home-path-cta">Explore courses &amp; colleges →</div>
+          </button>
+          <button class="home-path-card" onclick="switchTab('after-ug')">
+            <div class="home-path-ico">🚀</div>
+            <div class="home-path-label">I completed my UG degree</div>
+            <div class="home-path-desc">PG programs, research, MBA, government jobs, professional certifications and study abroad.</div>
+            <div class="home-path-cta">Explore what's next →</div>
+          </button>
+          <button class="home-path-card" onclick="switchTab('scholarships')">
+            <div class="home-path-ico">💰</div>
+            <div class="home-path-label">I need financial support</div>
+            <div class="home-path-desc">Government and merit-based scholarships — find ones you are eligible for.</div>
+            <div class="home-path-cta">Find scholarships →</div>
+          </button>
+          <button class="home-path-card" onclick="switchTab('market')">
+            <div class="home-path-ico">📊</div>
+            <div class="home-path-label">I want to know job prospects</div>
+            <div class="home-path-desc">Which careers are in demand, what they pay, and how the job market is moving.</div>
+            <div class="home-path-cta">See market trends →</div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Announcements: Exam Dates, Results, Counselling, Applications -->
+      <div class="home-ann">
+        <div class="home-ann-hdr">
+          <div class="home-ann-title">📢 Exam Dates &amp; Announcements</div>
+          <div class="home-ann-updated" id="ann-updated"></div>
+        </div>
+        <div class="home-ann-filters" id="ann-filters">
+          <button class="ann-filter-btn active" data-cat="all"         onclick="setAnnFilter('all')">All</button>
+          <button class="ann-filter-btn" data-cat="exam"               onclick="setAnnFilter('exam')">📝 Exam Dates</button>
+          <button class="ann-filter-btn" data-cat="result"             onclick="setAnnFilter('result')">🏆 Results</button>
+          <button class="ann-filter-btn" data-cat="counselling"        onclick="setAnnFilter('counselling')">🗓 Counselling</button>
+          <button class="ann-filter-btn" data-cat="application"        onclick="setAnnFilter('application')">📋 Applications</button>
+          <button class="ann-filter-btn" data-cat="admission"          onclick="setAnnFilter('admission')">🏫 Admissions</button>
+        </div>
+        <div class="home-ann-list" id="ann-list"></div>
+        <div class="home-ann-past-toggle" id="ann-past-toggle" style="display:none">
+          <button onclick="toggleAnnPast(this)">▸ Show completed / past dates</button>
+        </div>
+        <div class="home-ann-past" id="ann-past" style="display:none"></div>
+        <div class="home-ann-note">⚠ Dates are indicative — always verify on official websites before applying.</div>
+      </div><!-- /home-ann -->
+
+      <!-- Scholarships & Financial Support -->
+      <div class="home-scholarships">
+        <button class="home-sch-toggle" onclick="toggleScholarships(this)">
+          💰 Scholarships &amp; Financial Support <span class="sch-arrow">▸</span>
+        </button>
+        <div class="sch-panel" style="display:none">
+          <div class="sch-grid">
+
+            <div class="sch-card">
+              <div class="sch-ico">🏛</div>
+              <div class="sch-title">Central Govt Scholarships</div>
+              <ul class="sch-list">
+                <li><strong>KVPY</strong> — ₹5,000–7,000/month for science students. Conducted by IISc. Highly competitive but life-changing.</li>
+                <li><strong>INSPIRE SHE</strong> (DST) — ₹80,000/year for B.Sc / Integrated M.Sc in natural sciences.</li>
+                <li><strong>NSP</strong> (National Scholarship Portal) — OBC, SC, ST, minority, PwD scholarships. Apply at scholarships.gov.in</li>
+                <li><strong>AICTE Pragati & Saksham</strong> — ₹50,000/year for girl students and students with disabilities in technical courses.</li>
+              </ul>
+            </div>
+
+            <div class="sch-card">
+              <div class="sch-ico">🎓</div>
+              <div class="sch-title">IIT & NIT Fee Waiver</div>
+              <ul class="sch-list">
+                <li>Family income &lt; ₹1 LPA → <strong>Full fee waiver</strong> (₹0 tuition at IITs/NITs)</li>
+                <li>Family income ₹1–5 LPA → <strong>2/3rd fee waiver</strong></li>
+                <li>SC/ST students → additional benefits + hostel support at most central institutes</li>
+                <li>This means a student from a low-income family can study at IIT for nearly FREE.</li>
+              </ul>
+            </div>
+
+            <div class="sch-card">
+              <div class="sch-ico">🌟</div>
+              <div class="sch-title">Tamil Nadu State Schemes</div>
+              <ul class="sch-list">
+                <li><strong>Chief Minister's Scholarship</strong> (BC/MBC) — ₹1,000–3,000/month for higher education</li>
+                <li><strong>SC/ST scholarship</strong> — full fee reimbursement at govt & aided colleges</li>
+                <li><strong>First Graduate Scheme</strong> — additional support for families sending first child to college</li>
+                <li><strong>TN 7.5% reservation</strong> — horizontal reservation for govt school students in engineering, medicine, law, agriculture</li>
+              </ul>
+            </div>
+
+            <div class="sch-card sch-card-alt">
+              <div class="sch-ico">🔄</div>
+              <div class="sch-title">Missed the Exam? Backup Routes</div>
+              <ul class="sch-list">
+                <li><strong>Engineering:</strong> Miss JEE Main → Apply via <strong>TNEA</strong> for TN engineering colleges</li>
+                <li><strong>Engineering alternate:</strong> Polytechnic Diploma (3 yrs) → B.Tech Lateral Entry (2 yrs)</li>
+                <li><strong>Medical:</strong> Miss NEET → Nursing, Pharmacy, Physiotherapy, B.Sc Allied Health via state exams</li>
+                <li><strong>Law:</strong> Miss CLAT → Many state law colleges have their own entrance or merit-based admissions</li>
+                <li><strong>After graduation:</strong> GATE score → M.Tech at IITs/NITs + PSU jobs (government companies)</li>
+              </ul>
+            </div>
+
+          </div><!-- /sch-grid -->
+          <div class="sch-view-all-wrap">
+            <button class="sch-view-all-btn" onclick="switchTab('scholarships')">View all scholarships →</button>
+          </div>
+        </div><!-- /sch-panel -->
+      </div><!-- /home-scholarships -->
+
+      <!-- Feedback invite -->
+      <div class="home-feedback">
+        <div class="home-feedback-ico">💬</div>
+        <div class="home-feedback-body">
+          <div class="home-feedback-title">Share your feedback</div>
+          <div class="home-feedback-sub">Found something useful? Something missing? We'd love to hear from you — every suggestion helps us improve for students like you.</div>
+        </div>
+        <a class="home-feedback-btn"
+           href="mailto:mswnathan@gmail.com?subject=Vazhi%20Feedback&body=Hi%2C%0A%0AHere%20is%20my%20feedback%20on%20Vazhi%3A%0A%0A">
+          ✉ Send Feedback
+        </a>
+      </div>
+
+    </div><!-- /home-body -->
+  </div><!-- /tab-home -->
+
+  <!-- TAB: FIND MY PATH (Find by Interest + Career Goal Search) -->
+  <div class="tab-content" id="tab-find">
+    <div class="exam-mode-tabs find-mode-tabs">
+      <button class="exam-mode-btn active" data-fmode="interest" onclick="setFindMode('interest')">🎯 Find by Interest</button>
+      <button class="exam-mode-btn" data-fmode="career" onclick="setFindMode('career')">🔍 Career Goal Search</button>
+    </div>
+
+    <!-- Find by Interest content -->
+    <div id="find-panel-interest">
+      <div class="if-wrap">
+        <div class="if-step on" id="if1">
+          <div class="if-h2">What are your Class 12 subjects?</div>
+          <div class="if-sub">Tap your combination — we'll show you interest areas specific to your subjects.</div>
+          <div id="subj-picker-wrap">
+            <button class="subj-picker-toggle" onclick="toggleSubjPicker()" id="subj-picker-btn">
+              Studying IGCSE / IB or not sure which combination? Select your actual subjects →
+            </button>
+            <div id="subj-picker" class="hidden">
+              <p class="subj-picker-hint">Tick every subject you study in Class 11–12. We'll figure out which stream you belong to.</p>
+              <div id="subj-derived" class="hidden">
+                <span id="subj-derived-label"></span>
+                <button class="btn-primary subj-derived-btn" onclick="confirmSubjDerived()">See careers &amp; courses →</button>
+              </div>
+              <div id="subj-chip-grid"></div>
+            </div>
+          </div>
+          <div class="subj-or-divider" id="subj-or-row">— or pick a stream directly —</div>
+          <div class="subj-grid" id="scard-grid"></div>
+        </div>
+        <div class="if-step" id="if2">
+          <div class="if-h2">What excites you within <span id="if2-subj-label">your subjects</span>?</div>
+          <div class="if-sub">Select all that interest you. We'll match courses, institutes and career paths.</div>
+          <div class="ia-grid" id="ia-grid"></div>
+          <div class="nav-row">
+            <button class="btn-primary" onclick="showIFResults()">Show my options →</button>
+            <button class="btn-back" onclick="goIF1()">← Back</button>
+            <span class="sel-info" id="ia-info">Select at least one area</span>
+          </div>
+        </div>
+        <div class="if-step" id="if3">
+          <div class="if-h2">Your personalised pathways</div>
+          <div class="ir-tags" id="ir-tags"></div>
+          <div id="ir-out"></div>
+          <div class="nav-row" style="margin-top:1.5rem">
+            <button class="btn-back" onclick="goIF2Fresh()">← Change interests</button>
+            <button class="btn-back" onclick="goIF1()">← Start over</button>
+          </div>
+        </div>
+      </div>
+    </div><!-- /find-panel-interest -->
+
+    <!-- Career Goal Search content -->
+    <div id="find-panel-career" style="display:none">
+      <div class="cg-hero">
+        <div class="cg-hero-title">What do you want to become?</div>
+        <div class="cg-hero-sub">Type a career goal — we'll show you the complete path: subjects → entrance exam → degree → after UG → jobs.</div>
+        <div class="cg-search-wrap">
+          <div class="cg-search-row">
+            <input id="cg-input" class="cg-input"
+                   placeholder="e.g., Doctor, Engineer, IAS Officer, Data Scientist…"
+                   oninput="cgLiveSearch()"
+                   onkeydown="cgKeyNav(event)"
+                   autocomplete="off">
+            <button class="cg-btn" onclick="searchCareer()">Show My Path →</button>
+          </div>
+          <div id="cg-suggestions" class="cg-suggestions" style="display:none"></div>
+        </div>
+        <div class="cg-chips">
+          <span class="cg-chip" onclick="chipSearch('doctor')">🩺 Doctor</span>
+          <span class="cg-chip" onclick="chipSearch('engineer')">⚙ Engineer</span>
+          <span class="cg-chip" onclick="chipSearch('ias')">🏛 IAS Officer</span>
+          <span class="cg-chip" onclick="chipSearch('scientist')">🔬 Scientist</span>
+          <span class="cg-chip" onclick="chipSearch('lawyer')">⚖ Lawyer</span>
+          <span class="cg-chip" onclick="chipSearch('pilot')">✈ Pilot</span>
+          <span class="cg-chip" onclick="chipSearch('banker')">🏦 Banker</span>
+          <span class="cg-chip" onclick="chipSearch('designer')">✏ Designer</span>
+          <span class="cg-chip" onclick="chipSearch('geologist')">🪨 Geologist</span>
+          <span class="cg-chip" onclick="chipSearch('sailor')">⚓ Merchant Navy</span>
+        </div>
+      </div>
+      <div id="cg-out"></div>
+    </div><!-- /find-panel-career -->
+
+  </div><!-- /tab-find -->
+
+  <!-- TAB: COURSES & EXAMS (Explore Courses + Entrance Exams) -->
+  <div class="tab-content" id="tab-courses">
+
+    <!-- UG Courses panel -->
+    <div id="courses-panel-explore">
+      <div class="results-bar">
+        <div class="results-count" id="res-count">Loading…</div>
+        <div class="view-tog">
+          <button class="vtbtn on" id="vg" onclick="setView('grid')">Grid</button>
+          <button class="vtbtn" id="vl" onclick="setView('list')">List</button>
+        </div>
+      </div>
+      <div id="explore-stats"></div>
+      <div id="explore-out"></div>
+    </div><!-- /courses-panel-explore -->
+
+    <!-- Entrance Exams panel (UG only — PG exams moved to After UG tab) -->
+    <div id="courses-panel-exams" style="display:none">
+    <div class="exam-filter-bar">
+      <div style="display:flex;align-items:center;gap:6px">
+        <label>Level</label>
+        <select id="ef-level" onchange="renderExams()">
+          <option value="">All levels</option>
+        </select>
+      </div>
+      <div style="display:flex;align-items:center;gap:6px">
+        <label>Stream</label>
+        <select id="ef-stream" onchange="renderExams()">
+          <option value="">All streams</option>
+        </select>
+      </div>
+      <div id="ef-subj-wrap" style="display:flex;align-items:center;gap:6px">
+        <label>Subjects</label>
+        <select id="ef-subj" onchange="renderExams()">
+          <option value="">Any subjects</option>
+        </select>
+      </div>
+      <input type="text" id="ef-search" placeholder="Search exam name, full form, conducting body…" oninput="renderExams()">
+      <button class="btn-reset" onclick="resetExamFilters()">Reset</button>
+    </div>
+    <div class="exam-stats-bar" id="exam-stats-bar"></div>
+    <div id="exam-out"></div>
+    <div class="exam-note">
+      ⚠ Exam dates, eligibility and fees change every year. Always verify on the official conducting body's website before applying.
+    </div>
+    </div><!-- /courses-panel-exams -->
+
+  </div><!-- /tab-courses -->
+
+  <!-- TAB 5: AFTER UG -->
+  <div class="tab-content" id="tab-after-ug">
+    <!-- Sub-mode toggle -->
+    <div class="exam-mode-tabs aug-mode-tabs">
+      <button class="exam-mode-btn active" data-augmode="paths" onclick="setAugMode('paths')">🎓 After UG Paths</button>
+      <button class="exam-mode-btn" data-augmode="pg-exams" onclick="setAugMode('pg-exams')">📝 PG Entrance Exams</button>
+      <button class="exam-mode-btn" data-augmode="pg-colleges" onclick="setAugMode('pg-colleges')">🏛 PG Universities</button>
+    </div>
+
+    <!-- Panel: After UG Paths (existing content) -->
+    <div id="aug-panel-paths">
+      <div class="aug-page-hdr">
+        <div class="aug-page-title">After UG — What's Next?</div>
+        <div class="aug-page-sub">Explore higher education, research, government jobs, professional certifications and study abroad options after your undergraduate degree.</div>
+      </div>
+      <div class="aug-filter-bar">
+        <div class="aug-fg">
+          <label>Your UG Degree</label>
+          <select id="aug-ug" onchange="renderAfterUG()">
+            <option value="">All degrees</option>
+          </select>
+        </div>
+        <div class="aug-fg">
+          <label>Category</label>
+          <select id="aug-cat" onchange="renderAfterUG()">
+            <option value="">All categories</option>
+          </select>
+        </div>
+        <input type="text" id="aug-search" class="aug-search" placeholder="Search pathway, exam, institute…" oninput="renderAfterUG()">
+        <button class="btn-reset" onclick="resetAfterUGFilters()">Reset</button>
+      </div>
+      <div class="aug-stats-bar" id="aug-count"></div>
+      <div id="aug-out"></div>
+      <div class="aug-disclaimer">⚠ Exam dates, eligibility and fees change every year. Always verify on official conducting body websites.</div>
+    </div><!-- /aug-panel-paths -->
+
+    <!-- Panel: PG Entrance Exams -->
+    <div id="aug-panel-pg-exams" style="display:none">
+      <div class="aug-panel-note">PG entrance exams for M.Tech, M.Sc, MBA, research programs and government jobs. Scores are used for admissions at IITs, NITs, IIMs, central universities and PSU recruitment.</div>
+      <div class="aug-filter-bar" style="margin-bottom:0">
+        <div class="aug-fg">
+          <label>Stream</label>
+          <select id="aug-pg-ef-stream" onchange="renderPGExamsForAug()">
+            <option value="">All streams</option>
+          </select>
+        </div>
+        <input type="text" id="aug-pg-ef-search" class="aug-search" placeholder="Search PG exam, full form, body…" oninput="renderPGExamsForAug()">
+        <button class="btn-reset" style="align-self:flex-end" onclick="resetAugPGExamFilters()">Reset</button>
+      </div>
+      <div class="exam-stats-bar" id="aug-pg-exam-stats"></div>
+      <div id="aug-pg-exam-out"></div>
+    </div><!-- /aug-panel-pg-exams -->
+
+    <!-- Panel: PG Universities -->
+    <div id="aug-panel-pg-colleges" style="display:none">
+      <div class="aug-panel-note">Central universities, state universities and INI/Deemed institutions offering PG programs across India.</div>
+      <div class="aug-filter-bar" style="margin-bottom:0">
+        <div class="aug-fg">
+          <label>Type</label>
+          <select id="aug-pg-cf-type" onchange="renderPGCollegesForAug()">
+            <option value="">All types</option>
+          </select>
+        </div>
+        <div class="aug-fg">
+          <label>Stream</label>
+          <select id="aug-pg-cf-stream" onchange="renderPGCollegesForAug()">
+            <option value="">All streams</option>
+          </select>
+        </div>
+        <input type="text" id="aug-pg-cf-search" class="aug-search" placeholder="Search university name…" oninput="renderPGCollegesForAug()">
+        <button class="btn-reset" style="align-self:flex-end" onclick="resetAugPGCollegeFilters()">Reset</button>
+      </div>
+      <div class="col-stats-bar" id="aug-col-stats"></div>
+      <div id="aug-college-out"></div>
+    </div><!-- /aug-panel-pg-colleges -->
+
+  </div><!-- /tab-after-ug -->
+
+  <!-- TAB: SCHOLARSHIPS -->
+  <div class="tab-content" id="tab-scholarships">
+    <div class="sch-tab-hdr">
+      <div class="sch-tab-title">💰 Scholarships &amp; Financial Aid</div>
+      <div class="sch-tab-sub">Government, PSU, corporate, and international scholarships for UG students in India. Deadlines change every year — always verify on official portals before applying.</div>
+    </div>
+    <div class="aug-filter-bar">
+      <div class="sch-lvl-btns" id="sch-level-btns">
+        <button class="sch-lvl-btn active" data-lvl="all"           onclick="setSchFilter('all')">All</button>
+        <button class="sch-lvl-btn" data-lvl="Central"              onclick="setSchFilter('Central')">🏛 Central Govt</button>
+        <button class="sch-lvl-btn" data-lvl="State"                onclick="setSchFilter('State')">🌏 State Govt</button>
+        <button class="sch-lvl-btn" data-lvl="Corporate"            onclick="setSchFilter('Corporate')">🏢 Corporate</button>
+        <button class="sch-lvl-btn" data-lvl="International"        onclick="setSchFilter('International')">✈ International</button>
+      </div>
+      <div class="aug-fg">
+        <label>Stream</label>
+        <select id="sch-stream" onchange="renderScholarships()"><option value="">All streams</option></select>
+      </div>
+      <input type="text" id="sch-search" class="aug-search" placeholder="Search scholarship name, body…" oninput="renderScholarships()">
+      <button class="btn-reset" style="align-self:flex-end" onclick="resetSchFilters()">Reset</button>
+    </div>
+    <div class="aug-stats-bar" id="sch-stats"></div>
+    <div id="sch-out"></div>
+    <div class="sch-disclaimer">⚠ Scholarship deadlines and eligibility change every year. Always verify on the official portal before applying. Vazhi does not guarantee scholarship availability or accuracy.</div>
+  </div><!-- /tab-scholarships -->
+
+  <!-- TAB: INTERNSHIPS -->
+  <div class="tab-content" id="tab-internships">
+    <div class="sch-tab-hdr">
+      <div class="sch-tab-title">🌐 Internships &amp; Research Programs</div>
+      <div class="sch-tab-sub">Government, PSU, and research internships for Indian students. Only verified programs from official (.gov.in / .ac.in / .res.in) sources are listed.</div>
+    </div>
+    <div class="aug-filter-bar">
+      <div class="sch-lvl-btns" id="int-type-btns">
+        <button class="int-type-btn sch-lvl-btn active" data-typ="all"            onclick="setIntFilter('all')">All</button>
+        <button class="int-type-btn sch-lvl-btn" data-typ="Research"              onclick="setIntFilter('Research')">🔬 Research</button>
+        <button class="int-type-btn sch-lvl-btn" data-typ="Industrial"            onclick="setIntFilter('Industrial')">🏭 Industrial / PSU</button>
+        <button class="int-type-btn sch-lvl-btn" data-typ="Government"            onclick="setIntFilter('Government')">🏛 Government</button>
+        <button class="int-type-btn sch-lvl-btn" data-typ="International"         onclick="setIntFilter('International')">✈ International</button>
+      </div>
+      <div class="aug-fg">
+        <label>Stream</label>
+        <select id="int-stream" onchange="renderInternships()"><option value="">All streams</option></select>
+      </div>
+      <input type="text" id="int-search" class="aug-search" placeholder="Search internship name, organisation…" oninput="renderInternships()">
+      <button class="btn-reset" style="align-self:flex-end" onclick="resetIntFilters()">Reset</button>
+    </div>
+    <div class="aug-stats-bar" id="int-stats"></div>
+    <div id="int-out"></div>
+    <div class="sch-disclaimer">⚠ Internship deadlines and eligibility change every year. Always verify on the official portal before applying. Vazhi does not guarantee internship availability or accuracy.</div>
+  </div><!-- /tab-internships -->
+
+  <!-- TAB 6: MARKET TRENDS -->
+  <div class="tab-content" id="tab-market">
+    <div class="sec-heading">🔥 Trending courses right now</div>
+    <div class="market-grid" id="market-trending"></div>
+    <div class="sec-heading" style="margin-top:1.5rem">💰 Starting salary comparison by field</div>
+    <div style="background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:20px 22px;box-shadow:var(--shadow-sm);margin-bottom:2rem">
+      <div id="sal-chart"></div>
+      <div style="font-size:11px;color:var(--text3);margin-top:10px">* Median starting salary, freshers — government + private sector combined. Source: industry surveys 2025-26.</div>
+    </div>
+    <div class="sec-heading">🚀 Emerging opportunities — high growth fields</div>
+    <div class="opp-grid" id="opp-grid"></div>
+  </div>
+
+</div><!-- /main -->
+
+<!-- ═══════════════════════════════════════════════
+     TAB 5: COLLEGES (outside main — full width)
+════════════════════════════════════════════════ -->
+<div class="tab-content" id="tab-colleges" style="max-width:1320px;margin:0 auto;padding:1.5rem 1.5rem 4rem">
+  <div class="exam-mode-tabs" style="margin-bottom:8px">
+    <button class="exam-mode-btn col-mode-btn active" data-mode="ug" onclick="setCollegeMode('ug')">After 12th — UG Colleges</button>
+    <button class="exam-mode-btn col-mode-btn" data-mode="predictor" onclick="setCollegeMode('predictor')">🎯 College Predictor</button>
+  </div>
+  <div class="col-page-hdr">
+    <div>
+      <div class="col-page-title">Colleges — All India</div>
+      <div class="col-page-sub">NAAC A++, A+, and all notable specialised institutes · Central, State, Aided, Deemed</div>
+    </div>
+    <div class="col-page-note">⚠ Always verify programs & eligibility on official college websites before applying</div>
+  </div>
+  <div class="col-filter-bar">
+    <div class="col-fg">
+      <label>State</label>
+      <select id="cf-state" onchange="updateDistrictFilter();renderColleges()">
+        <option value="">All States</option>
+      </select>
+    </div>
+    <div class="col-fg">
+      <label>Type</label>
+      <select id="cf-type" onchange="renderColleges()">
+        <option value="">All types</option>
+      </select>
+    </div>
+    <div class="col-fg">
+      <label>Stream</label>
+      <select id="cf-stream" onchange="renderColleges()">
+        <option value="">All streams</option>
+      </select>
+    </div>
+    <div class="col-fg">
+      <label>Entry Via</label>
+      <select id="cf-exam" onchange="renderColleges()">
+        <option value="">All entry routes</option>
+      </select>
+    </div>
+    <div class="col-fg" id="cf-district-wrap">
+      <label>District</label>
+      <select id="cf-district" onchange="renderColleges()">
+        <option value="">All districts</option>
+      </select>
+    </div>
+    <input type="text" id="cf-search" class="col-search" placeholder="Search college name or program…" oninput="renderColleges()">
+    <button id="cf-shortlist-toggle" class="vz-shortlist-btn" onclick="vzToggleShortlist()" title="Show only the colleges you've saved">♥ My Shortlist (<span class="vz-shortlist-count">0</span>)</button>
+    <button class="btn-reset" onclick="resetCollegeFilters()">Reset</button>
+  </div>
+  <div class="col-stats-row" id="col-stats"></div>
+  <div id="college-out"></div>
+
+  <!-- College Predictor panel (3rd mode) -->
+  <div id="col-panel-predictor" style="display:none">
+    <div class="j-page-hdr">
+      <div class="j-page-title">College Predictor</div>
+      <div class="j-page-sub">Choose a counselling system, enter your rank or score, and see which institutes and programs are within reach — based on historical cutoff data.</div>
+    </div>
+
+    <!-- Counselling system selector -->
+    <div class="cp-system-tabs">
+      <button class="cp-sys-btn active" data-sys="josaa" onclick="cpSetSystem('josaa')">
+        <span>JoSAA</span>
+        <span class="cp-sys-sub">IITs · NITs · IIITs · GFTIs</span>
+      </button>
+      <button class="cp-sys-btn" data-sys="tnea" onclick="cpSetSystem('tnea')">
+        <span>TNEA</span>
+        <span class="cp-sys-sub">Tamil Nadu Engineering Admissions</span>
+      </button>
+      <button class="cp-sys-btn" data-sys="tngasa" onclick="cpSetSystem('tngasa')">
+        <span>TNGASA</span>
+        <span class="cp-sys-sub">TN Arts, Science & Agriculture</span>
+      </button>
+    </div>
+
+    <!-- JoSAA panel -->
+    <div class="cp-sys-panel" id="cp-josaa">
+    <div class="j-mode-tabs">
+      <button class="j-mode-btn active" data-mode="predict" onclick="jSetMode('predict')">My Rank</button>
+      <button class="j-mode-btn" data-mode="explore" onclick="jSetMode('explore')">Rank Range Explorer</button>
+    </div>
+    <div class="j-form" id="j-form">
+      <div class="j-field">
+        <label>Exam</label>
+        <select id="j-exam" onchange="jOnExamChange()">
+          <option value="JEE Advanced">JEE Advanced — IITs</option>
+          <option value="JEE Main">JEE Main — NITs / IIITs / GFTIs</option>
+        </select>
+      </div>
+      <div class="j-field">
+        <label>Your Rank (CRL)</label>
+        <input type="number" id="j-rank" placeholder="e.g. 5000" min="1">
+      </div>
+      <div class="j-field">
+        <label>Category</label>
+        <select id="j-seat">
+          <option value="0">OPEN</option>
+          <option value="1">EWS</option>
+          <option value="2">OBC-NCL</option>
+          <option value="3">SC</option>
+          <option value="4">ST</option>
+        </select>
+      </div>
+      <div class="j-field">
+        <label>Gender</label>
+        <select id="j-gender">
+          <option value="0">Gender-Neutral</option>
+          <option value="1">Female-only seats</option>
+        </select>
+      </div>
+      <div class="j-field">
+        <label>Quota</label>
+        <select id="j-quota">
+          <option value="2">AI — All India</option>
+          <option value="0">HS — Home State</option>
+          <option value="1">OS — Other State</option>
+        </select>
+      </div>
+      <div class="j-field">
+        <label>Institute Type <span class="j-opt">(optional)</span></label>
+        <select id="j-insttype">
+          <option value="">Any</option>
+          <option>IIT</option>
+          <option>NIT</option>
+          <option>IIIT</option>
+          <option>GFTI</option>
+        </select>
+      </div>
+      <div class="j-field">
+        <label>State <span class="j-opt">(optional)</span></label>
+        <select id="j-state"><option value="">Any state</option></select>
+      </div>
+      <button class="j-btn" onclick="jPredict()">Find Colleges →</button>
+    </div>
+    <div class="j-form" id="j-form-range" style="display:none">
+      <div class="j-field">
+        <label>Exam</label>
+        <select id="jr-exam">
+          <option value="JEE Advanced">JEE Advanced — IITs</option>
+          <option value="JEE Main">JEE Main — NITs / IIITs / GFTIs</option>
+        </select>
+      </div>
+      <div class="j-field">
+        <label>Rank From</label>
+        <input type="number" id="jr-from" placeholder="e.g. 100" min="1">
+      </div>
+      <div class="j-field">
+        <label>Rank To</label>
+        <input type="number" id="jr-to" placeholder="e.g. 200" min="1">
+      </div>
+      <div class="j-field">
+        <label>Gender</label>
+        <select id="jr-gender">
+          <option value="0">Gender-Neutral</option>
+          <option value="1">Female-only seats</option>
+        </select>
+      </div>
+      <div class="j-field">
+        <label>Home State <span class="j-opt">(for HS quota)</span></label>
+        <select id="jr-state"><option value="">Any / All India</option></select>
+      </div>
+      <button class="j-btn" onclick="jExplore()">Explore Range →</button>
+    </div>
+    <div id="j-results"></div>
+    <div class="j-note">⚠ Based on Round 6 final allotment data. Actual cutoffs vary each year — use this as a guide, not a guarantee. Always check josaa.nic.in for official data.</div>
+    </div><!-- /cp-josaa -->
+
+    <!-- TNEA placeholder panel -->
+    <div class="cp-sys-panel" id="cp-tnea" style="display:none">
+      <div class="cp-coming-wrap">
+        <div class="cp-coming-ico">🏛</div>
+        <div class="cp-coming-title">TNEA Predictor — Coming Soon</div>
+        <div class="cp-coming-desc">
+          We're building a cutoff-based predictor for Tamil Nadu Engineering Admissions (TNEA),
+          covering government, aided, and self-financing engineering colleges across Tamil Nadu.
+        </div>
+        <div class="cp-coming-what">
+          <div class="cp-coming-what-title">What it will include</div>
+          <ul class="cp-coming-list">
+            <li>Cutoff marks by college, branch, community (OC / BC / BCM / MBC / SC / ST)</li>
+            <li>TN 7.5% government school horizontal reservation filter</li>
+            <li>Special category quota seats (NRI, sports, differently abled)</li>
+            <li>College search by district, type, and branch</li>
+            <li>Historical trend — how cutoffs changed over 3 years</li>
+          </ul>
+        </div>
+        <div class="cp-coming-note">
+          Data source: TNEA official counselling portal — <a href="https://tneaonline.org" target="_blank" rel="noopener" class="cp-coming-link">tneaonline.org</a>
+        </div>
+      </div>
+    </div><!-- /cp-tnea -->
+
+    <!-- TNGASA placeholder panel -->
+    <div class="cp-sys-panel" id="cp-tngasa" style="display:none">
+      <div class="cp-coming-wrap">
+        <div class="cp-coming-ico">🎓</div>
+        <div class="cp-coming-title">TNGASA Predictor — Coming Soon</div>
+        <div class="cp-coming-desc">
+          A cutoff predictor for Tamil Nadu Government Arts, Science and Agriculture admissions
+          (TNGASA), covering undergraduate degree programs in arts, science, commerce,
+          agriculture, and allied sciences.
+        </div>
+        <div class="cp-coming-what">
+          <div class="cp-coming-what-title">What it will include</div>
+          <ul class="cp-coming-list">
+            <li>Cutoff marks by college, program, and community (OC / BC / MBC / SC / ST)</li>
+            <li>Filter by subject combination — PCB, PCM, Commerce, Arts</li>
+            <li>Government, aided, and self-financing arts & science colleges</li>
+            <li>Agriculture, veterinary, and allied science programs</li>
+            <li>District-wise college search across Tamil Nadu</li>
+          </ul>
+        </div>
+        <div class="cp-coming-note">
+          Data source: Tamil Nadu Higher Education admissions portal — <a href="https://www.tnahec.ac.in" target="_blank" rel="noopener" class="cp-coming-link">tnahec.ac.in</a>
+        </div>
+      </div>
+    </div><!-- /cp-tngasa -->
+  </div><!-- /col-panel-predictor -->
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div>© Vazhi <span id="footer-year"></span></div>
+  <a class="footer-feedback-link" href="mailto:mswnathan@gmail.com?subject=Vazhi%20Feedback&body=Hi%2C%0A%0AHere%20is%20my%20feedback%20on%20Vazhi%3A%0A%0A">
+    ✉ Send Feedback
+  </a>
+</footer>
+
+<!-- ═══════════════════════════════════════════════
+     SCRIPTS — Data first, then logic
+     To add a new state: add <script src="data/colleges-ka.js"></script>
+     and update the COLLEGES reference in js/colleges.js
+════════════════════════════════════════════════ -->
+<script src="data/psychometric.js"></script>
+<script src="data/scholarships.js"></script>
+<script src="data/internships.js"></script>
+<script src="data/announcements.js"></script>
+<script src="data/glossary.js"></script>
+<script src="data/courses.js"></script>
+<script src="data/interest.js"></script>
+<script src="data/market.js"></script>
+<script src="data/exams.js"></script>
+<script src="data/after-ug.js"></script>
+<script src="data/pg-exams.js"></script>
+<script src="data/pg-colleges.js"></script>
+<script src="data/colleges-tn.js"></script>
+<script src="data/colleges-ka.js"></script>
+<script src="data/colleges-kl.js"></script>
+<script src="data/colleges-ap.js"></script>
+<script src="data/colleges-ts.js"></script>
+<script src="data/colleges-mh.js"></script>
+<script src="data/colleges-dl.js"></script>
+<script src="data/colleges-rj.js"></script>
+<script src="data/colleges-wb.js"></script>
+<script src="data/colleges-up.js"></script>
+<script src="data/colleges-br.js"></script>
+<script src="data/colleges-gj.js"></script>
+<script src="data/colleges-mp.js"></script>
+<script src="data/colleges-pb.js"></script>
+<script src="data/colleges-ch.js"></script>
+<script src="data/colleges-as.js"></script>
+<script src="data/colleges-od.js"></script>
+<script src="data/colleges-uk.js"></script>
+<script src="data/colleges-jh.js"></script>
+<script src="data/colleges-hr.js"></script>
+<script src="data/colleges-hp.js"></script>
+<script src="data/colleges-jk.js"></script>
+<script src="data/colleges-ga.js"></script>
+<script src="data/colleges-cg.js"></script>
+<script src="data/colleges-ne.js"></script>
+<!-- JoSAA data — generated by tools/csv-to-josaa.py -->
+<script src="data/josaa-meta.js"></script>
+<script src="data/josaa.js"></script>
+
+<script src="js/app.js"></script>
+<script src="js/explore.js"></script>
+<script src="js/interest.js"></script>
+<script src="js/market.js"></script>
+<script src="js/exams.js"></script>
+<script src="js/colleges.js"></script>
+<script src="js/josaa.js"></script>
+<script src="js/after-ug.js"></script>
+<script src="data/career-guide.js"></script>
+<script src="js/career-guide.js"></script>
+<script src="js/psychometric.js"></script>
+<script src="js/glossary.js"></script>
+<script src="js/scholarships.js"></script>
+<script src="js/internships.js"></script>
+<script src="js/announcements.js"></script>
+
+<!-- Firebase Auth + Firestore (compat SDK — exposes global `firebase`) -->
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore-compat.js"></script>
+<script src="js/firebase-config.js"></script>
+<script src="js/auth.js"></script>
+
+<script>
+// ── INIT ──
+// Single initialisation point — each render is independent and only touches its own tab's DOM.
+window.addEventListener('DOMContentLoaded', () => {
+  const tc  = STREAMS.reduce((a, s) => a + s.courses.length, 0);
+  const te  = EXAM_GROUPS.reduce((a, g) => a + g.exams.length, 0);
+
+  // Dynamic footer year
+  const fy = document.getElementById('footer-year');
+  if (fy) fy.textContent = new Date().getFullYear();
+
+  // Start on Home tab (hides filter bar, scrolls to top)
+  switchTab('home');
+
+  // Populate filter dropdowns from data (no hardcoded options in HTML)
+  populateExploreFilters();  // Explore: subjects + stream
+  populateExamDropdowns();   // Exams: level + stream + subjects
+  populateCollegeFilters();  // Colleges: state + type + stream
+  populateAfterUGFilters();  // After UG: degree + category + PG exam stream
+  populateAugPGFilters();    // After UG PG colleges: type + stream
+
+  // Render every tab independently — each function only writes to its own container
+  populateScholarshipFilters(); // Scholarships: stream dropdown
+  renderScholarships();          // Tab: Scholarships
+  populateInternshipFilters();   // Internships: stream dropdown
+  renderInternships();           // Tab: Internships
+  renderAnnouncements(); // Home: Exam dates & announcements
+  buildSubjectCards();   // Tab: Find by Interest
+  renderExplore();       // Tab: Courses (Explore mode)
+  renderAfterUG();       // Tab: After Graduation
+  renderMarket();        // Tab: Job Market
+  renderExams();         // Tab: Courses (Exams mode)
+  renderColleges();      // Tab: Colleges
+});
+</script>
+
+<!-- ═══════════════════════════════════════════════
+     GLOSSARY — Floating button + Modal
+════════════════════════════════════════════════ -->
+<button class="glossary-fab" onclick="openGlossary()">📖 Key Terms</button>
+
+<div class="glossary-modal" id="glossary-modal">
+  <div class="glossary-box">
+    <div class="glossary-hdr">
+      <div class="glossary-hdr-title">📖 Key Terms — Glossary</div>
+      <button class="glossary-close" onclick="closeGlossary()">✕</button>
+    </div>
+    <div class="glossary-search">
+      <input id="glossary-search-input" type="text" placeholder="Search: IIT, LPA, GATE, NEET…"
+             oninput="renderGlossary(this.value)">
+    </div>
+    <div class="glossary-list" id="glossary-list"></div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Vazhi — Agent Validation System</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --bg: #0a0c10;
+    --surface: #111318;
+    --surface2: #181b22;
+    --border: #1e2330;
+    --border2: #252b3a;
+    --accent: #4fffb0;
+    --accent2: #00c8ff;
+    --accent3: #ff6b6b;
+    --amber: #ffb347;
+    --purple: #a78bfa;
+    --text: #e8eaf0;
+    --muted: #5a6177;
+    --muted2: #8892aa;
+    --font-head: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+    --font-mono: 'DM Mono', monospace;
+    --radius: 10px;
+    --radius-lg: 16px;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { background: var(--bg); color: var(--text); font-family: var(--font-body); font-size: 15px; }
+  body { min-height: 100vh; }
+
+  /* Layout */
+  .shell { display: grid; grid-template-columns: 260px 1fr; min-height: 100vh; }
+  
+  /* Sidebar */
+  .sidebar {
+    background: var(--surface);
+    border-right: 1px solid var(--border);
+    padding: 28px 0;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  .logo {
+    padding: 0 24px 28px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 20px;
+  }
+  .logo-mark {
+    font-family: var(--font-head);
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: var(--accent);
+  }
+  .logo-sub { font-size: 11px; color: var(--muted); letter-spacing: 1.5px; text-transform: uppercase; margin-top: 2px; font-family: var(--font-mono); }
+
+  .sidebar-section-label {
+    font-size: 10px; color: var(--muted); letter-spacing: 1.8px; text-transform: uppercase;
+    font-family: var(--font-mono); padding: 0 24px; margin-bottom: 8px; margin-top: 16px;
+  }
+  .nav-item {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 24px; cursor: pointer;
+    font-size: 13.5px; color: var(--muted2);
+    transition: all 0.15s; border-left: 2px solid transparent;
+    font-family: var(--font-body);
+  }
+  .nav-item:hover { background: var(--surface2); color: var(--text); }
+  .nav-item.active { color: var(--accent); border-left-color: var(--accent); background: rgba(79,255,176,0.05); }
+  .nav-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+  
+  .agent-nav { display: flex; flex-direction: column; gap: 2px; }
+  .agent-badge {
+    font-size: 10px; font-family: var(--font-mono); padding: 2px 6px;
+    border-radius: 4px; margin-left: auto;
+  }
+  .badge-pass { background: rgba(79,255,176,0.12); color: var(--accent); }
+  .badge-fail { background: rgba(255,107,107,0.12); color: var(--accent3); }
+  .badge-idle { background: rgba(90,97,119,0.2); color: var(--muted); }
+  .badge-running { background: rgba(0,200,255,0.12); color: var(--accent2); }
+
+  /* Main */
+  .main { display: flex; flex-direction: column; min-height: 100vh; }
+  
+  /* Topbar */
+  .topbar {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 32px; border-bottom: 1px solid var(--border);
+    background: var(--surface); position: sticky; top: 0; z-index: 10;
+  }
+  .topbar-title { font-family: var(--font-head); font-size: 15px; font-weight: 600; }
+  .topbar-right { display: flex; gap: 10px; align-items: center; }
+  
+  .btn {
+    font-family: var(--font-mono); font-size: 12px;
+    padding: 8px 18px; border-radius: var(--radius);
+    border: 1px solid var(--border2);
+    cursor: pointer; transition: all 0.15s;
+    background: transparent; color: var(--muted2);
+  }
+  .btn:hover { background: var(--surface2); color: var(--text); }
+  .btn-primary {
+    background: var(--accent); color: #0a0c10;
+    border-color: var(--accent); font-weight: 500;
+  }
+  .btn-primary:hover { background: #6fffbd; }
+  .btn-danger { background: var(--accent3); color: #fff; border-color: var(--accent3); }
+  .btn-danger:hover { background: #ff8585; }
+  .btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+  /* Content area */
+  .content { padding: 32px; flex: 1; }
+  
+  /* Status bar */
+  .status-bar {
+    display: flex; align-items: center; gap: 16px;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-lg); padding: 16px 24px;
+    margin-bottom: 28px;
+  }
+  .status-icon { width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 17px; flex-shrink: 0; }
+  .status-text { flex: 1; }
+  .status-title { font-family: var(--font-head); font-size: 14px; font-weight: 600; }
+  .status-desc { font-size: 12px; color: var(--muted); margin-top: 2px; font-family: var(--font-mono); }
+  .pipeline-progress { margin-left: auto; text-align: right; }
+  .progress-label { font-size: 11px; color: var(--muted); font-family: var(--font-mono); }
+  .progress-bar { width: 140px; height: 5px; background: var(--border2); border-radius: 3px; margin-top: 5px; overflow: hidden; }
+  .progress-fill { height: 100%; border-radius: 3px; background: var(--accent); transition: width 0.4s ease; }
+
+  /* Grid */
+  .agents-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 18px; margin-bottom: 28px; }
+
+  /* Agent card */
+  .agent-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-lg); overflow: hidden;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    display: flex; flex-direction: column;
+  }
+  .agent-card.state-running { border-color: var(--accent2); box-shadow: 0 0 0 1px rgba(0,200,255,0.2); }
+  .agent-card.state-pass { border-color: var(--accent); box-shadow: 0 0 0 1px rgba(79,255,176,0.15); }
+  .agent-card.state-fail { border-color: var(--accent3); box-shadow: 0 0 0 1px rgba(255,107,107,0.15); }
+
+  .card-header {
+    display: flex; align-items: center; gap: 12px;
+    padding: 16px 18px; border-bottom: 1px solid var(--border);
+  }
+  .agent-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+  .agent-info { flex: 1; min-width: 0; }
+  .agent-name { font-family: var(--font-head); font-size: 14px; font-weight: 700; }
+  .agent-desc { font-size: 11px; color: var(--muted); font-family: var(--font-mono); margin-top: 1px; }
+  .card-status-badge {
+    font-size: 10px; font-family: var(--font-mono); padding: 3px 8px;
+    border-radius: 20px; white-space: nowrap;
+  }
+  .state-idle .card-status-badge { background: rgba(90,97,119,0.2); color: var(--muted); }
+  .state-running .card-status-badge { background: rgba(0,200,255,0.12); color: var(--accent2); }
+  .state-pass .card-status-badge { background: rgba(79,255,176,0.12); color: var(--accent); }
+  .state-fail .card-status-badge { background: rgba(255,107,107,0.12); color: var(--accent3); }
+
+  .card-body { padding: 14px 18px; flex: 1; }
+
+  .check-list { display: flex; flex-direction: column; gap: 7px; }
+  .check-item { display: flex; align-items: flex-start; gap: 9px; font-size: 12.5px; }
+  .check-marker { width: 16px; height: 16px; border-radius: 4px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 10px; margin-top: 1px; }
+  .check-idle { background: var(--border2); color: var(--muted); }
+  .check-running { background: rgba(0,200,255,0.12); color: var(--accent2); animation: pulse 1s infinite; }
+  .check-pass { background: rgba(79,255,176,0.15); color: var(--accent); }
+  .check-fail { background: rgba(255,107,107,0.15); color: var(--accent3); }
+  .check-label { color: var(--muted2); line-height: 1.4; }
+  .check-label.done { color: var(--text); }
+  .check-label.failed { color: var(--accent3); text-decoration: line-through; }
+
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .card-footer {
+    padding: 10px 18px; border-top: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .card-timing { font-size: 11px; color: var(--muted); font-family: var(--font-mono); }
+  .agent-expand-btn { font-size: 11px; color: var(--muted2); background: none; border: none; cursor: pointer; font-family: var(--font-mono); }
+  .agent-expand-btn:hover { color: var(--text); }
+
+  /* Pipeline log */
+  .pipeline-log {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-lg); overflow: hidden;
+  }
+  .log-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 20px; border-bottom: 1px solid var(--border);
+  }
+  .log-title { font-family: var(--font-head); font-size: 13px; font-weight: 700; }
+  .log-clear { font-size: 11px; color: var(--muted); background: none; border: none; cursor: pointer; font-family: var(--font-mono); }
+  .log-clear:hover { color: var(--text); }
+  .log-body { padding: 16px 20px; font-family: var(--font-mono); font-size: 12px; min-height: 180px; max-height: 260px; overflow-y: auto; display: flex; flex-direction: column; gap: 4px; }
+  .log-entry { display: flex; gap: 12px; line-height: 1.5; }
+  .log-time { color: var(--muted); flex-shrink: 0; }
+  .log-tag { flex-shrink: 0; width: 72px; text-align: right; }
+  .log-tag-system { color: var(--purple); }
+  .log-tag-pass { color: var(--accent); }
+  .log-tag-fail { color: var(--accent3); }
+  .log-tag-warn { color: var(--amber); }
+  .log-tag-info { color: var(--accent2); }
+  .log-msg { color: var(--muted2); }
+  .log-msg.highlight { color: var(--text); }
+
+  /* Commit modal overlay */
+  .modal-overlay {
+    display: none; position: fixed; inset: 0;
+    background: rgba(0,0,0,0.7); z-index: 100;
+    align-items: center; justify-content: center;
+  }
+  .modal-overlay.show { display: flex; }
+  .modal {
+    background: var(--surface); border: 1px solid var(--border2);
+    border-radius: var(--radius-lg); padding: 32px; max-width: 520px; width: 90%;
+  }
+  .modal-icon { font-size: 32px; margin-bottom: 16px; }
+  .modal-title { font-family: var(--font-head); font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+  .modal-desc { color: var(--muted2); font-size: 13.5px; line-height: 1.6; margin-bottom: 24px; }
+  .modal-details {
+    background: var(--surface2); border-radius: var(--radius);
+    padding: 14px 16px; margin-bottom: 24px; font-family: var(--font-mono); font-size: 12px;
+    display: flex; flex-direction: column; gap: 6px;
+  }
+  .modal-detail-row { display: flex; justify-content: space-between; }
+  .modal-detail-label { color: var(--muted); }
+  .modal-detail-value { color: var(--text); }
+  .modal-actions { display: flex; gap: 10px; justify-content: flex-end; }
+
+  /* Commit form section */
+  .commit-form {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-lg); padding: 20px 24px; margin-bottom: 28px;
+  }
+  .form-title { font-family: var(--font-head); font-size: 13px; font-weight: 700; margin-bottom: 14px; }
+  .form-row { display: flex; gap: 12px; align-items: flex-end; flex-wrap: wrap; }
+  .form-field { display: flex; flex-direction: column; gap: 6px; flex: 1; min-width: 180px; }
+  .form-label { font-size: 11px; color: var(--muted); font-family: var(--font-mono); letter-spacing: 0.8px; }
+  .form-input {
+    background: var(--surface2); border: 1px solid var(--border2);
+    border-radius: var(--radius); padding: 9px 12px;
+    color: var(--text); font-family: var(--font-mono); font-size: 12.5px;
+    outline: none; transition: border-color 0.15s;
+  }
+  .form-input:focus { border-color: var(--accent2); }
+  .form-select {
+    background: var(--surface2); border: 1px solid var(--border2);
+    border-radius: var(--radius); padding: 9px 12px;
+    color: var(--text); font-family: var(--font-mono); font-size: 12.5px;
+    outline: none;
+  }
+
+  /* Skills/Instructions modal */
+  .detail-panel {
+    display: none; position: fixed; top: 0; right: 0; bottom: 0; width: 420px;
+    background: var(--surface); border-left: 1px solid var(--border);
+    z-index: 50; overflow-y: auto; padding: 28px;
+    transform: translateX(100%); transition: transform 0.25s ease;
+  }
+  .detail-panel.open { display: block; transform: translateX(0); }
+  .panel-close { position: absolute; top: 20px; right: 20px; background: none; border: none; color: var(--muted); cursor: pointer; font-size: 18px; }
+  .panel-close:hover { color: var(--text); }
+  .panel-section { margin-bottom: 24px; }
+  .panel-section-title {
+    font-size: 10px; letter-spacing: 1.8px; text-transform: uppercase;
+    color: var(--muted); font-family: var(--font-mono); margin-bottom: 10px;
+  }
+  .panel-code {
+    background: var(--surface2); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 14px 16px;
+    font-family: var(--font-mono); font-size: 11.5px; color: var(--muted2);
+    white-space: pre; overflow-x: auto; line-height: 1.7;
+  }
+  .panel-tag { display: inline-block; background: var(--border2); border-radius: 4px; padding: 2px 8px; font-size: 11px; font-family: var(--font-mono); color: var(--muted2); margin: 2px; }
+
+  /* Spinner */
+  .spinner { display: inline-block; width: 10px; height: 10px; border: 1.5px solid rgba(0,200,255,0.3); border-top-color: var(--accent2); border-radius: 50%; animation: spin 0.7s linear infinite; }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 5px; height: 5px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }
+</style>
+</head>
+<body>
+
+<div class="shell">
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <div class="logo">
+      <div class="logo-mark">VAZHI</div>
+      <div class="logo-sub">Agent Validation System</div>
+    </div>
+
+    <div class="sidebar-section-label">Pipeline</div>
+    <div class="nav-item active" onclick="navigate('dashboard')">
+      <div class="nav-dot" style="background:#4fffb0"></div> Dashboard
+    </div>
+    <div class="nav-item" onclick="navigate('history')">
+      <div class="nav-dot" style="background:#5a6177"></div> Commit History
+    </div>
+
+    <div class="sidebar-section-label" style="margin-top:20px">Agents</div>
+    <div class="agent-nav" id="agent-nav"></div>
+
+    <div style="margin-top:auto;padding:20px 24px 0;border-top:1px solid var(--border);margin-top:20px">
+      <div style="font-size:11px;color:var(--muted);font-family:var(--font-mono)">Pipeline v1.0.0</div>
+      <div style="font-size:11px;color:var(--muted);font-family:var(--font-mono);margin-top:3px">5 agents registered</div>
+    </div>
+  </nav>
+
+  <!-- Main -->
+  <div class="main">
+    <div class="topbar">
+      <div class="topbar-title" id="page-title">Validation Dashboard</div>
+      <div class="topbar-right">
+        <button class="btn" onclick="resetAll()">↺ Reset</button>
+        <button class="btn btn-primary" id="run-btn" onclick="runPipeline()">▶ Run Validation</button>
+      </div>
+    </div>
+
+    <div class="content">
+      <!-- Commit form -->
+      <div class="commit-form">
+        <div class="form-title">Change to validate</div>
+        <div class="form-row">
+          <div class="form-field">
+            <label class="form-label">COMMIT MESSAGE</label>
+            <input class="form-input" id="commit-msg" value="feat: update hero section copy and CTA styles" />
+          </div>
+          <div class="form-field" style="max-width:160px">
+            <label class="form-label">CHANGE TYPE</label>
+            <select class="form-select" id="change-type">
+              <option value="feature">Feature</option>
+              <option value="bugfix">Bugfix</option>
+              <option value="content">Content</option>
+              <option value="config">Config</option>
+            </select>
+          </div>
+          <div class="form-field" style="max-width:180px">
+            <label class="form-label">FILES CHANGED</label>
+            <input class="form-input" id="files-changed" value="hero.html, styles.css" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Status bar -->
+      <div class="status-bar" id="status-bar">
+        <div class="status-icon" style="background:rgba(90,97,119,0.2)">⏸</div>
+        <div class="status-text">
+          <div class="status-title" id="status-title">Ready to validate</div>
+          <div class="status-desc" id="status-desc">Configure your change above and click Run Validation</div>
+        </div>
+        <div class="pipeline-progress">
+          <div class="progress-label" id="progress-label">0 / 5 agents</div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+        </div>
+      </div>
+
+      <!-- Agents grid -->
+      <div class="agents-grid" id="agents-grid"></div>
+
+      <!-- Pipeline log -->
+      <div class="pipeline-log">
+        <div class="log-header">
+          <div class="log-title">Pipeline Log</div>
+          <button class="log-clear" onclick="clearLog()">clear</button>
+        </div>
+        <div class="log-body" id="log-body">
+          <div class="log-entry">
+            <span class="log-time">00:00:00</span>
+            <span class="log-tag log-tag-system">[system]</span>
+            <span class="log-msg">Vazhi Agent Validation System initialized. 5 agents loaded.</span>
+          </div>
+          <div class="log-entry">
+            <span class="log-time">00:00:00</span>
+            <span class="log-tag log-tag-info">[info]</span>
+            <span class="log-msg">Configure your change and click Run Validation to begin.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Agent detail panel -->
+<div class="detail-panel" id="detail-panel">
+  <button class="panel-close" onclick="closePanel()">✕</button>
+  <div id="panel-content"></div>
+</div>
+
+<!-- Success modal -->
+<div class="modal-overlay" id="success-modal">
+  <div class="modal">
+    <div class="modal-icon">✅</div>
+    <div class="modal-title" style="color:var(--accent)">All Agents Passed</div>
+    <div class="modal-desc">Every domain agent has validated your change. The commit is approved and ready to be pushed to the Vazhi website.</div>
+    <div class="modal-details" id="success-details"></div>
+    <div class="modal-actions">
+      <button class="btn" onclick="closeModal('success-modal')">Cancel</button>
+      <button class="btn btn-primary" onclick="doCommit()">🚀 Commit to Website</button>
+    </div>
+  </div>
+</div>
+
+<!-- Failure modal -->
+<div class="modal-overlay" id="fail-modal">
+  <div class="modal">
+    <div class="modal-icon">🚫</div>
+    <div class="modal-title" style="color:var(--accent3)">Validation Failed</div>
+    <div class="modal-desc">One or more agents rejected this change. Fix the issues below and run validation again.</div>
+    <div class="modal-details" id="fail-details"></div>
+    <div class="modal-actions">
+      <button class="btn" onclick="closeModal('fail-modal')">Dismiss</button>
+      <button class="btn btn-danger" onclick="closeModal('fail-modal');resetAll()">Fix & Retry</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ─── Agent definitions ───────────────────────────────────────────────────────
+const AGENTS = [
+  {
+    id: 'content',
+    name: 'Content Agent',
+    icon: '📝',
+    iconBg: 'rgba(167,139,250,0.12)',
+    desc: 'grammar · tone · accuracy',
+    skills: [
+      'Grammar and spelling validation (en-IN, en-US)',
+      'Brand voice consistency check',
+      'Factual claim detection & flagging',
+      'Readability score (Flesch-Kincaid)',
+      'Heading hierarchy analysis',
+    ],
+    instructions: `# Content Agent Instructions
+version: 1.0
+agent: content
+
+rules:
+  - All public-facing text must pass spell check
+  - Headlines must be ≤ 70 characters
+  - No passive voice > 20% of sentences
+  - CTA buttons must use action verbs
+  - Brand tone: friendly, clear, confident
+
+fail_conditions:
+  - Spelling errors found
+  - Readability score < 60
+  - Factual claim without source`,
+    checks: [
+      { id: 'spelling', label: 'Spelling & grammar check' },
+      { id: 'tone', label: 'Brand voice consistency' },
+      { id: 'readability', label: 'Readability score ≥ 60' },
+      { id: 'cta', label: 'CTA copy validation' },
+    ],
+    failRate: 0.2,
+  },
+  {
+    id: 'ui',
+    name: 'UI / Design Agent',
+    icon: '🎨',
+    iconBg: 'rgba(0,200,255,0.1)',
+    desc: 'layout · tokens · components',
+    skills: [
+      'Design token compliance (spacing, color, type)',
+      'Component library version check',
+      'Responsive breakpoint validation',
+      'z-index conflict detection',
+      'CSS custom-property audit',
+    ],
+    instructions: `# UI/Design Agent Instructions
+version: 1.0
+agent: ui-design
+
+rules:
+  - All colors must use CSS variables
+  - Font sizes from token scale only
+  - No inline styles on components
+  - Mobile-first breakpoints required
+  - Spacing must use 4px grid
+
+fail_conditions:
+  - Hardcoded hex colors detected
+  - Font size not in token set
+  - Missing mobile viewport style`,
+    checks: [
+      { id: 'tokens', label: 'Design token compliance' },
+      { id: 'responsive', label: 'Responsive breakpoints' },
+      { id: 'components', label: 'Component version check' },
+      { id: 'spacing', label: '4px grid spacing audit' },
+    ],
+    failRate: 0.15,
+  },
+  {
+    id: 'seo',
+    name: 'SEO Agent',
+    icon: '🔍',
+    iconBg: 'rgba(79,255,176,0.08)',
+    desc: 'meta · structured data · perf',
+    skills: [
+      'Meta title & description validation',
+      'Open Graph tag completeness',
+      'Structured data (JSON-LD) lint',
+      'Canonical URL verification',
+      'Image alt-text coverage',
+    ],
+    instructions: `# SEO Agent Instructions
+version: 1.0
+agent: seo
+
+rules:
+  - Meta title: 50–60 characters
+  - Meta description: 120–160 characters
+  - Every <img> must have alt text
+  - Canonical tag required on all pages
+  - H1 must appear exactly once
+
+fail_conditions:
+  - Missing or empty meta title
+  - Image without alt attribute
+  - Duplicate H1 tags
+  - Missing canonical URL`,
+    checks: [
+      { id: 'meta', label: 'Meta title & description' },
+      { id: 'og', label: 'Open Graph tags complete' },
+      { id: 'alt', label: 'Image alt-text coverage' },
+      { id: 'canonical', label: 'Canonical URL present' },
+    ],
+    failRate: 0.2,
+  },
+  {
+    id: 'a11y',
+    name: 'Accessibility Agent',
+    icon: '♿',
+    iconBg: 'rgba(255,179,71,0.1)',
+    desc: 'WCAG 2.1 AA · aria · contrast',
+    skills: [
+      'WCAG 2.1 AA compliance scan',
+      'ARIA attribute correctness',
+      'Color contrast ratio check (4.5:1)',
+      'Keyboard navigation audit',
+      'Focus indicator visibility',
+    ],
+    instructions: `# Accessibility Agent Instructions
+version: 1.0
+agent: accessibility
+
+rules:
+  - Must pass WCAG 2.1 AA minimum
+  - Color contrast ≥ 4.5:1 for text
+  - All interactive elements keyboard-reachable
+  - Focus ring must be visible
+  - ARIA labels on icon-only buttons
+
+fail_conditions:
+  - Contrast ratio < 4.5:1
+  - Missing aria-label on icon button
+  - Interactive element not focusable
+  - Form field missing label`,
+    checks: [
+      { id: 'wcag', label: 'WCAG 2.1 AA scan' },
+      { id: 'contrast', label: 'Color contrast ≥ 4.5:1' },
+      { id: 'keyboard', label: 'Keyboard nav audit' },
+      { id: 'aria', label: 'ARIA attribute check' },
+    ],
+    failRate: 0.25,
+  },
+  {
+    id: 'security',
+    name: 'Security Agent',
+    icon: '🔒',
+    iconBg: 'rgba(255,107,107,0.08)',
+    desc: 'CSP · XSS · secrets',
+    skills: [
+      'Secret/credential leak detection',
+      'Content Security Policy audit',
+      'XSS pattern scanning',
+      'Dependency vulnerability check',
+      'HTTPS & HSTS header validation',
+    ],
+    instructions: `# Security Agent Instructions
+version: 1.0
+agent: security
+
+rules:
+  - No API keys or secrets in source
+  - CSP header must be set
+  - No eval() or innerHTML patterns
+  - All external URLs must be HTTPS
+  - No console.log in production build
+
+fail_conditions:
+  - Secret or API key detected
+  - eval() usage found
+  - HTTP URL in production link
+  - Missing CSP header`,
+    checks: [
+      { id: 'secrets', label: 'Secrets & credentials scan' },
+      { id: 'xss', label: 'XSS pattern detection' },
+      { id: 'csp', label: 'CSP header audit' },
+      { id: 'https', label: 'All URLs HTTPS check' },
+    ],
+    failRate: 0.15,
+  },
+];
+
+// ─── State ───────────────────────────────────────────────────────────────────
+let agentStates = {};
+let pipelineRunning = false;
+let commitHistory = [];
+
+AGENTS.forEach(a => { agentStates[a.id] = { state: 'idle', results: {}, timing: null }; });
+
+// ─── Init ────────────────────────────────────────────────────────────────────
+function init() {
+  renderAgentNav();
+  renderAgentsGrid();
+}
+
+function renderAgentNav() {
+  const nav = document.getElementById('agent-nav');
+  nav.innerHTML = AGENTS.map(a => {
+    const s = agentStates[a.id].state;
+    const badgeClass = s === 'pass' ? 'badge-pass' : s === 'fail' ? 'badge-fail' : s === 'running' ? 'badge-running' : 'badge-idle';
+    const badgeLabel = s === 'pass' ? 'PASS' : s === 'fail' ? 'FAIL' : s === 'running' ? '···' : 'IDLE';
+    return `<div class="nav-item" onclick="openPanel('${a.id}')">
+      <div class="nav-dot" style="background:${s==='pass'?'var(--accent)':s==='fail'?'var(--accent3)':s==='running'?'var(--accent2)':'var(--border2)'}"></div>
+      ${a.name}
+      <span class="agent-badge ${badgeClass}">${badgeLabel}</span>
+    </div>`;
+  }).join('');
+}
+
+function renderAgentsGrid() {
+  const grid = document.getElementById('agents-grid');
+  grid.innerHTML = AGENTS.map(a => {
+    const s = agentStates[a.id];
+    const stateClass = `state-${s.state}`;
+    const statusLabel = s.state === 'idle' ? 'IDLE' : s.state === 'running' ? 'RUNNING' : s.state === 'pass' ? 'PASSED' : 'FAILED';
+    const checks = a.checks.map(c => {
+      const res = s.results[c.id];
+      const markerClass = res === undefined ? 'check-idle' : res === 'running' ? 'check-running' : res ? 'check-pass' : 'check-fail';
+      const labelClass = res === undefined ? '' : res === 'running' ? '' : res ? 'done' : 'failed';
+      const marker = res === undefined ? '—' : res === 'running' ? '<span class="spinner"></span>' : res ? '✓' : '✕';
+      return `<div class="check-item">
+        <div class="check-marker ${markerClass}">${marker}</div>
+        <span class="check-label ${labelClass}">${c.label}</span>
+      </div>`;
+    }).join('');
+    const timing = s.timing ? `${s.timing}ms` : '—';
+    return `<div class="agent-card ${stateClass}" id="card-${a.id}">
+      <div class="card-header">
+        <div class="agent-icon" style="background:${a.iconBg}">${a.icon}</div>
+        <div class="agent-info">
+          <div class="agent-name">${a.name}</div>
+          <div class="agent-desc">${a.desc}</div>
+        </div>
+        <div class="card-status-badge">${statusLabel}</div>
+      </div>
+      <div class="card-body">
+        <div class="check-list">${checks}</div>
+      </div>
+      <div class="card-footer">
+        <div class="card-timing">${timing}</div>
+        <button class="agent-expand-btn" onclick="openPanel('${a.id}')">skills & instructions →</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ─── Pipeline ────────────────────────────────────────────────────────────────
+async function runPipeline() {
+  if (pipelineRunning) return;
+  pipelineRunning = true;
+  document.getElementById('run-btn').disabled = true;
+  
+  const msg = document.getElementById('commit-msg').value || 'Untitled change';
+  const type = document.getElementById('change-type').value;
+  const files = document.getElementById('files-changed').value;
+  
+  // Reset all
+  AGENTS.forEach(a => { agentStates[a.id] = { state: 'idle', results: {}, timing: null }; });
+
+  setStatus('running', '🔄', 'Pipeline running…', 'Dispatching agents for validation');
+  addLog('system', 'Pipeline started for: ' + msg);
+  addLog('info', `Type: ${type} | Files: ${files}`);
+  
+  let passed = 0;
+  let failed = [];
+
+  for (let i = 0; i < AGENTS.length; i++) {
+    const agent = AGENTS[i];
+    agentStates[agent.id].state = 'running';
+    renderAgentsGrid();
+    renderAgentNav();
+    addLog('info', `[${agent.name}] Starting validation…`);
+    
+    // Run checks with stagger
+    const agentStart = Date.now();
+    let agentPass = true;
+    
+    for (let j = 0; j < agent.checks.length; j++) {
+      const check = agent.checks[j];
+      agentStates[agent.id].results[check.id] = 'running';
+      renderAgentsGrid();
+      await sleep(280 + Math.random() * 320);
+      
+      // Determine pass/fail
+      const failThis = Math.random() < (agent.failRate / agent.checks.length);
+      agentStates[agent.id].results[check.id] = !failThis;
+      if (failThis) { agentPass = false; addLog('fail', `[${agent.name}] ✕ ${check.label}`); }
+      else { addLog('pass', `[${agent.name}] ✓ ${check.label}`); }
+      renderAgentsGrid();
+    }
+    
+    agentStates[agent.id].timing = Date.now() - agentStart;
+    agentStates[agent.id].state = agentPass ? 'pass' : 'fail';
+    if (!agentPass) failed.push(agent.name);
+    else passed++;
+    
+    const doneCount = i + 1;
+    document.getElementById('progress-label').textContent = `${doneCount} / ${AGENTS.length} agents`;
+    document.getElementById('progress-fill').style.width = `${(doneCount/AGENTS.length)*100}%`;
+    
+    renderAgentsGrid();
+    renderAgentNav();
+    addLog(agentPass ? 'pass' : 'fail', `[${agent.name}] ${agentPass ? 'PASSED' : 'FAILED'} in ${agentStates[agent.id].timing}ms`);
+    await sleep(100);
+  }
+
+  pipelineRunning = false;
+  document.getElementById('run-btn').disabled = false;
+
+  if (failed.length === 0) {
+    setStatus('pass', '✅', 'All agents passed', `${passed}/5 agents validated — commit is approved`);
+    addLog('pass', 'Pipeline PASSED — commit approved');
+    showSuccessModal(msg, type, files);
+  } else {
+    setStatus('fail', '🚫', 'Validation failed', `${failed.length} agent(s) rejected this change`);
+    addLog('fail', `Pipeline FAILED — issues in: ${failed.join(', ')}`);
+    showFailModal(failed);
+  }
+}
+
+function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+function setStatus(state, icon, title, desc) {
+  const bar = document.getElementById('status-bar');
+  const iconEl = bar.querySelector('.status-icon');
+  iconEl.textContent = icon;
+  iconEl.style.background = state === 'pass' ? 'rgba(79,255,176,0.12)' :
+                             state === 'fail' ? 'rgba(255,107,107,0.12)' :
+                             state === 'running' ? 'rgba(0,200,255,0.1)' : 'rgba(90,97,119,0.2)';
+  document.getElementById('status-title').textContent = title;
+  document.getElementById('status-desc').textContent = desc;
+  document.getElementById('progress-fill').style.background =
+    state === 'pass' ? 'var(--accent)' : state === 'fail' ? 'var(--accent3)' : 'var(--accent2)';
+}
+
+// ─── Log ─────────────────────────────────────────────────────────────────────
+function addLog(type, msg) {
+  const log = document.getElementById('log-body');
+  const now = new Date();
+  const t = [now.getHours(), now.getMinutes(), now.getSeconds()].map(n => String(n).padStart(2,'0')).join(':');
+  const tagClass = `log-tag-${type === 'pass' ? 'pass' : type === 'fail' ? 'fail' : type === 'system' ? 'system' : 'info'}`;
+  const tagLabel = `[${type}]`;
+  const entry = document.createElement('div');
+  entry.className = 'log-entry';
+  entry.innerHTML = `<span class="log-time">${t}</span><span class="log-tag ${tagClass}">${tagLabel.padStart(8)}</span><span class="log-msg ${type==='pass'||type==='fail'?'highlight':''}">${msg}</span>`;
+  log.appendChild(entry);
+  log.scrollTop = log.scrollHeight;
+}
+
+function clearLog() { document.getElementById('log-body').innerHTML = ''; }
+
+// ─── Reset ───────────────────────────────────────────────────────────────────
+function resetAll() {
+  AGENTS.forEach(a => { agentStates[a.id] = { state: 'idle', results: {}, timing: null }; });
+  setStatus('idle', '⏸', 'Ready to validate', 'Configure your change above and click Run Validation');
+  document.getElementById('progress-label').textContent = '0 / 5 agents';
+  document.getElementById('progress-fill').style.width = '0%';
+  renderAgentsGrid();
+  renderAgentNav();
+  addLog('system', 'Pipeline reset.');
+}
+
+// ─── Modals ──────────────────────────────────────────────────────────────────
+function showSuccessModal(msg, type, files) {
+  const total = Object.values(agentStates).reduce((s, a) => s + (a.timing||0), 0);
+  document.getElementById('success-details').innerHTML = `
+    <div class="modal-detail-row"><span class="modal-detail-label">Commit</span><span class="modal-detail-value">${msg}</span></div>
+    <div class="modal-detail-row"><span class="modal-detail-label">Type</span><span class="modal-detail-value">${type}</span></div>
+    <div class="modal-detail-row"><span class="modal-detail-label">Files</span><span class="modal-detail-value">${files}</span></div>
+    <div class="modal-detail-row"><span class="modal-detail-label">Agents</span><span class="modal-detail-value" style="color:var(--accent)">5 / 5 passed</span></div>
+    <div class="modal-detail-row"><span class="modal-detail-label">Duration</span><span class="modal-detail-value">${total}ms</span></div>`;
+  document.getElementById('success-modal').classList.add('show');
+}
+
+function showFailModal(failedAgents) {
+  document.getElementById('fail-details').innerHTML = `
+    <div class="modal-detail-row"><span class="modal-detail-label">Status</span><span class="modal-detail-value" style="color:var(--accent3)">BLOCKED</span></div>
+    <div class="modal-detail-row"><span class="modal-detail-label">Failed agents</span><span class="modal-detail-value">${failedAgents.length}</span></div>
+    ${failedAgents.map(n => `<div class="modal-detail-row"><span class="modal-detail-label">→</span><span class="modal-detail-value" style="color:var(--accent3)">${n}</span></div>`).join('')}
+    <div class="modal-detail-row"><span class="modal-detail-label">Action</span><span class="modal-detail-value">Fix issues & re-run</span></div>`;
+  document.getElementById('fail-modal').classList.add('show');
+}
+
+function closeModal(id) { document.getElementById(id).classList.remove('show'); }
+
+function doCommit() {
+  closeModal('success-modal');
+  const msg = document.getElementById('commit-msg').value;
+  commitHistory.unshift({ msg, time: new Date().toLocaleTimeString() });
+  addLog('system', `✅ Committed: "${msg}"`);
+  resetAll();
+  alert(`✅ "${msg}" committed to Vazhi website successfully!`);
+}
+
+// ─── Detail panel ─────────────────────────────────────────────────────────────
+function openPanel(agentId) {
+  const agent = AGENTS.find(a => a.id === agentId);
+  if (!agent) return;
+  const panel = document.getElementById('detail-panel');
+  document.getElementById('panel-content').innerHTML = `
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px">
+      <div style="width:44px;height:44px;border-radius:10px;background:${agent.iconBg};display:flex;align-items:center;justify-content:center;font-size:20px">${agent.icon}</div>
+      <div>
+        <div style="font-family:var(--font-head);font-size:18px;font-weight:700">${agent.name}</div>
+        <div style="font-size:12px;color:var(--muted);font-family:var(--font-mono);margin-top:2px">${agent.desc}</div>
+      </div>
+    </div>
+    <div class="panel-section">
+      <div class="panel-section-title">Skills</div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        ${agent.skills.map(s => `<div style="display:flex;gap:8px;font-size:13px;color:var(--muted2)"><span style="color:var(--accent)">→</span>${s}</div>`).join('')}
+      </div>
+    </div>
+    <div class="panel-section">
+      <div class="panel-section-title">Instructions file</div>
+      <pre class="panel-code">${agent.instructions}</pre>
+    </div>
+    <div class="panel-section">
+      <div class="panel-section-title">Checks run</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px">
+        ${agent.checks.map(c => `<span class="panel-tag">${c.label}</span>`).join('')}
+      </div>
+    </div>
+    <div class="panel-section">
+      <div class="panel-section-title">Fail rate (demo)</div>
+      <div style="font-family:var(--font-mono);font-size:13px;color:var(--amber)">${Math.round(agent.failRate*100)}% chance of failure per run</div>
+    </div>`;
+  panel.classList.add('open');
+}
+
+function closePanel() {
+  document.getElementById('detail-panel').classList.remove('open');
+}
+
+function navigate(page) {
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  event.target.closest('.nav-item').classList.add('active');
+  document.getElementById('page-title').textContent = page === 'dashboard' ? 'Validation Dashboard' : 'Commit History';
+  if (page === 'history') {
+    if (commitHistory.length === 0) { addLog('info', 'No commits yet in this session.'); }
+    else { commitHistory.forEach(c => addLog('pass', `Committed: "${c.msg}" at ${c.time}`)); }
+  }
+}
+
+init();
+</script>
+</body>
+</html>
