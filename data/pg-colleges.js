@@ -260,6 +260,29 @@ const PG_COLLEGES = [
     ],
   },
 
+  {
+    name: 'Central Institute of Classical Tamil',
+    short: 'CICT Chennai',
+    type: 'Central',
+    district: 'Chennai',
+    state: 'Tamil Nadu',
+    naac: 'Accredited',
+    nirf: 'Specialised Language Research Institute',
+    affil: 'Autonomous body under Ministry of Education, Govt of India. Established 2005 to promote research in Classical Tamil.',
+    website: 'cict.ac.in',
+    streams: ['Arts & Science'],
+    specialNote: 'India\'s only dedicated national centre for Classical Tamil research. Offers research fellowships and PhD programs in Classical Tamil language, literature and epigraphy.',
+    programGroups: [
+      {
+        stream: 'Arts & Humanities (PG / PhD)',
+        programs: [
+          { name: 'PhD — Classical Tamil Language & Literature', exam: 'UGC-NET + Interview', examCss: 'ce-net' },
+          { name: 'Research Fellowship — Tamil Epigraphy / Manuscripts / Lexicography', exam: 'Institute Selection', examCss: 'ce-own' },
+        ],
+      },
+    ],
+  },
+
   // ═══════════════════════════════════════════════
   // INSTITUTES OF NATIONAL IMPORTANCE & PREMIER DEEMED
   // ═══════════════════════════════════════════════
@@ -1020,6 +1043,224 @@ const PG_COLLEGES = [
           { name: 'M.Ed (Master of Education)', exam: 'TANCET / University Entrance', examCss: 'ce-own' },
           { name: 'M.Phil Education', exam: 'University Entrance', examCss: 'ce-merit' },
           { name: 'PhD Education', exam: 'UGC-NET + University Interview', examCss: 'ce-net' },
+        ],
+      },
+    ],
+  },
+
+  {
+    name: 'ICMR — National Institute of Virology, Pune',
+    short: 'ICMR-NIV Pune',
+    type: 'Central',
+    district: 'Pune',
+    state: 'Maharashtra',
+    naac: 'Accredited',
+    nirf: 'Premier Virology Research',
+    affil: 'Indian Council of Medical Research (ICMR) — Ministry of Health & Family Welfare. M.Sc programme affiliated to Savitribai Phule Pune University (SPPU).',
+    website: 'niv.icmr.org.in',
+    streams: ['Arts & Science'],
+    specialNote: 'India\'s premier virology research institute (est. 1952). Played a key role in COVID-19 diagnostics & vaccine development. M.Sc Virology admission via Online Entrance Examination (OEE) — applications close mid-May annually.',
+    programGroups: [
+      {
+        stream: 'Sciences (PG)',
+        programs: [
+          { name: 'M.Sc Virology (2 years)', exam: 'ICMR-NIV Online Entrance Exam (OEE)', examCss: 'ce-own' },
+          { name: 'PhD Virology / Life Sciences', exam: 'CSIR-NET / ICMR-JRF / DBT-JRF + Interview', examCss: 'ce-net' },
+        ],
+      },
+    ],
+  },
+
+  {
+    name: 'Indian Institute of Space Science and Technology',
+    short: 'IIST Trivandrum',
+    type: 'Central',
+    district: 'Thiruvananthapuram',
+    state: 'Kerala',
+    naac: 'A',
+    nirf: 'Top Space Tech',
+    affil: 'Deemed-to-be University under Department of Space (DOS), Govt of India — India\'s first space-tech university',
+    website: 'iist.ac.in',
+    streams: ['Engineering'],
+    specialNote: 'Asia\'s first space-tech university under ISRO. PG admission to M.Tech programmes via GATE. Strong placement into ISRO centres for top performers.',
+    programGroups: [
+      {
+        stream: 'Engineering (PG)',
+        programs: [
+          { name: 'M.Tech Machine Learning & Computing', exam: 'GATE', examCss: 'ce-gate' },
+          { name: 'M.Tech Aerospace Engineering', exam: 'GATE', examCss: 'ce-gate' },
+          { name: 'M.Tech Earth System Sciences / Optical Engineering / RF & Microwave', exam: 'GATE', examCss: 'ce-gate' },
+          { name: 'M.S / PhD (Research) — Aerospace, Physics, Maths, Earth Sciences', exam: 'GATE / CSIR-NET / UGC-NET + Interview', examCss: 'ce-net' },
+        ],
+      },
+    ],
+  },
+
+  {
+    name: 'National Institute of Rural Development & Panchayati Raj',
+    short: 'NIRD&PR Hyderabad',
+    type: 'Central',
+    district: 'Hyderabad',
+    state: 'Telangana',
+    naac: 'A',
+    nirf: 'Top Rural Development',
+    affil: 'Autonomous institute under Ministry of Rural Development, Govt of India',
+    website: 'nirdpr.org.in',
+    streams: ['Arts & Science', 'Management'],
+    specialNote: 'Apex institute on rural development and panchayati raj. Offers full-time PG diplomas and distance-mode programmes. Strong placement in development sector — UNDP, World Bank, govt rural depts.',
+    programGroups: [
+      {
+        stream: 'Rural Development & Public Policy (PG)',
+        programs: [
+          { name: 'PG Diploma in Sustainable Rural Development (PGDSRD) — full-time', exam: 'NIRD Merit + Interview', examCss: 'ce-own' },
+          { name: 'PG Diploma in Tribal Development Management (PGDTDM)', exam: 'NIRD Merit + Interview', examCss: 'ce-own' },
+          { name: 'PG Diploma in Geo-Spatial Technology for Rural Development (Distance)', exam: 'Merit (UG)', examCss: 'ce-merit' },
+          { name: 'Diploma in Panchayati Raj Governance & Rural Development (Distance)', exam: 'Merit (UG)', examCss: 'ce-merit' },
+        ],
+      },
+    ],
+  },
+
+  {
+    name: 'Indian Institute of Forest Management',
+    short: 'IIFM Bhopal',
+    type: 'Central',
+    district: 'Bhopal',
+    state: 'Madhya Pradesh',
+    naac: 'A',
+    nirf: 'Top Forest / Environment Management',
+    affil: 'Autonomous institute under Ministry of Environment, Forest & Climate Change, Govt of India',
+    website: 'iifm.ac.in',
+    streams: ['Management'],
+    specialNote: 'Premier sectoral B-school for forestry, environment and natural resource management. Doctoral programme in Management application typically closes mid-May. PGDFM admission via CAT.',
+    programGroups: [
+      {
+        stream: 'Management (PG / Doctoral)',
+        programs: [
+          { name: 'Post Graduate Diploma in Forestry Management (PGDFM) — 2 years', exam: 'CAT', examCss: 'ce-cat' },
+          { name: 'Doctoral Programme in Management (FPM-equivalent)', exam: 'IIFM Doctoral Entrance + Interview', examCss: 'ce-own' },
+        ],
+      },
+    ],
+  },
+
+  {
+    name: 'Indira Gandhi Institute of Development Research',
+    short: 'IGIDR Mumbai',
+    type: 'INI',
+    district: 'Mumbai',
+    state: 'Maharashtra',
+    naac: 'A',
+    nirf: 'Premier Economics Research',
+    affil: 'Deemed-to-be University — established and funded by the Reserve Bank of India (RBI)',
+    website: 'igidr.ac.in',
+    streams: ['Arts & Science'],
+    specialNote: 'Premier institute for development economics, finance and public policy research. Admission to M.Sc / M.Phil + PhD via IGIDR Entrance Test (advanced quant & economics).',
+    programGroups: [
+      {
+        stream: 'Economics & Public Policy (PG)',
+        programs: [
+          { name: 'M.Sc Economics (2 years)', exam: 'IGIDR Entrance + Interview', examCss: 'ce-own' },
+          { name: 'M.Phil + PhD Development Studies / Economics', exam: 'IGIDR Entrance + Interview', examCss: 'ce-own' },
+          { name: 'PhD (Direct) — Development Studies', exam: 'IGIDR Entrance + Interview', examCss: 'ce-own' },
+        ],
+      },
+    ],
+  },
+
+  {
+    name: 'National Institute of Securities Markets',
+    short: 'NISM Mumbai',
+    type: 'Central',
+    district: 'Navi Mumbai',
+    state: 'Maharashtra',
+    naac: 'Accredited',
+    nirf: 'Specialised Finance',
+    affil: 'Established by Securities and Exchange Board of India (SEBI) — Govt of India',
+    website: 'nism.ac.in',
+    streams: ['Management', 'Commerce'],
+    specialNote: 'SEBI\'s institute for securities markets education. PGDM in Securities Markets is a flagship full-time programme; admission via CAT / NISM Aptitude Test + Interview.',
+    programGroups: [
+      {
+        stream: 'Management & Finance (PG)',
+        programs: [
+          { name: 'PGDM in Securities Markets (2 years)', exam: 'CAT / NISM Aptitude Test + Interview', examCss: 'ce-cat' },
+          { name: 'PG Diploma in Data Science for Securities Markets', exam: 'CAT / NISM Aptitude Test + Interview', examCss: 'ce-cat' },
+          { name: 'PhD in Finance / Securities Markets', exam: 'UGC-NET / NISM Entrance + Interview', examCss: 'ce-net' },
+        ],
+      },
+    ],
+  },
+
+  {
+    name: 'Dr. Ram Manohar Lohia Institute of Medical Sciences',
+    short: 'RMLIMS Lucknow (PG)',
+    type: 'State',
+    district: 'Lucknow',
+    state: 'Uttar Pradesh',
+    naac: 'Accredited',
+    nirf: 'Top State Medical (PG)',
+    affil: 'Autonomous State Medical Institute under Govt of Uttar Pradesh',
+    website: 'drrmlims.ac.in',
+    streams: ['Medical'],
+    specialNote: 'Premier UP state institute for PG medical & super-specialty training. MD/MS via NEET-PG; DM/MCh via NEET-SS. Common Eligibility Test (CET) for senior resident posts.',
+    programGroups: [
+      {
+        stream: 'Medical & Health (PG / Super-Specialty)',
+        programs: [
+          { name: 'MD / MS — All Clinical & Pre-clinical Branches', exam: 'NEET-PG', examCss: 'ce-neetpg' },
+          { name: 'DM / MCh — Cardiology, Neurology, GI Surgery, Urology etc.', exam: 'NEET-SS', examCss: 'ce-neetpg' },
+          { name: 'DNB (Direct 6-year)', exam: 'NEET-PG', examCss: 'ce-neetpg' },
+        ],
+      },
+    ],
+  },
+
+  {
+    name: 'Post Graduate Institute of Child Health',
+    short: 'PGICH Noida',
+    type: 'State',
+    district: 'Gautam Buddha Nagar (Noida)',
+    state: 'Uttar Pradesh',
+    naac: 'Accredited',
+    nirf: 'Specialised Pediatric PG',
+    affil: 'Autonomous super-specialty institute under Govt of Uttar Pradesh — formerly Super Speciality Paediatric Hospital & PG Teaching Institute',
+    website: 'sspgthpgich.org',
+    streams: ['Medical'],
+    specialNote: 'UP state\'s dedicated pediatric super-specialty teaching institute. MD Pediatrics + DM in pediatric sub-specialties via NEET-PG / NEET-SS.',
+    programGroups: [
+      {
+        stream: 'Medical & Health (PG / Super-Specialty)',
+        programs: [
+          { name: 'MD Pediatrics', exam: 'NEET-PG', examCss: 'ce-neetpg' },
+          { name: 'DM Pediatric Cardiology / Neurology / Hemato-Oncology / Critical Care', exam: 'NEET-SS', examCss: 'ce-neetpg' },
+          { name: 'DNB Pediatrics & Pediatric Sub-Specialties', exam: 'NEET-PG / NEET-SS', examCss: 'ce-neetpg' },
+        ],
+      },
+    ],
+  },
+
+  {
+    name: 'Tata Institute of Fundamental Research',
+    short: 'TIFR Mumbai',
+    type: 'INI',
+    district: 'Mumbai',
+    state: 'Maharashtra',
+    naac: 'A++',
+    nirf: 'Premier Research (INI / Deemed)',
+    affil: 'Deemed-to-be University under Department of Atomic Energy (DAE), Govt of India. National centre with campuses in Mumbai (main), Bengaluru (ICTS, NCBS), Hyderabad (TCIS) and Pune (NCRA).',
+    website: 'tifr.res.in',
+    streams: ['Arts & Science'],
+    specialNote: 'India\'s premier basic-sciences research institute. Admission via TIFR Graduate School Admissions (GS) exam — separate streams for Physics, Chemistry, Biology, Mathematics, Computer & Systems Sciences.',
+    programGroups: [
+      {
+        stream: 'Sciences (PG / Integrated PhD)',
+        programs: [
+          { name: 'Integrated M.Sc + PhD / PhD — Physics', exam: 'TIFR GS (Physics)', examCss: 'ce-own' },
+          { name: 'Integrated M.Sc + PhD / PhD — Chemistry', exam: 'TIFR GS (Chemistry)', examCss: 'ce-own' },
+          { name: 'Integrated M.Sc + PhD / PhD — Biology', exam: 'TIFR GS (Biology) / JGEEBILS', examCss: 'ce-own' },
+          { name: 'Integrated M.Sc + PhD / PhD — Mathematics', exam: 'TIFR GS (Maths)', examCss: 'ce-own' },
+          { name: 'PhD — Computer & Systems Sciences (incl. STCS)', exam: 'TIFR GS (CS) / GATE', examCss: 'ce-own' },
         ],
       },
     ],
