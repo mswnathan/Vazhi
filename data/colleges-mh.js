@@ -146,6 +146,13 @@ const COLLEGES_MH=[
     {stream:'Medical & Health',programs:[
       {name:'MBBS (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
     ]},
+    {stream:'Paramedical (Diploma) — Merit-based, no entrance exam',programs:[
+      {name:'Diploma in Medical Lab Technology / DMLT (2 years)',exam:'Merit (Class 12 PCB marks) — Maharashtra DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Medical Radiography Technology / DMRT (2 years)',exam:'Merit (Class 12 PCB marks) — Maharashtra DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Operation Theatre Technology / DOTT (2 years)',exam:'Merit (Class 12 PCB marks) — Maharashtra DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Anaesthesia Technology (2 years)',exam:'Merit (Class 12 PCB marks) — Maharashtra DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Optometry (2 years)',exam:'Merit (Class 12 PCB marks) — Maharashtra DME Counselling',examCss:'ce-merit'},
+    ]},
   ]},
 
 {name:'BJ Medical College Pune',short:'BJMC',type:'State',district:'Pune',state:'Maharashtra',
@@ -155,6 +162,13 @@ const COLLEGES_MH=[
   programGroups:[
     {stream:'Medical & Health',programs:[
       {name:'MBBS (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
+    ]},
+    {stream:'Paramedical (Diploma) — Merit-based, no entrance exam',programs:[
+      {name:'Diploma in Medical Lab Technology / DMLT (2 years)',exam:'Merit (Class 12 PCB marks) — Maharashtra DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Medical Radiography Technology / DMRT (2 years)',exam:'Merit (Class 12 PCB marks) — Maharashtra DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Operation Theatre Technology / DOTT (2 years)',exam:'Merit (Class 12 PCB marks) — Maharashtra DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Anaesthesia Technology (2 years)',exam:'Merit (Class 12 PCB marks) — Maharashtra DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Optometry (2 years)',exam:'Merit (Class 12 PCB marks) — Maharashtra DME Counselling',examCss:'ce-merit'},
     ]},
   ]},
 
@@ -192,10 +206,10 @@ const COLLEGES_MH=[
 {name:'Dr. Punjabrao Deshmukh Krishi Vidyapeeth (PDKV)',short:'PDKV',type:'State',district:'Akola',state:'Maharashtra',
   naac:'A',nirf:'Top Agriculture',affil:'Dr. Punjabrao Deshmukh Krishi Vidyapeeth (State)',website:'pdkv.ac.in',
   streams:['Agriculture'],
-  specialNote:'Premier state agricultural university for Vidarbha region. ICAR AIEEA / MH state merit.',
+  specialNote:'Premier state agricultural university for Vidarbha region. CUET-UG (15% all-India quota) / MH state merit.',
   programGroups:[
     {stream:'Agriculture, Fisheries & Vet',programs:[
-      {name:'B.Sc (Agriculture) — 4 years',exam:'ICAR AIEEA / MH Merit',examCss:'ce-icar'},
+      {name:'B.Sc (Agriculture) — 4 years',exam:'CUET-UG (15% all-India quota) / MH Merit',examCss:'ce-cuet'},
     ]},
   ]},
 

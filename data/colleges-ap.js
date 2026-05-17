@@ -77,8 +77,8 @@ const COLLEGES_AP=[
       {name:'B.Tech (CSE, ECE, EEE, Mechanical, Civil, Chemical)',exam:'AP EAPCET',examCss:'ce-own'},
     ]},
     {stream:'Arts & Science',programs:[
-      {name:'B.Sc (Physics, Chemistry, Maths, Computer Science)',exam:'Merit / CUET',examCss:'ce-merit'},
-      {name:'B.A (English, History, Economics, Political Science)',exam:'Merit / CUET',examCss:'ce-merit'},
+      {name:'B.Sc (Physics, Chemistry, Maths, Computer Science)',exam:'Merit / CUET UG',examCss:'ce-merit'},
+      {name:'B.A (English, History, Economics, Political Science)',exam:'Merit / CUET UG',examCss:'ce-merit'},
     ]},
     {stream:'Law',programs:[
       {name:'B.A LL.B (Hons) — 5-year integrated',exam:'AP LAWCET',examCss:'ce-own'},
@@ -94,10 +94,17 @@ const COLLEGES_AP=[
       {name:'B.Tech (CSE, ECE, EEE, Mechanical, Civil)',exam:'AP EAPCET',examCss:'ce-own'},
     ]},
     {stream:'Arts & Science',programs:[
-      {name:'B.Sc (Physics, Chemistry, Maths, Computer Science, Biotechnology)',exam:'Merit / CUET',examCss:'ce-merit'},
+      {name:'B.Sc (Physics, Chemistry, Maths, Computer Science, Biotechnology)',exam:'Merit / CUET UG',examCss:'ce-merit'},
     ]},
     {stream:'Medical & Health',programs:[
       {name:'MBBS (5.5 years) — Sri Venkateswara Medical College',exam:'NEET UG',examCss:'ce-neet'},
+    ]},
+    {stream:'Paramedical (Diploma) — Merit-based, no entrance exam',programs:[
+      {name:'Diploma in Medical Lab Technology / DMLT (2 years)',exam:'Merit (Class 12 PCB marks) — AP DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Medical Radiography Technology / DMRT (2 years)',exam:'Merit (Class 12 PCB marks) — AP DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Operation Theatre Technology / DOTT (2 years)',exam:'Merit (Class 12 PCB marks) — AP DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Anaesthesia Technology (2 years)',exam:'Merit (Class 12 PCB marks) — AP DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Optometry (2 years)',exam:'Merit (Class 12 PCB marks) — AP DME Counselling',examCss:'ce-merit'},
     ]},
   ]},
 
@@ -136,11 +143,11 @@ const COLLEGES_AP=[
 {name:'Dr. YSR Horticultural University',short:'DRYSRHU',type:'State',district:'Guntur',state:'Andhra Pradesh',
   naac:'Accredited',nirf:'Top Horticulture',affil:'Dr. Y.S.R. Horticultural University (State)',website:'drysrhu.edu.in',
   streams:['Agriculture'],
-  specialNote:'Only dedicated horticultural university in Andhra Pradesh. ICAR AIEEA / AP merit admission.',
+  specialNote:'Only dedicated horticultural university in Andhra Pradesh. CUET-UG (15% all-India quota) / AP merit admission.',
   programGroups:[
     {stream:'Agriculture, Fisheries & Vet',programs:[
-      {name:'B.Sc (Horticulture) — 4 years',exam:'ICAR AIEEA / AP Merit',examCss:'ce-icar'},
-      {name:'B.Sc (Floriculture & Landscape Architecture)',exam:'ICAR AIEEA / AP Merit',examCss:'ce-icar'},
+      {name:'B.Sc (Horticulture) — 4 years',exam:'CUET-UG (15% all-India quota) / AP Merit',examCss:'ce-cuet'},
+      {name:'B.Sc (Floriculture & Landscape Architecture)',exam:'CUET-UG (15% all-India quota) / AP Merit',examCss:'ce-cuet'},
     ]},
   ]},
 
@@ -161,6 +168,52 @@ const COLLEGES_AP=[
     ]},
     {stream:'Law',programs:[
       {name:'B.A LL.B / BBA LL.B (5 years)',exam:'CLAT / AP LAWCET',examCss:'ce-clat'},
+    ]},
+  ]},
+
+{name:'Dravidian University',short:'Dravidian Univ Kuppam',type:'State',district:'Chittoor',state:'Andhra Pradesh',
+  naac:'Accredited',nirf:'State University',affil:'State University established by Govt of Andhra Pradesh (1997)',website:'dravidianuniversity.ac.in',
+  streams:['Arts & Science','Commerce'],
+  specialNote:'State university focused on Dravidian languages, culture and humanities. UG admission via AP merit / CUET UG for select programmes.',
+  programGroups:[
+    {stream:'Arts & Humanities',programs:[
+      {name:'B.A Telugu / Tamil / Kannada / Malayalam (Dravidian languages)',exam:'University Merit / CUET UG',examCss:'ce-merit'},
+      {name:'B.A History / Sociology / Political Science',exam:'University Merit / CUET UG',examCss:'ce-merit'},
+    ]},
+    {stream:'Science & Technology',programs:[
+      {name:'B.Sc (Computer Science, Maths, Physics, Chemistry)',exam:'University Merit',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Yogi Vemana University',short:'Yogi Vemana Univ',type:'State',district:'Kadapa',state:'Andhra Pradesh',
+  naac:'A+',nirf:'State University',affil:'State University established by Govt of Andhra Pradesh (2006)',website:'yogivemanauniversity.ac.in',
+  streams:['Arts & Science','Commerce'],
+  specialNote:'AP state university in Rayalaseema region. Strong in basic sciences and Telugu studies.',
+  programGroups:[
+    {stream:'Science & Technology',programs:[
+      {name:'B.Sc (Physics, Chemistry, Maths, Computer Science, Botany, Zoology)',exam:'University Merit / CUET UG',examCss:'ce-merit'},
+    ]},
+    {stream:'Arts & Humanities',programs:[
+      {name:'B.A Telugu / English / History / Economics',exam:'University Merit',examCss:'ce-merit'},
+    ]},
+    {stream:'Commerce & Management',programs:[
+      {name:'B.Com / BBA',exam:'University Merit',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Andhra Kesari University',short:'Andhra Kesari Univ',type:'State',district:'Prakasam (Ongole)',state:'Andhra Pradesh',
+  naac:'Accredited',nirf:'State University',affil:'State University established by Govt of Andhra Pradesh (2022) — named after T. Prakasam',website:'aku.edu.in',
+  streams:['Arts & Science','Commerce'],
+  specialNote:'New AP state university in Prakasam district. UG programmes via constituent and affiliated colleges in the region.',
+  programGroups:[
+    {stream:'Arts & Humanities',programs:[
+      {name:'B.A Telugu / English / History / Economics / Political Science',exam:'University Merit',examCss:'ce-merit'},
+    ]},
+    {stream:'Science & Technology',programs:[
+      {name:'B.Sc (Physics, Chemistry, Maths, Computer Science, Biotechnology)',exam:'University Merit',examCss:'ce-merit'},
+    ]},
+    {stream:'Commerce & Management',programs:[
+      {name:'B.Com / BBA',exam:'University Merit',examCss:'ce-merit'},
     ]},
   ]},
 

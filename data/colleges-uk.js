@@ -67,7 +67,7 @@ const COLLEGES_UK=[
   specialNote:'India\'s premier forestry institution (est. 1906). One of the largest research institutes in the world. Stunning heritage campus.',
   programGroups:[
     {stream:'Arts & Science',programs:[
-      {name:'B.Sc (Hons) Forestry (4 years)',exam:'ICAR AIEEA / Own Entrance',examCss:'ce-icar'},
+      {name:'B.Sc (Hons) Forestry (4 years)',exam:'CUET-UG (15% all-India quota) / Own Entrance',examCss:'ce-cuet'},
     ]},
   ]},
 

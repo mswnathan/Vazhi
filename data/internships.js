@@ -104,4 +104,22 @@ const INTERNSHIPS = [
     bc: 'green',
   },
 
+  {
+    id: 'ias-srfp',
+    name: 'Indian Academy of Sciences — Summer Research Fellowship Programme (SRFP)',
+    short: 'IAS SRFP',
+    body: 'Indian Academy of Sciences (Bengaluru) — jointly with INSA & NASI',
+    type: 'Research',
+    for: 'UG / PG / first-year PhD students in Science, Engineering and Medicine — selected nationally on merit',
+    ugStream: ['Science', 'Engineering', 'Medical'],
+    duration: '8 weeks (May–Jul, flexible)',
+    stipend: '₹17,000 (one-time) + train fare (II AC) reimbursement',
+    season: 'Summer (May–Jul)',
+    deadline: '',
+    website: 'web-japps.ias.ac.in/srfp',
+    note: 'India\'s flagship summer research fellowship — work with Academy Fellows / Associates at IISc, IITs, IISERs, TIFR, NCBS, CSIR labs etc. Applications usually open Nov–Dec; results Feb–Mar. Single application gives access to mentors across three academies.',
+    badge: 'National Merit',
+    bc: 'purple',
+  },
+
 ];

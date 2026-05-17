@@ -259,4 +259,15 @@ const COLLEGES_DL=[
     ]},
   ]},
 
+{name:'Central Sanskrit University (CSU)',short:'CSU',type:'Central',district:'Delhi',state:'Delhi',
+  naac:'A',nirf:'Top Central University',affil:'Central University — Act of Parliament 2020 (formerly Rashtriya Sanskrit Sansthan, est. 1970)',website:'sanskrit.nic.in',
+  streams:['Arts & Science'],
+  specialNote:'India\'s apex central university for Sanskrit studies. Headquartered in Delhi with 12 campuses across India (Jaipur, Bhopal, Puri, Garli, Lucknow, Trichur, Guruvayur, Shringeri, Allahabad, Mumbai, Ekalavya, Janakpuri). Offers Shastri (UG) and Acharya (PG) programmes in classical Sanskrit disciplines.',
+  programGroups:[
+    {stream:'Arts & Science (UG)',programs:[
+      {name:'Shastri (B.A Sanskrit Hons) — 3 years (Sahitya, Vyakarana, Nyaya, Vedanta, Jyotish, Dharmashastra)',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'Shiksha Shastri (B.Ed Sanskrit) — 2 years',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+  ]},
+
 ];

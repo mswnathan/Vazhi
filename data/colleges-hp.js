@@ -93,9 +93,9 @@ const COLLEGES_HP=[
   specialNote:'India\'s only dedicated Horticulture & Forestry university. Renowned for apple, kiwi and temperate fruit research. Stunning hill campus at 1250 m altitude.',
   programGroups:[
     {stream:'Arts & Science',programs:[
-      {name:'B.Sc (Hons) Horticulture (4 years)',exam:'ICAR AIEEA',examCss:'ce-icar'},
-      {name:'B.Sc (Hons) Forestry (4 years)',exam:'ICAR AIEEA',examCss:'ce-icar'},
-      {name:'B.Tech Food Technology',exam:'ICAR AIEEA / State Entrance',examCss:'ce-icar'},
+      {name:'B.Sc (Hons) Horticulture (4 years)',exam:'CUET-UG (15% all-India quota)',examCss:'ce-cuet'},
+      {name:'B.Sc (Hons) Forestry (4 years)',exam:'CUET-UG (15% all-India quota)',examCss:'ce-cuet'},
+      {name:'B.Tech Food Technology',exam:'CUET-UG (15% all-India quota) / State Entrance',examCss:'ce-cuet'},
     ]},
   ]},
 

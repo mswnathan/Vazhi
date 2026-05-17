@@ -1,0 +1,244 @@
+year,college,college_short,college_type,district,branch,community,quota,cutoff_mark
+2025,Anna University CEG Campus,CEG Chennai,Government,Chennai,Biomedical Engineering,OC,General,195.0
+2025,Anna University CEG Campus,CEG Chennai,Government,Chennai,Biomedical Engineering,BC,General,192.0
+2025,Anna University CEG Campus,CEG Chennai,Government,Chennai,Biomedical Engineering,BCM,General,193.0
+2025,Anna University CEG Campus,CEG Chennai,Government,Chennai,Biomedical Engineering,MBC,General,193.0
+2025,Anna University CEG Campus,CEG Chennai,Government,Chennai,Civil Engineering,OC,General,195.0
+2025,Anna University CEG Campus,CEG Chennai,Government,Chennai,Civil Engineering,BC,General,192.0
+2025,Anna University CEG Campus,CEG Chennai,Government,Chennai,Civil Engineering,BCM,General,190.0
+2025,Anna University CEG Campus,CEG Chennai,Government,Chennai,Civil Engineering,MBC,General,193.5
+2025,Anna University CEG Campus,CEG Chennai,Government,Chennai,Computer Science and Engineering,OC,General,200.0
+2025,Anna University CEG Campus,CEG Chennai,Government,Chennai,Computer Science and Engineering,BC,General,199.5
+2025,Anna University CEG Campus,CEG Chennai,Government,Chennai,Computer Science and Engineering,BCM,General,198.5
+2025,Anna University CEG Campus,CEG Chennai,Government,Chennai,Computer Science and Engineering,MBC,General,199.5
+2025,Anna University CEG Campus,CEG Chennai,Government,Chennai,Computer Science and Engineering,SC,General,191.5
+2025,Anna University CEG Campus,CEG Chennai,Government,Chennai,Electronics and Communication Engineering,OC,General,199.5
+2025,Anna University CEG Campus,CEG Chennai,Government,Chennai,Electronics and Communication Engineering,BC,General,199.0
+2025,Anna University CEG Campus,CEG Chennai,Government,Chennai,Electronics and Communication Engineering,BCM,General,197.5
+2025,Anna University CEG Campus,CEG Chennai,Government,Chennai,Electronics and Communication Engineering,MBC,General,198.5
+2025,Anna University CEG Campus,CEG Chennai,Government,Chennai,Electrical and Electronics Engineering,OC,General,197.5
+2025,Anna University CEG Campus,CEG Chennai,Government,Chennai,Electrical and Electronics Engineering,BC,General,196.5
+2025,Anna University CEG Campus,CEG Chennai,Government,Chennai,Electrical and Electronics Engineering,BCM,General,196.5
+2025,Anna University CEG Campus,CEG Chennai,Government,Chennai,Electrical and Electronics Engineering,MBC,General,196.0
+2025,Anna University CEG Campus,CEG Chennai,Government,Chennai,Electrical and Electronics Engineering,SC,General,190.0
+2025,Anna University MIT Campus,MIT Chrompet,Government,Chennai,Computer Science and Engineering,OC,General,198.0
+2025,Anna University MIT Campus,MIT Chrompet,Government,Chennai,Computer Science and Engineering,BC,General,197.0
+2025,Anna University MIT Campus,MIT Chrompet,Government,Chennai,Computer Science and Engineering,BCM,General,195.0
+2025,Anna University MIT Campus,MIT Chrompet,Government,Chennai,Computer Science and Engineering,MBC,General,195.0
+2025,Anna University MIT Campus,MIT Chrompet,Government,Chennai,Computer Science and Engineering,SC,General,188.0
+2025,Anna University MIT Campus,MIT Chrompet,Government,Chennai,Electronics and Communication Engineering,OC,General,196.0
+2025,Anna University MIT Campus,MIT Chrompet,Government,Chennai,Electronics and Communication Engineering,BC,General,195.0
+2025,Anna University MIT Campus,MIT Chrompet,Government,Chennai,Electronics and Communication Engineering,BCM,General,193.0
+2025,Anna University MIT Campus,MIT Chrompet,Government,Chennai,Electronics and Communication Engineering,MBC,General,193.0
+2025,Anna University MIT Campus,MIT Chrompet,Government,Chennai,Electronics and Communication Engineering,SC,General,182.0
+2025,SSN College of Engineering,SSN Kalavakkam,Self-financing,Chengalpattu,Computer Science and Engineering,OC,General,197.0
+2025,SSN College of Engineering,SSN Kalavakkam,Self-financing,Chengalpattu,Computer Science and Engineering,BC,General,196.0
+2025,SSN College of Engineering,SSN Kalavakkam,Self-financing,Chengalpattu,Computer Science and Engineering,BCM,General,194.0
+2025,SSN College of Engineering,SSN Kalavakkam,Self-financing,Chengalpattu,Computer Science and Engineering,MBC,General,194.0
+2025,SSN College of Engineering,SSN Kalavakkam,Self-financing,Chengalpattu,Computer Science and Engineering,SC,General,185.0
+2025,Sathyabama Institute of Science and Technology,Sathyabama Chennai,Self-financing,Chennai,Computer Science and Engineering,OC,General,190.0
+2025,Sathyabama Institute of Science and Technology,Sathyabama Chennai,Self-financing,Chennai,Computer Science and Engineering,BC,General,188.0
+2025,Sathyabama Institute of Science and Technology,Sathyabama Chennai,Self-financing,Chennai,Computer Science and Engineering,BCM,General,185.0
+2025,Sathyabama Institute of Science and Technology,Sathyabama Chennai,Self-financing,Chennai,Computer Science and Engineering,MBC,General,185.0
+2025,Sathyabama Institute of Science and Technology,Sathyabama Chennai,Self-financing,Chennai,Computer Science and Engineering,SC,General,175.0
+2024,Anna University CEG Campus,CEG Chennai,Government,Chennai,Computer Science and Engineering,OC,General,200.0
+2024,Anna University CEG Campus,CEG Chennai,Government,Chennai,Electronics and Communication Engineering,OC,General,200.0
+2024,Anna University MIT Campus,MIT Chrompet,Government,Chennai,Computer Science and Engineering,OC,General,199.25
+2024,Anna University MIT Campus,MIT Chrompet,Government,Chennai,Electronics and Communication Engineering,OC,General,198.5
+2024,PSG College of Technology,PSG Tech,Aided,Coimbatore,Computer Science and Engineering,OC,General,199.0
+2024,PSG College of Technology,PSG Tech,Aided,Coimbatore,Electronics and Communication Engineering,OC,General,199.0
+2023,Anna University CEG Campus,CEG Chennai,Government,Chennai,Computer Science and Engineering,OC,General,200.0
+2023,Anna University CEG Campus,CEG Chennai,Government,Chennai,Electronics and Communication Engineering,OC,General,199.0
+2023,PSG College of Technology,PSG Tech,Aided,Coimbatore,Computer Science and Engineering,OC,General,199.0
+2023,PSG College of Technology,PSG Tech,Aided,Coimbatore,Electronics and Communication Engineering,OC,General,199.0
+2023,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Computer Science and Engineering,OC,General,177.0
+2023,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Computer Science and Engineering,BC,General,165.5
+2023,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Computer Science and Engineering,BCM,General,166.5
+2023,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Computer Science and Engineering,MBC,General,168.5
+2023,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Computer Science and Engineering,SC,General,150.0
+2023,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Computer Science and Engineering,SCA,General,152.5
+2022,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Computer Science and Engineering,OC,General,181.0
+2022,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Computer Science and Engineering,BC,General,173.0
+2022,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Computer Science and Engineering,BCM,General,168.5
+2022,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Computer Science and Engineering,MBC,General,165.0
+2022,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Computer Science and Engineering,SC,General,142.5
+2023,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Electronics and Communication Engineering,OC,General,170.0
+2023,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Electronics and Communication Engineering,BC,General,151.5
+2023,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Electronics and Communication Engineering,BCM,General,159.5
+2023,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Electronics and Communication Engineering,MBC,General,154.5
+2023,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Electronics and Communication Engineering,SC,General,141.5
+2023,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Electronics and Communication Engineering,SCA,General,133.5
+2022,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Electronics and Communication Engineering,OC,General,169.5
+2022,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Electronics and Communication Engineering,BC,General,156.5
+2022,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Electronics and Communication Engineering,BCM,General,148.5
+2022,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Electronics and Communication Engineering,MBC,General,152.0
+2022,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Electronics and Communication Engineering,SC,General,126.5
+2023,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Electrical and Electronics Engineering,OC,General,156.0
+2023,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Electrical and Electronics Engineering,BC,General,147.0
+2023,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Electrical and Electronics Engineering,BCM,General,141.5
+2023,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Electrical and Electronics Engineering,MBC,General,141.0
+2023,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Electrical and Electronics Engineering,SC,General,104.5
+2023,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Electrical and Electronics Engineering,SCA,General,143.0
+2022,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Electrical and Electronics Engineering,OC,General,151.5
+2022,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Electrical and Electronics Engineering,BC,General,130.5
+2022,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Electrical and Electronics Engineering,BCM,General,126.5
+2022,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Electrical and Electronics Engineering,MBC,General,138.0
+2022,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Electrical and Electronics Engineering,SC,General,105.5
+2023,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Civil Engineering,OC,General,135.5
+2023,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Civil Engineering,BC,General,105.5
+2023,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Civil Engineering,BCM,General,90.0
+2023,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Civil Engineering,MBC,General,112.0
+2023,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Civil Engineering,SC,General,92.0
+2022,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Civil Engineering,OC,General,103.0
+2022,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Civil Engineering,BC,General,84.5
+2022,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Civil Engineering,MBC,General,90.0
+2022,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Civil Engineering,SC,General,88.0
+2023,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Mechanical Engineering,OC,General,137.0
+2023,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Mechanical Engineering,BC,General,122.5
+2023,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Mechanical Engineering,BCM,General,107.0
+2023,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Mechanical Engineering,MBC,General,101.5
+2023,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Mechanical Engineering,SC,General,112.0
+2023,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Mechanical Engineering,SCA,General,127.0
+2022,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Mechanical Engineering,OC,General,130.5
+2022,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Mechanical Engineering,BC,General,91.5
+2022,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Mechanical Engineering,MBC,General,112.5
+2022,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Mechanical Engineering,SC,General,98.5
+2022,Anna University Regional Campus Madurai,AU Madurai,Government,Madurai,Mechanical Engineering,SCA,General,109.5
+2023,Anna University Regional Campus Coimbatore,AU Coimbatore,Government,Coimbatore,Computer Science and Engineering,OC,General,186.0
+2023,Anna University Regional Campus Coimbatore,AU Coimbatore,Government,Coimbatore,Computer Science and Engineering,BC,General,175.5
+2023,Anna University Regional Campus Coimbatore,AU Coimbatore,Government,Coimbatore,Computer Science and Engineering,BCM,General,180.0
+2023,Anna University Regional Campus Coimbatore,AU Coimbatore,Government,Coimbatore,Computer Science and Engineering,MBC,General,178.0
+2023,Anna University Regional Campus Coimbatore,AU Coimbatore,Government,Coimbatore,Computer Science and Engineering,SC,General,164.5
+2023,Anna University Regional Campus Coimbatore,AU Coimbatore,Government,Coimbatore,Computer Science and Engineering,SCA,General,161.0
+2023,Anna University Regional Campus Coimbatore,AU Coimbatore,Government,Coimbatore,Computer Science and Engineering,ST,General,155.0
+2022,Anna University Regional Campus Coimbatore,AU Coimbatore,Government,Coimbatore,Computer Science and Engineering,OC,General,188.0
+2022,Anna University Regional Campus Coimbatore,AU Coimbatore,Government,Coimbatore,Computer Science and Engineering,BC,General,185.0
+2022,Anna University Regional Campus Coimbatore,AU Coimbatore,Government,Coimbatore,Computer Science and Engineering,BCM,General,180.0
+2022,Anna University Regional Campus Coimbatore,AU Coimbatore,Government,Coimbatore,Computer Science and Engineering,MBC,General,185.5
+2022,Anna University Regional Campus Coimbatore,AU Coimbatore,Government,Coimbatore,Computer Science and Engineering,SC,General,169.73
+2022,Anna University Regional Campus Coimbatore,AU Coimbatore,Government,Coimbatore,Computer Science and Engineering,SCA,General,147.19
+2023,Government College of Engineering Salem,GCE Salem,Government,Salem,Computer Science and Engineering,OC,General,193.0
+2023,Government College of Engineering Salem,GCE Salem,Government,Salem,Computer Science and Engineering,BC,General,191.0
+2023,Government College of Engineering Salem,GCE Salem,Government,Salem,Computer Science and Engineering,BCM,General,190.0
+2023,Government College of Engineering Salem,GCE Salem,Government,Salem,Computer Science and Engineering,MBC,General,191.0
+2023,Government College of Engineering Salem,GCE Salem,Government,Salem,Computer Science and Engineering,SC,General,175.0
+2023,Government College of Engineering Salem,GCE Salem,Government,Salem,Computer Science and Engineering,SCA,General,173.5
+2022,Government College of Engineering Salem,GCE Salem,Government,Salem,Computer Science and Engineering,OC,General,193.5
+2022,Government College of Engineering Salem,GCE Salem,Government,Salem,Computer Science and Engineering,BC,General,192.0
+2022,Government College of Engineering Salem,GCE Salem,Government,Salem,Computer Science and Engineering,BCM,General,191.5
+2022,Government College of Engineering Salem,GCE Salem,Government,Salem,Computer Science and Engineering,MBC,General,189.5
+2022,Government College of Engineering Salem,GCE Salem,Government,Salem,Computer Science and Engineering,SC,General,181.0
+2022,Government College of Engineering Salem,GCE Salem,Government,Salem,Computer Science and Engineering,SCA,General,178.3
+2023,Government College of Engineering Salem,GCE Salem,Government,Salem,Electronics and Communication Engineering,OC,General,190.5
+2023,Government College of Engineering Salem,GCE Salem,Government,Salem,Electronics and Communication Engineering,BC,General,184.5
+2023,Government College of Engineering Salem,GCE Salem,Government,Salem,Electronics and Communication Engineering,BCM,General,188.5
+2023,Government College of Engineering Salem,GCE Salem,Government,Salem,Electronics and Communication Engineering,MBC,General,187.5
+2023,Government College of Engineering Salem,GCE Salem,Government,Salem,Electronics and Communication Engineering,SC,General,174.0
+2023,Government College of Engineering Salem,GCE Salem,Government,Salem,Electronics and Communication Engineering,SCA,General,162.5
+2023,Government College of Engineering Salem,GCE Salem,Government,Salem,Electronics and Communication Engineering,ST,General,185.0
+2022,Government College of Engineering Salem,GCE Salem,Government,Salem,Electronics and Communication Engineering,OC,General,191.5
+2022,Government College of Engineering Salem,GCE Salem,Government,Salem,Electronics and Communication Engineering,BC,General,190.0
+2022,Government College of Engineering Salem,GCE Salem,Government,Salem,Electronics and Communication Engineering,BCM,General,180.5
+2022,Government College of Engineering Salem,GCE Salem,Government,Salem,Electronics and Communication Engineering,MBC,General,187.85
+2022,Government College of Engineering Salem,GCE Salem,Government,Salem,Electronics and Communication Engineering,SC,General,175.5
+2022,Government College of Engineering Salem,GCE Salem,Government,Salem,Electronics and Communication Engineering,SCA,General,166.07
+2023,Government College of Engineering Bargur,GCE Bargur,Government,Krishnagiri,Computer Science and Engineering,OC,General,184.0
+2023,Government College of Engineering Bargur,GCE Bargur,Government,Krishnagiri,Computer Science and Engineering,BC,General,178.0
+2023,Government College of Engineering Bargur,GCE Bargur,Government,Krishnagiri,Computer Science and Engineering,BCM,General,177.0
+2023,Government College of Engineering Bargur,GCE Bargur,Government,Krishnagiri,Computer Science and Engineering,MBC,General,181.5
+2023,Government College of Engineering Bargur,GCE Bargur,Government,Krishnagiri,Computer Science and Engineering,SC,General,161.5
+2023,Government College of Engineering Bargur,GCE Bargur,Government,Krishnagiri,Computer Science and Engineering,SCA,General,169.5
+2023,Government College of Engineering Bargur,GCE Bargur,Government,Krishnagiri,Computer Science and Engineering,ST,General,144.0
+2022,Government College of Engineering Bargur,GCE Bargur,Government,Krishnagiri,Computer Science and Engineering,OC,General,187.0
+2022,Government College of Engineering Bargur,GCE Bargur,Government,Krishnagiri,Computer Science and Engineering,BC,General,181.5
+2022,Government College of Engineering Bargur,GCE Bargur,Government,Krishnagiri,Computer Science and Engineering,BCM,General,171.5
+2022,Government College of Engineering Bargur,GCE Bargur,Government,Krishnagiri,Computer Science and Engineering,MBC,General,181.5
+2022,Government College of Engineering Bargur,GCE Bargur,Government,Krishnagiri,Computer Science and Engineering,SC,General,170.5
+2022,Government College of Engineering Bargur,GCE Bargur,Government,Krishnagiri,Computer Science and Engineering,SCA,General,141.0
+2023,Government College of Engineering Dharmapuri,GCE Dharmapuri,Government,Dharmapuri,Computer Science and Engineering,OC,General,174.5
+2023,Government College of Engineering Dharmapuri,GCE Dharmapuri,Government,Dharmapuri,Computer Science and Engineering,BC,General,163.0
+2023,Government College of Engineering Dharmapuri,GCE Dharmapuri,Government,Dharmapuri,Computer Science and Engineering,BCM,General,166.0
+2023,Government College of Engineering Dharmapuri,GCE Dharmapuri,Government,Dharmapuri,Computer Science and Engineering,MBC,General,171.5
+2023,Government College of Engineering Dharmapuri,GCE Dharmapuri,Government,Dharmapuri,Computer Science and Engineering,SC,General,150.0
+2023,Government College of Engineering Dharmapuri,GCE Dharmapuri,Government,Dharmapuri,Computer Science and Engineering,SCA,General,128.0
+2023,Government College of Engineering Dharmapuri,GCE Dharmapuri,Government,Dharmapuri,Computer Science and Engineering,ST,General,166.87
+2022,Government College of Engineering Dharmapuri,GCE Dharmapuri,Government,Dharmapuri,Computer Science and Engineering,OC,General,180.9
+2022,Government College of Engineering Dharmapuri,GCE Dharmapuri,Government,Dharmapuri,Computer Science and Engineering,BC,General,173.0
+2022,Government College of Engineering Dharmapuri,GCE Dharmapuri,Government,Dharmapuri,Computer Science and Engineering,BCM,General,163.0
+2022,Government College of Engineering Dharmapuri,GCE Dharmapuri,Government,Dharmapuri,Computer Science and Engineering,MBC,General,170.5
+2022,Government College of Engineering Dharmapuri,GCE Dharmapuri,Government,Dharmapuri,Computer Science and Engineering,SC,General,148.0
+2022,Government College of Engineering Dharmapuri,GCE Dharmapuri,Government,Dharmapuri,Computer Science and Engineering,SCA,General,133.5
+2023,Government College of Engineering Thanjavur,GCE Thanjavur,Government,Thanjavur,Computer Science and Engineering,OC,General,175.0
+2023,Government College of Engineering Thanjavur,GCE Thanjavur,Government,Thanjavur,Computer Science and Engineering,BC,General,170.0
+2023,Government College of Engineering Thanjavur,GCE Thanjavur,Government,Thanjavur,Computer Science and Engineering,BCM,General,170.0
+2023,Government College of Engineering Thanjavur,GCE Thanjavur,Government,Thanjavur,Computer Science and Engineering,MBC,General,162.5
+2023,Government College of Engineering Thanjavur,GCE Thanjavur,Government,Thanjavur,Computer Science and Engineering,SC,General,153.0
+2023,Government College of Engineering Thanjavur,GCE Thanjavur,Government,Thanjavur,Computer Science and Engineering,SCA,General,140.5
+2022,Government College of Engineering Thanjavur,GCE Thanjavur,Government,Thanjavur,Computer Science and Engineering,OC,General,178.0
+2022,Government College of Engineering Thanjavur,GCE Thanjavur,Government,Thanjavur,Computer Science and Engineering,BC,General,169.78
+2022,Government College of Engineering Thanjavur,GCE Thanjavur,Government,Thanjavur,Computer Science and Engineering,BCM,General,158.5
+2022,Government College of Engineering Thanjavur,GCE Thanjavur,Government,Thanjavur,Computer Science and Engineering,MBC,General,168.0
+2022,Government College of Engineering Thanjavur,GCE Thanjavur,Government,Thanjavur,Computer Science and Engineering,SC,General,157.5
+2022,Government College of Engineering Thanjavur,GCE Thanjavur,Government,Thanjavur,Computer Science and Engineering,SCA,General,153.0
+2023,Government College of Engineering Srirangam,GCE Srirangam,Government,Tiruchirappalli,Computer Science and Engineering,OC,General,183.0
+2023,Government College of Engineering Srirangam,GCE Srirangam,Government,Tiruchirappalli,Computer Science and Engineering,BC,General,180.0
+2023,Government College of Engineering Srirangam,GCE Srirangam,Government,Tiruchirappalli,Computer Science and Engineering,BCM,General,170.5
+2023,Government College of Engineering Srirangam,GCE Srirangam,Government,Tiruchirappalli,Computer Science and Engineering,MBC,General,174.0
+2023,Government College of Engineering Srirangam,GCE Srirangam,Government,Tiruchirappalli,Computer Science and Engineering,SC,General,163.0
+2023,Government College of Engineering Srirangam,GCE Srirangam,Government,Tiruchirappalli,Computer Science and Engineering,SCA,General,119.5
+2023,Government College of Engineering Srirangam,GCE Srirangam,Government,Tiruchirappalli,Computer Science and Engineering,ST,General,156.5
+2022,Government College of Engineering Srirangam,GCE Srirangam,Government,Tiruchirappalli,Computer Science and Engineering,OC,General,182.1
+2022,Government College of Engineering Srirangam,GCE Srirangam,Government,Tiruchirappalli,Computer Science and Engineering,BC,General,177.67
+2022,Government College of Engineering Srirangam,GCE Srirangam,Government,Tiruchirappalli,Computer Science and Engineering,BCM,General,174.5
+2022,Government College of Engineering Srirangam,GCE Srirangam,Government,Tiruchirappalli,Computer Science and Engineering,MBC,General,174.5
+2022,Government College of Engineering Srirangam,GCE Srirangam,Government,Tiruchirappalli,Computer Science and Engineering,SC,General,166.5
+2022,Government College of Engineering Srirangam,GCE Srirangam,Government,Tiruchirappalli,Computer Science and Engineering,SCA,General,167.5
+2023,Government College of Engineering Tirunelveli,GCE Tirunelveli,Government,Tirunelveli,Computer Science and Engineering,OC,General,192.0
+2023,Government College of Engineering Tirunelveli,GCE Tirunelveli,Government,Tirunelveli,Computer Science and Engineering,BC,General,190.0
+2023,Government College of Engineering Tirunelveli,GCE Tirunelveli,Government,Tirunelveli,Computer Science and Engineering,BCM,General,187.5
+2023,Government College of Engineering Tirunelveli,GCE Tirunelveli,Government,Tirunelveli,Computer Science and Engineering,MBC,General,185.5
+2023,Government College of Engineering Tirunelveli,GCE Tirunelveli,Government,Tirunelveli,Computer Science and Engineering,SC,General,173.5
+2023,Government College of Engineering Tirunelveli,GCE Tirunelveli,Government,Tirunelveli,Computer Science and Engineering,SCA,General,142.5
+2023,Government College of Engineering Tirunelveli,GCE Tirunelveli,Government,Tirunelveli,Computer Science and Engineering,ST,General,108.0
+2022,Government College of Engineering Tirunelveli,GCE Tirunelveli,Government,Tirunelveli,Computer Science and Engineering,OC,General,191.5
+2022,Government College of Engineering Tirunelveli,GCE Tirunelveli,Government,Tirunelveli,Computer Science and Engineering,BC,General,186.0
+2022,Government College of Engineering Tirunelveli,GCE Tirunelveli,Government,Tirunelveli,Computer Science and Engineering,BCM,General,188.3
+2022,Government College of Engineering Tirunelveli,GCE Tirunelveli,Government,Tirunelveli,Computer Science and Engineering,MBC,General,182.0
+2022,Government College of Engineering Tirunelveli,GCE Tirunelveli,Government,Tirunelveli,Computer Science and Engineering,SC,General,175.0
+2022,Government College of Engineering Tirunelveli,GCE Tirunelveli,Government,Tirunelveli,Computer Science and Engineering,SCA,General,153.22
+2024,Government College of Technology Coimbatore,GCT Coimbatore,Government,Coimbatore,Computer Science and Engineering,OC,General,196.5
+2024,Government College of Technology Coimbatore,GCT Coimbatore,Government,Coimbatore,Computer Science and Engineering,BC,General,195.5
+2024,Government College of Technology Coimbatore,GCT Coimbatore,Government,Coimbatore,Computer Science and Engineering,SC,General,184.0
+2024,Government College of Technology Coimbatore,GCT Coimbatore,Government,Coimbatore,Computer Science and Engineering,ST,General,168.5
+2024,Government College of Engineering Dharmapuri,GCE Dharmapuri,Government,Dharmapuri,Computer Science and Engineering,OC,General,174.5
+2024,Government College of Engineering Dharmapuri,GCE Dharmapuri,Government,Dharmapuri,Computer Science and Engineering,BC,General,166.0
+2024,Government College of Engineering Dharmapuri,GCE Dharmapuri,Government,Dharmapuri,Computer Science and Engineering,SC,General,150.0
+2024,Government College of Engineering Dharmapuri,GCE Dharmapuri,Government,Dharmapuri,Computer Science and Engineering,ST,General,167.0
+2024,Government College of Engineering Bargur,GCE Bargur,Government,Krishnagiri,Computer Science and Engineering,OC,General,184.0
+2024,Government College of Engineering Bargur,GCE Bargur,Government,Krishnagiri,Computer Science and Engineering,BC,General,177.0
+2024,Government College of Engineering Bargur,GCE Bargur,Government,Krishnagiri,Computer Science and Engineering,SC,General,160.5
+2024,Government College of Engineering Bargur,GCE Bargur,Government,Krishnagiri,Computer Science and Engineering,ST,General,144.0
+2024,Government College of Engineering Salem,GCE Salem,Government,Salem,Computer Science and Engineering,OC,General,193.0
+2024,Government College of Engineering Salem,GCE Salem,Government,Salem,Computer Science and Engineering,BC,General,190.0
+2024,Government College of Engineering Salem,GCE Salem,Government,Salem,Computer Science and Engineering,SC,General,175.0
+2024,Government College of Engineering Erode,GCE Erode,Government,Erode,Computer Science and Engineering,OC,General,188.0
+2024,Government College of Engineering Erode,GCE Erode,Government,Erode,Computer Science and Engineering,BC,General,179.5
+2024,Government College of Engineering Erode,GCE Erode,Government,Erode,Computer Science and Engineering,SC,General,163.0
+2024,Government College of Engineering Thanjavur,GCE Thanjavur,Government,Thanjavur,Computer Science and Engineering,OC,General,175.0
+2024,Government College of Engineering Thanjavur,GCE Thanjavur,Government,Thanjavur,Computer Science and Engineering,BC,General,170.0
+2024,Government College of Engineering Thanjavur,GCE Thanjavur,Government,Thanjavur,Computer Science and Engineering,SC,General,153.0
+2024,Government College of Engineering Srirangam,GCE Srirangam,Government,Tiruchirappalli,Computer Science and Engineering,OC,General,183.0
+2024,Government College of Engineering Srirangam,GCE Srirangam,Government,Tiruchirappalli,Computer Science and Engineering,BC,General,170.5
+2024,Government College of Engineering Srirangam,GCE Srirangam,Government,Tiruchirappalli,Computer Science and Engineering,SC,General,163.0
+2024,Government College of Engineering Srirangam,GCE Srirangam,Government,Tiruchirappalli,Computer Science and Engineering,ST,General,156.5
+2024,Government College of Engineering Tirunelveli,GCE Tirunelveli,Government,Tirunelveli,Computer Science and Engineering,OC,General,192.0
+2024,Government College of Engineering Tirunelveli,GCE Tirunelveli,Government,Tirunelveli,Computer Science and Engineering,BC,General,187.5
+2024,Government College of Engineering Tirunelveli,GCE Tirunelveli,Government,Tirunelveli,Computer Science and Engineering,SC,General,173.5
+2024,Government College of Engineering Tirunelveli,GCE Tirunelveli,Government,Tirunelveli,Computer Science and Engineering,ST,General,108.0
+2024,Government College of Engineering Theni,GCE Theni,Government,Theni,Computer Science and Engineering,OC,General,174.0
+2024,Government College of Engineering Theni,GCE Theni,Government,Theni,Computer Science and Engineering,BC,General,163.0
+2024,Government College of Engineering Theni,GCE Theni,Government,Theni,Computer Science and Engineering,SC,General,150.0
+2024,Alagappa Chettiar Govt College of Engineering and Technology,ACGCET Karaikudi,Government,Sivagangai,Computer Science and Engineering,OC,General,191.5
+2024,Alagappa Chettiar Govt College of Engineering and Technology,ACGCET Karaikudi,Government,Sivagangai,Computer Science and Engineering,BC,General,187.5
+2024,Alagappa Chettiar Govt College of Engineering and Technology,ACGCET Karaikudi,Government,Sivagangai,Computer Science and Engineering,SC,General,176.5
+2024,Alagappa Chettiar Govt College of Engineering and Technology,ACGCET Karaikudi,Government,Sivagangai,Computer Science and Engineering,ST,General,162.0

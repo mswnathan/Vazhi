@@ -108,16 +108,23 @@ const COLLEGES_MP=[
     {stream:'Medical & Health',programs:[
       {name:'MBBS (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
     ]},
+    {stream:'Paramedical (Diploma) — Merit-based, no entrance exam',programs:[
+      {name:'Diploma in Medical Lab Technology / DMLT (2 years)',exam:'Merit (Class 12 PCB marks) — MP DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Medical Radiography Technology / DMRT (2 years)',exam:'Merit (Class 12 PCB marks) — MP DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Operation Theatre Technology / DOTT (2 years)',exam:'Merit (Class 12 PCB marks) — MP DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Anaesthesia Technology (2 years)',exam:'Merit (Class 12 PCB marks) — MP DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Optometry (2 years)',exam:'Merit (Class 12 PCB marks) — MP DME Counselling',examCss:'ce-merit'},
+    ]},
   ]},
 
 {name:'Jawaharlal Nehru Krishi Vishwa Vidyalaya (JNKVV)',short:'JNKVV',type:'State',district:'Jabalpur',state:'Madhya Pradesh',
   naac:'A',nirf:'Top Agriculture',affil:'Jawaharlal Nehru Krishi Vishwa Vidyalaya (State)',website:'jnkvv.org',
   streams:['Agriculture'],
-  specialNote:'Premier state agricultural university for Madhya Pradesh. ICAR AIEEA / MP state merit admission.',
+  specialNote:'Premier state agricultural university for Madhya Pradesh. CUET-UG (15% all-India quota) / MP state merit admission.',
   programGroups:[
     {stream:'Agriculture, Fisheries & Vet',programs:[
-      {name:'B.Sc (Agriculture) — 4 years',exam:'ICAR AIEEA / MP Merit',examCss:'ce-icar'},
-      {name:'B.Sc (Horticulture, Forestry)',exam:'ICAR AIEEA / MP Merit',examCss:'ce-icar'},
+      {name:'B.Sc (Agriculture) — 4 years',exam:'CUET-UG (15% all-India quota) / MP Merit',examCss:'ce-cuet'},
+      {name:'B.Sc (Horticulture, Forestry)',exam:'CUET-UG (15% all-India quota) / MP Merit',examCss:'ce-cuet'},
     ]},
   ]},
 
@@ -128,6 +135,18 @@ const COLLEGES_MP=[
     {stream:'Design & Architecture',programs:[
       {name:'B.Arch — 5 years',exam:'JEE Main Paper 2 / NATA',examCss:'ce-nata'},
       {name:'B.Planning — 4 years',exam:'JEE Main Paper 2',examCss:'ce-jee'},
+    ]},
+  ]},
+
+{name:'Shri G S Institute of Technology & Science',short:'SGSITS Indore',type:'Aided',district:'Indore',state:'Madhya Pradesh',
+  naac:'A',nirf:'Top State Engineering',affil:'Govt-Aided Autonomous Institute (1952) — affiliated to RGPV / DAVV Indore',website:'sgsits.ac.in',
+  streams:['Engineering'],
+  specialNote:'One of the oldest govt-aided engineering institutes in MP. Admission via JEE Main + MP DTE counselling. Strong placement record.',
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech CSE / IT',exam:'JEE Main / MP DTE',examCss:'ce-jee'},
+      {name:'B.Tech ECE / EEE',exam:'JEE Main / MP DTE',examCss:'ce-jee'},
+      {name:'B.Tech Mechanical / Civil / Chemical / Industrial Production',exam:'JEE Main / MP DTE',examCss:'ce-jee'},
     ]},
   ]},
 

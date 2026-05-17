@@ -78,9 +78,9 @@ const COLLEGES_CG=[
   specialNote:'Chhattisgarh\'s premier agricultural university. Known as the "Rice Bowl of India" — IGKV leads research on paddy varieties and tribal farming practices.',
   programGroups:[
     {stream:'Arts & Science',programs:[
-      {name:'B.Sc (Hons) Agriculture (4 years)',exam:'ICAR AIEEA',examCss:'ce-icar'},
-      {name:'B.Sc (Hons) Horticulture (4 years)',exam:'ICAR AIEEA',examCss:'ce-icar'},
-      {name:'B.Tech Agricultural Engineering',exam:'ICAR AIEEA',examCss:'ce-icar'},
+      {name:'B.Sc (Hons) Agriculture (4 years)',exam:'CUET-UG (15% all-India quota)',examCss:'ce-cuet'},
+      {name:'B.Sc (Hons) Horticulture (4 years)',exam:'CUET-UG (15% all-India quota)',examCss:'ce-cuet'},
+      {name:'B.Tech Agricultural Engineering',exam:'CUET-UG (15% all-India quota)',examCss:'ce-cuet'},
     ]},
   ]},
 

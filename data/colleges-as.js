@@ -60,4 +60,14 @@ const COLLEGES_AS=[
     ]},
   ]},
 
+{name:'Composite Regional Centre for Skill Development, Rehabilitation & Empowerment of Persons with Disabilities (CRCSRE Guwahati)',short:'CRCSRE Guwahati',type:'Central',district:'Guwahati',state:'Assam',
+  naac:'',nirf:'',affil:'Ministry of Social Justice & Empowerment, Govt of India',website:'crcguwahati.nic.in',
+  streams:['Medical'],
+  specialNote:'Regional centre under MoSJE offering BASLP. Admission via Common Entrance Test (CET) for Persons with Disabilities — jointly conducted with NIEPMD, NIEPID, SVNIRTAR, AYJNIHH, PDUNIPPD.',
+  programGroups:[
+    {stream:'Allied Health & Rehabilitation',programs:[
+      {name:'Bachelor in Audiology & Speech-Language Pathology / BASLP (3 years)',exam:'CET-PWD',examCss:'ce-own'},
+    ]},
+  ]},
+
 ];

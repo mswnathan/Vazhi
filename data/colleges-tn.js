@@ -122,8 +122,15 @@ const COLLEGES=[
     {stream:'Medical',programs:[
       {name:'MBBS',exam:'NEET UG',examCss:'ce-neet'},
       {name:'BDS',exam:'NEET UG',examCss:'ce-neet'},
-      {name:'B.Sc Nursing',exam:'NEET UG',examCss:'ce-neet'},
-      {name:'B.Sc (Allied Health Sciences — Radiology, MLT, Physiotherapy)',exam:'NEET UG / Merit',examCss:'ce-neet'},
+      {name:'B.Sc Nursing (4 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Allied Health Sciences — Radiology, MLT, Physiotherapy (4 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+    ]},
+    {stream:'Paramedical (Diploma) — Merit-based, no entrance exam',programs:[
+      {name:'Diploma in Medical Lab Technology / DMLT (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Medical Radiography Technology / DMRT (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Operation Theatre Technology / DOTT (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Anaesthesia Technology (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Optometry (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
     ]},
   ]},
 
@@ -146,6 +153,77 @@ const COLLEGES=[
       {name:'BBA LLB (Hons) — Law + Management',exam:'TNLCET / TNADALU Entrance',examCss:'ce-own'},
       {name:'BCA LLB (Hons) — Law + Computer Applications',exam:'TNLCET / TNADALU Entrance',examCss:'ce-own'},
       {name:'BA LLB (Hons)',exam:'TNLCET / TNADALU Entrance',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'Tamil Nadu Dr. Ambedkar Law University (TNDALU)',short:'TNDALU',type:'State',district:'Chennai',state:'Tamil Nadu',
+  naac:'A',nirf:'Top State Law University',affil:'State Law University (est. 1997) — parent body of all TN Govt Law Colleges',website:'tnadalu.ac.in',
+  streams:['Law'],
+  specialNote:'Parent state law university in Chennai. Affiliates all seven Government Law Colleges across TN and the School of Excellence in Law. Admission to UG programmes through TNLCET conducted by TNDALU.',
+  programGroups:[
+    {stream:'Law',programs:[
+      {name:'B.L (3-year LLB)',exam:'TNLCET',examCss:'ce-own'},
+      {name:'B.A B.L (5-year Integrated)',exam:'TNLCET',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'Dr. Ambedkar Government Law College, Pudupakkam',short:'DAGLC Pudupakkam',type:'State',district:'Chengalpattu',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Law TN',affil:'The Tamil Nadu Dr. Ambedkar Law University',website:'tnadalu.ac.in',
+  streams:['Law'],
+  programGroups:[
+    {stream:'Law',programs:[
+      {name:'B.L (3-year LLB)',exam:'TNLCET / Merit',examCss:'ce-own'},
+      {name:'B.A B.L (5-year Integrated)',exam:'TNLCET / Merit',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'Government Law College, Coimbatore',short:'GLC Coimbatore',type:'State',district:'Coimbatore',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Law TN',affil:'The Tamil Nadu Dr. Ambedkar Law University',website:'tnadalu.ac.in',
+  streams:['Law'],
+  programGroups:[
+    {stream:'Law',programs:[
+      {name:'B.L (3-year LLB)',exam:'TNLCET / Merit',examCss:'ce-own'},
+      {name:'B.A B.L (5-year Integrated)',exam:'TNLCET / Merit',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'Government Law College, Madurai',short:'GLC Madurai',type:'State',district:'Madurai',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Law TN',affil:'The Tamil Nadu Dr. Ambedkar Law University',website:'tnadalu.ac.in',
+  streams:['Law'],
+  programGroups:[
+    {stream:'Law',programs:[
+      {name:'B.L (3-year LLB)',exam:'TNLCET / Merit',examCss:'ce-own'},
+      {name:'B.A B.L (5-year Integrated)',exam:'TNLCET / Merit',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'Government Law College, Tiruchirappalli',short:'GLC Trichy',type:'State',district:'Tiruchirappalli',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Law TN',affil:'The Tamil Nadu Dr. Ambedkar Law University',website:'tnadalu.ac.in',
+  streams:['Law'],
+  programGroups:[
+    {stream:'Law',programs:[
+      {name:'B.L (3-year LLB)',exam:'TNLCET / Merit',examCss:'ce-own'},
+      {name:'B.A B.L (5-year Integrated)',exam:'TNLCET / Merit',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'Government Law College, Tirunelveli',short:'GLC Tirunelveli',type:'State',district:'Tirunelveli',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Law TN',affil:'The Tamil Nadu Dr. Ambedkar Law University',website:'tnadalu.ac.in',
+  streams:['Law'],
+  programGroups:[
+    {stream:'Law',programs:[
+      {name:'B.L (3-year LLB)',exam:'TNLCET / Merit',examCss:'ce-own'},
+      {name:'B.A B.L (5-year Integrated)',exam:'TNLCET / Merit',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'Government Law College, Vellore',short:'GLC Vellore',type:'State',district:'Vellore',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Law TN',affil:'The Tamil Nadu Dr. Ambedkar Law University',website:'tnadalu.ac.in',
+  streams:['Law'],
+  programGroups:[
+    {stream:'Law',programs:[
+      {name:'B.L (3-year LLB)',exam:'TNLCET / Merit',examCss:'ce-own'},
+      {name:'B.A B.L (5-year Integrated)',exam:'TNLCET / Merit',examCss:'ce-own'},
     ]},
   ]},
 
@@ -212,6 +290,60 @@ const COLLEGES=[
       {name:'BFA Painting (4 years)',exam:'State Fine Arts Entrance / Merit',examCss:'ce-own'},
       {name:'BFA Sculpture (4 years)',exam:'State Fine Arts Entrance / Merit',examCss:'ce-own'},
       {name:'BFA Applied Art (4 years)',exam:'State Fine Arts Entrance / Merit',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'Government College of Fine Arts, Madurai',short:'GCFA Madurai',type:'State',district:'Madurai',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Fine Arts TN',affil:'Madurai Kamaraj University',website:'artandculture.tn.gov.in',
+  streams:['Arts & Science','Design'],
+  specialNote:'Government fine arts college serving southern Tamil Nadu. Administered by TN Art & Culture Dept. Admissions via state application portal (artandculture.tn.gov.in).',
+  programGroups:[
+    {stream:'Bachelor of Fine Arts (BFA)',programs:[
+      {name:'BFA Painting (4 years)',exam:'State Fine Arts Entrance / Merit',examCss:'ce-own'},
+      {name:'BFA Sculpture (4 years)',exam:'State Fine Arts Entrance / Merit',examCss:'ce-own'},
+      {name:'BFA Applied Art (4 years)',exam:'State Fine Arts Entrance / Merit',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'Government Music Colleges (Chennai, Coimbatore, Madurai, Thiruvaiyaru)',short:'Govt Music Colleges TN',type:'State',district:'Chennai',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Classical Music TN',affil:'Tamil Nadu Dr. J. Jayalalithaa Music & Fine Arts University',website:'artandculture.tn.gov.in',
+  streams:['Arts & Science'],
+  specialNote:'Four government music colleges across TN — Chennai, Coimbatore, Madurai, and Thiruvaiyaru (birthplace of Saint Thyagaraja). Specialize in Carnatic vocal, veena, violin, mridangam, nadaswaram. Admissions via state portal (artandculture.tn.gov.in) — audition + merit. Affiliated to TNMFA University.',
+  programGroups:[
+    {stream:'Music (Bachelor of Performing Arts)',programs:[
+      {name:'B.A / B.P.A Music — Vocal (Carnatic)',exam:'Audition + Merit',examCss:'ce-own'},
+      {name:'B.A / B.P.A Music — Veena',exam:'Audition + Merit',examCss:'ce-own'},
+      {name:'B.A / B.P.A Music — Violin',exam:'Audition + Merit',examCss:'ce-own'},
+      {name:'B.A / B.P.A Music — Mridangam',exam:'Audition + Merit',examCss:'ce-own'},
+      {name:'B.A / B.P.A Music — Nadaswaram (Thiruvaiyaru only)',exam:'Audition + Merit',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'Government College of Architecture & Sculpture, Mamallapuram',short:'GCAS Mamallapuram',type:'State',district:'Chengalpattu',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Heritage Architecture TN',affil:'Tamil Nadu Dr. J. Jayalalithaa Music & Fine Arts University',website:'artandculture.tn.gov.in',
+  streams:['Arts & Science','Design'],
+  specialNote:'The only government college in India dedicated to traditional temple architecture and stone sculpture (Shilpa Shastra). Located in the UNESCO World Heritage site Mamallapuram. Preserves the ancient Pallava-era sthapathy tradition. Admissions via state portal (artandculture.tn.gov.in).',
+  programGroups:[
+    {stream:'Traditional Architecture & Sculpture',programs:[
+      {name:'Diploma in Traditional Architecture (Vaastu / Shilpa Shastra)',exam:'State Entrance / Merit',examCss:'ce-own'},
+      {name:'Diploma in Traditional Sculpture (Stone Carving)',exam:'State Entrance / Merit',examCss:'ce-own'},
+      {name:'Diploma in Wood Carving',exam:'State Entrance / Merit',examCss:'ce-own'},
+      {name:'Diploma in Bronze Icon Casting',exam:'State Entrance / Merit',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'Tamil Nadu Dr. J. Jayalalithaa Music & Fine Arts University',short:'TNMFA University',type:'State',district:'Chennai',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Classical Arts University',affil:'State University (Govt of TN)',website:'tnmfu.ac.in',
+  streams:['Arts & Science','Design'],
+  specialNote:'India\'s only state university dedicated exclusively to classical music, dance, and fine arts. Established 2013. Affiliating university for all TN government music colleges, fine arts colleges, and the Mamallapuram architecture & sculpture college. Offers university-department UG programs in addition to affiliated-college admissions.',
+  programGroups:[
+    {stream:'Music & Performing Arts',programs:[
+      {name:'B.P.A Music — Carnatic Vocal / Veena / Violin / Mridangam',exam:'Audition + Merit',examCss:'ce-own'},
+      {name:'B.P.A Bharatanatyam',exam:'Audition + Merit',examCss:'ce-own'},
+    ]},
+    {stream:'Fine Arts & Architecture',programs:[
+      {name:'BFA Painting / Sculpture / Applied Art',exam:'Entrance / Merit',examCss:'ce-own'},
+      {name:'Traditional Architecture & Sculpture programs (Mamallapuram campus)',exam:'Entrance / Merit',examCss:'ce-own'},
     ]},
   ]},
 
@@ -592,14 +724,14 @@ const COLLEGES=[
 {name:'Tamil Nadu Agricultural University (TNAU)',short:'TNAU Coimbatore',type:'State',district:'Coimbatore',state:'Tamil Nadu',
   naac:'A+',nirf:'Top Agricultural Univ',affil:'State Agricultural University under Govt of TN',website:'tnau.ac.in',
   streams:['Agriculture'],
-  specialNote:'Largest agricultural university in TN. 19 constituent colleges & research institutes across TN. Admission through TNAU counselling.',
+  specialNote:'Largest agricultural university in TN. 19 constituent colleges & research institutes across TN. No written entrance exam — admission is merit-based on Class 12 marks via TNAU counselling (tnauonline.in). 50% of seats reserved for rural / agricultural-background students. The 15% all-India quota is admitted through CUET-UG (this replaced ICAR AIEEA UG from 2024-25).',
   programGroups:[
     {stream:'Agriculture & Allied Sciences',programs:[
-      {name:'B.Sc (Hons) Agriculture (4 years)',exam:'TNAU Entrance / ICAR AIEEA UG',examCss:'ce-icar'},
-      {name:'B.Sc (Hons) Horticulture (4 years)',exam:'TNAU Entrance / ICAR AIEEA UG',examCss:'ce-icar'},
-      {name:'B.Tech Agricultural Engineering (4 years)',exam:'TNAU Entrance / JEE Main',examCss:'ce-jee'},
-      {name:'B.Sc Forestry (4 years)',exam:'TNAU Entrance',examCss:'ce-icar'},
-      {name:'B.Tech Food Technology (4 years)',exam:'TNAU Entrance / JEE Main',examCss:'ce-jee'},
+      {name:'B.Sc (Hons) Agriculture (4 years)',exam:'Merit (Class 12 marks) — TNAU Counselling / CUET-UG (15% all-India quota)',examCss:'ce-merit'},
+      {name:'B.Sc (Hons) Horticulture (4 years)',exam:'Merit (Class 12 marks) — TNAU Counselling / CUET-UG (15% all-India quota)',examCss:'ce-merit'},
+      {name:'B.Tech Agricultural Engineering (4 years)',exam:'Merit (Class 12 marks) — TNAU Counselling / JEE Main',examCss:'ce-merit'},
+      {name:'B.Sc Forestry (4 years)',exam:'Merit (Class 12 marks) — TNAU Counselling / CUET-UG (15% all-India quota)',examCss:'ce-merit'},
+      {name:'B.Tech Food Technology (4 years)',exam:'Merit (Class 12 marks) — TNAU Counselling / JEE Main',examCss:'ce-merit'},
     ]},
   ]},
 
@@ -609,7 +741,7 @@ const COLLEGES=[
   specialNote:'India\'s premier forestry education and research institute in South India. 4-year B.Sc Forestry degree — leads directly to IFS (Indian Forest Service) and TNFD (TN Forest Department). Set in natural forest surroundings in Mettupalayam foothills.',
   programGroups:[
     {stream:'Forestry & Wildlife Sciences',programs:[
-      {name:'B.Sc (Hons) Forestry (4 years)',exam:'TNAU Entrance / ICAR AIEEA UG',examCss:'ce-icar'},
+      {name:'B.Sc (Hons) Forestry (4 years)',exam:'Merit (Class 12 marks) — TNAU Counselling / CUET-UG (15% all-India quota)',examCss:'ce-merit'},
     ]},
   ]},
 
@@ -626,12 +758,12 @@ const COLLEGES=[
 {name:'Tamil Nadu Dr. Jayalalithaa Fisheries University',short:'TNJFU Nagapattinam',type:'State',district:'Nagapattinam',state:'Tamil Nadu',
   naac:'Accredited',nirf:'Specialised Univ',affil:'State Fisheries University under Govt of TN',website:'tnfu.ac.in',
   streams:['Agriculture'],
-  specialNote:'Only fisheries university in TN. Constituent colleges in Nagapattinam, Chennai, Thoothukudi, Ponneri, Parakkai.',
+  specialNote:'Only fisheries university in TN. Constituent colleges in Nagapattinam, Chennai, Thoothukudi, Ponneri, Parakkai. No written entrance exam — admission is merit-based on Class 12 marks (PCB) via TNFU counselling. The 15% all-India quota is admitted through CUET-UG (this replaced ICAR AIEEA UG from 2024-25).',
   programGroups:[
     {stream:'Fisheries & Aquaculture',programs:[
-      {name:'B.F.Sc — Bachelor of Fisheries Science (4 years)',exam:'TNFU Entrance / ICAR AIEEA UG',examCss:'ce-icar'},
-      {name:'B.Tech Fisheries Engineering (4 years)',exam:'JEE Main / TNFU Entrance',examCss:'ce-jee'},
-      {name:'B.Sc Nautical Science (3 years)',exam:'TNFU Entrance',examCss:'ce-own'},
+      {name:'B.F.Sc — Bachelor of Fisheries Science (4 years)',exam:'Merit (Class 12 marks) — TNFU Counselling / CUET-UG (15% all-India quota)',examCss:'ce-merit'},
+      {name:'B.Tech Fisheries Engineering (4 years)',exam:'Merit (Class 12 marks) — TNFU Counselling / JEE Main',examCss:'ce-merit'},
+      {name:'B.Sc Nautical Science (3 years)',exam:'Merit (Class 12 marks) — TNFU Counselling',examCss:'ce-merit'},
     ]},
   ]},
 
@@ -679,7 +811,14 @@ const COLLEGES=[
   programGroups:[
     {stream:'Medical',programs:[
       {name:'MBBS (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
-      {name:'B.Sc Nursing',exam:'NEET UG',examCss:'ce-neet'},
+      {name:'B.Sc Nursing (4 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+    ]},
+    {stream:'Paramedical (Diploma) — Merit-based, no entrance exam',programs:[
+      {name:'Diploma in Medical Lab Technology / DMLT (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Medical Radiography Technology / DMRT (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Operation Theatre Technology / DOTT (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Anaesthesia Technology (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Optometry (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
     ]},
   ]},
 
@@ -690,6 +829,13 @@ const COLLEGES=[
     {stream:'Medical',programs:[
       {name:'MBBS (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
     ]},
+    {stream:'Paramedical (Diploma) — Merit-based, no entrance exam',programs:[
+      {name:'Diploma in Medical Lab Technology / DMLT (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Medical Radiography Technology / DMRT (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Operation Theatre Technology / DOTT (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Anaesthesia Technology (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Optometry (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+    ]},
   ]},
 
 {name:'Govt. Madurai Medical College & Rajaji Hospital',short:'MMC Madurai',type:'State',district:'Madurai',state:'Tamil Nadu',
@@ -698,7 +844,14 @@ const COLLEGES=[
   programGroups:[
     {stream:'Medical',programs:[
       {name:'MBBS (5.5 years) — 250 seats',exam:'NEET UG',examCss:'ce-neet'},
-      {name:'B.Sc Nursing',exam:'NEET UG',examCss:'ce-neet'},
+      {name:'B.Sc Nursing (4 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+    ]},
+    {stream:'Paramedical (Diploma) — Merit-based, no entrance exam',programs:[
+      {name:'Diploma in Medical Lab Technology / DMLT (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Medical Radiography Technology / DMRT (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Operation Theatre Technology / DOTT (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Anaesthesia Technology (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Optometry (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
     ]},
   ]},
 
@@ -718,6 +871,13 @@ const COLLEGES=[
     {stream:'Medical',programs:[
       {name:'MBBS (5.5 years) — 150 seats',exam:'NEET UG',examCss:'ce-neet'},
     ]},
+    {stream:'Paramedical (Diploma) — Merit-based, no entrance exam',programs:[
+      {name:'Diploma in Medical Lab Technology / DMLT (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Medical Radiography Technology / DMRT (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Operation Theatre Technology / DOTT (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Anaesthesia Technology (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Optometry (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+    ]},
   ]},
 
 {name:'Govt. Tirunelveli Medical College & Hospital',short:'TVMCH Tirunelveli',type:'State',district:'Tirunelveli',state:'Tamil Nadu',
@@ -727,6 +887,13 @@ const COLLEGES=[
     {stream:'Medical',programs:[
       {name:'MBBS (5.5 years) — 250 seats',exam:'NEET UG',examCss:'ce-neet'},
     ]},
+    {stream:'Paramedical (Diploma) — Merit-based, no entrance exam',programs:[
+      {name:'Diploma in Medical Lab Technology / DMLT (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Medical Radiography Technology / DMRT (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Operation Theatre Technology / DOTT (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Anaesthesia Technology (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Optometry (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+    ]},
   ]},
 
 {name:'Govt. Thanjavur Medical College & Hospital',short:'TMCH Thanjavur',type:'State',district:'Thanjavur',state:'Tamil Nadu',
@@ -735,6 +902,13 @@ const COLLEGES=[
   programGroups:[
     {stream:'Medical',programs:[
       {name:'MBBS (5.5 years) — 150 seats',exam:'NEET UG',examCss:'ce-neet'},
+    ]},
+    {stream:'Paramedical (Diploma) — Merit-based, no entrance exam',programs:[
+      {name:'Diploma in Medical Lab Technology / DMLT (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Medical Radiography Technology / DMRT (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Operation Theatre Technology / DOTT (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Anaesthesia Technology (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Optometry (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
     ]},
   ]},
 

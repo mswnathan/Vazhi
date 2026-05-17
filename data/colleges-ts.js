@@ -103,8 +103,8 @@ const COLLEGES_TS=[
       {name:'B.E (CSE, ECE, EEE, Mechanical, Civil, Chemical, Metallurgical)',exam:'TS EAPCET',examCss:'ce-own'},
     ]},
     {stream:'Arts & Science',programs:[
-      {name:'B.Sc (Physics, Chemistry, Maths, Computer Science)',exam:'Merit / CUET',examCss:'ce-merit'},
-      {name:'B.A (English, History, Economics, Political Science, Sociology)',exam:'Merit / CUET',examCss:'ce-merit'},
+      {name:'B.Sc (Physics, Chemistry, Maths, Computer Science)',exam:'Merit / CUET UG',examCss:'ce-merit'},
+      {name:'B.A (English, History, Economics, Political Science, Sociology)',exam:'Merit / CUET UG',examCss:'ce-merit'},
       {name:'B.Com (General / Computers)',exam:'Merit',examCss:'ce-merit'},
     ]},
     {stream:'Law',programs:[
@@ -128,8 +128,8 @@ const COLLEGES_TS=[
   specialNote:'Oldest university in Warangal region. Primarily arts, science, and commerce programmes.',
   programGroups:[
     {stream:'Arts & Science',programs:[
-      {name:'B.Sc (Physics, Chemistry, Maths, Computer Science, Biotechnology)',exam:'Merit / CUET',examCss:'ce-merit'},
-      {name:'B.A (English, History, Economics, Political Science)',exam:'Merit / CUET',examCss:'ce-merit'},
+      {name:'B.Sc (Physics, Chemistry, Maths, Computer Science, Biotechnology)',exam:'Merit / CUET UG',examCss:'ce-merit'},
+      {name:'B.A (English, History, Economics, Political Science)',exam:'Merit / CUET UG',examCss:'ce-merit'},
     ]},
     {stream:'Management',programs:[
       {name:'BBA (Business Administration)',exam:'Merit',examCss:'ce-merit'},
@@ -155,16 +155,48 @@ const COLLEGES_TS=[
     {stream:'Medical & Health',programs:[
       {name:'MBBS (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
     ]},
+    {stream:'Paramedical (Diploma) — Merit-based, no entrance exam',programs:[
+      {name:'Diploma in Medical Lab Technology / DMLT (2 years)',exam:'Merit (Class 12 PCB marks) — Telangana DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Medical Radiography Technology / DMRT (2 years)',exam:'Merit (Class 12 PCB marks) — Telangana DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Operation Theatre Technology / DOTT (2 years)',exam:'Merit (Class 12 PCB marks) — Telangana DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Anaesthesia Technology (2 years)',exam:'Merit (Class 12 PCB marks) — Telangana DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Optometry (2 years)',exam:'Merit (Class 12 PCB marks) — Telangana DME Counselling',examCss:'ce-merit'},
+    ]},
   ]},
 
 {name:'Professor Jayashankar Telangana State Agricultural University (PJTSAU)',short:'PJTSAU',type:'State',district:'Hyderabad',state:'Telangana',
   naac:'A',nirf:'Top Agriculture',affil:'Professor Jayashankar Telangana State Agricultural University',website:'pjtsau.edu.in',
   streams:['Agriculture'],
-  specialNote:'Premier state agricultural university of Telangana. ICAR AIEEA / TS state merit admission.',
+  specialNote:'Premier state agricultural university of Telangana. CUET-UG (15% all-India quota) / TS state merit admission.',
   programGroups:[
     {stream:'Agriculture, Fisheries & Vet',programs:[
-      {name:'B.Sc (Agriculture) — 4 years',exam:'ICAR AIEEA / TS Merit',examCss:'ce-icar'},
-      {name:'B.Sc (Horticulture)',exam:'ICAR AIEEA / TS Merit',examCss:'ce-icar'},
+      {name:'B.Sc (Agriculture) — 4 years',exam:'CUET-UG (15% all-India quota) / TS Merit',examCss:'ce-cuet'},
+      {name:'B.Sc (Horticulture)',exam:'CUET-UG (15% all-India quota) / TS Merit',examCss:'ce-cuet'},
+    ]},
+  ]},
+
+{name:'National Institute for Empowerment of Persons with Intellectual Disabilities (Divyangjan) — NIEPID',short:'NIEPID Secunderabad',type:'Central',district:'Secunderabad',state:'Telangana',
+  naac:'Accredited',nirf:'Specialised Rehabilitation',affil:'Ministry of Social Justice & Empowerment, Govt of India',website:'niepid.nic.in',
+  streams:['Medical'],
+  specialNote:'Apex national institute for intellectual disabilities rehabilitation. Admission via Common Entrance Test (CET) for Persons with Disabilities — jointly conducted with NIEPMD, SVNIRTAR, AYJNIHH, PDUNIPPD.',
+  programGroups:[
+    {stream:'Allied Health & Rehabilitation',programs:[
+      {name:'Bachelor of Physiotherapy / BPT (4.5 years)',exam:'CET-PWD',examCss:'ce-own'},
+      {name:'Bachelor of Occupational Therapy / BOT (4.5 years)',exam:'CET-PWD',examCss:'ce-own'},
+      {name:'Bachelor in Prosthetics & Orthotics / BPO (4.5 years)',exam:'CET-PWD',examCss:'ce-own'},
+      {name:'Bachelor in Audiology & Speech-Language Pathology / BASLP (3 years)',exam:'CET-PWD',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'English and Foreign Languages University (EFLU)',short:'EFLU',type:'Central',district:'Hyderabad',state:'Telangana',
+  naac:'A',nirf:'Top Central University',affil:'Central University — Act of Parliament 2006 (originally CIEFL, est. 1958)',website:'efluniversity.ac.in',
+  streams:['Arts & Science'],
+  specialNote:'India\'s only central university dedicated to English and foreign languages. Offers BA Honours in English, Arabic, French, German, Spanish, Russian, Japanese, Chinese, and other languages. Campuses at Hyderabad, Lucknow, and Shillong.',
+  programGroups:[
+    {stream:'Arts & Science (UG)',programs:[
+      {name:'B.A (Hons) English',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.A (Hons) in Foreign Languages — Arabic, French, German, Spanish, Russian, Japanese, Chinese',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.A (Hons) Linguistics',exam:'CUET UG',examCss:'ce-cuet'},
     ]},
   ]},
 

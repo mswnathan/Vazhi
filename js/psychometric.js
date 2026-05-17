@@ -22,6 +22,11 @@ let psyState = {
   skills:       {},       // { numerical: avg, verbal: avg, ... } (0–4)
   skillRaw:     {},       // { 'sk-1': 2, 'sk-3': 4, ... }
   workBonus:    { R:0, I:0, A:0, S:0, E:0, C:0 },  // 0–2 wins per type
+  // per-phase answer history for back-navigation
+  interestAnswers:  [],  // winType | null (null = skipped)
+  followupAnswers:  [],  // { forType }
+  skillAnswers:     [],  // { qId }
+  workstyleAnswers: [],  // typeWon
 };
 
 // ── ENTRY POINT ──────────────────────────────────────────────────────────────
@@ -94,6 +99,32 @@ function renderProgressDots() {
       </div>`;
     }).join('<div class="psy-dot-line"></div>')}
   </div>`;
+}
+
+// ── BACK NAVIGATION ───────────────────────────────────────────────────────────
+function psyGoBack() {
+  const phase = psyState.phase;
+  if (phase === 'interest' && psyState.interestIdx > 0) {
+    const prev = psyState.interestAnswers.pop();
+    psyState.interestIdx--;
+    if (prev !== null) psyState.scores[prev]--;
+    renderInterestQuestion();
+  } else if (phase === 'followup' && psyState.followupIdx > 0) {
+    const prev = psyState.followupAnswers.pop();
+    psyState.followupIdx--;
+    if (prev) delete psyState.subtypes[prev.forType];
+    renderFollowupQuestion();
+  } else if (phase === 'skills' && psyState.skillIdx > 0) {
+    const prev = psyState.skillAnswers.pop();
+    psyState.skillIdx--;
+    if (prev) delete psyState.skillRaw[prev.qId];
+    renderSkillQuestion();
+  } else if (phase === 'workstyle' && psyState.workstyleIdx > 0) {
+    const prev = psyState.workstyleAnswers.pop();
+    psyState.workstyleIdx--;
+    if (prev !== null) psyState.workBonus[prev]--;
+    renderWorkstyleQuestion();
+  }
 }
 
 // ── INTRO SCREEN ─────────────────────────────────────────────────────────────
@@ -195,11 +226,15 @@ function startPsyTest() {
   psyState.followupIdx  = 0;
   psyState.skillIdx     = 0;
   psyState.workstyleIdx = 0;
-  psyState.scores       = { R:0, I:0, A:0, S:0, E:0, C:0 };
-  psyState.subtypes     = {};
-  psyState.skills       = {};
-  psyState.skillRaw     = {};
-  psyState.workBonus    = { R:0, I:0, A:0, S:0, E:0, C:0 };
+  psyState.scores           = { R:0, I:0, A:0, S:0, E:0, C:0 };
+  psyState.subtypes         = {};
+  psyState.skills           = {};
+  psyState.skillRaw         = {};
+  psyState.workBonus        = { R:0, I:0, A:0, S:0, E:0, C:0 };
+  psyState.interestAnswers  = [];
+  psyState.followupAnswers  = [];
+  psyState.skillAnswers     = [];
+  psyState.workstyleAnswers = [];
   renderInterestQuestion();
 }
 
@@ -244,6 +279,7 @@ function renderInterestQuestion() {
       </button>
     </div>
     <div class="psy-skip-row">
+      ${idx > 0 ? `<button class="psy-back-btn" onclick="psyGoBack()">${L === 'en' ? '← Back' : '← திரும்பு'}</button>` : ''}
       <button class="psy-skip-btn" onclick="psySkipInterest()">${L === 'en' ? 'Skip this question →' : 'இந்த கேள்வியை தவிர்க்கவும் →'}</button>
     </div>
   </div>
@@ -251,6 +287,7 @@ function renderInterestQuestion() {
 }
 
 function psyAnswerInterest(winType) {
+  psyState.interestAnswers.push(winType);
   psyState.scores[winType]++;
   setTimeout(() => {
     psyState.interestIdx++;
@@ -259,6 +296,7 @@ function psyAnswerInterest(winType) {
 }
 
 function psySkipInterest() {
+  psyState.interestAnswers.push(null);
   psyState.interestIdx++;
   renderInterestQuestion();
 }
@@ -349,11 +387,13 @@ function renderFollowupQuestion() {
           ${opt.text}
         </button>`).join('')}
     </div>
+    ${idx > 0 ? `<div class="psy-skip-row"><button class="psy-back-btn" onclick="psyGoBack()">${L === 'en' ? '← Back' : '← திரும்பு'}</button></div>` : ''}
   </div>
 </div>`;
 }
 
 function psyAnswerFollowup(forType, subtype) {
+  psyState.followupAnswers.push({ forType });
   psyState.subtypes[forType] = subtype;
   setTimeout(() => {
     psyState.followupIdx++;
@@ -406,11 +446,13 @@ function renderSkillQuestion() {
           <span class="psy-anchor-text">${lbl}</span>
         </button>`).join('')}
     </div>
+    ${idx > 0 ? `<div class="psy-skip-row"><button class="psy-back-btn" onclick="psyGoBack()">${L === 'en' ? '← Back' : '← திரும்பு'}</button></div>` : ''}
   </div>
 </div>`;
 }
 
 function psyAnswerSkill(qId, value) {
+  psyState.skillAnswers.push({ qId });
   psyState.skillRaw[qId] = value;
   setTimeout(() => {
     psyState.skillIdx++;
@@ -456,11 +498,13 @@ function renderWorkstyleQuestion() {
         <span class="psy-choice-text">${optB}</span>
       </button>
     </div>
+    ${idx > 0 ? `<div class="psy-skip-row"><button class="psy-back-btn" onclick="psyGoBack()">${L === 'en' ? '← Back' : '← திரும்பு'}</button></div>` : ''}
   </div>
 </div>`;
 }
 
 function psyAnswerWorkstyle(typeWon) {
+  psyState.workstyleAnswers.push(typeWon);
   psyState.workBonus[typeWon]++;
   setTimeout(() => {
     psyState.workstyleIdx++;

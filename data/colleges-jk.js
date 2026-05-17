@@ -93,10 +93,25 @@ const COLLEGES_JK=[
   specialNote:'Premier agricultural university of Kashmir. World-renowned for saffron, walnut and temperate horticulture research.',
   programGroups:[
     {stream:'Arts & Science',programs:[
-      {name:'B.Sc (Hons) Agriculture (4 years)',exam:'ICAR AIEEA',examCss:'ce-icar'},
-      {name:'B.Sc (Hons) Horticulture (4 years)',exam:'ICAR AIEEA',examCss:'ce-icar'},
-      {name:'B.Sc Forestry (4 years)',exam:'ICAR AIEEA',examCss:'ce-icar'},
-      {name:'B.V.Sc & A.H (5.5 years)',exam:'ICAR AIEEA',examCss:'ce-icar'},
+      {name:'B.Sc (Hons) Agriculture (4 years)',exam:'CUET-UG (15% all-India quota)',examCss:'ce-cuet'},
+      {name:'B.Sc (Hons) Horticulture (4 years)',exam:'CUET-UG (15% all-India quota)',examCss:'ce-cuet'},
+      {name:'B.Sc Forestry (4 years)',exam:'CUET-UG (15% all-India quota)',examCss:'ce-cuet'},
+      {name:'B.V.Sc & A.H (5.5 years)',exam:'CUET-UG (15% all-India quota)',examCss:'ce-cuet'},
+    ]},
+  ]},
+
+{name:'Central University of Jammu',short:'CUJ',type:'Central',district:'Samba',state:'Jammu & Kashmir',
+  naac:'A',nirf:'Top Central University',affil:'Central University — Act of Parliament 2009',website:'cujammu.ac.in',
+  streams:['Arts & Science','Management'],
+  specialNote:'Established under the Central Universities Act 2009. Located at Rahya-Suchani in Samba district. Offers integrated UG-PG programmes across humanities, sciences, and management.',
+  programGroups:[
+    {stream:'Arts & Science (UG)',programs:[
+      {name:'Integrated B.A–M.A (English, Hindi, Sanskrit, Economics, Political Science, History) — 5 years',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'Integrated B.Sc–M.Sc (Physics, Chemistry, Maths, Computer Science, Environmental Science) — 5 years',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.Com (Hons)',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+    {stream:'Management',programs:[
+      {name:'Integrated BBA–MBA (5 years)',exam:'CUET UG',examCss:'ce-cuet'},
     ]},
   ]},
 

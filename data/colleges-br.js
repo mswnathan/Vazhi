@@ -86,11 +86,11 @@ const COLLEGES_BR=[
 {name:'Bihar Agricultural University (BAU)',short:'BAU',type:'State',district:'Sabour',state:'Bihar',
   naac:'Accredited',nirf:'Top Agriculture',affil:'Bihar Agricultural University (State)',website:'bausabour.ac.in',
   streams:['Agriculture'],
-  specialNote:'Premier state agricultural university (est. 1908, Sabour campus). ICAR AIEEA / Bihar state merit.',
+  specialNote:'Premier state agricultural university (est. 1908, Sabour campus). CUET-UG (15% all-India quota) / Bihar state merit.',
   programGroups:[
     {stream:'Agriculture, Fisheries & Vet',programs:[
-      {name:'B.Sc (Agriculture) — 4 years',exam:'ICAR AIEEA / Bihar Merit',examCss:'ce-icar'},
-      {name:'B.Sc (Horticulture)',exam:'ICAR AIEEA / Bihar Merit',examCss:'ce-icar'},
+      {name:'B.Sc (Agriculture) — 4 years',exam:'CUET-UG (15% all-India quota) / Bihar Merit',examCss:'ce-cuet'},
+      {name:'B.Sc (Horticulture)',exam:'CUET-UG (15% all-India quota) / Bihar Merit',examCss:'ce-cuet'},
     ]},
   ]},
 
@@ -102,6 +102,44 @@ const COLLEGES_BR=[
   programGroups:[
     {stream:'Allied Health & Rehabilitation',programs:[
       {name:'Bachelor in Prosthetics & Orthotics / BPO (4.5 years)',exam:'MoSJE Counselling',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'Institute of Hotel Management, Hajipur',short:'IHM Hajipur',type:'Central',district:'Vaishali',state:'Bihar',
+  naac:'Accredited',nirf:'NCHMCT Central IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT) — Ministry of Tourism',website:'ihmhajipur.net',
+  streams:['Management'],
+  specialNote:'Central IHM under Ministry of Tourism. Offers diploma-level hospitality courses in addition to NCHM JEE based degree programmes.',
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+      {name:'Diploma in Food Production / F&B Service / Bakery & Confectionery / Housekeeping',exam:'Merit (Class 12)',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Indian Institute of Information Technology Bhagalpur',short:'IIIT Bhagalpur',type:'Central',district:'Bhagalpur',state:'Bihar',
+  naac:'Accredited',nirf:'IIIT Network',affil:'Institute of National Importance (IIIT Act 2017) — Ministry of Education',website:'iiitbh.ac.in',
+  streams:['Engineering'],
+  specialNote:'One of the 25 IIITs under PPP model. Admission via JEE Main and JoSAA counselling.',
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech CSE (4 years)',exam:'JEE Main',examCss:'ce-jee'},
+      {name:'B.Tech ECE (4 years)',exam:'JEE Main',examCss:'ce-jee'},
+      {name:'B.Tech Mechatronics & Automation',exam:'JEE Main',examCss:'ce-jee'},
+    ]},
+  ]},
+
+{name:'Mahatma Gandhi Central University (MGCU)',short:'MGCU',type:'Central',district:'East Champaran',state:'Bihar',
+  naac:'Accredited',nirf:'Top Central University',affil:'Central University — Act of Parliament 2014',website:'mgcub.ac.in',
+  streams:['Arts & Science','Management'],
+  specialNote:'Established at Motihari, East Champaran — the site of Mahatma Gandhi\'s 1917 Champaran Satyagraha. Offers integrated UG-PG programmes across humanities, sciences, and commerce.',
+  programGroups:[
+    {stream:'Arts & Science (UG)',programs:[
+      {name:'Integrated B.A–M.A (English, Hindi, Sanskrit, History, Political Science, Economics) — 5 years',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'Integrated B.Sc–M.Sc (Physics, Chemistry, Maths, Computer Science, Life Science) — 5 years',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'Integrated B.Com–M.Com — 5 years',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+    {stream:'Management',programs:[
+      {name:'Integrated BBA–MBA (5 years)',exam:'CUET UG',examCss:'ce-cuet'},
     ]},
   ]},
 

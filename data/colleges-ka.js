@@ -121,6 +121,13 @@ const COLLEGES_KA=[
       {name:'MBBS (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
       {name:'B.Sc Nursing',exam:'NEET UG / Merit',examCss:'ce-neet'},
     ]},
+    {stream:'Paramedical (Diploma) — Merit-based, no entrance exam',programs:[
+      {name:'Diploma in Medical Lab Technology / DMLT (2 years)',exam:'Merit (Class 12 PCB marks) — Karnataka DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Medical Radiography Technology / DMRT (2 years)',exam:'Merit (Class 12 PCB marks) — Karnataka DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Operation Theatre Technology / DOTT (2 years)',exam:'Merit (Class 12 PCB marks) — Karnataka DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Anaesthesia Technology (2 years)',exam:'Merit (Class 12 PCB marks) — Karnataka DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Optometry (2 years)',exam:'Merit (Class 12 PCB marks) — Karnataka DME Counselling',examCss:'ce-merit'},
+    ]},
   ]},
 
 {name:'Sri Jayachamarajendra College of Engineering (SJCE)',short:'SJCE',type:'State',district:'Mysuru',state:'Karnataka',
@@ -139,8 +146,8 @@ const COLLEGES_KA=[
   specialNote:'Premier state agricultural university. ICAR / Karnataka state merit admission.',
   programGroups:[
     {stream:'Agriculture, Fisheries & Vet',programs:[
-      {name:'B.Sc (Agriculture) — 4 years',exam:'ICAR AIEEA / Karnataka Merit',examCss:'ce-icar'},
-      {name:'B.Sc (Horticulture) — 4 years',exam:'ICAR AIEEA / Karnataka Merit',examCss:'ce-icar'},
+      {name:'B.Sc (Agriculture) — 4 years',exam:'CUET-UG (15% all-India quota) / Karnataka Merit',examCss:'ce-cuet'},
+      {name:'B.Sc (Horticulture) — 4 years',exam:'CUET-UG (15% all-India quota) / Karnataka Merit',examCss:'ce-cuet'},
     ]},
   ]},
 

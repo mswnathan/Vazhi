@@ -97,8 +97,9 @@
       <div class="home-mission">
         <div class="home-mission-lbl">About Vazhi</div>
         <div class="home-mission-text">
-          <p>This website is designed for students and parents to help them explore and understand a wide range of career opportunities. Our goal is to provide clear insights into various courses, entrance exams, and educational pathways, enabling students to analyse their options and make informed career decisions.</p>
-          <p>We primarily focus on State Government, Central Government, and affiliated colleges. While many students concentrate only on a few highly competitive entrance exams, this platform aims to present a broader spectrum of courses and opportunities — offering a <strong>"buffet" of career choices</strong> that students can explore based on their interests and aspirations.</p>
+          <p>This website is designed to help students and parents explore and understand a wide range of career opportunities beyond the conventional focus on a few highly competitive entrance exams such as JEE and NEET. Our goal is to provide clear insights into various courses, entrance exams, and educational pathways, enabling students to analyse their options and make informed career decisions.</p>
+          <p>We focus exclusively on government-funded and merit-based institutions — Central, State, Aided, and Deemed — that offer <strong>affordable, high-quality higher education</strong>. These institutions have established infrastructure, experienced faculty, and strong alumni networks.</p>
+          <p>Rather than limiting choices to a few well-known pathways, this platform aims to present a broader spectrum of courses and opportunities — offering a <strong>"buffet" of career choices</strong> that students can explore based on their interests, aspirations, and strengths.</p>
         </div>
       </div>
 
@@ -534,7 +535,7 @@
   <div class="col-filter-bar">
     <div class="col-fg">
       <label>State</label>
-      <select id="cf-state" onchange="updateDistrictFilter();renderColleges()">
+      <select id="cf-state" onchange="updateDistrictFilter();populateExamFilter();renderColleges()">
         <option value="">All States</option>
       </select>
     </div>
@@ -684,29 +685,88 @@
     <div class="j-note">⚠ Based on Round 6 final allotment data. Actual cutoffs vary each year — use this as a guide, not a guarantee. Always check josaa.nic.in for official data.</div>
     </div><!-- /cp-josaa -->
 
-    <!-- TNEA placeholder panel -->
+    <!-- TNEA panel -->
     <div class="cp-sys-panel" id="cp-tnea" style="display:none">
-      <div class="cp-coming-wrap">
-        <div class="cp-coming-ico">🏛</div>
-        <div class="cp-coming-title">TNEA Predictor — Coming Soon</div>
-        <div class="cp-coming-desc">
-          We're building a cutoff-based predictor for Tamil Nadu Engineering Admissions (TNEA),
-          covering government, aided, and self-financing engineering colleges across Tamil Nadu.
-        </div>
-        <div class="cp-coming-what">
-          <div class="cp-coming-what-title">What it will include</div>
-          <ul class="cp-coming-list">
-            <li>Cutoff marks by college, branch, community (OC / BC / BCM / MBC / SC / ST)</li>
-            <li>TN 7.5% government school horizontal reservation filter</li>
-            <li>Special category quota seats (NRI, sports, differently abled)</li>
-            <li>College search by district, type, and branch</li>
-            <li>Historical trend — how cutoffs changed over 3 years</li>
-          </ul>
-        </div>
-        <div class="cp-coming-note">
-          Data source: TNEA official counselling portal — <a href="https://tneaonline.org" target="_blank" rel="noopener" class="cp-coming-link">tneaonline.org</a>
-        </div>
+    <div class="j-mode-tabs">
+      <button class="j-mode-btn active" data-mode="predict" onclick="tnSetMode('predict')">My Cutoff</button>
+      <button class="j-mode-btn" data-mode="explore" onclick="tnSetMode('explore')">Cutoff Range Explorer</button>
+    </div>
+    <div class="j-form" id="tn-form">
+      <div class="j-field">
+        <label>Your Cutoff (out of 200)</label>
+        <input type="number" id="tn-mark" placeholder="e.g. 195.5" min="0" max="200" step="0.25">
       </div>
+      <div class="j-field">
+        <label>Community</label>
+        <select id="tn-comm">
+          <option value="0">OC</option>
+          <option value="1">BC</option>
+          <option value="2">BCM</option>
+          <option value="3">MBC</option>
+          <option value="4">SC</option>
+          <option value="5">SCA</option>
+          <option value="6">ST</option>
+        </select>
+      </div>
+      <div class="j-field">
+        <label>Quota</label>
+        <select id="tn-quota">
+          <option value="0">General</option>
+          <option value="1">TN 7.5% Govt-school</option>
+          <option value="2">NRI</option>
+          <option value="3">Sports</option>
+        </select>
+      </div>
+      <div class="j-field">
+        <label>College Type <span class="j-opt">(optional)</span></label>
+        <select id="tn-type">
+          <option value="">Any</option>
+          <option>Government</option>
+          <option>Aided</option>
+          <option>Self-financing</option>
+        </select>
+      </div>
+      <div class="j-field">
+        <label>District <span class="j-opt">(optional)</span></label>
+        <select id="tn-district"><option value="">Any district</option></select>
+      </div>
+      <button class="j-btn" onclick="tnPredict()">Find Colleges →</button>
+    </div>
+    <div class="j-form" id="tn-form-range" style="display:none">
+      <div class="j-field">
+        <label>Cutoff From</label>
+        <input type="number" id="tnr-from" placeholder="e.g. 190" min="0" max="200" step="0.25">
+      </div>
+      <div class="j-field">
+        <label>Cutoff To</label>
+        <input type="number" id="tnr-to" placeholder="e.g. 200" min="0" max="200" step="0.25">
+      </div>
+      <div class="j-field">
+        <label>Quota</label>
+        <select id="tnr-quota">
+          <option value="0">General</option>
+          <option value="1">TN 7.5% Govt-school</option>
+          <option value="2">NRI</option>
+          <option value="3">Sports</option>
+        </select>
+      </div>
+      <div class="j-field">
+        <label>College Type <span class="j-opt">(optional)</span></label>
+        <select id="tnr-type">
+          <option value="">Any</option>
+          <option>Government</option>
+          <option>Aided</option>
+          <option>Self-financing</option>
+        </select>
+      </div>
+      <div class="j-field">
+        <label>District <span class="j-opt">(optional)</span></label>
+        <select id="tnr-district"><option value="">Any district</option></select>
+      </div>
+      <button class="j-btn" onclick="tnExplore()">Explore Range →</button>
+    </div>
+    <div id="tn-results"></div>
+    <div class="j-note">⚠ Dataset: 2025 TNEA cutoffs from the official Anna University portal — 423 colleges, 106 branches, all 7 communities. Cutoffs vary year to year; always verify on the official portal before applying: <a href="https://cutoff.tneaonline.org/search" target="_blank" rel="noopener">cutoff.tneaonline.org</a>.</div>
     </div><!-- /cp-tnea -->
 
     <!-- TNGASA placeholder panel -->
@@ -792,6 +852,9 @@
 <!-- JoSAA data — generated by tools/csv-to-josaa.py -->
 <script src="data/josaa-meta.js"></script>
 <script src="data/josaa.js"></script>
+<!-- TNEA data — generated by tools/csv-to-tnea.py -->
+<script src="data/tnea-meta.js"></script>
+<script src="data/tnea.js"></script>
 
 <script src="js/app.js"></script>
 <script src="js/explore.js"></script>
@@ -800,6 +863,7 @@
 <script src="js/exams.js"></script>
 <script src="js/colleges.js"></script>
 <script src="js/josaa.js"></script>
+<script src="js/tnea.js"></script>
 <script src="js/after-ug.js"></script>
 <script src="data/career-guide.js"></script>
 <script src="js/career-guide.js"></script>

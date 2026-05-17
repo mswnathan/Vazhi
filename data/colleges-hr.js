@@ -97,9 +97,9 @@ const COLLEGES_HR=[
   specialNote:'One of India\'s leading agricultural universities. Renowned for wheat and rice variety development crucial to Green Revolution.',
   programGroups:[
     {stream:'Arts & Science',programs:[
-      {name:'B.Sc (Hons) Agriculture (4 years)',exam:'ICAR AIEEA',examCss:'ce-icar'},
-      {name:'B.Sc (Hons) Horticulture (4 years)',exam:'ICAR AIEEA',examCss:'ce-icar'},
-      {name:'B.Tech Food Technology',exam:'ICAR AIEEA / State Entrance',examCss:'ce-icar'},
+      {name:'B.Sc (Hons) Agriculture (4 years)',exam:'CUET-UG (15% all-India quota)',examCss:'ce-cuet'},
+      {name:'B.Sc (Hons) Horticulture (4 years)',exam:'CUET-UG (15% all-India quota)',examCss:'ce-cuet'},
+      {name:'B.Tech Food Technology',exam:'CUET-UG (15% all-India quota) / State Entrance',examCss:'ce-cuet'},
     ]},
   ]},
 

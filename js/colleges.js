@@ -161,23 +161,50 @@ function populateCollegeFilters(){
   }
 }
 
+// Normalize one raw exam fragment to a canonical label, or null to drop it.
+// Strips parenthetical qualifiers, "+ X" suffixes, em-dash trailing clauses,
+// normalizes CUET-UG/NEET-UG hyphenation, and drops bare "<state-or-word> Merit/Entrance/CET/counselling" fragments.
+function normalizeExam(raw){
+  let t=raw.trim();
+  t=t.replace(/\s*\([^)]*\)\s*/g,' ').trim();
+  t=t.replace(/\s*\+.*$/,'').trim();
+  t=t.replace(/\s*[—–]\s*.+$/,'').trim();
+  t=t.replace(/\bCUET-UG\b/gi,'CUET UG')
+     .replace(/\bNEET-UG\b/gi,'NEET UG')
+     .replace(/\bNEET-PG\b/gi,'NEET PG');
+  t=t.replace(/\s+/g,' ').trim();
+  if(!t) return null;
+  if(/^[A-Za-z]+\s+(Merit|Entrance|CET|counselling|counseling)$/i.test(t)) return null;
+  if(/^(Entrance|Entrance Test|Audition|Interview|Test)$/i.test(t)) return null;
+  if(/^Merit$/i.test(t)) return 'Merit (Class 12)';
+  return t;
+}
+
+function programExams(p){
+  return p.exam.split('/').map(e=>normalizeExam(e)).filter(Boolean);
+}
+
 function populateExamFilter(){
+  const sel=document.getElementById('cf-exam');
+  if(!sel) return;
+  const stateEl=document.getElementById('cf-state');
+  const state=stateEl?stateEl.value:'';
+  const prev=sel.value;
   const examSet=new Set();
-  allColleges().forEach(c=>{
+  allColleges().filter(c=>!state||c.state===state).forEach(c=>{
     c.programGroups.forEach(g=>{
       g.programs.forEach(p=>{
-        p.exam.split('/').forEach(e=>examSet.add(e.trim()));
+        programExams(p).forEach(e=>examSet.add(e));
       });
     });
   });
-  const sel=document.getElementById('cf-exam');
-  if(!sel) return;
   while(sel.options.length>1) sel.remove(1);
   [...examSet].sort().forEach(exam=>{
     const opt=document.createElement('option');
     opt.value=exam; opt.textContent=exam;
     sel.appendChild(opt);
   });
+  sel.value=examSet.has(prev)?prev:'';
 }
 
 async function renderColleges(){
@@ -195,7 +222,7 @@ async function renderColleges(){
     const sm=!state||c.state===state;
     const tm=!type||c.type===type;
     const stm=!stream||c.streams.some(s=>s.toLowerCase().includes(stream.toLowerCase()));
-    const em=!exam||c.programGroups.some(g=>g.programs.some(p=>p.exam.includes(exam)));
+    const em=!exam||c.programGroups.some(g=>g.programs.some(p=>programExams(p).includes(exam)));
     const dm=!district||c.district===district;
     const srch=!search||(c.name+c.short+c.district+c.state+c.programGroups.map(g=>g.programs.map(p=>p.name).join(' ')).join(' ')).toLowerCase().includes(search);
     const savedMatch=!savedSet||savedSet.has((c.short||c.name).toLowerCase().replace(/[^a-z0-9]+/g,'-'));
@@ -357,6 +384,8 @@ function resetCollegeFilters(){
   document.getElementById('cf-search').value='';
   showSavedOnly=false;
   vzUpdateShortlistToggle();
+  populateExamFilter();
+  updateDistrictFilter();
   if(collegeMode===COL_MODE_PG) renderPGColleges(); else renderColleges();
 }
 

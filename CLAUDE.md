@@ -124,6 +124,7 @@ Vazhi/
     scholarship-updater.md   ← Add/edit scholarship entries
     internship-curator.md    ← Add/edit internship entries
     psychometric-updater.md  ← Edit RIASEC questions, career map, profiles
+    newspaper-ad-curator.md  ← Triage newspaper-ad photos from ~/Vazhi/vazhi-ads/ into data files
     validator.md          ← Check data quality before publishing
     validate.js           ← Brace-balance checker script
     functional-tester.md  ← Behavioral correctness tests (filters, search, cross-refs)
@@ -385,6 +386,34 @@ Note: `papers[]` replaces `subjects[]` used in UG exams.
 
 ### Run data health checks
 → `sh agents/check.sh` — runs schema validator + behavioral tests (from project root)
+
+### Bulk-check a list (colleges / exams / scholarships / etc.) — STANDARD WORKFLOW
+When the user pastes a list with a prompt like "check and add these colleges:" or "check these exams:":
+
+1. **Read the relevant agent doc first** (`agents/data-updater.md` for colleges/exams/courses; `agents/scholarship-updater.md` for scholarships; etc.) to get the exact schema
+2. **For each item in the list:**
+   - Search across ALL relevant data files to check if it's already present (don't add duplicates)
+   - Verify it meets the scope rule (government / aided / merit-only — no private self-financing per CLAUDE.md §27)
+   - If ambiguous (multiple institutes with similar names, unclear scope), SKIP it and list under "needs clarification" — don't guess
+3. **Add only the genuinely missing + in-scope entries** to the correct data file (e.g. correct state's `colleges-XX.js`)
+4. **Run `sh agents/check.sh`** — the git safety rail + schema check + behavioral tests
+5. **Report a 3-column summary:**
+   - ✅ Added: which ones (with file path)
+   - ⏩ Already present: which ones (and where)
+   - ❓ Skipped / needs clarification: which ones (and why)
+6. **Do NOT auto-commit** — the user reviews then runs `git commit` themselves
+
+This workflow applies to ANY bulk-add prompt where the user provides a list and wants Claude to dedupe + scope-check + add.
+
+### Process newspaper-ad photos
+→ Read `agents/newspaper-ad-curator.md` first — it has the full per-batch workflow.
+→ Trigger phrases: "process the newspaper ads", "check the ads folder", "I added more ad photos", or the `/vazhi-newspaper-ads` slash command.
+→ Default photo source: `~/Vazhi/vazhi-ads/`. HEIC → JPG via `sips`. After user confirms the summary, delete processed originals.
+→ **Standing decisions** (don't re-ask):
+  - Recruitment ads → skip the ad, add the institute only if missing.
+  - Future admission deadline → add the institution AND a dated `announcements.js` entry.
+  - Passed deadline → add the institution, skip the announcement.
+  - Scholarships → no govt-only restriction (NGO/corporate/professional-body all OK). Colleges and exams still follow the strict scope rule.
 
 ### Add an auth-gated feature
 → Check `window.VazhiAuth && VazhiAuth.getUser()` before rendering protected UI

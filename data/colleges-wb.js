@@ -121,17 +121,24 @@ const COLLEGES_WB=[
       {name:'MBBS (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
       {name:'B.Sc Nursing',exam:'NEET UG / WB Merit',examCss:'ce-neet'},
     ]},
+    {stream:'Paramedical (Diploma) — Merit-based, no entrance exam',programs:[
+      {name:'Diploma in Medical Lab Technology / DMLT (2 years)',exam:'Merit (Class 12 PCB marks) — WB DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Medical Radiography Technology / DMRT (2 years)',exam:'Merit (Class 12 PCB marks) — WB DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Operation Theatre Technology / DOTT (2 years)',exam:'Merit (Class 12 PCB marks) — WB DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Anaesthesia Technology (2 years)',exam:'Merit (Class 12 PCB marks) — WB DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Optometry (2 years)',exam:'Merit (Class 12 PCB marks) — WB DME Counselling',examCss:'ce-merit'},
+    ]},
   ]},
 
 {name:'Bidhan Chandra Krishi Viswavidyalaya (BCKV)',short:'BCKV',type:'State',district:'Nadia',state:'West Bengal',
   naac:'A',nirf:'Top Agriculture',affil:'Bidhan Chandra Krishi Viswavidyalaya (State)',website:'bckv.edu.in',
   streams:['Agriculture'],
-  specialNote:'Premier state agricultural university. ICAR AIEEA / WB state merit admission.',
+  specialNote:'Premier state agricultural university. CUET-UG (15% all-India quota) / WB state merit admission.',
   programGroups:[
     {stream:'Agriculture, Fisheries & Vet',programs:[
-      {name:'B.Sc (Agriculture) — 4 years',exam:'ICAR AIEEA / WB Merit',examCss:'ce-icar'},
-      {name:'B.Sc (Horticulture)',exam:'ICAR AIEEA / WB Merit',examCss:'ce-icar'},
-      {name:'B.F.Sc (Fisheries)',exam:'ICAR AIEEA / WB Merit',examCss:'ce-icar'},
+      {name:'B.Sc (Agriculture) — 4 years',exam:'CUET-UG (15% all-India quota) / WB Merit',examCss:'ce-cuet'},
+      {name:'B.Sc (Horticulture)',exam:'CUET-UG (15% all-India quota) / WB Merit',examCss:'ce-cuet'},
+      {name:'B.F.Sc (Fisheries)',exam:'CUET-UG (15% all-India quota) / WB Merit',examCss:'ce-cuet'},
     ]},
   ]},
 
@@ -145,6 +152,22 @@ const COLLEGES_WB=[
       {name:'Bachelor of Physiotherapy / BPT (4.5 years)',exam:'MoSJE Counselling',examCss:'ce-own'},
       {name:'Bachelor of Occupational Therapy / BOT (4.5 years)',exam:'MoSJE Counselling',examCss:'ce-own'},
       {name:'Bachelor in Prosthetics & Orthotics / BPO (4.5 years)',exam:'MoSJE Counselling',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'Visva-Bharati University',short:'Visva-Bharati',type:'Central',district:'Birbhum',state:'West Bengal',
+  naac:'A',nirf:'Top Central University',affil:'Central University — Act of Parliament 1951 (founded by Rabindranath Tagore, 1921)',website:'visvabharati.ac.in',
+  streams:['Arts & Science'],
+  specialNote:'Founded by Rabindranath Tagore at Santiniketan. Unique residential university blending Indian and global traditions, with strong programmes in fine arts, music, and humanities at Kala-Bhavana and Sangit-Bhavana.',
+  programGroups:[
+    {stream:'Arts & Science (UG)',programs:[
+      {name:'B.A (English, Bengali, Hindi, Sanskrit, History, Political Science, Philosophy, Economics)',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.Sc (Physics, Chemistry, Maths, Botany, Zoology, Computer Science, Statistics)',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.Com (Hons)',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+    {stream:'Fine Arts & Music',programs:[
+      {name:'BFA (Painting, Sculpture, Graphic Art, Design, History of Art) — Kala-Bhavana',exam:'CUET UG + Practical',examCss:'ce-cuet'},
+      {name:'B.Mus (Hindustani Vocal, Rabindra Sangit, Sitar, Tabla, Esraj) — Sangit-Bhavana',exam:'CUET UG + Audition',examCss:'ce-cuet'},
     ]},
   ]},
 

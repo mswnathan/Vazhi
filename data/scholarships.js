@@ -704,4 +704,22 @@ const SCHOLARSHIPS = [
     bc: 'accent',
   },
 
+  {
+    id: 'iet-india-scholarship',
+    name: 'IET India Scholarship Award',
+    short: 'IET India',
+    body: 'Institution of Engineering and Technology (IET) — India',
+    level: 'Corporate',
+    for: 'Full-time UG engineering students (any year) across India — selected on merit and a structured assessment',
+    ugStream: ['Engineering'],
+    class12Pct: 60,
+    amount: 'Cash prizes + IET membership + mentorship',
+    duration: 'One-time award',
+    deadline: '',
+    website: 'theiet.in',
+    note: 'National flagship scholarship from IET India — applicants from all engineering branches eligible. Multi-stage selection: online application, assessment, interview. Network access to IET fellows and industry mentors.',
+    badge: 'Engineering Merit',
+    bc: 'teal',
+  },
+
 ];

@@ -67,21 +67,22 @@ const COLLEGES_UP=[
       {name:'LL.B (3-year after UG)',exam:'BHU Entrance',examCss:'ce-own'},
     ]},
     {stream:'Agriculture, Fisheries & Vet',programs:[
-      {name:'B.Sc (Agriculture)',exam:'ICAR AIEEA / CUET UG',examCss:'ce-icar'},
+      {name:'B.Sc (Agriculture)',exam:'CUET UG',examCss:'ce-cuet'},
     ]},
   ]},
 
 {name:'Aligarh Muslim University (AMU)',short:'AMU',type:'Central',district:'Aligarh',state:'Uttar Pradesh',
   naac:'A+',nirf:'Top 10 University',affil:'Central University — Act of Parliament 1920',website:'amu.ac.in',
   streams:['Engineering','Arts & Science','Medical','Law'],
-  specialNote:'Historic central university (est. 1875). Strong in engineering, medicine and humanities.',
+  specialNote:'Historic central university (est. 1875). Strong in engineering, medicine and humanities. B.A / B.Sc / B.Com admitted via CUET-UG since 2023. B.Tech retains AMU\'s own engineering entrance test (minority institution carve-out per Nov-2024 Supreme Court ruling). MBBS via NEET-UG.',
   programGroups:[
     {stream:'Engineering & Technology',programs:[
       {name:'B.Tech (CSE, ECE, EEE, Mechanical, Civil, Chemical)',exam:'AMU Entrance',examCss:'ce-own'},
     ]},
     {stream:'Arts & Science',programs:[
-      {name:'B.Sc (Physics, Chemistry, Maths, Computer Science)',exam:'AMU Entrance',examCss:'ce-own'},
-      {name:'B.A (English, History, Political Science, Economics)',exam:'AMU Entrance',examCss:'ce-own'},
+      {name:'B.Sc (Physics, Chemistry, Maths, Computer Science)',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.A (English, History, Political Science, Economics)',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.Com',exam:'CUET UG',examCss:'ce-cuet'},
     ]},
     {stream:'Medical & Health',programs:[
       {name:'MBBS — JNMC (Jawaharlal Nehru Medical College)',exam:'NEET UG',examCss:'ce-neet'},
@@ -131,16 +132,23 @@ const COLLEGES_UP=[
     {stream:'Medical & Health',programs:[
       {name:'MBBS (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
     ]},
+    {stream:'Paramedical (Diploma) — Merit-based, no entrance exam',programs:[
+      {name:'Diploma in Medical Lab Technology / DMLT (2 years)',exam:'Merit (Class 12 PCB marks) — UP DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Medical Radiography Technology / DMRT (2 years)',exam:'Merit (Class 12 PCB marks) — UP DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Operation Theatre Technology / DOTT (2 years)',exam:'Merit (Class 12 PCB marks) — UP DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Anaesthesia Technology (2 years)',exam:'Merit (Class 12 PCB marks) — UP DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Optometry (2 years)',exam:'Merit (Class 12 PCB marks) — UP DME Counselling',examCss:'ce-merit'},
+    ]},
   ]},
 
 {name:'Chandra Shekhar Azad University of Agriculture & Technology (CSAUAT)',short:'CSAUAT',type:'State',district:'Kanpur',state:'Uttar Pradesh',
   naac:'A',nirf:'Top Agriculture',affil:'Chandra Shekhar Azad University (State)',website:'csauk.ac.in',
   streams:['Agriculture'],
-  specialNote:'Major state agricultural university. ICAR AIEEA / UP state merit admission.',
+  specialNote:'Major state agricultural university. CUET-UG (15% all-India quota) / UP state merit admission.',
   programGroups:[
     {stream:'Agriculture, Fisheries & Vet',programs:[
-      {name:'B.Sc (Agriculture) — 4 years',exam:'ICAR AIEEA / UP Merit',examCss:'ce-icar'},
-      {name:'B.Tech (Food Technology)',exam:'ICAR AIEEA / UP Merit',examCss:'ce-icar'},
+      {name:'B.Sc (Agriculture) — 4 years',exam:'CUET-UG (15% all-India quota) / UP Merit',examCss:'ce-cuet'},
+      {name:'B.Tech (Food Technology)',exam:'CUET-UG (15% all-India quota) / UP Merit',examCss:'ce-cuet'},
     ]},
   ]},
 
@@ -153,6 +161,17 @@ const COLLEGES_UP=[
     {stream:'Medical & Health',programs:[
       {name:'MBBS (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
       {name:'B.Sc (Nursing) — 4 years',exam:'NEET UG',examCss:'ce-neet'},
+    ]},
+  ]},
+
+{name:'Dr. Ram Manohar Lohia Institute of Medical Sciences',short:'RMLIMS Lucknow',type:'State',district:'Lucknow',state:'Uttar Pradesh',
+  naac:'Accredited',nirf:'Top State Medical',affil:'Autonomous State Medical Institute under Govt of Uttar Pradesh',website:'drrmlims.ac.in',
+  streams:['Medical'],
+  specialNote:'Premier UP state medical & super-specialty teaching institute. UG MBBS admission via NEET UG + UP state counselling. Strong PG/DM/MCh programmes.',
+  programGroups:[
+    {stream:'Medical & Health',programs:[
+      {name:'MBBS (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
+      {name:'B.Sc Nursing / Paramedical (4 years)',exam:'NEET UG / UP State Entrance',examCss:'ce-neet'},
     ]},
   ]},
 

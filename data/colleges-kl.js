@@ -109,17 +109,24 @@ const COLLEGES_KL=[
       {name:'MBBS (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
       {name:'B.Sc Nursing',exam:'NEET UG / Merit',examCss:'ce-neet'},
     ]},
+    {stream:'Paramedical (Diploma) — Merit-based, no entrance exam',programs:[
+      {name:'Diploma in Medical Lab Technology / DMLT (2 years)',exam:'Merit (Class 12 PCB marks) — Kerala DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Medical Radiography Technology / DMRT (2 years)',exam:'Merit (Class 12 PCB marks) — Kerala DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Operation Theatre Technology / DOTT (2 years)',exam:'Merit (Class 12 PCB marks) — Kerala DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Anaesthesia Technology (2 years)',exam:'Merit (Class 12 PCB marks) — Kerala DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Optometry (2 years)',exam:'Merit (Class 12 PCB marks) — Kerala DME Counselling',examCss:'ce-merit'},
+    ]},
   ]},
 
 {name:'Kerala Agricultural University (KAU)',short:'KAU',type:'State',district:'Thrissur',state:'Kerala',
   naac:'A',nirf:'Top Agriculture',affil:'Kerala Agricultural University (State)',website:'kau.in',
   streams:['Agriculture'],
-  specialNote:'Premier state agricultural university. Admission via ICAR AIEEA and Kerala state merit.',
+  specialNote:'Premier state agricultural university. Admission via CUET-UG (15% all-India quota) and Kerala state merit.',
   programGroups:[
     {stream:'Agriculture, Fisheries & Vet',programs:[
-      {name:'B.Sc (Agriculture) — 4 years',exam:'ICAR AIEEA / Kerala Merit',examCss:'ce-icar'},
-      {name:'B.Sc (Horticulture, Forestry, Food Technology)',exam:'ICAR AIEEA / Kerala Merit',examCss:'ce-icar'},
-      {name:'B.F.Sc (Fisheries)',exam:'ICAR AIEEA / Kerala Merit',examCss:'ce-icar'},
+      {name:'B.Sc (Agriculture) — 4 years',exam:'CUET-UG (15% all-India quota) / Kerala Merit',examCss:'ce-cuet'},
+      {name:'B.Sc (Horticulture, Forestry, Food Technology)',exam:'CUET-UG (15% all-India quota) / Kerala Merit',examCss:'ce-cuet'},
+      {name:'B.F.Sc (Fisheries)',exam:'CUET-UG (15% all-India quota) / Kerala Merit',examCss:'ce-cuet'},
     ]},
   ]},
 

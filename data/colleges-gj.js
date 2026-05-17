@@ -107,6 +107,13 @@ const COLLEGES_GJ=[
     {stream:'Medical & Health',programs:[
       {name:'MBBS (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
     ]},
+    {stream:'Paramedical (Diploma) — Merit-based, no entrance exam',programs:[
+      {name:'Diploma in Medical Lab Technology / DMLT (2 years)',exam:'Merit (Class 12 PCB marks) — Gujarat DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Medical Radiography Technology / DMRT (2 years)',exam:'Merit (Class 12 PCB marks) — Gujarat DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Operation Theatre Technology / DOTT (2 years)',exam:'Merit (Class 12 PCB marks) — Gujarat DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Anaesthesia Technology (2 years)',exam:'Merit (Class 12 PCB marks) — Gujarat DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Optometry (2 years)',exam:'Merit (Class 12 PCB marks) — Gujarat DME Counselling',examCss:'ce-merit'},
+    ]},
   ]},
 
 {name:'Gujarat University',short:'GU',type:'State',district:'Ahmedabad',state:'Gujarat',
@@ -124,12 +131,37 @@ const COLLEGES_GJ=[
 {name:'Anand Agricultural University (AAU)',short:'AAU',type:'State',district:'Anand',state:'Gujarat',
   naac:'A',nirf:'Top Agriculture',affil:'Anand Agricultural University (State)',website:'aau.in',
   streams:['Agriculture'],
-  specialNote:'Premier dairy and agriculture university of Gujarat. ICAR AIEEA / Gujarat state merit.',
+  specialNote:'Premier dairy and agriculture university of Gujarat. CUET-UG (15% all-India quota) / Gujarat state merit.',
   programGroups:[
     {stream:'Agriculture, Fisheries & Vet',programs:[
-      {name:'B.Sc (Agriculture) — 4 years',exam:'ICAR AIEEA / GJ Merit',examCss:'ce-icar'},
-      {name:'B.Tech (Dairy Technology)',exam:'ICAR AIEEA / GJ Merit',examCss:'ce-icar'},
-      {name:'B.Sc (Horticulture)',exam:'ICAR AIEEA / GJ Merit',examCss:'ce-icar'},
+      {name:'B.Sc (Agriculture) — 4 years',exam:'CUET-UG (15% all-India quota) / GJ Merit',examCss:'ce-cuet'},
+      {name:'B.Tech (Dairy Technology)',exam:'CUET-UG (15% all-India quota) / GJ Merit',examCss:'ce-cuet'},
+      {name:'B.Sc (Horticulture)',exam:'CUET-UG (15% all-India quota) / GJ Merit',examCss:'ce-cuet'},
+    ]},
+  ]},
+
+{name:'Institute of Infrastructure, Technology, Research and Management',short:'IITRAM Ahmedabad',type:'State',district:'Ahmedabad',state:'Gujarat',
+  naac:'A',nirf:'Top State Tech',affil:'State University established by Govt of Gujarat (IITRAM Act 2013)',website:'iitram.ac.in',
+  streams:['Engineering'],
+  specialNote:'Gujarat state technical university focused on infrastructure engineering. B.Tech admission via JEE Main + ACPC counselling.',
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech Civil Engineering',exam:'JEE Main / ACPC',examCss:'ce-jee'},
+      {name:'B.Tech Electrical Engineering',exam:'JEE Main / ACPC',examCss:'ce-jee'},
+      {name:'B.Tech Mechanical Engineering',exam:'JEE Main / ACPC',examCss:'ce-jee'},
+      {name:'B.Tech Computer Engineering',exam:'JEE Main / ACPC',examCss:'ce-jee'},
+    ]},
+  ]},
+
+{name:'Indian Institute of Teacher Education',short:'IITE Gandhinagar',type:'State',district:'Gandhinagar',state:'Gujarat',
+  naac:'A',nirf:'Top Teacher Education',affil:'State University established by Govt of Gujarat (IITE Act 2010)',website:'iite.ac.in',
+  streams:['Education'],
+  specialNote:'India\'s only state university dedicated exclusively to teacher education. Offers integrated B.A./B.Sc + B.Ed and M.A. + M.Ed programmes.',
+  programGroups:[
+    {stream:'Education',programs:[
+      {name:'Integrated B.A. B.Ed (4 years)',exam:'IITE CET',examCss:'ce-own'},
+      {name:'Integrated B.Sc B.Ed (4 years)',exam:'IITE CET',examCss:'ce-own'},
+      {name:'B.Ed Special Education',exam:'IITE CET',examCss:'ce-own'},
     ]},
   ]},
 

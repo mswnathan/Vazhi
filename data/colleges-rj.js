@@ -100,16 +100,23 @@ const COLLEGES_RJ=[
     {stream:'Medical & Health',programs:[
       {name:'MBBS (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
     ]},
+    {stream:'Paramedical (Diploma) — Merit-based, no entrance exam',programs:[
+      {name:'Diploma in Medical Lab Technology / DMLT (2 years)',exam:'Merit (Class 12 PCB marks) — Rajasthan DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Medical Radiography Technology / DMRT (2 years)',exam:'Merit (Class 12 PCB marks) — Rajasthan DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Operation Theatre Technology / DOTT (2 years)',exam:'Merit (Class 12 PCB marks) — Rajasthan DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Anaesthesia Technology (2 years)',exam:'Merit (Class 12 PCB marks) — Rajasthan DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Optometry (2 years)',exam:'Merit (Class 12 PCB marks) — Rajasthan DME Counselling',examCss:'ce-merit'},
+    ]},
   ]},
 
 {name:'Swami Keshwanand Rajasthan Agricultural University (SKRAU)',short:'SKRAU',type:'State',district:'Bikaner',state:'Rajasthan',
   naac:'A',nirf:'Top Agriculture',affil:'Swami Keshwanand Rajasthan Agricultural University (State)',website:'raubikaner.org',
   streams:['Agriculture'],
-  specialNote:'Premier state agricultural university for arid zone agriculture. ICAR AIEEA / RJ state merit.',
+  specialNote:'Premier state agricultural university for arid zone agriculture. CUET-UG (15% all-India quota) / RJ state merit.',
   programGroups:[
     {stream:'Agriculture, Fisheries & Vet',programs:[
-      {name:'B.Sc (Agriculture) — 4 years',exam:'ICAR AIEEA / RJ Merit',examCss:'ce-icar'},
-      {name:'B.Sc (Horticulture)',exam:'ICAR AIEEA / RJ Merit',examCss:'ce-icar'},
+      {name:'B.Sc (Agriculture) — 4 years',exam:'CUET-UG (15% all-India quota) / RJ Merit',examCss:'ce-cuet'},
+      {name:'B.Sc (Horticulture)',exam:'CUET-UG (15% all-India quota) / RJ Merit',examCss:'ce-cuet'},
     ]},
   ]},
 

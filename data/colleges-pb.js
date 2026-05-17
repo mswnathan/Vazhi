@@ -100,12 +100,12 @@ const COLLEGES_PB=[
 {name:'Punjab Agricultural University (PAU)',short:'PAU',type:'State',district:'Ludhiana',state:'Punjab',
   naac:'A+',nirf:'Top Agriculture',affil:'Punjab Agricultural University (State)',website:'pau.edu',
   streams:['Agriculture'],
-  specialNote:'One of India\'s best agricultural universities. Pioneered the Green Revolution. ICAR AIEEA / Punjab state merit.',
+  specialNote:'One of India\'s best agricultural universities. Pioneered the Green Revolution. CUET-UG (15% all-India quota) / Punjab state merit.',
   programGroups:[
     {stream:'Agriculture, Fisheries & Vet',programs:[
-      {name:'B.Sc (Agriculture) — 4 years',exam:'ICAR AIEEA / Punjab Merit',examCss:'ce-icar'},
-      {name:'B.Sc (Horticulture, Food Technology, Biotechnology)',exam:'ICAR AIEEA / Punjab Merit',examCss:'ce-icar'},
-      {name:'B.Tech (Food Technology)',exam:'ICAR AIEEA / Punjab Merit',examCss:'ce-icar'},
+      {name:'B.Sc (Agriculture) — 4 years',exam:'CUET-UG (15% all-India quota) / Punjab Merit',examCss:'ce-cuet'},
+      {name:'B.Sc (Horticulture, Food Technology, Biotechnology)',exam:'CUET-UG (15% all-India quota) / Punjab Merit',examCss:'ce-cuet'},
+      {name:'B.Tech (Food Technology)',exam:'CUET-UG (15% all-India quota) / Punjab Merit',examCss:'ce-cuet'},
     ]},
   ]},
 

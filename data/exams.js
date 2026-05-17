@@ -298,6 +298,20 @@ const EXAM_GROUPS=[
   {name:'PGIMER Nursing',full:'PGIMER B.Sc Nursing Entrance',body:'PGIMER Chandigarh',level:'National',freq:'Once a year',subjects:['PCB','PCMB'],for:'B.Sc Nursing at PGIMER Chandigarh.',website:'pgimer.edu.in',note:'',seats:'~80',institutes:[
     {name:'PGIMER',city:'Chandigarh',tier:'🏆 Premier'},
   ]},
+  {name:'CET-PWD',full:'Common Entrance Test for Persons with Disabilities',body:'Ministry of Social Justice & Empowerment — jointly conducted by PDUNIPPD / SVNIRTAR / NILD / NIEPMD / AYJNISHD / NIEPID / CRCSRE',level:'National',freq:'Once a year (May–Jun, exam in late Jun)',subjects:['PCB','PCMB','PCM','PCM+CS','Any'],for:'BPT, BOT, BPO and BASLP at the seven National Institutes & Regional Centres for Empowerment of Persons with Disabilities — for candidates with and without disabilities (PwD reservation as per RPwD Act). Eligibility: 10+2 Science with English as compulsory subject.',website:'admission.svnirtar.nic.in',note:'A single common counselling fills seats across all participating institutes. Apply online at the SVNIRTAR / PDUNIPPD admission portal.',seats:'~600 seats across institutes',institutes:[
+    {name:'PDUNIPPD New Delhi',city:'New Delhi',tier:'🏆 Apex — Physical'},
+    {name:'SVNIRTAR Cuttack',city:'Cuttack, OD',tier:'🏆 Apex — Locomotor'},
+    {name:'NILD Kolkata',city:'Kolkata, WB',tier:'⭐ National — Locomotor'},
+    {name:'NIEPMD Chennai',city:'Chennai, TN',tier:'🏆 Apex — Multiple Disabilities'},
+    {name:'AYJNISHD Mumbai + Regional Centres (Kolkata, Secunderabad)',city:'Mumbai / Kolkata / Secunderabad',tier:'🏆 Apex — Speech & Hearing'},
+    {name:'NIEPID Secunderabad',city:'Secunderabad, TS',tier:'🏆 Apex — Intellectual'},
+    {name:'CRCSRE Guwahati',city:'Guwahati, AS',tier:'⭐ Regional Centre'},
+    {name:'CRC Patna',city:'Patna, BR',tier:'⭐ Regional Centre'},
+  ]},
+  {name:'Uttarakhand Paramedical Entrance Examination',full:'Uttarakhand State Paramedical Entrance Examination',body:'Hemwati Nandan Bahuguna Uttarakhand Medical Education University, Dehradun',level:'State',freq:'Once a year',subjects:['PCB','PCMB','PCM','PCM+CS'],for:'Paramedical degree, diploma and certificate courses (BMLT, BPT, B.Sc Nursing diploma, X-ray technician, OT technician etc.) at govt and govt-aided paramedical institutes in Uttarakhand.',website:'hnbumu.ac.in',note:'State quota admission for Uttarakhand domicile + open seats. Conducted by HNBUMU under Uttarakhand Govt.',seats:'Varies by course',institutes:[
+    {name:'HNB Uttarakhand Medical Education University',city:'Dehradun, UK',tier:'⭐ State Medical Univ'},
+    {name:'Govt paramedical colleges across Uttarakhand',city:'Uttarakhand',tier:'✓ State govt network'},
+  ]},
 ]},
 {id:'Pharmacy',label:'Pharmacy',ico:'💊',color:'#0A686F',bg:'#E5FAFB',exams:[
   {name:'NEET UG (Pharmacy)',full:'National Eligibility cum Entrance Test — for B.Pharm at some states',body:'NTA',level:'National',freq:'Once a year (May)',subjects:['PCB','PCMB','PCM','PCM+CS'],for:'B.Pharm at govt pharmacy colleges in states like Andhra Pradesh, Telangana, Karnataka. Many private colleges also use NEET for B.Pharm screening.',website:'neet.nta.nic.in',note:'Not all states use NEET for B.Pharm — some use state CETs or merit. Always verify with the specific state/college.',seats:'Varies by state',institutes:[
