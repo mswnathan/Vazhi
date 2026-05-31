@@ -117,7 +117,7 @@ const EXAM_GROUPS=[
     {name:'All 26 IIITs (Govt & PPP)',city:'Various states',tier:'✓ IIIT Network'},
     {name:'DTU, NSUT, IGDTUW (Delhi)',city:'New Delhi',tier:'⭐ Excellent State'},
   ]},
-  {name:'BITSAT',full:'BITS Admission Test',body:'BITS Pilani',level:'Private',freq:'Once a year (May–June)',subjects:['PCM','PCM+CS','PCMB'],for:'B.Tech / B.E / M.Sc (Hons) / B.Pharm at BITS Pilani, BITS Goa, BITS Hyderabad.',website:'bitsadmission.com',note:'Online test. 12th toppers with 75%+ aggregate can get direct admission (BITSAT score still needed).',seats:'~3,500 total',institutes:[
+  {name:'BITSAT',full:'BITS Admission Test',body:'BITS Pilani',level:'Institute',freq:'Once a year (May–June)',subjects:['PCM','PCM+CS','PCMB'],for:'B.Tech / B.E / M.Sc (Hons) / B.Pharm at BITS Pilani, BITS Goa, BITS Hyderabad.',website:'bitsadmission.com',note:'Online test. 12th toppers with 75%+ aggregate can get direct admission (BITSAT score still needed).',seats:'~3,500 total',institutes:[
     {name:'BITS Pilani',city:'Pilani, RJ',tier:'🏆 Premier Private'},
     {name:'BITS Goa',city:'Goa',tier:'🏆 Premier Private'},
     {name:'BITS Hyderabad',city:'Hyderabad, TS',tier:'🏆 Premier Private'},

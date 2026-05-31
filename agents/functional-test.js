@@ -72,7 +72,7 @@ if (STREAMS) {
 const G2 = groupHeader('Exam levels');
 if (EXAM_GROUPS) {
   const allExams = EXAM_GROUPS.flatMap(g => g.exams || []);
-  const validLvl = ['National', 'State', 'Private', 'Institute'];
+  const validLvl = ['National', 'State', 'Institute'];
   for (const lvl of validLvl) {
     const hits = allExams.filter(e => e.level === lvl);
     assert(hits.length > 0, G2, `No exams found for level "${lvl}"`);
