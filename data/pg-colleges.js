@@ -1266,4 +1266,174 @@ const PG_COLLEGES = [
     ],
   },
 
+  {
+    name: 'Film & Television Institute of India',
+    short: 'FTII Pune',
+    type: 'Central',
+    district: 'Pune',
+    state: 'Maharashtra',
+    naac: 'Accredited',
+    nirf: 'Premier Film School',
+    affil: 'Deemed-to-be University under Ministry of Information & Broadcasting, Govt of India.',
+    website: 'ftiindia.com',
+    streams: ['Arts & Science'],
+    specialNote: 'India\'s premier film & television institute (est. 1960). Admission via FTII JET (written + interview). Tests cinematic awareness, creative expression and analytical thinking — no stream restriction. Intensive 2-year PG Diploma with access to Pune Film City studios.',
+    programGroups: [
+      {
+        stream: 'Film & Television (PG Diploma — 2 Years)',
+        programs: [
+          { name: 'PG Diploma in Direction & Screenplay Writing', exam: 'FTII JET', examCss: 'ce-own' },
+          { name: 'PG Diploma in Cinematography', exam: 'FTII JET', examCss: 'ce-own' },
+          { name: 'PG Diploma in Film Editing', exam: 'FTII JET', examCss: 'ce-own' },
+          { name: 'PG Diploma in Sound Recording & Design', exam: 'FTII JET', examCss: 'ce-own' },
+          { name: 'PG Diploma in Production Design (Art Direction)', exam: 'FTII JET', examCss: 'ce-own' },
+          { name: 'PG Diploma in Acting', exam: 'FTII JET', examCss: 'ce-own' },
+          { name: 'PG Diploma in Electronic Cinematography (TV Direction)', exam: 'FTII JET', examCss: 'ce-own' },
+        ],
+      },
+    ],
+  },
+
+  {
+    name: 'Satyajit Ray Film & Television Institute',
+    short: 'SRFTI Kolkata',
+    type: 'Central',
+    district: 'Kolkata',
+    state: 'West Bengal',
+    naac: 'Accredited',
+    nirf: 'Premier Film School East India',
+    affil: 'Ministry of Information & Broadcasting, Govt of India.',
+    website: 'srfti.ac.in',
+    streams: ['Arts & Science'],
+    specialNote: 'East India\'s premier film school named after the legendary filmmaker Satyajit Ray. Strong emphasis on parallel cinema traditions and regional language filmmaking. Admission via SRFTI Entrance (written + interview). No stream restriction.',
+    programGroups: [
+      {
+        stream: 'Film & Television (PG Diploma — 3 Years)',
+        programs: [
+          { name: 'PG Diploma in Direction & Screenplay Writing', exam: 'SRFTI Entrance', examCss: 'ce-own' },
+          { name: 'PG Diploma in Cinematography', exam: 'SRFTI Entrance', examCss: 'ce-own' },
+          { name: 'PG Diploma in Film Editing', exam: 'SRFTI Entrance', examCss: 'ce-own' },
+          { name: 'PG Diploma in Sound Recording & Design', exam: 'SRFTI Entrance', examCss: 'ce-own' },
+          { name: 'PG Diploma in Production Design', exam: 'SRFTI Entrance', examCss: 'ce-own' },
+          { name: 'PG Diploma in Electronic & New Media (TV Direction)', exam: 'SRFTI Entrance', examCss: 'ce-own' },
+        ],
+      },
+    ],
+  },
+
+  {
+    name: 'Delhi Technological University',
+    short: 'DTU Delhi (PG)',
+    type: 'State',
+    district: 'Delhi',
+    state: 'Delhi',
+    naac: 'A+',
+    nirf: 'Top 50 Engineering',
+    affil: 'Delhi Technological University (State University — Govt of NCT of Delhi; formerly DCE).',
+    website: 'dtu.ac.in',
+    streams: ['Engineering', 'Management'],
+    specialNote: 'One of Delhi\'s flagship state engineering universities. M.Tech via GATE + COAP counselling (JAC Delhi for MBA/MCA). Strong industry connections and placement record. PhD across all engineering departments.',
+    programGroups: [
+      {
+        stream: 'Engineering & Technology (M.Tech)',
+        programs: [
+          { name: 'M.Tech — CSE, ECE, EEE, Mechanical, Civil, Chemical, Environmental Engineering and 20+ specialisations', exam: 'GATE', examCss: 'ce-gate' },
+        ],
+      },
+      {
+        stream: 'Management (MBA)',
+        programs: [
+          { name: 'MBA (2 years) — Business Analytics, Finance, Marketing, Operations', exam: 'CAT / MAT (CMAC admissions)', examCss: 'ce-cat' },
+        ],
+      },
+      {
+        stream: 'Research (PhD)',
+        programs: [
+          { name: 'PhD — All Engineering & Science departments', exam: 'GATE / Own Entrance', examCss: 'ce-gate' },
+        ],
+      },
+    ],
+  },
+
+  {
+    name: 'Indian Institute of Engineering Science and Technology, Shibpur',
+    short: 'IIEST Shibpur (PG)',
+    type: 'Central',
+    district: 'Howrah',
+    state: 'West Bengal',
+    naac: 'A',
+    nirf: 'Top 50 Engineering',
+    affil: 'Institute of National Importance under Ministry of Education, Govt of India (formerly BE College, est. 1856 — oldest engineering college in Asia).',
+    website: 'iiest.ac.in',
+    streams: ['Engineering'],
+    specialNote: 'One of Asia\'s oldest engineering institutions. M.Tech via GATE + CCMT/COAP counselling. Strong heritage in civil, mechanical and mining engineering. Also offers M.Arch (Urban & Regional Planning) via GATE/NATA.',
+    programGroups: [
+      {
+        stream: 'Engineering & Technology (M.Tech)',
+        programs: [
+          { name: 'M.Tech — CSE, ECE, Civil (Geotechnical/Structural/Transportation), Mechanical, Mining, Chemical, Architecture & Regional Planning', exam: 'GATE', examCss: 'ce-gate' },
+        ],
+      },
+      {
+        stream: 'Architecture (M.Arch)',
+        programs: [
+          { name: 'M.Arch Urban & Regional Planning (2 years)', exam: 'GATE / NATA', examCss: 'ce-gate' },
+        ],
+      },
+      {
+        stream: 'Research (PhD)',
+        programs: [
+          { name: 'PhD — All Engineering, Science & Architecture departments', exam: 'GATE / Own Entrance', examCss: 'ce-gate' },
+        ],
+      },
+    ],
+  },
+
+  {
+    name: 'Regional Centre for Biotechnology',
+    short: 'RCB Faridabad',
+    type: 'INI',
+    district: 'Faridabad',
+    state: 'Haryana',
+    naac: 'Accredited',
+    nirf: 'Premier Biotech Research Institute',
+    affil: 'Department of Biotechnology (DBT), Govt of India; established under the auspices of UNESCO — Institution of National Importance.',
+    website: 'rcb.res.in',
+    streams: ['Arts & Science'],
+    specialNote: 'Cutting-edge biotech research institute with focus on Structural Biology, Molecular Medicine, Infectious Disease, Agricultural Biotechnology, Systems & Synthetic Biology, Cancer & Cell Biology. Only 18 PhD seats; 60% SC/ST/OBC-NCL/PwD reservation. Fellowship required — CSIR/UGC JRF, DBT-JRF or equivalent GoI fellowship.',
+    programGroups: [
+      {
+        stream: 'Biotechnology (PhD)',
+        programs: [
+          { name: 'PhD Biotechnology — 18 seats (Monsoon Semester 2026–27)', exam: 'CSIR/UGC JRF or DBT-JRF (fellowship required)', examCss: 'ce-own' },
+        ],
+      },
+    ],
+  },
+
+  {
+    name: 'National Power Training Institute',
+    short: 'NPTI',
+    type: 'Central',
+    district: 'Faridabad (HQ)',
+    state: 'Haryana',
+    naac: 'Accredited',
+    nirf: 'Premier Power Sector Training',
+    affil: 'Ministry of Power, Govt of India — 9 campuses: Faridabad, Badarpur, Nagpur, Guwahati, Nangal, Neyveli, Durgapur, Alappuzha, Shivpuri.',
+    website: 'npti.gov.in',
+    streams: ['Engineering'],
+    specialNote: 'National apex body for power sector training. One-year PG Diploma programmes with near-100% placement record at NTPC, PGCIL, BSES, Adani Power and other PSUs. 10% fee discount for female applicants. Open to Diploma/B.E./B.Tech holders in Electrical, Mechanical or Electronics.',
+    programGroups: [
+      {
+        stream: 'Engineering (PG Diploma — 1 Year)',
+        programs: [
+          { name: 'PG Diploma — Renewable Energy & Grid Interface Technologies', exam: 'Merit (Diploma/B.E./B.Tech)', examCss: 'ce-merit' },
+          { name: 'PG Diploma — Power Distribution & Communication Technologies', exam: 'Merit (Diploma/B.E./B.Tech)', examCss: 'ce-merit' },
+          { name: 'PG Diploma — Hydro Power Plant Engineering', exam: 'Merit (Diploma/B.E./B.Tech)', examCss: 'ce-merit' },
+          { name: 'PG Diploma — Power Plant Engineering', exam: 'Merit (Diploma/B.E./B.Tech)', examCss: 'ce-merit' },
+        ],
+      },
+    ],
+  },
+
 ];

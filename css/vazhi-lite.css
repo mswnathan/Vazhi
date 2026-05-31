@@ -1,0 +1,482 @@
+/* ════════════════════════════════════════════════════════════════════
+   vazhi-lite.css — styles for the lite home (wizard + contact form +
+   tab-intro banners). Loaded AFTER vazhi.css so additions cascade.
+   Touch nothing in vazhi.css; everything new lives here.
+   ════════════════════════════════════════════════════════════════════ */
+
+/* ── Wizard wrapper ─────────────────────────────────────────────────── */
+.wz-wrap {
+  max-width: 880px;
+  margin: 0 auto 2rem auto;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 28px 28px 24px;
+}
+
+.wz-head { text-align: center; margin-bottom: 18px; }
+.wz-title {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.wz-title-ta {
+  font-family: 'Noto Sans Tamil', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--accent-dk);
+  margin-bottom: 6px;
+}
+.wz-sub {
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.55;
+}
+
+/* ── Progress dots ──────────────────────────────────────────────────── */
+.wz-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin: 4px 0 22px;
+}
+.wz-dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 1.5px solid var(--border2);
+  color: var(--text3);
+  font-size: 12px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.wz-dot.done {
+  background: var(--accent-bg);
+  border-color: var(--accent);
+  color: var(--accent-dk);
+}
+.wz-dot.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  box-shadow: 0 0 0 4px var(--accent-bg);
+}
+.wz-dot-line {
+  height: 2px;
+  width: 22px;
+  background: var(--border2);
+}
+
+/* ── Steps ──────────────────────────────────────────────────────────── */
+.wz-step { display: none; }
+.wz-step.on { display: block; }
+
+.wz-q {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text);
+  text-align: center;
+  margin-bottom: 4px;
+}
+.wz-q-ta {
+  font-family: 'Noto Sans Tamil', sans-serif;
+  font-size: 15px;
+  color: var(--text2);
+  text-align: center;
+  margin-bottom: 16px;
+}
+.wz-hint {
+  font-size: 12px;
+  color: var(--text3);
+  text-align: center;
+  margin: -8px 0 14px;
+  font-style: italic;
+}
+
+/* ── Chip grids ─────────────────────────────────────────────────────── */
+.wz-chip-grid {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.wz-chip-grid-3 { grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
+.wz-chip-grid-5 { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+
+.wz-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 16px 12px;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r);
+  cursor: pointer;
+  font-family: var(--font-body);
+  text-align: center;
+  transition: all 0.15s;
+  user-select: none;
+}
+.wz-chip:hover {
+  border-color: var(--accent);
+  background: var(--accent-bg);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(10, 123, 114, 0.14);
+}
+.wz-chip:disabled { cursor: not-allowed; opacity: 0.55; transform: none; }
+.wz-chip.sel {
+  border: 2px solid var(--accent);
+  background: var(--accent-bg);
+  padding: 15px 11px;  /* compensate for the 2px border */
+}
+.wz-chip-tall { min-height: 96px; }
+
+.wz-chip-ico { font-size: 28px; line-height: 1; }
+.wz-chip-en  { font-size: 14px; font-weight: 600; color: var(--text); }
+.wz-chip-ta  { font-family: 'Noto Sans Tamil', sans-serif; font-size: 12px; color: var(--text2); }
+.wz-chip.sel .wz-chip-en { color: var(--accent-dk); }
+
+/* ── Nav row ────────────────────────────────────────────────────────── */
+.wz-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+.wz-nav-result { flex-wrap: wrap; gap: 14px; margin-top: 18px; }
+.wz-back, .wz-primary, .wz-link-btn {
+  font-family: var(--font-body);
+  font-size: 14px;
+  border-radius: var(--r);
+  cursor: pointer;
+  transition: all 0.13s;
+}
+.wz-back {
+  background: var(--surface);
+  border: 1.5px solid var(--border2);
+  color: var(--text2);
+  padding: 8px 16px;
+  font-weight: 500;
+}
+.wz-back:hover { border-color: var(--text3); color: var(--text); }
+.wz-primary {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  font-weight: 600;
+}
+.wz-primary:hover { background: var(--accent-dk); }
+.wz-primary:disabled { opacity: 0.55; cursor: not-allowed; }
+
+.wz-link-btn {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-weight: 600;
+  padding: 6px 4px;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+}
+.wz-link-btn:hover { color: var(--accent-dk); }
+
+/* ── Unknown CTA banner ─────────────────────────────────────────────── */
+.wz-unknown-cta {
+  background: var(--accent-bg);
+  border: 1.5px dashed var(--accent-border);
+  border-radius: var(--r);
+  padding: 12px 16px;
+  margin: 10px 0 16px;
+  text-align: center;
+}
+
+/* ── Result step ────────────────────────────────────────────────────── */
+.wz-soft-note {
+  background: #FFF8E6;
+  border: 1.5px solid #F0C36A;
+  border-radius: var(--r);
+  padding: 10px 14px;
+  font-size: 13px;
+  color: #6B4A00;
+  margin: 0 0 14px;
+  line-height: 1.5;
+}
+.wz-contact-inline { margin-top: 28px; }
+
+/* ── Persistent home contact block ──────────────────────────────────── */
+.wz-contact-block { max-width: 880px; margin: 2rem auto 1rem; }
+
+/* ── Subject-strength result (Phase 2 slide-style list) ──────────────── */
+.wz-chip-dunno {
+  border-style: dashed;
+  background: var(--bg);
+}
+.wz-chip-dunno:hover {
+  background: var(--accent-bg);
+  border-style: solid;
+}
+
+.ss-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px 20px;
+  background: var(--accent-bg);
+  border: 1.5px solid var(--accent-border);
+  border-radius: var(--r-lg);
+  margin-bottom: 20px;
+}
+.ss-header-ico { font-size: 38px; line-height: 1; }
+.ss-header-text { flex: 1; }
+.ss-header-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent-dk);
+}
+.ss-header-title-ta {
+  font-family: 'Noto Sans Tamil', sans-serif;
+  font-size: 15px;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.ss-header-tagline { font-size: 13px; color: var(--text); line-height: 1.5; }
+.ss-header-tagline-ta {
+  font-family: 'Noto Sans Tamil', sans-serif;
+  font-size: 12px;
+  color: var(--text2);
+  margin-top: 2px;
+  line-height: 1.5;
+}
+
+.ss-groups { display: flex; flex-direction: column; gap: 20px; }
+.ss-group { }
+.ss-group-label {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+  padding-bottom: 4px;
+  border-bottom: 1.5px solid var(--border);
+}
+.ss-group-label-ta {
+  font-family: 'Noto Sans Tamil', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text2);
+}
+
+.ss-course-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; }
+.ss-course-row { background: var(--surface); border-radius: var(--r); border: 1px solid var(--border); }
+.ss-course-row.open { border-color: var(--accent); }
+
+.ss-course-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text);
+  border-radius: var(--r);
+}
+.ss-course-toggle:hover { background: var(--accent-bg); }
+.ss-course-name { flex: 1; font-weight: 500; }
+.ss-course-exam {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--accent-dk);
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  padding: 2px 8px;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+.ss-course-caret { color: var(--text3); font-size: 12px; }
+.ss-course-row.open .ss-course-caret { color: var(--accent); }
+
+.ss-course-detail {
+  padding: 0 14px 14px 14px;
+  border-top: 1px dashed var(--border);
+  margin-top: 4px;
+  padding-top: 10px;
+}
+.ss-detail-line { font-size: 13px; color: var(--text); margin-bottom: 8px; }
+.ss-detail-soft { font-size: 12px; color: var(--text2); font-style: italic; }
+
+.ss-see-colleges {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 7px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: var(--font-body);
+  border-radius: var(--r);
+  cursor: pointer;
+  transition: background 0.13s;
+}
+.ss-see-colleges:hover { background: var(--accent-dk); }
+
+@media (max-width: 520px) {
+  .ss-header { flex-direction: column; gap: 8px; padding: 14px 16px; }
+  .ss-header-ico { font-size: 32px; }
+  .ss-course-toggle { flex-wrap: wrap; gap: 6px; }
+  .ss-course-exam { font-size: 10px; padding: 1px 6px; }
+}
+
+/* ── Contact form card (used in wz-contact-inline, wz-contact-root, modal) */
+.vc-card {
+  background: var(--surface);
+  border: 1.5px solid var(--accent-border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 22px 24px;
+}
+.vc-title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--accent-dk);
+  margin-bottom: 2px;
+}
+.vc-title-ta {
+  font-family: 'Noto Sans Tamil', sans-serif;
+  font-size: 14px;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.vc-sub { font-size: 13px; color: var(--text2); margin-bottom: 14px; line-height: 1.5; }
+
+.vc-form { display: flex; flex-direction: column; gap: 10px; }
+.vc-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.vc-reach-label { font-size: 12px; color: var(--text2); margin: 2px 0 -4px; font-weight: 500; }
+@media (max-width: 520px) { .vc-row { grid-template-columns: 1fr; } }
+
+.vc-form input,
+.vc-form textarea {
+  font-family: var(--font-body);
+  font-size: 14px;
+  padding: 10px 12px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--r);
+  background: var(--bg);
+  color: var(--text);
+  width: 100%;
+  resize: vertical;
+}
+.vc-form input:focus,
+.vc-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-bg);
+}
+
+.vc-actions { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-top: 4px; }
+.vc-submit {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--font-body);
+  border-radius: var(--r);
+  cursor: pointer;
+  transition: background 0.13s;
+}
+.vc-submit:hover:not(:disabled) { background: var(--accent-dk); }
+.vc-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+.vc-status { font-size: 13px; color: var(--text2); }
+.vc-status-ok  { color: var(--accent-dk); font-weight: 600; }
+.vc-status-err { color: #B23A2A; font-weight: 600; }
+.vc-fine { font-size: 11px; color: var(--text3); margin-top: 4px; }
+
+/* ── Contact modal (used by "Talk to Us" nav + tab banners) ─────────── */
+.vc-modal {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 4000;
+  padding: 60px 16px;
+  overflow-y: auto;
+}
+.vc-modal.open { display: flex; }
+.vc-modal-box {
+  background: var(--surface);
+  border-radius: var(--r-lg);
+  width: 100%;
+  max-width: 540px;
+  padding: 24px 24px 18px;
+  position: relative;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.25);
+}
+.vc-modal-x {
+  position: absolute; top: 12px; right: 14px;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  border: none; background: var(--bg);
+  font-size: 14px; cursor: pointer;
+  color: var(--text2);
+}
+.vc-modal-x:hover { background: var(--border); color: var(--text); }
+
+/* ── Tab intro banner ───────────────────────────────────────────────── */
+.tab-intro-banner {
+  max-width: 1200px;
+  margin: 0 auto 16px;
+  padding: 10px 16px;
+  background: linear-gradient(90deg, var(--accent-bg) 0%, #FFFDF7 100%);
+  border: 1px dashed var(--accent-border);
+  border-radius: var(--r);
+  font-size: 13px;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+}
+.tab-intro-link {
+  background: none;
+  border: none;
+  font: inherit;
+  color: var(--accent);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+  padding: 2px 4px;
+}
+.tab-intro-link:hover { color: var(--accent-dk); }
+.tab-intro-or { color: var(--text3); margin: 0 2px; }
+
+/* ── Talk-to-Us nav button (highlights the contact CTA) ─────────────── */
+.tab-btn.vz-talk-btn {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+.tab-btn.vz-talk-btn:hover { background: var(--accent-dk); }

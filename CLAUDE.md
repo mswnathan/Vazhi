@@ -43,8 +43,13 @@ VIT, SRM, Manipal, Amrita, Amity, Jain, Symbiosis, Jindal, Christ, FLAME, Pearl 
 ```
 Vazhi/
   index.html              ← Shell only. Nav, tabs, HTML structure. Rarely edited.
+  index-lite.html         ← PROPOSAL / review copy: UG-only nav + 3-step wizard home
+                            + Firestore-backed contact form. Not yet live.
+                            Once finalised, rename to index.html (or merge selectively).
   css/
     vazhi.css             ← All styles. Edit for visual changes only.
+    vazhi-lite.css        ← Styles for the lite home (wizard + contact + tab banners).
+                            Loaded by index-lite.html AFTER vazhi.css.
 
   data/                   ← ALL content lives here. Never touch js/ for data changes.
     courses.js            ← STREAMS[] — UG course cards, entrance exams, careers
@@ -87,6 +92,8 @@ Vazhi/
     scholarships.js       ← SCHOLARSHIPS[] — government & merit-based scholarship entries
     internships.js        ← INTERNSHIPS[] — government, PSU, and research internship entries
     psychometric.js       ← Holland RIASEC test data: questions, career map, profiles (bilingual)
+    wizard.js             ← Home wizard data (lite home) — class & subject chips + bilingual UI strings
+    subject-strengths.js  ← SUBJECT_STRENGTHS[] — Step 3 strength categories → grouped UG course lists (bilingual)
 
   js/                     ← ALL logic lives here. Never touch data/ for logic changes.
     app.js                ← State variables + switchTab(). Core navigation.
@@ -105,6 +112,8 @@ Vazhi/
     psychometric.js       ← Know Yourself tab — RIASEC test state machine + render
     report.js             ← Standalone career report page logic (reads localStorage)
     auth.js               ← Firebase Auth + Firestore + sign-in modal + saved colleges API (exposed as window.VazhiAuth)
+    wizard.js             ← Home wizard (lite home) — 3-step state machine; reuses renderCareerPath()
+    contact.js            ← "Talk to Vazhi" form — writes to Firestore `contact_requests`; mailto fallback. window.VazhiContact API
     firebase-config.js    ← Firebase project keys (safe to commit; security via Firestore rules + authorized domains)
 
   report.html             ← Standalone career report page (linked from psychometric results)
@@ -364,6 +373,22 @@ Note: `papers[]` replaces `subjects[]` used in UG exams.
 
 ### Add a new counselling rank predictor
 → Read `agents/counselling-predictor.md` first — it has the full pattern
+
+### Add or edit a home-wizard chip (Step 1 class or Step 2 subject)
+→ Edit `data/wizard.js` only — `WZ_CLASS[]` (Step 1) or `WZ_SUBJ[]` (Step 2).
+→ Each chip needs `id`/`en`/`ta`/`ico`. Subject ids must also be referenced in `SUBJECT_STRENGTHS[].forSubjects[]` if relevant.
+→ Never edit `js/wizard.js` or `index-lite.html` for content tweaks.
+
+### Add or edit a Step 3 subject-strength category
+→ Edit `data/subject-strengths.js` only — `SUBJECT_STRENGTHS[]`.
+→ Each category needs `id`/`ico`/`en`/`ta`/`tagline{en,ta}`/`forSubjects[]` + `groups[]` with `label{en,ta}` and `courses[].name + .exam`.
+→ `forSubjects` ids must match `WZ_SUBJ[].id` in `data/wizard.js` (PCM / PCB / PCMB / Commerce / Arts / unknown).
+→ The wizard renders a "See colleges →" deep-link automatically if `course.exam` matches a known exam alias (`WZ_EXAM_ALIASES` in `js/wizard.js`); otherwise the row is text-only.
+
+### Update the contact form / "Talk to Vazhi" copy
+→ Edit `js/contact.js` (form HTML in `formHTML()`) for structural changes.
+→ For Firestore rules, edit `agents/firestore.rules` and paste into Firebase console → Firestore → Rules.
+→ Submissions land in the `contact_requests` collection (Firebase console only — no in-app reader yet).
 
 ### Fix a visual/layout issue
 → Edit `css/vazhi.css` only

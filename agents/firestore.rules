@@ -11,5 +11,17 @@ service cloud.firestore {
         allow read, write: if request.auth != null && request.auth.uid == uid;
       }
     }
+
+    // "Talk to Vazhi" contact form submissions (anonymous create allowed; only
+    // the project owner reads them via the Firebase console).
+    match /contact_requests/{doc} {
+      allow create: if request.resource.data.keys().hasOnly(
+        ['name','klass','district','phone','email','question','source','uid','createdAt']
+      ) && request.resource.data.name is string
+        && request.resource.data.question is string
+        && request.resource.data.name.size() <= 200
+        && request.resource.data.question.size() <= 4000;
+      allow read, update, delete: if false;
+    }
   }
 }

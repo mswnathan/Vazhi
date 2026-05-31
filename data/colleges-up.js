@@ -175,4 +175,23 @@ const COLLEGES_UP=[
     ]},
   ]},
 
+{name:'Rajiv Gandhi National Aviation University',short:'RGNAU Amethi',type:'Central',district:'Amethi',state:'Uttar Pradesh',
+  naac:'Accredited',nirf:'Specialised Aviation University',affil:'Rajiv Gandhi National Aviation University (Act of Parliament 2013 — Ministry of Civil Aviation)',website:'rgnau.ac.in',
+  streams:['Engineering','Arts & Science','Management'],
+  specialNote:'India\'s only national university dedicated to aviation education. Located in Fursatganj, Amethi. Unique blend of B.Tech, B.Sc and management programmes all focused on aerospace and aviation. B.Tech programmes admitted through JEE Main + JoSAA; B.Sc/BBA/BMS through CUET Score.',
+  programGroups:[
+    {stream:'Engineering & Technology (Aviation)',programs:[
+      {name:'B.Tech Aerospace Engineering (4 years) — 30 seats',exam:'JEE Main',examCss:'ce-jee'},
+      {name:'B.Tech Electronics & Communication Engineering — Avionics (4 years) — 60 seats',exam:'JEE Main',examCss:'ce-jee'},
+      {name:'B.Sc AI & Data Science — Aviation System (4 years) — 60 seats',exam:'JEE Main',examCss:'ce-jee'},
+    ]},
+    {stream:'Arts & Science (Aviation)',programs:[
+      {name:'B.Sc Aviation (4 years) — 30 seats',exam:'CUET Score',examCss:'ce-cuet'},
+    ]},
+    {stream:'Management (Aviation)',programs:[
+      {name:'BBA Aviation Management (4 years) — 60 seats',exam:'CUET Score',examCss:'ce-cuet'},
+      {name:'BMS Aviation Services & Air Cargo (4 years) — 120 seats',exam:'CUET Score',examCss:'ce-cuet'},
+    ]},
+  ]},
+
 ];

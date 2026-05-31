@@ -74,6 +74,17 @@ const COLLEGES_HP=[
     ]},
   ]},
 
+{name:'IIIT Una',short:'IIIT Una',type:'Central',district:'Una',state:'Himachal Pradesh',
+  naac:'Accredited',nirf:'Emerging IIIT',affil:'Indian Institute of Information Technology Una (IIIT-Partnership Act 2017 — MoE + State Govt + Industry)',website:'iiitu.ac.in',
+  streams:['Engineering'],
+  specialNote:'One of the newer IIITs under the PPP model. Located in Una. Admission through JEE Main + JoSAA counselling. Growing research culture with labs in AI/ML and wireless communication.',
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech Computer Science & Engineering (4 years)',exam:'JEE Main',examCss:'ce-jee'},
+      {name:'B.Tech Electronics & Communication Engineering (4 years)',exam:'JEE Main',examCss:'ce-jee'},
+    ]},
+  ]},
+
 {name:'IIM Sirmaur',short:'IIMSI',type:'Central',district:'Sirmaur',state:'Himachal Pradesh',
   naac:'Accredited',nirf:'Emerging IIM',affil:'Indian Institute of Management (MoE — Autonomous)',website:'iimsirmaur.ac.in',
   streams:['Management'],

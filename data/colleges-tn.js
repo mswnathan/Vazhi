@@ -978,6 +978,21 @@ const COLLEGES=[
     ]},
   ]},
 
+{name:'Sardar Vallabhbhai Patel International School of Textiles and Management',short:'SVPITM Coimbatore',type:'Central',district:'Coimbatore',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'#1 Govt B-School Coimbatore (India Today 2024)',affil:'Autonomous Institute under Ministry of Textiles, Govt of India; in academic collaboration with Central University of Tamil Nadu (CUTN)',website:'svpistm.ac.in',
+  streams:['Management','Arts & Science'],
+  specialNote:'Only central-government textile school in South India. Ranked #1 in Coimbatore, #2 in TN and #7 in South India among Govt B-Schools (India Today 2024). Industry-linked programmes in textiles, fashion and retail management. SC/ST post-matric, Handloom Weavers\' Children and merit scholarships available.',
+  programGroups:[
+    {stream:'Arts & Science (Textiles & Fashion)',programs:[
+      {name:'B.Sc Textiles and Fashion (3 years)',exam:'Own Entrance / Merit',examCss:'ce-own'},
+      {name:'B.Sc Technical Textiles (3 years)',exam:'Own Entrance / Merit',examCss:'ce-own'},
+      {name:'B.Sc Textile and Apparel Design (3 years)',exam:'Own Entrance / Merit',examCss:'ce-own'},
+    ]},
+    {stream:'Management',programs:[
+      {name:'BBA Textile Business Analytics (3 years)',exam:'Own Entrance / Merit',examCss:'ce-own'},
+    ]},
+  ]},
+
 ];
 
 // ── TO ADD MORE STATES ──

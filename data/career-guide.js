@@ -542,11 +542,11 @@ const CAREER_MAP = [
 
   {
     id: 'semiconductor-engineer',
-    keywords: ['semiconductor', 'vlsi', 'chip', 'electronics', 'embedded', 'fpga', 'circuit design'],
+    keywords: ['semiconductor', 'vlsi', 'chip', 'electronics', 'embedded', 'fpga', 'circuit design', 'eda', 'cadence', 'synopsys', 'qualcomm', 'nvidia chips'],
     title: 'Semiconductor / VLSI Engineer',
     ico: '💡',
     bc: 'teal',
-    summary: 'India is becoming a global semiconductor hub with massive fab and design investments. VLSI design, embedded systems, and chip architecture engineers are in acute shortage — starting salaries of ₹5–10 LPA are common, with top roles at ₹20+ LPA. This is a 10-year boom sector with very low student awareness, making it a low-competition, high-reward path.',
+    summary: 'India is becoming a global semiconductor hub with massive fab and design investments. VLSI design, embedded systems, and chip architecture engineers are in acute shortage — starting salaries ₹5–12 LPA (0–3 years), ₹12–30 LPA (3–5 years), ₹40–60+ LPA at senior/architect level. Top employers in India: Qualcomm, Nvidia, Intel, AMD, Broadcom, Samsung Semiconductor, Cadence, Synopsys, MediaTek, Renesas, Infineon. This is a 10-year boom sector with very low student awareness.',
     class12: {
       subjects: ['PCM', 'PCM+CS'],
       tip: 'Take Physics and Maths seriously — semiconductor physics and digital electronics are the foundation. Explore Arduino or Raspberry Pi projects in school itself.',
@@ -559,7 +559,7 @@ const CAREER_MAP = [
     streamId: 'Engineering',
     examNames: ['JEE Main', 'JEE Advanced', 'GATE'],
     augIds: ['mtech'],
-    careers: ['VLSI Design Engineer', 'Embedded Systems Engineer', 'Chip Verification Engineer', 'Analog Circuit Designer', 'FPGA Engineer', 'Semiconductor Process Engineer'],
+    careers: ['VLSI Design Engineer', 'Embedded Systems Engineer', 'Chip Verification Engineer', 'Analog Circuit Designer', 'FPGA Engineer', 'Semiconductor Process Engineer', 'Physical Design Engineer', 'DFT (Design for Test) Engineer', 'Applications Engineer — EDA Tools'],
   },
 
   {
@@ -673,6 +673,74 @@ const CAREER_MAP = [
     examNames: ['CUET UG'],
     augIds: [],
     careers: ['Professional Athlete / Player', 'Sports Coach (NIS certified)', 'Physical Education Teacher (govt schools)', 'Sports Physiotherapist', 'Sports Administrator (SAI, BCCI, State Associations)', 'Fitness Trainer / Personal Coach'],
+  },
+
+  {
+    id: 'microbiologist',
+    keywords: ['microbiologist', 'microbiology', 'bacteria', 'virus', 'pathogen', 'infectious disease', 'clinical microbiology', 'pharma QC', 'food safety', 'R&D', 'research scientist', 'CSIR', 'ICMR', 'lab scientist'],
+    title: 'Microbiologist',
+    ico: '🦠',
+    bc: 'green',
+    summary: 'Microbiologists study bacteria, viruses, fungi, and other microorganisms — in hospitals, pharma labs, food industries, public health agencies, and research institutions. India\'s pharmaceutical and biotech sectors are large employers; ICMR, CSIR labs, and DRDO also recruit microbiologists for public health and defence research.',
+    class12: {
+      subjects: ['PCB', 'PCMB'],
+      tip: 'Strong Biology and Chemistry are essential. CUET UG opens central universities like DU, BHU, Hyderabad Central, and Pondicherry. IISERs via IISER IAT are the research-track gold standard.',
+    },
+    streamId: 'Science',
+    examNames: ['CUET UG', 'IISER IAT', 'NEST'],
+    augIds: ['phd', 'msc', 'isro-drdo'],
+    careers: ['Clinical Microbiologist', 'Pharma QC Analyst', 'Public Health Researcher', 'Food Safety Scientist', 'Industrial Microbiologist', 'R&D Scientist (CSIR / ICMR)'],
+  },
+
+  {
+    id: 'bioinformatics',
+    keywords: ['bioinformatics', 'computational biology', 'genomics', 'biostatistics', 'medical data scientist', 'systems biology', 'genetic counselor', 'epidemiologist', 'life sciences data', 'proteomics', 'sequencing'],
+    title: 'Bioinformatics / Life Sciences Data Scientist',
+    ico: '🧬',
+    bc: 'teal',
+    summary: 'Bioinformatics sits at the intersection of biology, statistics, and computing — analysing genomic data, drug targets, protein structures, and disease patterns using algorithms and AI. India\'s pharmaceutical and biotech sectors (Sun Pharma, Dr. Reddy\'s, Biocon, CSIR labs, ICMR) actively recruit these specialists. Salaries start at ₹6–12 LPA and go to ₹20+ LPA in global genomics and pharma companies.',
+    class12: {
+      subjects: ['PCB', 'PCMB', 'PCM+CS'],
+      tip: 'Biology + Computer Science / Mathematics is the ideal combination. PCMB or PCB with self-taught Python gives you the strongest foundation for bioinformatics UG programmes.',
+    },
+    streamId: 'Science',
+    examNames: ['CUET UG', 'IISER IAT', 'NEST', 'JEE Main'],
+    augIds: ['msc', 'phd', 'isro-drdo'],
+    careers: ['Bioinformatics Scientist', 'Computational Biologist', 'Biostatistician', 'Medical Data Scientist', 'Genomics Analyst', 'Epidemiologist', 'Genetic Counselor', 'Systems Biology Researcher', 'AI in Healthcare Specialist'],
+  },
+
+  {
+    id: 'clinical-research',
+    keywords: ['clinical research', 'clinical trial', 'pharmacovigilance', 'drug safety', 'regulatory affairs', 'CRA', 'CRO', 'medical writing', 'clinical data', 'drug development', 'clinical scientist', 'toxicologist'],
+    title: 'Clinical Research / Pharmacovigilance Professional',
+    ico: '📋',
+    bc: 'coral',
+    summary: 'India is the world\'s third-largest clinical trial market. CROs (IQVIA, Syneos Health, PRA Health, Parexel) and pharma companies (Sun Pharma, Cipla, Dr. Reddy\'s, Lupin) hire Clinical Research Associates, Pharmacovigilance Scientists, and Regulatory Affairs Officers every year. Starting salaries ₹4–10 LPA; senior roles ₹15–25 LPA.',
+    class12: {
+      subjects: ['PCB', 'PCMB'],
+      tip: 'Biology and Chemistry are the core foundations. B.Pharm, B.Sc Life Sciences, or MBBS/BDS are the most common entry points. Even a B.Sc Biotechnology works with the right post-graduate certification.',
+    },
+    streamId: 'Medical',
+    examNames: ['NEET-UG', 'CUET UG', 'GPAT'],
+    augIds: ['msc', 'phd'],
+    careers: ['Clinical Research Associate (CRA)', 'Pharmacovigilance Scientist', 'Regulatory Affairs Officer', 'Clinical Trial Manager', 'Drug Safety Associate', 'Medical Science Liaison', 'Medical Writer', 'Toxicologist'],
+  },
+
+  {
+    id: 'marine-biologist',
+    keywords: ['marine biologist', 'marine biology', 'oceanographer', 'ocean', 'sea', 'marine life', 'coral reef', 'fisheries', 'coastal', 'marine conservation', 'aquatic biology', 'ocean science'],
+    title: 'Marine Biologist',
+    ico: '🐬',
+    bc: 'teal',
+    summary: 'Marine biologists study ocean ecosystems, marine organisms, coral reefs, and fisheries. India\'s long coastline and institutions like CMLRE, NCAOR, ICAR-CMFRI, and FSI actively recruit marine scientists. Career paths range from government research labs to international conservation bodies and the UN.',
+    class12: {
+      subjects: ['PCB', 'PCMB'],
+      tip: 'CUSAT (Kochi), Goa University, Andhra University, and Annamalai University have dedicated Marine Science departments with coastal campuses. Admission via CUET UG or university-specific tests.',
+    },
+    streamId: 'Science',
+    examNames: ['CUET UG', 'KEAM', 'IISER IAT'],
+    augIds: ['phd', 'msc'],
+    careers: ['Marine Biologist', 'Oceanographer', 'Fisheries Scientist', 'Coastal Zone Manager', 'Marine Conservationist', 'Research Scientist (NCAOR / CMLRE / ICAR-CMFRI)'],
   },
 
 ];

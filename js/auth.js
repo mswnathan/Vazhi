@@ -39,7 +39,13 @@
 
   async function signUpEmail(email, password, displayName) {
     const cred = await auth.createUserWithEmailAndPassword(email, password);
-    if (displayName) await cred.user.updateProfile({ displayName });
+    if (displayName) {
+      await cred.user.updateProfile({ displayName });
+      // onAuthStateChanged doesn't re-fire on profile updates — refresh the UI manually.
+      currentUser = auth.currentUser;
+      renderHeaderButton();
+      listeners.forEach(fn => { try { fn(currentUser); } catch (e) { console.error(e); } });
+    }
     await db.collection('users').doc(cred.user.uid).set({
       email, displayName: displayName || '', createdAt: firebase.firestore.FieldValue.serverTimestamp()
     }, { merge: true });
@@ -152,11 +158,11 @@
     if (!btn) return;
     if (currentUser) {
       const initial = (currentUser.displayName || currentUser.email || '?')[0].toUpperCase();
-      btn.innerHTML = `<span class="vz-auth-avatar">${initial}</span><span class="vz-auth-label">${currentUser.displayName || currentUser.email.split('@')[0]}</span>`;
+      btn.innerHTML = `<span class="vz-auth-avatar">${initial}</span>`;
       btn.classList.add('signed-in');
       const nm = document.getElementById('vz-user-menu-name');
       const em = document.getElementById('vz-user-menu-email');
-      if (nm) nm.textContent = currentUser.displayName || 'Student';
+      if (nm) nm.textContent = currentUser.displayName || currentUser.email.split('@')[0];
       if (em) em.textContent = currentUser.email || '';
     } else {
       btn.innerHTML = `<span class="vz-auth-icon">👤</span><span class="vz-auth-label">Sign in</span>`;
