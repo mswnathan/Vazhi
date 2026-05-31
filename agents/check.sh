@@ -19,6 +19,10 @@ fi
 # ── Schema validation + behavioral tests ───────────────────────────────────
 node agents/validate.js && node agents/functional-test.js || exit 1
 
+# ── Career keyword coverage audit ──────────────────────────────────────────
+echo ""
+node agents/career-audit.js || echo "\033[33m⚠  Fix gaps above or add terms to the 'game developer / blockchain' skip list in agents/career-audit.js\033[0m"
+
 # ── Post-pass nudge ────────────────────────────────────────────────────────
 if [ -d .git ]; then
   POST_CHANGES=$(git status --porcelain 2>/dev/null | wc -l | tr -d ' ')
