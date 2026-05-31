@@ -229,10 +229,13 @@ const COLLEGES=[
 
 {name:'Govt. College of Technology, Coimbatore',short:'GCT Coimbatore',type:'State',district:'Coimbatore',state:'Tamil Nadu',
   naac:'A++',nirf:'Top Govt Engg TN',affil:'Anna University',website:'gct.ac.in',
-  streams:['Engineering'],
+  streams:['Engineering','Architecture'],
   programGroups:[
     {stream:'Engineering & Technology',programs:[
       {name:'B.E (CSE, ECE, EEE, Civil, Mechanical, Production, Textile)',exam:'TNEA',examCss:'ce-tnea'},
+    ]},
+    {stream:'Architecture',programs:[
+      {name:'B.Arch (5 years)',exam:'TNEA B.Arch Round (NATA / JEE Main Paper 2)',examCss:'ce-nata'},
     ]},
   ]},
 
@@ -2646,6 +2649,17 @@ const COLLEGES=[
     {stream:'Pharmacy',programs:[
       {name:'B.Pharm (4 years)',exam:'NEET UG (Pharmacy) / State merit',examCss:'ce-neet'},
       {name:'D.Pharm (2 years)',exam:'State merit',examCss:'ce-merit'},
+    ]},
+  ]},
+
+// BATCH E — BNYS (Naturopathy & Yogic Sciences)
+{name:'Government Yoga and Naturopathy Medical College & Hospital',short:'GYNMC Chennai',type:'State',district:'Chennai',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Only Govt BNYS College TN',affil:'The Tamil Nadu Dr. M.G.R. Medical University (TNMGRMU)',website:'gynmchennai.ac.in',
+  streams:['Medical'],
+  specialNote:'Only government BNYS college in Tamil Nadu. Located in Arumbakkam, Chennai. Admission through Tamil Nadu Medical Selection Committee counselling alongside MBBS/BDS. No NEET required for BNYS — admission is based on Class 12 PCB marks merit.',
+  programGroups:[
+    {stream:'Medical',programs:[
+      {name:'BNYS — Bachelor of Naturopathy & Yogic Sciences (5.5 years)',exam:'Merit (Class 12 PCB marks) — TN Medical Selection Counselling',examCss:'ce-merit'},
     ]},
   ]},
 
