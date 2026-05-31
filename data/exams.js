@@ -172,7 +172,29 @@ const EXAM_GROUPS=[
     {name:'All GJ govt & aided engg colleges',city:'Gujarat',tier:'✓ Wide access'},
   ]},
   {name:'OJEE',full:'Odisha Joint Entrance Exam',body:'OJEE Board',level:'State',freq:'Once a year (May)',subjects:['PCM','PCM+CS','PCMB'],for:'Engineering, pharmacy & lateral entry programs in Odisha.',website:'ojee.nic.in',note:'',seats:'~20,000+',institutes:[
+    {name:'NIT Rourkela',city:'Rourkela, OD',tier:'🏆 NIT (via JEE Main)'},
     {name:'BPUT-affiliated govt & aided colleges',city:'Odisha',tier:'✓ State colleges'},
+  ]},
+  {name:'BCECE',full:'Bihar Combined Entrance Competitive Examination',body:'BCECEB',level:'State',freq:'Once a year (May–Jun)',subjects:['PCM','PCM+CS','PCMB'],for:'Engineering, pharmacy & agriculture govt colleges in Bihar.',website:'bceceboard.bihar.gov.in',note:'NIT Patna uses JEE Main, not BCECE. BCECE is for state govt engineering colleges under Bihar Engineering University.',seats:'~15,000+',institutes:[
+    {name:'NIT Patna',city:'Patna, BR',tier:'🏆 NIT (via JEE Main)'},
+    {name:'CRC Patna',city:'Patna, BR',tier:'⭐ Top Govt Bihar'},
+    {name:'Govt engineering colleges — Bihar Engineering University',city:'Bihar',tier:'✓ State colleges'},
+  ]},
+  {name:'JCECE',full:'Jharkhand Combined Entrance Competitive Examination',body:'JCECEB',level:'State',freq:'Once a year (May)',subjects:['PCM','PCM+CS','PCMB'],for:'Engineering & pharmacy govt colleges in Jharkhand.',website:'jceceb.jharkhand.gov.in',note:'BIT Mesra (Ranchi) — a highly reputed central-aided institute — uses JEE Main. JCECE covers state govt engineering colleges.',seats:'~10,000+',institutes:[
+    {name:'NIT Jamshedpur',city:'Jamshedpur, JH',tier:'🏆 NIT (via JEE Main)'},
+    {name:'Govt engineering colleges under Jharkhand govt',city:'Jharkhand',tier:'✓ State colleges'},
+  ]},
+  {name:'CG PET',full:'Chhattisgarh Pre Engineering Test',body:'CG Vyapam (CGPEB)',level:'State',freq:'Once a year (Apr–May)',subjects:['PCM','PCM+CS','PCMB'],for:'Engineering & pharmacy govt colleges in Chhattisgarh.',website:'cgvyapam.choice.gov.in',note:'NIT Raipur uses JEE Main. CG PET covers state govt engineering colleges under CSVTU.',seats:'~12,000+',institutes:[
+    {name:'NIT Raipur',city:'Raipur, CG',tier:'🏆 NIT (via JEE Main)'},
+    {name:'Govt engineering colleges — CSVTU affiliated',city:'Chhattisgarh',tier:'✓ State colleges'},
+  ]},
+  {name:'HP CET',full:'Himachal Pradesh Common Entrance Test',body:'HIMTU (HP Technical University)',level:'State',freq:'Once a year (May)',subjects:['PCM','PCM+CS','PCMB'],for:'Engineering & pharmacy govt colleges in Himachal Pradesh.',website:'himtu.ac.in',note:'NIT Hamirpur uses JEE Main. HP CET covers state govt engineering colleges under HIMTU.',seats:'~8,000+',institutes:[
+    {name:'NIT Hamirpur',city:'Hamirpur, HP',tier:'🏆 NIT (via JEE Main)'},
+    {name:'Govt engineering colleges under HIMTU',city:'Himachal Pradesh',tier:'✓ State colleges'},
+  ]},
+  {name:'GGSIPU CET',full:'Guru Gobind Singh Indraprastha University Common Entrance Test',body:'GGSIPU Delhi',level:'State',freq:'Once a year (May–Jun)',subjects:['PCM','PCM+CS','PCMB','Commerce','Arts','Any'],for:'Engineering, law, management, nursing & pharmacy at IP University affiliated colleges in Delhi.',website:'ipu.ac.in',note:'DTU, NSUT, IGDTUW use JEE Main. GGSIPU CET covers the remaining IP University affiliated colleges — a large Delhi govt university network.',seats:'~25,000+ across programs',institutes:[
+    {name:'USICT Delhi (IP University)',city:'New Delhi',tier:'⭐ Top IP University'},
+    {name:'MAIT, MSIT, Maharaja Surajmal Institute',city:'New Delhi',tier:'✓ IP University network'},
   ]},
   {name:'NATA',full:'National Aptitude Test in Architecture',body:'Council of Architecture',level:'National',freq:'Twice a year',subjects:['PCM','PCM+CS','Any'],for:'B.Arch at architecture colleges across India (NITs use JEE Main Paper 2 instead).',website:'nata.in',note:'Tests drawing, aesthetic sensitivity & logical reasoning. No PCM requirement.',seats:'~10,000+ seats across India',institutes:[
     {name:'SPA Delhi (School of Planning & Architecture)',city:'New Delhi',tier:'🏆 Premier'},
@@ -340,7 +362,7 @@ const EXAM_GROUPS=[
   ]},
 ]},
 {id:'Science',label:'Pure Science & Research',ico:'⚗',color:'#581F9E',bg:'#F2EBFF',exams:[
-  {name:'IISER IAT',full:'IISER Aptitude Test',body:'IISERs (joint)',level:'National',freq:'Once a year (June)',subjects:['PCM','PCM+CS','PCMB'],for:'5-year BS-MS at all 7 IISERs.',website:'iiseradmission.in',note:'JEE Advanced & KVPY SX scores also accepted instead of IAT.',seats:'~2,800 total (all IISERs)',institutes:[
+  {name:'IISER IAT',full:'IISER Aptitude Test',body:'IISERs (joint)',level:'National',freq:'Once a year (June)',subjects:['PCM','PCM+CS','PCMB'],for:'5-year BS-MS at all 7 IISERs.',website:'iiseradmission.in',note:'JEE Advanced score also accepted instead of IAT. KVPY route discontinued after 2021–22.',seats:'~2,800 total (all IISERs)',institutes:[
     {name:'IISER Pune',city:'Pune, MH',tier:'🏆 Top IISER'},
     {name:'IISER Kolkata',city:'Kolkata, WB',tier:'🏆 Top IISER'},
     {name:'IISER Mohali',city:'Mohali, PB',tier:'🏆 Top IISER'},
@@ -366,7 +388,7 @@ const EXAM_GROUPS=[
     {name:'Central Ground Water Board (CGWB)',city:'New Delhi + Regional',tier:'⭐ Central Govt'},
     {name:'Ministry of Mines — Technical Cadre',city:'New Delhi',tier:'⭐ Central Govt'},
   ]},
-  {name:'KVPY',full:'Kishore Vaigyanik Protsahan Yojana',body:'DST / IISc',level:'National',freq:'Once a year (Nov)',subjects:['PCM','PCM+CS','PCB','PCMB'],for:'Scholarship + direct IISc B.Sc Research entry via SX stream.',website:'kvpy.iisc.ac.in',note:'Fellowship + research mentorship. Being restructured in 2026 — verify current status.',seats:'~1,000 scholarships',institutes:[
+  {name:'KVPY',full:'Kishore Vaigyanik Protsahan Yojana',body:'DST / IISc',level:'National',freq:'Discontinued after 2021–22',subjects:['PCM','PCM+CS','PCB','PCMB'],for:'Was: Scholarship + direct IISc B.Sc Research entry via SX stream. Now discontinued.',website:'kvpy.iisc.ac.in',note:'KVPY has been discontinued. IISER admissions now use IAT or JEE Advanced only. IISc B.Sc Research uses JEE Advanced. The INSPIRE Scholarship (DST) continues separately for science students.',seats:'Discontinued',institutes:[
     {name:'IISc Bengaluru (B.Sc Research)',city:'Bengaluru, KA',tier:'🏆 India\'s Top Research Univ'},
   ]},
 ]},
