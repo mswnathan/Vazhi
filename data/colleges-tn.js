@@ -254,6 +254,163 @@ const COLLEGES=[
     ]},
   ]},
 
+{name:'Government College of Engineering, Tirunelveli',short:'GCE Tirunelveli',type:'State',district:'Tirunelveli',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Engg TN',affil:'Anna University',website:'gcetly.ac.in',
+  streams:['Engineering'],
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.E Civil Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Mechanical Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Electronics & Communication Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Electrical & Electronics Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Computer Science & Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+    ]},
+  ]},
+
+{name:'Government College of Engineering, Thanjavur',short:'GCE Thanjavur',type:'State',district:'Thanjavur',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Engg TN',affil:'Anna University',website:'gcethanjavur.ac.in',
+  streams:['Engineering'],
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.E Civil Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Mechanical Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Electronics & Communication Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Electrical & Electronics Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Computer Science & Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+    ]},
+  ]},
+
+{name:'Government College of Engineering, Dharmapuri',short:'GCE Dharmapuri',type:'State',district:'Dharmapuri',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Engg TN',affil:'Anna University',website:'gced.ac.in',
+  streams:['Engineering'],
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.E Civil Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Mechanical Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Electronics & Communication Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Electrical & Electronics Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Computer Science & Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+    ]},
+  ]},
+
+{name:'Government College of Engineering, Bargur',short:'GCE Bargur',type:'State',district:'Krishnagiri',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Engg TN',affil:'Anna University',website:'gceb.ac.in',
+  streams:['Engineering'],
+  specialNote:'Serves Krishnagiri & Vellore region students.',
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.E Civil Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Mechanical Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Electronics & Communication Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Electrical & Electronics Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Computer Science & Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+    ]},
+  ]},
+
+{name:'Government College of Engineering, Bodinayakanur',short:'GCE Bodinayakanur',type:'State',district:'Theni',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Engg TN',affil:'Anna University',website:'gcebodi.ac.in',
+  streams:['Engineering'],
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.E Civil Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Mechanical Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Electronics & Communication Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Electrical & Electronics Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Computer Science & Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+    ]},
+  ]},
+
+{name:'Government College of Engineering, Kannur',short:'GCE Kannur',type:'State',district:'Dindigul',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Engg TN',affil:'Anna University',website:'gcekannur.ac.in',
+  streams:['Engineering'],
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.E Civil Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Mechanical Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Electronics & Communication Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Electrical & Electronics Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Computer Science & Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+    ]},
+  ]},
+
+{name:'Government College of Engineering, Ariyalur',short:'GCE Ariyalur',type:'State',district:'Ariyalur',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Engg TN',affil:'Anna University',website:'gcea.ac.in',
+  streams:['Engineering'],
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.E Civil Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Mechanical Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Electronics & Communication Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Electrical & Electronics Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Computer Science & Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+    ]},
+  ]},
+
+{name:'Government College of Engineering, Tiruppur',short:'GCE Tiruppur',type:'State',district:'Tiruppur',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Engg TN',affil:'Anna University',website:'gcetup.ac.in',
+  streams:['Engineering'],
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.E Civil Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Mechanical Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Electronics & Communication Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Electrical & Electronics Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Computer Science & Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+    ]},
+  ]},
+
+{name:'Government College of Engineering, Nagapattinam',short:'GCE Nagapattinam',type:'State',district:'Nagapattinam',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Engg TN',affil:'Anna University',website:'gcen.ac.in',
+  streams:['Engineering'],
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.E Civil Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Mechanical Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Electronics & Communication Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Electrical & Electronics Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Computer Science & Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+    ]},
+  ]},
+
+{name:'Government College of Engineering, Srirangam',short:'GCE Srirangam',type:'State',district:'Trichy',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Engg TN',affil:'Anna University',website:'gcesrirangam.ac.in',
+  streams:['Engineering'],
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.E Civil Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Mechanical Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Electronics & Communication Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Electrical & Electronics Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Computer Science & Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+    ]},
+  ]},
+
+{name:'Government College of Engineering, Villupuram',short:'GCE Villupuram',type:'State',district:'Villupuram',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Engg TN',affil:'Anna University',website:'gcev.ac.in',
+  streams:['Engineering'],
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.E Civil Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Mechanical Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Electronics & Communication Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Electrical & Electronics Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Computer Science & Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+    ]},
+  ]},
+
+{name:'Government College of Engineering, Erode',short:'GCE Erode',type:'State',district:'Erode',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Engg TN',affil:'Anna University',website:'gceerode.ac.in',
+  streams:['Engineering'],
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.E Civil Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Mechanical Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Electronics & Communication Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Electrical & Electronics Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Computer Science & Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+    ]},
+  ]},
+
 {name:'TNPESU — Tamil Nadu Physical Education & Sports University',short:'TNPESU',type:'State',district:'Chennai',state:'Tamil Nadu',
   naac:'A+',nirf:'Sports',affil:'State University (Govt of TN)',website:'tnpesu.org',
   streams:['Education'],
@@ -348,6 +505,172 @@ const COLLEGES=[
   ]},
 
 // ──────────────────────────────────────────────
+// STATE GOVT ARTS & SCIENCE COLLEGES (DCE)
+// ──────────────────────────────────────────────
+
+{name:'Presidency College (Autonomous), Chennai',short:'Presidency College',type:'State',district:'Chennai',state:'Tamil Nadu',
+  naac:'A+',nirf:'Top Govt Arts College TN',affil:'University of Madras',website:'presidency.unom.ac.in',
+  streams:['Arts & Science'],
+  specialNote:'One of India\'s oldest colleges (est. 1840) — premier government autonomous college in Tamil Nadu.',
+  programGroups:[
+    {stream:'Arts & Science (UG)',programs:[
+      {name:'B.A History (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.A Economics (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Mathematics (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Physics (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Chemistry (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Zoology (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Botany (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Com (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Government Arts College (Autonomous), Coimbatore',short:'GAC Coimbatore',type:'State',district:'Coimbatore',state:'Tamil Nadu',
+  naac:'A',nirf:'Govt Arts College TN',affil:'Bharathiar University',website:'gaccoimbatore.ac.in',
+  streams:['Arts & Science'],
+  programGroups:[
+    {stream:'Arts & Science (UG)',programs:[
+      {name:'B.A Tamil (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.A History (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.A Economics (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Mathematics (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Physics (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Chemistry (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Computer Science (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Government Arts College, Nandanam, Chennai',short:'GAC Nandanam',type:'State',district:'Chennai',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Arts College TN',affil:'University of Madras',website:'gacnandanam.com',
+  streams:['Arts & Science'],
+  programGroups:[
+    {stream:'Arts & Science (UG)',programs:[
+      {name:'B.A Economics (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.A History (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Mathematics (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Physics (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Chemistry (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Com (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Government Arts College, Salem',short:'GAC Salem',type:'State',district:'Salem',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Arts College TN',affil:'Periyar University',website:'gacsalem.ac.in',
+  streams:['Arts & Science'],
+  programGroups:[
+    {stream:'Arts & Science (UG)',programs:[
+      {name:'B.A Tamil (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.A Economics (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Mathematics (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Physics (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Chemistry (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Government Arts College, Trichy',short:'GAC Trichy',type:'State',district:'Trichy',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Arts College TN',affil:'Bharathidasan University',website:'gactrichy.ac.in',
+  streams:['Arts & Science'],
+  programGroups:[
+    {stream:'Arts & Science (UG)',programs:[
+      {name:'B.A Tamil (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.A Economics (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Mathematics (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Physics (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Chemistry (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Computer Science (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Government Arts College, Tiruvannamalai',short:'GAC Tiruvannamalai',type:'State',district:'Tiruvannamalai',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Arts College TN',affil:'Thiruvalluvar University',website:'gactiruvannamalai.ac.in',
+  streams:['Arts & Science'],
+  programGroups:[
+    {stream:'Arts & Science (UG)',programs:[
+      {name:'B.A Tamil (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.A Economics (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Mathematics (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Physics (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Chemistry (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Government Arts College, Cuddalore',short:'GAC Cuddalore',type:'State',district:'Cuddalore',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Arts College TN',affil:'Thiruvalluvar University',website:'gaccuddalore.ac.in',
+  streams:['Arts & Science'],
+  programGroups:[
+    {stream:'Arts & Science (UG)',programs:[
+      {name:'B.A Tamil (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.A Economics (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Mathematics (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Physics (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Government Arts College (Autonomous), Karur',short:'GAC Karur',type:'State',district:'Karur',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Arts College TN',affil:'Bharathidasan University',website:'gackarur.ac.in',
+  streams:['Arts & Science'],
+  programGroups:[
+    {stream:'Arts & Science (UG)',programs:[
+      {name:'B.A Tamil (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.A Economics (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Mathematics (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Physics (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Chemistry (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Computer Science (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Government Arts College, Namakkal',short:'GAC Namakkal',type:'State',district:'Namakkal',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Arts College TN',affil:'Periyar University',website:'gacnamakkal.ac.in',
+  streams:['Arts & Science'],
+  programGroups:[
+    {stream:'Arts & Science (UG)',programs:[
+      {name:'B.A Tamil (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.A Economics (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Mathematics (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Physics (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Government Arts College for Women, Nilgiris',short:'GAC Women Nilgiris',type:'State',district:'Nilgiris',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Arts College TN',affil:'Bharathiar University',website:'gacwnilagiri.ac.in',
+  streams:['Arts & Science'],
+  programGroups:[
+    {stream:'Arts & Science (UG) — Women only',programs:[
+      {name:'B.A Tamil (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.A Economics (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Mathematics (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Physics (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Chemistry (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Government Arts College, Melur',short:'GAC Melur',type:'State',district:'Madurai',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Arts College TN',affil:'Madurai Kamaraj University',website:'gacmelur.ac.in',
+  streams:['Arts & Science'],
+  programGroups:[
+    {stream:'Arts & Science (UG)',programs:[
+      {name:'B.A Tamil (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.A Economics (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Mathematics (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Physics (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Government Arts and Science College, Thanjavur',short:'GASC Thanjavur',type:'State',district:'Thanjavur',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Arts College TN',affil:'Bharathidasan University',website:'gasthanjavur.ac.in',
+  streams:['Arts & Science'],
+  programGroups:[
+    {stream:'Arts & Science (UG)',programs:[
+      {name:'B.A Tamil (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.A Economics (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Mathematics (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Physics (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc Chemistry (3 years)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+    ]},
+  ]},
+
+// ──────────────────────────────────────────────
 // GOVERNMENT AIDED
 // ──────────────────────────────────────────────
 {name:'Loyola College (Autonomous)',short:'Loyola',type:'Aided',district:'Chennai',state:'Tamil Nadu',
@@ -414,6 +737,50 @@ const COLLEGES=[
       {name:'B.Sc (Physics, Chemistry, Maths, CS, IT, Zoology, Botany, Statistics, Microbiology)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
       {name:'B.A (English, Tamil, History, Economics)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
       {name:'B.Com / B.B.A / B.C.A',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Mepco Schlenk Engineering College',short:'Mepco Schlenk',type:'Aided',district:'Virudhunagar',state:'Tamil Nadu',
+  naac:'A+',nirf:'Ranked 101–150 Engineering',affil:'Anna University',website:'mepcoeng.ac.in',
+  streams:['Engineering'],
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.E Civil Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Mechanical Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Electronics & Communication Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Electrical & Electronics Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Computer Science & Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Information Technology (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Chemical Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+    ]},
+  ]},
+
+{name:'Bannari Amman Institute of Technology',short:'BIT Sathyamangalam',type:'Aided',district:'Erode',state:'Tamil Nadu',
+  naac:'A+',nirf:'Top Aided Engg TN',affil:'Anna University',website:'bitsathy.ac.in',
+  streams:['Engineering'],
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.E Civil Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Mechanical Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Electronics & Communication Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Electrical & Electronics Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Computer Science & Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Information Technology (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.Tech Textile Technology (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+    ]},
+  ]},
+
+{name:'Sri Ramakrishna Engineering College',short:'SREC Coimbatore',type:'Aided',district:'Coimbatore',state:'Tamil Nadu',
+  naac:'A+',nirf:'Top Aided Engg TN',affil:'Anna University',website:'srec.ac.in',
+  streams:['Engineering'],
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.E Civil Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Mechanical Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Electronics & Communication Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Electrical & Electronics Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Computer Science & Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Information Technology (4 years)',exam:'TNEA',examCss:'ce-tnea'},
     ]},
   ]},
 
