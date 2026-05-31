@@ -1355,33 +1355,8 @@ const COLLEGES=[
   ]},
 
 // ──────────────────────────────────────────────
-// GOVERNMENT AIDED
+// GOVERNMENT AIDED — ENGINEERING (TNEA counselling)
 // ──────────────────────────────────────────────
-{name:'Loyola College (Autonomous)',short:'Loyola',type:'Aided',district:'Chennai',state:'Tamil Nadu',
-  naac:'A++',nirf:'Top Arts College TN',affil:'University of Madras',website:'loyolacollege.edu',
-  streams:['Arts & Science'],
-  programGroups:[
-    {stream:'Arts & Science (UG)',programs:[
-      {name:'B.A (Economics, English, History, Tamil, Visual Communication, Social Work)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
-      {name:'B.Sc (Physics, Chemistry, Mathematics, Computer Science, Statistics, Zoology, Botany)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
-      {name:'B.Com (General, Computer Applications, Professional)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
-      {name:'B.B.A',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
-      {name:'B.C.A',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
-    ]},
-  ]},
-
-{name:'Stella Maris College (Autonomous)',short:'Stella Maris',type:'Aided',district:'Chennai',state:'Tamil Nadu',
-  naac:'A++',nirf:'Top Women\'s College TN',affil:'University of Madras',website:'stellamariscollege.edu.in',
-  streams:['Arts & Science'],
-  programGroups:[
-    {stream:'Arts & Science (UG) — Women only',programs:[
-      {name:'B.A (English, Tamil, History, Economics, Visual Communication, Social Work, French)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
-      {name:'B.Sc (Physics, Chemistry, Maths, CS, Statistics, Zoology, Microbiology, IT)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
-      {name:'B.Com (General, CA, Professional)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
-      {name:'B.B.A / B.C.A',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
-    ]},
-  ]},
-
 {name:'PSG College of Technology (Autonomous)',short:'PSG Tech',type:'Aided',district:'Coimbatore',state:'Tamil Nadu',
   naac:'A++',nirf:'#2 TN Engg (after IITM)',affil:'Anna University',website:'psgtech.ac.in',
   streams:['Engineering'],
@@ -1392,17 +1367,6 @@ const COLLEGES=[
     ]},
   ]},
 
-{name:'PSG College of Arts & Science (Autonomous)',short:'PSG CAS',type:'Aided',district:'Coimbatore',state:'Tamil Nadu',
-  naac:'A++',nirf:'Top Arts College CBE',affil:'Bharathiar University',website:'psgcas.ac.in',
-  streams:['Arts & Science','Management'],
-  programGroups:[
-    {stream:'Arts & Science (UG)',programs:[
-      {name:'B.Sc (Physics, Chemistry, Maths, CS, IT, Microbiology, Biochemistry, Zoology, Statistics)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
-      {name:'B.A (Economics, English)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
-      {name:'B.Com / B.B.A / B.C.A',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
-    ]},
-  ]},
-
 {name:'Thiagarajar College of Engineering (Autonomous)',short:'TCE Madurai',type:'Aided',district:'Madurai',state:'Tamil Nadu',
   naac:'A++',nirf:'Top Aided Engg TN',affil:'Anna University',website:'tce.edu',
   streams:['Engineering'],
@@ -1410,17 +1374,6 @@ const COLLEGES=[
     {stream:'Engineering & Technology',programs:[
       {name:'B.E (CSE, ECE, EEE, Civil, Mechanical, Chemical)',exam:'TNEA',examCss:'ce-tnea'},
       {name:'B.Tech (IT)',exam:'TNEA',examCss:'ce-tnea'},
-    ]},
-  ]},
-
-{name:'Ayya Nadar Janaki Ammal College (Autonomous)',short:'ANJAC Sivakasi',type:'Aided',district:'Virudhunagar',state:'Tamil Nadu',
-  naac:'A++',nirf:'Top Arts & Science TN',affil:'Madurai Kamaraj University',website:'anjac.ac.in',
-  streams:['Arts & Science'],
-  programGroups:[
-    {stream:'Arts & Science (UG)',programs:[
-      {name:'B.Sc (Physics, Chemistry, Maths, CS, IT, Zoology, Botany, Statistics, Microbiology)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
-      {name:'B.A (English, Tamil, History, Economics)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
-      {name:'B.Com / B.B.A / B.C.A',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
     ]},
   ]},
 
@@ -1478,16 +1431,6 @@ const COLLEGES=[
     ]},
   ]},
 
-{name:'Nirmala College for Women (Autonomous)',short:'Nirmala CW',type:'Aided',district:'Coimbatore',state:'Tamil Nadu',
-  naac:'A++',nirf:'Top Women\'s College CBE',affil:'Bharathiar University',website:'nirmalacollege.ac.in',
-  streams:['Arts & Science'],
-  programGroups:[
-    {stream:'Arts & Science (UG) — Women only',programs:[
-      {name:'B.Sc (Physics, Chemistry, Maths, CS, IT, Zoology, Biochemistry, Microbiology)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
-      {name:'B.A / B.Com / B.B.A / B.C.A',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
-    ]},
-  ]},
-
 {name:'Avinashilingam Institute for Home Science (Deemed)',short:'Avinashilingam',type:'Deemed',district:'Coimbatore',state:'Tamil Nadu',
   naac:'A++',nirf:'Top Women\'s Deemed',affil:'Deemed University — Women only',website:'avinuty.ac.in',
   streams:['Arts & Science','Education'],
@@ -1498,65 +1441,6 @@ const COLLEGES=[
     ]},
     {stream:'Education',programs:[
       {name:'B.Ed (Education)',exam:'Own Entrance',examCss:'ce-own'},
-    ]},
-  ]},
-
-// ── BATCH C: Prominent Aided Women's Colleges ──
-
-{name:'Seethalakshmi Ramaswami College (Autonomous), Trichy',short:'SRC Trichy',type:'Aided',district:'Trichy',state:'Tamil Nadu',
-  naac:'A+',nirf:'Top Women\'s Aided College Trichy',affil:'Bharathidasan University',website:'srctrichy.ac.in',
-  streams:['Arts & Science'],
-  programGroups:[
-    {stream:'Arts & Science (UG) — Women only',programs:[
-      {name:'B.A Tamil (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.A Economics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Mathematics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Physics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Chemistry (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Computer Science (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Com (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-    ]},
-  ]},
-
-{name:'Holy Cross College (Autonomous), Trichy',short:'Holy Cross College Trichy',type:'Aided',district:'Trichy',state:'Tamil Nadu',
-  naac:'A+',nirf:'Top Women\'s Aided College Trichy',affil:'Bharathidasan University',website:'holycrosstrichy.edu.in',
-  streams:['Arts & Science'],
-  programGroups:[
-    {stream:'Arts & Science (UG) — Women only',programs:[
-      {name:'B.A Economics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Mathematics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Physics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Chemistry (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Computer Science (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Com (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-    ]},
-  ]},
-
-{name:'Sarah Tucker College (Autonomous), Tirunelveli',short:'Sarah Tucker College',type:'Aided',district:'Tirunelveli',state:'Tamil Nadu',
-  naac:'A',nirf:'Aided Women\'s College Tirunelveli',affil:'Manonmaniam Sundaranar University',website:'sarahtucker.edu.in',
-  streams:['Arts & Science'],
-  programGroups:[
-    {stream:'Arts & Science (UG) — Women only',programs:[
-      {name:'B.A Tamil (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.A Economics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Mathematics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Physics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Chemistry (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Com (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-    ]},
-  ]},
-
-{name:'M.O.P. Vaishnav College for Women (Autonomous), Chennai',short:'MOP Vaishnav College',type:'Aided',district:'Chennai',state:'Tamil Nadu',
-  naac:'A+',nirf:'Top Women\'s Aided College Chennai',affil:'University of Madras',website:'mopvc.edu.in',
-  streams:['Arts & Science'],
-  programGroups:[
-    {stream:'Arts & Science (UG) — Women only',programs:[
-      {name:'B.A Economics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Mathematics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Physics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Chemistry (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Computer Science (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Com (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
     ]},
   ]},
 
@@ -1578,165 +1462,6 @@ const COLLEGES=[
     ]},
   ]},
 
-
-{name:'Nallamuthu Gounder Mahalingam College (Autonomous)',short:'NGM College Pollachi',type:'Aided',district:'Coimbatore',state:'Tamil Nadu',
-  naac:'A++',nirf:'Top Arts & Science',affil:'Bharathiar University',website:'ngmcollege.ac.in',
-  streams:['Arts & Science'],
-  programGroups:[
-    {stream:'Arts & Science (UG)',programs:[
-      {name:'B.Sc (CS, IT, Maths, Physics, Chemistry, Zoology, Botany, Biochemistry)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
-      {name:'B.A (Tamil, English, Economics, History)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
-      {name:'B.Com / B.B.A / B.C.A',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
-    ]},
-  ]},
-
-{name:'Pachaiyappa\'s College (Autonomous)',short:'Pachaiyappa\'s Chennai',type:'Aided',district:'Chennai',state:'Tamil Nadu',
-  naac:'A+',nirf:'Top Aided Arts College Chennai',affil:'University of Madras',website:'pachaiyappas.edu.in',
-  streams:['Arts & Science'],
-  specialNote:'One of India\'s oldest colleges (est. 1842) — premier aided autonomous college in Chennai.',
-  programGroups:[
-    {stream:'Arts & Science (UG)',programs:[
-      {name:'B.A Tamil (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.A History (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.A Economics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Mathematics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Physics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Chemistry (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Computer Science (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Com (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-    ]},
-  ]},
-
-{name:'National College (Autonomous), Trichy',short:'National College Trichy',type:'Aided',district:'Trichy',state:'Tamil Nadu',
-  naac:'A+',nirf:'Top Aided Arts College Trichy',affil:'Bharathidasan University',website:'nationalcollege.edu.in',
-  streams:['Arts & Science'],
-  programGroups:[
-    {stream:'Arts & Science (UG)',programs:[
-      {name:'B.A Tamil (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.A History (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.A Economics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Mathematics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Physics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Chemistry (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Computer Science (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Com (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-    ]},
-  ]},
-
-{name:'The American College (Autonomous), Madurai',short:'American College Madurai',type:'Aided',district:'Madurai',state:'Tamil Nadu',
-  naac:'A',nirf:'Aided Arts College Madurai',affil:'Madurai Kamaraj University',website:'americancollege.edu.in',
-  streams:['Arts & Science'],
-  programGroups:[
-    {stream:'Arts & Science (UG)',programs:[
-      {name:'B.A Economics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.A History (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Mathematics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Physics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Chemistry (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Computer Science (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Com (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-    ]},
-  ]},
-
-{name:'Bishop Heber College (Autonomous), Trichy',short:'Bishop Heber Trichy',type:'Aided',district:'Trichy',state:'Tamil Nadu',
-  naac:'A+',nirf:'Top Aided Arts College Trichy',affil:'Bharathidasan University',website:'bhctry.ac.in',
-  streams:['Arts & Science'],
-  programGroups:[
-    {stream:'Arts & Science (UG)',programs:[
-      {name:'B.A Economics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Mathematics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Physics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Chemistry (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Computer Science (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Com (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-    ]},
-  ]},
-
-{name:'St. Joseph\'s College (Autonomous), Trichy',short:'St. Joseph\'s Trichy',type:'Aided',district:'Trichy',state:'Tamil Nadu',
-  naac:'A+',nirf:'Top Aided Arts College Trichy',affil:'Bharathidasan University',website:'sjctni.edu',
-  streams:['Arts & Science'],
-  programGroups:[
-    {stream:'Arts & Science (UG)',programs:[
-      {name:'B.A Tamil (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.A Economics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Mathematics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Physics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Chemistry (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Computer Science (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Com (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-    ]},
-  ]},
-
-{name:'Women\'s Christian College (Autonomous), Chennai',short:'WCC Chennai',type:'Aided',district:'Chennai',state:'Tamil Nadu',
-  naac:'A+',nirf:'Top Women\'s Aided College Chennai',affil:'University of Madras',website:'wcc.edu.in',
-  streams:['Arts & Science'],
-  programGroups:[
-    {stream:'Arts & Science (UG) — Women only',programs:[
-      {name:'B.A Economics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.A History (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Mathematics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Physics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Chemistry (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Computer Science (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Com (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-    ]},
-  ]},
-
-{name:'Ethiraj College for Women (Autonomous), Chennai',short:'Ethiraj College Chennai',type:'Aided',district:'Chennai',state:'Tamil Nadu',
-  naac:'A+',nirf:'Top Women\'s Aided College Chennai',affil:'University of Madras',website:'ethirajcollege.edu.in',
-  streams:['Arts & Science'],
-  programGroups:[
-    {stream:'Arts & Science (UG) — Women only',programs:[
-      {name:'B.A Economics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.A History (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Mathematics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Physics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Chemistry (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Com (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-    ]},
-  ]},
-
-{name:'Lady Doak College (Autonomous), Madurai',short:'Lady Doak Madurai',type:'Aided',district:'Madurai',state:'Tamil Nadu',
-  naac:'A+',nirf:'Top Women\'s Aided College Madurai',affil:'Madurai Kamaraj University',website:'ladydoak.edu.in',
-  streams:['Arts & Science'],
-  programGroups:[
-    {stream:'Arts & Science (UG) — Women only',programs:[
-      {name:'B.A Economics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Mathematics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Physics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Chemistry (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Computer Science (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Com (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-    ]},
-  ]},
-
-{name:'Guru Nanak College (Autonomous), Chennai',short:'Guru Nanak College Chennai',type:'Aided',district:'Chennai',state:'Tamil Nadu',
-  naac:'A',nirf:'Aided Arts College Chennai',affil:'University of Madras',website:'gnc.ac.in',
-  streams:['Arts & Science'],
-  programGroups:[
-    {stream:'Arts & Science (UG)',programs:[
-      {name:'B.A Economics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Mathematics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Physics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Chemistry (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Computer Science (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Com (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-    ]},
-  ]},
-
-{name:'Scott Christian College (Autonomous), Nagercoil',short:'Scott Christian Nagercoil',type:'Aided',district:'Kanyakumari',state:'Tamil Nadu',
-  naac:'A',nirf:'Aided Arts College Kanyakumari',affil:'Manonmaniam Sundaranar University',website:'scottchristiancollege.ac.in',
-  streams:['Arts & Science'],
-  programGroups:[
-    {stream:'Arts & Science (UG)',programs:[
-      {name:'B.A Tamil (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.A Economics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Mathematics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Physics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Chemistry (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Computer Science (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
-    ]},
-  ]},
 
 {name:'Kumaraguru College of Technology (Autonomous)',short:'KCT Coimbatore',type:'Aided',district:'Coimbatore',state:'Tamil Nadu',
   naac:'A+',nirf:'Top Aided Engg TN',affil:'Anna University',website:'kct.ac.in',
