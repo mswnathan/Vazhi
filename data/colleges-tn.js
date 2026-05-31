@@ -2276,6 +2276,379 @@ const COLLEGES=[
     ]},
   ]},
 
+
+// ──────────────────────────────────────────────
+// BATCH A — Missing Govt Law Colleges (TNDALU affiliated)
+// ──────────────────────────────────────────────
+
+{name:'Government Law College, Salem',short:'GLC Salem',type:'State',district:'Salem',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Law TN',affil:'Tamil Nadu Dr. Ambedkar Law University (TNDALU)',website:'glcsalem.ac.in',
+  streams:['Law'],
+  programGroups:[
+    {stream:'Law',programs:[
+      {name:'B.A. B.L. (5 years)',exam:'TN Law Admissions (TNDALU counselling)',examCss:'ce-merit'},
+      {name:'B.B.A. B.L. (5 years)',exam:'TN Law Admissions (TNDALU counselling)',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Government Law College, Cuddalore',short:'GLC Cuddalore',type:'State',district:'Cuddalore',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Law TN',affil:'Tamil Nadu Dr. Ambedkar Law University (TNDALU)',website:'glccuddalore.ac.in',
+  streams:['Law'],
+  programGroups:[
+    {stream:'Law',programs:[
+      {name:'B.A. B.L. (5 years)',exam:'TN Law Admissions (TNDALU counselling)',examCss:'ce-merit'},
+      {name:'B.B.A. B.L. (5 years)',exam:'TN Law Admissions (TNDALU counselling)',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Government Law College, Erode',short:'GLC Erode',type:'State',district:'Erode',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Law TN',affil:'Tamil Nadu Dr. Ambedkar Law University (TNDALU)',website:'glcerode.ac.in',
+  streams:['Law'],
+  programGroups:[
+    {stream:'Law',programs:[
+      {name:'B.A. B.L. (5 years)',exam:'TN Law Admissions (TNDALU counselling)',examCss:'ce-merit'},
+      {name:'B.B.A. B.L. (5 years)',exam:'TN Law Admissions (TNDALU counselling)',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Government Law College, Thoothukudi',short:'GLC Thoothukudi',type:'State',district:'Thoothukudi',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Law TN',affil:'Tamil Nadu Dr. Ambedkar Law University (TNDALU)',website:'glcthoothukudi.ac.in',
+  streams:['Law'],
+  programGroups:[
+    {stream:'Law',programs:[
+      {name:'B.A. B.L. (5 years)',exam:'TN Law Admissions (TNDALU counselling)',examCss:'ce-merit'},
+      {name:'B.B.A. B.L. (5 years)',exam:'TN Law Admissions (TNDALU counselling)',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Government Law College, Kumbakonam',short:'GLC Kumbakonam',type:'State',district:'Thanjavur',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Law TN',affil:'Tamil Nadu Dr. Ambedkar Law University (TNDALU)',website:'glckumbakonam.ac.in',
+  streams:['Law'],
+  programGroups:[
+    {stream:'Law',programs:[
+      {name:'B.A. B.L. (5 years)',exam:'TN Law Admissions (TNDALU counselling)',examCss:'ce-merit'},
+      {name:'B.B.A. B.L. (5 years)',exam:'TN Law Admissions (TNDALU counselling)',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Government Law College, Nagercoil',short:'GLC Nagercoil',type:'State',district:'Kanyakumari',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Law TN',affil:'Tamil Nadu Dr. Ambedkar Law University (TNDALU)',website:'glcnagercoil.ac.in',
+  streams:['Law'],
+  programGroups:[
+    {stream:'Law',programs:[
+      {name:'B.A. B.L. (5 years)',exam:'TN Law Admissions (TNDALU counselling)',examCss:'ce-merit'},
+      {name:'B.B.A. B.L. (5 years)',exam:'TN Law Admissions (TNDALU counselling)',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Government Law College, Dharmapuri',short:'GLC Dharmapuri',type:'State',district:'Dharmapuri',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Law TN',affil:'Tamil Nadu Dr. Ambedkar Law University (TNDALU)',website:'glcdharmapuri.ac.in',
+  streams:['Law'],
+  programGroups:[
+    {stream:'Law',programs:[
+      {name:'B.A. B.L. (5 years)',exam:'TN Law Admissions (TNDALU counselling)',examCss:'ce-merit'},
+      {name:'B.B.A. B.L. (5 years)',exam:'TN Law Admissions (TNDALU counselling)',examCss:'ce-merit'},
+    ]},
+  ]},
+
+// ──────────────────────────────────────────────
+// BATCH B — TNAU & TANUVAS Constituent Colleges
+// ──────────────────────────────────────────────
+
+{name:'Agricultural College & Research Institute, Madurai',short:'AC&RI Madurai',type:'State',district:'Madurai',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'TNAU Constituent College',affil:'Tamil Nadu Agricultural University (TNAU)',website:'actri.tnau.ac.in',
+  streams:['Agriculture'],
+  programGroups:[
+    {stream:'Agriculture & Allied Sciences',programs:[
+      {name:'B.Sc (Hons) Agriculture (4 years)',exam:'TNAU Admissions (merit-based)',examCss:'ce-merit'},
+      {name:'B.Sc Horticulture (4 years)',exam:'TNAU Admissions (merit-based)',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Agricultural College & Research Institute, Killikulam',short:'AC&RI Killikulam',type:'State',district:'Thoothukudi',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'TNAU Constituent College',affil:'Tamil Nadu Agricultural University (TNAU)',website:'acrikillikulam.tnau.ac.in',
+  streams:['Agriculture'],
+  specialNote:'Oldest agricultural college in TN (est. 1868) — Vallanad, Thoothukudi',
+  programGroups:[
+    {stream:'Agriculture',programs:[
+      {name:'B.Sc (Hons) Agriculture (4 years)',exam:'TNAU Admissions (merit-based)',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Anbil Dharmalingam Agricultural College & Research Institute, Trichy',short:'ADAC&RI Trichy',type:'State',district:'Trichy',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'TNAU Constituent College',affil:'Tamil Nadu Agricultural University (TNAU)',website:'adacri.tnau.ac.in',
+  streams:['Agriculture'],
+  programGroups:[
+    {stream:'Agriculture',programs:[
+      {name:'B.Sc (Hons) Agriculture (4 years)',exam:'TNAU Admissions (merit-based)',examCss:'ce-merit'},
+      {name:'B.Sc Agricultural Economics (4 years)',exam:'TNAU Admissions (merit-based)',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Agricultural College & Research Institute, Vazhavachanur',short:'AC&RI Vazhavachanur',type:'State',district:'Tiruvannamalai',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'TNAU Constituent College',affil:'Tamil Nadu Agricultural University (TNAU)',website:'acriv.tnau.ac.in',
+  streams:['Agriculture'],
+  programGroups:[
+    {stream:'Agriculture',programs:[
+      {name:'B.Sc (Hons) Agriculture (4 years)',exam:'TNAU Admissions (merit-based)',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Horticultural College & Research Institute, Periyakulam',short:'HC&RI Periyakulam',type:'State',district:'Theni',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'TNAU Constituent College',affil:'Tamil Nadu Agricultural University (TNAU)',website:'hcriperiyakulam.tnau.ac.in',
+  streams:['Agriculture'],
+  programGroups:[
+    {stream:'Horticulture & Allied Sciences',programs:[
+      {name:'B.Sc Horticulture (4 years)',exam:'TNAU Admissions (merit-based)',examCss:'ce-merit'},
+      {name:'B.Sc Floriculture & Landscape Architecture (4 years)',exam:'TNAU Admissions (merit-based)',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Agricultural Engineering College & Research Institute, Coimbatore',short:'AEC&RI Coimbatore',type:'State',district:'Coimbatore',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'TNAU Constituent College',affil:'Tamil Nadu Agricultural University (TNAU)',website:'aecriae.tnau.ac.in',
+  streams:['Agriculture','Engineering'],
+  programGroups:[
+    {stream:'Agricultural Engineering & Technology',programs:[
+      {name:'B.Tech Agricultural Engineering (4 years)',exam:'TNAU Admissions (merit-based)',examCss:'ce-merit'},
+      {name:'B.Tech Food Technology (4 years)',exam:'TNAU Admissions (merit-based)',examCss:'ce-merit'},
+      {name:'B.Tech Bioenergy (4 years)',exam:'TNAU Admissions (merit-based)',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Home Science College & Research Institute, Madurai',short:'HSCRI Madurai',type:'State',district:'Madurai',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'TNAU Constituent College',affil:'Tamil Nadu Agricultural University (TNAU)',website:'hscri.tnau.ac.in',
+  streams:['Agriculture','Arts & Science'],
+  programGroups:[
+    {stream:'Home Science & Nutrition',programs:[
+      {name:'B.Sc Home Science (4 years)',exam:'TNAU Admissions (merit-based)',examCss:'ce-merit'},
+      {name:'B.Sc Food Science & Nutrition (4 years)',exam:'TNAU Admissions (merit-based)',examCss:'ce-merit'},
+      {name:'B.Sc Textile & Apparel Design (4 years)',exam:'TNAU Admissions (merit-based)',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Madras Veterinary College, Chennai',short:'MVC Chennai',type:'State',district:'Chennai',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'TANUVAS Constituent College',affil:'Tamil Nadu Veterinary & Animal Sciences University (TANUVAS)',website:'mvc.tanuvas.ac.in',
+  streams:['Agriculture'],
+  specialNote:'India\'s oldest veterinary college (est. 1903)',
+  programGroups:[
+    {stream:'Veterinary & Animal Sciences',programs:[
+      {name:'B.V.Sc & A.H. (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
+    ]},
+  ]},
+
+{name:'Veterinary College & Research Institute, Namakkal',short:'VC&RI Namakkal',type:'State',district:'Namakkal',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'TANUVAS Constituent College',affil:'Tamil Nadu Veterinary & Animal Sciences University (TANUVAS)',website:'vcrinamakkal.tanuvas.ac.in',
+  streams:['Agriculture'],
+  specialNote:'Namakkal is India\'s poultry capital — strong industry linkage',
+  programGroups:[
+    {stream:'Veterinary & Animal Sciences',programs:[
+      {name:'B.V.Sc & A.H. (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
+    ]},
+  ]},
+
+{name:'Veterinary College & Research Institute, Orathanadu',short:'VC&RI Orathanadu',type:'State',district:'Thanjavur',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'TANUVAS Constituent College',affil:'Tamil Nadu Veterinary & Animal Sciences University (TANUVAS)',website:'vcriorathanadu.tanuvas.ac.in',
+  streams:['Agriculture'],
+  programGroups:[
+    {stream:'Veterinary & Animal Sciences',programs:[
+      {name:'B.V.Sc & A.H. (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
+    ]},
+  ]},
+
+// ──────────────────────────────────────────────
+// BATCH C — Missing Govt Medical Colleges (TNMGRMU)
+// ──────────────────────────────────────────────
+
+{name:'Mohan Kumaramangalam Medical College & Hospital, Salem',short:'MKMCH Salem',type:'State',district:'Salem',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Medical TN',affil:'The Tamil Nadu Dr. M.G.R. Medical University (TNMGRMU)',website:'mkmch.ac.in',
+  streams:['Medical'],
+  programGroups:[
+    {stream:'Medical',programs:[
+      {name:'MBBS (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
+    ]},
+  ]},
+
+{name:'Government Medical College & Hospital, Villupuram',short:'GMC Villupuram',type:'State',district:'Villupuram',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Medical TN',affil:'The Tamil Nadu Dr. M.G.R. Medical University (TNMGRMU)',website:'gmcvillupuram.ac.in',
+  streams:['Medical'],
+  programGroups:[
+    {stream:'Medical',programs:[
+      {name:'MBBS (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
+    ]},
+  ]},
+
+{name:'Government Vellore Medical College & Hospital',short:'GMC Vellore',type:'State',district:'Vellore',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Medical TN',affil:'The Tamil Nadu Dr. M.G.R. Medical University (TNMGRMU)',website:'gmcvellore.ac.in',
+  streams:['Medical'],
+  specialNote:'Attached to Govt District HQ Hospital Vellore',
+  programGroups:[
+    {stream:'Medical',programs:[
+      {name:'MBBS (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
+    ]},
+  ]},
+
+{name:'Government Medical College & Hospital, Pudukkottai',short:'GMC Pudukkottai',type:'State',district:'Pudukkottai',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Medical TN',affil:'The Tamil Nadu Dr. M.G.R. Medical University (TNMGRMU)',website:'gmcpudukkottai.ac.in',
+  streams:['Medical'],
+  programGroups:[
+    {stream:'Medical',programs:[
+      {name:'MBBS (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
+    ]},
+  ]},
+
+{name:'Government Medical College & Hospital, Thoothukudi',short:'GMC Thoothukudi',type:'State',district:'Thoothukudi',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Medical TN',affil:'The Tamil Nadu Dr. M.G.R. Medical University (TNMGRMU)',website:'gmcthoothukudi.ac.in',
+  streams:['Medical'],
+  programGroups:[
+    {stream:'Medical',programs:[
+      {name:'MBBS (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
+    ]},
+  ]},
+
+{name:'Government Medical College & Hospital, Dharmapuri',short:'GMC Dharmapuri',type:'State',district:'Dharmapuri',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Medical TN',affil:'The Tamil Nadu Dr. M.G.R. Medical University (TNMGRMU)',website:'gmcdharmapuri.ac.in',
+  streams:['Medical'],
+  programGroups:[
+    {stream:'Medical',programs:[
+      {name:'MBBS (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
+    ]},
+  ]},
+
+{name:'Government Medical College & Hospital, Krishnagiri',short:'GMC Krishnagiri',type:'State',district:'Krishnagiri',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Medical TN',affil:'The Tamil Nadu Dr. M.G.R. Medical University (TNMGRMU)',website:'gmckrishnagiri.ac.in',
+  streams:['Medical'],
+  programGroups:[
+    {stream:'Medical',programs:[
+      {name:'MBBS (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
+    ]},
+  ]},
+
+{name:'Chengalpattu Medical College & Hospital',short:'CMCH Chengalpattu',type:'State',district:'Chengalpattu',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Medical TN',affil:'The Tamil Nadu Dr. M.G.R. Medical University (TNMGRMU)',website:'cmch.ac.in',
+  streams:['Medical'],
+  specialNote:'One of TN\'s older medical colleges',
+  programGroups:[
+    {stream:'Medical',programs:[
+      {name:'MBBS (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
+    ]},
+  ]},
+
+{name:'Government Medical College & Hospital, Erode (Perundurai)',short:'GMC Erode',type:'State',district:'Erode',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Medical TN',affil:'The Tamil Nadu Dr. M.G.R. Medical University (TNMGRMU)',website:'gmcerode.ac.in',
+  streams:['Medical'],
+  programGroups:[
+    {stream:'Medical',programs:[
+      {name:'MBBS (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
+    ]},
+  ]},
+
+{name:'Government Medical College & Hospital, Namakkal',short:'GMC Namakkal',type:'State',district:'Namakkal',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Medical TN',affil:'The Tamil Nadu Dr. M.G.R. Medical University (TNMGRMU)',website:'gmcnamakkal.ac.in',
+  streams:['Medical'],
+  programGroups:[
+    {stream:'Medical',programs:[
+      {name:'MBBS (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
+    ]},
+  ]},
+
+{name:'Government Medical College & Hospital, Tiruvannamalai',short:'GMC Tiruvannamalai',type:'State',district:'Tiruvannamalai',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Medical TN',affil:'The Tamil Nadu Dr. M.G.R. Medical University (TNMGRMU)',website:'gmctiruvannamalai.ac.in',
+  streams:['Medical'],
+  programGroups:[
+    {stream:'Medical',programs:[
+      {name:'MBBS (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
+    ]},
+  ]},
+
+{name:'Government Medical College & Hospital, Kanyakumari',short:'GMC Kanyakumari',type:'State',district:'Kanyakumari',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Medical TN',affil:'The Tamil Nadu Dr. M.G.R. Medical University (TNMGRMU)',website:'gmckanyakumari.ac.in',
+  streams:['Medical'],
+  programGroups:[
+    {stream:'Medical',programs:[
+      {name:'MBBS (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
+    ]},
+  ]},
+
+{name:'Government Medical College & Hospital, Tiruvarur',short:'GMC Tiruvarur',type:'State',district:'Thiruvarur',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Medical TN',affil:'The Tamil Nadu Dr. M.G.R. Medical University (TNMGRMU)',website:'gmctiruvarur.ac.in',
+  streams:['Medical'],
+  programGroups:[
+    {stream:'Medical',programs:[
+      {name:'MBBS (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
+    ]},
+  ]},
+
+{name:'Government Omandurar Multi-speciality Hospital & Medical College, Chennai',short:'Omandurar MC Chennai',type:'State',district:'Chennai',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Medical TN',affil:'The Tamil Nadu Dr. M.G.R. Medical University (TNMGRMU)',website:'omch.ac.in',
+  streams:['Medical'],
+  specialNote:'Government multi-speciality hospital with medical college — Triplicane, Chennai',
+  programGroups:[
+    {stream:'Medical',programs:[
+      {name:'MBBS (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
+    ]},
+  ]},
+
+{name:'Government Medical College & Hospital, Virudhunagar',short:'GMC Virudhunagar',type:'State',district:'Virudhunagar',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Medical TN',affil:'The Tamil Nadu Dr. M.G.R. Medical University (TNMGRMU)',website:'gmcvirudhunagar.ac.in',
+  streams:['Medical'],
+  programGroups:[
+    {stream:'Medical',programs:[
+      {name:'MBBS (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
+    ]},
+  ]},
+
+{name:'Government Medical College & Hospital, Nagapattinam',short:'GMC Nagapattinam',type:'State',district:'Nagapattinam',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Medical TN',affil:'The Tamil Nadu Dr. M.G.R. Medical University (TNMGRMU)',website:'gmcnagapattinam.ac.in',
+  streams:['Medical'],
+  programGroups:[
+    {stream:'Medical',programs:[
+      {name:'MBBS (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
+    ]},
+  ]},
+
+{name:'Government Medical College & Hospital, Ariyalur',short:'GMC Ariyalur',type:'State',district:'Ariyalur',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Medical TN',affil:'The Tamil Nadu Dr. M.G.R. Medical University (TNMGRMU)',website:'gmcariyalur.ac.in',
+  streams:['Medical'],
+  programGroups:[
+    {stream:'Medical',programs:[
+      {name:'MBBS (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
+    ]},
+  ]},
+
+{name:'Government Medical College & Hospital, Dindigul',short:'GMC Dindigul',type:'State',district:'Dindigul',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Medical TN',affil:'The Tamil Nadu Dr. M.G.R. Medical University (TNMGRMU)',website:'gmcdindigul.ac.in',
+  streams:['Medical'],
+  programGroups:[
+    {stream:'Medical',programs:[
+      {name:'MBBS (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
+    ]},
+  ]},
+
+// ──────────────────────────────────────────────
+// BATCH D — Government Pharmacy Colleges
+// ──────────────────────────────────────────────
+
+{name:'Government College of Pharmacy, Chennai',short:'Govt Pharmacy College Chennai',type:'State',district:'Chennai',state:'Tamil Nadu',
+  naac:'A',nirf:'Premier Govt Pharmacy TN',affil:'The Tamil Nadu Dr. M.G.R. Medical University (TNMGRMU)',website:'gcpchennai.ac.in',
+  streams:['Pharmacy'],
+  specialNote:'Premier govt pharmacy college in TN — Kilpauk, Chennai',
+  programGroups:[
+    {stream:'Pharmacy',programs:[
+      {name:'B.Pharm (4 years)',exam:'NEET UG (Pharmacy) / State merit',examCss:'ce-neet'},
+      {name:'D.Pharm (2 years)',exam:'State merit',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Government College of Pharmacy, Coimbatore',short:'Govt Pharmacy College Coimbatore',type:'State',district:'Coimbatore',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Pharmacy TN',affil:'The Tamil Nadu Dr. M.G.R. Medical University (TNMGRMU)',website:'gcpcoimbatore.ac.in',
+  streams:['Pharmacy'],
+  programGroups:[
+    {stream:'Pharmacy',programs:[
+      {name:'B.Pharm (4 years)',exam:'NEET UG (Pharmacy) / State merit',examCss:'ce-neet'},
+      {name:'D.Pharm (2 years)',exam:'State merit',examCss:'ce-merit'},
+    ]},
+  ]},
+
 ];
 
 // ── TO ADD MORE STATES ──
