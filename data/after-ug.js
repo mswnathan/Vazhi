@@ -277,7 +277,7 @@ const AFTER_UG = [
     exams: ['UPSC CSE (Prelims + Mains + Interview)'],
     examNote: 'Prelims in June, Mains in Sept–Oct, Interview in Jan–May. Max 6 attempts (Gen), 9 (OBC), unlimited (SC/ST).',
     institutes: 'LBSNAA Mussoorie (IAS), NPA Hyderabad (IPS), NASC Delhi — training academies',
-    careers: 'IAS, IPS, IFS, IRS, IRS (IT), IRTS, IDAS — across all central services',
+    careers: 'IAS Officer, IPS Officer, IFS Officer, Collector, District Magistrate, DGP, Secretary to Government, Commissioner, IRS, IRTS, IDAS — across all central services',
     salary: '₹56,100–2,50,000/month + perks',
     market: 'Stable',
     badge: 'Prestige',
