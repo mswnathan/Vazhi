@@ -670,6 +670,261 @@ const COLLEGES=[
     ]},
   ]},
 
+{name:'Government Arts College (Autonomous), Dharmapuri',short:'GAC Dharmapuri',type:'State',district:'Dharmapuri',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Arts College TN',affil:'Periyar University',website:'gacdharma.ac.in',
+  streams:['Arts & Science'],
+  programGroups:[
+    {stream:'Arts & Science (UG)',programs:[
+      {name:'B.A Tamil (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.A History (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.A Economics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Mathematics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Physics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Chemistry (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Government Arts College, Vellore',short:'GAC Vellore',type:'State',district:'Vellore',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Arts College TN',affil:'Thiruvalluvar University',website:'gacvellore.ac.in',
+  streams:['Arts & Science'],
+  programGroups:[
+    {stream:'Arts & Science (UG)',programs:[
+      {name:'B.A Tamil (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.A History (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.A Economics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Mathematics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Physics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Chemistry (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Government Arts College, Udhagamandalam (Ooty)',short:'GAC Ooty',type:'State',district:'Nilgiris',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Arts College TN',affil:'Bharathiar University',website:'gacooty.ac.in',
+  streams:['Arts & Science'],
+  programGroups:[
+    {stream:'Arts & Science (UG)',programs:[
+      {name:'B.A Tamil (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.A History (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.A Economics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Mathematics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Physics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Chemistry (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Government Arts and Science College, Sivakasi',short:'GASC Sivakasi',type:'State',district:'Virudhunagar',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Arts College TN',affil:'Madurai Kamaraj University',website:'gascsivakasi.ac.in',
+  streams:['Arts & Science'],
+  programGroups:[
+    {stream:'Arts & Science (UG)',programs:[
+      {name:'B.A Tamil (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.A History (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.A Economics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Mathematics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Physics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Chemistry (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Computer Science (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Government Arts College, Ariyalur',short:'GAC Ariyalur',type:'State',district:'Ariyalur',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Arts College TN',affil:'Bharathidasan University',website:'gacariyalur.ac.in',
+  streams:['Arts & Science'],
+  programGroups:[
+    {stream:'Arts & Science (UG)',programs:[
+      {name:'B.A Tamil (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.A History (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.A Economics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Mathematics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Physics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Chemistry (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Government Arts College, Krishnagiri',short:'GAC Krishnagiri',type:'State',district:'Krishnagiri',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Arts College TN',affil:'Thiruvalluvar University',website:'gackrishnagiri.ac.in',
+  streams:['Arts & Science'],
+  programGroups:[
+    {stream:'Arts & Science (UG)',programs:[
+      {name:'B.A Tamil (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.A History (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.A Economics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Mathematics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Physics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Chemistry (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Government Arts College (Autonomous), Pudukkottai',short:'GAC Pudukkottai',type:'State',district:'Pudukkottai',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Arts College TN',affil:'Bharathidasan University',website:'gacpudukkottai.ac.in',
+  streams:['Arts & Science'],
+  programGroups:[
+    {stream:'Arts & Science (UG)',programs:[
+      {name:'B.A Tamil (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.A History (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.A Economics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Mathematics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Physics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Chemistry (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Government Arts College, Perambalur',short:'GAC Perambalur',type:'State',district:'Perambalur',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Arts College TN',affil:'Bharathidasan University',website:'gacperambalur.ac.in',
+  streams:['Arts & Science'],
+  programGroups:[
+    {stream:'Arts & Science (UG)',programs:[
+      {name:'B.A Tamil (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.A History (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.A Economics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Mathematics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Physics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Chemistry (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Government Arts and Science College, Gobichettipalayam',short:'GASC Gobichettipalayam',type:'State',district:'Erode',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Arts College TN',affil:'Bharathiar University',website:'gascgobi.ac.in',
+  streams:['Arts & Science'],
+  programGroups:[
+    {stream:'Arts & Science (UG)',programs:[
+      {name:'B.A Tamil (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.A History (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.A Economics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Mathematics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Physics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Chemistry (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Government Arts College, Udumalpet',short:'GAC Udumalpet',type:'State',district:'Tiruppur',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Arts College TN',affil:'Bharathiar University',website:'gacudumalpet.ac.in',
+  streams:['Arts & Science'],
+  programGroups:[
+    {stream:'Arts & Science (UG)',programs:[
+      {name:'B.A Tamil (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.A History (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.A Economics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Mathematics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Physics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Chemistry (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Government Arts College (Women), Ramanathapuram',short:'GAC Women Ramanathapuram',type:'State',district:'Ramanathapuram',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Arts College TN',affil:'Madurai Kamaraj University',website:'gacwramanathapuram.ac.in',
+  streams:['Arts & Science'],
+  programGroups:[
+    {stream:'Arts & Science (UG) — Women only',programs:[
+      {name:'B.A Tamil (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.A History (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.A Economics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Mathematics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Physics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Chemistry (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Government Arts College (Women), Krishnagiri',short:'GAC Women Krishnagiri',type:'State',district:'Krishnagiri',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Arts College TN',affil:'Thiruvalluvar University',website:'gacwkrishnagiri.ac.in',
+  streams:['Arts & Science'],
+  programGroups:[
+    {stream:'Arts & Science (UG) — Women only',programs:[
+      {name:'B.A Tamil (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.A History (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.A Economics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Mathematics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Physics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Chemistry (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Government Arts College (Women), Tirupur',short:'GAC Women Tirupur',type:'State',district:'Tiruppur',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Arts College TN',affil:'Bharathiar University',website:'gacwtirupur.ac.in',
+  streams:['Arts & Science'],
+  programGroups:[
+    {stream:'Arts & Science (UG) — Women only',programs:[
+      {name:'B.A Tamil (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.A History (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.A Economics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Mathematics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Physics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Chemistry (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Government Arts College (Women), Sivagangai',short:'GAC Women Sivagangai',type:'State',district:'Sivagangai',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Arts College TN',affil:'Alagappa University',website:'gacwsivagangai.ac.in',
+  streams:['Arts & Science'],
+  programGroups:[
+    {stream:'Arts & Science (UG) — Women only',programs:[
+      {name:'B.A Tamil (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.A History (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.A Economics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Mathematics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Physics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Chemistry (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Government Arts College, Thoothukudi',short:'GAC Thoothukudi',type:'State',district:'Thoothukudi',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Arts College TN',affil:'Manonmaniam Sundaranar University',website:'gactuticorin.ac.in',
+  streams:['Arts & Science'],
+  programGroups:[
+    {stream:'Arts & Science (UG)',programs:[
+      {name:'B.A Tamil (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.A History (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.A Economics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Mathematics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Physics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Chemistry (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Government Arts and Science College, Kangeyam',short:'GASC Kangeyam',type:'State',district:'Tiruppur',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Arts College TN',affil:'Bharathiar University',website:'gasckangeyam.ac.in',
+  streams:['Arts & Science'],
+  programGroups:[
+    {stream:'Arts & Science (UG)',programs:[
+      {name:'B.A Tamil (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.A History (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.A Economics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Mathematics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Physics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Chemistry (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Government Arts College (Autonomous), Kumbakonam',short:'GAC Kumbakonam',type:'State',district:'Thanjavur',state:'Tamil Nadu',
+  naac:'A',nirf:'Govt Arts College TN',affil:'Bharathidasan University',website:'gackumbakonam.ac.in',
+  streams:['Arts & Science'],
+  programGroups:[
+    {stream:'Arts & Science (UG)',programs:[
+      {name:'B.A Tamil (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.A History (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.A Economics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Mathematics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Physics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Chemistry (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Computer Science (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Government Arts and Science College, Dindigul',short:'GASC Dindigul',type:'State',district:'Dindigul',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Arts College TN',affil:'Madurai Kamaraj University',website:'gascdgl.ac.in',
+  streams:['Arts & Science'],
+  programGroups:[
+    {stream:'Arts & Science (UG)',programs:[
+      {name:'B.A Tamil (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.A History (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.A Economics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Mathematics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Physics (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Chemistry (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Computer Science (3 years)',exam:'University Merit Counselling',examCss:'ce-merit'},
+    ]},
+  ]},
+
 // ──────────────────────────────────────────────
 // GOVERNMENT AIDED
 // ──────────────────────────────────────────────
