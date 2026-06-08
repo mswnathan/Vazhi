@@ -192,6 +192,17 @@ const COLLEGES_MH=[
     ]},
   ]},
 
+{name:'Maharashtra National Law University Nagpur (MNLU Nagpur)',short:'MNLU-NGP',type:'State',district:'Nagpur',state:'Maharashtra',
+  naac:'Accredited',nirf:'Top NLU',affil:'National Law University (Maharashtra)',website:'nlunagpur.ac.in',
+  streams:['Law'],
+  specialNote:'Third MNLU in Maharashtra — located near Butibori, Nagpur. Established under MH Nat. Law University Act 2014. Admission through CLAT.',
+  programGroups:[
+    {stream:'Law',programs:[
+      {name:'B.A. LL.B. (Hons) — 5-year integrated',exam:'CLAT',examCss:'ce-clat'},
+      {name:'B.B.A. LL.B. (Hons) — 5-year integrated',exam:'CLAT',examCss:'ce-clat'},
+    ]},
+  ]},
+
 {name:'Kavikulaguru Kalidas Sanskrit University',short:'KKSU',type:'State',district:'Nagpur',state:'Maharashtra',
   naac:'B++',nirf:'Specialised University',affil:'State University — Government of Maharashtra (est. 1997)',website:'sanskrit.ac.in',
   streams:['Arts & Science'],
@@ -220,7 +231,7 @@ const COLLEGES_MH=[
   specialNote:'National institute for speech and hearing disabilities. Regional centres in Kolkata, Chennai, Delhi & Secunderabad also offer BASLP. Admission through centralized MoSJE counselling.',
   programGroups:[
     {stream:'Allied Health & Rehabilitation',programs:[
-      {name:'Bachelor in Audiology & Speech-Language Pathology / BASLP (3 years)',exam:'MoSJE Counselling',examCss:'ce-own'},
+      {name:'Bachelor in Audiology & Speech-Language Pathology / BASLP (3 years)',exam:'MoSJE CET',examCss:'ce-own'},
     ]},
   ]},
 

@@ -362,7 +362,7 @@ const CAREER_MAP = [
 
   {
     id: 'journalist',
-    keywords: ['journalist', 'media', 'news', 'communication', 'mass media', 'reporter', 'anchor', 'film', 'cinema', 'broadcasting', 'public relations', 'pr'],
+    keywords: ['journalist', 'media', 'news', 'communication', 'mass media', 'reporter', 'anchor', 'broadcasting', 'public relations', 'pr'],
     title: 'Journalist / Media Professional',
     ico: '📰',
     bc: 'amber',
@@ -514,6 +514,29 @@ const CAREER_MAP = [
     examNames: ['UCEED', 'NID DAT', 'NATA'],
     augIds: [],
     careers: ['Interior Designer (residential / commercial)', 'Set Designer (Film / TV / Events)', 'Exhibition Designer', 'Retail Space Designer', 'Furniture Designer', 'Visual Merchandiser'],
+  },
+
+  {
+    id: 'visual-artist',
+    keywords: ['artist', 'visual artist', 'fine arts', 'bfa', 'painter', 'sculpture', 'sculptor', 'art', 'drawing', 'sketching', 'painting', 'printmaking', 'ceramics', 'gallery', 'art teacher', 'illustrator', 'set designer'],
+    title: 'Visual Artist / Fine Arts',
+    ico: '🎨',
+    bc: 'purple',
+    summary: 'Fine Arts opens careers in painting, sculpture, art direction, gallery curation, illustration and art education. BFA at BHU Varanasi, JNAFAU Hyderabad, Hyderabad Central University and Rabindra Bharati Kolkata are premier govt pathways. Admission through CUET UG or university-specific BFA entrance tests — any Class 12 stream is eligible.',
+    class12: {
+      subjects: ['PCM', 'PCM+CS', 'PCB', 'PCMB', 'Commerce', 'Commerce+Maths', 'Arts'],
+      tip: 'Any stream eligible — fine arts has no subject restriction. Arts background helps with art history and colour theory, but PCM and Commerce students are equally welcome. Build a sketchbook portfolio: the entrance tests assess drawing and visual awareness, not academics.',
+    },
+    class9_10: {
+      stream: 'Arts',
+      focus: ['Drawing', 'Painting', 'Craft'],
+      tip: 'Start filling a sketchbook today — pencil, charcoal, watercolour. Visit art galleries and museums when possible. BFA entrance tests directly assess your drawing and observation skills, so practice is your exam preparation.',
+    },
+    streamId: 'Arts',
+    courseFilter: ['fine arts', 'bfa', 'visual communication', 'visual arts', 'bva'],
+    examNames: ['CUET UG'],
+    augIds: [],
+    careers: ['Visual Artist / Painter', 'Sculptor', 'Art Director (Film / Advertising)', 'Gallery Curator', 'Illustrator', 'Art Teacher / Lecturer', 'Set Designer (Film / Theatre)', 'Textile & Surface Pattern Designer', 'Art Therapist'],
   },
 
   {
@@ -724,6 +747,29 @@ const CAREER_MAP = [
     examNames: ['NEET-UG', 'CUET UG', 'GPAT'],
     augIds: ['msc', 'phd'],
     careers: ['Clinical Research Associate (CRA)', 'Pharmacovigilance Scientist', 'Regulatory Affairs Officer', 'Clinical Trial Manager', 'Drug Safety Associate', 'Medical Science Liaison', 'Medical Writer', 'Toxicologist'],
+  },
+
+  {
+    id: 'film-director',
+    keywords: ['film director', 'director', 'cinematographer', 'cinematography', 'filmmaker', 'film making', 'filmmaking', 'screenplay', 'screenwriter', 'film editor', 'film editing', 'audiographer', 'sound designer', 'film school', 'ftii', 'srfti', 'visual arts', 'bva', 'cinema'],
+    title: 'Film Director / Cinematographer',
+    ico: '🎥',
+    bc: 'purple',
+    summary: 'Film Direction, Cinematography, Editing and Screenplay Writing are structured professional careers in India with clear institutional pathways. The UG route starts with a Bachelor of Visual Arts (BVA) at the TN Govt MGR Film Institute, Chennai. The premier PG route is FTII Pune (Film & Television Institute of India) and SRFTI Kolkata — both govt-funded national institutions with world-class studios. Many working directors (Mani Ratnam, Vetrimaaran, Shankar) began with film institute training or hands-on apprenticeships.',
+    class12: {
+      subjects: ['PCM', 'PCM+CS', 'PCB', 'PCMB', 'Commerce', 'Commerce+Maths', 'Arts'],
+      tip: 'Any stream is eligible — film direction has no subject restriction. Arts / Humanities background helps with storytelling, but science students who love cinema are equally welcome. Build a portfolio: short films on your phone, stage plays, photography.',
+    },
+    class9_10: {
+      stream: 'Arts',
+      focus: ['Drawing', 'Tamil/English Literature', 'Photography'],
+      tip: 'Watch films analytically — ask why a scene was shot that way. Read short stories, write your own. Make short videos on your phone. Storytelling instinct is the core skill, and you can develop it right now.',
+    },
+    streamId: 'Arts',
+    courseFilter: ['bva', 'film', 'visual communication', 'fine arts'],
+    examNames: [],
+    augIds: [],
+    careers: ['Film Director', 'Cinematographer / DOP', 'Screenplay & Dialogue Writer', 'Film Editor', 'Sound Designer / Audiographer', 'Documentary Filmmaker', 'TV / OTT Director', 'Assistant Director (industry entry)', 'Film Producer'],
   },
 
   {

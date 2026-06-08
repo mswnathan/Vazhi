@@ -468,4 +468,38 @@ const ANNOUNCEMENTS = [
     priority: 'high',
   },
 
+  {
+    id: 'tn-mgr-film-bva-2026',
+    title: 'TN Govt MGR Film Institute — Bachelor of Visual Arts Admissions 2026',
+    category: 'admission',
+    icon: '🎬',
+    date: '2026-06-14',
+    desc: 'Tamil Nadu Govt M.G.R. Film & Television Training Institute (Taramani, Chennai) — last date for applications for Bachelor of Visual Arts 2026 (6 specializations: Cinematography, Digital Intermediate, Audiography, Direction & Screenplay Writing, Film Editing, Animation & Visual Effects). Apply online at filminstitute.tn.gov.in.',
+    link: 'filminstitute.tn.gov.in',
+    priority: 'high',
+  },
+
+  {
+    id: 'rru-rcet-final-2026',
+    title: 'Rashtriya Raksha University — RCET Final Exam 2026-27',
+    category: 'exam',
+    icon: '🛡️',
+    date: '2026-06-10',
+    endDate: '2026-06-14',
+    desc: 'RRU (Gandhinagar) RCET Final Test for 2026-27 admissions. Programs: BA Security Management, BSc Defence Studies, BBA Legislative Law, BA Psychology, BA Clinical Psychology, BA International Relations, and more. Login credentials shared to registered email IDs before test date. Check rru.ac.in for updates.',
+    link: 'rru.ac.in',
+    priority: 'high',
+  },
+
+  {
+    id: 'hjujmc-admissions-2026',
+    title: 'Haridev Joshi University — Journalism Admissions 2026-27',
+    category: 'application',
+    icon: '📰',
+    date: '2026-06-30',
+    desc: 'Haridev Joshi University of Journalism and Mass Communication, Jaipur (India\'s only dedicated journalism university) — last date for applications for BA (JMC), MA (Mass Communication, New Media, Development Communication) and PG Diploma in Broadcast Journalism 2026-27. Apply at hjujmc.in.',
+    link: 'hjujmc.in',
+    priority: 'normal',
+  },
+
 ];

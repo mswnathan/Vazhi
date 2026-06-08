@@ -1436,4 +1436,127 @@ const PG_COLLEGES = [
     ],
   },
 
+  {
+    name: 'Raman Research Institute (RRI)',
+    short: 'RRI Bengaluru',
+    type: 'INI',
+    district: 'Bengaluru',
+    state: 'Karnataka',
+    naac: '',
+    nirf: '',
+    affil: 'Autonomous Institute, Dept. of Science & Technology, Govt of India',
+    website: 'rri.res.in',
+    streams: ['Arts & Science'],
+    specialNote: 'Premier autonomous research institute named after Nobel Laureate C.V. Raman (est. 1948). Integrated PhD and PhD programmes in Astronomy & Astrophysics, Light & Matter Physics, Soft Condensed Matter, and Theoretical Sciences. Admission through JEST / CSIR-NET JRF / GATE.',
+    programGroups: [
+      {
+        stream: 'Research & PhD Programmes',
+        programs: [
+          { name: 'Integrated Ph.D. — Astronomy, Physics, Theoretical Sciences', exam: 'JEST / CSIR-NET JRF / GATE', examCss: 'ce-gate' },
+          { name: 'Ph.D. — Astronomy & Astrophysics', exam: 'JEST / CSIR-NET JRF', examCss: 'ce-net' },
+          { name: 'Ph.D. — Light & Matter Physics', exam: 'JEST / CSIR-NET JRF', examCss: 'ce-net' },
+          { name: 'Ph.D. — Soft Condensed Matter', exam: 'JEST / CSIR-NET JRF', examCss: 'ce-net' },
+        ],
+      },
+    ],
+  },
+
+  {
+    name: 'Regional Institute of Education, Bhubaneswar (RIE — NCERT)',
+    short: 'RIE Bhubaneswar',
+    type: 'Central',
+    district: 'Bhubaneswar',
+    state: 'Odisha',
+    naac: 'Accredited',
+    nirf: 'Premier Teacher Education',
+    affil: 'NCERT (National Council of Educational Research & Training), Ministry of Education',
+    website: 'cee.ncert.gov.in',
+    streams: ['Education'],
+    specialNote: 'One of five RIEs under NCERT (others at Mysore, Bhopal, Ajmer & Shillong). Offers 2-year B.Ed and M.Ed programmes. Admission through CEE (Common Entrance Examination by NCERT) conducted annually — apply at cee.ncert.gov.in.',
+    programGroups: [
+      {
+        stream: 'Education',
+        programs: [
+          { name: 'B.Ed — Bachelor of Education (2 years)', exam: 'CEE — NCERT Common Entrance Examination', examCss: 'ce-own' },
+          { name: 'M.Ed — Master of Education (2 years)', exam: 'CEE — NCERT Common Entrance Examination', examCss: 'ce-own' },
+        ],
+      },
+    ],
+  },
+
+  {
+    name: 'Maharashtra National Law University Nagpur (MNLU Nagpur)',
+    short: 'MNLU-NGP',
+    type: 'State',
+    district: 'Nagpur',
+    state: 'Maharashtra',
+    naac: 'Accredited',
+    nirf: 'Top NLU',
+    affil: 'National Law University (Maharashtra)',
+    website: 'nlunagpur.ac.in',
+    streams: ['Law'],
+    specialNote: 'Third MNLU in Maharashtra — near Butibori, Nagpur. Established under MH Nat. Law University Act 2014. Admission through CLAT PG for LLM.',
+    programGroups: [
+      {
+        stream: 'Law (PG)',
+        programs: [
+          { name: 'LL.M. — Master of Laws (1 year)', exam: 'CLAT PG', examCss: 'ce-clat' },
+        ],
+      },
+    ],
+  },
+
+  {
+    name: 'Haridev Joshi University of Journalism and Mass Communication',
+    short: 'HJUJMC',
+    type: 'State',
+    district: 'Jaipur',
+    state: 'Rajasthan',
+    naac: 'Accredited',
+    nirf: '',
+    affil: 'Haridev Joshi University (State Govt — Rajasthan)',
+    website: 'hjujmc.in',
+    streams: ['Arts & Science'],
+    specialNote: 'India\'s only dedicated state university for journalism and mass communication. Admission through university entrance test.',
+    programGroups: [
+      {
+        stream: 'Journalism & Media (PG)',
+        programs: [
+          { name: 'M.A. Mass Communication (2 years)', exam: 'University Entrance Test', examCss: 'ce-own' },
+          { name: 'M.A. New Media (2 years)', exam: 'University Entrance Test', examCss: 'ce-own' },
+          { name: 'M.A. Development Communication (2 years)', exam: 'University Entrance Test', examCss: 'ce-own' },
+          { name: 'M.A. Corporate Communication (2 years)', exam: 'University Entrance Test', examCss: 'ce-own' },
+          { name: 'PG Diploma in Broadcast Journalism (1 year)', exam: 'University Entrance Test', examCss: 'ce-own' },
+        ],
+      },
+    ],
+  },
+
+  {
+    name: 'Rashtriya Raksha University (RRU)',
+    short: 'RRU',
+    type: 'INI',
+    district: 'Gandhinagar',
+    state: 'Gujarat',
+    naac: '',
+    nirf: '',
+    affil: 'Ministry of Home Affairs, Govt of India (Institution of National Importance)',
+    website: 'rru.ac.in',
+    streams: ['Arts & Science'],
+    specialNote: 'India\'s only national security university — INI under MHA. Strong pathway to intelligence, police, cyber defence & PSU security roles. Admission through RCET. Campuses in Gandhinagar, Lavad (Puducherry), Lucknow, Bhopal, Pasighat & Shivamogga.',
+    programGroups: [
+      {
+        stream: 'Security & Strategic Studies (PG)',
+        programs: [
+          { name: 'M.A. Security Management (2 years)', exam: 'RCET (RRU Entrance)', examCss: 'ce-own' },
+          { name: 'M.Sc. Defence and Strategic Studies (2 years)', exam: 'RCET (RRU Entrance)', examCss: 'ce-own' },
+          { name: 'M.A. International Relations and Security Studies (2 years)', exam: 'RCET (RRU Entrance)', examCss: 'ce-own' },
+          { name: 'MBA — Corporate Security Management (2 years)', exam: 'RCET (RRU Entrance)', examCss: 'ce-own' },
+          { name: 'M.A./M.Sc. Russian Language Studies (2 years)', exam: 'RCET (RRU Entrance)', examCss: 'ce-own' },
+          { name: 'M.A. Clinical Psychology (2 years)', exam: 'RCET (RRU Entrance)', examCss: 'ce-own' },
+        ],
+      },
+    ],
+  },
+
 ];

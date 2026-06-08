@@ -235,7 +235,7 @@ const COLLEGES=[
       {name:'B.E (CSE, ECE, EEE, Civil, Mechanical, Production, Textile)',exam:'TNEA',examCss:'ce-tnea'},
     ]},
     {stream:'Architecture',programs:[
-      {name:'B.Arch (5 years)',exam:'TNEA B.Arch Round (NATA / JEE Main Paper 2)',examCss:'ce-nata'},
+      {name:'B.Arch (5 years)',exam:'TNEA / NATA / JEE Main Paper 2',examCss:'ce-nata'},
     ]},
   ]},
 
@@ -1983,9 +1983,9 @@ const COLLEGES=[
   specialNote:'National institute specialising in cerebral palsy, autism, and deaf-blind rehabilitation. Offers allied health programmes through centralized MoSJE counselling.',
   programGroups:[
     {stream:'Allied Health & Rehabilitation',programs:[
-      {name:'Bachelor of Physiotherapy / BPT (4.5 years)',exam:'MoSJE Counselling',examCss:'ce-own'},
-      {name:'Bachelor of Occupational Therapy / BOT (4.5 years)',exam:'MoSJE Counselling',examCss:'ce-own'},
-      {name:'Bachelor in Audiology & Speech-Language Pathology / BASLP (3 years)',exam:'MoSJE Counselling',examCss:'ce-own'},
+      {name:'Bachelor of Physiotherapy / BPT (4.5 years)',exam:'MoSJE CET',examCss:'ce-own'},
+      {name:'Bachelor of Occupational Therapy / BOT (4.5 years)',exam:'MoSJE CET',examCss:'ce-own'},
+      {name:'Bachelor in Audiology & Speech-Language Pathology / BASLP (3 years)',exam:'MoSJE CET',examCss:'ce-own'},
     ]},
   ]},
 
@@ -2374,6 +2374,22 @@ const COLLEGES=[
     {stream:'Pharmacy',programs:[
       {name:'B.Pharm (4 years)',exam:'NEET UG (Pharmacy) / State merit',examCss:'ce-neet'},
       {name:'D.Pharm (2 years)',exam:'State merit',examCss:'ce-merit'},
+    ]},
+  ]},
+
+// BATCH F — Film & Visual Arts
+{name:'Tamil Nadu Government M.G.R. Film and Television Training Institute',short:'MGR Film Institute',type:'State',district:'Chennai',state:'Tamil Nadu',
+  naac:'',nirf:'',affil:'Tamil Nadu Dr. J. Jayalalithaa Music and Fine Arts University',website:'filminstitute.tn.gov.in',
+  streams:['Design','Arts & Science'],
+  specialNote:'State govt film training institute in Taramani, Chennai. Oldest govt film institute in South India. Offers Bachelor of Visual Arts in 6 film specializations. Admission through state merit / own process via filminstitute.tn.gov.in.',
+  programGroups:[
+    {stream:'Film & Visual Arts',programs:[
+      {name:'Bachelor of Visual Arts — Cinematography (4 years)',exam:'Own Admission (State Merit)',examCss:'ce-own'},
+      {name:'Bachelor of Visual Arts — Digital Intermediate (4 years)',exam:'Own Admission (State Merit)',examCss:'ce-own'},
+      {name:'Bachelor of Visual Arts — Audiography (4 years)',exam:'Own Admission (State Merit)',examCss:'ce-own'},
+      {name:'Bachelor of Visual Arts — Direction & Screenplay Writing (4 years)',exam:'Own Admission (State Merit)',examCss:'ce-own'},
+      {name:'Bachelor of Visual Arts — Film Editing (4 years)',exam:'Own Admission (State Merit)',examCss:'ce-own'},
+      {name:'Bachelor of Visual Arts — Animation & Visual Effects (4 years)',exam:'Own Admission (State Merit)',examCss:'ce-own'},
     ]},
   ]},
 

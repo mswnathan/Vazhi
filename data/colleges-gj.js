@@ -165,4 +165,24 @@ const COLLEGES_GJ=[
     ]},
   ]},
 
+{name:'Rashtriya Raksha University (RRU)',short:'RRU',type:'Central',district:'Gandhinagar',state:'Gujarat',
+  naac:'',nirf:'',affil:'Ministry of Home Affairs, Govt of India (Institution of National Importance)',website:'rru.ac.in',
+  streams:['Arts & Science'],
+  specialNote:'India\'s only national security university — INI under Ministry of Home Affairs. Campuses in Gandhinagar (main), Lavad (Puducherry), Lucknow, Bhopal, Pasighat & Shivamogga. Admission through RCET (Rashtriya Raksha Common Entrance Test). Strong pathway to IPS, intelligence, cyber defence and PSU security roles.',
+  programGroups:[
+    {stream:'Security, Defence & Strategic Studies',programs:[
+      {name:'B.A. Security Management (3 years)',exam:'RCET (RRU Entrance)',examCss:'ce-own'},
+      {name:'B.A. Defence and Strategic Studies (3 years)',exam:'RCET (RRU Entrance)',examCss:'ce-own'},
+      {name:'B.Sc. Defence and Strategic Studies (3 years)',exam:'RCET (RRU Entrance)',examCss:'ce-own'},
+      {name:'B.A. International Relations and Security Studies (3 years)',exam:'RCET (RRU Entrance)',examCss:'ce-own'},
+      {name:'B.A. Global Governance & Security Studies (3 years)',exam:'RCET (RRU Entrance)',examCss:'ce-own'},
+      {name:'BBA and Bachelor of Legislative Law (3 years)',exam:'RCET (RRU Entrance)',examCss:'ce-own'},
+      {name:'BBA — Corporate Security Management (3 years)',exam:'RCET (RRU Entrance)',examCss:'ce-own'},
+      {name:'B.Sc. Physical Education & Sports (3 years)',exam:'RCET (RRU Entrance)',examCss:'ce-own'},
+      {name:'B.A. Psychology — NCAHP (3 years)',exam:'RCET (RRU Entrance)',examCss:'ce-own'},
+      {name:'B.A. Clinical Psychology — RCI (3 years)',exam:'RCET (RRU Entrance)',examCss:'ce-own'},
+      {name:'Diploma in Police Science (1 year)',exam:'RCET (RRU Entrance)',examCss:'ce-own'},
+    ]},
+  ]},
+
 ];

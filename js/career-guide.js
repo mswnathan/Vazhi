@@ -7,7 +7,18 @@ const CG_MIN_INPUT_LEN   = 2;   // show suggestions only after this many charact
 const CG_SUBSTR_MIN_LEN  = 4;   // allow mid-word keyword matching only at this length
 const CG_MAX_SUGGESTIONS = 6;   // max autocomplete suggestions shown
 const CG_MAX_CAREER_HITS = 2;   // max career path results rendered per search
-const CG_MAX_COURSES     = 4;   // max course cards shown in Step 3
+const CG_MAX_COURSES     = 6;   // max course cards shown in Step 3
+
+// ── NATURAL LANGUAGE NORMALISER ──────────────────────────────────────────
+// Strips filler phrases so "I want to become a doctor" → "doctor"
+// Handles: "want to become", "how to become", "i want to be", "become a", "as a" etc.
+function cgNormalise(raw) {
+  return raw
+    .replace(/^(?:i\s+)?(?:want\s+to\s+|how\s+to\s+|how\s+can\s+i\s+)?(?:become|be)\s+(?:a\s+|an\s+)?/, '')
+    .replace(/^(?:as\s+(?:a\s+|an\s+)?|a\s+|an\s+|the\s+)/, '')
+    .replace(/\s+as\s+(?:a\s+|an\s+)?/g, ' ')
+    .trim();
+}
 
 // ── AUTOCOMPLETE ─────────────────────────────────────────────────────────
 
@@ -24,13 +35,15 @@ function cgLiveSearch() {
     return;
   }
 
+  const q = cgNormalise(raw); // strip filler phrases before matching
+
   // Match: title contains typed text, OR any keyword starts with typed text
   // For short inputs only use starts-with — avoids false positives
   // e.g. "ban" should not match "urban" or "husbandry"
   const matches = CAREER_MAP.filter(c => {
-    const titleMatch = c.title.toLowerCase().includes(raw);
-    const kwStartsWith = c.keywords.some(k => k.startsWith(raw));
-    const kwContains = raw.length >= CG_SUBSTR_MIN_LEN && c.keywords.some(k => k.includes(raw));
+    const titleMatch = c.title.toLowerCase().includes(q);
+    const kwStartsWith = c.keywords.some(k => k.startsWith(q));
+    const kwContains = q.length >= CG_SUBSTR_MIN_LEN && c.keywords.some(k => k.includes(q));
     return titleMatch || kwStartsWith || kwContains;
   }).slice(0, CG_MAX_SUGGESTIONS);
 
@@ -45,7 +58,7 @@ function cgLiveSearch() {
           onmousedown="cgSelectSuggestion('${c.id}')"
           onmouseenter="cgHighlight(${i})">
       <span class="cg-suggest-ico">${c.ico}</span>
-      <span class="cg-suggest-title">${cgHighlightText(c.title, raw)}</span>
+      <span class="cg-suggest-title">${cgHighlightText(c.title, q)}</span>
     </div>`
   ).join('');
   box.style.display = 'block';
@@ -153,13 +166,15 @@ function searchCareer() {
   if (raw.length < CG_MIN_INPUT_LEN) return;
   document.getElementById('cg-suggestions').style.display = 'none';
 
+  const q = cgNormalise(raw); // strip filler phrases before scoring
+
   // Score each CAREER_MAP entry by keyword hits
   // Short keywords (< 4 chars) must match as whole words to avoid false positives
-  const words = raw.split(/\s+/);
+  const words = q.split(/\s+/);
   const scored = CAREER_MAP.map(c => {
     const hits = c.keywords.filter(k => {
       if (k.length < CG_SUBSTR_MIN_LEN) return words.includes(k);   // whole-word match only for short keys
-      return raw.includes(k) || k.includes(raw);    // substring match for longer keys
+      return q.includes(k) || k.includes(q);    // substring match for longer keys
     });
     return { entry: c, score: hits.length };
   }).filter(r => r.score > 0).sort((a, b) => b.score - a.score);
@@ -168,7 +183,7 @@ function searchCareer() {
 
   if (!scored.length) {
     // Try stream fallback before giving up
-    const fallback = cgFindStreamFallback(raw);
+    const fallback = cgFindStreamFallback(q);
     if (fallback) {
       out.innerHTML = `<div class="cg-fallback">
         <div class="cg-fallback-ico">${fallback.ico}</div>

@@ -131,4 +131,15 @@ const COLLEGES_RJ=[
     ]},
   ]},
 
+{name:'Haridev Joshi University of Journalism and Mass Communication',short:'HJUJMC',type:'State',district:'Jaipur',state:'Rajasthan',
+  naac:'Accredited',nirf:'',affil:'Haridev Joshi University (State Govt — Rajasthan)',website:'hjujmc.in',
+  streams:['Arts & Science'],
+  specialNote:'India\'s only dedicated state university for journalism and mass communication. Offers 4-year BA (JMC) under NEP 2020 and MA / PG Diploma programmes. Admission through university entrance test.',
+  programGroups:[
+    {stream:'Journalism & Media',programs:[
+      {name:'B.A. Journalism and Mass Communication — 4 years',exam:'University Entrance Test (State)',examCss:'ce-own'},
+      {name:'B.A. Media Studies — 4 years',exam:'University Entrance Test (State)',examCss:'ce-own'},
+    ]},
+  ]},
+
 ];
