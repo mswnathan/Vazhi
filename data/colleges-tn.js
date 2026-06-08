@@ -200,7 +200,7 @@ const COLLEGES=[
     ]},
   ]},
 
-{name:'Government Law College, Tiruchirappalli',short:'GLC Trichy',type:'State',district:'Tiruchirappalli',state:'Tamil Nadu',
+{name:'Government Law College, Tiruchirappalli',short:'GLC Trichy',type:'State',district:'Trichy',state:'Tamil Nadu',
   naac:'Accredited',nirf:'Law TN',affil:'The Tamil Nadu Dr. Ambedkar Law University',website:'tnadalu.ac.in',
   streams:['Law'],
   programGroups:[
@@ -931,7 +931,7 @@ const COLLEGES=[
     ]},
   ]},
 
-{name:'Government Arts College, Kancheepuram',short:'GAC Kancheepuram',type:'State',district:'Kanchipuram',state:'Tamil Nadu',
+{name:'Government Arts College, Kancheepuram',short:'GAC Kancheepuram',type:'State',district:'Kancheepuram',state:'Tamil Nadu',
   naac:'Accredited',nirf:'Govt Arts College TN',affil:'University of Madras',website:'gackancheepuram.ac.in',
   streams:['Arts & Science'],
   programGroups:[
