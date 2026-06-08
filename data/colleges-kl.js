@@ -24,6 +24,7 @@ const COLLEGES_KL=[
   programGroups:[
     {stream:'Engineering & Technology',programs:[
       {name:'B.Tech (CSE, EE, Mechanical, Civil, Data Science & Engineering)',exam:'JEE Advanced',examCss:'ce-jee'},
+      {name:'B.Tech Materials Engineering (new 2026)',exam:'JEE Advanced',examCss:'ce-jee'},
     ]},
   ]},
 

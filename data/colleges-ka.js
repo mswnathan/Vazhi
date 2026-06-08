@@ -15,15 +15,20 @@ const COLLEGES_KA=[
   programGroups:[
     {stream:'Engineering & Technology',programs:[
       {name:'B.S (Research) — Physics, Chemistry, Maths, Materials, Earth & Climate, Electrical, Mechanical, Chemical, Computational Science',exam:'JEE Advanced / KVPY',examCss:'ce-jee'},
+      {name:'B.Tech (Mathematics & Computing; new 2026: Aerospace Engineering, Materials Science & Engineering, Mechanics & Computing)',exam:'JEE Advanced',examCss:'ce-jee'},
     ]},
   ]},
 
 {name:'IIT Dharwad',short:'IITDH',type:'Central',district:'Dharwad',state:'Karnataka',
   naac:'Accredited',nirf:'Emerging IIT',affil:'Autonomous (Institute of National Importance)',website:'iitdh.ac.in',
-  streams:['Engineering'],
+  streams:['Engineering','Arts & Science'],
   programGroups:[
     {stream:'Engineering & Technology',programs:[
       {name:'B.Tech (CSE, EE, Mechanical, Mathematics & Computing)',exam:'JEE Advanced',examCss:'ce-jee'},
+    ]},
+    {stream:'Arts & Science',programs:[
+      {name:'B.S (Major in Mathematics) (new 2026)',exam:'JEE Advanced',examCss:'ce-jee'},
+      {name:'B.S (Major in Physics) (new 2026)',exam:'JEE Advanced',examCss:'ce-jee'},
     ]},
   ]},
 

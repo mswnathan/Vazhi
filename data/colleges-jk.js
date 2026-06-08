@@ -16,6 +16,7 @@ const COLLEGES_JK=[
   programGroups:[
     {stream:'Engineering & Technology',programs:[
       {name:'B.Tech (CSE, ECE, Mechanical, Civil, Chemical, Materials Engineering)',exam:'JEE Advanced',examCss:'ce-jee'},
+      {name:'B.Tech Unified Engineering (new 2026)',exam:'JEE Advanced',examCss:'ce-jee'},
     ]},
     {stream:'Arts & Science',programs:[
       {name:'B.Sc (Research) — Mathematics, Physics, Chemistry',exam:'JEE Advanced',examCss:'ce-jee'},

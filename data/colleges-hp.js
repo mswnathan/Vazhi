@@ -16,6 +16,10 @@ const COLLEGES_HP=[
   programGroups:[
     {stream:'Engineering & Technology',programs:[
       {name:'B.Tech (CSE, ECE, EEE, Mechanical, Civil, Chemical, Data Science & Engineering, Engineering Physics)',exam:'JEE Advanced',examCss:'ce-jee'},
+      {name:'B.Tech Quantum Science & Engineering (new 2026 — India\'s first IIT BTech in quantum)',exam:'JEE Advanced',examCss:'ce-jee'},
+      {name:'B.Tech Chemical Engineering with Data Analytics (new 2026)',exam:'JEE Advanced',examCss:'ce-jee'},
+      {name:'B.Tech Agricultural Engineering with Data Analytics (new 2026)',exam:'JEE Advanced',examCss:'ce-jee'},
+      {name:'B.Tech Microelectronics & VLSI (new 2026)',exam:'JEE Advanced',examCss:'ce-jee'},
     ]},
     {stream:'Arts & Science',programs:[
       {name:'B.Sc (Research) — Physics, Chemistry, Mathematics, Economics',exam:'JEE Advanced',examCss:'ce-jee'},

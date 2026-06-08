@@ -16,6 +16,7 @@ const COLLEGES_UP=[
   programGroups:[
     {stream:'Engineering & Technology',programs:[
       {name:'B.Tech (CSE, EE, Mechanical, Civil, Chemical, Aerospace, Materials, Biological Sciences)',exam:'JEE Advanced',examCss:'ce-jee'},
+      {name:'B.Tech Intelligent Systems (new 2026)',exam:'JEE Advanced',examCss:'ce-jee'},
     ]},
     {stream:'Arts & Science',programs:[
       {name:'B.S (Mathematics & Scientific Computing, Physics)',exam:'JEE Advanced',examCss:'ce-jee'},

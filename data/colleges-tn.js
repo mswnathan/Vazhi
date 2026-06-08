@@ -20,6 +20,9 @@ const COLLEGES=[
     {stream:'Engineering & Technology',programs:[
       {name:'B.Tech (CSE, AI, Data Science, EE, ME, Civil, Chemical, Aerospace, Naval, Ocean, Biotech, Engineering Design)',exam:'JEE Advanced',examCss:'ce-jee'},
       {name:'B.S Research (Physics, Chemistry, Maths, Humanities)',exam:'JEE Advanced',examCss:'ce-jee'},
+      {name:'B.S Mathematics (4-year, new 2026)',exam:'JEE Advanced',examCss:'ce-jee'},
+      {name:'B.Tech Computational Engineering & Mechanics (new 2025)',exam:'JEE Advanced',examCss:'ce-jee'},
+      {name:'B.Tech Instrumentation & Biomedical Engineering (new 2025)',exam:'JEE Advanced',examCss:'ce-jee'},
     ]},
     {stream:'Online / Distance',programs:[
       {name:'BS Data Science & Applications (Online)',exam:'Qualifier Exam (no JEE)',examCss:'ce-own'},

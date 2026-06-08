@@ -15,9 +15,13 @@ const COLLEGES_MP=[
   programGroups:[
     {stream:'Engineering & Technology',programs:[
       {name:'B.Tech (CSE, EE, Mechanical, Civil, Chemical, Metallurgical, Astronomy, Astrophysics & Space)',exam:'JEE Advanced',examCss:'ce-jee'},
+      {name:'B.Tech Biomedical Engineering & Data Science (new 2026)',exam:'JEE Advanced',examCss:'ce-jee'},
+      {name:'B.Tech Environmental Economics & Sustainable Engineering (new 2026)',exam:'JEE Advanced',examCss:'ce-jee'},
+      {name:'B.Tech Space Sciences & Engineering (new 2026)',exam:'JEE Advanced',examCss:'ce-jee'},
     ]},
     {stream:'Arts & Science',programs:[
       {name:'B.S (Mathematics, Physics, Chemistry)',exam:'JEE Advanced',examCss:'ce-jee'},
+      {name:'B.S Applied & Industrial Chemistry (new 2026)',exam:'JEE Advanced',examCss:'ce-jee'},
     ]},
   ]},
 

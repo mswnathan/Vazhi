@@ -15,6 +15,7 @@ const COLLEGES_PB=[
   programGroups:[
     {stream:'Engineering & Technology',programs:[
       {name:'B.Tech (CSE, EE, Mechanical, Civil, Chemical, Biomedical, Mathematics & Computing)',exam:'JEE Advanced',examCss:'ce-jee'},
+      {name:'B.Tech Digital Agriculture (new 2026)',exam:'JEE Advanced',examCss:'ce-jee'},
     ]},
   ]},
 

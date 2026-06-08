@@ -15,6 +15,7 @@ const COLLEGES_WB=[
   programGroups:[
     {stream:'Engineering & Technology',programs:[
       {name:'B.Tech (CSE, ECE, EEE, Mechanical, Civil, Chemical, Metallurgical, Aerospace, Ocean, Mining, Agri & Food)',exam:'JEE Advanced',examCss:'ce-jee'},
+      {name:'B.Tech Biomedical Engineering (new 2026)',exam:'JEE Advanced',examCss:'ce-jee'},
     ]},
     {stream:'Design',programs:[
       {name:'B.Arch',exam:'JEE Advanced',examCss:'ce-jee'},
