@@ -204,6 +204,20 @@ function cgGoToColleges(streamId) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+// Fields where Central-University admission typically runs through CUET, so a
+// "do I need CUET?" pointer is worth showing on the stream fallback.
+const CG_CUET_STREAMS = new Set(['Commerce', 'Management', 'Arts', 'Science']);
+
+// Jump to the Entrance Exams tab and surface a specific exam (e.g. CUET UG).
+function cgShowExam(name) {
+  switchTab('courses');
+  setCoursesMode('exams');                 // clears filters + renders exams
+  const s = document.getElementById('ef-search');
+  if (s) s.value = name;
+  if (typeof renderExams === 'function') renderExams();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 // ── SEARCH ──────────────────────────────────────────────────────────────
 
 function searchCareer() {
@@ -245,6 +259,7 @@ function searchCareer() {
           ${CG_COLLEGE_STREAM[fallback.streamId] ? `<button class="cg-btn cg-btn-alt" style="margin-top:12px" onclick="cgGoToColleges('${fallback.streamId}')">
             🏛 See colleges offering this →
           </button>` : ''}
+          ${CG_CUET_STREAMS.has(fallback.streamId) ? `<div class="cg-cuet-hint">💡 Aiming for a Central University (DU, JNU, BHU, Pondicherry…)? Most admit via <strong>CUET</strong> — but Tamil Nadu government colleges don't need it. <button class="cg-link-inline" onclick="cgShowExam('CUET UG')">What is CUET? →</button></div>` : ''}
         </div>
       </div>`;
     } else {

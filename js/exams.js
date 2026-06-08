@@ -113,6 +113,7 @@ function examCard(e){
     <div class="ecard-row"><div class="ecard-lbl">For</div><div class="ecard-val">${e.for}</div></div>
     <div class="ecard-row"><div class="ecard-lbl">Freq</div><div class="ecard-val">${e.freq}</div></div>
     <div class="ecard-row"><div class="ecard-lbl">Website</div><div class="ecard-val"><a href="https://${e.website}" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500">${e.website} ↗</a></div></div>
+    ${e.explainer?`<div class="ecard-explainer">🧭 ${e.explainer}</div>`:''}
     ${e.note?`<div class="ecard-important">${e.note}</div>`:''}
     ${instHtml}
     <div class="ecard-pills">${subjPills}</div>
