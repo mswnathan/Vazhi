@@ -12,6 +12,19 @@ const SCH_LEVEL_LABEL = {
   International: '✈ International',
 };
 
+// Community / category tokens → display label (for card tags + stats)
+const SCH_COMMUNITY_LABEL = {
+  SC: 'SC', ST: 'ST', OBC: 'OBC / BC / MBC', Minority: 'Minority',
+  Girls: 'Girls / Women', 'First-gen': 'First-generation', PwD: 'Differently-abled',
+};
+
+// Does a scholarship target the selected community filter value?
+function schMatchesCommunity(s, com) {
+  const arr = s.community || [];
+  if (com === 'SCST') return arr.includes('SC') || arr.includes('ST');
+  return arr.includes(com);
+}
+
 // ── INIT ─────────────────────────────────────────────────────────────────────
 
 function populateScholarshipFilters() {
@@ -35,11 +48,14 @@ function renderScholarships() {
 
   const lvl = schFilter.level;
   const str = (document.getElementById('sch-stream')?.value || '').trim();
+  const com = (document.getElementById('sch-community')?.value || '').trim();
   const q   = (document.getElementById('sch-search')?.value || '').toLowerCase().trim();
 
   const filtered = SCHOLARSHIPS.filter(s => {
     if (lvl !== 'all' && s.level !== lvl) return false;
     if (str && !s.ugStream.includes(str) && !s.ugStream.includes('Any')) return false;
+    // Community filter surfaces scholarships TARGETED at that group (open-to-all are excluded here)
+    if (com && !schMatchesCommunity(s, com)) return false;
     if (q && !`${s.name} ${s.short} ${s.body} ${s.for} ${s.note}`.toLowerCase().includes(q)) return false;
     return true;
   });
@@ -47,7 +63,8 @@ function renderScholarships() {
   if (stats) {
     const lvlTag = lvl !== 'all' ? ` · ${SCH_LEVEL_LABEL[lvl] || lvl}` : '';
     const strTag = str ? ` · ${str}` : '';
-    stats.innerHTML = `<b>${filtered.length}</b> scholarship${filtered.length !== 1 ? 's' : ''}${lvlTag}${strTag}`;
+    const comTag = com ? ` · ${com === 'SCST' ? 'SC / ST' : (SCH_COMMUNITY_LABEL[com] || com)}` : '';
+    stats.innerHTML = `<b>${filtered.length}</b> scholarship${filtered.length !== 1 ? 's' : ''}${lvlTag}${strTag}${comTag}`;
   }
 
   if (!filtered.length) {
@@ -70,6 +87,11 @@ function schCard(s) {
   const streamTags = s.ugStream.includes('Any')
     ? `<span class="sch-t-tag">All streams</span>`
     : s.ugStream.map(st => `<span class="sch-t-tag">${st}</span>`).join('');
+
+  const communityTags = (s.community || [])
+    .filter(c => c !== 'Any')
+    .map(c => `<span class="sch-t-tag sch-t-comm">🎯 ${SCH_COMMUNITY_LABEL[c] || c}</span>`)
+    .join('');
 
   const pctTag = s.class12Pct > 0
     ? `<span class="sch-t-tag">Min ${s.class12Pct}% (Cl. 12)</span>`
@@ -109,6 +131,7 @@ function schCard(s) {
       <span class="sch-t-tag">⏱ ${s.duration}</span>
       ${pctTag}
       ${streamTags}
+      ${communityTags}
       ${deadlineHtml}
     </div>
     ${note}
@@ -132,8 +155,10 @@ function resetSchFilters() {
     b.classList.toggle('active', b.dataset.lvl === 'all')
   );
   const strEl  = document.getElementById('sch-stream');
+  const comEl  = document.getElementById('sch-community');
   const srchEl = document.getElementById('sch-search');
   if (strEl)  strEl.value  = '';
+  if (comEl)  comEl.value  = '';
   if (srchEl) srchEl.value = '';
   renderScholarships();
 }

@@ -1252,6 +1252,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-si
 .sch-t-for{font-size:13px;color:var(--text2);line-height:1.4}
 .sch-t-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:2px}
 .sch-t-tag{font-size:11px;background:var(--bg2);color:var(--text2);padding:3px 8px;border-radius:8px;white-space:nowrap}
+.sch-t-comm{background:#F3EBFF;color:#6B21A8;font-weight:600}
 .sch-t-dl-soon{background:#FFF5E0;color:#6B3F00}
 .sch-t-dl-past{color:var(--text3);text-decoration:line-through}
 .sch-t-note{font-size:12px;background:#FFF5E0;color:#6B3F00;border:1px solid #F5C97A;border-radius:8px;padding:6px 10px;line-height:1.4}

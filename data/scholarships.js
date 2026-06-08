@@ -12,6 +12,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'cmi-isi-stipend',
+    community: ['Any'],
     name: 'CMI & ISI Monthly Stipend',
     short: 'CMI / ISI Stipend',
     body: 'Chennai Mathematical Institute / Indian Statistical Institute',
@@ -30,6 +31,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'inspire-she',
+    community: ['Any'],
     name: 'INSPIRE Scholarship for Higher Education (SHE)',
     short: 'INSPIRE SHE',
     body: 'Department of Science & Technology (DST), Govt of India',
@@ -48,6 +50,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'inspire-fellowship',
+    community: ['Any'],
     name: 'INSPIRE Fellowship (AORC — Assured Opportunity for Research Careers)',
     short: 'INSPIRE Fellowship',
     body: 'Department of Science & Technology (DST), Govt of India',
@@ -66,6 +69,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'jrf-csir-net',
+    community: ['Any'],
     name: 'Junior Research Fellowship (JRF) — CSIR-NET',
     short: 'JRF CSIR-NET',
     body: 'CSIR — Council of Scientific and Industrial Research, Govt of India',
@@ -86,6 +90,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'csss',
+    community: ['Any'],
     name: 'Central Sector Scheme of Scholarships (CSSS)',
     short: 'Central Sector',
     body: 'Ministry of Education, Govt of India',
@@ -104,6 +109,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'aicte-pragati',
+    community: ['Girls'],
     name: 'AICTE Pragati Scholarship for Girl Students',
     short: 'AICTE Pragati',
     body: 'All India Council for Technical Education (AICTE), Govt of India',
@@ -122,6 +128,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'aicte-saksham',
+    community: ['PwD'],
     name: 'AICTE Saksham Scholarship for Specially-Abled Students',
     short: 'AICTE Saksham',
     body: 'All India Council for Technical Education (AICTE), Govt of India',
@@ -140,6 +147,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'aicte-swanath',
+    community: ['Any'],
     name: 'AICTE Swanath Scholarship',
     short: 'AICTE Swanath',
     body: 'All India Council for Technical Education (AICTE), Govt of India',
@@ -158,6 +166,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'nsp-post-matric',
+    community: ['SC', 'ST', 'OBC', 'Minority'],
     name: 'Post Matric Scholarship (SC / ST / OBC / Minorities)',
     short: 'NSP Post Matric',
     body: 'Ministry of Social Justice / Tribal Affairs / Minority Affairs, Govt of India',
@@ -176,6 +185,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'pm-yasasvi',
+    community: ['OBC'],
     name: 'PM YASASVI — Young Achievers Scholarship Award for Vibrant India',
     short: 'PM YASASVI',
     body: 'Ministry of Social Justice & Empowerment, Govt of India',
@@ -194,6 +204,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'top-class-sc',
+    community: ['SC'],
     name: 'Top Class Education Scholarship for SC Students',
     short: 'Top Class SC',
     body: 'Ministry of Social Justice & Empowerment, Govt of India',
@@ -212,6 +223,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'pm-vidya-lakshmi-loan',
+    community: ['Any'],
     name: 'PM Vidya Lakshmi Education Loan',
     short: 'PM Vidya Lakshmi',
     body: 'Ministry of Education, Govt of India',
@@ -230,6 +242,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'women-in-stem',
+    community: ['Girls'],
     name: 'Women in STEM Scholarships',
     short: 'Women in STEM',
     body: 'Various Govt & Corporate bodies',
@@ -248,6 +261,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'ishan-uday',
+    community: ['Any'],
     name: 'Ishan Uday — Special Scholarship Scheme for NE Region',
     short: 'Ishan Uday',
     body: 'University Grants Commission (UGC), Govt of India',
@@ -268,6 +282,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'ongc-merit',
+    community: ['SC', 'ST'],
     name: 'ONGC Foundation Merit Scholarship',
     short: 'ONGC Merit',
     body: 'ONGC Foundation — Oil and Natural Gas Corporation (PSU)',
@@ -286,6 +301,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'lic-golden',
+    community: ['Any'],
     name: 'LIC Golden Jubilee Foundation Scholarship',
     short: 'LIC Golden Jubilee',
     body: 'LIC Golden Jubilee Foundation — Life Insurance Corporation (PSU)',
@@ -306,6 +322,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'everest-tn',
+    community: ['Any'],
     name: 'Everest Scholarships for Tamil Students',
     short: 'Everest TN',
     body: 'Everest Foundation / Trust',
@@ -324,6 +341,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'tn-bc-mbc',
+    community: ['OBC'],
     name: 'Tamil Nadu BC/MBC Merit Scholarship',
     short: 'TN BC/MBC',
     body: 'Dept of BC, MBC & Minorities Welfare, Govt of Tamil Nadu',
@@ -342,6 +360,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'tn-sc-st',
+    community: ['SC', 'ST'],
     name: 'Tamil Nadu SC/ST Fee Reimbursement Scholarship',
     short: 'TN SC/ST',
     body: 'Dept of Adi Dravidar & Tribal Welfare, Govt of Tamil Nadu',
@@ -360,6 +379,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'tn-professional-loan',
+    community: ['Any'],
     name: 'TN Govt Collateral-Free Professional Course Loan',
     short: 'TN Prof. Loan',
     body: 'Tamil Nadu Government',
@@ -378,6 +398,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'ka-vidyasiri',
+    community: ['OBC'],
     name: 'Karnataka Vidyasiri Scholarship',
     short: 'Vidyasiri KA',
     body: 'Karnataka Backward Classes Department, Govt of Karnataka',
@@ -398,6 +419,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'reliance-foundation-ug',
+    community: ['Any'],
     name: 'Reliance Foundation Undergraduate Scholarship',
     short: 'Reliance Foundation UG',
     body: 'Reliance Foundation',
@@ -416,6 +438,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'sbi-asha',
+    community: ['Any'],
     name: 'SBI Asha Scholarship Programme',
     short: 'SBI Asha',
     body: 'SBI Foundation — State Bank of India (CSR)',
@@ -434,6 +457,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'hdfc-parivartan',
+    community: ['Any'],
     name: 'HDFC Bank Parivartan ECS Scholarship',
     short: 'HDFC Parivartan',
     body: 'HDFC Bank CSR — Parivartan Programme',
@@ -452,6 +476,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'tata-pankh',
+    community: ['First-gen'],
     name: 'Tata Capital Pankh Scholarship Programme',
     short: 'Tata Pankh',
     body: 'Tata Capital Limited (CSR)',
@@ -470,6 +495,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'aditya-birla',
+    community: ['Any'],
     name: 'Aditya Birla Scholarship Programme',
     short: 'Aditya Birla',
     body: 'Aditya Birla Group',
@@ -488,6 +514,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'vidyasaarathi',
+    community: ['Any'],
     name: 'Vidyasaarathi Scholarship Portal',
     short: 'Vidyasaarathi',
     body: 'NSDL e-Governance Infrastructure Ltd (multiple corporate funders)',
@@ -506,6 +533,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'jk-tyre-scholarship',
+    community: ['Any'],
     name: 'JK Tyre Foundation Scholarship',
     short: 'JK Tyre',
     body: 'JK Tyre & Industries Ltd (CSR)',
@@ -524,6 +552,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'mahindra-scholarship',
+    community: ['Any'],
     name: 'Mahindra Pride Scholarship',
     short: 'Mahindra Pride',
     body: 'Mahindra & Mahindra Ltd (CSR)',
@@ -542,6 +571,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'gsk-mbbs-scholarship',
+    community: ['Any'],
     name: 'GSK Scholars Programme (Medical)',
     short: 'GSK MBBS',
     body: 'GlaxoSmithKline (GSK) India',
@@ -560,6 +590,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'colgate-bds-scholarship',
+    community: ['Any'],
     name: 'Colgate Keep India Smiling Scholarship (BDS)',
     short: 'Colgate BDS',
     body: 'Colgate-Palmolive India',
@@ -578,6 +609,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'ffe',
+    community: ['First-gen'],
     name: 'Foundation for Excellence (FFE) Scholarship',
     short: 'FFE',
     body: 'Foundation for Excellence (US-based non-profit with India operations)',
@@ -598,6 +630,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'fulbright-nehru',
+    community: ['Any'],
     name: 'Fulbright-Nehru Masters Fellowships',
     short: 'Fulbright-Nehru',
     body: 'United States-India Educational Foundation (USIEF) / US Dept of State',
@@ -616,6 +649,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'daad',
+    community: ['Any'],
     name: 'DAAD Scholarship — Germany',
     short: 'DAAD',
     body: 'Deutscher Akademischer Austauschdienst — German Academic Exchange Service',
@@ -634,6 +668,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'chevening',
+    community: ['Any'],
     name: 'Chevening Scholarship',
     short: 'Chevening UK',
     body: 'UK Foreign, Commonwealth & Development Office (FCDO)',
@@ -652,6 +687,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'mif-japan',
+    community: ['Any'],
     name: 'MIF Research Fellowship — Matsumae International Foundation',
     short: 'MIF Japan',
     body: 'Matsumae International Foundation (MIF), Japan',
@@ -670,6 +706,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'mext',
+    community: ['Any'],
     name: 'MEXT Scholarship (Monbukagakusho) — Japan',
     short: 'MEXT Japan',
     body: 'Ministry of Education, Culture, Sports, Science & Technology (MEXT), Japan',
@@ -688,6 +725,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'commonwealth',
+    community: ['Any'],
     name: 'Commonwealth Scholarship and Fellowship Plan (CSFP)',
     short: 'Commonwealth',
     body: 'Association of Commonwealth Universities (ACU) / UK Commonwealth Scholarships Commission',
@@ -706,6 +744,7 @@ const SCHOLARSHIPS = [
 
   {
     id: 'iet-india-scholarship',
+    community: ['Any'],
     name: 'IET India Scholarship Award',
     short: 'IET India',
     body: 'Institution of Engineering and Technology (IET) — India',

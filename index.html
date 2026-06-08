@@ -468,6 +468,17 @@
         <label>Stream</label>
         <select id="sch-stream" onchange="renderScholarships()"><option value="">All streams</option></select>
       </div>
+      <div class="aug-fg">
+        <label>Community / Category</label>
+        <select id="sch-community" onchange="renderScholarships()">
+          <option value="">All categories</option>
+          <option value="SCST">SC / ST</option>
+          <option value="OBC">OBC / BC / MBC</option>
+          <option value="Minority">Minority</option>
+          <option value="Girls">Girls / Women</option>
+          <option value="First-gen">First-generation</option>
+        </select>
+      </div>
       <input type="text" id="sch-search" class="aug-search" placeholder="Search scholarship name, body…" oninput="renderScholarships()">
       <button class="btn-reset" style="align-self:flex-end" onclick="resetSchFilters()">Reset</button>
     </div>
