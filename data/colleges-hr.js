@@ -83,8 +83,8 @@ const COLLEGES_HR=[
       {name:'B.Tech (CSE, ECE, IT, Mechanical, Civil)',exam:'JEE Main / State counselling',examCss:'ce-jee'},
     ]},
     {stream:'Arts & Science',programs:[
-      {name:'B.Sc (Physics, Chemistry, Mathematics, Computer Science, Biotechnology)',exam:'Merit-based',examCss:'ce-merit'},
-      {name:'B.A (Hons) (Economics, English, History, Political Science)',exam:'Merit-based',examCss:'ce-merit'},
+      {name:'B.Sc (Physics, Chemistry, Mathematics, Computer Science, Biotechnology)',exam:'Merit (Class 12)',examCss:'ce-merit'},
+      {name:'B.A (Hons) (Economics, English, History, Political Science)',exam:'Merit (Class 12)',examCss:'ce-merit'},
     ]},
     {stream:'Law',programs:[
       {name:'LL.B (3-year)',exam:'State Entrance / Merit',examCss:'ce-merit'},

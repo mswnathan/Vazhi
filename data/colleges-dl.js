@@ -253,9 +253,9 @@ const COLLEGES_DL=[
   specialNote:'One of India\'s oldest rehabilitation institutes (est. 1955). Offers BPT, BOT, BPO through centralized MoSJE counselling.',
   programGroups:[
     {stream:'Allied Health & Rehabilitation',programs:[
-      {name:'Bachelor of Physiotherapy / BPT (4.5 years)',exam:'MoSJE Counselling',examCss:'ce-own'},
-      {name:'Bachelor of Occupational Therapy / BOT (4.5 years)',exam:'MoSJE Counselling',examCss:'ce-own'},
-      {name:'Bachelor in Prosthetics & Orthotics / BPO (4.5 years)',exam:'MoSJE Counselling',examCss:'ce-own'},
+      {name:'Bachelor of Physiotherapy / BPT (4.5 years)',exam:'MoSJE CET',examCss:'ce-own'},
+      {name:'Bachelor of Occupational Therapy / BOT (4.5 years)',exam:'MoSJE CET',examCss:'ce-own'},
+      {name:'Bachelor in Prosthetics & Orthotics / BPO (4.5 years)',exam:'MoSJE CET',examCss:'ce-own'},
     ]},
   ]},
 

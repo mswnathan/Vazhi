@@ -101,7 +101,7 @@ const COLLEGES_BR=[
   specialNote:'Regional centre under MoSJE offering prosthetics & orthotics programme. Admission through centralized counselling. Similar CRCSRE centres operate in other states.',
   programGroups:[
     {stream:'Allied Health & Rehabilitation',programs:[
-      {name:'Bachelor in Prosthetics & Orthotics / BPO (4.5 years)',exam:'MoSJE Counselling',examCss:'ce-own'},
+      {name:'Bachelor in Prosthetics & Orthotics / BPO (4.5 years)',exam:'MoSJE CET',examCss:'ce-own'},
     ]},
   ]},
 

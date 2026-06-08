@@ -186,11 +186,11 @@ const COLLEGES_UP=[
       {name:'B.Sc AI & Data Science — Aviation System (4 years) — 60 seats',exam:'JEE Main',examCss:'ce-jee'},
     ]},
     {stream:'Arts & Science (Aviation)',programs:[
-      {name:'B.Sc Aviation (4 years) — 30 seats',exam:'CUET Score',examCss:'ce-cuet'},
+      {name:'B.Sc Aviation (4 years) — 30 seats',exam:'CUET UG',examCss:'ce-cuet'},
     ]},
     {stream:'Management (Aviation)',programs:[
-      {name:'BBA Aviation Management (4 years) — 60 seats',exam:'CUET Score',examCss:'ce-cuet'},
-      {name:'BMS Aviation Services & Air Cargo (4 years) — 120 seats',exam:'CUET Score',examCss:'ce-cuet'},
+      {name:'BBA Aviation Management (4 years) — 60 seats',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'BMS Aviation Services & Air Cargo (4 years) — 120 seats',exam:'CUET UG',examCss:'ce-cuet'},
     ]},
   ]},
 

@@ -41,14 +41,14 @@ const COLLEGES_GA=[
   specialNote:'Premier university of Goa. Taleigao Plateau campus. Strong in Marine Sciences, Biotechnology and Portuguese Studies — unique in India.',
   programGroups:[
     {stream:'Arts & Science',programs:[
-      {name:'B.Sc (Marine Sciences, Biotechnology, Computer Science, Chemistry, Physics, Maths)',exam:'Merit-based',examCss:'ce-merit'},
-      {name:'B.A (Economics, English, History, Konkani, Portuguese)',exam:'Merit-based',examCss:'ce-merit'},
+      {name:'B.Sc (Marine Sciences, Biotechnology, Computer Science, Chemistry, Physics, Maths)',exam:'Merit (Class 12)',examCss:'ce-merit'},
+      {name:'B.A (Economics, English, History, Konkani, Portuguese)',exam:'Merit (Class 12)',examCss:'ce-merit'},
     ]},
     {stream:'Management',programs:[
-      {name:'B.B.A (3 years)',exam:'Merit-based',examCss:'ce-merit'},
+      {name:'B.B.A (3 years)',exam:'Merit (Class 12)',examCss:'ce-merit'},
     ]},
     {stream:'Law',programs:[
-      {name:'LL.B (3 years)',exam:'Merit-based',examCss:'ce-merit'},
+      {name:'LL.B (3 years)',exam:'Merit (Class 12)',examCss:'ce-merit'},
     ]},
   ]},
 
