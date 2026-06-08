@@ -31,8 +31,15 @@ let psyState = {
 
 // ── ENTRY POINT ──────────────────────────────────────────────────────────────
 function renderPsychometricTab() {
-  if (window.VazhiAuth && VazhiAuth.isConfigured() && !VazhiAuth.getUser()) {
-    return renderPsyAuthGate();
+  // The test itself needs no login — anyone can take it and see their results.
+  // Only the saved "Full Report" is gated. Wire a one-time re-render so that gated
+  // CTA flips to the real report link the moment a student signs in.
+  if (!renderPsychometricTab._wired && window.VazhiAuth && VazhiAuth.onAuthChange) {
+    VazhiAuth.onAuthChange(() => {
+      const el = document.getElementById('tab-psychometric');
+      if (el && el.classList.contains('active')) renderPsychometricTab();
+    });
+    renderPsychometricTab._wired = true;
   }
   switch (psyState.phase) {
     case 'intro':                return renderPsychometricIntro();
@@ -49,21 +56,24 @@ function renderPsychometricTab() {
 
 function psyEl() { return document.getElementById('tab-psychometric'); }
 
-function renderPsyAuthGate() {
-  const el = psyEl();
-  if (!el) return;
-  el.innerHTML = `
-    <div class="psy-gate">
-      <div class="psy-gate-ico">🔒</div>
-      <h2>Sign in to take the Know Yourself test</h2>
-      <p>Your answers and career report are saved to your account, so you can come back later, compare results over time, and share with your parents or mentor.</p>
-      <button class="psy-gate-btn" onclick="VazhiAuth.openModal('signup')">Create free account</button>
-      <button class="psy-gate-link" onclick="VazhiAuth.openModal('signin')">Already have an account? Sign in</button>
-    </div>`;
-  if (!renderPsyAuthGate._wired) {
-    VazhiAuth.onAuthChange(u => { if (u) renderPsychometricTab(); });
-    renderPsyAuthGate._wired = true;
+// Is the saved-report feature available? True when signed in, or when auth isn't
+// configured at all (e.g. local/dev) — in which case nothing should be gated.
+function psyCanSaveReport() {
+  if (!(window.VazhiAuth && VazhiAuth.isConfigured && VazhiAuth.isConfigured())) return true;
+  return !!VazhiAuth.getUser();
+}
+
+// Results CTA: the on-page results are a free teaser; the printable Full Report
+// (report.html) is the account-gated payoff.
+function psyReportCTA(L) {
+  if (psyCanSaveReport()) {
+    return `<button class="psy-cta-report" onclick="window.open('report.html','_blank')">${L === 'en' ? '📄 View Full Report →' : '📄 முழு Report பார்க்க →'}</button>`;
   }
+  return `<button class="psy-cta-report psy-cta-report-locked" onclick="psyGateReport()">${L === 'en' ? '🔒 Sign in to save your full report' : '🔒 முழு report-ஐ சேமிக்க உள்நுழையவும்'}</button>`;
+}
+
+function psyGateReport() {
+  if (window.VazhiAuth && VazhiAuth.openModal) VazhiAuth.openModal('signup');
 }
 
 // ── LANGUAGE TOGGLE ──────────────────────────────────────────────────────────
@@ -131,7 +141,9 @@ function psyGoBack() {
 function renderPsychometricIntro() {
   const L = psyState.lang;
   const u = window.VazhiAuth && VazhiAuth.getUser();
-  const firstName = u ? ((u.displayName || u.email.split('@')[0] || '').trim().split(' ')[0]) : '';
+  const _rawName = u ? ((u.displayName || u.email.split('@')[0] || '').trim().split(' ')[0]) : '';
+  const _badNames = new Set(['my','the','a','an','i','me','user','test','admin','null','undefined']);
+  const firstName = (_rawName.length >= 2 && !_badNames.has(_rawName.toLowerCase())) ? _rawName : '';
   const t = {
     title:   firstName
       ? (L === 'en' ? `Discover Your Path, ${firstName}` : `உங்கள் எதிர்கால பாதையை கண்டுபிடியுங்கள், ${firstName}`)
@@ -738,9 +750,7 @@ function renderPsychometricResults() {
   </div>
 
   <div class="psy-results-cta">
-    <button class="psy-cta-report" onclick="window.open('report.html','_blank')">
-      ${L === 'en' ? '📄 View Full Report →' : '📄 முழு Report பார்க்க →'}
-    </button>
+    ${psyReportCTA(L)}
     <button class="psy-cta-primary" onclick="switchTab('find')">
       ${L === 'en' ? '🔍 Explore All Careers →' : '🔍 அனைத்து தொழில்களையும் ஆராயுங்கள் →'}
     </button>
@@ -778,9 +788,7 @@ function renderPsychometricResults() {
   </div>
 
   <div class="psy-results-cta">
-    <button class="psy-cta-report" onclick="window.open('report.html','_blank')">
-      ${L === 'en' ? '📄 View Full Report →' : '📄 முழு Report பார்க்க →'}
-    </button>
+    ${psyReportCTA(L)}
     <button class="psy-cta-primary" onclick="switchTab('find')">
       ${L === 'en' ? '🔍 Explore All Careers →' : '🔍 அனைத்து தொழில்களையும் ஆராயுங்கள் →'}
     </button>

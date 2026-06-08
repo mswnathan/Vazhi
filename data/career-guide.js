@@ -587,7 +587,7 @@ const CAREER_MAP = [
 
   {
     id: 'fintech-analyst',
-    keywords: ['fintech', 'financial technology', 'data finance', 'banking tech', 'payment systems', 'bcom data science'],
+    keywords: ['fintech', 'financial technology', 'data finance', 'banking tech', 'payment systems'],
     title: 'FinTech Analyst / Data Finance Professional',
     ico: '📊',
     bc: 'accent',
@@ -787,6 +787,23 @@ const CAREER_MAP = [
     examNames: ['CUET UG', 'KEAM', 'IISER IAT'],
     augIds: ['phd', 'msc'],
     careers: ['Marine Biologist', 'Oceanographer', 'Fisheries Scientist', 'Coastal Zone Manager', 'Marine Conservationist', 'Research Scientist (NCAOR / CMLRE / ICAR-CMFRI)'],
+  },
+  {
+    id: 'bca-bsc-cs',
+    keywords: ['bca', 'bsc cs', 'b.sc cs', 'bsc computer science', 'bsc computer', 'computer applications', 'bachelor of computer applications', 'software developer', 'programming', 'coding', 'web development', 'app development', 'mca'],
+    title: 'BCA / B.Sc Computer Science',
+    ico: '💻',
+    bc: 'teal',
+    summary: 'BCA and B.Sc Computer Science are the affordable, JEE-free route into software and IT. Government Arts & Science colleges and central universities offer these degrees on merit (or CUET), so you can become a coder, web developer, or data analyst without an engineering seat. Many graduates go on to an MCA or straight into IT jobs.',
+    class12: {
+      subjects: ['PCM+CS', 'Commerce+Maths', 'Any'],
+      tip: 'You do NOT need to crack JEE for this. In Tamil Nadu, government Arts & Science colleges admit B.Sc Computer Science on Class 12 merit (TNGASA). Central universities use CUET UG. Maths in Class 12 helps but most colleges accept any stream — check each college\'s eligibility.',
+    },
+    streamId: 'Science',
+    courseFilter: ['computer', 'bca', 'data science'],
+    examNames: ['CUET UG'],
+    augIds: ['mca', 'mba'],
+    careers: ['Software Developer', 'Web & App Developer', 'Data Analyst', 'IT Support Engineer', 'Database / Systems Administrator', 'MCA → Software Engineer'],
   },
 
 ];

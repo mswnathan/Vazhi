@@ -241,12 +241,12 @@
   <!-- TAB: FIND MY PATH (Find by Interest + Career Goal Search) -->
   <div class="tab-content" id="tab-find">
     <div class="exam-mode-tabs find-mode-tabs">
-      <button class="exam-mode-btn active" data-fmode="interest" onclick="setFindMode('interest')">🎯 Find by Interest</button>
-      <button class="exam-mode-btn" data-fmode="career" onclick="setFindMode('career')">🔍 Career Goal Search</button>
+      <button class="exam-mode-btn active" data-fmode="career" onclick="setFindMode('career')">🔍 Career Goal Search</button>
+      <button class="exam-mode-btn" data-fmode="interest" onclick="setFindMode('interest')">🎯 Find by Interest</button>
     </div>
 
     <!-- Find by Interest content -->
-    <div id="find-panel-interest">
+    <div id="find-panel-interest" style="display:none">
       <div class="if-wrap">
         <div class="if-step on" id="if1">
           <div class="if-h2">What are your Class 12 subjects?</div>
@@ -290,7 +290,7 @@
     </div><!-- /find-panel-interest -->
 
     <!-- Career Goal Search content -->
-    <div id="find-panel-career" style="display:none">
+    <div id="find-panel-career">
       <div class="cg-hero">
         <div class="cg-hero-title">What do you want to become?</div>
         <div class="cg-hero-sub">Type a career goal — we'll show you the complete path: subjects → entrance exam → degree → after UG → jobs.</div>

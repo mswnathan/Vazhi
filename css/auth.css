@@ -185,33 +185,6 @@
 .vz-save-btn:hover { border-color: #ef4444; color: #ef4444; }
 .vz-save-btn.saved { background: #fee2e2; border-color: #ef4444; color: #b91c1c; }
 
-/* Psychometric sign-in gate */
-.psy-gate {
-  max-width: 520px;
-  margin: 60px auto;
-  text-align: center;
-  padding: 40px 28px;
-  background: #fff;
-  border: 1px solid #e5e7eb;
-  border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.06);
-  font-family: 'Plus Jakarta Sans', sans-serif;
-}
-.psy-gate-ico { font-size: 42px; margin-bottom: 12px; }
-.psy-gate h2 { font: 700 22px 'Fraunces', serif; color: #111; margin: 0 0 10px; }
-.psy-gate p { color: #555; font-size: 14px; line-height: 1.6; margin: 0 0 22px; }
-.psy-gate-btn {
-  padding: 12px 24px;
-  background: linear-gradient(135deg,#6c5ce7,#0984e3);
-  color: #fff; border: 0; border-radius: 10px; cursor: pointer;
-  font: 700 14px 'Plus Jakarta Sans', sans-serif;
-}
-.psy-gate-link {
-  display: block; margin: 14px auto 0;
-  background: transparent; border: 0; color: #6c5ce7; cursor: pointer;
-  font: 500 13px 'Plus Jakarta Sans', sans-serif;
-}
-
 @media (max-width: 600px) {
   .vz-auth-label { display: none; }
   .vz-auth-btn { padding: 6px 10px; }

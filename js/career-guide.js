@@ -20,6 +20,13 @@ function cgNormalise(raw) {
     .trim();
 }
 
+// ── PUNCTUATION-INSENSITIVE KEY ──────────────────────────────────────────
+// Strips dots/slashes/punctuation so "b.com", "b.tech", "b.e." match the
+// same keys as "bcom", "btech", "be". Keeps word spaces intact.
+function cgKey(s) {
+  return (s || '').toLowerCase().replace(/[^a-z0-9\s]+/g, '').replace(/\s+/g, ' ').trim();
+}
+
 // ── AUTOCOMPLETE ─────────────────────────────────────────────────────────
 
 let cgSuggestIdx = -1; // for keyboard navigation
@@ -35,15 +42,15 @@ function cgLiveSearch() {
     return;
   }
 
-  const q = cgNormalise(raw); // strip filler phrases before matching
+  const q = cgKey(cgNormalise(raw)); // strip filler phrases + punctuation before matching
 
   // Match: title contains typed text, OR any keyword starts with typed text
   // For short inputs only use starts-with — avoids false positives
   // e.g. "ban" should not match "urban" or "husbandry"
   const matches = CAREER_MAP.filter(c => {
-    const titleMatch = c.title.toLowerCase().includes(q);
-    const kwStartsWith = c.keywords.some(k => k.startsWith(q));
-    const kwContains = q.length >= CG_SUBSTR_MIN_LEN && c.keywords.some(k => k.includes(q));
+    const titleMatch = cgKey(c.title).includes(q);
+    const kwStartsWith = c.keywords.some(k => cgKey(k).startsWith(q));
+    const kwContains = q.length >= CG_SUBSTR_MIN_LEN && c.keywords.some(k => cgKey(k).includes(q));
     return titleMatch || kwStartsWith || kwContains;
   }).slice(0, CG_MAX_SUGGESTIONS);
 
@@ -130,10 +137,16 @@ document.addEventListener('click', e => {
 
 const STREAM_FALLBACK = [
   { keywords: ['design', 'art', 'creative', 'sketch', 'visual', 'draw', 'craft', 'colour', 'color', 'textile', 'fabric', 'pattern', 'nid', 'nift', 'uceed', 'jewel', 'jewellery', 'ceramic', 'pottery'], streamId: 'Design', label: 'Design & Architecture', ico: '✏' },
+  // BCA / B.Sc Computer Applications — route to Science (B.Sc CS, Data Science),
+  // listed before Engineering so these specific terms win over the generic 'computer'.
+  { keywords: ['bca', 'computer application', 'computer applications', 'bsc cs', 'bsc computer', 'b sc computer'], streamId: 'Science', label: 'Computer Applications & B.Sc Computer Science', ico: '💻' },
   { keywords: ['engineering', 'tech', 'code', 'coding', 'software', 'hardware', 'robotics', 'automobile', 'iit', 'nit', 'jee', 'computer', 'programming', 'developer'], streamId: 'Engineering', label: 'Engineering & Technology', ico: '⚙' },
   { keywords: ['medical', 'health', 'biology', 'mbbs', 'neet', 'medicine', 'clinic', 'treatment', 'patient', 'surgery', 'dental', 'ayurveda', 'homeopathy'], streamId: 'Medical', label: 'Medical & Health Sciences', ico: '🩺' },
   { keywords: ['law', 'legal', 'court', 'clat', 'advocate', 'barrister', 'solicitor', 'constitution', 'justice', 'judge', 'rights'], streamId: 'Law', label: 'Law', ico: '⚖' },
-  { keywords: ['management', 'business', 'mba', 'bba', 'marketing', 'entrepreneur', 'startup', 'hr', 'finance', 'commerce', 'economics', 'strategy'], streamId: 'Management', label: 'Management & Business', ico: '📊' },
+  // Plain B.Com / commerce → Commerce stream (B.Com, CA, CS/CMA). Listed before
+  // Management so 'bcom'/'commerce' land on commerce courses, not generic business.
+  { keywords: ['bcom', 'commerce', 'accountancy', 'accounting', 'company secretary', 'cost accountant', 'auditing', 'taxation'], streamId: 'Commerce', label: 'Commerce & Accounting', ico: '🧾' },
+  { keywords: ['management', 'business', 'mba', 'bba', 'marketing', 'entrepreneur', 'startup', 'hr', 'finance', 'economics', 'strategy'], streamId: 'Management', label: 'Management & Business', ico: '📊' },
   { keywords: ['agriculture', 'farming', 'farm', 'crop', 'soil', 'irrigation', 'horticulture', 'agronomy', 'veterinary', 'animal', 'fisheries', 'forestry', 'food processing'], streamId: 'Agriculture', label: 'Agriculture & Allied Sciences', ico: '🌾' },
   { keywords: ['hotel', 'hospitality', 'tourism', 'travel', 'catering', 'food', 'beverage', 'housekeeping', 'resort', 'airline cabin'], streamId: 'Hotel', label: 'Hotel & Hospitality', ico: '🏨' },
   { keywords: ['sports', 'athlete', 'cricket', 'football', 'badminton', 'swimming', 'tennis', 'kabaddi', 'volleyball', 'fitness', 'physical', 'gym', 'coaching'], streamId: 'Sports', label: 'Sports & Physical Education', ico: '🏅' },
@@ -144,8 +157,9 @@ const STREAM_FALLBACK = [
 ];
 
 function cgFindStreamFallback(raw) {
+  const key = cgKey(raw); // punctuation-insensitive, so "b.com" matches "bcom"
   for (const s of STREAM_FALLBACK) {
-    if (s.keywords.some(k => raw.includes(k))) return s;
+    if (s.keywords.some(k => key.includes(cgKey(k)))) return s;
   }
   return null;
 }
@@ -159,6 +173,37 @@ function cgGoToStream(streamId) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+// Career-card streamId → Colleges-tab stream filter value (cf-stream).
+// The college filter only offers these tokens (see COL_STREAM_LABELS in
+// js/colleges.js); 'Science'/'Commerce'/'Arts' all live under 'Arts & Science'.
+const CG_COLLEGE_STREAM = {
+  Engineering: 'Engineering',
+  Medical: 'Medical',
+  Paramedical: 'Medical',
+  Science: 'Arts & Science',
+  Arts: 'Arts & Science',
+  Commerce: 'Arts & Science',
+  Management: 'Management',
+  Law: 'Law',
+  Design: 'Design',
+  Agriculture: 'Agriculture',
+};
+
+// Deep-link from a career card to the Colleges tab, pre-filtered to that field,
+// so students jump straight to real colleges they can apply to.
+function cgGoToColleges(streamId) {
+  const val = CG_COLLEGE_STREAM[streamId];
+  switchTab('courses');
+  setCoursesMode('colleges');                              // shows the Colleges view, clears filters
+  if (typeof setCollegeMode === 'function') setCollegeMode('ug');
+  if (typeof populateCollegeFilters === 'function') populateCollegeFilters();
+  const sel = document.getElementById('cf-stream');
+  if (sel && val && [...sel.options].some(o => o.value === val)) sel.value = val;
+  if (typeof updateDistrictFilter === 'function') updateDistrictFilter();
+  if (typeof renderColleges === 'function') renderColleges();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 // ── SEARCH ──────────────────────────────────────────────────────────────
 
 function searchCareer() {
@@ -166,14 +211,18 @@ function searchCareer() {
   if (raw.length < CG_MIN_INPUT_LEN) return;
   document.getElementById('cg-suggestions').style.display = 'none';
 
-  const q = cgNormalise(raw); // strip filler phrases before scoring
+  const q = cgKey(cgNormalise(raw)); // strip filler phrases + punctuation before scoring
 
-  // Score each CAREER_MAP entry by keyword hits
-  // Short keywords (< 4 chars) must match as whole words to avoid false positives
+  // Score each CAREER_MAP entry by keyword hits.
+  // When EITHER the query or the keyword is short (< 4 chars) require a whole-word
+  // match — otherwise "be" (from "b.e.") would substring-hit "cy-be-r", "em-be-dded".
   const words = q.split(/\s+/);
   const scored = CAREER_MAP.map(c => {
-    const hits = c.keywords.filter(k => {
-      if (k.length < CG_SUBSTR_MIN_LEN) return words.includes(k);   // whole-word match only for short keys
+    const hits = c.keywords.filter(kw => {
+      const k = cgKey(kw);
+      if (k.length < CG_SUBSTR_MIN_LEN || q.length < CG_SUBSTR_MIN_LEN) {
+        return k.split(' ').some(w => words.includes(w));   // whole-word match
+      }
       return q.includes(k) || k.includes(q);    // substring match for longer keys
     });
     return { entry: c, score: hits.length };
@@ -193,6 +242,9 @@ function searchCareer() {
           <button class="cg-btn" style="margin-top:12px" onclick="cgGoToStream('${fallback.streamId}')">
             Browse ${fallback.label} courses →
           </button>
+          ${CG_COLLEGE_STREAM[fallback.streamId] ? `<button class="cg-btn cg-btn-alt" style="margin-top:12px" onclick="cgGoToColleges('${fallback.streamId}')">
+            🏛 See colleges offering this →
+          </button>` : ''}
         </div>
       </div>`;
     } else {
@@ -306,7 +358,10 @@ function renderCareerPath(c) {
       <div class="cg-course-grid">
         ${showCourses.map(cc => courseCard(cc, '')).join('')}
       </div>
-      ${courses.length > CG_MAX_COURSES ? `<div class="cg-tab-jump"><button class="cg-tab-link" onclick="cgGoToStream('${c.streamId}')">📚 See all ${c.streamId} courses →</button></div>` : ''}
+      <div class="cg-tab-jump">
+        ${CG_COLLEGE_STREAM[c.streamId] ? `<button class="cg-tab-link" onclick="cgGoToColleges('${c.streamId}')">🏛 See colleges offering this →</button>` : ''}
+        ${courses.length > CG_MAX_COURSES ? `<button class="cg-tab-link" onclick="cgGoToStream('${c.streamId}')">📚 See all ${c.streamId} courses →</button>` : ''}
+      </div>
     </div>`;
   }
 
