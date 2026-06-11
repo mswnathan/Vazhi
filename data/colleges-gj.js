@@ -116,6 +116,16 @@ const COLLEGES_GJ=[
     ]},
   ]},
 
+{name:'U.N. Mehta Institute of Cardiology & Research Centre',short:'UNMICRC',type:'State',district:'Ahmedabad',state:'Gujarat',
+  naac:'Accredited',nirf:'Top Cardiac Centre',affil:'BJ Medical College / Gujarat University',website:'unmicrc.org',
+  streams:['Medical'],
+  specialNote:'One of India\'s largest super-specialty cardiac hospitals & research centres. Primarily PG/super-specialty (DM Cardiology, MCh CVTS), but offers a UG-level Bachelor of Physiotherapy for Class 12 PCB students.',
+  programGroups:[
+    {stream:'Medical & Health',programs:[
+      {name:'BPT — Bachelor of Physiotherapy (4.5 years incl. internship)',exam:'Merit (Class 12 PCB) / Gujarat University Entrance Test',examCss:'ce-merit'},
+    ]},
+  ]},
+
 {name:'Gujarat University',short:'GU',type:'State',district:'Ahmedabad',state:'Gujarat',
   naac:'A+',nirf:'Top State University',affil:'Gujarat University (State)',website:'gujaratuniversity.ac.in',
   streams:['Arts & Science','Management'],

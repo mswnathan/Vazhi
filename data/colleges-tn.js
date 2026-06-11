@@ -1526,10 +1526,10 @@ const COLLEGES=[
     ]},
   ]},
 
-{name:'Pondicherry Engineering College',short:'PEC',type:'State',district:'Puducherry',state:'Puducherry',
-  naac:'A',nirf:'Not Ranked',affil:'Pondicherry University (Autonomous)',website:'pec.edu',
+{name:'Puducherry Technological University (formerly Pondicherry Engineering College)',short:'PTU',type:'State',district:'Puducherry',state:'Puducherry',
+  naac:'A',nirf:'Not Ranked',affil:'State University (Autonomous) — Govt of Puducherry',website:'ptuniv.edu.in',
   streams:['Engineering'],
-  specialNote:'Premier state-govt engineering college of Puducherry UT. Admissions via CENTAC (merit-based, Class 12 marks). TN students eligible.',
+  specialNote:'Premier state-govt engineering university of Puducherry UT — upgraded from Pondicherry Engineering College (PEC) to a full university in 2020. Admissions via CENTAC (merit-based, Class 12 marks). TN students eligible.',
   programGroups:[
     {stream:'Engineering & Technology',programs:[
       {name:'B.E. Civil Engineering (4 years)',exam:'CENTAC Puducherry',examCss:'ce-own'},
