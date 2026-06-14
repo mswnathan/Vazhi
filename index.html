@@ -117,11 +117,14 @@ body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);c
 /* lenses */
 .lenses{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:14px}
 .lens{font-size:.8rem;font-weight:600;padding:5px 12px;border-radius:999px;border:1px solid var(--border);background:var(--surface2);color:var(--text2)}
-.lens.on{background:var(--coral-bg);border-color:#F0BBA8;color:var(--coral)}
+.lens.on{background:var(--coral-bg);border-color:#F0BBA8;color:var(--coral);cursor:pointer}
+.lens.sel{background:var(--coral);border-color:var(--coral);color:#fff}
 .lens .soon{font-size:.64rem;color:var(--text3);margin-left:5px;font-weight:700;text-transform:uppercase}
 
 .chips{display:flex;flex-wrap:wrap;gap:9px}
-.chip{background:var(--surface2);border:1px solid var(--border);border-radius:999px;padding:8px 14px;font-size:.9rem;font-weight:600;display:inline-flex;align-items:center;gap:7px}
+.chip{background:var(--surface2);border:1px solid var(--border);border-radius:999px;padding:8px 14px;font-size:.9rem;font-weight:600;display:inline-flex;align-items:center;gap:7px;transition:opacity .2s}
+.chip.dim{opacity:.2;pointer-events:none}
+.u-card.dim{opacity:.15;pointer-events:none}
 
 /* unknown careers */
 .unknown{margin-top:16px;background:linear-gradient(135deg,#ECEEF6,#fff);border:1px solid #C8CCDC;border-radius:var(--r);padding:16px 17px}
@@ -381,20 +384,20 @@ footer{padding:32px 0 54px;text-align:center;color:var(--text3);font-size:.85rem
 
 <script src="data/announcements.js"></script>
 
-<footer>Vazhi வழி — guidance for students after Class 12 · government, aided &amp; merit-based institutions · <a href="explore.html#courses" style="color:var(--brand-dk);font-weight:600">Browse all courses &amp; colleges →</a></footer>
+<footer>Vazhi வழி — guidance for students after Class 12 · government, aided &amp; merit-based institutions</footer>
 
 <script>
 /* ───────── DREAM CARDS ───────── */
 const DREAMS = [
   {id:'help',  ico:'🩺', txt:'Helping People',     anchor:'health · teaching · public service', live:true},
   {id:'nature',ico:'🌿', txt:'Working with Nature', anchor:'agriculture · earth · wildlife', live:true},
-  {id:'build', ico:'🛠️', txt:'Building Things',     anchor:'engineer · architect'},
-  {id:'money', ico:'🔒', txt:'Financial Security',  anchor:'actuary · banker · CA'},
-  {id:'impact',ico:'🌍', txt:'Making an Impact',    anchor:'policy · development'},
-  {id:'sci',   ico:'🔬', txt:'Discovering Knowledge',anchor:'scientist · researcher'},
-  {id:'create',ico:'🎨', txt:'Creating & Designing',anchor:'designer · architect'},
-  {id:'serve', ico:'🏛️', txt:'Serving Society',     anchor:'civil services · law'},
-  {id:'unsure',ico:'🧭', txt:'Not Sure Yet',        anchor:'explore + find your fit'},
+  {id:'build', ico:'🛠️', txt:'Building Things',     anchor:'engineer · architect', live:true},
+  {id:'money', ico:'🔒', txt:'Financial Security',  anchor:'actuary · banker · CA', live:true},
+  {id:'impact',ico:'🌍', txt:'Making an Impact',    anchor:'policy · development', live:true},
+  {id:'sci',   ico:'🔬', txt:'Discovering Knowledge',anchor:'scientist · researcher', live:true},
+  {id:'create',ico:'🎨', txt:'Creating & Designing',anchor:'designer · architect', live:true},
+  {id:'serve', ico:'🏛️', txt:'Serving Society',     anchor:'civil services · law', live:true},
+  {id:'unsure',ico:'🧭', txt:'Not Sure Yet',        anchor:'explore + find your fit', live:true},
 ];
 
 /* ───────── DREAM REGISTRY ───────── */
@@ -445,16 +448,16 @@ const DREAMDATA = {
     unknownHeading:'Beyond farming & forestry',
     clusterLabel:'Roles inside this dream',
     cluster:[
-      {e:'🌾',n:'Agricultural Scientist'},{e:'🐄',n:'Veterinarian'},{e:'🌲',n:'Forest Officer'},
-      {e:'🍅',n:'Horticulturist'},{e:'🚜',n:'Agripreneur'}
+      {e:'🌾',n:'Agricultural Scientist',l:'Agriculture'},{e:'🐄',n:'Veterinarian',l:'Agriculture'},{e:'🌲',n:'Forest Officer',l:'Forestry & Wildlife'},
+      {e:'🍅',n:'Horticulturist',l:'Agriculture'},{e:'🚜',n:'Agripreneur',l:'Agriculture'}
     ],
     unknown:[
-      {ico:'⛰️',n:'Geologist',label:'Earth Scientist',short:'Reads the earth.',one:'Reads the earth — finds groundwater, maps minerals & quake risk.',why:['Earth science','Fieldwork','Problem-solving'],pathline:'B.Sc Geology → M.Sc (IIT-JAM) → GSI',gov:'Geological Survey of India · ONGC',risk:'green',cost:'₹ low (govt)',related:['Environmental Science','Earth Research'],path:'geology'},
-      {ico:'🌊',n:'Oceanographer',label:'Ocean Scientist',short:'Studies the seas.',one:'Studies currents, marine life and the monsoon engine.',why:['Marine life','Physics & biology','Adventure'],pathline:'B.Sc Marine/Earth Sci → M.Sc Oceanography',gov:'NIOT · INCOIS · NCPOR',risk:'green',cost:'₹ low (govt)',related:['Earth Research','Fisheries'],path:'earthres'},
-      {ico:'🐅',n:'Wildlife Biologist',label:'Wildlife Scientist',short:'Protects wild animals.',one:"Protects tigers & elephants — runs the world's biggest census.",why:['Animals','Fieldwork','Conservation'],pathline:'B.Sc Zoology → M.Sc Wildlife → WII',gov:'Wildlife Institute of India · forest depts',risk:'green',cost:'₹ low (govt)',related:['Forestry','Environmental Science'],path:'wildlife'},
-      {ico:'📡',n:'Seismologist',label:'Earthquake Scientist',short:'Tracks earthquakes.',one:'Tracks earthquakes and warns before the ground moves.',why:['Earth science','Physics','Public safety'],pathline:'B.Sc Geology/Physics → M.Sc → NCS',gov:'National Centre for Seismology · IMD',risk:'green',cost:'₹ low (govt)',related:['Geology','Earth Research'],path:'geology'},
-      {ico:'🏔️',n:'Glaciologist',label:'Glacier Scientist',short:'Studies glaciers.',one:"Studies Himalayan glaciers — India's frozen water bank.",why:['Earth science','Adventure','Climate'],pathline:'B.Sc Geology → M.Sc → NCPOR',gov:'NCPOR (polar research) · GSI',risk:'amber',cost:'₹ low (govt)',related:['Geology','Earth Research'],path:'earthres'},
-      {ico:'🌱',n:'Soil Scientist',label:'Soil Scientist',short:'Keeps farmland alive.',one:'Keeps farmland alive — the science under every harvest.',why:['Agriculture','Chemistry','Real-world impact'],pathline:'B.Sc Agriculture → M.Sc Soil Science',gov:'ICAR · state agri depts',risk:'green',cost:'₹ low (govt)',related:['Agriculture','Environmental Science'],path:'agri'},
+      {ico:'⛰️',n:'Geologist',label:'Earth Scientist',l:'Earth & Ocean',short:'Reads the earth.',one:'Reads the earth — finds groundwater, maps minerals & quake risk.',why:['Earth science','Fieldwork','Problem-solving'],pathline:'B.Sc Geology → M.Sc (IIT-JAM) → GSI',gov:'Geological Survey of India · ONGC',risk:'green',cost:'₹ low (govt)',related:['Environmental Science','Earth Research'],path:'geology'},
+      {ico:'🌊',n:'Oceanographer',label:'Ocean Scientist',l:'Earth & Ocean',short:'Studies the seas.',one:'Studies currents, marine life and the monsoon engine.',why:['Marine life','Physics & biology','Adventure'],pathline:'B.Sc Marine/Earth Sci → M.Sc Oceanography',gov:'NIOT · INCOIS · NCPOR',risk:'green',cost:'₹ low (govt)',related:['Earth Research','Fisheries'],path:'earthres'},
+      {ico:'🐅',n:'Wildlife Biologist',label:'Wildlife Scientist',l:'Forestry & Wildlife',short:'Protects wild animals.',one:"Protects tigers & elephants — runs the world's biggest census.",why:['Animals','Fieldwork','Conservation'],pathline:'B.Sc Zoology → M.Sc Wildlife → WII',gov:'Wildlife Institute of India · forest depts',risk:'green',cost:'₹ low (govt)',related:['Forestry','Environmental Science'],path:'wildlife'},
+      {ico:'📡',n:'Seismologist',label:'Earthquake Scientist',l:'Earth & Ocean',short:'Tracks earthquakes.',one:'Tracks earthquakes and warns before the ground moves.',why:['Earth science','Physics','Public safety'],pathline:'B.Sc Geology/Physics → M.Sc → NCS',gov:'National Centre for Seismology · IMD',risk:'green',cost:'₹ low (govt)',related:['Geology','Earth Research'],path:'geology'},
+      {ico:'🏔️',n:'Glaciologist',label:'Glacier Scientist',l:'Earth & Ocean',short:'Studies glaciers.',one:"Studies Himalayan glaciers — India's frozen water bank.",why:['Earth science','Adventure','Climate'],pathline:'B.Sc Geology → M.Sc → NCPOR',gov:'NCPOR (polar research) · GSI',risk:'amber',cost:'₹ low (govt)',related:['Geology','Earth Research'],path:'earthres'},
+      {ico:'🌱',n:'Soil Scientist',label:'Soil Scientist',l:'Agriculture',short:'Keeps farmland alive.',one:'Keeps farmland alive — the science under every harvest.',why:['Agriculture','Chemistry','Real-world impact'],pathline:'B.Sc Agriculture → M.Sc Soil Science',gov:'ICAR · state agri depts',risk:'green',cost:'₹ low (govt)',related:['Agriculture','Environmental Science'],path:'agri'},
     ],
     paths:{
       primary:[
@@ -470,6 +473,244 @@ const DREAMDATA = {
         {id:'wildlife',name:'B.Sc Zoology → Wildlife',deg:'3 yr + M.Sc · Wildlife research',fit:'Best if you want fieldwork with animals',anchor:'WII, Central Univ',fee:'low',risk:'green',riskLbl:'CUET / state'},
         {id:'fisheries',name:'B.F.Sc Fisheries',deg:'4 yr · Fisheries scientist',fit:'Best if you want rivers, seas & aquaculture',anchor:'TNJFU, CIFE',fee:'low (govt)',risk:'amber',riskLbl:'ICAR / state'},
         {id:'earthres',name:'B.Sc → Earth/Ocean Research',deg:'Oceanography, geology, climate',fit:'Best if you want deep research & discovery',anchor:'IISER, NIO, IITs',fee:'low',risk:'green',riskLbl:'CUET / IAT'},
+      ],
+    },
+  },
+
+  /* ════ BUILDING THINGS ════ */
+  build:{
+    ico:'🛠️', dream:'Building Things', anchor:'Engineering · Architecture · Infrastructure · Design-Tech',
+    lenses:[{n:'Engineering',ready:true},{n:'Architecture',ready:true},{n:'Infrastructure',ready:false},{n:'Robotics & Electronics',ready:false}],
+    confidence:['I enjoy maths & physics','I like making or fixing things','I\'m comfortable with problem-solving under pressure','I like seeing ideas become real structures or products'],
+    related:[{id:'sci',label:'🔬 Discovering Knowledge'},{id:'create',label:'🎨 Creating & Designing'},{id:'nature',label:'🌿 Working with Nature'}],
+    unknownHeading:'Beyond engineer & architect',
+    clusterLabel:'Roles inside this dream',
+    cluster:[
+      {e:'⚙️',n:'Engineer',l:'Engineering'},{e:'🏛️',n:'Architect',l:'Architecture'},{e:'🔌',n:'Electronics Engineer',l:'Engineering'},
+      {e:'🏗️',n:'Civil Engineer',l:'Engineering'},{e:'🤖',n:'Robotics Engineer',l:'Engineering'}
+    ],
+    unknown:[
+      {ico:'🌊',n:'Hydraulic Engineer',label:'Water Systems Engineer',l:'Engineering',short:'Designs dams & canals.',one:'Designs dams, canals and flood-control systems — water infrastructure that feeds millions.',why:['Maths & physics','Social impact','Outdoors'],pathline:'B.Tech Civil → M.Tech Hydraulics → CWC',gov:'CWC · WAPCOS · state irrigation depts',risk:'green',cost:'₹ low (govt)',related:['Civil Engineering','Environment'],path:'btech'},
+      {ico:'🚀',n:'Aerospace Engineer',label:'Space & Aircraft Engineer',l:'Engineering',short:'Builds aircraft & rockets.',one:'Designs aircraft, rockets and satellites — ISRO and HAL recruit from the same B.Tech route.',why:['Physics','Maths','Big ambitions'],pathline:'B.Tech Aerospace / Mech at IIT/NIT',gov:'ISRO · HAL · DRDO · NAL',risk:'red',cost:'₹ low (NIT)',related:['Electronics','Maths'],path:'btech'},
+      {ico:'🗺️',n:'Town Planner',label:'City Designer',l:'Architecture',short:'Plans how cities grow.',one:'Plans how cities expand — roads, housing zones, public parks, transport grids.',why:['Design + impact','Geography','Social systems'],pathline:'B.Arch or B.Planning → M.Planning',gov:'Town & Country Planning · Smart Cities · DDA',risk:'amber',cost:'₹ low (govt)',related:['Architecture','Civil'],path:'barch'},
+      {ico:'⚓',n:'Naval Architect',label:'Ship Designer',l:'Engineering',short:'Designs ships & submarines.',one:'Designs ships, submarines and offshore platforms for India\'s navy and ports.',why:['Maths','Maritime','Unique field'],pathline:'B.Tech Naval Architecture at IIT Kharagpur',gov:'Cochin Shipyard · Mazagon Dock · Indian Navy',risk:'amber',cost:'₹ low (IIT)',related:['Mechanical','Civil'],path:'btech'},
+      {ico:'🔋',n:'Energy Systems Engineer',label:'Power Grid Engineer',l:'Engineering',short:'Keeps the lights on.',one:'Designs power grids, solar farms and wind plants — the backbone of the country.',why:['Electricity','Real-world impact','Maths'],pathline:'B.Tech Electrical → energy specialisation → NTPC',gov:'NTPC · Power Grid · BHEL · state power boards',risk:'green',cost:'₹ low (govt)',related:['Electrical','Physics'],path:'btech'},
+    ],
+    paths:{
+      primary:[
+        {id:'btech',name:'B.Tech Engineering',deg:'4 yr · Engineer',fit:'Best if you want to design, solve and build — broadest scope across all fields',anchor:'NITs, IIITs, state govt colleges',fee:'₹20k–1.5L/yr (govt)',risk:'amber',riskLbl:'JEE Main or State CET',backups:6,stressLabel:"What if my JEE score isn't high?",lead:true}
+      ],
+      alt:[
+        {id:'barch',name:'B.Arch',deg:'5 yr · Architect',fit:'Best if you combine art with structure — designing spaces people live in',anchor:'NIT schools of Architecture, SPA Delhi',fee:'₹20k–80k/yr (govt)',risk:'amber',riskLbl:'NATA + JEE Paper 2'},
+        {id:'diploma',name:'Diploma → Lateral Entry B.Tech',deg:'3 yr Diploma + 3 yr B.Tech',fit:'Best if you want a hands-on start and want to upgrade later',anchor:'Govt Polytechnics → state govt colleges',fee:'₹ very low',risk:'green',riskLbl:'State polytechnic admission'},
+        {id:'bsc_maths',name:'B.Sc Maths/Physics → M.Tech (GATE)',deg:'3 yr B.Sc + 2 yr M.Tech',fit:'Best if you want engineering without JEE pressure — research route',anchor:'Central Univ B.Sc → NIT/IISER M.Tech',fee:'low',risk:'green',riskLbl:'CUET → GATE'},
+      ],
+      backup:[
+        {id:'bdes_ind',name:'B.Des Industrial Design',deg:'4 yr · Product designer',fit:'Best if building and aesthetics drive you equally',anchor:'NID, IIT-IDC',fee:'low',risk:'amber',riskLbl:'NID DAT / UCEED'},
+      ],
+    },
+  },
+
+  /* ════ FINANCIAL SECURITY ════ */
+  money:{
+    ico:'🔒', dream:'Financial Security', anchor:'Chartered Accountancy · Banking · Actuarial · Economics',
+    lenses:[{n:'Chartered Accountancy',ready:true},{n:'Banking & Finance',ready:true},{n:'Actuarial Science',ready:false},{n:'Economics & Policy',ready:false}],
+    confidence:['I enjoy maths and numbers','I like working with systems, rules and accuracy','I want a stable high-income career','I\'m comfortable with long study periods and professional exams'],
+    related:[{id:'serve',label:'🏛️ Serving Society'},{id:'impact',label:'🌍 Making an Impact'},{id:'build',label:'🛠️ Building Things'}],
+    unknownHeading:'Beyond banker & CA',
+    clusterLabel:'Roles inside this dream',
+    cluster:[
+      {e:'📊',n:'Chartered Accountant',l:'Chartered Accountancy'},{e:'🏦',n:'Banker',l:'Banking & Finance'},{e:'📈',n:'Actuary',l:'Chartered Accountancy'},
+      {e:'💰',n:'Financial Analyst',l:'Banking & Finance'},{e:'🔢',n:'Economist',l:'Banking & Finance'}
+    ],
+    unknown:[
+      {ico:'📐',n:'Actuary',label:'Risk Calculator',l:'Chartered Accountancy',short:'Prices insurance risk.',one:'Calculates the mathematics of risk — pricing insurance policies and pension funds.',why:['Maths','High pay','Niche expertise'],pathline:'B.Sc Maths/Stats → IAI Fellowship (actuarial exams)',gov:'LIC · GIC · IRDA · PFRDA',risk:'amber',cost:'₹ low (govt)',related:['Statistics','Economics'],path:'actuary'},
+      {ico:'🏛️',n:'RBI Grade B Officer',label:'Central Banker',l:'Banking & Finance',short:'Regulates India\'s money.',one:'Regulates India\'s money supply and banking system at the Reserve Bank of India.',why:['Economics','Real power','Stability'],pathline:'Any UG → RBI Grade B exam',gov:'Reserve Bank of India',risk:'amber',cost:'₹ low',related:['Economics','Banking'],path:'banking'},
+      {ico:'📉',n:'Securities Regulator',label:'Stock Market Guardian',l:'Banking & Finance',short:'Polices the stock market.',one:'Monitors markets for fraud and protects investors — works at SEBI.',why:['Law + finance','Public interest','Analytical'],pathline:'Any UG → SEBI Officer exam / CA / MBA',gov:'SEBI · RBI · IRDAI · PFRDA',risk:'amber',cost:'₹ low',related:['Law','Economics'],path:'banking'},
+      {ico:'📋',n:'Cost & Management Accountant',label:'Cost Controller',l:'Chartered Accountancy',short:'Controls business costs.',one:'Tracks every rupee spent and finds where a company overpays — the CMA route.',why:['Maths','Business','Structure'],pathline:'After Class 12 → CMA Foundation → Inter → Final',gov:'Govt PSUs · finance depts · defence accounts',risk:'green',cost:'₹ very low (exam path)',related:['Accountancy','Commerce'],path:'ca'},
+      {ico:'🏗️',n:'Infrastructure Finance Analyst',label:'Project Finance Specialist',l:'Banking & Finance',short:'Funds highways & ports.',one:'Funds highways, ports and power plants — the money behind India\'s infrastructure.',why:['Finance + real assets','National projects','Quantitative'],pathline:'B.Com/BA Eco → CA / MBA Finance → IIFCL · NABARD',gov:'IIFCL · NABARD · NHB · SIDBI',risk:'amber',cost:'₹ moderate (PG)',related:['Banking','Infrastructure'],path:'banking'},
+    ],
+    paths:{
+      primary:[
+        {id:'ca',name:'CA (Chartered Accountant)',deg:'3–4 yr after Class 12 · ICAI',fit:'Best if you want the most respected finance credential in India',anchor:'ICAI — national exam, no college needed',fee:'₹ very low (exam-based path)',risk:'red',riskLbl:'ICAI CA exams (Foundation → Inter → Final)',backups:4,stressLabel:'What if I struggle with CA exams?',lead:true}
+      ],
+      alt:[
+        {id:'banking',name:'B.Com → Banking & Finance',deg:'3 yr B.Com + IBPS/RBI exam',fit:'Best if you want a secure govt bank career',anchor:'Central Univ, Delhi Univ, state govt colleges',fee:'₹ very low',risk:'green',riskLbl:'State / CUET for college + IBPS exam later'},
+        {id:'actuary',name:'B.Sc Maths/Stats → Actuary',deg:'3 yr + IAI Fellowship',fit:'Best if you love probability and want the highest-paid niche in finance',anchor:'IIT M.Sc Actuarial (GATE), Univ of Madras',fee:'low (govt)',risk:'amber',riskLbl:'State merit / CUET + IAI exams'},
+        {id:'bcom_eco',name:'B.Com / BA Economics',deg:'3 yr · Commerce base',fit:'Best if you want to keep options open across finance, civil services or MBA',anchor:'Delhi Univ, Presidency, Loyola',fee:'very low',risk:'green',riskLbl:'CUET / state merit'},
+      ],
+      backup:[
+        {id:'cma',name:'CMA (Cost Accountant)',deg:'3–4 yr · ICMAI',fit:'Best if CA exams feel too high-stakes — CMA is equally respected in PSUs',anchor:'ICMAI — exam-based, no college needed',fee:'very low',risk:'amber',riskLbl:'CMA Foundation → Inter → Final'},
+      ],
+    },
+  },
+
+  /* ════ MAKING AN IMPACT ════ */
+  impact:{
+    ico:'🌍', dream:'Making an Impact', anchor:'Policy · Development · Social Change · International Affairs',
+    lenses:[{n:'Policy & Governance',ready:true},{n:'International Development',ready:false},{n:'Social Entrepreneurship',ready:false},{n:'Environment & Climate',ready:false}],
+    confidence:['I care deeply about inequality and social problems','I like understanding how systems work — politics, economics, society','I can write, argue and persuade','I want to change things at scale, not just one-on-one'],
+    related:[{id:'serve',label:'🏛️ Serving Society'},{id:'sci',label:'🔬 Discovering Knowledge'},{id:'help',label:'🩺 Helping People'}],
+    unknownHeading:'Beyond politician & activist',
+    clusterLabel:'Roles inside this dream',
+    cluster:[
+      {e:'📜',n:'Policy Analyst'},{e:'🌐',n:'Development Officer'},{e:'🗳️',n:'Governance Specialist'},
+      {e:'📊',n:'Economist'},{e:'🏘️',n:'Urban Development Expert'}
+    ],
+    unknown:[
+      {ico:'🏙️',n:'Urban Development Expert',label:'City Transformation Specialist',short:'Rebuilds cities for people.',one:'Redesigns slums into liveable neighbourhoods — Niti Aayog, Smart Cities, HUDCO.',why:['Social change','Planning','Research'],pathline:'BA / B.Planning → M.Planning / MPP',gov:'HUDCO · Smart Cities Mission · DDA · state housing boards',risk:'green',cost:'₹ low (govt)',related:['Social Work','Town Planning'],path:'ba_policy'},
+      {ico:'🌱',n:'Development Economist',label:'Poverty Solutions Researcher',short:'Studies what fights poverty.',one:'Researches what actually works against poverty — evidence-based, not opinion.',why:['Economics','Social good','Research'],pathline:'BA Economics → M.A. / PhD → think tanks / UN India',gov:'Niti Aayog · RBI · World Bank India office · state planning boards',risk:'green',cost:'₹ low (govt + fellowship)',related:['Economics','Policy'],path:'ba_policy'},
+      {ico:'📡',n:'International Development Officer',label:'UN & Aid Agency Worker',short:'Works for UN & global agencies.',one:'Manages relief and development programmes for UN, WHO, UNICEF on India placements.',why:['Global scope','Social impact','Languages'],pathline:'BA → MA International Relations / Development Studies → UN internship',gov:'UNDP · UNICEF · WHO India · ministry-level desks',risk:'amber',cost:'₹ low (JNU / TISS)',related:['Policy','International Affairs'],path:'ba_policy'},
+      {ico:'⚖️',n:'Legal Aid Lawyer',label:'Justice for the Underserved',short:'Fights for the powerless.',one:'Provides free legal help to those who cannot afford courts — NALSA & legal aid offices.',why:['Justice','Law','Social change'],pathline:'BA → LLB (5 yr integrated or 3 yr after UG)',gov:'NALSA · state legal aid boards · human rights commissions',risk:'green',cost:'₹ low (govt law college)',related:['Law','Social Work'],path:'llb'},
+      {ico:'📊',n:'Programme Evaluator',label:'What-Works Analyst',short:'Checks if govt schemes work.',one:'Measures whether government schemes actually reach people — data-based accountability.',why:['Data','Policy','Real-world feedback'],pathline:'BA Econ / Statistics → MA / MPP → CAG · Niti Aayog',gov:'Comptroller & Auditor General · Niti Aayog · state evaluation units',risk:'green',cost:'₹ low',related:['Economics','Statistics'],path:'ba_policy'},
+    ],
+    paths:{
+      primary:[
+        {id:'ba_policy',name:'BA → Public Policy / Civil Services',deg:'3 yr BA + optional MA + UPSC/PSC',fit:'Best if you want to shape how government works from the inside',anchor:'JNU, Hyderabad Central Univ, TISS',fee:'₹ very low (central/state univ)',risk:'amber',riskLbl:'CUET / state merit for college; UPSC later',backups:5,stressLabel:"What if I don't clear UPSC?",lead:true}
+      ],
+      alt:[
+        {id:'sw',name:'BSW / MSW Social Work',deg:'3–5 yr · Social development',fit:'Best if you want ground-level impact — working with communities, not just policy',anchor:'TISS Mumbai, Delhi School of Social Work',fee:'very low (govt-aided)',risk:'green',riskLbl:'State merit / CUET'},
+        {id:'llb',name:'BA + LLB (5 yr)',deg:'5 yr · Lawyer / Judge',fit:'Best if you want to use law as a lever for justice',anchor:'National Law Universities (NLUs) via CLAT',fee:'₹50k–1L/yr (NLU)',risk:'amber',riskLbl:'CLAT'},
+        {id:'ba_eco',name:'BA Economics',deg:'3 yr · Analytical foundation',fit:'Best if you want to understand the engine before you try to change it',anchor:'Presidency, Loyola, DU colleges',fee:'very low',risk:'green',riskLbl:'CUET / state merit'},
+      ],
+      backup:[
+        {id:'ba_ir',name:'BA International Relations',deg:'3 yr · Global affairs',fit:'Best if you want to work on India\'s place in the world',anchor:'JNU, Pondicherry Univ, Hyderabad Central',fee:'very low',risk:'green',riskLbl:'CUET'},
+      ],
+    },
+  },
+
+  /* ════ DISCOVERING KNOWLEDGE ════ */
+  sci:{
+    ico:'🔬', dream:'Discovering Knowledge', anchor:'Science · Research · Mathematics · Technology',
+    lenses:[{n:'Life Sciences',ready:true},{n:'Physical Sciences',ready:true},{n:'Mathematics',ready:false},{n:'CS Research',ready:false}],
+    confidence:['I love asking WHY — not just accepting answers','I can spend hours on a problem without getting frustrated','I like experiments, data and logical structure','I\'d rather discover something new than apply something known'],
+    related:[{id:'nature',label:'🌿 Working with Nature'},{id:'build',label:'🛠️ Building Things'},{id:'help',label:'🩺 Helping People'}],
+    unknownHeading:'Beyond scientist & professor',
+    clusterLabel:'Roles inside this dream',
+    cluster:[
+      {e:'🧬',n:'Biologist',l:'Life Sciences'},{e:'⚛️',n:'Physicist',l:'Physical Sciences'},{e:'🧪',n:'Chemist',l:'Physical Sciences'},
+      {e:'🔢',n:'Mathematician',l:'Physical Sciences'},{e:'🌌',n:'Astrophysicist',l:'Physical Sciences'}
+    ],
+    unknown:[
+      {ico:'🧬',n:'Computational Biologist',label:'Biology + Code Scientist',l:'Life Sciences',short:'Decodes DNA with computers.',one:'Decodes genomes and drug interactions using code — the fastest-growing frontier in science.',why:['Biology + CS','Problem-solving','Research frontier'],pathline:'B.Sc Bioinformatics or CSE → M.Sc/PhD',gov:'NCBS · CCMB · DBT labs · IISc',risk:'green',cost:'₹ low (govt)',related:['Life Sciences','CS Research'],path:'bs_iiser'},
+      {ico:'🌌',n:'Astrophysicist',label:'Space Scientist',l:'Physical Sciences',short:'Studies stars & galaxies.',one:'Studies how stars are born and die — works at IIA, TIFR and ISRO ground stations.',why:['Physics','Curiosity','Maths'],pathline:'B.Sc Physics → M.Sc → PhD → IIA · TIFR · ISRO',gov:'Indian Institute of Astrophysics · TIFR · ISRO Science',risk:'green',cost:'₹ low (govt fellowship)',related:['Physical Sciences','Space'],path:'bs_iiser'},
+      {ico:'🧊',n:'Materials Scientist',label:'New Materials Inventor',l:'Physical Sciences',short:'Creates materials of the future.',one:'Creates lighter, stronger, smarter materials — graphene, ceramics, polymers, solar cells.',why:['Chemistry + Physics','Hands-on','Industry + academia'],pathline:'B.Sc / B.Tech → M.Tech/M.Sc Materials Science → IIT/JNCASR',gov:'DRDO · BARC · CSIR labs · IISc',risk:'green',cost:'₹ low (govt)',related:['Physical Sciences','Engineering'],path:'bs_iiser'},
+      {ico:'🔢',n:'Mathematician',label:'Pure Maths Researcher',l:'Physical Sciences',short:'Solves the hardest problems.',one:'Solves the hardest problems — from cryptography to AI foundations to number theory.',why:['Pure logic','Independence','Deep thinking'],pathline:'B.Sc Maths at CMI / ISI / central univ → PhD at TIFR',gov:'CMI · ISI · IITs · TIFR (stipended PhD)',risk:'green',cost:'₹ very low (CMI/ISI → stipend)',related:['Mathematics','Computer Science'],path:'bs_maths'},
+      {ico:'⚛️',n:'Nuclear Scientist',label:'Atom Scientist',l:'Physical Sciences',short:'Unlocks energy from atoms.',one:'Works on nuclear reactors and radiation safety at BARC — India\'s atomic research body.',why:['Physics','High security','Unique field'],pathline:'B.Sc Physics → OCES exam → BARC Training School',gov:'BARC · NPCIL · DAE',risk:'green',cost:'₹ very low (BARC stipend)',related:['Physical Sciences','Engineering'],path:'bs_iiser'},
+    ],
+    paths:{
+      primary:[
+        {id:'bs_iiser',name:'B.S. at IISER / NISER / IISc',deg:'5 yr BS-MS · stipended science',fit:'Best if you want India\'s best science education with a stipend from Day 1',anchor:'IISER (7 campuses), NISER Bhubaneswar, IISc',fee:'₹ near-free + ₹12k/month stipend',risk:'amber',riskLbl:'IAT / IISER Aptitude Test or JEE Advanced',backups:5,stressLabel:"What if I don't get into IISER?",lead:true}
+      ],
+      alt:[
+        {id:'bsc_central',name:'B.Sc at Central / State Univ',deg:'3 yr · Science foundation',fit:'Best if you want a strong science base without a single high-pressure gate',anchor:'Univ of Madras, JNU, Hyderabad Central Univ',fee:'₹ very low',risk:'green',riskLbl:'CUET / state merit'},
+        {id:'bs_maths',name:'B.Sc Mathematics (CMI / ISI)',deg:'3 yr · Pure maths elite',fit:'Best if numbers and logic are your primary love',anchor:'Chennai Mathematical Institute (CMI), ISI Kolkata',fee:'₹ near-free (govt deemed)',risk:'red',riskLbl:'CMI entrance / ISI entrance (highly competitive)'},
+        {id:'btech_research',name:'B.Tech → Research (GATE → M.Tech/PhD)',deg:'4 yr B.Tech + stipended M.Tech',fit:'Best if you want to enter research through an engineering degree',anchor:'IITs, IISc (via GATE)',risk:'amber',riskLbl:'JEE Main → GATE'},
+      ],
+      backup:[
+        {id:'inspire',name:'B.Sc + INSPIRE Scholarship',deg:'3 yr · Any science college',fit:'Best backup — INSPIRE pays ₹80k/yr for top Class 12 science students at any govt college',anchor:'Any govt / aided science college',fee:'very low',risk:'green',riskLbl:'Class 12 merit + INSPIRE application'},
+      ],
+    },
+  },
+
+  /* ════ CREATING & DESIGNING ════ */
+  create:{
+    ico:'🎨', dream:'Creating & Designing', anchor:'Design · Architecture · Film & Media · Fine Arts',
+    lenses:[{n:'Design',ready:true},{n:'Architecture',ready:true},{n:'Film & Media',ready:false},{n:'Fine Arts',ready:false}],
+    confidence:['I naturally notice how things look and feel','I like making things — drawing, building, filming, writing','I can spend hours on a creative project','I want to shape how people experience the world'],
+    related:[{id:'build',label:'🛠️ Building Things'},{id:'impact',label:'🌍 Making an Impact'},{id:'sci',label:'🔬 Discovering Knowledge'}],
+    unknownHeading:'Beyond graphic designer & architect',
+    clusterLabel:'Roles inside this dream',
+    cluster:[
+      {e:'✏️',n:'Designer',l:'Design'},{e:'🏛️',n:'Architect',l:'Architecture'},{e:'🎬',n:'Filmmaker'},
+      {e:'🖼️',n:'Fine Artist'},{e:'📸',n:'Photographer',l:'Design'}
+    ],
+    unknown:[
+      {ico:'🖥️',n:'UX Designer',label:'Digital Experience Designer',l:'Design',short:'Makes apps easy to use.',one:'Makes apps and websites so intuitive people never notice them — highest demand in design.',why:['Human behaviour','Tech + design','High demand'],pathline:'B.Des NID / IIT-IDC → portfolio → UX roles',gov:'NIC · govt digital portals · defence design bureaus',risk:'amber',cost:'₹ low (NID/IIT)',related:['Design','Computer Science'],path:'bdes'},
+      {ico:'🏺',n:'Craft Designer',label:'Traditional Craft Revivalist',l:'Design',short:'Modernises traditional crafts.',one:'Modernises block prints, handlooms and pottery for today\'s global market.',why:['Heritage','Craftsmanship','Social impact'],pathline:'B.Des Crafts at NID → DC-Handicrafts',gov:'DC-Handicrafts · NIFT · Craft Council of India',risk:'green',cost:'₹ low (govt)',related:['Textile Design','Fine Arts'],path:'bdes'},
+      {ico:'🎬',n:'Documentary Filmmaker',label:'Story-in-Film Creator',short:'Makes real-life stories into films.',one:'Makes documentaries that change how people see a social issue — FTII and SRFTI trained.',why:['Storytelling','Social issues','Craft'],pathline:'Any UG → FTII / SRFTI entrance',gov:'FTII Pune · SRFTI Kolkata · Films Division of India',risk:'amber',cost:'₹ low (govt film institutes)',related:['Film','Communication'],path:'ftii'},
+      {ico:'🎮',n:'Game Designer',label:'Immersive World Builder',l:'Design',short:'Designs video game worlds.',one:'Designs the rules, stories and environments of video games — emerging national schools.',why:['Games','Creativity','Technology'],pathline:'B.Des Interactive Media / B.Tech + portfolio',gov:'CDAC · NID (game design elective) · NIFT',risk:'amber',cost:'₹ moderate',related:['Animation','CS'],path:'bdes'},
+      {ico:'🏗️',n:'Production Designer',label:'Film World Builder',short:'Builds film sets.',one:'Builds the physical world a film lives in — sets, props, art direction for cinema & TV.',why:['Craft','Film industry','Spatial design'],pathline:'B.Des / BFA → NSD / FTII Production Design',gov:'FTII Pune · Films Division · govt film bodies',risk:'amber',cost:'₹ low (govt film institutes)',related:['Film','Architecture'],path:'ftii'},
+    ],
+    paths:{
+      primary:[
+        {id:'bdes',name:'B.Des (NID / IIT-IDC / NIFT)',deg:'4 yr · Product / Comm / UX / Fashion Design',fit:'Best if design is your first love — structured, portfolio-driven, high industry connection',anchor:'NID Ahmedabad / Bengaluru, IIT-IDC, NIFT',fee:'₹30k–1L/yr (govt institutions)',risk:'amber',riskLbl:'NID DAT / UCEED / NIFT entrance',backups:4,stressLabel:"What if NID entrance doesn't work out?",lead:true}
+      ],
+      alt:[
+        {id:'barch',name:'B.Arch',deg:'5 yr · Architect',fit:'Best if you want to design spaces, buildings and cities',anchor:'NIT schools of Architecture, SPA Delhi, CEPT',fee:'₹20k–80k/yr',risk:'amber',riskLbl:'NATA + JEE Paper 2'},
+        {id:'ftii',name:'FTII / SRFTI Film Institutes',deg:'2–3 yr PG Diploma · Filmmaker',fit:'Best if cinema, direction or cinematography is the dream',anchor:'FTII Pune, SRFTI Kolkata',fee:'₹ low (govt institutions)',risk:'amber',riskLbl:'FTII entrance (after 12 or UG)'},
+        {id:'bfa',name:'BFA (Fine Arts)',deg:'4–5 yr · Fine Artist',fit:'Best if you want painting, sculpture and visual art at the highest level',anchor:'MSU Baroda, Delhi College of Art (govt)',fee:'very low',risk:'green',riskLbl:'State merit / portfolio'},
+      ],
+      backup:[
+        {id:'ba_media',name:'BA Mass Communication / Animation',deg:'3 yr · Media & communication',fit:'Best if you want to communicate visually at scale',anchor:'Jamia Millia, IIMC (govt), AJK MCRC',fee:'very low',risk:'green',riskLbl:'CUET / merit'},
+      ],
+    },
+  },
+
+  /* ════ SERVING SOCIETY ════ */
+  serve:{
+    ico:'🏛️', dream:'Serving Society', anchor:'Civil Services · Law · Armed Forces · Public Service',
+    lenses:[{n:'Civil Services',ready:true},{n:'Law & Justice',ready:true},{n:'Armed Forces',ready:false},{n:'Local Governance',ready:false}],
+    confidence:['I want to serve my country or community directly','I can handle high-stakes exams with years of preparation','I believe rules, law and governance matter','I want authority that comes with accountability'],
+    related:[{id:'impact',label:'🌍 Making an Impact'},{id:'help',label:'🩺 Helping People'},{id:'money',label:'🔒 Financial Security'}],
+    unknownHeading:'Beyond IAS & lawyer',
+    clusterLabel:'Roles inside this dream',
+    cluster:[
+      {e:'🏛️',n:'IAS / IPS Officer',l:'Civil Services'},{e:'⚖️',n:'Judge / Magistrate',l:'Law & Justice'},{e:'🎖️',n:'Armed Forces Officer',l:'Civil Services'},
+      {e:'🚓',n:'Police Officer',l:'Civil Services'},{e:'🧑‍⚖️',n:'Lawyer',l:'Law & Justice'}
+    ],
+    unknown:[
+      {ico:'🕊️',n:'Indian Foreign Service Officer',label:'Diplomat',l:'Civil Services',short:'Represents India abroad.',one:'Represents India at embassies, negotiates treaties and manages Indian citizens abroad.',why:['International scope','Authority','Languages'],pathline:'Any UG → UPSC CSE (IFS allocation)',gov:'Ministry of External Affairs',risk:'red',cost:'₹ low (any UG)',related:['International Relations','Policy'],path:'upsc'},
+      {ico:'📜',n:'Revenue Officer',label:'District Revenue Head',l:'Civil Services',short:'Manages land & taxes.',one:'Manages all land records, tax collection and property disputes in a district.',why:['Real authority','Public service','Fieldwork'],pathline:'Any UG → UPSC / TNPSC Group I',gov:'State Revenue depts · District Collectorate',risk:'amber',cost:'₹ low',related:['Administration','Law'],path:'upsc'},
+      {ico:'🏦',n:'IAAS Officer',label:'Government Auditor',l:'Civil Services',short:'Guards public money.',one:'Audits every rupee of government spending — the Comptroller & Auditor General\'s corps.',why:['Finance + accountability','Govt scope','Steady progression'],pathline:'Any UG → UPSC Group A / IAAS cadre',gov:'Comptroller & Auditor General (CAG)',risk:'amber',cost:'₹ low',related:['Finance','Administration'],path:'upsc'},
+      {ico:'🌊',n:'Indian Coast Guard Officer',label:'Coastal Defence Officer',l:'Civil Services',short:'Guards India\'s coastline.',one:'Guards 7,500 km of India\'s coastline against smugglers, pirates and emergencies.',why:['Adventure','Service','Sea life'],pathline:'B.Sc / B.Tech → CGEPT (Coast Guard exam)',gov:'Indian Coast Guard · MHA',risk:'amber',cost:'₹ low',related:['Military','Police'],path:'defence'},
+      {ico:'🧑‍⚖️',n:'Public Prosecutor',label:'Govt Lawyer in Court',l:'Law & Justice',short:'Prosecutes crime for the state.',one:'Argues every serious criminal case for the state — murder, corruption, terror trials.',why:['Law','Public justice','Oratory'],pathline:'BA LLB (5 yr NLU / state law college) → PP exam / UPSC',gov:'State prosecution directorates · CBI · ED',risk:'amber',cost:'₹ low (state law college)',related:['Law','Justice'],path:'llb_serve'},
+    ],
+    paths:{
+      primary:[
+        {id:'upsc',name:'Any UG → UPSC Civil Services',deg:'3 yr UG + 2–3 yr prep · IAS/IPS/IFS',fit:'Best if you want the highest authority in public service — district to national',anchor:'Any central / state university (UG stream does not matter)',fee:'₹ very low (choose cheapest govt UG)',risk:'red',riskLbl:'UPSC CSE (Prelims → Mains → Interview)',backups:5,stressLabel:"What if UPSC doesn't work out?",lead:true}
+      ],
+      alt:[
+        {id:'state_psc',name:'Any UG → State PSC (Group I/II)',deg:'3 yr UG + PSC prep · Deputy Collector / DSP',fit:'Best if you want state-level administration — same authority, closer to home',anchor:'Any govt college for UG',fee:'very low',risk:'amber',riskLbl:'State PSC (TNPSC Group I / KPSC etc.)'},
+        {id:'llb_serve',name:'BA LLB (5 yr) / NLU via CLAT',deg:'5 yr · Advocate → Judge → Prosecutor',fit:'Best if you want to use law directly in courtrooms, not just administration',anchor:'National Law Universities (CLAT) or state law colleges',fee:'₹50k–1L/yr (NLU)',risk:'amber',riskLbl:'CLAT for NLU; state merit for state law college'},
+        {id:'defence',name:'NDA / OTA → Armed Forces',deg:'3 yr NDA training · Officer',fit:'Best if you want a life of service, discipline and national defence',anchor:'IMA Dehradun, INA, AFA — via NDA/CDS',fee:'₹ near-free (govt pays)',risk:'amber',riskLbl:'NDA / CDS written + SSB interview'},
+      ],
+      backup:[
+        {id:'ssc',name:'Any UG → SSC / Railways',deg:'3 yr UG + SSC / RRB prep',fit:'Best secure-job backup — SSC CGL and RRB give government employment to lakhs every year',anchor:'Any govt college for UG',fee:'very low',risk:'green',riskLbl:'SSC CGL / RRB NTPC (after UG)'},
+      ],
+    },
+  },
+
+  /* ════ NOT SURE YET ════ */
+  unsure:{
+    ico:'🧭', dream:'Not Sure Yet', anchor:'Explore · Discover Your Fit · Keep Options Open',
+    lenses:[{n:'Find by Interest',ready:true},{n:'Know Yourself Test',ready:true},{n:'Browse All Courses',ready:true},{n:'Talk to Vazhi',ready:false}],
+    confidence:['I haven\'t found one thing I\'m passionate about yet','I have many interests and can\'t choose','I want to understand myself before committing to a course','I\'m afraid of choosing the wrong path'],
+    related:[{id:'help',label:'🩺 Helping People'},{id:'build',label:'🛠️ Building Things'},{id:'sci',label:'🔬 Discovering Knowledge'}],
+    unknownHeading:'What "not knowing" really means',
+    clusterLabel:'Ways to start discovering your fit',
+    cluster:[
+      {e:'🧩',n:'Take the interest test'},{e:'📖',n:'Browse all streams'},{e:'💬',n:'Talk to seniors'},
+      {e:'📊',n:'Try different subjects'},{e:'🎯',n:'Follow one curiosity'}
+    ],
+    unknown:[
+      {ico:'🌐',n:'Liberal Arts Graduate',label:'Generalist Thinker',short:'Combines many subjects.',one:'Studies history, economics, philosophy and writing together — then specialises at PG level.',why:['Many interests','Writing','Thinking'],pathline:'BA Liberal Arts → MA / Law / Civil Services',gov:'TISS · JNU · Presidency',risk:'green',cost:'₹ low (govt)',related:['Policy','Humanities'],path:'ba_liberal'},
+      {ico:'🧑‍💻',n:'CS Student',label:'The Safe Wide-Open Door',short:'Opens most future paths.',one:'B.Sc / B.Tech CS is the safest default — every sector needs tech skills, you can pivot later.',why:['High flexibility','Jobs everywhere','Growing field'],pathline:'B.Sc CS (state merit) or B.Tech CSE (JEE)',gov:'State govt colleges · NIT · IIIT',risk:'green',cost:'₹ low (govt)',related:['Engineering','Data Science'],path:'bsc_cs'},
+      {ico:'📊',n:'Commerce Student',label:'Business & Numbers Base',short:'Opens finance, law & management.',one:'B.Com or BA Economics keeps doors open for CA, MBA, civil services, banking.',why:['Many options','Numbers','No heavy science required'],pathline:'B.Com / BA Economics (state merit / CUET)',gov:'Govt commerce colleges · DU · state central univ',risk:'green',cost:'₹ very low',related:['Finance','Policy'],path:'bcom_open'},
+      {ico:'🎭',n:'Performing Arts Student',label:'Stage & Screen Pathway',short:'For creative and performing talent.',one:'If you have a performing gift — drama, classical music, dance — there is a govt path via BFA/BPA.',why:['Passion','Skill-based','Govt institutions'],pathline:'BFA / BPA at central/state univ → NSE · Sangeet Natak Akademi',gov:'National School of Drama · Sangeet Natak Akademi · university fine arts depts',risk:'green',cost:'₹ very low',related:['Arts','Culture'],path:'bfa_open'},
+      {ico:'🔍',n:'Anyone, really',label:'The Test Tells You',short:'Your interests, not our labels.',one:'Most students who feel "unsure" have a clear lean when asked the right questions. The Know Yourself test usually surprises people.',why:['Self-awareness','Honesty','Removing pressure'],pathline:'Take the RIASEC interest test on Vazhi → get a personalised career report',gov:'All govt paths remain open — nothing closes with "not sure yet"',risk:'green',cost:'₹ 0',related:['All dreams'],path:'test_path'},
+    ],
+    paths:{
+      primary:[
+        {id:'ba_liberal',name:'BA Liberal Arts / Humanities',deg:'3 yr · Generalist foundation',fit:'Best if you have many interests — study history, economics, politics, writing together first',anchor:'JNU, Hyderabad Central Univ, Presidency College',fee:'₹ very low',risk:'green',riskLbl:'CUET / state merit',backups:5,stressLabel:'What can I do after a BA?',lead:true}
+      ],
+      alt:[
+        {id:'bsc_cs',name:'B.Sc Computer Science',deg:'3 yr · Tech foundation',fit:'Best safe pick if you lean tech — CS skills are in demand in every sector',anchor:'Govt Arts & Science colleges, central univ',fee:'₹ very low',risk:'green',riskLbl:'State merit / CUET'},
+        {id:'bcom_open',name:'B.Com / BA Economics',deg:'3 yr · Commerce foundation',fit:'Best if you lean towards numbers, business or finance without full clarity yet',anchor:'Govt commerce colleges, DU, Loyola',fee:'very low',risk:'green',riskLbl:'CUET / state merit'},
+        {id:'bfa_open',name:'BFA / BPA (Fine / Performing Arts)',deg:'4–5 yr · Creative foundation',fit:'Best if you have a creative or performing talent you want to pursue seriously',anchor:'MSU Baroda, Delhi College of Art, NSE-affiliated schools',fee:'very low',risk:'green',riskLbl:'Portfolio / state merit'},
+      ],
+      backup:[
+        {id:'test_path',name:'Take the Know Yourself Test',deg:'Free · Online · 10 minutes',fit:'Most useful first step — clarifies your fit before you commit to a stream',anchor:'Vazhi Know Yourself (RIASEC interest test)',fee:'₹ 0',risk:'green',riskLbl:'No exam needed'},
       ],
     },
   },
@@ -555,6 +796,289 @@ const DETAIL = {
       ],
     },
   },
+
+  /* ── BUILD detail ── */
+  build:{
+    btech:{
+      institutions:[
+        {nm:'NITs (31 across India)',tier:'Central · ₹75k–1.5L/yr',why:['Top engineering faculty','National brand','Strong placements','Affordable govt fees']},
+        {nm:'IIITs (national network)',tier:'Central · ₹75k–1.5L/yr',why:['Specialised CS/ECE focus','Govt funding','Industry partnerships']},
+        {nm:'Anna University (TN state)',tier:'State · ₹20k–50k/yr',why:['Largest engineering univ in Asia','600+ affiliated colleges','TNEA state merit']},
+        {nm:'State govt engineering colleges (all states)',tier:'State · very low fees',why:['Affordable','Local careers','State PSC eligibility']},
+      ],
+      feeContrast:{here:'₹3–6L total (4 yr at NIT)',priv:'₹8–25L total',note:'Same B.Tech degree, same job market. Govt college keeps debt near-zero.'},
+      ladder:{near:'State govt engineering college via state CET',state:'Anna Univ campus / top state colleges',india:'NITs / IIITs via JEE Main → IITs via JEE Advanced'},
+      story:{why:'A bridge you designed stands for 50 years. A chip you laid out runs in millions of phones. Building is the longest-lasting kind of impact.',day:'Morning design reviews · simulation & testing · drawing revisions · site visits · troubleshoot what broke overnight.',fact:'India\'s NIT system was one of the world\'s largest planned engineering expansions — 31 NITs built to give merit-based access across every state.',gov:'ISRO, DRDO, BHEL, NTPC, SAIL, state PWDs, railways, defence research labs, CPWD.',enter:'JEE Main (two sessions, Jan & Apr) → NIT counselling (JoSAA) · or state CET → state govt colleges.'},
+      scholarships:['Post-Matric (SC/ST/OBC)','PM Scholarship (PMSS)','NIT merit scholarships','State govt engineering scholarships'],
+      jobs:['Govt PSU Engineer (GATE → BHEL / NTPC / SAIL)','ISRO / DRDO scientist','State PWD / CPWD','Railways (RRB JE/SSE)'],
+      plan:[
+        {when:'Now',txt:'Register for JEE Main (both Jan & Apr sessions)',done:false},
+        {when:'Now',txt:'Identify state CET as backup — check syllabus differences',done:false},
+        {when:'Mar',txt:'JEE Main results → compare against last year\'s NIT cutoffs',done:false},
+        {when:'Jun',txt:'JoSAA counselling — rank-wise shortlist 6 NITs / IIITs',done:false},
+        {when:'Backup',txt:'State CET rank → state govt college via TNEA / KCET etc.',done:false},
+      ],
+    },
+    barch:{
+      institutions:[
+        {nm:'School of Planning & Architecture, Delhi',tier:'Central · govt',why:['Premier architecture school','Near-free','National reputation']},
+        {nm:'NIT Schools of Architecture',tier:'Central · ₹1L/yr',why:['Engineering-linked architecture','JEE Paper 2 route','National brand']},
+        {nm:'CEPT University, Ahmedabad',tier:'Govt-aided',why:['India\'s top architecture research','Design-first culture','Affordable']},
+        {nm:'State govt architecture schools',tier:'State · very low fees',why:['NATA-based entry','Affordable','Local practice']},
+      ],
+      ladder:{near:'State govt architecture school (NATA)',state:'Top NATA colleges in TN / state',india:'SPA Delhi · NIT Hamirpur · CEPT · NIT Trichy Arch'},
+      story:{why:'You walk into a space you designed and see how it changes people — how light falls, how movement flows, how a community forms around it.',day:'Site visit at dawn · drawing or model-making · client presentation · revise + revise · final review.',fact:'An architect\'s stamp is required for every commercial building in India — the profession is legally regulated, which means steady lifelong demand.',gov:'CPWD, PWD, housing boards, Smart Cities, heritage conservation (ASI), municipal corporations, HUDCO.',enter:'NATA (National Aptitude Test in Architecture) + Class 12 Maths → B.Arch admission.'},
+      scholarships:['Post-Matric (SC/ST/OBC)','State architecture scholarships','HUDCO design awards'],
+      jobs:['CPWD / PWD Architect','Municipal Corporation (urban design)','Heritage conservation (ASI)','Housing board / HUDCO'],
+      plan:[
+        {when:'Now',txt:'Register for NATA — held 3 times a year',done:false},
+        {when:'Now',txt:'Practice freehand drawing & spatial reasoning daily',done:false},
+        {when:'Class 12',txt:'Ensure Maths is one of your subjects (mandatory)',done:false},
+        {when:'Jun',txt:'Apply to SPA Delhi / NIT architecture / CEPT',done:false},
+      ],
+    },
+  },
+
+  /* ── MONEY detail ── */
+  money:{
+    ca:{
+      institutions:[
+        {nm:'ICAI (Institute of Chartered Accountants of India)',tier:'National exam-based · no college required',why:['Most respected finance credential in India','No college fees — just exam fees','Govt, PSU and private sector doors open','Articleship = paid training']},
+        {nm:'B.Com at central / state universities',tier:'Govt · very low fees',why:['Strong base for CA exams','Low fees','Can do B.Com + CA Foundation simultaneously']},
+      ],
+      feeContrast:{here:'₹30–50k total (all CA exam fees)',priv:'₹5–20L (MBA Finance at private college)',note:'CA is India\'s most cost-effective high-value credential. No college fees — articleship pays you while you train.'},
+      ladder:{near:'B.Com at state govt college + CA Foundation simultaneously',state:'CA Inter while doing articleship',india:'CA Final → Big 4 audit / Govt PSU / RBI / Finance Ministry'},
+      story:{why:'A CA\'s signature is required on every company\'s annual report in India — you are the guardian of financial truth.',day:'Audit files and client accounts · prepare tax returns · find where money leaks · advise boards on risk and compliance.',fact:'ICAI has fewer than 400,000 qualified CAs for 1.4 billion people — the shortage means a CA\'s skills are always in demand.',gov:'CAG office, Income Tax dept, RBI, finance ministry divisions, SEBI, defence accounts.',enter:'CA Foundation after Class 12 → CA Inter (study + 2.5 yr articleship) → CA Final → qualify.'},
+      scholarships:['ICAI merit scholarships','Post-Matric (SC/ST/OBC)','State merit scholarships (alongside B.Com)'],
+      jobs:['Chartered Accountant (govt PSU audit)','Income Tax Officer (via UPSC IFOS)','RBI Grade B (Finance)','Finance roles across all govt bodies'],
+      plan:[
+        {when:'Now',txt:'Register for CA Foundation (can do alongside Class 12)',done:false},
+        {when:'After 12',txt:'Enrol in B.Com at govt college simultaneously',done:false},
+        {when:'Year 1',txt:'Clear CA Foundation — 4 papers',done:false},
+        {when:'Year 1–3',txt:'CA Inter + start 2.5 yr articleship with a CA firm',done:false},
+        {when:'Year 4–5',txt:'CA Final — clear both groups',done:false},
+      ],
+    },
+    banking:{
+      institutions:[
+        {nm:'B.Com / BA Economics at central / state universities',tier:'Govt · very low fees',why:['Strong analytical base','Low fees','Flexibility to target multiple exams']},
+        {nm:'Reserve Bank of India (RBI)',tier:'Central · Grade B exam',why:['Highest prestige in banking','Near-IAS-level career','Excellent pay']},
+        {nm:'IBPS (Institute of Banking Personnel Selection)',tier:'Central exam body',why:['Recruits for 12+ public sector banks','Lakhs of vacancies annually','Stable govt career']},
+      ],
+      ladder:{near:'B.Com at state govt college → IBPS Clerk / PO',state:'Strong IBPS PO score → PSB branch manager',india:'RBI Grade B / SEBI Grade A → policy-level banking'},
+      story:{why:'A bank manager in a rural branch decides whether a farmer gets a crop loan — you are the financial backbone of India\'s real economy.',day:'Customer interactions · loan appraisals · check compliance · monitor branch targets · brief staff.',fact:'India\'s 12 public sector banks serve 500 million+ account holders — government banking is the spine of financial inclusion.',gov:'RBI, SBI, Bank of Baroda, Indian Bank, NABARD, SIDBI, EXIM Bank, NHB — all public sector.',enter:'B.Com / BA Eco → IBPS PO exam → training → posting. RBI Grade B is tougher, but higher-level.'},
+      scholarships:['Post-Matric (SC/ST/OBC)','Bank merit scholarships after joining','State merit scholarships'],
+      jobs:['Probationary Officer → Branch Manager (public sector bank)','RBI Grade B Officer','NABARD Development Manager','SEBI / IRDAI officer exam'],
+      plan:[
+        {when:'Now',txt:'Pick B.Com / BA Economics at govt college',done:false},
+        {when:'Year 1',txt:'Read economy & current affairs daily — IBPS needs this',done:false},
+        {when:'Year 3',txt:'Apply IBPS PO / RBI Grade B in final year',done:false},
+        {when:'Backup',txt:'IBPS Clerk → work in a bank while preparing for PO',done:false},
+      ],
+    },
+  },
+
+  /* ── IMPACT detail ── */
+  impact:{
+    ba_policy:{
+      institutions:[
+        {nm:'Jawaharlal Nehru University (JNU)',tier:'Central · ₹ near-free',why:['India\'s premier social-science university','Near-zero fees','PolSci, economics, international relations','UPSC feeder']},
+        {nm:'University of Hyderabad (HCU)',tier:'Central · ₹ very low',why:['Strong social sciences','Research culture','Merit-based']},
+        {nm:'TISS Mumbai',tier:'Central · govt-funded',why:['Development, social work & policy combined','Field placements','Strong NGO & govt alumni']},
+        {nm:'Presidency / DU colleges',tier:'State / central · very low',why:['Historic BA departments','Affordable','UPSC prep culture']},
+      ],
+      ladder:{near:'State govt arts college — BA History / PolSci / Sociology',state:'Presidency / Loyola / DU colleges',india:'JNU · HCU · TISS → MA → UPSC / state PSC / development sector'},
+      story:{why:'An IAS officer can redirect a state budget, change how land is allocated, or build a district hospital — the pen is real power.',day:'Review files and proposals · field visits · meet district officials · resolve disputes · brief the minister.',fact:'Every scheme India has — mid-day meal, MGNREGA, PM Awas Yojana — is run by civil servants who joined exactly this way.',gov:'District Collectorate, state government departments, union ministries, development agencies, international bodies.',enter:'BA (any stream) → UPSC CSE (Prelims + Mains + Interview) → IAS/IPS/IFS/IRS allocation.'},
+      scholarships:['Post-Matric (SC/ST/OBC)','JNU merit-cum-means','State govt arts scholarships','PM Scholarship (PMSS)'],
+      jobs:['IAS/IPS/IFS Officer (UPSC)','State PSC (Deputy Collector, DSP)','Social development organisations','Think tanks (Niti Aayog → consultant)'],
+      plan:[
+        {when:'Now',txt:'Choose BA with History / PolSci / Economics',done:false},
+        {when:'Now',txt:'Shortlist: JNU, HCU, Presidency, DU — apply via CUET',done:false},
+        {when:'Year 2',txt:'Start UPSC foundation reading — NCERTs + Hindu newspaper',done:false},
+        {when:'Year 3',txt:'Attempt UPSC Prelims in final year',done:false},
+        {when:'Backup',txt:'State PSC Group I — same UG, lower barrier, state authority',done:false},
+      ],
+    },
+    llb:{
+      institutions:[
+        {nm:'National Law Universities (NLUs) via CLAT',tier:'Central / state · ₹50k–1L/yr',why:['Premier law schools','Best faculty','Judiciary and bar placements','NLSIU Bengaluru ranked #1']},
+        {nm:'State govt law colleges',tier:'State · very low fees',why:['Affordable','LLB 3 yr after UG or 5 yr integrated','Bar Council-approved']},
+        {nm:'Faculty of Law — DU / BHU / Aligarh',tier:'Central Univ · very low',why:['Established law departments','Low fees','Delhi / Varanasi legal ecosystem']},
+      ],
+      ladder:{near:'State govt law college (5 yr BA LLB)',state:'Top state NLU or central univ law faculty',india:'NLU via CLAT → judiciary / bar / public interest law'},
+      story:{why:'A legal aid lawyer walked into a session court for a daily-wage worker who would have gone to jail for a crime he didn\'t commit — and walked him out free.',day:'Research precedents · draft petitions · appear in court · counsel clients · argue before judges.',fact:'India has over 40 million pending cases — every new lawyer who enters public legal service directly reduces that backlog.',gov:'NALSA, state legal aid, CBI prosecution, Enforcement Directorate, district prosecution, judiciary (via state judiciary exams).',enter:'CLAT (for NLUs) or state merit → 5 yr BA LLB → enrol Bar Council → practice or state judiciary exam.'},
+      scholarships:['Post-Matric (SC/ST/OBC)','NLU merit scholarships','State law scholarships','NALSA legal scholarship awards'],
+      jobs:['Public Prosecutor (state)','Legal Aid Lawyer (NALSA)','Judicial Service (District Judge via state exam)','UPSC → IPS/IRS (law background valued)'],
+      plan:[
+        {when:'Now',txt:'Register for CLAT — Nov–Dec exam',done:false},
+        {when:'Now',txt:'Identify state NLU and state law college as backups',done:false},
+        {when:'Year 3',txt:'Apply for internships at district courts & legal aid clinics',done:false},
+        {when:'Year 5',txt:'Bar Council enrolment + state judiciary prelims',done:false},
+      ],
+    },
+  },
+
+  /* ── SCI detail ── */
+  sci:{
+    bs_iiser:{
+      institutions:[
+        {nm:'IISERs (7 campuses: Pune, Kolkata, Mohali, Bhopal, Thiruvananthapuram, Tirupati, Berhampur)',tier:'Central · near-free + ₹12,000/month stipend',why:['India\'s best integrated science education','Stipend from Day 1','Research-first culture','INSPIRE fellows prefer this']},
+        {nm:'NISER, Bhubaneswar',tier:'Central (under DAE) · stipended',why:['Atomic Energy Commission-backed','Near-free + stipend','Strong physics & chemistry']},
+        {nm:'IISc, Bangalore — B.S. Research',tier:'Central · INI · stipended',why:['India\'s #1 research institution','Direct research immersion','World-class faculty']},
+      ],
+      feeContrast:{here:'₹ near-free + ₹12k/month stipend (BS-MS at IISER)',priv:'₹3–8L/yr at private science colleges',note:'IISER pays YOU to study science. No debt, no compromise.'},
+      ladder:{near:'B.Sc at central / state university',state:'IISER / NISER → BS-MS (5 yr)',india:'IISc B.S. → PhD fellowship → international research'},
+      story:{why:'You ask the one question no one has asked — and the answer changes a field. Science is the only career where being right for the first time ever is the job.',day:'Design and run experiments · analyse data · read papers · group discussion → revise hypothesis · write it up.',fact:'India\'s INSPIRE scholarship was created so that the top 1% of Class 12 PCB/PCM students would not leave science for engineering or medicine under peer pressure.',gov:'CSIR labs (40+), ISRO, BARC, ICMR, DST, DAE, DBT research labs, DRDO, IITs (faculty pipeline).',enter:'IISER Aptitude Test (IAT) or JEE Advanced score or KVPY → BS-MS (5 yr) with stipend.'},
+      scholarships:['INSPIRE Scholarship (DST — ₹80k/yr for top science students)','KVPY fellowship','IISER institutional stipend','DBT / CSIR-JRF for PhD'],
+      jobs:['Scientist (CSIR / ISRO / BARC / ICMR)','Research Fellow → PhD → faculty','Data scientist (quant research)','DRDO scientist entry via GATE/RAC'],
+      plan:[
+        {when:'Now',txt:'Register for IISER Aptitude Test (IAT) — check dates',done:false},
+        {when:'Now',txt:'Apply for INSPIRE scholarship (top 1% Class 12 PCM/PCB)',done:false},
+        {when:'Now',txt:'Backup: B.Sc at central universities via CUET',done:false},
+        {when:'Year 1',txt:'Shortlist CSIR labs for summer research internship',done:false},
+        {when:'Year 5',txt:'Apply for CSIR-JRF / DBT-JRF for funded PhD',done:false},
+      ],
+    },
+    bsc_central:{
+      institutions:[
+        {nm:'University of Madras / Bharathidasan (TN)',tier:'State · very low fees',why:['Well-resourced science departments','Low fees','Good PG placement record']},
+        {nm:'Loyola College, Chennai (aided)',tier:'Govt-aided · very low',why:['Autonomous · strong science labs','NIRF-ranked','Affordable']},
+        {nm:'Presidency University, Kolkata',tier:'State govt',why:['Historic science faculty','CSIR/DST links','Low fees']},
+        {nm:'Central Universities (via CUET)',tier:'Central · low fees',why:['National-level quality','Residential','Research exposure']},
+      ],
+      ladder:{near:'Govt Arts & Science college (B.Sc Physics/Chemistry/Maths)',state:'Univ of Madras · Loyola · Bharathidasan — autonomous colleges',india:'Central Univ → M.Sc via CUET → IITs (JAM) → IISER → PhD'},
+      story:{why:'Almost every IISER / IIT-JAM / CSIR topper spent their first 3 years in an ordinary B.Sc college — discipline and reading habit matter more than the building.',day:'Attend lectures · lab practicals · problem sheets · study independently · aim for first-class.',fact:'IIT-JAM selects B.Sc students from across India — a top B.Sc + JAM rank gets you an IIT M.Sc identical to the JEE route.',gov:'All CSIR / ISRO / DRDO / BARC / ICMR research doors open after M.Sc / PhD.',enter:'Class 12 PCM/PCB → B.Sc at state/central college → aim for IIT-JAM for M.Sc.'},
+      scholarships:['INSPIRE Scholarship (DST — top 1% Class 12)','Post-Matric (SC/ST/OBC)','State science scholarships','College merit scholarships'],
+      jobs:['IIT-JAM → M.Sc → CSIR / ISRO scientist','GATE → M.Tech / PhD at IIT','UPSC Geo/Chem/Physics specialist exam','CSIR-JRF for funded PhD'],
+      plan:[
+        {when:'Now',txt:'Apply INSPIRE scholarship — top 1% Board exam eligible',done:false},
+        {when:'Now',txt:'Shortlist autonomous B.Sc science colleges via CUET / state merit',done:false},
+        {when:'Year 2',txt:'Start IIT-JAM preparation — 1 year ahead',done:false},
+        {when:'Year 3',txt:'Attempt IIT-JAM → M.Sc at IIT or NIT',done:false},
+      ],
+    },
+  },
+
+  /* ── CREATE detail ── */
+  create:{
+    bdes:{
+      institutions:[
+        {nm:'NID Ahmedabad (+ 8 campuses)',tier:'Central · ₹50k–80k/yr',why:['India\'s premier design school','Govt-funded','Industry placement','Design Council links']},
+        {nm:'IIT IDC (Industrial Design Centre), Bombay',tier:'Central · IIT · govt',why:['Engineering-design integration','Research-grade design','Competitive but merit-based']},
+        {nm:'NIFT (15 campuses across India)',tier:'Central · ₹50k–1.2L/yr',why:['National Institute of Fashion Technology','Govt-funded','Fashion + textile design','Pan-India network']},
+        {nm:'State design institutes (FDDI, IIAD)',tier:'State / govt-aided',why:['Lower fees','Regional design practice','Govt-backed']},
+      ],
+      feeContrast:{here:'₹2–5L total (4 yr NID / NIFT)',priv:'₹10–25L total (private design schools)',note:'NID and NIFT are government institutions. Same creative environment at a fraction of the cost.'},
+      ladder:{near:'State design / art college',state:'NIFT campus in your region',india:'NID Ahmedabad · IIT IDC · NIFT Delhi'},
+      story:{why:'You walk into a hospital and the signage makes patients less scared — because someone designed it. Design is the invisible layer of care in every public space.',day:'Sketch briefs · build prototypes · user research · present to jury · revise based on critique · final portfolio.',fact:'NID graduates designed the Aadhaar card interface, the IRCTC booking flow, and India\'s national election symbols — government hires designers at scale.',gov:'NIC (design), CDAC, Films Division, PSU branding, DRDO product design, Smart Cities, railways.',enter:'NID DAT (Design Aptitude Test) / UCEED (for IIT IDC) / NIFT entrance → B.Des.'},
+      scholarships:['Post-Matric (SC/ST/OBC)','NIFT merit scholarships','NID institutional support','State design scholarships'],
+      jobs:['UX Designer (govt digital services — NIC, DigiLocker)','NIFT → textile/fashion design PSU','NID → design research, govt branding','Films Division / CBFC media design'],
+      plan:[
+        {when:'Now',txt:'Register for UCEED (Jan) and NID DAT (Dec)',done:false},
+        {when:'Now',txt:'Build a sketchbook — document visual observations daily',done:false},
+        {when:'Class 12',txt:'No mandatory stream — PCM / Arts / Commerce all eligible for NID/UCEED',done:false},
+        {when:'Jun',txt:'NIFT entrance as parallel backup — schedule is separate',done:false},
+      ],
+    },
+    ftii:{
+      institutions:[
+        {nm:'Film and Television Institute of India (FTII), Pune',tier:'Central · ₹ low (govt)',why:['India\'s premier film school since 1960','Govt-funded','Satyajit Ray alumni network','Competitive but merit-only']},
+        {nm:'Satyajit Ray Film & Television Institute (SRFTI), Kolkata',tier:'Central · ₹ low (govt)',why:['East India\'s premier film school','Govt-funded','Documentary & cinema tradition']},
+        {nm:'AJK MCRC, Jamia Millia Islamia',tier:'Central Univ · low fees',why:['Mass comm + journalism + film','Central university','Affordable']},
+      ],
+      ladder:{near:'BA Mass Comm at govt college',state:'AJK MCRC Jamia / state film institute',india:'FTII Pune · SRFTI Kolkata'},
+      story:{why:'A 20-minute documentary you made changed how a village thought about a water dispute — film is the most democratic form of truth-telling.',day:'Script sessions · location recce · shoot day (12 hours) · editing suite · festival submission.',fact:'FTII is funded by the Information & Broadcasting Ministry — India\'s government has run a film school since 1960 because cinema shapes culture.',gov:'Films Division of India, NFDC (National Film Development Corporation), Doordarshan, CBFC, state film development bodies.',enter:'BA or any UG degree → FTII/SRFTI entrance (written test + interview) → 2–3 yr PG Diploma.'},
+      scholarships:['Post-Matric (SC/ST/OBC)','FTII institutional fee waivers','NFDC fellowship','National scholarship for film studies'],
+      jobs:['Documentary filmmaker (Films Division · Doordarshan)','Cinematographer / editor (public sector)','NFDC project officer','State information department media production'],
+      plan:[
+        {when:'Now',txt:'Watch classic Indian cinema — Ray, Shyam Benegal, Ritwik Ghatak',done:false},
+        {when:'After 12',txt:'Any UG degree — film is open to all streams',done:false},
+        {when:'Year 2–3',txt:'Make short films with a phone + free software — build a portfolio',done:false},
+        {when:'Year 3',txt:'Register for FTII / SRFTI entrance test',done:false},
+      ],
+    },
+  },
+
+  /* ── SERVE detail ── */
+  serve:{
+    upsc:{
+      institutions:[
+        {nm:'Any UG degree college (UG stream does NOT matter)',tier:'Govt / aided — choose lowest fees',why:['UPSC does not consider which college','Save money for prep','More time for preparation']},
+        {nm:'JNU / Hyderabad Central / Presidency',tier:'Central / state · low fees',why:['Social science background strengthens Mains GS','Optional subject alignment','Affordable + library access']},
+        {nm:'Delhi University colleges',tier:'Central · low fees',why:['UPSC coaching hub nearby','Study circles','Motivation ecosystem']},
+      ],
+      feeContrast:{here:'₹ near-zero (choose cheapest govt UG + self-study)',priv:'₹5–15L (private coaching + private UG)',note:'Rank toppers consistently come from small-town govt colleges. The exam tests what you read, not where you studied.'},
+      ladder:{near:'Local govt college (cheapest UG) + self-study',state:'State PSC Group I (Deputy Collector / DSP) if UPSC doesn\'t work',india:'UPSC CSE → IAS / IPS / IFS / IRS allocation (top ranks choose first)'},
+      story:{why:'An IAS officer signed a single order that gave 10,000 tribals their land titles back. No other career gives one person that kind of reach.',day:'Read files · field visit · chair a district-level meeting · handle emergency · brief the principal secretary.',fact:'IAS officers join at 26–29 on average and retire at 60 — a 30-year arc where they run departments, states and eventually shape national policy.',gov:'District Collectorate, state secretariat, Central Ministries, PSU boards, international postings (MEA), constitutional bodies (CAG, EC, UPSC).',enter:'Any UG degree → UPSC Prelims (Jun) → Mains (Sep) → Interview (Feb–Mar) → allotment.'},
+      scholarships:['Post-Matric (SC/ST/OBC)','State govt UPSC coaching schemes','PM Scholarship','State-run IAS Bano coaching schemes'],
+      jobs:['IAS (Indian Administrative Service)','IPS (Indian Police Service)','IFS (Indian Foreign Service)','IRS, IFoS, IRTS, IRPS and 20+ Group A services'],
+      plan:[
+        {when:'Now',txt:'Choose cheapest govt UG — stream matters less than time for prep',done:false},
+        {when:'Year 1',txt:'Start NCERT foundation + newspaper reading habit',done:false},
+        {when:'Year 2',txt:'Choose UPSC optional subject — align with your UG if possible',done:false},
+        {when:'Year 3',txt:'Attempt UPSC Prelims in final year of UG',done:false},
+        {when:'Backup',txt:'State PSC Group I — same prep, state-level authority',done:false},
+      ],
+    },
+    llb_serve:{
+      institutions:[
+        {nm:'National Law Universities (NLUs) via CLAT',tier:'Central / state · ₹50k–1L/yr',why:['Premier law schools','Judiciary placement','Best faculty','CLAT merit-based']},
+        {nm:'Government Law Colleges (state)',tier:'State · very low fees',why:['Affordable LLB 3-yr or 5-yr','Bar Council approved','Parallel practice possible']},
+        {nm:'BHU / DU Faculty of Law / Aligarh',tier:'Central Univ · very low',why:['Historic law departments','Affordable','Proximity to High Courts']},
+      ],
+      ladder:{near:'State govt law college (5 yr BA LLB or 3 yr LLB)',state:'NLU in your state via CLAT / state merit',india:'NLSIU Bengaluru · NLU Delhi · NALSAR · NUJS → judiciary / public law'},
+      story:{why:'A judge reads 200 pages by 9 AM, hears 50 cases by 5 PM, and writes a judgement that will be cited for decades. Law is the architecture of a just society.',day:'Read case briefs · appear in court · draft petitions · research precedents · negotiate settlements.',fact:'India has only 21 judges per million people — the global average is 50. Every lawyer who enters the judiciary shrinks the 40-million-case backlog.',gov:'High Courts, Supreme Court, District Courts (via state judiciary exam), NALSA, CBI Prosecution, ED, state prosecution directorates.',enter:'CLAT → NLU (5 yr BA LLB) OR any UG → LLB (3 yr) → Bar Council → state judiciary exam.'},
+      scholarships:['Post-Matric (SC/ST/OBC)','NLU merit scholarships','Bar Council trust scholarships','State legal education scholarship'],
+      jobs:['District Judge / Judicial Magistrate (via state exam)','Public Prosecutor (state / CBI)','NALSA Legal Aid Advocate','UPSC → IPS / IRS (law optional preferred)'],
+      plan:[
+        {when:'Now',txt:'Register for CLAT — Nov exam',done:false},
+        {when:'Now',txt:'Identify state law college as backup — same 5 yr path',done:false},
+        {when:'Year 3',txt:'Apply for internships at district courts & High Court',done:false},
+        {when:'Year 5',txt:'Enrol Bar Council → prepare state judiciary exam',done:false},
+        {when:'Backup',txt:'Any UG + 3 yr LLB route if not clearing CLAT',done:false},
+      ],
+    },
+  },
+
+  /* ── UNSURE detail ── */
+  unsure:{
+    ba_liberal:{
+      institutions:[
+        {nm:'JNU (Arts & Social Sciences)',tier:'Central · near-free',why:['Multiple subjects in one programme','Lowest fees in India','MA pipeline strong','UPSC ecosystem']},
+        {nm:'Presidency University, Kolkata / Chennai',tier:'State govt',why:['Historic BA departments','Affordable','Peer culture']},
+        {nm:'Loyola College, Chennai (aided)',tier:'Govt-aided · very low',why:['Autonomous · interdisciplinary BA','Strong alumni','Affordable']},
+        {nm:'Central Universities (via CUET)',tier:'Central · low fees',why:['Wide subject combinations','Research exposure','National peers']},
+      ],
+      ladder:{near:'Govt arts college → BA in a subject you enjoy most',state:'Presidency / Loyola / state central univ',india:'JNU / Hyderabad Central / DU → MA → civil services / research / law'},
+      story:{why:"Not knowing is honest. Every IAS topper, lawyer and scientist had a moment where they weren't sure. A BA buys you three years of legitimate exploration.",day:'Read, discuss, write essays · experiment with different subjects · talk to seniors · slowly zero in.',fact:'More than half of UPSC IAS toppers have a BA — liberal arts is not a weak path, it is the broadest path.',gov:'All govt doors remain open after a BA — civil services, PSC, judiciary, development, teaching, research.',enter:'CUET or state merit → BA at govt / central university → 3 years to find your lane.'},
+      scholarships:['Post-Matric (SC/ST/OBC)','State arts scholarships','Central merit-cum-means','JNU hostel + subsidised fees for all'],
+      jobs:['Civil Services (UPSC / PSC)','Teaching / research (MA → NET → lecturer)','Law (3 yr LLB after BA)','NGO / development sector'],
+      plan:[
+        {when:'Now',txt:'Take the Know Yourself test on Vazhi — 10 minutes, often clarifying',done:false},
+        {when:'Now',txt:'Apply via CUET to central university BA programmes',done:false},
+        {when:'Year 1',txt:'Try at least 2 subjects you haven\'t studied before',done:false},
+        {when:'Year 2',txt:'Talk to 3 seniors in different fields — their stories beat any advice',done:false},
+        {when:'Year 3',txt:'By now you\'ll know — law, civil services, research or specialise further',done:false},
+      ],
+    },
+    bsc_cs:{
+      institutions:[
+        {nm:'State govt arts & science colleges (B.Sc CS/CA)',tier:'State · ₹5k–20k/yr',why:['Very affordable','Strong local job market','Flexible to specialise later']},
+        {nm:'Central Universities (CUET)',tier:'Central · low fees',why:['Higher quality labs','National peers','M.Sc route opens']},
+        {nm:'NIT/IIIT B.Tech CSE (via JEE)',tier:'Central · ₹75k–1.5L/yr',why:['Premium if JEE rank is strong','National brand','Best job placements']},
+      ],
+      ladder:{near:'Govt Arts & Science college — B.Sc CS',state:'Central Univ or state engineering college',india:'NIT / IIIT (JEE) → or M.Sc CS at IIT via JAM from B.Sc'},
+      story:{why:"If you don't know what you want but want to keep doors open, CS is the one subject that has a job in literally every industry on earth.",day:'Code · debug · build small projects · learn a new language or framework · solve algorithmic problems.',fact:"India's Digital India stack — Aadhaar, UPI, CoWIN — was built by computer scientists who work in or for the public sector.",gov:'NIC (National Informatics Centre), CDAC, ISRO (software), DRDO software labs, public sector IT.',enter:'Class 12 PCM → B.Sc CS at state/central college (state merit or CUET) or B.Tech at NIT (JEE Main).'},
+      scholarships:['Post-Matric (SC/ST/OBC)','INSPIRE (if PCM top 1%)','State computer science scholarships','PM Scholarship (PMSS)'],
+      jobs:['NIC / CDAC technical staff','Software Engineer (PSU / govt IT)','ISRO / DRDO software developer','GATE → M.Tech CS at NIT/IIT'],
+      plan:[
+        {when:'Now',txt:'Take the Know Yourself test first — even if "CS as default", know your real interests',done:false},
+        {when:'Now',txt:'Apply state merit or CUET for B.Sc CS at govt college',done:false},
+        {when:'Year 1',txt:'Learn one programming language properly — not 5 halfway',done:false},
+        {when:'Year 2',txt:'If you love it → prepare GATE for M.Tech; if not → explore electives for pivots',done:false},
+      ],
+    },
+  },
 };
 
 /* dream-agnostic fallback so no path ever dead-ends */
@@ -575,6 +1099,7 @@ function fallbackDetail(p,dreamName){
 
 const RISK_ICO={red:'🔴',amber:'🟡',green:'🟢'};
 let currentDream='help';
+let currentLens=null;
 let PATH_BY_ID={};
 function buildIndex(D){ PATH_BY_ID={}; ['primary','alt','backup'].forEach(t=>D.paths[t].forEach(p=>{p._tier=t;PATH_BY_ID[p.id]=p;})); }
 
@@ -584,8 +1109,7 @@ const grid=document.getElementById('dreamGrid');
 DREAMS.forEach(d=>{
   const b=document.createElement('button');
   b.className='dream '+(d.live?'live':'locked');
-  b.innerHTML=`<span class="pill">${d.live?'Live':'Soon'}</span>
-    <span class="d-ico">${d.ico}</span><span class="d-txt">${d.txt}</span>
+  b.innerHTML=`<span class="d-ico">${d.ico}</span><span class="d-txt">${d.txt}</span>
     <span class="d-anchor">${d.anchor}</span>`;
   b.addEventListener('click',d.live?()=>openExplorer(d.id):()=>document.querySelector('.dream.live').scrollIntoView({behavior:'smooth',block:'center'}));
   grid.appendChild(b);
@@ -593,17 +1117,31 @@ DREAMS.forEach(d=>{
 
 function resolveGoal(){
   const v=(document.getElementById('goalInput').value||'').toLowerCase();
-  const help=['doctor','mbbs','neet','nurse','nursing','dentist','bds','physio','medicine','medical','health','teacher'];
-  const nat=['farm','agri','agriculture','forest','nature','animal','vet','geolog','ocean','wildlife','fisher','environment','earth','soil'];
+  const help=['doctor','mbbs','neet','nurse','nursing','dentist','bds','physio','medicine','medical','health','teacher','hospital'];
+  const nat=['farm','agri','agriculture','forest','nature','animal','vet','geolog','ocean','wildlife','fisher','environment','earth','soil','plant'];
+  const build=['engineer','engineering','architect','architecture','construction','mechanical','civil','electrical','electronics','robotics','btech','b.tech','jee','nit','polytechnic'];
+  const money=['chartered','accountant',' ca ','banker','banking','finance','actuary','actuarial','economics','economist','commerce','stock','invest','ibps','rbi grade'];
+  const sci=['scientist','research','physics','chemistry','biology','maths','mathematics','astronomy','astrophys','iiser','lab','experiment','discover'];
+  const create=['design','designer','art ','artist','film','filmmaker','graphic','fashion','animation','nid','nift','creative','painting','sculpture','media','ftii'];
+  const serve=['ias','ips','ifs','upsc','civil service','police','army','military','navy','defence','law ','lawyer','judge','court',' psc','ssc','nda','cds'];
+  const impact=['policy','development','ngo','welfare','community','social work','international','diplomat','poverty','governance','impact'];
+
   if(nat.some(k=>v.includes(k))) openExplorer('nature');
   else if(help.some(k=>v.includes(k))) openExplorer('help');
-  else { alert('In this slice two dreams are wired up: Helping People and Working with Nature. Try: doctor, nurse, farmer, geologist…'); document.querySelector('.dream.live').scrollIntoView({behavior:'smooth',block:'center'}); }
+  else if(build.some(k=>v.includes(k))) openExplorer('build');
+  else if(serve.some(k=>v.includes(k))) openExplorer('serve');
+  else if(money.some(k=>v.includes(k))) openExplorer('money');
+  else if(sci.some(k=>v.includes(k))) openExplorer('sci');
+  else if(create.some(k=>v.includes(k))) openExplorer('create');
+  else if(impact.some(k=>v.includes(k))) openExplorer('impact');
+  else openExplorer('unsure');
 }
 
 /* ───────── EXPLORER ───────── */
 const X=document.getElementById('explorer');
 function openExplorer(dreamId){
   currentDream=dreamId;
+  currentLens=null;
   const D=DREAMDATA[dreamId];
   buildIndex(D);
   X.className='explorer open';
@@ -622,13 +1160,13 @@ function openExplorer(dreamId){
     <div class="block reveal" id="clusterBlock">
       <div class="block-top"><span class="lv-badge" style="background:var(--coral)">Careers in this dream</span>
         <h3>${D.clusterLabel}</h3></div>
-      <div class="lenses">${D.lenses.map((l,i)=>`<span class="lens ${l.ready?'on':''}">${l.n}${l.ready?'':'<span class="soon">soon</span>'}</span>`).join('')}</div>
-      <div class="chips">${D.cluster.map(c=>`<span class="chip">${c.e} ${c.n}</span>`).join('')}</div>
+      <div class="lenses" id="lensChips">${(()=>{const readyCount=D.lenses.filter(l=>l.ready).length;return D.lenses.map((l,i)=>`<span class="lens ${l.ready?'on':''}" id="lens_${i}"${l.ready&&readyCount>=2?` onclick="filterLens('${l.n}')" title="Show only ${l.n}"`:''}">${l.n}${l.ready?'':'<span class="soon">soon</span>'}</span>`).join('');})()}</div>
+      <div class="chips" id="clusterChips">${D.cluster.map(c=>`<span class="chip" data-lens="${c.l||''}">${c.e} ${c.n}</span>`).join('')}</div>
       <div class="unknown">
         <div class="u-ttl">✨ ${D.unknownHeading||'Same dream. Different careers.'}</div>
         <div class="u-sub">Careers most students never hear about — tap any card for a 20-second snapshot.</div>
-        <div class="u-cards">${D.unknown.map((u,i)=>`
-          <div class="u-card" onclick="openUC(${i})">
+        <div class="u-cards" id="ucCards">${D.unknown.map((u,i)=>`
+          <div class="u-card" data-lens="${u.l||''}" onclick="openUC(${i})">
             <div class="uc-top">${u.ico} ${u.label||u.n}</div>
             ${(u.label&&u.label!==u.n)?`<div class="uc-tech">${u.n}</div>`:''}
             <div class="uc-one">${u.short}</div>
@@ -789,6 +1327,22 @@ function renderResonance(){
   }
 }
 function openRelated(id){ if(DREAMDATA[id]) openExplorer(id); else document.getElementById('dreamGrid').scrollIntoView({behavior:'smooth',block:'center'}); }
+
+function filterLens(n){
+  currentLens=(currentLens===n)?null:n;
+  const D=DREAMDATA[currentDream];
+  D.lenses.forEach((l,i)=>{
+    const el=document.getElementById('lens_'+i);
+    if(!el||!l.ready) return;
+    el.classList.toggle('sel', currentLens===l.n);
+  });
+  document.querySelectorAll('#clusterChips .chip').forEach(el=>{
+    el.classList.toggle('dim', !!currentLens && el.dataset.lens!==currentLens && el.dataset.lens!=='');
+  });
+  document.querySelectorAll('#ucCards .u-card').forEach(el=>{
+    el.classList.toggle('dim', !!currentLens && el.dataset.lens!==currentLens && el.dataset.lens!=='');
+  });
+}
 
 /* ── Unknown-career snapshot bottom-sheet ── */
 const RISK_TXT={green:'Several routes',amber:'Limited routes',red:'One main route'};
