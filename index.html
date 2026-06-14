@@ -322,6 +322,10 @@ body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);c
 .act-secondary:hover{background:var(--brand);color:#fff;border-color:var(--brand)}
 .act-outline:hover{background:#1A1F4D;color:#fff;border-color:#1A1F4D}
 footer{padding:32px 0 54px;text-align:center;color:var(--text3);font-size:.85rem;border-top:1px solid var(--border)}
+.footer-main{margin-bottom:12px}
+.footer-links{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-top:8px}
+.footer-links a{color:var(--text3);text-decoration:none;font-size:.85rem;transition:color .2s}
+.footer-links a:hover{color:var(--brand)}
 
 @media(max-width:640px){.sj,.path-cards{grid-template-columns:1fr}}
 </style>
@@ -384,7 +388,13 @@ footer{padding:32px 0 54px;text-align:center;color:var(--text3);font-size:.85rem
 
 <script src="data/announcements.js"></script>
 
-<footer>Vazhi வழி — guidance for students after Class 12 · government, aided &amp; merit-based institutions</footer>
+<footer>
+  <div class="footer-main">Vazhi வழி — guidance for students after Class 12 · government, aided &amp; merit-based institutions</div>
+  <div class="footer-links">
+    <a href="mailto:kalvivazhi@gmail.com">✉️ kalvivazhi@gmail.com</a>
+    <a href="https://instagram.com/kalvivazhi.in" target="_blank" rel="noopener">📸 @kalvivazhi.in</a>
+  </div>
+</footer>
 
 <script>
 /* ───────── DREAM CARDS ───────── */
@@ -1293,10 +1303,10 @@ function selectPath(id){
         <div class="plan">
           <h5>${path.name} — your next steps</h5>
           <div class="p-sub">Tap an item to check it off.</div>
-          ${d.plan.map(it=>`<div class="plan-item${it.done?' done':''}" onclick="this.classList.toggle('done')">
+          ${d.plan.map((it,i)=>`<div class="plan-item" onclick="togglePlanItem(this,'${id}',${i})">
             <span class="plan-box">✓</span><span class="pi-when">${it.when}</span><span class="pi-txt">${it.txt}</span></div>`).join('')}
           <div class="plan-actions">
-            <button class="primary">⭐ Save plan</button><button>⤓ Download</button><button>📲 Remind me of deadlines</button>
+            <button class="primary" onclick="toggleSave('${id}')">⭐ Save plan</button><button onclick="downloadPlan('${id}')">⤓ Download</button><button>📲 Remind me of deadlines</button>
           </div>
         </div>
       </div>
@@ -1306,6 +1316,8 @@ function selectPath(id){
       </div>
     </div>
   </div>`;
+  restorePlanState(id);
+  restoreSaveState(id);
   m.scrollIntoView({behavior:'smooth',block:'start'});
 }
 
@@ -1371,10 +1383,66 @@ function scrollToDreams(){
   document.getElementById('dreamGrid').scrollIntoView({behavior:'smooth',block:'start'});
 }
 
+function togglePlanItem(el,pathId,idx){
+  el.classList.toggle('done');
+  const key='vazhi_plan_'+pathId;
+  const checked=new Set(JSON.parse(localStorage.getItem(key)||'[]'));
+  if(el.classList.contains('done')) checked.add(idx); else checked.delete(idx);
+  localStorage.setItem(key,JSON.stringify([...checked]));
+}
+
+function restorePlanState(pathId){
+  const checked=new Set(JSON.parse(localStorage.getItem('vazhi_plan_'+pathId)||'[]'));
+  document.querySelectorAll('.plan-item').forEach((el,i)=>{ if(checked.has(i)) el.classList.add('done'); });
+}
+
+function restoreSaveState(id){
+  const saved=JSON.parse(localStorage.getItem('vazhi_saved_paths')||'[]');
+  if(saved.some(s=>s.id===id)){
+    SAVED.add(id);
+    const b=document.getElementById('saveBtn_'+id);
+    if(b){b.classList.add('on');b.textContent='✓ Saved';}
+  }
+}
+
 function toggleSave(id){
   const b=document.getElementById('saveBtn_'+id);
-  if(SAVED.has(id)){SAVED.delete(id);b.classList.remove('on');b.textContent='⭐ Save this path';}
-  else{SAVED.add(id);b.classList.add('on');b.textContent='✓ Saved';}
+  const saved=JSON.parse(localStorage.getItem('vazhi_saved_paths')||'[]');
+  if(SAVED.has(id)){
+    SAVED.delete(id);
+    if(b){b.classList.remove('on');b.textContent='⭐ Save this path';}
+    localStorage.setItem('vazhi_saved_paths',JSON.stringify(saved.filter(s=>s.id!==id)));
+  } else {
+    SAVED.add(id);
+    if(b){b.classList.add('on');b.textContent='✓ Saved';}
+    const path=PATH_BY_ID[id];
+    const dreamName=currentDream?DREAMDATA[currentDream].dream:'';
+    if(!saved.some(s=>s.id===id))
+      localStorage.setItem('vazhi_saved_paths',JSON.stringify([...saved,{id,name:path?path.name:id,dream:dreamName}]));
+  }
+}
+
+function downloadPlan(id){
+  const path=PATH_BY_ID[id]; if(!path) return;
+  const D=DREAMDATA[currentDream];
+  const d=(DETAIL[currentDream]&&DETAIL[currentDream][id])||fallbackDetail(path,D.dream);
+  const checked=new Set(JSON.parse(localStorage.getItem('vazhi_plan_'+id)||'[]'));
+  const lines=[
+    'Vazhi — Your Action Plan',
+    '========================',
+    `Dream: ${D.dream}`,
+    `Path: ${path.name} (${path.deg})`,
+    '',
+    'Next Steps:',
+    ...d.plan.map((it,i)=>`[${checked.has(i)?'✓':' '}] ${it.when.padEnd(5)} ${it.txt}`),
+    '',
+    `Downloaded from kalvivazhi.in on ${new Date().toLocaleDateString('en-IN')}`
+  ];
+  const blob=new Blob([lines.join('\n')],{type:'text/plain'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download=`vazhi-plan-${id}.txt`;
+  a.click();
 }
 
 /* ───────── HOMEPAGE: upcoming key dates (from data/announcements.js) ───────── */
