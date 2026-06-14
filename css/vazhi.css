@@ -69,10 +69,10 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-si
 
 /* ── VAZHI HEADER ── */
 .site-header{
-  background:linear-gradient(135deg,#1A1F4D 0%,#2C3580 100%);
+  background:var(--surface);
   position:sticky;top:0;z-index:200;
-  box-shadow:0 4px 24px rgba(0,0,0,0.3);
-  border-radius:0 0 62px 62px;
+  box-shadow:var(--shadow-sm);
+  border-bottom:1px solid var(--border);
 }
 .header-inner{
   max-width:1320px;margin:0 auto;padding:0 1.5rem;
@@ -93,22 +93,22 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-si
 .logo-text-wrap{display:flex;flex-direction:column;line-height:1}
 .logo-en{
   font-family:var(--font-display);font-size:20px;font-weight:700;
-  color:#FFFFFF;letter-spacing:-0.3px;
+  color:var(--text);letter-spacing:-0.3px;
 }
 .logo-ta{
-  font-family:var(--font-tamil);font-size:11px;font-weight:400;
-  color:rgba(255,255,255,0.5);letter-spacing:0.02em;margin-top:1px;
+  font-family:var(--font-tamil);font-size:11px;font-weight:600;
+  color:var(--brand);letter-spacing:0.02em;margin-top:1px;
 }
 
 /* Nav tabs */
 .tab-nav{display:flex;gap:2px;flex:1;justify-content:center}
 .tab-btn{
   padding:6px 16px;font-size:12px;font-family:var(--font-body);
-  font-weight:500;border:1px solid transparent;border-radius:20px;
-  cursor:pointer;background:transparent;color:#C5CBFF;
+  font-weight:600;border:1px solid transparent;border-radius:20px;
+  cursor:pointer;background:transparent;color:var(--text2);
   transition:all 0.15s;white-space:nowrap;letter-spacing:0.01em;
 }
-.tab-btn:hover{background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.85)}
+.tab-btn:hover{background:var(--surface2);color:var(--text)}
 .tab-btn.active{
   background:var(--brand);color:#fff;
   border-color:var(--brand);
@@ -594,7 +594,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-si
 /* thin, visible scrollbar so students know the nav scrolls */
 @media(max-width:600px){
   .tab-nav::-webkit-scrollbar{height:3px}
-  .tab-nav::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.35);border-radius:3px}
+  .tab-nav::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
   .tab-nav::-webkit-scrollbar-track{background:transparent}
 }
 @media(max-width:480px){
@@ -1206,6 +1206,32 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-si
 .cg-fallback-title{font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:8px}
 .cg-fallback-sub{font-size:13px;color:var(--text2);line-height:1.6}
 @media(max-width:500px){.cg-fallback{flex-direction:column;gap:12px}}
+
+/* ── Career Guide: category browse ── */
+.cg-browse-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text3);text-align:center;margin:28px 0 12px}
+.cg-browse-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;max-width:860px;margin:0 auto 32px;padding:0 8px}
+.cg-cat-tile{display:flex;flex-direction:column;align-items:center;gap:6px;padding:18px 12px;background:var(--surface);border:1.5px solid var(--border);border-radius:14px;cursor:pointer;transition:all 0.15s;text-align:center;font-family:inherit}
+.cg-cat-tile:hover{border-color:var(--accent);background:var(--accent-bg);transform:translateY(-2px);box-shadow:var(--shadow-sm)}
+.cg-cat-ico{font-size:1.8rem;line-height:1}
+.cg-cat-label{font-size:12px;font-weight:700;color:var(--text);line-height:1.3}
+.cg-cat-count{font-size:11px;color:var(--text3);font-weight:600}
+/* Category results panel */
+.cg-cat-results{max-width:860px;margin:0 auto 32px;padding:0 8px}
+.cg-cat-results-hdr{display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap}
+.cg-cat-results-ico{font-size:1.5rem}
+.cg-cat-results-name{font-size:1rem;font-weight:800;color:var(--text)}
+.cg-cat-results-count{font-size:12px;color:var(--text3);font-weight:600;background:var(--bg2);border-radius:20px;padding:3px 10px}
+.cg-cat-clear{margin-left:auto;background:none;border:1px solid var(--border);border-radius:20px;padding:4px 12px;font-size:12px;color:var(--text3);cursor:pointer;font-family:inherit;transition:all 0.15s}
+.cg-cat-clear:hover{border-color:var(--text2);color:var(--text)}
+.cg-cat-list{display:flex;flex-wrap:wrap;gap:10px}
+.cg-cat-career-btn{display:flex;align-items:center;gap:8px;padding:10px 16px;background:var(--surface);border:1.5px solid var(--border);border-radius:12px;cursor:pointer;font-family:inherit;font-size:13px;font-weight:600;color:var(--text);transition:all 0.15s}
+.cg-cat-career-btn:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-bg)}
+.cg-cat-career-ico{font-size:1.1rem}
+/* Day in life */
+.cg-step-day{background:var(--bg2)}
+.cg-day-list{display:flex;flex-direction:column;gap:6px}
+.cg-day-item{font-size:13px;color:var(--text2);line-height:1.5;padding:8px 12px;background:var(--surface);border-radius:8px;border-left:3px solid var(--accent-border)}
+@media(max-width:500px){.cg-browse-grid{grid-template-columns:repeat(2,1fr)}.cg-cat-tile{padding:14px 8px}}
 
 /* Cross-reference links */
 .card-exam-link{color:var(--accent);text-decoration:none;font-weight:600;font-size:12px}

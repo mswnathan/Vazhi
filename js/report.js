@@ -449,7 +449,7 @@ function renderCareers(careers, grade, L, isTa) {
           <div class="report-career-title" style="color:${bc.c}">${c.title}</div>
           <div class="report-career-roles">${roles}</div>
           <a class="report-career-link no-print"
-             href="index.html#career-${c.id}" target="_blank">
+             href="explore.html#career-${c.id}" target="_blank">
             ${isTa ? 'Vazhi-ல் ஆராயுங்கள் →' : 'Explore on Vazhi →'}
           </a>
         </div>

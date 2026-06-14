@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Course Scope | Vazhi வழி (review copy)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAF8F3; --surface:#FFFFFF; --surface2:#F2EFE8; --surface3:#E8E4DA;
+  --border:#E0DBD0; --border2:#C9C3B5;
+  --text:#1C1A14; --text2:#4A4640; --text3:#948E84;
+  --brand:#D4580A; --brand-dk:#A83E00; --brand-bg:#FFF3E8; --brand-border:#F2C4A0;
+  --accent:#0A7B72; --accent-dk:#065750; --accent-bg:#E6F7F6; --accent-border:#9FD9D5;
+  --blue:#1A4DD6; --blue-bg:#EBF0FF; --green:#0D6640; --green-bg:#E8F8EF;
+  --amber:#855100; --amber-bg:#FFF5E0; --purple:#581F9E; --purple-bg:#F2EBFF;
+  --coral:#BC2D12; --coral-bg:#FFEDE8; --teal:#0A686F; --teal-bg:#E5FAFB;
+  --rose:#9B1B5A; --rose-bg:#FFEBF3;
+  --r:10px; --r-lg:16px; --r-xl:22px;
+  --shadow-sm:0 1px 3px rgba(0,0,0,0.06),0 2px 8px rgba(0,0,0,0.04);
+  --font-display:'Fraunces',Georgia,serif;
+  --font-body:'Plus Jakarta Sans',sans-serif;
+  --font-tamil:'Noto Sans Tamil',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:560px;margin:0 auto;padding:0 16px 64px}
+.review-flag{background:#2A2620;color:#F4EFE6;text-align:center;font-size:11.5px;letter-spacing:.03em;padding:7px 12px;font-weight:600}
+.review-flag b{color:#F4A66A}
+
+/* two-level nav: stream → course */
+.navwrap{position:sticky;top:0;z-index:20;background:rgba(250,248,243,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+.streamrow{max-width:560px;margin:0 auto;display:flex;gap:8px;overflow-x:auto;padding:9px 16px 2px;scrollbar-width:none}
+.streamrow::-webkit-scrollbar{display:none}
+.courserow-wrap{position:relative;max-width:560px;margin:0 auto}
+.courserow-wrap::before{content:'';position:absolute;left:0;top:0;bottom:0;width:48px;background:linear-gradient(to left,transparent,rgba(250,248,243,.96));pointer-events:none;transition:opacity .3s;opacity:0;z-index:1}
+.courserow-wrap::after{content:'';position:absolute;right:0;top:0;bottom:0;width:48px;background:linear-gradient(to right,transparent,rgba(250,248,243,.96));pointer-events:none;transition:opacity .3s;z-index:1}
+.courserow-wrap.has-left::before{opacity:1}
+.courserow-wrap.at-end::after{opacity:0}
+.courserow{display:flex;gap:8px;overflow-x:auto;padding:8px 16px 9px;scrollbar-width:none}
+.courserow::-webkit-scrollbar{display:none}
+.scroll-hint{position:absolute;top:50%;transform:translateY(-50%);background:var(--surface);border:1.5px solid var(--border2);border-radius:999px;width:28px;height:28px;display:grid;place-items:center;font-size:13px;color:var(--text2);cursor:pointer;box-shadow:var(--shadow-sm);transition:opacity .3s;z-index:2;opacity:0;pointer-events:none}
+.scroll-hint.right{right:4px}
+.scroll-hint.left{left:4px}
+.courserow-wrap.has-left .scroll-hint.left{opacity:1;pointer-events:auto}
+.courserow-wrap.has-overflow:not(.at-end) .scroll-hint.right{opacity:1;pointer-events:auto}
+.schip{flex:none;border:none;background:transparent;color:var(--text3);font-weight:800;font-size:12px;letter-spacing:.04em;text-transform:uppercase;padding:5px 3px;cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap}
+.schip.on{color:var(--brand-dk);border-bottom-color:var(--brand)}
+.ctab{flex:none;border:1.5px solid var(--border2);background:var(--surface);color:var(--text2);font-family:var(--font-body);font-weight:600;font-size:13px;padding:7px 14px;border-radius:999px;cursor:pointer;white-space:nowrap;min-height:36px}
+.ctab.on{background:var(--brand);border-color:var(--brand);color:#fff}
+
+/* ── LEVEL 1 ── */
+.hero{padding:22px 2px 4px}
+.hero .eyebrow{font-size:11px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--brand-dk)}
+.hero h1{font-family:var(--font-display);font-size:clamp(24px,7vw,30px);font-weight:700;line-height:1.12;margin:7px 0 9px}
+.hero .essence{font-size:16px;color:var(--text);font-weight:500;line-height:1.45}
+
+.block{margin-top:22px}
+.block-h{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--text3);margin-bottom:11px}
+
+.understand{list-style:none;display:flex;flex-direction:column;gap:9px}
+.understand li{position:relative;padding-left:29px;font-size:15.5px;color:var(--text);line-height:1.4;font-weight:500}
+.understand li::before{content:'✅';position:absolute;left:0;top:0;font-size:15px}
+
+.usedin{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.usedin .u{background:var(--surface);border:1px solid var(--border);border-radius:13px;padding:13px 8px 11px;text-align:center;box-shadow:var(--shadow-sm)}
+.usedin .u .ico{font-size:23px;line-height:1}
+.usedin .u .lbl{font-size:12px;font-weight:600;color:var(--text2);margin-top:6px;line-height:1.2}
+
+.opps{display:flex;flex-direction:column;gap:10px}
+details.opp{background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm)}
+details.opp[open]{border-color:var(--border2)}
+.opp summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:14px 15px;min-height:60px;-webkit-tap-highlight-color:transparent}
+.opp summary::-webkit-details-marker{display:none}
+.opp .oic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-size:21px;flex:none}
+.opp .omain{flex:1;min-width:0}
+.opp .oname{font-size:15.5px;font-weight:700;color:var(--text);display:block}
+.opp .oteaser{font-size:12.5px;color:var(--text3);display:block;margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.opp .ochev{flex:none;color:var(--text3);font-size:12px;transition:transform .2s}
+.opp[open] .ochev{transform:rotate(180deg)}
+.opp[open] .oteaser{display:none}
+.obody{padding:2px 15px 16px}
+.ochips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:13px}
+.ochips span{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:5px 11px;font-size:13px;font-weight:600;color:var(--text)}
+.osub{font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--text3);margin-bottom:6px}
+.oroutes{display:flex;flex-wrap:wrap;gap:6px}
+.oroutes span{font-size:12.5px;color:var(--text2);background:transparent;border:1px dashed var(--border2);border-radius:7px;padding:4px 9px}
+.o-gov .oic{background:var(--blue-bg);color:var(--blue)}
+.o-pri .oic{background:var(--purple-bg);color:var(--purple)}
+.o-res .oic{background:var(--coral-bg);color:var(--coral)}
+.o-ent .oic{background:var(--green-bg);color:var(--green)}
+
+details.exp{border-top:1px solid var(--border)}
+details.exp summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:9px;padding:16px 2px;font-size:14.5px;font-weight:700;color:var(--text);min-height:54px}
+details.exp summary::-webkit-details-marker{display:none}
+details.exp .echev{margin-left:auto;color:var(--text3);font-size:12px;transition:transform .2s}
+details.exp[open] .echev{transform:rotate(180deg)}
+.expbody{padding:0 2px 18px}
+.pills{display:flex;flex-wrap:wrap;gap:7px}
+.pills span{background:var(--amber-bg);border:1px solid #F0D69B;color:var(--amber);font-size:12.5px;font-weight:600;padding:5px 11px;border-radius:999px}
+.hslist{list-style:none;display:flex;flex-direction:column;gap:8px}
+.hslist li{position:relative;padding-left:18px;font-size:14px;color:var(--text2)}
+.hslist li::before{content:'→';position:absolute;left:0;color:var(--accent);font-weight:700}
+.exp-wrap{margin-top:24px;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:2px 16px;box-shadow:var(--shadow-sm)}
+.exp-wrap details.exp:first-child{border-top:none}
+
+.foot{margin-top:26px;text-align:center;padding:20px 16px;background:var(--brand-bg);border:1px solid var(--brand-border);border-radius:16px}
+.foot p{font-size:13.5px;color:var(--text2);margin-bottom:11px}
+.foot a{display:inline-block;background:var(--brand);color:#fff;text-decoration:none;font-weight:700;font-size:13.5px;padding:10px 22px;border-radius:999px}
+.tinyfoot{text-align:center;font-size:11.5px;color:var(--text3);margin-top:22px}
+@media(max-width:360px){.usedin{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<div class="review-flag">REVIEW COPY — <b>course-scope</b> · same engine, now 3 streams · proving it scales · not live</div>
+
+<div class="navwrap">
+  <div class="streamrow" id="streamrow"></div>
+  <div class="courserow-wrap" id="crwrap"><button class="scroll-hint left" id="scrollleft" aria-label="Scroll left">‹</button><div class="courserow" id="courserow"></div><button class="scroll-hint right" id="scrollright" aria-label="Scroll right">›</button></div>
+</div>
+<div class="wrap"><div id="app"></div>
+  <div class="tinyfoot">Vazhi வழி · Course Scope · visibility, not recommendation</div>
+</div>
+
+<script>
+/* ── DATA (becomes data/scope/scope-<stream>.js) ─────────────────────────── */
+const COURSES = [
+{ stream:'Engineering', id:'ece', tab:'ECE', emoji:'📡', title:'Electronics & Communication Engineering',
+  essence:'Build the technology behind smart devices and communication.',
+  understand:['How phones communicate','How Wi-Fi and 5G work','How chips are designed','How drones stay stable','How embedded systems control machines'],
+  usedin:[['📱','Smartphones'],['📡','Telecom'],['🚀','Space'],['🚗','Automotive Electronics'],['🤖','Robotics'],['🏭','Industrial Automation']],
+  opps:[
+    {k:'gov',ic:'🏛️',name:'Government & PSU',items:['ISRO','DRDO','BEL','Railways','BSNL','ECIL'],subLabel:'How students typically enter',sub:['GATE','PSU recruitment','Technical exams (IES, SSC JE)']},
+    {k:'pri',ic:'🏢',name:'Private Sector',items:['Qualcomm','Intel','Samsung','Nvidia','Ericsson','Texas Instruments'],subLabel:'Typical roles',sub:['Embedded Engineer','VLSI Engineer','Telecom Engineer']},
+    {k:'res',ic:'🔬',name:'Research',items:['DRDO labs','ISRO – VSSC','BEL R&D','IISc – CEDT','C-DAC','SCL Mohali'],subLabel:'Pathway',sub:['M.Tech / PhD via GATE','Research fellowships']},
+    {k:'ent',ic:'🚀',name:'Entrepreneurship',items:['IoT products','Embedded systems','Telecom solutions','PCB & VLSI design'],subLabel:'Common forms',sub:['Product startups','Freelancing','Consultancy']}],
+  trends:['5G & Wireless','IoT','VLSI & Chip Design','Embedded & FPGA','AI in Electronics','Autonomous Systems','Wearable Tech'],
+  higher:['M.Tech / M.E via GATE','MS abroad — VLSI, Embedded, Communication','MBA via CAT / GMAT','PhD & research at IITs / IISc']
+},
+{ stream:'Engineering', id:'cse', tab:'CSE', emoji:'💻', title:'Computer Science Engineering',
+  essence:'Build the software that runs the digital world.',
+  understand:['How apps like Instagram are built','How websites and servers talk','How AI learns from data','How huge data is searched in seconds','How systems are kept secure'],
+  usedin:[['📱','Apps & Web'],['☁️','Cloud & Servers'],['🤖','AI & ML'],['🛡️','Cybersecurity'],['🎮','Gaming'],['💳','Fintech']],
+  opps:[
+    {k:'gov',ic:'🏛️',name:'Government & PSU',items:['NIC','ISRO','DRDO','C-DAC','BEL','CERT-In'],subLabel:'How students typically enter',sub:['GATE','PSU recruitment','Technical exams']},
+    {k:'pri',ic:'🏢',name:'Private Sector',items:['Google','Microsoft','Amazon','TCS','Infosys','Startups & Unicorns'],subLabel:'Typical roles',sub:['Software Engineer','Data Scientist','Cybersecurity Analyst']},
+    {k:'res',ic:'🔬',name:'Research',items:['DRDO','ISRO','C-DAC','IITs / IIITs','Microsoft Research','Google Research'],subLabel:'Pathway',sub:['M.Tech / PhD via GATE','MS abroad']},
+    {k:'ent',ic:'🚀',name:'Entrepreneurship',items:['SaaS products','AI/ML solutions','Mobile apps','Fintech'],subLabel:'Common forms',sub:['Product startups','Freelancing','Consultancy']}],
+  trends:['AI & Machine Learning','Full-Stack Development','Data Science','Cybersecurity','Cloud & DevOps','IoT','Blockchain & Fintech','Robotics'],
+  higher:['M.Tech / M.E via GATE','MS abroad — AI, Data Science, Security','MBA via CAT / GMAT','PhD & research at IITs / IIITs']
+},
+{ stream:'Engineering', id:'mech', tab:'Mechanical', emoji:'⚙️', title:'Mechanical Engineering',
+  essence:'Design and build the machines that move the world.',
+  understand:['How a car engine creates motion','How an aircraft stays in the air','How robots and machines move','How factories mass-produce goods','How EVs, batteries & cooling work'],
+  usedin:[['🚗','Automobiles'],['✈️','Aerospace'],['🏭','Manufacturing'],['🤖','Robotics'],['⚡','Energy & Power'],['🔋','Electric Vehicles']],
+  opps:[
+    {k:'gov',ic:'🏛️',name:'Government & PSU',items:['BHEL','NTPC','ONGC','SAIL','HAL','ISRO'],subLabel:'How students typically enter',sub:['GATE','PSU recruitment','Technical exams (IES, SSC JE)']},
+    {k:'pri',ic:'🏢',name:'Private Sector',items:['Tata Motors','Mahindra','Bosch','L&T','Siemens','Cummins'],subLabel:'Typical roles',sub:['Design Engineer','Production Engineer','CAD/CAM Engineer']},
+    {k:'res',ic:'🔬',name:'Research',items:['DRDO','ISRO','CSIR labs','IITs / IISc','CMTI'],subLabel:'Pathway',sub:['M.Tech / PhD via GATE','Research fellowships']},
+    {k:'ent',ic:'🚀',name:'Entrepreneurship',items:['Manufacturing units','3D-printing services','CNC workshops','Automation solutions'],subLabel:'Common forms',sub:['Product startups','CAD freelancing','Consultancy']}],
+  trends:['Robotics & Automation','3D Printing','Renewable Energy','Electric Vehicles','Smart Manufacturing','AI & IoT in Machines','Thermal & HVAC'],
+  higher:['M.Tech / M.E via GATE','MS abroad — Design, Robotics, Thermal','MBA via CAT / GMAT','PhD & research at IITs / IISc']
+},
+{ stream:'Engineering', id:'eee', tab:'EEE', emoji:'⚡', title:'Electrical & Electronics Engineering',
+  essence:'Generate, control and use electrical power efficiently.',
+  understand:['How power reaches your home','How solar and the grid work together','How an EV and its charger work','How motors run industries','How factories are automated'],
+  usedin:[['⚡','Power Grids'],['☀️','Renewable Energy'],['🔋','Electric Vehicles'],['🏭','Automation'],['🚆','Railways'],['🏠','Smart Homes']],
+  opps:[
+    {k:'gov',ic:'🏛️',name:'Government & PSU',items:['NTPC','BHEL','PGCIL','State Electricity Boards','Railways','ONGC'],subLabel:'How students typically enter',sub:['GATE','PSU recruitment','Technical exams (IES, SSC JE)']},
+    {k:'pri',ic:'🏢',name:'Private Sector',items:['Siemens','ABB','Schneider','L&T','Tata Power','Adani'],subLabel:'Typical roles',sub:['Electrical Engineer','Power Systems Engineer','Automation Engineer']},
+    {k:'res',ic:'🔬',name:'Research',items:['BHEL R&D','CPRI','NPTI','IITs / IISc','CSIR labs'],subLabel:'Pathway',sub:['M.Tech / PhD via GATE','Research fellowships']},
+    {k:'ent',ic:'🚀',name:'Entrepreneurship',items:['Solar startups','Electrical design & consulting','Automation services','EV charging'],subLabel:'Common forms',sub:['Product startups','Energy-audit freelancing','Consultancy']}],
+  trends:['Renewable Energy & Smart Grid','Power Electronics & EVs','Industrial Automation','Energy Storage','Smart Meters','AI & IoT in Power','Green Energy'],
+  higher:['M.Tech / M.E via GATE','MS abroad — Power, Control, EV systems','MBA via CAT / GMAT','PhD & research at IITs / IISc']
+},
+
+{ stream:'Engineering', id:'civil', tab:'Civil', emoji:'🏗️', title:'Civil Engineering',
+  essence:'Design and build the infrastructure that holds cities together.',
+  understand:['How bridges and buildings carry loads','How roads and highways are designed','How rivers, dams and water systems are managed','How cities plan and build infrastructure','How large construction projects are managed'],
+  usedin:[['🏗️','Construction'],['🌉','Bridges & Roads'],['🌆','Smart Cities'],['💧','Water & Dams'],['🏛️','Govt Infrastructure'],['🌱','Sustainability']],
+  opps:[
+    {k:'gov',ic:'🏛️',name:'Government & PSU',items:['CPWD','NHAI','NBCC','NHPC','IRCON','Railways'],subLabel:'How students typically enter',sub:['GATE','IES (Civil)','SSC JE','State PWD recruitment']},
+    {k:'pri',ic:'🏢',name:'Private Sector',items:['L&T','Tata Projects','HCC','NCC Ltd','Mott MacDonald','AECOM'],subLabel:'Typical roles',sub:['Site Engineer','Structural Engineer','BIM / CAD Engineer']},
+    {k:'res',ic:'🔬',name:'Research',items:['CSIR-CBRI','CWPRS','DRDO','IITs / IISc / NITs','NEERI'],subLabel:'Pathway',sub:['M.Tech / PhD via GATE','Research fellowships']},
+    {k:'ent',ic:'🚀',name:'Entrepreneurship',items:['Construction startups','Structural design consultancy','BIM modelling','Water resource management'],subLabel:'Common forms',sub:['Own firm','Freelancing','Consultancy']}],
+  trends:['Smart Cities & Urban Planning','Sustainable Green Buildings','Transport & Highway Tech','BIM & CAD','Earthquake-resistant Design','Water Resource Management'],
+  higher:['M.Tech / M.E via GATE','MS abroad — Structural, Environmental, Transport','MBA via CAT / GMAT','PhD & research at IITs / IISc']
+},
+{ stream:'Engineering', id:'prod', tab:'Production', emoji:'🔩', title:'Production Engineering',
+  essence:'Design efficient factories and turn raw materials into quality products.',
+  understand:['How production lines are designed and run','How raw materials become finished products','How quality is controlled in manufacturing','How waste is reduced and efficiency measured','How supply chains connect factories to markets'],
+  usedin:[['🏭','Manufacturing'],['🚗','Automotive'],['✈️','Aerospace Parts'],['🔩','Machine Tools'],['📦','Supply Chain'],['🤖','Automation']],
+  opps:[
+    {k:'gov',ic:'🏛️',name:'Government & PSU',items:['BHEL','NTPC','SAIL','ONGC','HAL','BEL'],subLabel:'How students typically enter',sub:['GATE','IES (Mech/Production)','SSC JE','PSU recruitment']},
+    {k:'pri',ic:'🏢',name:'Private Sector',items:['Tata Steel','Mahindra','Maruti Suzuki','Bosch','ABB','L&T'],subLabel:'Typical roles',sub:['Production Engineer','Quality Engineer','Manufacturing Planner']},
+    {k:'res',ic:'🔬',name:'Research',items:['DRDO','BHEL R&D','CSIR labs','IITs / NITs','CMTI'],subLabel:'Pathway',sub:['M.Tech / PhD via GATE','Research fellowships']},
+    {k:'ent',ic:'🚀',name:'Entrepreneurship',items:['Manufacturing units','CNC workshops','CAD/CAM design','Lean & Six Sigma consulting'],subLabel:'Common forms',sub:['Own workshop','Freelancing','Supply chain consultancy']}],
+  trends:['Industry 4.0 & Smart Manufacturing','Automation & Robotics','3D Printing & Additive Mfg','IIoT in Factories','Lean & Six Sigma','Sustainable Manufacturing'],
+  higher:['M.Tech / M.E via GATE','MS abroad — Manufacturing, Industrial Engg','MBA via CAT / GMAT','PhD & research at IITs / IISc']
+},
+{ stream:'Engineering', id:'biotech', tab:'Biotech / BME', emoji:'🧬', title:'Biotechnology & Biomedical Engineering',
+  essence:'Use biology and engineering together to create medicines, devices and diagnostics.',
+  understand:['How vaccines and medicines are developed','How genes are edited and studied','How medical devices and diagnostics are built','How living cells are engineered to solve problems','How clinical trials test treatments'],
+  usedin:[['💊','Pharma & Vaccines'],['🧬','Genomics'],['🏥','Medical Devices'],['🔬','Research Labs'],['🌾','Agri-biotech'],['🧫','Diagnostics']],
+  opps:[
+    {k:'gov',ic:'🏛️',name:'Government & PSU',items:['CSIR labs','ICMR','DBT-NII','IGIB','DRDO','State Health Depts'],subLabel:'How students typically enter',sub:['GATE (BT / XL)','CSIR-NET / DBT-JRF','Research recruitment']},
+    {k:'pri',ic:'🏢',name:'Private Sector',items:['Biocon','Serum Institute','Dr. Reddy\'s','GE Healthcare','Siemens Healthineers','Medtronic'],subLabel:'Typical roles',sub:['Research Associate','Biomedical Engineer','Regulatory Affairs']},
+    {k:'res',ic:'🔬',name:'Research',items:['DBT / CSIR labs','IITs / IISc','NCBS','Biocon Research','International genomics labs'],subLabel:'Pathway',sub:['M.Tech / PhD via GATE / CSIR-NET','International research fellowships']},
+    {k:'ent',ic:'🚀',name:'Entrepreneurship',items:['Biotech startups','Diagnostic labs','Bioinformatics services','Clinical trials consulting'],subLabel:'Common forms',sub:['Deep-tech startups','Regulatory consultancy','Freelance bioinformatics']}],
+  trends:['CRISPR & Genetic Engineering','Bioinformatics & AI','Biopharma & Vaccines','Stem Cell Research','Personalized Medicine','Medical Wearables','Synthetic Biology'],
+  higher:['M.Tech via GATE (BT)','M.Sc / PhD via CSIR-NET / DBT-JRF','MS abroad — Biomedical, Bioengineering','MBA via CAT (Life Sciences focus)']
+},
+
+/* ── NON-ENGINEERING — added as pure data, same engine ───────────────────── */
+{ stream:'Medical', id:'mbbs', tab:'MBBS', emoji:'🩺', title:'MBBS — Bachelor of Medicine & Surgery',
+  essence:'Become a doctor — diagnose, treat and care for patients.',
+  understand:['How the human body works','How diseases are diagnosed','How medicines and treatments work','How surgeries are performed','How to care for patients'],
+  usedin:[['🏥','Hospitals'],['🩺','Clinics'],['🚑','Emergency Care'],['🔬','Diagnostics & Labs'],['🏛️','Public Health'],['🎓','Medical Colleges']],
+  opps:[
+    {k:'gov',ic:'🏛️',name:'Government & PSU',items:['AIIMS','ESIC Hospitals','Govt Hospitals','Railway Health','Armed Forces (AFMS)','PHC / CHC postings'],subLabel:'How students typically enter',sub:['NEET-UG','NEET-PG','Govt medical recruitment']},
+    {k:'pri',ic:'🏢',name:'Private Sector',items:['Apollo','Fortis','Manipal Hospitals','Narayana Health','Medanta','AIG'],subLabel:'Typical roles',sub:['Physician','Surgeon (MS)','Specialist (MD)']},
+    {k:'res',ic:'🔬',name:'Research',items:['ICMR','AIIMS Research','NIMHANS','PGIMER','CMC Vellore'],subLabel:'Pathway',sub:['MD / MS via NEET-PG','DM / MCh','PhD']},
+    {k:'ent',ic:'🚀',name:'Entrepreneurship',items:['Own clinic','Diagnostic centre','Telemedicine','Health startups'],subLabel:'Common forms',sub:['Private practice','Partnerships']}],
+  trends:['Telemedicine','AI in Diagnostics','Robotic Surgery','Genomic Medicine','Medical Devices','Public Health'],
+  higher:['MD / MS via NEET-PG','DM / MCh super-specialty','MPH (public health)','PhD & research','USMLE / PLAB (abroad)']
+},
+{ stream:'Commerce', id:'bcom', tab:'B.Com', emoji:'📊', title:'B.Com — Bachelor of Commerce',
+  essence:'Understand money, business and how companies are run.',
+  understand:['How businesses earn and spend money','How accounts and taxes work','How companies follow financial rules','How banking and investments work','How to read a company’s financial health'],
+  usedin:[['🏦','Banking'],['📊','Accounting'],['💼','Corporate Finance'],['🧾','Taxation'],['📈','Stock Markets'],['🏢','Business']],
+  opps:[
+    {k:'gov',ic:'🏛️',name:'Government & PSU',items:['RBI','SEBI','Income Tax Dept','Public Sector Banks','LIC','SSC CGL posts'],subLabel:'How students typically enter',sub:['SSC CGL','Bank PO / Clerk exams','RBI Grade B']},
+    {k:'pri',ic:'🏢',name:'Private Sector',items:['Deloitte','EY','KPMG','PwC','HDFC & ICICI Banks','Zoho'],subLabel:'Typical roles',sub:['Accountant','Auditor','Financial Analyst']},
+    {k:'res',ic:'🔬',name:'Research',items:['Economics research','ICSSR','University departments','IIMs (doctoral)'],subLabel:'Pathway',sub:['M.Com','MBA','PhD']},
+    {k:'ent',ic:'🚀',name:'Entrepreneurship',items:['CA / CS practice','Tax consultancy','Bookkeeping services','Own business'],subLabel:'Common forms',sub:['Own practice','Consultancy']}],
+  trends:['Fintech','Digital Payments','Data-driven Finance','GST & Compliance','Startups','E-commerce'],
+  higher:['M.Com','CA / CS / CMA','MBA via CAT','PhD & research','ACCA (global)']
+}
+];
+
+/* ── RENDER (unchanged — same engine for every stream) ───────────────────── */
+function oppHTML(o){
+  const teaser=o.items.slice(0,3).join(' · ')+(o.items.length>3?' …':'');
+  const chips=o.items.map(i=>`<span>${i}</span>`).join('');
+  const routes=o.sub.map(s=>`<span>${s}</span>`).join('');
+  return `<details class="opp o-${o.k}">
+    <summary><span class="oic">${o.ic}</span>
+      <span class="omain"><span class="oname">${o.name}</span><span class="oteaser">${teaser}</span></span>
+      <span class="ochev">▼</span></summary>
+    <div class="obody"><div class="ochips">${chips}</div>
+      <div class="osub">${o.subLabel}</div><div class="oroutes">${routes}</div></div></details>`;
+}
+function render(b){
+  document.getElementById('app').innerHTML = `
+  <div class="hero"><div class="eyebrow">${b.emoji} Course Scope · ${b.stream}</div>
+    <h1>${b.title}</h1><p class="essence">${b.essence}</p></div>
+  <div class="block"><div class="block-h">📘 What you'll understand</div>
+    <ul class="understand">${b.understand.map(u=>`<li>${u}</li>`).join('')}</ul></div>
+  <div class="block"><div class="block-h">📍 Where it's used</div>
+    <div class="usedin">${b.usedin.map(u=>`<div class="u"><div class="ico">${u[0]}</div><div class="lbl">${u[1]}</div></div>`).join('')}</div></div>
+  <div class="block"><div class="block-h">🚪 Opportunities — tap to explore</div>
+    <div class="opps">${b.opps.map(oppHTML).join('')}</div></div>
+  <div class="exp-wrap">
+    <details class="exp"><summary>📈 Industry trends<span class="echev">▼</span></summary>
+      <div class="expbody"><div class="pills">${b.trends.map(t=>`<span>${t}</span>`).join('')}</div></div></details>
+    <details class="exp"><summary>🎓 Higher studies<span class="echev">▼</span></summary>
+      <div class="expbody"><ul class="hslist">${b.higher.map(h=>`<li>${h}</li>`).join('')}</ul></div></details>
+  </div>
+  <div class="foot"><p>Have a question about ${b.tab}? Ask Vazhi.</p><a href="#">Talk to Vazhi →</a></div>`;
+  window.scrollTo({top:0,behavior:'instant'});
+}
+
+/* ── TWO-LEVEL NAV: stream → course (derived from data) ──────────────────── */
+const streamrow=document.getElementById('streamrow');
+const courserow=document.getElementById('courserow');
+const cr=courserow;
+const wrap=document.getElementById('crwrap');
+
+function checkScroll(){
+  const hasOverflow=cr.scrollWidth>cr.clientWidth+4;
+  const atStart=cr.scrollLeft<=4;
+  const atEnd=!hasOverflow||cr.scrollLeft+cr.clientWidth>=cr.scrollWidth-4;
+  wrap.classList.toggle('has-overflow',hasOverflow);
+  wrap.classList.toggle('has-left',hasOverflow&&!atStart);
+  wrap.classList.toggle('at-end',atEnd);
+}
+cr.addEventListener('scroll',checkScroll,{passive:true});
+document.getElementById('scrollright').addEventListener('click',()=>cr.scrollBy({left:120,behavior:'smooth'}));
+document.getElementById('scrollleft').addEventListener('click',()=>cr.scrollBy({left:-120,behavior:'smooth'}));
+
+const STREAM_ORDER=['Commerce','Engineering','Medical'];
+const STREAMS=STREAM_ORDER.filter(s=>COURSES.some(c=>c.stream===s));
+let curStream=STREAMS[0], curCourse=null;
+function paint(){
+  streamrow.innerHTML=STREAMS.map(s=>`<button class="schip${s===curStream?' on':''}" data-s="${s}">${s}</button>`).join('');
+  const list=COURSES.filter(c=>c.stream===curStream);
+  if(!list.includes(curCourse)) curCourse=list[0];
+  courserow.innerHTML=list.map(c=>`<button class="ctab${c.id===curCourse.id?' on':''}" data-id="${c.id}">${c.emoji} ${c.tab}</button>`).join('');
+  streamrow.querySelectorAll('.schip').forEach(b=>b.onclick=()=>{curStream=b.dataset.s;curCourse=null;paint();});
+  courserow.querySelectorAll('.ctab').forEach(b=>b.onclick=()=>{curCourse=list.find(c=>c.id===b.dataset.id);paint();});
+  render(curCourse);
+  cr.scrollLeft=0;
+  requestAnimationFrame(()=>requestAnimationFrame(checkScroll));
+}
+paint();
+</script>
+</body>
+</html>

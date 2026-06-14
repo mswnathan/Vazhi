@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ECE — Course Scope | Vazhi வழி (review copy)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ── Vazhi palette (mirrors css/vazhi.css) ── */
+:root{
+  --bg:#FAF8F3; --surface:#FFFFFF; --surface2:#F2EFE8; --surface3:#E8E4DA;
+  --border:#E0DBD0; --border2:#C9C3B5;
+  --text:#1C1A14; --text2:#4A4640; --text3:#948E84;
+  --brand:#D4580A; --brand-dk:#A83E00; --brand-bg:#FFF3E8; --brand-border:#F2C4A0;
+  --accent:#0A7B72; --accent-dk:#065750; --accent-bg:#E6F7F6; --accent-border:#9FD9D5;
+  --blue:#1A4DD6; --blue-bg:#EBF0FF; --green:#0D6640; --green-bg:#E8F8EF;
+  --amber:#855100; --amber-bg:#FFF5E0; --purple:#581F9E; --purple-bg:#F2EBFF;
+  --coral:#BC2D12; --coral-bg:#FFEDE8; --teal:#0A686F; --teal-bg:#E5FAFB;
+  --rose:#9B1B5A; --rose-bg:#FFEBF3;
+  --r:10px; --r-lg:16px; --r-xl:24px;
+  --shadow-sm:0 1px 3px rgba(0,0,0,0.06),0 2px 8px rgba(0,0,0,0.04);
+  --shadow:0 2px 8px rgba(0,0,0,0.08),0 8px 24px rgba(0,0,0,0.05);
+  --font-display:'Fraunces',Georgia,serif;
+  --font-body:'Plus Jakarta Sans',sans-serif;
+  --font-tamil:'Noto Sans Tamil',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:880px;margin:0 auto;padding:0 18px 80px}
+
+/* review banner */
+.review-flag{background:#2A2620;color:#F4EFE6;text-align:center;font-size:12px;
+  letter-spacing:.04em;padding:7px 12px;font-weight:600}
+.review-flag b{color:#F4A66A}
+
+/* ── Hero ── */
+.hero{background:linear-gradient(135deg,#FFF3E8 0%,#FCEFE2 60%,#F3F8F7 100%);
+  border:1px solid var(--brand-border);border-radius:var(--r-xl);
+  margin-top:22px;padding:28px 26px 24px;position:relative;overflow:hidden;box-shadow:var(--shadow-sm)}
+.hero .eyebrow{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--brand-dk)}
+.hero h1{font-family:var(--font-display);font-size:clamp(26px,5vw,38px);font-weight:700;line-height:1.08;margin:8px 0 4px;color:var(--text)}
+.hero .sub{font-size:14px;color:var(--text2);max-width:560px}
+.hero .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+.hero .chips span{background:var(--surface);border:1px solid var(--brand-border);color:var(--brand-dk);
+  font-size:12px;font-weight:600;padding:4px 11px;border-radius:999px}
+.hero .ec{position:absolute;right:-30px;bottom:-50px;font-family:var(--font-tamil);
+  font-size:180px;font-weight:700;color:var(--brand);opacity:.06;pointer-events:none;line-height:1}
+
+/* myth-buster strip */
+.myth{display:flex;gap:12px;align-items:flex-start;background:var(--accent-bg);
+  border:1px solid var(--accent-border);border-radius:var(--r-lg);padding:16px 18px;margin-top:18px}
+.myth .ic{font-size:22px;line-height:1.2}
+.myth p{font-size:14px;color:var(--accent-dk)}
+.myth b{color:var(--accent-dk)}
+
+/* ── Section cards ── */
+.sec{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);
+  padding:22px 22px 20px;margin-top:18px;box-shadow:var(--shadow-sm)}
+.sec-head{display:flex;align-items:center;gap:11px;margin-bottom:4px}
+.sec-head .ic{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;font-size:19px;flex:none}
+.sec-head h2{font-family:var(--font-display);font-size:21px;font-weight:600}
+.sec-head .tg{margin-left:auto;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+  padding:3px 10px;border-radius:999px}
+.sec > .lead{font-size:13.5px;color:var(--text2);margin:2px 0 14px}
+
+/* colour variants */
+.v-study .ic{background:var(--teal-bg);color:var(--teal)} .v-study .tg{background:var(--teal-bg);color:var(--teal)}
+.v-gov .ic{background:var(--blue-bg);color:var(--blue)} .v-gov .tg{background:var(--blue-bg);color:var(--blue)}
+.v-pri .ic{background:var(--purple-bg);color:var(--purple)} .v-pri .tg{background:var(--purple-bg);color:var(--purple)}
+.v-self .ic{background:var(--green-bg);color:var(--green)} .v-self .tg{background:var(--green-bg);color:var(--green)}
+.v-res .ic{background:var(--coral-bg);color:var(--coral)} .v-res .tg{background:var(--coral-bg);color:var(--coral)}
+.v-trend .ic{background:var(--amber-bg);color:var(--amber)} .v-trend .tg{background:var(--amber-bg);color:var(--amber)}
+
+/* study subject grid */
+.subj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:11px}
+.subj{display:flex;gap:11px;align-items:flex-start;background:var(--surface2);
+  border:1px solid var(--border);border-radius:var(--r);padding:12px 13px}
+.subj .si{font-size:20px;line-height:1.1;flex:none}
+.subj .st{font-size:13.5px;font-weight:700;color:var(--text)}
+.subj .sd{font-size:12.5px;color:var(--text2);margin-top:1px}
+.year-arc{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.year-arc .yr{flex:1;min-width:150px;background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--r);padding:11px 13px}
+.year-arc .yr .yl{font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--teal)}
+.year-arc .yr .yd{font-size:12.5px;color:var(--text2);margin-top:3px}
+
+/* path rows */
+.rows{display:flex;flex-direction:column;gap:10px}
+.row{display:flex;gap:12px;align-items:baseline;padding:11px 13px;background:var(--surface2);
+  border-radius:var(--r);border:1px solid var(--border)}
+.row .k{font-weight:700;font-size:13.5px;color:var(--text);flex:none;min-width:120px}
+.row .v{font-size:13.5px;color:var(--text2)}
+.row .v b{color:var(--text);font-weight:600}
+
+/* tag grid (recruiters / labs) */
+.tags{display:flex;flex-wrap:wrap;gap:7px}
+.tags span{background:var(--surface2);border:1px solid var(--border);border-radius:8px;
+  padding:6px 12px;font-size:13px;font-weight:500;color:var(--text2)}
+.tags.lab span b{display:block;font-size:12.5px;color:var(--text);font-weight:700}
+.tags.lab span{font-size:12px;color:var(--text3)}
+
+/* trend pills + visual */
+.trend-pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.trend-pills span{background:var(--amber-bg);border:1px solid #F0D69B;color:var(--amber);
+  font-size:13px;font-weight:600;padding:6px 13px;border-radius:999px}
+
+.eco{border:1px dashed var(--border2);border-radius:var(--r-lg);padding:16px 14px 12px;background:var(--bg)}
+.eco h3{font-family:var(--font-display);font-size:16px;font-weight:600;text-align:center;margin-bottom:3px}
+.eco .ecosub{text-align:center;font-size:11.5px;color:var(--text3);margin-bottom:14px}
+.eco-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.eco-col{background:var(--surface);border:1px solid var(--border);border-radius:11px;padding:10px 8px;display:flex;flex-direction:column}
+.eco-col .ch{font-size:10.5px;font-weight:800;letter-spacing:.03em;text-transform:uppercase;text-align:center;
+  padding:6px 4px;border-radius:8px;margin-bottom:9px;line-height:1.25}
+.eco-col ul{list-style:none;display:flex;flex-direction:column;gap:5px}
+.eco-col li{font-size:11.5px;color:var(--text2);text-align:center;line-height:1.3;font-weight:500}
+.c1 .ch{background:var(--blue-bg);color:var(--blue)}
+.c2 .ch{background:var(--accent-bg);color:var(--accent-dk)}
+.c3 .ch{background:var(--purple-bg);color:var(--purple)}
+.c4 .ch{background:var(--rose-bg);color:var(--rose)}
+.c5 .ch{background:var(--green-bg);color:var(--green)}
+.eco .note{text-align:center;font-size:10.5px;color:var(--text3);margin-top:11px}
+
+/* ── Vazhi's take ── */
+.take{background:linear-gradient(135deg,#2A2620 0%,#3A322A 100%);color:#F4EFE6;
+  border-radius:var(--r-lg);padding:24px 24px 22px;margin-top:22px;position:relative;overflow:hidden}
+.take .lbl{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#F4A66A}
+.take p{font-size:15.5px;line-height:1.65;margin-top:9px;font-family:var(--font-display);font-weight:500}
+.take .sign{font-size:12.5px;color:#C9C0B2;margin-top:12px}
+
+/* CTA */
+.cta{background:var(--brand-bg);border:1px solid var(--brand-border);border-radius:var(--r-lg);
+  padding:22px 22px;margin-top:16px;text-align:center}
+.cta h3{font-family:var(--font-display);font-size:20px;font-weight:600;color:var(--text)}
+.cta p{font-size:13.5px;color:var(--text2);max-width:460px;margin:6px auto 14px}
+.cta a{display:inline-block;background:var(--brand);color:#fff;text-decoration:none;font-weight:700;
+  font-size:14px;padding:11px 26px;border-radius:999px;box-shadow:var(--shadow-sm)}
+.cta a:hover{background:var(--brand-dk)}
+
+footer{text-align:center;font-size:12px;color:var(--text3);margin-top:30px}
+
+@media(max-width:640px){
+  .eco-grid{grid-template-columns:repeat(2,1fr)}
+  .row{flex-direction:column;gap:3px}
+  .row .k{min-width:0}
+  .sec-head .tg{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="review-flag">REVIEW COPY — <b>course-scope-ece.html</b> · not linked from the live site yet</div>
+
+<div class="wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="eyebrow">Course Scope · Engineering</div>
+    <h1>Electronics &amp; Communication Engineering</h1>
+    <p class="sub">Where ECE actually takes you — government jobs, the companies that recruit, what you can build on your own, and the fields that are rising right now.</p>
+    <div class="chips"><span>4-year B.Tech / B.E</span><span>JEE / State CET</span><span>Core + Software open</span><span>₹4–25 LPA start</span></div>
+    <div class="ec">வ</div>
+  </div>
+
+  <!-- MYTH BUSTER -->
+  <div class="myth">
+    <div class="ic">💡</div>
+    <p><b>First, the myth.</b> People say "ECE is core, there are no jobs, everyone shifts to IT." Half-true and misleading. ECE is the <b>quiet backdoor to ISRO, DRDO and the semiconductor boom</b> — and an ECE student can still take the <b>same software job</b> a CSE student takes. You keep both doors open.</p>
+  </div>
+
+  <!-- WHAT YOU STUDY -->
+  <div class="sec v-study">
+    <div class="sec-head"><div class="ic">📘</div><h2>What you'll actually study</h2><span class="tg">4 years · 8 sems</span></div>
+    <p class="lead">ECE sits between hardware and software — you learn how electronics, signals and computers work, then build with them. A glimpse of the core subjects:</p>
+    <div class="subj-grid">
+      <div class="subj"><div class="si">🔌</div><div><div class="st">Electronic Devices &amp; Circuits</div><div class="sd">Diodes, transistors, op-amps — the building blocks of every gadget.</div></div></div>
+      <div class="subj"><div class="si">🔢</div><div><div class="st">Digital Electronics</div><div class="sd">Logic gates, flip-flops, how 0s and 1s become real circuits.</div></div></div>
+      <div class="subj"><div class="si">📡</div><div><div class="st">Signals &amp; Communication</div><div class="sd">How voice, data &amp; video travel — AM/FM, digital, 4G/5G.</div></div></div>
+      <div class="subj"><div class="si">🧠</div><div><div class="st">Microprocessors &amp; Embedded</div><div class="sd">Programming chips &amp; microcontrollers to control machines.</div></div></div>
+      <div class="subj"><div class="si">🪟</div><div><div class="st">VLSI &amp; Chip Design</div><div class="sd">Designing the tiny silicon chips inside phones &amp; computers.</div></div></div>
+      <div class="subj"><div class="si">📶</div><div><div class="st">Antennas &amp; Microwaves</div><div class="sd">RF, radar, satellite &amp; wireless — the physics of signals.</div></div></div>
+      <div class="subj"><div class="si">⚙️</div><div><div class="st">Control Systems</div><div class="sd">Making systems stable &amp; self-correcting — robotics, automation.</div></div></div>
+      <div class="subj"><div class="si">💻</div><div><div class="st">Programming &amp; DSP</div><div class="sd">C/C++, Python, data structures + digital signal processing.</div></div></div>
+    </div>
+    <div class="year-arc">
+      <div class="yr"><div class="yl">Year 1</div><div class="yd">Maths, Physics, basic circuits &amp; programming — shared with all engineers.</div></div>
+      <div class="yr"><div class="yl">Year 2</div><div class="yd">Core electronics, digital logic, signals — the heart of ECE.</div></div>
+      <div class="yr"><div class="yl">Year 3</div><div class="yd">Communication, VLSI, embedded, microwaves + electives.</div></div>
+      <div class="yr"><div class="yl">Year 4</div><div class="yd">Specialisation, mini &amp; major project, internship, placements.</div></div>
+    </div>
+  </div>
+
+  <!-- GOVERNMENT -->
+  <div class="sec v-gov">
+    <div class="sec-head"><div class="ic">🏛️</div><h2>Government &amp; PSU jobs</h2><span class="tg">Stable · Pension</span></div>
+    <p class="lead">ECE is one of the strongest branches for secure government careers — defence, space, railways and public-sector electronics.</p>
+    <div class="rows">
+      <div class="row"><div class="k">GATE → PSUs</div><div class="v"><b>BEL · BHEL · ISRO · DRDO · BSNL · ECIL</b> recruit ECE through the GATE score — high pay, job security.</div></div>
+      <div class="row"><div class="k">IES / ESE</div><div class="v">UPSC <b>Engineering Services Exam</b> → Class-1 officer in central engineering departments.</div></div>
+      <div class="row"><div class="k">Railways</div><div class="v">RRB technical officer &amp; <b>signal/telecom</b> engineer roles.</div></div>
+      <div class="row"><div class="k">Defence &amp; Space</div><div class="v">Technical officer entries into <b>DRDO &amp; ISRO</b> labs.</div></div>
+      <div class="row"><div class="k">SSC JE</div><div class="v"><b>Junior Engineer</b> posts across central government departments.</div></div>
+      <div class="row"><div class="k">Regulatory</div><div class="v"><b>TRAI</b> &amp; telecom-sector regulatory and policy roles.</div></div>
+    </div>
+  </div>
+
+  <!-- PRIVATE -->
+  <div class="sec v-pri">
+    <div class="sec-head"><div class="ic">🏢</div><h2>Private sector — who recruits</h2><span class="tg">High pay</span></div>
+    <p class="lead">From chip-design giants to telecom and embedded-product companies — plus every IT recruiter that hires across all branches.</p>
+    <div class="tags">
+      <span>Qualcomm</span><span>Intel</span><span>Texas Instruments</span><span>Samsung Electronics</span>
+      <span>Nvidia</span><span>Broadcom</span><span>MediaTek</span><span>ARM</span><span>NXP</span>
+      <span>Cisco</span><span>Ericsson</span><span>Tejas Networks</span><span>Sasken</span>
+      <span>Tata Elxsi</span><span>Bosch</span><span>Cadence</span><span>Synopsys</span>
+    </div>
+    <p class="lead" style="margin-top:14px;margin-bottom:0"><b>And remember:</b> TCS, Infosys, Wipro, Accenture and most product companies hire ECE for software roles too — so the IT door is never closed.</p>
+  </div>
+
+  <!-- SELF EMPLOYMENT -->
+  <div class="sec v-self">
+    <div class="sec-head"><div class="ic">🚀</div><h2>Build your own — entrepreneurship</h2><span class="tg">Independent</span></div>
+    <p class="lead">India's hardware and chip moment is wide open. ECE skills convert directly into products and services you can own.</p>
+    <div class="rows">
+      <div class="row"><div class="k">Startups</div><div class="v"><b>IoT · Embedded systems · Telecom</b> product ventures.</div></div>
+      <div class="row"><div class="k">Freelancing</div><div class="v"><b>VLSI design · PCB design · IoT</b> solutions for clients worldwide.</div></div>
+      <div class="row"><div class="k">Consultancy</div><div class="v"><b>RF &amp; microwave</b> engineering · PCB prototyping services.</div></div>
+      <div class="row"><div class="k">Training</div><div class="v">Teach specialised, in-demand skills — <b>FPGA · embedded systems</b>.</div></div>
+    </div>
+  </div>
+
+  <!-- RESEARCH -->
+  <div class="sec v-res">
+    <div class="sec-head"><div class="ic">🔬</div><h2>Research &amp; higher study</h2><span class="tg">M.Tech · PhD</span></div>
+    <p class="lead">If you love depth, ECE opens India's best electronics research labs and institutes.</p>
+    <div class="tags lab">
+      <span><b>DRDO</b>Defence Electronics Applications Lab</span>
+      <span><b>ISRO</b>Vikram Sarabhai Space Centre</span>
+      <span><b>BEL</b>Bharat Electronics R&amp;D</span>
+      <span><b>IISc Bangalore</b>Centre for Electronics Design &amp; Tech</span>
+      <span><b>C-DAC</b>Advanced Computing &amp; chip design</span>
+      <span><b>SCL Mohali</b>Semiconductor Laboratory</span>
+    </div>
+  </div>
+
+  <!-- TRENDING + VISUAL -->
+  <div class="sec v-trend">
+    <div class="sec-head"><div class="ic">📈</div><h2>What's rising right now</h2><span class="tg">2026 trends</span></div>
+    <p class="lead">The fields hiring fastest and paying most for ECE graduates this decade.</p>
+    <div class="trend-pills">
+      <span>5G &amp; Wireless</span><span>IoT</span><span>VLSI &amp; Chip Design</span>
+      <span>Embedded &amp; FPGA</span><span>AI in Electronics</span><span>Autonomous Systems</span><span>Wearable Tech</span>
+    </div>
+
+    <div class="eco">
+      <h3>India's Semiconductor Ecosystem — your launchpad</h3>
+      <p class="ecosub">The chip-design wave ECE students are walking straight into</p>
+      <div class="eco-grid">
+        <div class="eco-col c1"><div class="ch">Global Chip Cos</div><ul>
+          <li>Nvidia</li><li>AMD</li><li>Intel</li><li>Qualcomm</li><li>Micron</li><li>TI</li></ul></div>
+        <div class="eco-col c2"><div class="ch">Institutes &amp; Incubators</div><ul>
+          <li>IISc</li><li>IITs</li><li>NITs</li><li>IIITs</li></ul></div>
+        <div class="eco-col c3"><div class="ch">Indian Corporates</div><ul>
+          <li>Tata</li><li>Vedanta</li><li>HCL</li><li>L&amp;T</li><li>Wipro</li></ul></div>
+        <div class="eco-col c4"><div class="ch">Investors</div><ul>
+          <li>VCs</li><li>Angels</li><li>Incubators</li><li>Accelerators</li></ul></div>
+        <div class="eco-col c5"><div class="ch">Government</div><ul>
+          <li>India Semiconductor Mission</li><li>MeitY</li><li>Startup India</li><li>SCL</li></ul></div>
+      </div>
+      <p class="note">Illustrative — names shown as examples, not an exhaustive or official list.</p>
+    </div>
+  </div>
+
+  <!-- VAZHI'S TAKE -->
+  <div class="take">
+    <div class="lbl">✦ Vazhi's take</div>
+    <p>ECE is a "keep-both-doors-open" branch. You can chase the secure government path — ISRO, DRDO, BEL, Railways — or ride the semiconductor and 5G wave in private companies, or even take the same software job a CSE student takes. The only wrong move is believing the lazy line that "core is dead." It isn't — it's quietly becoming one of India's biggest opportunities.</p>
+    <div class="sign">— honest guidance, not a brochure</div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta">
+    <h3>Still unsure if ECE fits your child?</h3>
+    <p>Every student is different — marks, interests, location, and budget all change the right answer. Talk it through with me directly.</p>
+    <a href="#">Book a guidance session →</a>
+  </div>
+
+  <footer>Vazhi வழி · Course Scope review prototype · ECE</footer>
+
+</div>
+</body>
+</html>

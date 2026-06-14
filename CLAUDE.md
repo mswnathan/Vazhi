@@ -133,6 +133,7 @@ Vazhi/
     scholarship-updater.md   ← Add/edit scholarship entries
     internship-curator.md    ← Add/edit internship entries
     psychometric-updater.md  ← Edit RIASEC questions, career map, profiles
+    dream-explorer-updater.md ← Add/edit a dream in the dreams-first homepage (index.html)
     newspaper-ad-curator.md  ← Triage newspaper-ad photos from ~/Vazhi/vazhi-ads/ into data files
     validator.md          ← Check data quality before publishing
     validate.js           ← Brace-balance checker script
@@ -405,6 +406,11 @@ Note: `papers[]` replaces `subjects[]` used in UG exams.
 ### Edit psychometric test questions or career map
 → Edit `data/psychometric.js` only — read `agents/psychometric-updater.md` first
 → Never edit `js/psychometric.js` or `js/report.js` for content changes
+
+### Add or edit a dream in the Dream Explorer (dreams-first homepage)
+→ Read `agents/dream-explorer-updater.md` first — it has the `DREAMDATA`/`DETAIL` schema + every design guardrail
+→ Edit the data objects in `index.html` (dreams-first front door); `explore.html` is the database app reached via deep-links
+→ Risk badges & fees must be verified, not guessed (see the standing data-accuracy rule in the agent)
 
 ### Annual data refresh (NIRF, exam dates, salaries)
 → Read `agents/annual-refresh.md` — it has the full checklist

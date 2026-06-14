@@ -131,6 +131,98 @@ document.addEventListener('click', e => {
   }
 });
 
+// ── CATEGORY BROWSE ──────────────────────────────────────────────────────
+
+const CG_CATEGORIES = [
+  { id: 'science-tech',     label: 'Science & Technology',      ico: '🔬', desc: 'Engineering, CS, Research, Semiconductor' },
+  { id: 'medical-health',   label: 'Medical & Health',          ico: '🏥', desc: 'Doctor, Nurse, Pharmacy, Nutrition' },
+  { id: 'commerce-finance', label: 'Commerce & Finance',        ico: '💼', desc: 'CA, Banking, Actuary, Economist, Startup' },
+  { id: 'govt-law-defence', label: 'Govt, Law & Defence',       ico: '⚖',  desc: 'IAS, Lawyer, Army, Navy, Air Force' },
+  { id: 'design-arts',      label: 'Design & Creative Arts',    ico: '🎨', desc: 'NID, NIFT, Architecture, Animation, Film' },
+  { id: 'agri-environment', label: 'Agriculture & Environment', ico: '🌿', desc: 'Agri Officer, Veterinary, Food Science' },
+  { id: 'media-education',  label: 'Media, Education & Society',ico: '📣', desc: 'Journalist, Teacher, Marketing, Social Work' },
+  { id: 'sports-lifestyle', label: 'Sports & Lifestyle',        ico: '🏅', desc: 'Athlete, Coach, Hospitality, Chef' },
+];
+
+// Category mapping for entries that don't carry a `category` field
+const CG_ID_TO_CAT = {
+  'engineer': 'science-tech', 'data-scientist': 'science-tech', 'scientist': 'science-tech',
+  'semiconductor-engineer': 'science-tech', 'cyber-security': 'science-tech',
+  'bca-bsc-cs': 'science-tech', 'geologist': 'science-tech', 'microbiologist': 'science-tech',
+  'bioinformatics': 'science-tech', 'marine-biologist': 'science-tech',
+  'doctor': 'medical-health', 'nurse': 'medical-health', 'pharmacist': 'medical-health',
+  'clinical-research': 'medical-health',
+  'banker': 'commerce-finance', 'ca': 'commerce-finance', 'insurance': 'commerce-finance',
+  'fintech-analyst': 'commerce-finance',
+  'ias': 'govt-law-defence', 'lawyer': 'govt-law-defence', 'defence': 'govt-law-defence',
+  'pilot': 'govt-law-defence', 'sailor': 'govt-law-defence',
+  'designer': 'design-arts', 'architect': 'design-arts', 'interior-designer': 'design-arts',
+  'visual-artist': 'design-arts', 'fashion-designer': 'design-arts',
+  'footwear-designer': 'design-arts', 'animator': 'design-arts', 'film-director': 'design-arts',
+  'farmer': 'agri-environment',
+  'teacher': 'media-education', 'journalist': 'media-education', 'social-work': 'media-education',
+  'sports': 'sports-lifestyle', 'chef': 'sports-lifestyle',
+};
+
+function cgCatOf(c) {
+  return c.category || CG_ID_TO_CAT[c.id] || null;
+}
+
+function cgGetByCategory(catId) {
+  return CAREER_MAP.filter(c => cgCatOf(c) === catId);
+}
+
+function cgInitBrowse() {
+  const el = document.getElementById('cg-browse');
+  if (!el || el.dataset.ready) return;
+  el.dataset.ready = '1';
+  el.innerHTML = `<div class="cg-browse-title">Browse by field</div>
+    <div class="cg-browse-grid">
+      ${CG_CATEGORIES.map(cat => {
+        const count = cgGetByCategory(cat.id).length;
+        return `<button class="cg-cat-tile" onclick="cgShowCategory('${cat.id}')">
+          <span class="cg-cat-ico">${cat.ico}</span>
+          <div class="cg-cat-label">${cat.label}</div>
+          <div class="cg-cat-count">${count} career${count !== 1 ? 's' : ''}</div>
+        </button>`;
+      }).join('')}
+    </div>`;
+}
+
+function cgShowCategory(catId) {
+  const cat = CG_CATEGORIES.find(c => c.id === catId);
+  if (!cat) return;
+  const careers = cgGetByCategory(catId);
+  const inp = document.getElementById('cg-input');
+  if (inp) inp.value = '';
+  document.getElementById('cg-suggestions').style.display = 'none';
+
+  document.getElementById('cg-out').innerHTML =
+    `<div class="cg-cat-results">
+      <div class="cg-cat-results-hdr">
+        <span class="cg-cat-results-ico">${cat.ico}</span>
+        <span class="cg-cat-results-name">${cat.label}</span>
+        <span class="cg-cat-results-count">${careers.length} career paths</span>
+        <button class="cg-cat-clear" onclick="cgClearCategory()">✕ Clear</button>
+      </div>
+      <div class="cg-cat-list">
+        ${careers.map(c =>
+          `<button class="cg-cat-career-btn" onclick="chipSearch('${c.id}')">
+            <span class="cg-cat-career-ico">${c.ico}</span>
+            <span class="cg-cat-career-title">${c.title}</span>
+          </button>`
+        ).join('')}
+      </div>
+    </div>`;
+
+  document.getElementById('cg-out').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function cgClearCategory() {
+  document.getElementById('cg-out').innerHTML = '';
+  document.getElementById('cg-browse').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
 // ── STREAM FALLBACK MAP ───────────────────────────────────────────────────
 // When no exact career match is found, try to match to a broad stream
 // and redirect the student to the Explore Courses tab pre-filtered.
@@ -333,6 +425,17 @@ function renderCareerPath(c) {
   const headerStyle = `background:${bs.bg};border-bottom:2px solid ${bs.bd}`;
   const titleColor = `color:${bs.c}`;
 
+  // Day in Life (optional)
+  let dayInLife = '';
+  if (c.dayInLife && c.dayInLife.length) {
+    dayInLife = `<div class="cg-step cg-step-day">
+      <div class="cg-step-label">☀ A day in this career</div>
+      <div class="cg-day-list">
+        ${c.dayInLife.map(item => `<div class="cg-day-item">${item}</div>`).join('')}
+      </div>
+    </div>`;
+  }
+
   // Step 1 — Class 12 Subjects
   const step1 = `<div class="cg-step">
     <div class="cg-step-label">📚 Step 1 — Class 12 Subjects</div>
@@ -409,6 +512,7 @@ function renderCareerPath(c) {
         <div class="cg-path-summary">${c.summary}</div>
       </div>
     </div>
+    ${dayInLife}
     ${step1}
     ${step2}
     ${step3}
@@ -416,6 +520,9 @@ function renderCareerPath(c) {
     ${step5}
   </div>`;
 }
+
+// Initialise category browse grid on first load
+document.addEventListener('DOMContentLoaded', cgInitBrowse);
 
 // Compact exam info card for Step 2
 function cgExamCard(e) {

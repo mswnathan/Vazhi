@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vazhi வழி — Every Dream Has More Than One Path</title>
+<title>Vazhi வழி — Dream Explorer (working slice)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Noto+Sans+Tamil:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
@@ -30,21 +30,17 @@ body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);c
 .review-bar{background:var(--text);color:#fff;text-align:center;font-size:.78rem;letter-spacing:.04em;padding:7px 16px;font-weight:600}
 .review-bar b{color:#FFD9A8}
 
-.site-header{background:linear-gradient(135deg,#1A1F4D 0%,#2C3580 100%);border-bottom:none;position:sticky;top:0;z-index:40}
+.site-header{background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:40}
 .header-inner{max-width:1000px;margin:0 auto;padding:13px 20px;display:flex;align-items:center;gap:14px}
-.logo-icon{width:40px;height:40px;border-radius:11px;background:rgba(255,255,255,.15);color:#fff;display:grid;place-items:center;font-family:'Noto Sans Tamil';font-size:1.35rem;font-weight:700}
+.logo-icon{width:40px;height:40px;border-radius:11px;background:linear-gradient(135deg,var(--brand),var(--brand-dk));color:#fff;display:grid;place-items:center;font-family:'Noto Sans Tamil';font-size:1.35rem;font-weight:700;box-shadow:var(--shadow-sm)}
 .logo-row{display:flex;align-items:center;gap:11px}
-.logo-en{font-family:'Fraunces';font-weight:700;font-size:1.3rem;line-height:1;color:#fff}
-.logo-ta{font-family:'Noto Sans Tamil';color:#FFD9A8;font-size:1rem;font-weight:600}
-.header-nav{display:flex;align-items:center;gap:4px;margin-left:auto}
-.hnav-link{color:rgba(255,255,255,.8);font:inherit;font-size:.88rem;font-weight:600;padding:8px 13px;border-radius:999px;cursor:pointer;white-space:nowrap;transition:background .15s,color .15s}
-.hnav-link:hover{background:rgba(255,255,255,.12);color:#fff}
-.header-cta{background:rgba(255,255,255,.15);color:#fff;border:1.5px solid rgba(255,255,255,.3);font:inherit;font-weight:600;font-size:.88rem;padding:9px 18px;border-radius:999px;cursor:pointer;white-space:nowrap;margin-left:6px}
-.header-cta:hover{background:rgba(255,255,255,.25)}
-@media(max-width:640px){.header-nav{display:none}}
+.logo-en{font-family:'Fraunces';font-weight:700;font-size:1.3rem;line-height:1}
+.logo-ta{font-family:'Noto Sans Tamil';color:var(--brand);font-size:1rem;font-weight:600}
+.header-cta{margin-left:auto;background:var(--brand);color:#fff;border:none;font:inherit;font-weight:600;font-size:.88rem;padding:9px 18px;border-radius:999px;cursor:pointer}
+.header-cta:hover{background:var(--brand-dk)}
 
 /* HERO */
-.hero{padding:28px 0 14px;text-align:center;background:radial-gradient(1100px 420px at 50% -140px, var(--brand-bg), transparent 70%)}
+.hero{padding:46px 0 14px;text-align:center;background:radial-gradient(1100px 420px at 50% -140px, var(--brand-bg), transparent 70%)}
 .hero .ta-big{font-family:'Noto Sans Tamil';color:var(--brand);font-size:1.1rem;font-weight:600;margin-bottom:6px}
 .hero h1{font-family:'Fraunces';font-weight:600;font-size:clamp(1.9rem,4.6vw,2.8rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:12px}
 .hero h1 em{font-style:italic;color:var(--brand)}
@@ -53,17 +49,42 @@ body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);c
 .hero .nudge{font-size:.92rem;color:var(--text3);margin-bottom:18px}
 .hero .hero-why{font-size:.96rem;color:var(--text2);font-weight:500;max-width:52ch;margin:0 auto 20px}
 .hero .hero-why b{color:var(--brand-dk);font-weight:700}
-.hero .hero-id{font-size:.95rem;color:var(--text2);max-width:56ch;margin:0 auto 3px}
-.hero .hero-id b{color:var(--brand-dk);font-weight:700}
-.hero .hero-id.ta{font-size:.9rem;color:var(--text3);margin-bottom:16px}
 
 .escape{max-width:440px;margin:0 auto 24px;display:flex;gap:8px;background:var(--surface);border:1.5px solid var(--border);border-radius:999px;padding:6px 6px 6px 18px;box-shadow:var(--shadow-sm)}
 .escape input{flex:1;border:none;background:transparent;font:inherit;font-size:.95rem;color:var(--text);outline:none}
 .escape input::placeholder{color:var(--text3)}
 .escape button{border:none;background:var(--text);color:#fff;font:inherit;font-weight:600;font-size:.85rem;padding:9px 16px;border-radius:999px;cursor:pointer}
 
+/* three-audience mode selector */
+.modebar{display:inline-flex;flex-wrap:wrap;justify-content:center;gap:4px;background:var(--surface2);border:1px solid var(--border);border-radius:999px;padding:5px;margin:4px auto 22px}
+.modetab{border:none;background:transparent;font:inherit;font-weight:600;font-size:.9rem;color:var(--text2);padding:9px 15px;border-radius:999px;cursor:pointer;transition:all .15s}
+.modetab:hover{color:var(--text)}
+.modetab.on{background:var(--surface);color:var(--brand-dk);box-shadow:var(--shadow-sm)}
+.mode.hidden{display:none}
 .mode-x{margin-top:16px;font-size:.88rem;color:var(--text3)}
-.mode-x a{color:var(--brand-dk);font-weight:600;text-decoration:underline}
+.mode-x a{color:var(--brand-dk);font-weight:600;cursor:pointer;text-decoration:underline}
+.db-caption{display:none;margin-top:14px;background:var(--amber-bg);border:1px dashed #E8C98A;border-radius:var(--r);padding:12px 15px;font-size:.85rem;color:var(--text);text-align:left}
+.db-caption.show{display:block;animation:rise .3s ease}
+/* "I already know" research launcher */
+.know-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:11px;text-align:left;margin-top:4px}
+.know-tile{display:flex;flex-direction:column;align-items:flex-start;background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:16px;cursor:pointer;font:inherit;color:inherit;transition:transform .15s,box-shadow .15s,border-color .15s;text-align:left}
+.know-tile:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:var(--brand-border)}
+.know-tile .kt-ico{font-size:1.5rem}
+.know-tile .kt-nm{font-weight:700;font-size:1rem;margin-top:6px}
+.know-tile .kt-d{font-size:.82rem;color:var(--text3);margin-top:2px}
+/* parent mode */
+.parent-fee{margin-bottom:18px}
+.parent-fee .pf-ttl{font-family:'Fraunces';font-weight:600;font-size:1.12rem;text-align:center;margin-bottom:11px}
+.parent-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:11px;text-align:left}
+.parent-grid .p-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:17px;cursor:pointer;font:inherit;color:inherit;text-align:left;transition:transform .15s,box-shadow .15s,border-color .15s}
+.parent-grid .p-card:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:var(--brand-border)}
+.parent-grid .pp-ico{font-size:1.4rem;margin-bottom:6px}
+.parent-grid .p-card h4{font-size:.98rem;font-weight:700;margin-bottom:3px}
+.parent-grid .p-card p{font-size:.84rem;color:var(--text2)}
+.parent-cta{margin-top:18px;background:linear-gradient(135deg,var(--accent-bg),#fff);border:1px solid var(--accent-border);border-radius:var(--r-lg);padding:20px;text-align:center}
+.parent-cta strong{display:block;font-family:'Fraunces';font-weight:600;font-size:1.12rem;margin-bottom:11px}
+.parent-cta button{border:none;background:var(--brand);color:#fff;font:inherit;font-weight:700;font-size:.92rem;padding:12px 22px;border-radius:999px;cursor:pointer}
+.parent-cta button:hover{background:var(--brand-dk)}
 
 .dreams{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;text-align:left}
 .dream{position:relative;background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:17px 16px;cursor:pointer;font:inherit;color:inherit;transition:transform .18s,box-shadow .18s,border-color .18s}
@@ -291,24 +312,6 @@ body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);c
 .sec-label{font-size:.72rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--text3);margin-bottom:8px}
 .sec h2{font-family:'Fraunces';font-weight:600;font-size:1.7rem;margin-bottom:6px}
 .sec .sub{color:var(--text2);margin-bottom:24px;font-size:1rem;max-width:62ch}
-.sec .sub+.sub{margin-top:-14px}
-/* homepage announcements (key dates) */
-.ann-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:12px;margin-top:6px}
-.ann-card{display:flex;gap:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:15px 16px;box-shadow:var(--shadow-sm)}
-.ann-ico{font-size:1.5rem;flex-shrink:0}
-.ann-body{flex:1;min-width:0}
-.ann-date{font-size:.78rem;font-weight:700;color:var(--brand-dk)}
-.ann-tent{font-size:.62rem;font-weight:700;color:var(--amber);background:var(--amber-bg);border-radius:999px;padding:1px 7px;margin-left:6px;text-transform:uppercase;letter-spacing:.03em}
-.ann-ttl{font-weight:700;font-size:.95rem;margin:3px 0 3px}
-.ann-desc{font-size:.83rem;color:var(--text2);line-height:1.4}
-.ann-note{margin-top:14px;font-size:.8rem;color:var(--text3);font-style:italic}
-/* who is Vazhi */
-.who-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin-top:6px}
-.who-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:16px 17px;box-shadow:var(--shadow-sm)}
-.who-card .who-ico{font-size:1.5rem}
-.who-card h4{font-size:.98rem;font-weight:700;margin:7px 0 3px}
-.who-card p{font-size:.84rem;color:var(--text2);line-height:1.4}
-.who-ta{margin-top:18px;font-size:.95rem;color:var(--text2);background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-lg);padding:15px 18px;line-height:1.75}
 footer{padding:32px 0 54px;text-align:center;color:var(--text3);font-size:.85rem;border-top:1px solid var(--border)}
 
 @media(max-width:640px){.sj,.path-cards{grid-template-columns:1fr}}
@@ -316,68 +319,98 @@ footer{padding:32px 0 54px;text-align:center;color:var(--text3);font-size:.85rem
 </head>
 <body>
 
+<div class="review-bar">REVIEW COPY · <b>Dream Explorer</b> · two live dreams: Helping People + Working with Nature</div>
+
 <header class="site-header">
   <div class="header-inner">
     <div class="logo-row">
       <div class="logo-icon">வ</div>
       <div><div class="logo-en">Vazhi</div><div class="logo-ta">வழி</div></div>
     </div>
-    <nav class="header-nav">
-      <a class="hnav-link" onclick="location.href='explore.html#find'">🧭 Career Search</a>
-      <a class="hnav-link" onclick="location.href='explore.html#exams'">📝 Entrance Exams</a>
-      <a class="hnav-link" onclick="location.href='explore.html#scholarships'">💰 Scholarships</a>
-    </nav>
-    <button class="header-cta" onclick="location.href='explore.html#courses'">Browse all →</button>
+    <button class="header-cta" onclick="setMode('dream');document.getElementById('dreamGrid').scrollIntoView({behavior:'smooth'})">Explore</button>
   </div>
 </header>
 
-<!-- Who is Vazhi -->
-<section class="sec" id="whoSec" style="padding-bottom:20px;border-top:none;text-align:center">
-  <div class="wrap">
-    <img src="images/vazhi-logo.png" alt="Vazhi வழி — Every Dream Deserves the Right Direction" style="max-width:320px;width:90%;height:auto;display:block;margin:0 auto 20px">
-    <h2 class="serif" style="margin-bottom:18px">A free guide — not a coaching ad.</h2>
-    <div class="who-grid" style="text-align:left">
-      <div class="who-card"><div class="who-ico">🆓</div><h4>Free &amp; independent</h4><p>No fees, no paid-college ads, nothing to sell.</p></div>
-      <div class="who-card"><div class="who-ico">🏛️</div><h4>Government &amp; merit only</h4><p>Affordable govt, aided &amp; merit-based institutions — never donation seats.</p></div>
-      <div class="who-card"><div class="who-ico">🧭</div><h4>Many paths, not one exam</h4><p>Every dream has backups. Not just JEE &amp; NEET.</p></div>
-      <div class="who-card"><div class="who-ico">👪</div><h4>For students &amp; parents</h4><p>Built for Class 10–12 students and first-generation families.</p></div>
-    </div>
-  </div>
-</section>
-
 <section class="hero">
   <div class="wrap">
+    <div class="ta-big">வழி</div>
     <h1 class="serif">Every dream has <em>more than one path.</em></h1>
     <p class="ask"><b>What do you want from your future?</b></p>
+    <p class="hero-why">Affordable pathways through India's strongest <b>government &amp; government-aided</b> institutions — without assuming an expensive private college.</p>
 
-    <p class="nudge">Pick what feels closest — there are no wrong answers, and you can change your mind.</p>
-    <div class="escape">
-      <input id="goalInput" type="text" placeholder="Already have a goal? e.g. doctor, farmer, geologist…" onkeydown="if(event.key==='Enter')resolveGoal()">
-      <button onclick="resolveGoal()">Find it →</button>
+    <div class="modebar">
+      <button class="modetab on" data-mode="dream" onclick="setMode('dream')">🌟 Explore by dream</button>
+      <button class="modetab" data-mode="know" onclick="setMode('know')">🔍 I already know</button>
+      <button class="modetab" data-mode="parent" onclick="setMode('parent')">👪 I'm a parent</button>
     </div>
-    <div class="dreams" id="dreamGrid"></div>
-    <div class="explorer" id="explorer"></div>
-    <p class="mode-x">Already know what you want? <a href="explore.html">Browse all courses &amp; colleges →</a></p>
+
+    <!-- ── DREAM MODE (default · guidance) ── -->
+    <div id="modeDream" class="mode">
+      <p class="nudge">Pick what feels closest — there are no wrong answers, and you can change your mind.</p>
+      <div class="escape">
+        <input id="goalInput" type="text" placeholder="Already have a goal? e.g. doctor, farmer, geologist…" onkeydown="if(event.key==='Enter')resolveGoal()">
+        <button onclick="resolveGoal()">Find it →</button>
+      </div>
+      <div class="dreams" id="dreamGrid"></div>
+      <div class="explorer" id="explorer"></div>
+    </div>
+
+    <!-- ── KNOW MODE (research) ── -->
+    <div id="modeKnow" class="mode hidden">
+      <p class="nudge">Already know the course, exam or college? Go straight to the details.</p>
+      <div class="escape">
+        <input id="researchInput" type="text" placeholder="Search a course, exam or college… e.g. B.Tech, NEET, AIIMS" onkeydown="if(event.key==='Enter')researchSearch()">
+        <button onclick="researchSearch()">Search →</button>
+      </div>
+      <div class="know-grid">
+        <button class="know-tile" onclick="dbHint('UG Courses','dbCapK')"><span class="kt-ico">📚</span><span class="kt-nm">UG Courses</span><span class="kt-d">Degrees, exams & careers</span></button>
+        <button class="know-tile" onclick="dbHint('Entrance Exams','dbCapK')"><span class="kt-ico">📝</span><span class="kt-nm">Entrance Exams</span><span class="kt-d">Dates, syllabus, pattern</span></button>
+        <button class="know-tile" onclick="dbHint('Colleges','dbCapK')"><span class="kt-ico">🏛️</span><span class="kt-nm">Colleges</span><span class="kt-d">Govt &amp; merit, by state</span></button>
+        <button class="know-tile" onclick="dbHint('Scholarships','dbCapK')"><span class="kt-ico">💰</span><span class="kt-nm">Scholarships</span><span class="kt-d">Eligibility &amp; deadlines</span></button>
+        <button class="know-tile" onclick="dbHint('College Predictor','dbCapK')"><span class="kt-ico">🎯</span><span class="kt-nm">College Predictor</span><span class="kt-d">Will my rank get me in?</span></button>
+        <button class="know-tile" onclick="dbHint('Career Search','dbCapK')"><span class="kt-ico">🧭</span><span class="kt-nm">Career Search</span><span class="kt-d">Search by career goal</span></button>
+      </div>
+      <p class="mode-x">Not totally sure yet? <a onclick="setMode('dream')">Explore by dream instead →</a></p>
+      <div id="dbCapK" class="db-caption"></div>
+    </div>
+
+    <!-- ── PARENT MODE ── -->
+    <div id="modeParent" class="mode hidden">
+      <p class="nudge">The practical questions first — cost, support, and safe choices.</p>
+      <div class="parent-fee">
+        <div class="pf-ttl">The same degree can cost very different amounts</div>
+        <div class="feecontrast">
+          <div class="fc-half fc-here"><div class="fc-lbl">Government MBBS</div><div class="fc-val">₹50k–2L total</div></div>
+          <div class="fc-half fc-priv"><div class="fc-lbl">Private MBBS</div><div class="fc-val">₹50L–1.2Cr</div></div>
+        </div>
+        <div class="feecontrast-note">Same degree, same licence to practise. Vazhi shows the strong, affordable route — and it's the same story across most courses.</div>
+      </div>
+      <div class="parent-grid">
+        <button class="p-card" onclick="dbHint('Affordability','dbCapP')"><div class="pp-ico">💰</div><h4>What will it cost?</h4><p>The same degree can cost ₹2L at a govt college or ₹60L+ privately.</p></button>
+        <button class="p-card" onclick="dbHint('Scholarships','dbCapP')"><div class="pp-ico">🎓</div><h4>Scholarships &amp; aid</h4><p>Central &amp; state support, fee waivers and stipends your child can claim.</p></button>
+        <button class="p-card" onclick="dbHint('Colleges','dbCapP')"><div class="pp-ico">🏛️</div><h4>Government colleges near us</h4><p>Strong, affordable institutions — sorted by your state and district.</p></button>
+        <button class="p-card" onclick="dbHint('Admission routes','dbCapP')"><div class="pp-ico">📋</div><h4>Admission routes &amp; deadlines</h4><p>Which exam, which counselling, and the dates that actually matter.</p></button>
+      </div>
+      <div class="parent-cta">
+        <strong>The best decisions are made together.</strong>
+        <button onclick="setMode('dream')">🌟 Explore the options with your child →</button>
+      </div>
+      <div id="dbCapP" class="db-caption"></div>
+    </div>
   </div>
 </section>
 
-<!-- Key dates (upcoming exams / results / deadlines) — hidden for now -->
-<section class="sec" style="display:none">
+<section class="sec">
   <div class="wrap">
-    <div class="sec-label">📢 Key dates</div>
-    <h2 class="serif">Upcoming exams, results &amp; deadlines</h2>
-    <p class="sub">The dates that matter for getting into a UG course.</p>
-    <div class="ann-list" id="annList"></div>
-    <p class="ann-note">Dates are indicative — always confirm on the official website before applying.</p>
+    <div class="sec-label">Why Vazhi is different</div>
+    <h2 class="serif">Most sites start with the exam. We start with you.</h2>
+    <p class="sub">A course-first site asks you to already know the answer. Vazhi starts from what you want and walks you to the paths, institutions, scholarships and backups that get you there — through strong, affordable institutions: government, government-aided and merit-based.</p>
   </div>
 </section>
-
 
 <div id="ucModal" class="ucmodal" onclick="closeUC()"></div>
 
-<script src="data/announcements.js"></script>
-
-<footer>Vazhi வழி — guidance for students after Class 12 · government, aided &amp; merit-based institutions · <a href="explore.html#courses" style="color:var(--brand-dk);font-weight:600">Browse all courses &amp; colleges →</a></footer>
+<footer>Vazhi வழி — Dream Explorer working slice · government, aided &amp; merit-based institutions · fees &amp; risk ratings indicative, pending data verification</footer>
 
 <script>
 /* ───────── DREAM CARDS ───────── */
@@ -574,6 +607,31 @@ let currentDream='help';
 let PATH_BY_ID={};
 function buildIndex(D){ PATH_BY_ID={}; ['primary','alt','backup'].forEach(t=>D.paths[t].forEach(p=>{p._tier=t;PATH_BY_ID[p.id]=p;})); }
 
+/* ───────── HOMEPAGE: three-audience modes ───────── */
+function setMode(m){
+  ['dream','know','parent'].forEach(x=>{
+    const el=document.getElementById('mode'+x.charAt(0).toUpperCase()+x.slice(1));
+    if(el) el.classList.toggle('hidden', x!==m);
+    const tab=document.querySelector('.modetab[data-mode="'+x+'"]');
+    if(tab) tab.classList.toggle('on', x===m);
+  });
+}
+function dbHint(name,capId){
+  const cap=document.getElementById(capId);
+  if(!cap)return;
+  cap.className='db-caption show';
+  cap.innerHTML='↳ In the full Vazhi site, this opens the <b>'+name+'</b> database — pre-filtered, with a "↩ back to your journey" link. <span style="color:var(--text3)">(Not wired into this review slice.)</span>';
+}
+function researchSearch(){
+  const v=(document.getElementById('researchInput').value||'').trim();
+  if(!v)return;
+  const lv=v.toLowerCase();
+  let where='UG Courses';
+  if(/neet|jee|cuet|gate|cat|exam/.test(lv)) where='Entrance Exams';
+  else if(/aiims|iit|nit|jipmer|college|university|anna|madras|tnau/.test(lv)) where='Colleges';
+  else if(/scholar|fee|loan|aid/.test(lv)) where='Scholarships';
+  dbHint(where+' (filtered to "'+v+'")','dbCapK');
+}
 
 /* ───────── RENDER DREAM GRID ───────── */
 const grid=document.getElementById('dreamGrid');
@@ -814,26 +872,6 @@ function toggleSave(id){
   if(SAVED.has(id)){SAVED.delete(id);b.classList.remove('on');b.textContent='⭐ Save this path';}
   else{SAVED.add(id);b.classList.add('on');b.textContent='✓ Saved';}
 }
-
-/* ───────── HOMEPAGE: upcoming key dates (from data/announcements.js) ───────── */
-(function renderHomeAnnouncements(){
-  if(typeof ANNOUNCEMENTS==='undefined') return;
-  const el=document.getElementById('annList'); if(!el) return;
-  const today=new Date().toISOString().slice(0,10);
-  const M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  const fmt=d=>{const p=d.split('-');return parseInt(p[2],10)+' '+M[parseInt(p[1],10)-1]+' '+p[0];};
-  const up=ANNOUNCEMENTS.filter(a=>(a.endDate||a.date)>=today).sort((a,b)=>a.date<b.date?-1:1).slice(0,6);
-  if(!up.length){ el.innerHTML='<p style="color:var(--text3)">No upcoming dates right now — check back soon.</p>'; return; }
-  el.innerHTML=up.map(a=>`
-    <div class="ann-card">
-      <div class="ann-ico">${a.icon||'📌'}</div>
-      <div class="ann-body">
-        <div class="ann-date">${fmt(a.date)}${a.endDate?' – '+fmt(a.endDate):''}${a.tentative?'<span class="ann-tent">Tentative</span>':''}</div>
-        <div class="ann-ttl">${a.title}</div>
-        <div class="ann-desc">${a.desc||''}</div>
-      </div>
-    </div>`).join('');
-})();
 </script>
 </body>
 </html>
