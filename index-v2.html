@@ -1,0 +1,1734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vazhi வழி — Every Dream Has More Than One Path</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAF8F3; --surface:#FFFFFF; --surface2:#F2EFE8; --surface3:#E8E4DA;
+  --border:#E0DBD0; --border2:#C9C3B5;
+  --text:#1C1A14; --text2:#4A4640; --text3:#948E84;
+  --brand:#D4580A; --brand-dk:#A83E00; --brand-bg:#FFF3E8; --brand-border:#F2C4A0;
+  --accent:#0A7B72; --accent-dk:#065750; --accent-bg:#E6F7F6; --accent-border:#9FD9D5;
+  --blue:#1A4DD6; --blue-bg:#EBF0FF; --green:#0D6640; --green-bg:#E8F8EF;
+  --amber:#855100; --amber-bg:#FFF5E0; --purple:#581F9E; --purple-bg:#F2EBFF;
+  --coral:#BC2D12; --coral-bg:#FFEDE8; --red:#C62828; --red-bg:#FDECEA;
+  --rose:#9B1B5A; --rose-bg:#FFEBF3;
+  --r:10px; --r-lg:16px; --r-xl:24px;
+  --shadow-sm:0 1px 3px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.04);
+  --shadow:0 2px 8px rgba(0,0,0,0.08), 0 8px 24px rgba(0,0,0,0.05);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.55;-webkit-font-smoothing:antialiased}
+.serif{font-family:'Fraunces',Georgia,serif}
+.ta{font-family:'Noto Sans Tamil',sans-serif}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+
+.review-bar{background:var(--text);color:#fff;text-align:center;font-size:.78rem;letter-spacing:.04em;padding:7px 16px;font-weight:600}
+.review-bar b{color:#FFD9A8}
+
+.site-header{background:linear-gradient(135deg,#1A1F4D 0%,#2C3580 100%);border-bottom:none;position:sticky;top:0;z-index:40}
+.header-inner{max-width:1000px;margin:0 auto;padding:0 20px;height:62px;display:flex;align-items:center;gap:14px}
+.logo-icon{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,#F07020,#D4580A);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Noto Sans Tamil';font-size:14px;font-weight:700;box-shadow:0 2px 8px rgba(212,88,10,0.5);flex-shrink:0}
+.logo-row{display:flex;align-items:center;gap:10px}
+.logo-en{font-family:'Fraunces';font-weight:700;font-size:20px;line-height:1;color:#fff;letter-spacing:-.3px}
+.logo-ta{font-family:'Noto Sans Tamil';color:#FFD9A8;font-size:11px;font-weight:600;letter-spacing:.02em;margin-top:1px}
+.header-nav{display:flex;align-items:center;gap:4px;margin-left:auto}
+.hnav-link{color:rgba(255,255,255,.8);font:inherit;font-size:.88rem;font-weight:600;padding:8px 13px;border-radius:999px;cursor:pointer;white-space:nowrap;transition:background .15s,color .15s}
+.hnav-link:hover{background:rgba(255,255,255,.12);color:#fff}
+.header-cta{background:rgba(255,255,255,.15);color:#fff;border:1.5px solid rgba(255,255,255,.3);font:inherit;font-weight:600;font-size:.88rem;padding:9px 18px;border-radius:999px;cursor:pointer;white-space:nowrap;margin-left:6px}
+.header-cta:hover{background:rgba(255,255,255,.25)}
+@media(max-width:640px){.header-nav{display:none}}
+
+/* HERO */
+.hero{padding:28px 0 14px;text-align:center;background:radial-gradient(1100px 420px at 50% -140px, var(--brand-bg), transparent 70%)}
+.hero .ta-big{font-family:'Noto Sans Tamil';color:var(--brand);font-size:1.1rem;font-weight:600;margin-bottom:6px}
+.hero h1{font-family:'Fraunces';font-weight:600;font-size:clamp(1.9rem,4.6vw,2.8rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:12px}
+.hero h1 em{font-style:italic;color:var(--brand)}
+.hero .ask{font-size:1.22rem;color:var(--text2);font-weight:500;margin-bottom:5px}
+.hero .ask b{color:var(--text);font-weight:700}
+.hero .nudge{font-size:.92rem;color:var(--text3);margin-bottom:18px}
+.hero .hero-why{font-size:.96rem;color:var(--text2);font-weight:500;max-width:52ch;margin:0 auto 20px}
+.hero .hero-why b{color:var(--brand-dk);font-weight:700}
+.hero .hero-id{font-size:.95rem;color:var(--text2);max-width:56ch;margin:0 auto 3px}
+.hero .hero-id b{color:var(--brand-dk);font-weight:700}
+.hero .hero-id.ta{font-size:.9rem;color:var(--text3);margin-bottom:16px}
+
+.escape{max-width:440px;margin:0 auto 24px;display:flex;gap:8px;background:var(--surface);border:1.5px solid var(--border);border-radius:999px;padding:6px 6px 6px 18px;box-shadow:var(--shadow-sm)}
+.escape input{flex:1;border:none;background:transparent;font:inherit;font-size:.95rem;color:var(--text);outline:none}
+.escape input::placeholder{color:var(--text3)}
+.escape button{border:none;background:var(--text);color:#fff;font:inherit;font-weight:600;font-size:.85rem;padding:9px 16px;border-radius:999px;cursor:pointer}
+
+.mode-x{margin-top:16px;font-size:.88rem;color:var(--text3)}
+.mode-x a{color:var(--brand-dk);font-weight:600;text-decoration:underline}
+
+.dreams{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;text-align:left}
+.dream{position:relative;background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:17px 16px;cursor:pointer;font:inherit;color:inherit;transition:transform .18s,box-shadow .18s,border-color .18s}
+.dream:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--brand-border)}
+.dream .d-ico{font-size:1.6rem;display:block;margin-bottom:8px}
+.dream .d-txt{display:block;font-family:'Fraunces';font-weight:600;font-size:1.08rem;line-height:1.18}
+.dream .d-anchor{display:block;margin-top:6px;font-size:.78rem;color:var(--text3);font-weight:500}
+.dream.live{border-color:var(--brand);background:linear-gradient(160deg,var(--brand-bg),#fff)}
+.dream.live .d-anchor{color:var(--brand-dk)}
+.dream .pill{position:absolute;top:11px;right:11px;font-size:.58rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:999px}
+.dream.live .pill{background:var(--brand);color:#fff}
+.dream.locked .pill{background:var(--surface3);color:var(--text3)}
+.dream.locked{opacity:.82}
+
+/* EXPLORER */
+.explorer{margin-top:30px;display:none;text-align:left}
+.explorer.open{display:block}
+.reveal{animation:rise .4s ease}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+.x-head{display:flex;align-items:center;gap:14px;background:var(--text);color:#fff;border-radius:var(--r-lg);padding:17px 22px}
+.x-head .xh-ico{font-size:1.9rem}
+.x-head small{display:block;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:#FFD9A8;font-weight:600}
+.x-head strong{font-family:'Fraunces';font-weight:600;font-size:1.35rem;font-style:italic}
+.x-head .anchor{margin-top:2px;font-size:.82rem;color:#D8D3C8}
+
+/* dream confidence */
+.confidence{margin-top:13px;background:linear-gradient(135deg,var(--brand-bg),#fff);border:1px solid var(--brand-border);border-radius:var(--r-lg);padding:16px 20px}
+.confidence .c-ttl{font-size:.95rem;font-weight:700;color:var(--brand-dk);margin-bottom:3px}
+.confidence .c-sub{font-size:.84rem;color:var(--text2);margin-bottom:11px}
+.confidence .c-list{display:flex;flex-wrap:wrap;gap:8px}
+.confidence .c-item{cursor:pointer;font-size:.86rem;font-weight:600;color:var(--text2);background:#fff;border:1.5px solid var(--brand-border);border-radius:999px;padding:6px 13px 6px 10px;display:inline-flex;align-items:center;gap:7px;user-select:none;transition:all .15s}
+.confidence .c-item:hover{border-color:var(--brand)}
+.confidence .c-item .box{width:16px;height:16px;border-radius:5px;border:2px solid var(--brand-border);display:grid;place-items:center;font-size:.62rem;color:transparent;flex-shrink:0}
+.confidence .c-item.on{background:var(--brand-bg);border-color:var(--brand);color:var(--text)}
+.confidence .c-item.on .box{background:var(--brand);border-color:var(--brand);color:#fff}
+.c-readout{margin-top:12px;font-size:.88rem;display:none;color:var(--text)}
+.c-readout.show{display:block;animation:rise .3s ease}
+.c-readout.fit{color:var(--green)}
+.c-readout .ro-strong{font-weight:700}
+.c-related{display:flex;flex-wrap:wrap;gap:7px;margin-top:9px}
+.c-related .cr-chip{cursor:pointer;font-size:.84rem;font-weight:600;color:var(--brand-dk);background:var(--brand-bg);border:1px solid var(--brand-border);border-radius:999px;padding:6px 13px;transition:transform .15s}
+.c-related .cr-chip:hover{transform:translateX(2px)}
+
+.block{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:20px 22px;margin-top:13px;box-shadow:var(--shadow-sm)}
+.block-top{display:flex;align-items:center;gap:11px;margin-bottom:14px;flex-wrap:wrap}
+.lv-badge{font-size:.66rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;padding:4px 11px;border-radius:999px}
+.block-top h3{font-family:'Fraunces';font-weight:600;font-size:1.16rem}
+.block-top .hint{font-size:.82rem;color:var(--text3);margin-left:auto}
+
+/* lenses */
+.lenses{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:14px}
+.lens{font-size:.8rem;font-weight:600;padding:5px 12px;border-radius:999px;border:1px solid var(--border);background:var(--surface2);color:var(--text2)}
+.lens.on{background:var(--coral-bg);border-color:#F0BBA8;color:var(--coral);cursor:pointer}
+.lens.sel{background:var(--coral);border-color:var(--coral);color:#fff}
+.lens .soon{font-size:.64rem;color:var(--text3);margin-left:5px;font-weight:700;text-transform:uppercase}
+
+.chips{display:flex;flex-wrap:wrap;gap:9px}
+.chip{background:var(--surface2);border:1px solid var(--border);border-radius:999px;padding:8px 14px;font-size:.9rem;font-weight:600;display:inline-flex;align-items:center;gap:7px;transition:opacity .2s}
+.chip.dim{opacity:.2;pointer-events:none}
+.u-card.dim{opacity:.15;pointer-events:none}
+
+/* unknown careers */
+.unknown{margin-top:16px;background:linear-gradient(135deg,#ECEEF6,#fff);border:1px solid #C8CCDC;border-radius:var(--r);padding:16px 17px}
+.unknown .u-ttl{font-size:.78rem;font-weight:700;letter-spacing:.04em;color:#1A1F4D;margin-bottom:4px;display:flex;align-items:center;gap:7px}
+.unknown .u-sub{font-size:.84rem;color:var(--text2);margin-bottom:12px}
+.u-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:9px}
+.u-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:12px 13px;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.u-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-sm)}
+.u-card .uc-top{display:flex;align-items:center;gap:7px;font-weight:700;font-size:.92rem;margin-bottom:3px}
+.u-card .uc-tech{font-size:.73rem;color:var(--text3);font-style:italic;margin:1px 0 4px}
+.u-card .uc-one{font-size:.8rem;color:var(--text2);line-height:1.35}
+.ucm-tech{font-size:.82rem;color:var(--text3);font-style:italic;font-weight:500}
+.u-card .uc-gov{margin-top:7px;font-size:.72rem;font-weight:600;color:#1A1F4D;background:#ECEEF6;display:inline-block;padding:2px 8px;border-radius:999px}
+.u-card .uc-more{display:block;margin-top:8px;font-size:.74rem;font-weight:700;color:var(--brand-dk)}
+
+/* unknown-career snapshot bottom-sheet */
+.ucmodal{position:fixed;inset:0;background:rgba(28,26,20,.55);display:none;z-index:80;align-items:flex-end;justify-content:center}
+.ucmodal.show{display:flex;animation:fade .2s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.ucmodal-card{background:var(--surface);width:100%;max-width:560px;border-radius:18px 18px 0 0;max-height:88vh;overflow-y:auto;animation:sheet .3s cubic-bezier(.2,.8,.2,1)}
+@keyframes sheet{from{transform:translateY(50px)}to{transform:none}}
+.ucm-head{position:sticky;top:0;background:linear-gradient(135deg,var(--brand-bg),#fff);padding:18px 20px;display:flex;align-items:flex-start;gap:12px;border-bottom:1px solid var(--brand-border)}
+.ucm-head .ucm-ico{font-size:1.8rem}
+.ucm-head .ucm-nm{font-family:'Fraunces';font-weight:600;font-size:1.25rem}
+.ucm-head .ucm-what{font-size:.88rem;color:var(--text2);margin-top:2px}
+.ucm-close{margin-left:auto;background:var(--surface3);border:none;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:1rem;flex-shrink:0}
+.ucm-body{padding:18px 20px}
+.ucm-sec{margin-bottom:16px}
+.ucm-sec h6{font-size:.7rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--text3);margin-bottom:7px}
+.ucm-why{display:flex;flex-wrap:wrap;gap:6px}
+.ucm-why span{font-size:.82rem;font-weight:600;background:var(--accent-bg);color:var(--accent-dk);border:1px solid var(--accent-border);border-radius:999px;padding:4px 11px}
+.ucm-path{font-size:.92rem;font-weight:600;color:var(--text);background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);padding:11px 13px}
+.ucm-gov{font-size:.9rem;color:var(--text)}
+.ucm-meta{display:flex;gap:8px;flex-wrap:wrap}
+.ucm-related{display:flex;flex-wrap:wrap;gap:6px}
+.ucm-related span{font-size:.82rem;font-weight:600;color:var(--brand-dk);background:var(--brand-bg);border:1px solid var(--brand-border);border-radius:999px;padding:4px 11px}
+.ucm-cta{width:100%;border:none;background:var(--brand);color:#fff;font:inherit;font-weight:700;font-size:.92rem;padding:13px;border-radius:var(--r);cursor:pointer;margin-top:4px}
+.ucm-cta:hover{background:var(--brand-dk)}
+
+/* path tiers */
+.ptier{margin-bottom:16px}.ptier:last-child{margin-bottom:0}
+.ptier-label{display:flex;align-items:center;gap:8px;font-size:.73rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-bottom:10px}
+.ptier-label .dot{width:9px;height:9px;border-radius:50%}
+.ptier.primary .ptier-label{color:var(--brand-dk)}.ptier.primary .dot{background:var(--brand)}
+.ptier.alt .ptier-label{color:var(--accent-dk)}.ptier.alt .dot{background:var(--accent)}
+.ptier.backup .ptier-label{color:var(--purple)}.ptier.backup .dot{background:var(--purple)}
+.ptier-label .sub{color:var(--text3);font-weight:500;text-transform:none;letter-spacing:0;font-size:.8rem}
+.path-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(245px,1fr));gap:11px}
+
+/* enriched path card — the atom */
+.pcard{border:1.5px solid var(--border);border-radius:var(--r);padding:14px 15px;background:var(--surface);cursor:pointer;transition:transform .15s,box-shadow .15s,border-color .15s;position:relative}
+.pcard:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:var(--brand-border)}
+.pcard.lead{background:linear-gradient(160deg,var(--brand-bg),#fff);border-color:var(--brand-border)}
+.pcard .pc-name{font-weight:700;font-size:1rem}
+.pcard .pc-deg{font-size:.8rem;color:var(--text3)}
+.pcard .pc-fit{font-size:.82rem;color:var(--accent-dk);font-style:italic;margin:6px 0 9px;line-height:1.3}
+.pc-anchor-lbl{font-size:.64rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--text3);display:block;margin-bottom:1px}
+.pcard .pc-anchor{font-size:.84rem;color:var(--accent-dk);font-weight:600;display:flex;align-items:center;gap:5px;margin-bottom:9px}
+.pc-metarow{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.tag{font-size:.74rem;font-weight:700;padding:3px 9px;border-radius:999px;display:inline-flex;align-items:center;gap:4px}
+.tag.fee{background:var(--green-bg);color:var(--green)}
+.tag.risk-red{background:var(--red-bg);color:var(--red)}
+.tag.risk-amber{background:var(--amber-bg);color:var(--amber)}
+.tag.risk-green{background:var(--green-bg);color:var(--green)}
+.pc-backups{margin-top:9px;font-size:.78rem;color:var(--brand-dk);font-weight:600;display:flex;align-items:center;gap:6px}
+.stress-btn{margin-top:9px;width:100%;border:1px dashed var(--red);background:var(--red-bg);color:var(--red);font:inherit;font-weight:700;font-size:.8rem;padding:8px;border-radius:var(--r);cursor:pointer}
+.stress-btn:hover{background:#FBDBD7}
+.pc-open{position:absolute;top:13px;right:14px;font-size:.74rem;color:var(--text3);font-weight:600}
+
+/* "the question most students ask" banner */
+.ask-banner{display:flex;align-items:center;gap:14px;background:var(--red-bg);border:1px solid #F1C9C4;border-radius:var(--r);padding:13px 16px;margin:0 0 16px}
+.ask-banner .ab-txt{flex:1}
+.ask-banner .ab-eyebrow{display:block;font-size:.7rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--red);margin-bottom:2px}
+.ask-banner strong{font-family:'Fraunces';font-weight:600;font-size:1.05rem;color:var(--text)}
+.ask-banner button{flex-shrink:0;border:none;background:var(--red);color:#fff;font:inherit;font-weight:700;font-size:.85rem;padding:9px 16px;border-radius:999px;cursor:pointer}
+.ask-banner button:hover{background:#A81E1E}
+
+/* path detail */
+.pdetail{margin-top:14px;border:2px solid var(--brand-border);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow)}
+.pd-head{background:var(--brand);color:#fff;padding:15px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.pd-head .pdh-name{font-family:'Fraunces';font-weight:600;font-size:1.2rem}
+.pd-head .pdh-sub{font-size:.8rem;color:#FFE6CF}
+.pd-close{background:rgba(255,255,255,.2);border:none;color:#fff;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:1rem}
+.pd-body{padding:20px}
+.pd-sec{margin-bottom:22px}.pd-sec:last-child{margin-bottom:0}
+.pd-sec h4{font-size:.74rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-bottom:11px;display:flex;align-items:center;gap:7px}
+
+.inst-list{display:flex;flex-direction:column;gap:8px}
+.inst{display:flex;align-items:center;gap:10px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);padding:10px 13px}
+.inst .i-nm{font-weight:700;font-size:.9rem}
+.inst .i-tier{margin-left:auto;font-size:.74rem;color:var(--accent-dk);font-weight:600;background:var(--accent-bg);padding:3px 9px;border-radius:999px;white-space:nowrap}
+.inst-wrap.has-why .inst{cursor:pointer}
+.inst-wrap.has-why .inst:hover{border-color:var(--accent-border)}
+.inst .i-chev{margin-left:7px;font-size:.72rem;color:var(--accent-dk);font-weight:700;white-space:nowrap}
+.inst-wrap.open .inst .i-chev::after{content:'';}
+.inst-why{display:none;flex-wrap:wrap;gap:6px;padding:9px 4px 3px}
+.inst-wrap.open .inst-why{display:flex;animation:rise .25s ease}
+.inst-why span{font-size:.78rem;font-weight:600;color:var(--accent-dk);background:var(--accent-bg);border:1px solid var(--accent-border);border-radius:999px;padding:4px 10px}
+
+.feecontrast{margin-top:11px;display:flex;align-items:stretch;gap:0;border-radius:var(--r);overflow:hidden;border:1px solid var(--border)}
+.feecontrast .fc-half{flex:1;padding:12px 14px}
+.feecontrast .fc-here{background:var(--green-bg)}
+.feecontrast .fc-priv{background:var(--red-bg)}
+.feecontrast .fc-lbl{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-bottom:2px}
+.feecontrast .fc-here .fc-lbl{color:var(--green)}
+.feecontrast .fc-priv .fc-lbl{color:var(--red)}
+.feecontrast .fc-val{font-weight:700;font-size:1.05rem}
+.feecontrast-note{font-size:.78rem;color:var(--text3);margin-top:6px;font-style:italic}
+
+.ladder-toggle{margin-top:10px;width:100%;border:1px dashed var(--accent-border);background:var(--accent-bg);color:var(--accent-dk);font:inherit;font-weight:700;font-size:.82rem;padding:9px;border-radius:var(--r);cursor:pointer}
+.ladder{margin-top:10px;display:none}
+.ladder.open{display:block;animation:rise .3s ease}
+.ring{border-left:3px solid var(--border2);padding:4px 0 4px 14px;margin-bottom:11px;position:relative}
+.ring::before{content:'';position:absolute;left:-7px;top:8px;width:11px;height:11px;border-radius:50%;background:var(--surface);border:3px solid var(--accent)}
+.ring .r-lbl{font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--text3);margin-bottom:3px}
+.ring .r-val{font-size:.9rem;color:var(--text)}
+.ring.india{border-left-color:var(--brand)}.ring.india::before{border-color:var(--brand)}
+.ring.india .r-note{font-size:.8rem;color:var(--brand-dk);font-style:italic;margin-top:3px}
+
+.story5{background:linear-gradient(160deg,var(--accent-bg),#fff);border:1px solid var(--accent-border);border-radius:var(--r);padding:4px 0}
+.story5 .beat{display:flex;gap:13px;padding:12px 16px;border-bottom:1px solid rgba(159,217,213,.4)}
+.story5 .beat:last-child{border-bottom:none}
+.story5 .b-key{flex-shrink:0;width:74px;font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--accent-dk);padding-top:2px}
+.story5 .b-val{font-size:.92rem;color:var(--text)}
+.story5 .beat.fact .b-val{font-style:italic;color:var(--accent-dk)}
+
+.otherpaths{border:2px dashed var(--brand-border);border-radius:var(--r);background:var(--brand-bg);padding:16px 18px}
+.otherpaths .op-ttl{font-size:.88rem;font-weight:700;color:var(--brand-dk);display:flex;align-items:center;gap:8px;margin-bottom:5px}
+.otherpaths .op-sub{font-size:.84rem;color:var(--text2);margin-bottom:12px}
+.op-list{display:flex;flex-direction:column;gap:7px}
+.op-item{display:flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--brand-border);border-radius:var(--r);padding:9px 13px;font-size:.9rem;cursor:pointer;transition:transform .15s}
+.op-item:hover{transform:translateX(3px)}
+.op-item .op-nm{font-weight:700}
+.op-item .op-ex{margin-left:auto;font-size:.74rem;color:var(--brand-dk);background:var(--brand-bg);padding:2px 9px;border-radius:999px;font-weight:600}
+
+.sj{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.sj-box{border-radius:var(--r);padding:14px 16px}
+.sj-box.scho{background:var(--amber-bg);border:1px solid #F0D9A8}
+.sj-box.jobs{background:var(--purple-bg);border:1px solid #DcC8F5}
+.sj-box h5{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:700;margin-bottom:8px}
+.sj-box.scho h5{color:var(--amber)}.sj-box.jobs h5{color:var(--purple)}
+.sj-box ul{list-style:none;font-size:.87rem;color:var(--text2)}
+.sj-box li{padding:3px 0 3px 16px;position:relative}
+.sj-box li::before{content:'›';position:absolute;left:2px;color:var(--text3);font-weight:700}
+
+.plan{background:var(--text);color:#fff;border-radius:var(--r);padding:18px 20px}
+.plan h5{font-family:'Fraunces';font-weight:600;font-size:1.05rem;margin-bottom:4px}
+.plan .p-sub{font-size:.82rem;color:#C9C3B5;margin-bottom:14px}
+.plan-item{display:flex;align-items:flex-start;gap:11px;padding:8px 0;border-top:1px solid rgba(255,255,255,.12);cursor:pointer}
+.plan-item:first-of-type{border-top:none}
+.plan-box{flex-shrink:0;width:19px;height:19px;border:2px solid #7A756B;border-radius:5px;margin-top:1px;display:grid;place-items:center;font-size:.7rem;color:transparent}
+.plan-item.done .plan-box{background:var(--green);border-color:var(--green);color:#fff}
+.plan-item.done .pi-txt{text-decoration:line-through;color:#9A958B}
+.pi-when{flex-shrink:0;width:78px;font-size:.74rem;font-weight:700;color:#FFD9A8}
+.pi-txt{font-size:.88rem}
+.plan-actions{margin-top:14px;display:flex;gap:9px;flex-wrap:wrap}
+.plan-actions button{border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff;font:inherit;font-weight:600;font-size:.82rem;padding:8px 14px;border-radius:999px;cursor:pointer}
+.plan-actions button.primary{background:var(--brand);border-color:var(--brand)}
+
+.pd-foot{display:flex;gap:9px;flex-wrap:wrap;padding-top:4px}
+.pd-foot button{flex:1;min-width:130px;border:1px solid var(--border2);background:var(--surface2);color:var(--text);font:inherit;font-weight:700;font-size:.85rem;padding:11px;border-radius:var(--r);cursor:pointer}
+.pd-foot button.save.on{background:var(--rose-bg);border-color:#F0B8D0;color:var(--rose)}
+
+.connector{text-align:center;color:var(--text3);font-size:1.3rem;margin:2px 0}
+
+.sec{padding:50px 0;border-top:1px solid var(--border)}
+.sec-label{font-size:.72rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--text3);margin-bottom:8px}
+.sec h2{font-family:'Fraunces';font-weight:600;font-size:1.7rem;margin-bottom:6px}
+.sec .sub{color:var(--text2);margin-bottom:24px;font-size:1rem;max-width:62ch}
+.sec .sub+.sub{margin-top:-14px}
+/* homepage announcements (key dates) */
+.ann-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:12px;margin-top:6px}
+.ann-card{display:flex;gap:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:15px 16px;box-shadow:var(--shadow-sm)}
+.ann-ico{font-size:1.5rem;flex-shrink:0}
+.ann-body{flex:1;min-width:0}
+.ann-date{font-size:.78rem;font-weight:700;color:var(--brand-dk)}
+.ann-tent{font-size:.62rem;font-weight:700;color:var(--amber);background:var(--amber-bg);border-radius:999px;padding:1px 7px;margin-left:6px;text-transform:uppercase;letter-spacing:.03em}
+.ann-ttl{font-weight:700;font-size:.95rem;margin:3px 0 3px}
+.ann-desc{font-size:.83rem;color:var(--text2);line-height:1.4}
+.ann-note{margin-top:14px;font-size:.8rem;color:var(--text3);font-style:italic}
+/* who is Vazhi */
+.who-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin-top:6px}
+.who-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:16px 17px;box-shadow:var(--shadow-sm)}
+.who-card .who-ico{font-size:1.5rem}
+.who-card h4{font-size:.98rem;font-weight:700;margin:7px 0 3px}
+.who-card p{font-size:.84rem;color:var(--text2);line-height:1.4}
+.who-ta{margin-top:18px;font-size:.95rem;color:var(--text2);background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-lg);padding:15px 18px;line-height:1.75}
+.mission-lead{font-family:'Fraunces';font-size:clamp(1.2rem,2.4vw,1.65rem);font-weight:600;font-style:italic;color:var(--text);margin:0 auto 14px;max-width:38ch;line-height:1.25}
+.mission-body{font-size:.95rem;color:var(--text2);max-width:62ch;margin:0 auto;line-height:1.7}
+.action-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:28px}
+.act-btn{font:inherit;font-weight:700;font-size:.93rem;padding:12px 22px;border-radius:999px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:transform .15s,box-shadow .15s;white-space:nowrap;line-height:1}
+.act-btn:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.act-primary,.act-secondary,.act-outline{background:var(--surface);color:var(--text);border:2px solid var(--border2)}
+.act-primary:hover{background:#1A1F4D;color:#fff;border-color:#1A1F4D}
+.act-secondary:hover{background:var(--brand);color:#fff;border-color:var(--brand)}
+.act-outline:hover{background:#1A1F4D;color:#fff;border-color:#1A1F4D}
+footer{padding:32px 0 54px;text-align:center;color:var(--text3);font-size:.85rem;border-top:1px solid var(--border)}
+.footer-main{margin-bottom:12px}
+.footer-links{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-top:8px}
+.footer-links a{color:var(--text3);text-decoration:none;font-size:.85rem;transition:color .2s}
+.footer-links a:hover{color:var(--brand)}
+.footer-contact-label{font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--text3);opacity:.6;margin-top:16px;margin-bottom:4px}
+
+/* ═══════════ V2 HERO — journey path ═══════════ */
+.hero2{position:relative;background:linear-gradient(135deg,#171B45 0%,#232B6E 60%,#2C3580 100%);overflow:hidden;padding:36px 0 0}
+.hero2-bg{position:absolute;inset:0;background-image:radial-gradient(1.4px 1.4px at 12% 22%,rgba(255,255,255,.6),transparent),radial-gradient(1.2px 1.2px at 28% 65%,rgba(255,255,255,.45),transparent),radial-gradient(1.6px 1.6px at 62% 18%,rgba(255,255,255,.5),transparent),radial-gradient(1.2px 1.2px at 82% 48%,rgba(255,255,255,.4),transparent),radial-gradient(1.4px 1.4px at 47% 80%,rgba(255,255,255,.35),transparent)}
+.hero2-ta{position:absolute;top:-60px;right:10px;font-family:'Noto Sans Tamil';font-size:260px;line-height:1;color:rgba(255,255,255,.04);font-weight:700;pointer-events:none;user-select:none}
+.hero2-inner{position:relative;z-index:4;max-width:1000px;margin:0 auto;padding:0 20px 64px;text-align:center}
+.hero2-text{max-width:640px;margin:0 auto}
+.hero2-tags{display:inline-flex;align-items:center;gap:9px;flex-wrap:wrap;justify-content:center;padding:6px 16px;border-radius:20px;border:1.5px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);margin-bottom:24px}
+@media(min-width:900px){
+  .hero2-inner{max-width:1180px;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;text-align:left;padding-bottom:36px}
+  .hero2-text{max-width:520px;margin:0}
+  .hero2-tags,.hero2-cta{justify-content:flex-start}
+  .hpath-wrap{margin-top:0}
+}
+.hero2-tags span{color:rgba(255,255,255,.82);font-size:.66rem;font-weight:700;letter-spacing:.06em}
+.hero2-tags .dot{color:rgba(255,255,255,.3)}
+.hero2 h1{font-family:'Plus Jakarta Sans';font-weight:800;letter-spacing:-.025em;color:#fff;font-size:clamp(2rem,5.5vw,3.1rem);line-height:1.06}
+.hero2 h1 em{font-style:normal;background:linear-gradient(100deg,#2DD4C4,#5B8DEF);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero2-ta-line{font-family:'Noto Sans Tamil';color:rgba(255,255,255,.55);font-size:.98rem;margin-top:10px}
+.hero2-sub{color:rgba(255,255,255,.72);font-size:1.02rem;line-height:1.55;max-width:48ch;margin:16px auto 0}
+.hero2-cta{display:flex;gap:13px;justify-content:center;margin-top:28px;flex-wrap:wrap}
+.hero2-btn{font:inherit;font-weight:700;font-size:.95rem;padding:13px 24px;border-radius:24px;cursor:pointer;border:none;display:inline-flex;align-items:center;gap:8px}
+.hero2-btn.primary{background:linear-gradient(100deg,#2DD4C4,#34D399);color:#0B1020;box-shadow:0 6px 22px rgba(45,212,196,.32)}
+.hero2-btn.ghost{background:transparent;border:1.5px solid rgba(255,255,255,.25);color:#fff}
+
+/* path visual */
+.hpath-wrap{position:relative;max-width:560px;margin:40px auto 0}
+.hpath-wrap svg{width:100%;display:block}
+.hpath-here{display:inline-flex;flex-direction:column;align-items:center;gap:2px;margin-top:6px}
+.hpath-here .hp-lbl{font-size:.66rem;font-weight:700;letter-spacing:.05em;color:#93C5FD;text-transform:uppercase}
+.hpath-here .hp-val{font-size:.85rem;font-weight:700;color:#fff}
+
+/* stats bar */
+.statsbar{position:relative;z-index:4;max-width:1000px;margin:0 auto;padding:0 20px;transform:translateY(28px)}
+.statsbar-inner{background:linear-gradient(135deg,#0F1235,#1A1F4D);border-radius:18px;padding:22px 26px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;box-shadow:0 12px 32px rgba(15,18,53,.35)}
+.statsbar .stat-n{font-family:'Fraunces';font-weight:700;font-size:1.7rem;color:#fff}
+.statsbar .stat-l{color:rgba(255,255,255,.6);font-size:.74rem;margin-top:2px}
+@media(max-width:640px){.statsbar-inner{grid-template-columns:repeat(2,1fr)}}
+
+/* persona router */
+.persona-sec{padding:62px 0 46px}
+.persona-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:6px}
+.persona-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:20px 18px;cursor:pointer;transition:transform .18s,box-shadow .18s,border-color .18s;display:flex;flex-direction:column;text-align:left}
+.persona-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--brand-border)}
+.persona-ico{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.25rem;margin-bottom:14px}
+.persona-card h4{font-family:'Fraunces';font-weight:600;font-size:1.02rem}
+.persona-card p{font-size:.82rem;color:var(--text2);line-height:1.4;margin-top:5px;flex:1}
+.persona-arrow{margin-top:12px;font-size:.8rem;font-weight:700;color:var(--brand-dk)}
+@media(max-width:760px){.persona-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.persona-grid{grid-template-columns:1fr}}
+
+/* continue exploring step flow */
+.steps-sec{padding:14px 0 50px}
+.steps-row{display:flex;align-items:flex-start;gap:0;margin-top:18px;overflow-x:auto;padding-bottom:6px}
+.step-card{flex:1;min-width:148px;text-align:center;padding:0 6px;position:relative}
+.step-card:not(:last-child)::after{content:'';position:absolute;top:24px;right:-6px;width:calc(100% - 36px);height:2px;background:var(--border);z-index:0}
+.step-ico{width:48px;height:48px;border-radius:50%;background:var(--surface2);border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin:0 auto 10px;position:relative;z-index:1;background:var(--surface)}
+.step-card h5{font-size:.86rem;font-weight:700}
+.step-card p{font-size:.75rem;color:var(--text3);margin-top:3px;line-height:1.3}
+
+/* trending careers */
+.trend-sec{padding:14px 0 50px}
+.trend-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-top:6px}
+.trend-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:16px 17px;transition:transform .15s,box-shadow .15s}
+.trend-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-sm)}
+.trend-badge{font-size:.62rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:3px 9px;border-radius:999px;display:inline-block;margin-bottom:9px}
+.trend-card h5{font-family:'Fraunces';font-weight:600;font-size:.95rem;line-height:1.25}
+.trend-card p{font-size:.8rem;color:var(--text2);margin-top:6px;line-height:1.4}
+
+/* quiz tie-in */
+.quiz-cta{background:linear-gradient(135deg,var(--purple-bg),#fff);border:1.5px solid #DCC8F5;border-radius:var(--r-lg);padding:24px 26px;display:flex;align-items:center;gap:20px;margin-top:6px}
+.quiz-cta .qc-ico{font-size:2.2rem;flex-shrink:0}
+.quiz-cta h4{font-family:'Fraunces';font-weight:600;font-size:1.15rem}
+.quiz-cta p{font-size:.88rem;color:var(--text2);margin-top:4px}
+.quiz-cta button{flex-shrink:0;border:none;background:var(--purple);color:#fff;font:inherit;font-weight:700;font-size:.88rem;padding:11px 20px;border-radius:999px;cursor:pointer;white-space:nowrap}
+@media(max-width:600px){.quiz-cta{flex-direction:column;text-align:center}}
+
+/* trust bar */
+.trust-sec{background:linear-gradient(135deg,#171B45,#2C3580);border-radius:28px 28px 0 0;margin-top:14px}
+.trust-inner{max-width:1000px;margin:0 auto;padding:30px 20px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;color:#fff}
+.trust-item{display:flex;gap:11px;align-items:flex-start}
+.trust-item .ti-ico{font-size:1.3rem}
+.trust-item h6{font-weight:700;font-size:.85rem}
+.trust-item p{color:rgba(255,255,255,.6);font-size:.74rem;margin-top:2px;line-height:1.3}
+@media(max-width:760px){.trust-inner{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.trust-inner{grid-template-columns:1fr}}
+
+.section-head{max-width:1000px;margin:0 auto;padding:0 20px}
+.section-head .sl{font-size:.72rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--text3);margin-bottom:8px}
+.section-head h2{font-family:'Fraunces';font-weight:600;font-size:1.55rem}
+.section-head p{color:var(--text2);margin-top:6px;font-size:.95rem}
+
+@media(max-width:640px){.sj,.path-cards{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo-row">
+      <div class="logo-icon">வ</div>
+      <div><div class="logo-en">Vazhi</div><div class="logo-ta">வழி</div></div>
+    </div>
+    <nav class="header-nav">
+      <a class="hnav-link" onclick="scrollToDreams()">🧭 Explore Careers</a>
+      <a class="hnav-link" onclick="location.href='explore.html#find'">🔍 Search a Career</a>
+      <a class="hnav-link" onclick="location.href='explore.html'">What Next?</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ═══════════ V2 HERO ═══════════ -->
+<section class="hero2">
+  <div class="hero2-bg"></div>
+  <div class="ta hero2-ta">வ</div>
+  <div class="hero2-inner">
+    <div class="hero2-text">
+      <div class="hero2-tags">
+        <span>45+ CAREER PATHS</span><span class="dot">·</span>
+        <span>GOVT &amp; AIDED COLLEGES</span><span class="dot">·</span>
+        <span>SCHOLARSHIPS</span><span class="dot">·</span>
+        <span>ENTRANCE EXAMS</span>
+      </div>
+      <h1>Your Journey. Your <em>Future.</em></h1>
+      <p class="hero2-ta-line ta">உங்கள் பயணம். உங்கள் எதிர்காலம்.</p>
+      <p class="hero2-sub">Every dream has more than one path. We help you discover the right one — through government and merit-based institutions, with no bias and no sales pitch.</p>
+      <div class="hero2-cta">
+        <button class="hero2-btn primary" onclick="scrollToDreams()">Explore your path →</button>
+        <button class="hero2-btn ghost" onclick="location.href='explore.html'">🧭 I'm not sure yet</button>
+      </div>
+    </div>
+
+    <div class="hpath-wrap">
+      <svg viewBox="0 0 560 245" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <linearGradient id="pg2" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#3B82F6"/>
+            <stop offset="35%" stop-color="#2DD4C4"/>
+            <stop offset="65%" stop-color="#A855F7"/>
+            <stop offset="100%" stop-color="#F59E0B"/>
+          </linearGradient>
+        </defs>
+
+        <!-- placeholder student silhouette — replace with real illustration when available -->
+        <g opacity=".92" transform="translate(20,90)">
+          <ellipse cx="28" cy="124" rx="22" ry="5" fill="#000" opacity=".18"/>
+          <!-- backpack -->
+          <rect x="6" y="34" width="20" height="30" rx="6" fill="#2DD4C4" opacity=".55"/>
+          <!-- legs -->
+          <rect x="16" y="84" width="9" height="34" rx="4" fill="#C7D2FE"/>
+          <rect x="30" y="84" width="9" height="34" rx="4" fill="#A5B4FC"/>
+          <!-- hoodie body -->
+          <path d="M14 38 Q14 24 28 24 Q42 24 42 38 L44 88 Q28 96 12 88 Z" fill="#E0E7FF"/>
+          <!-- arms -->
+          <rect x="6" y="40" width="9" height="30" rx="4.5" fill="#C7D2FE" transform="rotate(8 10 40)"/>
+          <rect x="41" y="40" width="9" height="30" rx="4.5" fill="#C7D2FE" transform="rotate(-8 46 40)"/>
+          <!-- head -->
+          <circle cx="28" cy="13" r="13" fill="#FBCFE8"/>
+          <!-- hair -->
+          <path d="M15 11 Q15 -1 28 -1 Q41 -1 41 11 Q41 4 28 4 Q15 4 15 11Z" fill="#3F3A55"/>
+        </g>
+
+        <path d="M50 150 C 150 150 170 90 250 90 S 380 120 440 75 S 500 50 530 50" fill="none" stroke="url(#pg2)" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="50" cy="150" r="8" fill="#3B82F6" stroke="#fff" stroke-width="2.5"/>
+        <circle cx="250" cy="90" r="6" fill="#2DD4C4" stroke="#fff" stroke-width="2"/>
+        <circle cx="440" cy="75" r="6" fill="#A855F7" stroke="#fff" stroke-width="2"/>
+        <circle cx="530" cy="50" r="8" fill="#F59E0B" stroke="#fff" stroke-width="2.5"/>
+        <text x="28" y="228" text-anchor="middle" fill="rgba(255,255,255,.85)" font-size="11" font-weight="700" font-family="Plus Jakarta Sans">Class 12</text>
+        <text x="250" y="70" text-anchor="middle" fill="rgba(255,255,255,.85)" font-size="11" font-weight="700" font-family="Plus Jakarta Sans">Choose path</text>
+        <text x="440" y="55" text-anchor="middle" fill="rgba(255,255,255,.85)" font-size="11" font-weight="700" font-family="Plus Jakarta Sans">Get into college</text>
+        <text x="530" y="34" text-anchor="middle" fill="#FCD34D" font-size="11" font-weight="800" font-family="Plus Jakarta Sans">Your dream</text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="statsbar">
+    <div class="statsbar-inner">
+      <div><div class="stat-n">500+</div><div class="stat-l">Government &amp; aided colleges</div></div>
+      <div><div class="stat-n">45+</div><div class="stat-l">Career paths mapped</div></div>
+      <div><div class="stat-n">45+</div><div class="stat-l">Scholarships listed</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PERSONA ROUTER ═══════════ -->
+<section class="persona-sec">
+  <div class="section-head" style="margin-bottom:18px">
+    <h2>Where do you see yourself?</h2>
+    <p>Choose your current stage and we'll guide you from there.</p>
+  </div>
+  <div class="wrap">
+    <div class="persona-grid">
+      <div class="persona-card" onclick="scrollToDreams()">
+        <div class="persona-ico" style="background:var(--accent)">🎓</div>
+        <h4>After Class 12</h4>
+        <p>Explore courses, colleges and entrance exams.</p>
+        <span class="persona-arrow">Explore →</span>
+      </div>
+      <div class="persona-card" onclick="location.href='explore.html#after-ug'">
+        <div class="persona-ico" style="background:var(--purple)">📖</div>
+        <h4>After graduation</h4>
+        <p>PG courses, govt jobs, higher studies &amp; more.</p>
+        <span class="persona-arrow">Explore →</span>
+      </div>
+      <div class="persona-card" onclick="location.href='explore.html#scholarships'">
+        <div class="persona-ico" style="background:var(--brand)">💰</div>
+        <h4>Need financial support</h4>
+        <p>Scholarships and fee-waiver schemes.</p>
+        <span class="persona-arrow">Explore →</span>
+      </div>
+      <div class="persona-card" onclick="location.href='explore.html#psychometric'">
+        <div class="persona-ico" style="background:var(--blue)">🧭</div>
+        <h4>I don't know yet</h4>
+        <p>Take the Know Yourself test to find your fit.</p>
+        <span class="persona-arrow">Explore →</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CONTINUE EXPLORING — step flow ═══════════ -->
+<section class="steps-sec">
+  <div class="section-head">
+    <div class="sl">📍 How Vazhi works</div>
+    <h2>From confusion to a plan, in five steps</h2>
+  </div>
+  <div class="wrap">
+    <div class="steps-row">
+      <div class="step-card"><div class="step-ico">🧭</div><h5>Discover interests</h5><p>Know Yourself test</p></div>
+      <div class="step-card"><div class="step-ico">🔭</div><h5>Explore careers</h5><p>45+ career paths</p></div>
+      <div class="step-card"><div class="step-ico">📘</div><h5>Find courses</h5><p>Matched to your subjects</p></div>
+      <div class="step-card"><div class="step-ico">🏛</div><h5>Choose colleges</h5><p>Govt &amp; merit-based only</p></div>
+      <div class="step-card"><div class="step-ico">📈</div><h5>Plan your future</h5><p>Scholarships, skills, jobs</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ TRENDING CAREERS (real data) ═══════════ -->
+<section class="trend-sec">
+  <div class="section-head" style="margin-bottom:18px;display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px">
+    <div><div class="sl">📈 Worth a look</div><h2>Trending career fields</h2></div>
+    <a href="explore.html#market" style="font-size:.86rem;font-weight:700;color:var(--brand-dk)">View all →</a>
+  </div>
+  <div class="wrap">
+    <div class="trend-row" id="trendRow"></div>
+  </div>
+</section>
+
+<!-- ═══════════ QUIZ TIE-IN ═══════════ -->
+<section style="padding:0 0 50px">
+  <div class="wrap">
+    <div class="quiz-cta">
+      <div class="qc-ico">🧠</div>
+      <div style="flex:1">
+        <h4>Not sure what fits you?</h4>
+        <p>Take the free Know Yourself test — a short RIASEC-based quiz that maps your interests to real career paths.</p>
+      </div>
+      <button onclick="location.href='explore.html#psychometric'">Take the test →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ EXPLORE BY DREAM — existing functionality ═══════════ -->
+<section class="hero" id="exploreSection">
+  <div class="wrap">
+    <div class="section-head" style="margin-bottom:18px;padding:0">
+      <div class="sl">🧭 Or just explore</div>
+      <h2>What's your dream?</h2>
+      <p>Pick what excites you — we'll show you every government and merit-based path to get there.</p>
+    </div>
+    <div class="escape" id="searchBox">
+      <input id="goalInput" type="text" placeholder="What do you want to be? e.g. doctor, farmer, engineer" onkeydown="if(event.key==='Enter')resolveGoal()">
+      <button onclick="resolveGoal()">Search →</button>
+    </div>
+    <div class="dreams" id="dreamGrid"></div>
+    <div class="explorer" id="explorer"></div>
+  </div>
+</section>
+
+<!-- ═══════════ TRUST BAR ═══════════ -->
+<section class="trust-sec">
+  <div class="trust-inner">
+    <div class="trust-item"><span class="ti-ico">🛡</span><div><h6>100% trusted</h6><p>Information from government sources</p></div></div>
+    <div class="trust-item"><span class="ti-ico">🔄</span><div><h6>Always updated</h6><p>Latest courses, exams &amp; opportunities</p></div></div>
+    <div class="trust-item"><span class="ti-ico">🗣</span><div><h6>Easy to understand</h6><p>Simple guidance in Tamil &amp; English</p></div></div>
+    <div class="trust-item"><span class="ti-ico">🎓</span><div><h6>Made for students</h6><p>By students. For students. From Tamil Nadu.</p></div></div>
+  </div>
+</section>
+
+<!-- Key dates (upcoming exams / results / deadlines) — hidden for now -->
+<section class="sec" style="display:none">
+  <div class="wrap">
+    <div class="sec-label">📢 Key dates</div>
+    <h2 class="serif">Upcoming exams, results &amp; deadlines</h2>
+    <p class="sub">The dates that matter for getting into a UG course.</p>
+    <div class="ann-list" id="annList"></div>
+    <p class="ann-note">Dates are indicative — always confirm on the official website before applying.</p>
+  </div>
+</section>
+
+
+<div id="ucModal" class="ucmodal" onclick="closeUC()"></div>
+
+<script src="data/announcements.js"></script>
+<script src="data/market.js"></script>
+
+<footer>
+  <div class="footer-main">Vazhi வழி — guidance for students after Class 12 · government, aided &amp; merit-based institutions</div>
+  <div class="footer-contact-label">Get in touch</div>
+  <div class="footer-links">
+    <a href="mailto:kalvivazhi@gmail.com">✉️ kalvivazhi@gmail.com</a>
+    <a href="https://instagram.com/kalvivazhi.in" target="_blank" rel="noopener">📸 @kalvivazhi.in</a>
+  </div>
+</footer>
+
+<script>
+/* ───────── DREAM CARDS ───────── */
+const DREAMS = [
+  {id:'help',  ico:'🩺', txt:'Helping People',     anchor:'health · teaching · public service', live:true},
+  {id:'nature',ico:'🌿', txt:'Working with Nature', anchor:'agriculture · earth · wildlife', live:true},
+  {id:'build', ico:'🛠️', txt:'Building Things',     anchor:'engineer · architect', live:true},
+  {id:'money', ico:'🔒', txt:'Financial Security',  anchor:'actuary · banker · CA', live:true},
+  {id:'impact',ico:'🌍', txt:'Making an Impact',    anchor:'policy · development', live:true},
+  {id:'sci',   ico:'🔬', txt:'Discovering Knowledge',anchor:'scientist · researcher', live:true},
+  {id:'create',ico:'🎨', txt:'Creating & Designing',anchor:'designer · architect', live:true},
+  {id:'serve', ico:'🏛️', txt:'Serving Society',     anchor:'civil services · law', live:true},
+  {id:'unsure',ico:'🧭', txt:'Not Sure Yet',        anchor:'explore + find your fit', live:true},
+];
+
+/* ───────── DREAM REGISTRY ───────── */
+const DREAMDATA = {
+  /* ════ HELPING PEOPLE ════ */
+  help:{
+    ico:'🩺', dream:'Helping People', anchor:'Healthcare · Education · Public Service · Community',
+    lenses:[{n:'Healthcare',ready:true},{n:'Education',ready:false},{n:'Public Service',ready:false},{n:'Community Development',ready:false}],
+    confidence:['I enjoy biology & how the body works','I like helping people face-to-face','I can handle pressure & responsibility','I\'m ready for years of continuous study'],
+    related:[{id:'nature',label:'🌿 Working with Nature'},{id:'sci',label:'🔬 Discovering Knowledge'},{id:'serve',label:'🏛️ Serving Society'}],
+    unknownHeading:'Beyond doctor & nurse',
+    clusterLabel:'Roles inside the Healthcare lens',
+    cluster:[
+      {e:'🩺',n:'Doctor'},{e:'🦷',n:'Dentist'},{e:'💉',n:'Nurse'},
+      {e:'🤸',n:'Physiotherapist'},{e:'📊',n:'Public Health Professional'}
+    ],
+    unknown:[
+      {ico:'🔍',n:'Epidemiologist',label:'Disease Detective',short:'Tracks disease outbreaks.',one:'The disease detective — tracks outbreaks and stops them spreading.',why:['Biology','Public impact','Research'],pathline:'B.Sc Life Sciences → MPH → Epidemiology',gov:'ICMR · NCDC',risk:'green',cost:'₹ low (govt)',related:['Public Health','Life Sciences','Research'],path:'ph'},
+      {ico:'🦻',n:'Audiologist',label:'Hearing Specialist',short:'Restores hearing.',one:'Restores hearing — fits implants, runs newborn screening.',why:['Helping people','Science','Technology'],pathline:'BASLP → M.Sc Audiology',gov:'AYJNISHD · govt hospitals',risk:'green',cost:'₹ low (govt)',related:['Allied Health','Nursing'],path:'allied'},
+      {ico:'🦿',n:'Prosthetist & Orthotist',label:'Artificial-Limb Maker',short:'Builds artificial limbs.',one:'Designs and builds artificial limbs and braces.',why:['Building things','Helping people','Hands-on'],pathline:'B.P.O. (Prosthetics & Orthotics)',gov:'Govt rehab institutes',risk:'green',cost:'₹ low (govt)',related:['Allied Health','Biomedical Engineering'],path:'allied'},
+      {ico:'☢️',n:'Medical Physicist',label:'Cancer-Radiation Scientist',short:'Targets cancer radiation.',one:'Aims the radiation that treats cancer — safely.',why:['Physics','Healthcare','Tech over direct care'],pathline:'B.Sc Physics → M.Sc Medical Physics',gov:'AERB · govt cancer centres',risk:'amber',cost:'₹ low (govt)',related:['Allied Health','Public Health','Research'],path:'life'},
+      {ico:'🧠',n:'Occupational Therapist',label:'Daily-Life Therapist',short:'Rebuilds daily-life skills.',one:'Helps people relearn daily life after injury or stroke.',why:['Helping people','Psychology','Creativity'],pathline:'B.O.T. (Occupational Therapy)',gov:'Govt medical colleges',risk:'green',cost:'₹ low (govt)',related:['Physiotherapy','Allied Health'],path:'allied'},
+    ],
+    paths:{
+      primary:[
+        {id:'mbbs',name:'MBBS',deg:'5.5 yr · Doctor',fit:'Best if you want to diagnose & lead patient care',anchor:'AIIMS, JIPMER',fee:'~free–₹2L (govt)',risk:'red',riskLbl:'Main route: NEET',backups:5,stressLabel:"What if I don't clear NEET?",lead:true}
+      ],
+      alt:[
+        {id:'bds',name:'BDS',deg:'5 yr · Dental surgeon',fit:'Best if you like precise, hands-on procedures',anchor:'Govt Dental Colleges',fee:'low (govt)',risk:'red',riskLbl:'Main route: NEET'},
+        {id:'nursing',name:'B.Sc Nursing',deg:'4 yr · Nurse',fit:'Best if you enjoy continuous patient care',anchor:'AIIMS CON, govt colleges',fee:'~free–₹2L',risk:'green',riskLbl:'Several routes'},
+        {id:'bpt',name:'BPT',deg:'4.5 yr · Physiotherapy',fit:'Best if you want to restore movement & recovery',anchor:'Govt physio institutes',fee:'low (govt)',risk:'green',riskLbl:'State counselling'},
+        {id:'allied',name:'B.Sc Allied Health',deg:'3–4 yr · Lab, imaging, optometry',fit:'Best if you like the science behind diagnosis',anchor:'Govt medical colleges',fee:'low (govt)',risk:'amber',riskLbl:'State / NEET'},
+      ],
+      backup:[
+        {id:'ph',name:'B.Sc Public Health',deg:'3 yr · Health systems',fit:'Best if you want impact at community scale',anchor:'Central Universities',fee:'low',risk:'green',riskLbl:'CUET / State'},
+        {id:'life',name:'B.Sc Life Sciences',deg:'3 yr · Biology base',fit:'Best if you want to keep options open',anchor:'IISER, Central Univ',fee:'low',risk:'green',riskLbl:'CUET / State'},
+        {id:'research',name:'B.Sc → Research',deg:'Microbiology, biotech…',fit:'Best if you love the lab & discovery',anchor:'IISER, NISER',fee:'low',risk:'green',riskLbl:'CUET / State'},
+      ],
+    },
+  },
+
+  /* ════ WORKING WITH NATURE ════ */
+  nature:{
+    ico:'🌿', dream:'Working with Nature', anchor:'Agriculture · Forestry & Wildlife · Fisheries · Earth & Ocean',
+    lenses:[{n:'Agriculture',ready:true},{n:'Forestry & Wildlife',ready:true},{n:'Earth & Ocean',ready:true},{n:'Fisheries',ready:false}],
+    confidence:['I like biology, geography or earth science','I\'d rather be outdoors than at a desk','I care about animals, plants & environment','I enjoy patient, long-term observation'],
+    related:[{id:'sci',label:'🔬 Discovering Knowledge'},{id:'help',label:'🩺 Helping People'},{id:'build',label:'🛠️ Building Things'}],
+    unknownHeading:'Beyond farming & forestry',
+    clusterLabel:'Roles inside this dream',
+    cluster:[
+      {e:'🌾',n:'Agricultural Scientist',l:'Agriculture'},{e:'🐄',n:'Veterinarian',l:'Agriculture'},{e:'🌲',n:'Forest Officer',l:'Forestry & Wildlife'},
+      {e:'🍅',n:'Horticulturist',l:'Agriculture'},{e:'🚜',n:'Agripreneur',l:'Agriculture'}
+    ],
+    unknown:[
+      {ico:'⛰️',n:'Geologist',label:'Earth Scientist',l:'Earth & Ocean',short:'Reads the earth.',one:'Reads the earth — finds groundwater, maps minerals & quake risk.',why:['Earth science','Fieldwork','Problem-solving'],pathline:'B.Sc Geology → M.Sc (IIT-JAM) → GSI',gov:'Geological Survey of India · ONGC',risk:'green',cost:'₹ low (govt)',related:['Environmental Science','Earth Research'],path:'geology'},
+      {ico:'🌊',n:'Oceanographer',label:'Ocean Scientist',l:'Earth & Ocean',short:'Studies the seas.',one:'Studies currents, marine life and the monsoon engine.',why:['Marine life','Physics & biology','Adventure'],pathline:'B.Sc Marine/Earth Sci → M.Sc Oceanography',gov:'NIOT · INCOIS · NCPOR',risk:'green',cost:'₹ low (govt)',related:['Earth Research','Fisheries'],path:'earthres'},
+      {ico:'🐅',n:'Wildlife Biologist',label:'Wildlife Scientist',l:'Forestry & Wildlife',short:'Protects wild animals.',one:"Protects tigers & elephants — runs the world's biggest census.",why:['Animals','Fieldwork','Conservation'],pathline:'B.Sc Zoology → M.Sc Wildlife → WII',gov:'Wildlife Institute of India · forest depts',risk:'green',cost:'₹ low (govt)',related:['Forestry','Environmental Science'],path:'wildlife'},
+      {ico:'📡',n:'Seismologist',label:'Earthquake Scientist',l:'Earth & Ocean',short:'Tracks earthquakes.',one:'Tracks earthquakes and warns before the ground moves.',why:['Earth science','Physics','Public safety'],pathline:'B.Sc Geology/Physics → M.Sc → NCS',gov:'National Centre for Seismology · IMD',risk:'green',cost:'₹ low (govt)',related:['Geology','Earth Research'],path:'geology'},
+      {ico:'🏔️',n:'Glaciologist',label:'Glacier Scientist',l:'Earth & Ocean',short:'Studies glaciers.',one:"Studies Himalayan glaciers — India's frozen water bank.",why:['Earth science','Adventure','Climate'],pathline:'B.Sc Geology → M.Sc → NCPOR',gov:'NCPOR (polar research) · GSI',risk:'amber',cost:'₹ low (govt)',related:['Geology','Earth Research'],path:'earthres'},
+      {ico:'🌱',n:'Soil Scientist',label:'Soil Scientist',l:'Agriculture',short:'Keeps farmland alive.',one:'Keeps farmland alive — the science under every harvest.',why:['Agriculture','Chemistry','Real-world impact'],pathline:'B.Sc Agriculture → M.Sc Soil Science',gov:'ICAR · state agri depts',risk:'green',cost:'₹ low (govt)',related:['Agriculture','Environmental Science'],path:'agri'},
+    ],
+    paths:{
+      primary:[
+        {id:'agri',name:'B.Sc Agriculture',deg:'4 yr · Agri Scientist / Officer',fit:'Best if you want to modernise farming & food security',anchor:'TNAU, IARI',fee:'low (govt)',risk:'green',riskLbl:'Several routes',backups:6,stressLabel:'What if I change my mind?',lead:true}
+      ],
+      alt:[
+        {id:'vet',name:'B.V.Sc',deg:'5.5 yr · Veterinarian',fit:'Best if you want to treat & protect animals',anchor:'TANUVAS, IVRI',fee:'low (govt)',risk:'red',riskLbl:'Main route: NEET'},
+        {id:'forestry',name:'B.Sc Forestry',deg:'4 yr · Forest scientist',fit:'Best if you want to manage forests & ecosystems',anchor:'FRI Dehradun, state forest colleges',fee:'low (govt)',risk:'amber',riskLbl:'ICAR / state'},
+        {id:'geology',name:'B.Sc Geology',deg:'3 yr · Earth scientist',fit:'Best if you want to read the planet itself',anchor:'Univ of Madras, IITs (M.Sc)',fee:'low (govt)',risk:'green',riskLbl:'Several routes'},
+        {id:'envsci',name:'B.Sc Environmental Science',deg:'3 yr · Environment & climate',fit:'Best if you want to tackle pollution & climate',anchor:'Central Universities',fee:'low',risk:'green',riskLbl:'CUET / state'},
+      ],
+      backup:[
+        {id:'wildlife',name:'B.Sc Zoology → Wildlife',deg:'3 yr + M.Sc · Wildlife research',fit:'Best if you want fieldwork with animals',anchor:'WII, Central Univ',fee:'low',risk:'green',riskLbl:'CUET / state'},
+        {id:'fisheries',name:'B.F.Sc Fisheries',deg:'4 yr · Fisheries scientist',fit:'Best if you want rivers, seas & aquaculture',anchor:'TNJFU, CIFE',fee:'low (govt)',risk:'amber',riskLbl:'ICAR / state'},
+        {id:'earthres',name:'B.Sc → Earth/Ocean Research',deg:'Oceanography, geology, climate',fit:'Best if you want deep research & discovery',anchor:'IISER, NIO, IITs',fee:'low',risk:'green',riskLbl:'CUET / IAT'},
+      ],
+    },
+  },
+
+  /* ════ BUILDING THINGS ════ */
+  build:{
+    ico:'🛠️', dream:'Building Things', anchor:'Engineering · Architecture · Infrastructure · Design-Tech',
+    lenses:[{n:'Engineering',ready:true},{n:'Architecture',ready:true},{n:'Infrastructure',ready:false},{n:'Robotics & Electronics',ready:false}],
+    confidence:['I enjoy maths & physics','I like making or fixing things','I\'m comfortable with problem-solving under pressure','I like seeing ideas become real structures or products'],
+    related:[{id:'sci',label:'🔬 Discovering Knowledge'},{id:'create',label:'🎨 Creating & Designing'},{id:'nature',label:'🌿 Working with Nature'}],
+    unknownHeading:'Beyond engineer & architect',
+    clusterLabel:'Roles inside this dream',
+    cluster:[
+      {e:'⚙️',n:'Engineer',l:'Engineering'},{e:'🏛️',n:'Architect',l:'Architecture'},{e:'🔌',n:'Electronics Engineer',l:'Engineering'},
+      {e:'🏗️',n:'Civil Engineer',l:'Engineering'},{e:'🤖',n:'Robotics Engineer',l:'Engineering'}
+    ],
+    unknown:[
+      {ico:'🌊',n:'Hydraulic Engineer',label:'Water Systems Engineer',l:'Engineering',short:'Designs dams & canals.',one:'Designs dams, canals and flood-control systems — water infrastructure that feeds millions.',why:['Maths & physics','Social impact','Outdoors'],pathline:'B.Tech Civil → M.Tech Hydraulics → CWC',gov:'CWC · WAPCOS · state irrigation depts',risk:'green',cost:'₹ low (govt)',related:['Civil Engineering','Environment'],path:'btech'},
+      {ico:'🚀',n:'Aerospace Engineer',label:'Space & Aircraft Engineer',l:'Engineering',short:'Builds aircraft & rockets.',one:'Designs aircraft, rockets and satellites — ISRO and HAL recruit from the same B.Tech route.',why:['Physics','Maths','Big ambitions'],pathline:'B.Tech Aerospace / Mech at IIT/NIT',gov:'ISRO · HAL · DRDO · NAL',risk:'red',cost:'₹ low (NIT)',related:['Electronics','Maths'],path:'btech'},
+      {ico:'🗺️',n:'Town Planner',label:'City Designer',l:'Architecture',short:'Plans how cities grow.',one:'Plans how cities expand — roads, housing zones, public parks, transport grids.',why:['Design + impact','Geography','Social systems'],pathline:'B.Arch or B.Planning → M.Planning',gov:'Town & Country Planning · Smart Cities · DDA',risk:'amber',cost:'₹ low (govt)',related:['Architecture','Civil'],path:'barch'},
+      {ico:'⚓',n:'Naval Architect',label:'Ship Designer',l:'Engineering',short:'Designs ships & submarines.',one:'Designs ships, submarines and offshore platforms for India\'s navy and ports.',why:['Maths','Maritime','Unique field'],pathline:'B.Tech Naval Architecture at IIT Kharagpur',gov:'Cochin Shipyard · Mazagon Dock · Indian Navy',risk:'amber',cost:'₹ low (IIT)',related:['Mechanical','Civil'],path:'btech'},
+      {ico:'🔋',n:'Energy Systems Engineer',label:'Power Grid Engineer',l:'Engineering',short:'Keeps the lights on.',one:'Designs power grids, solar farms and wind plants — the backbone of the country.',why:['Electricity','Real-world impact','Maths'],pathline:'B.Tech Electrical → energy specialisation → NTPC',gov:'NTPC · Power Grid · BHEL · state power boards',risk:'green',cost:'₹ low (govt)',related:['Electrical','Physics'],path:'btech'},
+    ],
+    paths:{
+      primary:[
+        {id:'btech',name:'B.Tech Engineering',deg:'4 yr · Engineer',fit:'Best if you want to design, solve and build — broadest scope across all fields',anchor:'NITs, IIITs, state govt colleges',fee:'₹20k–1.5L/yr (govt)',risk:'amber',riskLbl:'JEE Main or State CET',backups:6,stressLabel:"What if my JEE score isn't high?",lead:true}
+      ],
+      alt:[
+        {id:'barch',name:'B.Arch',deg:'5 yr · Architect',fit:'Best if you combine art with structure — designing spaces people live in',anchor:'NIT schools of Architecture, SPA Delhi',fee:'₹20k–80k/yr (govt)',risk:'amber',riskLbl:'NATA + JEE Paper 2'},
+        {id:'diploma',name:'Diploma → Lateral Entry B.Tech',deg:'3 yr Diploma + 3 yr B.Tech',fit:'Best if you want a hands-on start and want to upgrade later',anchor:'Govt Polytechnics → state govt colleges',fee:'₹ very low',risk:'green',riskLbl:'State polytechnic admission'},
+        {id:'bsc_maths',name:'B.Sc Maths/Physics → M.Tech (GATE)',deg:'3 yr B.Sc + 2 yr M.Tech',fit:'Best if you want engineering without JEE pressure — research route',anchor:'Central Univ B.Sc → NIT/IISER M.Tech',fee:'low',risk:'green',riskLbl:'CUET → GATE'},
+      ],
+      backup:[
+        {id:'bdes_ind',name:'B.Des Industrial Design',deg:'4 yr · Product designer',fit:'Best if building and aesthetics drive you equally',anchor:'NID, IIT-IDC',fee:'low',risk:'amber',riskLbl:'NID DAT / UCEED'},
+      ],
+    },
+  },
+
+  /* ════ FINANCIAL SECURITY ════ */
+  money:{
+    ico:'🔒', dream:'Financial Security', anchor:'Chartered Accountancy · Banking · Actuarial · Economics',
+    lenses:[{n:'Chartered Accountancy',ready:true},{n:'Banking & Finance',ready:true},{n:'Actuarial Science',ready:false},{n:'Economics & Policy',ready:false}],
+    confidence:['I enjoy maths and numbers','I like working with systems, rules and accuracy','I want a stable high-income career','I\'m comfortable with long study periods and professional exams'],
+    related:[{id:'serve',label:'🏛️ Serving Society'},{id:'impact',label:'🌍 Making an Impact'},{id:'build',label:'🛠️ Building Things'}],
+    unknownHeading:'Beyond banker & CA',
+    clusterLabel:'Roles inside this dream',
+    cluster:[
+      {e:'📊',n:'Chartered Accountant',l:'Chartered Accountancy'},{e:'🏦',n:'Banker',l:'Banking & Finance'},{e:'📈',n:'Actuary',l:'Chartered Accountancy'},
+      {e:'💰',n:'Financial Analyst',l:'Banking & Finance'},{e:'🔢',n:'Economist',l:'Banking & Finance'}
+    ],
+    unknown:[
+      {ico:'📐',n:'Actuary',label:'Risk Calculator',l:'Chartered Accountancy',short:'Prices insurance risk.',one:'Calculates the mathematics of risk — pricing insurance policies and pension funds.',why:['Maths','High pay','Niche expertise'],pathline:'B.Sc Maths/Stats → IAI Fellowship (actuarial exams)',gov:'LIC · GIC · IRDA · PFRDA',risk:'amber',cost:'₹ low (govt)',related:['Statistics','Economics'],path:'actuary'},
+      {ico:'🏛️',n:'RBI Grade B Officer',label:'Central Banker',l:'Banking & Finance',short:'Regulates India\'s money.',one:'Regulates India\'s money supply and banking system at the Reserve Bank of India.',why:['Economics','Real power','Stability'],pathline:'Any UG → RBI Grade B exam',gov:'Reserve Bank of India',risk:'amber',cost:'₹ low',related:['Economics','Banking'],path:'banking'},
+      {ico:'📉',n:'Securities Regulator',label:'Stock Market Guardian',l:'Banking & Finance',short:'Polices the stock market.',one:'Monitors markets for fraud and protects investors — works at SEBI.',why:['Law + finance','Public interest','Analytical'],pathline:'Any UG → SEBI Officer exam / CA / MBA',gov:'SEBI · RBI · IRDAI · PFRDA',risk:'amber',cost:'₹ low',related:['Law','Economics'],path:'banking'},
+      {ico:'📋',n:'Cost & Management Accountant',label:'Cost Controller',l:'Chartered Accountancy',short:'Controls business costs.',one:'Tracks every rupee spent and finds where a company overpays — the CMA route.',why:['Maths','Business','Structure'],pathline:'After Class 12 → CMA Foundation → Inter → Final',gov:'Govt PSUs · finance depts · defence accounts',risk:'green',cost:'₹ very low (exam path)',related:['Accountancy','Commerce'],path:'ca'},
+      {ico:'🏗️',n:'Infrastructure Finance Analyst',label:'Project Finance Specialist',l:'Banking & Finance',short:'Funds highways & ports.',one:'Funds highways, ports and power plants — the money behind India\'s infrastructure.',why:['Finance + real assets','National projects','Quantitative'],pathline:'B.Com/BA Eco → CA / MBA Finance → IIFCL · NABARD',gov:'IIFCL · NABARD · NHB · SIDBI',risk:'amber',cost:'₹ moderate (PG)',related:['Banking','Infrastructure'],path:'banking'},
+    ],
+    paths:{
+      primary:[
+        {id:'ca',name:'CA (Chartered Accountant)',deg:'3–4 yr after Class 12 · ICAI',fit:'Best if you want the most respected finance credential in India',anchor:'ICAI — national exam, no college needed',fee:'₹ very low (exam-based path)',risk:'red',riskLbl:'ICAI CA exams (Foundation → Inter → Final)',backups:4,stressLabel:'What if I struggle with CA exams?',lead:true}
+      ],
+      alt:[
+        {id:'banking',name:'B.Com → Banking & Finance',deg:'3 yr B.Com + IBPS/RBI exam',fit:'Best if you want a secure govt bank career',anchor:'Central Univ, Delhi Univ, state govt colleges',fee:'₹ very low',risk:'green',riskLbl:'State / CUET for college + IBPS exam later'},
+        {id:'actuary',name:'B.Sc Maths/Stats → Actuary',deg:'3 yr + IAI Fellowship',fit:'Best if you love probability and want the highest-paid niche in finance',anchor:'IIT M.Sc Actuarial (GATE), Univ of Madras',fee:'low (govt)',risk:'amber',riskLbl:'State merit / CUET + IAI exams'},
+        {id:'bcom_eco',name:'B.Com / BA Economics',deg:'3 yr · Commerce base',fit:'Best if you want to keep options open across finance, civil services or MBA',anchor:'Delhi Univ, Presidency, Loyola',fee:'very low',risk:'green',riskLbl:'CUET / state merit'},
+      ],
+      backup:[
+        {id:'cma',name:'CMA (Cost Accountant)',deg:'3–4 yr · ICMAI',fit:'Best if CA exams feel too high-stakes — CMA is equally respected in PSUs',anchor:'ICMAI — exam-based, no college needed',fee:'very low',risk:'amber',riskLbl:'CMA Foundation → Inter → Final'},
+      ],
+    },
+  },
+
+  /* ════ MAKING AN IMPACT ════ */
+  impact:{
+    ico:'🌍', dream:'Making an Impact', anchor:'Policy · Development · Social Change · International Affairs',
+    lenses:[{n:'Policy & Governance',ready:true},{n:'International Development',ready:false},{n:'Social Entrepreneurship',ready:false},{n:'Environment & Climate',ready:false}],
+    confidence:['I care deeply about inequality and social problems','I like understanding how systems work — politics, economics, society','I can write, argue and persuade','I want to change things at scale, not just one-on-one'],
+    related:[{id:'serve',label:'🏛️ Serving Society'},{id:'sci',label:'🔬 Discovering Knowledge'},{id:'help',label:'🩺 Helping People'}],
+    unknownHeading:'Beyond politician & activist',
+    clusterLabel:'Roles inside this dream',
+    cluster:[
+      {e:'📜',n:'Policy Analyst'},{e:'🌐',n:'Development Officer'},{e:'🗳️',n:'Governance Specialist'},
+      {e:'📊',n:'Economist'},{e:'🏘️',n:'Urban Development Expert'}
+    ],
+    unknown:[
+      {ico:'🏙️',n:'Urban Development Expert',label:'City Transformation Specialist',short:'Rebuilds cities for people.',one:'Redesigns slums into liveable neighbourhoods — Niti Aayog, Smart Cities, HUDCO.',why:['Social change','Planning','Research'],pathline:'BA / B.Planning → M.Planning / MPP',gov:'HUDCO · Smart Cities Mission · DDA · state housing boards',risk:'green',cost:'₹ low (govt)',related:['Social Work','Town Planning'],path:'ba_policy'},
+      {ico:'🌱',n:'Development Economist',label:'Poverty Solutions Researcher',short:'Studies what fights poverty.',one:'Researches what actually works against poverty — evidence-based, not opinion.',why:['Economics','Social good','Research'],pathline:'BA Economics → M.A. / PhD → think tanks / UN India',gov:'Niti Aayog · RBI · World Bank India office · state planning boards',risk:'green',cost:'₹ low (govt + fellowship)',related:['Economics','Policy'],path:'ba_policy'},
+      {ico:'📡',n:'International Development Officer',label:'UN & Aid Agency Worker',short:'Works for UN & global agencies.',one:'Manages relief and development programmes for UN, WHO, UNICEF on India placements.',why:['Global scope','Social impact','Languages'],pathline:'BA → MA International Relations / Development Studies → UN internship',gov:'UNDP · UNICEF · WHO India · ministry-level desks',risk:'amber',cost:'₹ low (JNU / TISS)',related:['Policy','International Affairs'],path:'ba_policy'},
+      {ico:'⚖️',n:'Legal Aid Lawyer',label:'Justice for the Underserved',short:'Fights for the powerless.',one:'Provides free legal help to those who cannot afford courts — NALSA & legal aid offices.',why:['Justice','Law','Social change'],pathline:'BA → LLB (5 yr integrated or 3 yr after UG)',gov:'NALSA · state legal aid boards · human rights commissions',risk:'green',cost:'₹ low (govt law college)',related:['Law','Social Work'],path:'llb'},
+      {ico:'📊',n:'Programme Evaluator',label:'What-Works Analyst',short:'Checks if govt schemes work.',one:'Measures whether government schemes actually reach people — data-based accountability.',why:['Data','Policy','Real-world feedback'],pathline:'BA Econ / Statistics → MA / MPP → CAG · Niti Aayog',gov:'Comptroller & Auditor General · Niti Aayog · state evaluation units',risk:'green',cost:'₹ low',related:['Economics','Statistics'],path:'ba_policy'},
+    ],
+    paths:{
+      primary:[
+        {id:'ba_policy',name:'BA → Public Policy / Civil Services',deg:'3 yr BA + optional MA + UPSC/PSC',fit:'Best if you want to shape how government works from the inside',anchor:'JNU, Hyderabad Central Univ, TISS',fee:'₹ very low (central/state univ)',risk:'amber',riskLbl:'CUET / state merit for college; UPSC later',backups:5,stressLabel:"What if I don't clear UPSC?",lead:true}
+      ],
+      alt:[
+        {id:'sw',name:'BSW / MSW Social Work',deg:'3–5 yr · Social development',fit:'Best if you want ground-level impact — working with communities, not just policy',anchor:'TISS Mumbai, Delhi School of Social Work',fee:'very low (govt-aided)',risk:'green',riskLbl:'State merit / CUET'},
+        {id:'llb',name:'BA + LLB (5 yr)',deg:'5 yr · Lawyer / Judge',fit:'Best if you want to use law as a lever for justice',anchor:'National Law Universities (NLUs) via CLAT',fee:'₹50k–1L/yr (NLU)',risk:'amber',riskLbl:'CLAT'},
+        {id:'ba_eco',name:'BA Economics',deg:'3 yr · Analytical foundation',fit:'Best if you want to understand the engine before you try to change it',anchor:'Presidency, Loyola, DU colleges',fee:'very low',risk:'green',riskLbl:'CUET / state merit'},
+      ],
+      backup:[
+        {id:'ba_ir',name:'BA International Relations',deg:'3 yr · Global affairs',fit:'Best if you want to work on India\'s place in the world',anchor:'JNU, Pondicherry Univ, Hyderabad Central',fee:'very low',risk:'green',riskLbl:'CUET'},
+      ],
+    },
+  },
+
+  /* ════ DISCOVERING KNOWLEDGE ════ */
+  sci:{
+    ico:'🔬', dream:'Discovering Knowledge', anchor:'Science · Research · Mathematics · Technology',
+    lenses:[{n:'Life Sciences',ready:true},{n:'Physical Sciences',ready:true},{n:'Mathematics',ready:false},{n:'CS Research',ready:false}],
+    confidence:['I love asking WHY — not just accepting answers','I can spend hours on a problem without getting frustrated','I like experiments, data and logical structure','I\'d rather discover something new than apply something known'],
+    related:[{id:'nature',label:'🌿 Working with Nature'},{id:'build',label:'🛠️ Building Things'},{id:'help',label:'🩺 Helping People'}],
+    unknownHeading:'Beyond scientist & professor',
+    clusterLabel:'Roles inside this dream',
+    cluster:[
+      {e:'🧬',n:'Biologist',l:'Life Sciences'},{e:'⚛️',n:'Physicist',l:'Physical Sciences'},{e:'🧪',n:'Chemist',l:'Physical Sciences'},
+      {e:'🔢',n:'Mathematician',l:'Physical Sciences'},{e:'🌌',n:'Astrophysicist',l:'Physical Sciences'}
+    ],
+    unknown:[
+      {ico:'🧬',n:'Computational Biologist',label:'Biology + Code Scientist',l:'Life Sciences',short:'Decodes DNA with computers.',one:'Decodes genomes and drug interactions using code — the fastest-growing frontier in science.',why:['Biology + CS','Problem-solving','Research frontier'],pathline:'B.Sc Bioinformatics or CSE → M.Sc/PhD',gov:'NCBS · CCMB · DBT labs · IISc',risk:'green',cost:'₹ low (govt)',related:['Life Sciences','CS Research'],path:'bs_iiser'},
+      {ico:'🌌',n:'Astrophysicist',label:'Space Scientist',l:'Physical Sciences',short:'Studies stars & galaxies.',one:'Studies how stars are born and die — works at IIA, TIFR and ISRO ground stations.',why:['Physics','Curiosity','Maths'],pathline:'B.Sc Physics → M.Sc → PhD → IIA · TIFR · ISRO',gov:'Indian Institute of Astrophysics · TIFR · ISRO Science',risk:'green',cost:'₹ low (govt fellowship)',related:['Physical Sciences','Space'],path:'bs_iiser'},
+      {ico:'🧊',n:'Materials Scientist',label:'New Materials Inventor',l:'Physical Sciences',short:'Creates materials of the future.',one:'Creates lighter, stronger, smarter materials — graphene, ceramics, polymers, solar cells.',why:['Chemistry + Physics','Hands-on','Industry + academia'],pathline:'B.Sc / B.Tech → M.Tech/M.Sc Materials Science → IIT/JNCASR',gov:'DRDO · BARC · CSIR labs · IISc',risk:'green',cost:'₹ low (govt)',related:['Physical Sciences','Engineering'],path:'bs_iiser'},
+      {ico:'🔢',n:'Mathematician',label:'Pure Maths Researcher',l:'Physical Sciences',short:'Solves the hardest problems.',one:'Solves the hardest problems — from cryptography to AI foundations to number theory.',why:['Pure logic','Independence','Deep thinking'],pathline:'B.Sc Maths at CMI / ISI / central univ → PhD at TIFR',gov:'CMI · ISI · IITs · TIFR (stipended PhD)',risk:'green',cost:'₹ very low (CMI/ISI → stipend)',related:['Mathematics','Computer Science'],path:'bs_maths'},
+      {ico:'⚛️',n:'Nuclear Scientist',label:'Atom Scientist',l:'Physical Sciences',short:'Unlocks energy from atoms.',one:'Works on nuclear reactors and radiation safety at BARC — India\'s atomic research body.',why:['Physics','High security','Unique field'],pathline:'B.Sc Physics → OCES exam → BARC Training School',gov:'BARC · NPCIL · DAE',risk:'green',cost:'₹ very low (BARC stipend)',related:['Physical Sciences','Engineering'],path:'bs_iiser'},
+    ],
+    paths:{
+      primary:[
+        {id:'bs_iiser',name:'B.S. at IISER / NISER / IISc',deg:'5 yr BS-MS · stipended science',fit:'Best if you want India\'s best science education with a stipend from Day 1',anchor:'IISER (7 campuses), NISER Bhubaneswar, IISc',fee:'₹ near-free + ₹12k/month stipend',risk:'amber',riskLbl:'IAT / IISER Aptitude Test or JEE Advanced',backups:5,stressLabel:"What if I don't get into IISER?",lead:true}
+      ],
+      alt:[
+        {id:'bsc_central',name:'B.Sc at Central / State Univ',deg:'3 yr · Science foundation',fit:'Best if you want a strong science base without a single high-pressure gate',anchor:'Univ of Madras, JNU, Hyderabad Central Univ',fee:'₹ very low',risk:'green',riskLbl:'CUET / state merit'},
+        {id:'bs_maths',name:'B.Sc Mathematics (CMI / ISI)',deg:'3 yr · Pure maths elite',fit:'Best if numbers and logic are your primary love',anchor:'Chennai Mathematical Institute (CMI), ISI Kolkata',fee:'₹ near-free (govt deemed)',risk:'red',riskLbl:'CMI entrance / ISI entrance (highly competitive)'},
+        {id:'btech_research',name:'B.Tech → Research (GATE → M.Tech/PhD)',deg:'4 yr B.Tech + stipended M.Tech',fit:'Best if you want to enter research through an engineering degree',anchor:'IITs, IISc (via GATE)',risk:'amber',riskLbl:'JEE Main → GATE'},
+      ],
+      backup:[
+        {id:'inspire',name:'B.Sc + INSPIRE Scholarship',deg:'3 yr · Any science college',fit:'Best backup — INSPIRE pays ₹80k/yr for top Class 12 science students at any govt college',anchor:'Any govt / aided science college',fee:'very low',risk:'green',riskLbl:'Class 12 merit + INSPIRE application'},
+      ],
+    },
+  },
+
+  /* ════ CREATING & DESIGNING ════ */
+  create:{
+    ico:'🎨', dream:'Creating & Designing', anchor:'Design · Architecture · Film & Media · Fine Arts',
+    lenses:[{n:'Design',ready:true},{n:'Architecture',ready:true},{n:'Film & Media',ready:false},{n:'Fine Arts',ready:false}],
+    confidence:['I naturally notice how things look and feel','I like making things — drawing, building, filming, writing','I can spend hours on a creative project','I want to shape how people experience the world'],
+    related:[{id:'build',label:'🛠️ Building Things'},{id:'impact',label:'🌍 Making an Impact'},{id:'sci',label:'🔬 Discovering Knowledge'}],
+    unknownHeading:'Beyond graphic designer & architect',
+    clusterLabel:'Roles inside this dream',
+    cluster:[
+      {e:'✏️',n:'Designer',l:'Design'},{e:'🏛️',n:'Architect',l:'Architecture'},{e:'🎬',n:'Filmmaker'},
+      {e:'🖼️',n:'Fine Artist'},{e:'📸',n:'Photographer',l:'Design'}
+    ],
+    unknown:[
+      {ico:'🖥️',n:'UX Designer',label:'Digital Experience Designer',l:'Design',short:'Makes apps easy to use.',one:'Makes apps and websites so intuitive people never notice them — highest demand in design.',why:['Human behaviour','Tech + design','High demand'],pathline:'B.Des NID / IIT-IDC → portfolio → UX roles',gov:'NIC · govt digital portals · defence design bureaus',risk:'amber',cost:'₹ low (NID/IIT)',related:['Design','Computer Science'],path:'bdes'},
+      {ico:'🏺',n:'Craft Designer',label:'Traditional Craft Revivalist',l:'Design',short:'Modernises traditional crafts.',one:'Modernises block prints, handlooms and pottery for today\'s global market.',why:['Heritage','Craftsmanship','Social impact'],pathline:'B.Des Crafts at NID → DC-Handicrafts',gov:'DC-Handicrafts · NIFT · Craft Council of India',risk:'green',cost:'₹ low (govt)',related:['Textile Design','Fine Arts'],path:'bdes'},
+      {ico:'🎬',n:'Documentary Filmmaker',label:'Story-in-Film Creator',short:'Makes real-life stories into films.',one:'Makes documentaries that change how people see a social issue — FTII and SRFTI trained.',why:['Storytelling','Social issues','Craft'],pathline:'Any UG → FTII / SRFTI entrance',gov:'FTII Pune · SRFTI Kolkata · Films Division of India',risk:'amber',cost:'₹ low (govt film institutes)',related:['Film','Communication'],path:'ftii'},
+      {ico:'🎮',n:'Game Designer',label:'Immersive World Builder',l:'Design',short:'Designs video game worlds.',one:'Designs the rules, stories and environments of video games — emerging national schools.',why:['Games','Creativity','Technology'],pathline:'B.Des Interactive Media / B.Tech + portfolio',gov:'CDAC · NID (game design elective) · NIFT',risk:'amber',cost:'₹ moderate',related:['Animation','CS'],path:'bdes'},
+      {ico:'🏗️',n:'Production Designer',label:'Film World Builder',short:'Builds film sets.',one:'Builds the physical world a film lives in — sets, props, art direction for cinema & TV.',why:['Craft','Film industry','Spatial design'],pathline:'B.Des / BFA → NSD / FTII Production Design',gov:'FTII Pune · Films Division · govt film bodies',risk:'amber',cost:'₹ low (govt film institutes)',related:['Film','Architecture'],path:'ftii'},
+    ],
+    paths:{
+      primary:[
+        {id:'bdes',name:'B.Des (NID / IIT-IDC / NIFT)',deg:'4 yr · Product / Comm / UX / Fashion Design',fit:'Best if design is your first love — structured, portfolio-driven, high industry connection',anchor:'NID Ahmedabad / Bengaluru, IIT-IDC, NIFT',fee:'₹30k–1L/yr (govt institutions)',risk:'amber',riskLbl:'NID DAT / UCEED / NIFT entrance',backups:4,stressLabel:"What if NID entrance doesn't work out?",lead:true}
+      ],
+      alt:[
+        {id:'barch',name:'B.Arch',deg:'5 yr · Architect',fit:'Best if you want to design spaces, buildings and cities',anchor:'NIT schools of Architecture, SPA Delhi, CEPT',fee:'₹20k–80k/yr',risk:'amber',riskLbl:'NATA + JEE Paper 2'},
+        {id:'ftii',name:'FTII / SRFTI Film Institutes',deg:'2–3 yr PG Diploma · Filmmaker',fit:'Best if cinema, direction or cinematography is the dream',anchor:'FTII Pune, SRFTI Kolkata',fee:'₹ low (govt institutions)',risk:'amber',riskLbl:'FTII entrance (after 12 or UG)'},
+        {id:'bfa',name:'BFA (Fine Arts)',deg:'4–5 yr · Fine Artist',fit:'Best if you want painting, sculpture and visual art at the highest level',anchor:'MSU Baroda, Delhi College of Art (govt)',fee:'very low',risk:'green',riskLbl:'State merit / portfolio'},
+      ],
+      backup:[
+        {id:'ba_media',name:'BA Mass Communication / Animation',deg:'3 yr · Media & communication',fit:'Best if you want to communicate visually at scale',anchor:'Jamia Millia, IIMC (govt), AJK MCRC',fee:'very low',risk:'green',riskLbl:'CUET / merit'},
+      ],
+    },
+  },
+
+  /* ════ SERVING SOCIETY ════ */
+  serve:{
+    ico:'🏛️', dream:'Serving Society', anchor:'Civil Services · Law · Armed Forces · Public Service',
+    lenses:[{n:'Civil Services',ready:true},{n:'Law & Justice',ready:true},{n:'Armed Forces',ready:false},{n:'Local Governance',ready:false}],
+    confidence:['I want to serve my country or community directly','I can handle high-stakes exams with years of preparation','I believe rules, law and governance matter','I want authority that comes with accountability'],
+    related:[{id:'impact',label:'🌍 Making an Impact'},{id:'help',label:'🩺 Helping People'},{id:'money',label:'🔒 Financial Security'}],
+    unknownHeading:'Beyond IAS & lawyer',
+    clusterLabel:'Roles inside this dream',
+    cluster:[
+      {e:'🏛️',n:'IAS / IPS Officer',l:'Civil Services'},{e:'⚖️',n:'Judge / Magistrate',l:'Law & Justice'},{e:'🎖️',n:'Armed Forces Officer',l:'Civil Services'},
+      {e:'🚓',n:'Police Officer',l:'Civil Services'},{e:'🧑‍⚖️',n:'Lawyer',l:'Law & Justice'}
+    ],
+    unknown:[
+      {ico:'🕊️',n:'Indian Foreign Service Officer',label:'Diplomat',l:'Civil Services',short:'Represents India abroad.',one:'Represents India at embassies, negotiates treaties and manages Indian citizens abroad.',why:['International scope','Authority','Languages'],pathline:'Any UG → UPSC CSE (IFS allocation)',gov:'Ministry of External Affairs',risk:'red',cost:'₹ low (any UG)',related:['International Relations','Policy'],path:'upsc'},
+      {ico:'📜',n:'Revenue Officer',label:'District Revenue Head',l:'Civil Services',short:'Manages land & taxes.',one:'Manages all land records, tax collection and property disputes in a district.',why:['Real authority','Public service','Fieldwork'],pathline:'Any UG → UPSC / TNPSC Group I',gov:'State Revenue depts · District Collectorate',risk:'amber',cost:'₹ low',related:['Administration','Law'],path:'upsc'},
+      {ico:'🏦',n:'IAAS Officer',label:'Government Auditor',l:'Civil Services',short:'Guards public money.',one:'Audits every rupee of government spending — the Comptroller & Auditor General\'s corps.',why:['Finance + accountability','Govt scope','Steady progression'],pathline:'Any UG → UPSC Group A / IAAS cadre',gov:'Comptroller & Auditor General (CAG)',risk:'amber',cost:'₹ low',related:['Finance','Administration'],path:'upsc'},
+      {ico:'🌊',n:'Indian Coast Guard Officer',label:'Coastal Defence Officer',l:'Civil Services',short:'Guards India\'s coastline.',one:'Guards 7,500 km of India\'s coastline against smugglers, pirates and emergencies.',why:['Adventure','Service','Sea life'],pathline:'B.Sc / B.Tech → CGEPT (Coast Guard exam)',gov:'Indian Coast Guard · MHA',risk:'amber',cost:'₹ low',related:['Military','Police'],path:'defence'},
+      {ico:'🧑‍⚖️',n:'Public Prosecutor',label:'Govt Lawyer in Court',l:'Law & Justice',short:'Prosecutes crime for the state.',one:'Argues every serious criminal case for the state — murder, corruption, terror trials.',why:['Law','Public justice','Oratory'],pathline:'BA LLB (5 yr NLU / state law college) → PP exam / UPSC',gov:'State prosecution directorates · CBI · ED',risk:'amber',cost:'₹ low (state law college)',related:['Law','Justice'],path:'llb_serve'},
+    ],
+    paths:{
+      primary:[
+        {id:'upsc',name:'Any UG → UPSC Civil Services',deg:'3 yr UG + 2–3 yr prep · IAS/IPS/IFS',fit:'Best if you want the highest authority in public service — district to national',anchor:'Any central / state university (UG stream does not matter)',fee:'₹ very low (choose cheapest govt UG)',risk:'red',riskLbl:'UPSC CSE (Prelims → Mains → Interview)',backups:5,stressLabel:"What if UPSC doesn't work out?",lead:true}
+      ],
+      alt:[
+        {id:'state_psc',name:'Any UG → State PSC (Group I/II)',deg:'3 yr UG + PSC prep · Deputy Collector / DSP',fit:'Best if you want state-level administration — same authority, closer to home',anchor:'Any govt college for UG',fee:'very low',risk:'amber',riskLbl:'State PSC (TNPSC Group I / KPSC etc.)'},
+        {id:'llb_serve',name:'BA LLB (5 yr) / NLU via CLAT',deg:'5 yr · Advocate → Judge → Prosecutor',fit:'Best if you want to use law directly in courtrooms, not just administration',anchor:'National Law Universities (CLAT) or state law colleges',fee:'₹50k–1L/yr (NLU)',risk:'amber',riskLbl:'CLAT for NLU; state merit for state law college'},
+        {id:'defence',name:'NDA / OTA → Armed Forces',deg:'3 yr NDA training · Officer',fit:'Best if you want a life of service, discipline and national defence',anchor:'IMA Dehradun, INA, AFA — via NDA/CDS',fee:'₹ near-free (govt pays)',risk:'amber',riskLbl:'NDA / CDS written + SSB interview'},
+      ],
+      backup:[
+        {id:'ssc',name:'Any UG → SSC / Railways',deg:'3 yr UG + SSC / RRB prep',fit:'Best secure-job backup — SSC CGL and RRB give government employment to lakhs every year',anchor:'Any govt college for UG',fee:'very low',risk:'green',riskLbl:'SSC CGL / RRB NTPC (after UG)'},
+      ],
+    },
+  },
+
+  /* ════ NOT SURE YET ════ */
+  unsure:{
+    ico:'🧭', dream:'Not Sure Yet', anchor:'Explore · Discover Your Fit · Keep Options Open',
+    lenses:[{n:'Find by Interest',ready:true},{n:'Know Yourself Test',ready:true},{n:'Browse All Courses',ready:true},{n:'Talk to Vazhi',ready:false}],
+    confidence:['I haven\'t found one thing I\'m passionate about yet','I have many interests and can\'t choose','I want to understand myself before committing to a course','I\'m afraid of choosing the wrong path'],
+    related:[{id:'help',label:'🩺 Helping People'},{id:'build',label:'🛠️ Building Things'},{id:'sci',label:'🔬 Discovering Knowledge'}],
+    unknownHeading:'What "not knowing" really means',
+    clusterLabel:'Ways to start discovering your fit',
+    cluster:[
+      {e:'🧩',n:'Take the interest test'},{e:'📖',n:'Browse all streams'},{e:'💬',n:'Talk to seniors'},
+      {e:'📊',n:'Try different subjects'},{e:'🎯',n:'Follow one curiosity'}
+    ],
+    unknown:[
+      {ico:'🌐',n:'Liberal Arts Graduate',label:'Generalist Thinker',short:'Combines many subjects.',one:'Studies history, economics, philosophy and writing together — then specialises at PG level.',why:['Many interests','Writing','Thinking'],pathline:'BA Liberal Arts → MA / Law / Civil Services',gov:'TISS · JNU · Presidency',risk:'green',cost:'₹ low (govt)',related:['Policy','Humanities'],path:'ba_liberal'},
+      {ico:'🧑‍💻',n:'CS Student',label:'The Safe Wide-Open Door',short:'Opens most future paths.',one:'B.Sc / B.Tech CS is the safest default — every sector needs tech skills, you can pivot later.',why:['High flexibility','Jobs everywhere','Growing field'],pathline:'B.Sc CS (state merit) or B.Tech CSE (JEE)',gov:'State govt colleges · NIT · IIIT',risk:'green',cost:'₹ low (govt)',related:['Engineering','Data Science'],path:'bsc_cs'},
+      {ico:'📊',n:'Commerce Student',label:'Business & Numbers Base',short:'Opens finance, law & management.',one:'B.Com or BA Economics keeps doors open for CA, MBA, civil services, banking.',why:['Many options','Numbers','No heavy science required'],pathline:'B.Com / BA Economics (state merit / CUET)',gov:'Govt commerce colleges · DU · state central univ',risk:'green',cost:'₹ very low',related:['Finance','Policy'],path:'bcom_open'},
+      {ico:'🎭',n:'Performing Arts Student',label:'Stage & Screen Pathway',short:'For creative and performing talent.',one:'If you have a performing gift — drama, classical music, dance — there is a govt path via BFA/BPA.',why:['Passion','Skill-based','Govt institutions'],pathline:'BFA / BPA at central/state univ → NSE · Sangeet Natak Akademi',gov:'National School of Drama · Sangeet Natak Akademi · university fine arts depts',risk:'green',cost:'₹ very low',related:['Arts','Culture'],path:'bfa_open'},
+      {ico:'🔍',n:'Anyone, really',label:'The Test Tells You',short:'Your interests, not our labels.',one:'Most students who feel "unsure" have a clear lean when asked the right questions. The Know Yourself test usually surprises people.',why:['Self-awareness','Honesty','Removing pressure'],pathline:'Take the RIASEC interest test on Vazhi → get a personalised career report',gov:'All govt paths remain open — nothing closes with "not sure yet"',risk:'green',cost:'₹ 0',related:['All dreams'],path:'test_path'},
+    ],
+    paths:{
+      primary:[
+        {id:'ba_liberal',name:'BA Liberal Arts / Humanities',deg:'3 yr · Generalist foundation',fit:'Best if you have many interests — study history, economics, politics, writing together first',anchor:'JNU, Hyderabad Central Univ, Presidency College',fee:'₹ very low',risk:'green',riskLbl:'CUET / state merit',backups:5,stressLabel:'What can I do after a BA?',lead:true}
+      ],
+      alt:[
+        {id:'bsc_cs',name:'B.Sc Computer Science',deg:'3 yr · Tech foundation',fit:'Best safe pick if you lean tech — CS skills are in demand in every sector',anchor:'Govt Arts & Science colleges, central univ',fee:'₹ very low',risk:'green',riskLbl:'State merit / CUET'},
+        {id:'bcom_open',name:'B.Com / BA Economics',deg:'3 yr · Commerce foundation',fit:'Best if you lean towards numbers, business or finance without full clarity yet',anchor:'Govt commerce colleges, DU, Loyola',fee:'very low',risk:'green',riskLbl:'CUET / state merit'},
+        {id:'bfa_open',name:'BFA / BPA (Fine / Performing Arts)',deg:'4–5 yr · Creative foundation',fit:'Best if you have a creative or performing talent you want to pursue seriously',anchor:'MSU Baroda, Delhi College of Art, NSE-affiliated schools',fee:'very low',risk:'green',riskLbl:'Portfolio / state merit'},
+      ],
+      backup:[
+        {id:'test_path',name:'Take the Know Yourself Test',deg:'Free · Online · 10 minutes',fit:'Most useful first step — clarifies your fit before you commit to a stream',anchor:'Vazhi Know Yourself (RIASEC interest test)',fee:'₹ 0',risk:'green',riskLbl:'No exam needed'},
+      ],
+    },
+  },
+};
+
+/* ───────── PER-PATH DETAIL ───────── */
+const DETAIL = {
+  help:{
+    mbbs:{
+      institutions:[
+        {nm:'AIIMS, New Delhi (+20 more)',tier:'Central · ~₹1,600/yr',why:['India\'s top medical faculty','National reputation','Heavy research output','Near-free fees']},
+        {nm:'JIPMER, Puducherry',tier:'Central · INI',why:['Very low fees','Strong clinical training','National reputation','Research focus']},
+        {nm:'Madras Medical College',tier:'State govt · Chennai',why:['Century-old reputation','Huge patient exposure','State-low fees']},
+        {nm:'Stanley / Kilpauk Medical College',tier:'State govt · TN',why:['High clinical volume','Affordable','Established alumni']},
+      ],
+      feeContrast:{here:'₹50k–2L total',priv:'₹50L–1.2Cr',note:'Same MBBS degree, same licence to practise. The gap is the guidance.'},
+      ladder:{near:'Govt Medical College in your district',state:'MMC · Stanley · Kilpauk · Coimbatore MC',india:'AIIMS (Delhi + 20) · JIPMER · Maulana Azad · AFMC'},
+      story:{why:'You see a frightened patient walk out fixed, on their own feet — because of a call you made.',day:'Ward rounds at dawn · examine and diagnose · assist or run procedures · update families · night on-call.',fact:'A government doctor in a rural PHC is often the only medical care for 30,000 people — your single posting changes a whole region.',gov:'PHCs, district & govt hospitals, ESIC, Railways, Armed Forces Medical Services, ICMR.',enter:'NEET-UG → MBBS at a govt college → optional NEET-PG for MD/MS.'},
+      scholarships:['Post-Matric (SC/ST/OBC)','TN CM\'s fee waiver','PM Scholarship · CSSS','Govt low-interest loans'],
+      jobs:['Govt PHC / hospital Medical Officer','Specialist via NEET-PG → MD/MS','Public health · ICMR · WHO','Armed Forces Medical Services'],
+      plan:[
+        {when:'Now–Jul',txt:'Register for NEET-UG',done:false},
+        {when:'Now',txt:'Shortlist 5 govt medical colleges in TN',done:false},
+        {when:'Aug',txt:'Apply: Post-Matric Scholarship',done:false},
+        {when:'Ongoing',txt:'Keep Class 12 PCB strong for the board cutoff',done:true},
+        {when:'Backup',txt:'If NEET < 500 → nursing / allied merit routes',done:false},
+      ],
+    },
+    nursing:{
+      institutions:[
+        {nm:'College of Nursing, AIIMS Delhi',tier:'Central · ~free',why:['Top nursing faculty','National brand','Near-free fees']},
+        {nm:'Govt College of Nursing, Chennai',tier:'State govt',why:['State-low fees','Strong govt placement','Merit entry']},
+        {nm:'CMC Vellore (aided)',tier:'Merit-aided',why:['World-class training','Merit-based aid','Strong alumni network']},
+      ],
+      ladder:{near:'Govt College of Nursing in your district',state:'Govt Colleges of Nursing across TN (DME merit)',india:'AIIMS CON · PGIMER · JIPMER · CMC Vellore'},
+      story:{why:'You are the one at the bedside when it matters most — the patient remembers the nurse, not the chart.',day:'Handover round · medications & vitals · assist procedures · catch the small change that flags trouble · educate families.',fact:'India has a standing govt nursing shortage — a B.Sc nurse from a govt college is recruited fast, and the cadre leads to Nurse Practitioner & M.Sc roles.',gov:'Govt hospitals, ESIC, Railways, Military Nursing Service, AIIMS network.',enter:'In TN: state merit counselling (DME) — no single all-or-nothing exam.'},
+      scholarships:['Post-Matric (SC/ST/OBC)','State nursing fee waiver','Central merit scholarships'],
+      jobs:['Staff Nurse (govt, secure)','→ M.Sc Nursing / Nurse Practitioner','Public health & community nursing','Military Nursing Service'],
+      plan:[
+        {when:'Now',txt:'Confirm TN DME nursing merit-counselling dates',done:false},
+        {when:'Now',txt:'Shortlist 5 govt nursing colleges',done:false},
+        {when:'Aug',txt:'Apply: Post-Matric Scholarship',done:false},
+        {when:'Ongoing',txt:'Keep PCB ≥ 75% for merit rank',done:false},
+      ],
+    },
+  },
+  nature:{
+    agri:{
+      institutions:[
+        {nm:'Tamil Nadu Agricultural University (TNAU)',tier:'State govt · Coimbatore',why:['Among India\'s top agri universities','Strong research & extension','State-low fees','Excellent placements']},
+        {nm:'IARI (Pusa), New Delhi',tier:'ICAR · deemed · national',why:['ICAR flagship','National research brand','Stipended PG']},
+        {nm:'State agricultural colleges',tier:'State · TNAU-affiliated'},
+        {nm:'ICAR research institutes',tier:'Central · govt'},
+      ],
+      ladder:{near:'State agricultural college in your zone',state:'TNAU Coimbatore + constituent colleges across TN',india:'IARI Pusa · GB Pant · PAU Ludhiana · the ICAR network'},
+      story:{why:"You make a farmer's land yield more with less water — and a whole village eats better because of it.",day:'Field trials at sunrise · soil & crop sampling · lab analysis · advise farmers in the village · publish what works.',fact:'India feeds 1.4 billion people on agricultural science — the crop varieties TNAU breeds are grown across the entire state.',gov:'ICAR, TNAU, state agriculture departments, agri banks (NABARD), FCI, seed & fertiliser PSUs.',enter:'ICAR UG exam / TN agri counselling → B.Sc Agriculture → optional ICAR JRF for M.Sc/PhD.'},
+      scholarships:['Post-Matric (SC/ST/OBC)','ICAR National Talent Scholarship','State agriculture scholarships'],
+      jobs:['Agricultural Officer (state govt)','ICAR Scientist via ARS exam','Agri banking · NABARD · FCI','Agripreneur & agri-startups'],
+      plan:[
+        {when:'Now',txt:'Check ICAR UG / TN agri counselling dates',done:false},
+        {when:'Now',txt:'Shortlist TNAU + 3 state agri colleges',done:false},
+        {when:'Aug',txt:'Apply: ICAR National Talent Scholarship',done:false},
+        {when:'Ongoing',txt:'Strengthen PCB / PCMB for the entrance',done:false},
+        {when:'Backup',txt:'If no agri seat → Forestry / Environmental Science',done:false},
+      ],
+    },
+    geology:{
+      institutions:[
+        {nm:'University of Madras — Geology',tier:'State govt',why:['Established geology department','Affordable','Strong state reputation']},
+        {nm:'IITs (M.Sc via IIT-JAM)',tier:'Central · INI',why:['Top research','National brand','Stipended M.Sc']},
+        {nm:'IIT (ISM) Dhanbad',tier:'Central · earth sciences',why:['India\'s premier earth-science school','Strong industry links']},
+        {nm:'Govt Arts & Science colleges (Geology)',tier:'State'},
+      ],
+      ladder:{near:'Govt Arts College with a Geology department',state:'Univ of Madras · Bharathidasan · Anna University',india:'IIT (ISM) Dhanbad · IITs (M.Sc) · Pondicherry Univ · NIO Goa'},
+      story:{why:'You find groundwater for a parched district — or read a fault line before it slips.',day:'Map rock formations in the field · collect rock & water samples · GIS + lab analysis · interpret survey data for the district.',fact:'The Geological Survey of India (founded 1851) is one of the oldest scientific bodies on earth — and still recruits geologists through UPSC every year.',gov:'Geological Survey of India, ONGC, Central Ground Water Board, Coal India, state mines & geology departments.',enter:'B.Sc Geology → M.Sc (IIT-JAM) → UPSC Geologist exam / GSI recruitment.'},
+      scholarships:['Post-Matric (SC/ST/OBC)','INSPIRE Scholarship (science)','Central merit scholarships'],
+      jobs:['Geologist, GSI (UPSC-recruited)','ONGC · Coal India · CGWB','Earth-science research (M.Sc/PhD)','Mining & groundwater PSUs'],
+      plan:[
+        {when:'Now',txt:'Pick a B.Sc Geology / Earth Science college',done:false},
+        {when:'Yr 2–3',txt:'Prepare for IIT-JAM (M.Sc entry)',done:false},
+        {when:'Now',txt:'Apply: INSPIRE science scholarship',done:false},
+        {when:'Later',txt:'Target UPSC Geologist / GSI recruitment',done:false},
+      ],
+    },
+  },
+
+  /* ── BUILD detail ── */
+  build:{
+    btech:{
+      institutions:[
+        {nm:'NITs (31 across India)',tier:'Central · ₹75k–1.5L/yr',why:['Top engineering faculty','National brand','Strong placements','Affordable govt fees']},
+        {nm:'IIITs (national network)',tier:'Central · ₹75k–1.5L/yr',why:['Specialised CS/ECE focus','Govt funding','Industry partnerships']},
+        {nm:'Anna University (TN state)',tier:'State · ₹20k–50k/yr',why:['Largest engineering univ in Asia','600+ affiliated colleges','TNEA state merit']},
+        {nm:'State govt engineering colleges (all states)',tier:'State · very low fees',why:['Affordable','Local careers','State PSC eligibility']},
+      ],
+      feeContrast:{here:'₹3–6L total (4 yr at NIT)',priv:'₹8–25L total',note:'Same B.Tech degree, same job market. Govt college keeps debt near-zero.'},
+      ladder:{near:'State govt engineering college via state CET',state:'Anna Univ campus / top state colleges',india:'NITs / IIITs via JEE Main → IITs via JEE Advanced'},
+      story:{why:'A bridge you designed stands for 50 years. A chip you laid out runs in millions of phones. Building is the longest-lasting kind of impact.',day:'Morning design reviews · simulation & testing · drawing revisions · site visits · troubleshoot what broke overnight.',fact:'India\'s NIT system was one of the world\'s largest planned engineering expansions — 31 NITs built to give merit-based access across every state.',gov:'ISRO, DRDO, BHEL, NTPC, SAIL, state PWDs, railways, defence research labs, CPWD.',enter:'JEE Main (two sessions, Jan & Apr) → NIT counselling (JoSAA) · or state CET → state govt colleges.'},
+      scholarships:['Post-Matric (SC/ST/OBC)','PM Scholarship (PMSS)','NIT merit scholarships','State govt engineering scholarships'],
+      jobs:['Govt PSU Engineer (GATE → BHEL / NTPC / SAIL)','ISRO / DRDO scientist','State PWD / CPWD','Railways (RRB JE/SSE)'],
+      plan:[
+        {when:'Now',txt:'Register for JEE Main (both Jan & Apr sessions)',done:false},
+        {when:'Now',txt:'Identify state CET as backup — check syllabus differences',done:false},
+        {when:'Mar',txt:'JEE Main results → compare against last year\'s NIT cutoffs',done:false},
+        {when:'Jun',txt:'JoSAA counselling — rank-wise shortlist 6 NITs / IIITs',done:false},
+        {when:'Backup',txt:'State CET rank → state govt college via TNEA / KCET etc.',done:false},
+      ],
+    },
+    barch:{
+      institutions:[
+        {nm:'School of Planning & Architecture, Delhi',tier:'Central · govt',why:['Premier architecture school','Near-free','National reputation']},
+        {nm:'NIT Schools of Architecture',tier:'Central · ₹1L/yr',why:['Engineering-linked architecture','JEE Paper 2 route','National brand']},
+        {nm:'CEPT University, Ahmedabad',tier:'Govt-aided',why:['India\'s top architecture research','Design-first culture','Affordable']},
+        {nm:'State govt architecture schools',tier:'State · very low fees',why:['NATA-based entry','Affordable','Local practice']},
+      ],
+      ladder:{near:'State govt architecture school (NATA)',state:'Top NATA colleges in TN / state',india:'SPA Delhi · NIT Hamirpur · CEPT · NIT Trichy Arch'},
+      story:{why:'You walk into a space you designed and see how it changes people — how light falls, how movement flows, how a community forms around it.',day:'Site visit at dawn · drawing or model-making · client presentation · revise + revise · final review.',fact:'An architect\'s stamp is required for every commercial building in India — the profession is legally regulated, which means steady lifelong demand.',gov:'CPWD, PWD, housing boards, Smart Cities, heritage conservation (ASI), municipal corporations, HUDCO.',enter:'NATA (National Aptitude Test in Architecture) + Class 12 Maths → B.Arch admission.'},
+      scholarships:['Post-Matric (SC/ST/OBC)','State architecture scholarships','HUDCO design awards'],
+      jobs:['CPWD / PWD Architect','Municipal Corporation (urban design)','Heritage conservation (ASI)','Housing board / HUDCO'],
+      plan:[
+        {when:'Now',txt:'Register for NATA — held 3 times a year',done:false},
+        {when:'Now',txt:'Practice freehand drawing & spatial reasoning daily',done:false},
+        {when:'Class 12',txt:'Ensure Maths is one of your subjects (mandatory)',done:false},
+        {when:'Jun',txt:'Apply to SPA Delhi / NIT architecture / CEPT',done:false},
+      ],
+    },
+  },
+
+  /* ── MONEY detail ── */
+  money:{
+    ca:{
+      institutions:[
+        {nm:'ICAI (Institute of Chartered Accountants of India)',tier:'National exam-based · no college required',why:['Most respected finance credential in India','No college fees — just exam fees','Govt, PSU and private sector doors open','Articleship = paid training']},
+        {nm:'B.Com at central / state universities',tier:'Govt · very low fees',why:['Strong base for CA exams','Low fees','Can do B.Com + CA Foundation simultaneously']},
+      ],
+      feeContrast:{here:'₹30–50k total (all CA exam fees)',priv:'₹5–20L (MBA Finance at private college)',note:'CA is India\'s most cost-effective high-value credential. No college fees — articleship pays you while you train.'},
+      ladder:{near:'B.Com at state govt college + CA Foundation simultaneously',state:'CA Inter while doing articleship',india:'CA Final → Big 4 audit / Govt PSU / RBI / Finance Ministry'},
+      story:{why:'A CA\'s signature is required on every company\'s annual report in India — you are the guardian of financial truth.',day:'Audit files and client accounts · prepare tax returns · find where money leaks · advise boards on risk and compliance.',fact:'ICAI has fewer than 400,000 qualified CAs for 1.4 billion people — the shortage means a CA\'s skills are always in demand.',gov:'CAG office, Income Tax dept, RBI, finance ministry divisions, SEBI, defence accounts.',enter:'CA Foundation after Class 12 → CA Inter (study + 2.5 yr articleship) → CA Final → qualify.'},
+      scholarships:['ICAI merit scholarships','Post-Matric (SC/ST/OBC)','State merit scholarships (alongside B.Com)'],
+      jobs:['Chartered Accountant (govt PSU audit)','Income Tax Officer (via UPSC IFOS)','RBI Grade B (Finance)','Finance roles across all govt bodies'],
+      plan:[
+        {when:'Now',txt:'Register for CA Foundation (can do alongside Class 12)',done:false},
+        {when:'After 12',txt:'Enrol in B.Com at govt college simultaneously',done:false},
+        {when:'Year 1',txt:'Clear CA Foundation — 4 papers',done:false},
+        {when:'Year 1–3',txt:'CA Inter + start 2.5 yr articleship with a CA firm',done:false},
+        {when:'Year 4–5',txt:'CA Final — clear both groups',done:false},
+      ],
+    },
+    banking:{
+      institutions:[
+        {nm:'B.Com / BA Economics at central / state universities',tier:'Govt · very low fees',why:['Strong analytical base','Low fees','Flexibility to target multiple exams']},
+        {nm:'Reserve Bank of India (RBI)',tier:'Central · Grade B exam',why:['Highest prestige in banking','Near-IAS-level career','Excellent pay']},
+        {nm:'IBPS (Institute of Banking Personnel Selection)',tier:'Central exam body',why:['Recruits for 12+ public sector banks','Lakhs of vacancies annually','Stable govt career']},
+      ],
+      ladder:{near:'B.Com at state govt college → IBPS Clerk / PO',state:'Strong IBPS PO score → PSB branch manager',india:'RBI Grade B / SEBI Grade A → policy-level banking'},
+      story:{why:'A bank manager in a rural branch decides whether a farmer gets a crop loan — you are the financial backbone of India\'s real economy.',day:'Customer interactions · loan appraisals · check compliance · monitor branch targets · brief staff.',fact:'India\'s 12 public sector banks serve 500 million+ account holders — government banking is the spine of financial inclusion.',gov:'RBI, SBI, Bank of Baroda, Indian Bank, NABARD, SIDBI, EXIM Bank, NHB — all public sector.',enter:'B.Com / BA Eco → IBPS PO exam → training → posting. RBI Grade B is tougher, but higher-level.'},
+      scholarships:['Post-Matric (SC/ST/OBC)','Bank merit scholarships after joining','State merit scholarships'],
+      jobs:['Probationary Officer → Branch Manager (public sector bank)','RBI Grade B Officer','NABARD Development Manager','SEBI / IRDAI officer exam'],
+      plan:[
+        {when:'Now',txt:'Pick B.Com / BA Economics at govt college',done:false},
+        {when:'Year 1',txt:'Read economy & current affairs daily — IBPS needs this',done:false},
+        {when:'Year 3',txt:'Apply IBPS PO / RBI Grade B in final year',done:false},
+        {when:'Backup',txt:'IBPS Clerk → work in a bank while preparing for PO',done:false},
+      ],
+    },
+  },
+
+  /* ── IMPACT detail ── */
+  impact:{
+    ba_policy:{
+      institutions:[
+        {nm:'Jawaharlal Nehru University (JNU)',tier:'Central · ₹ near-free',why:['India\'s premier social-science university','Near-zero fees','PolSci, economics, international relations','UPSC feeder']},
+        {nm:'University of Hyderabad (HCU)',tier:'Central · ₹ very low',why:['Strong social sciences','Research culture','Merit-based']},
+        {nm:'TISS Mumbai',tier:'Central · govt-funded',why:['Development, social work & policy combined','Field placements','Strong NGO & govt alumni']},
+        {nm:'Presidency / DU colleges',tier:'State / central · very low',why:['Historic BA departments','Affordable','UPSC prep culture']},
+      ],
+      ladder:{near:'State govt arts college — BA History / PolSci / Sociology',state:'Presidency / Loyola / DU colleges',india:'JNU · HCU · TISS → MA → UPSC / state PSC / development sector'},
+      story:{why:'An IAS officer can redirect a state budget, change how land is allocated, or build a district hospital — the pen is real power.',day:'Review files and proposals · field visits · meet district officials · resolve disputes · brief the minister.',fact:'Every scheme India has — mid-day meal, MGNREGA, PM Awas Yojana — is run by civil servants who joined exactly this way.',gov:'District Collectorate, state government departments, union ministries, development agencies, international bodies.',enter:'BA (any stream) → UPSC CSE (Prelims + Mains + Interview) → IAS/IPS/IFS/IRS allocation.'},
+      scholarships:['Post-Matric (SC/ST/OBC)','JNU merit-cum-means','State govt arts scholarships','PM Scholarship (PMSS)'],
+      jobs:['IAS/IPS/IFS Officer (UPSC)','State PSC (Deputy Collector, DSP)','Social development organisations','Think tanks (Niti Aayog → consultant)'],
+      plan:[
+        {when:'Now',txt:'Choose BA with History / PolSci / Economics',done:false},
+        {when:'Now',txt:'Shortlist: JNU, HCU, Presidency, DU — apply via CUET',done:false},
+        {when:'Year 2',txt:'Start UPSC foundation reading — NCERTs + Hindu newspaper',done:false},
+        {when:'Year 3',txt:'Attempt UPSC Prelims in final year',done:false},
+        {when:'Backup',txt:'State PSC Group I — same UG, lower barrier, state authority',done:false},
+      ],
+    },
+    llb:{
+      institutions:[
+        {nm:'National Law Universities (NLUs) via CLAT',tier:'Central / state · ₹50k–1L/yr',why:['Premier law schools','Best faculty','Judiciary and bar placements','NLSIU Bengaluru ranked #1']},
+        {nm:'State govt law colleges',tier:'State · very low fees',why:['Affordable','LLB 3 yr after UG or 5 yr integrated','Bar Council-approved']},
+        {nm:'Faculty of Law — DU / BHU / Aligarh',tier:'Central Univ · very low',why:['Established law departments','Low fees','Delhi / Varanasi legal ecosystem']},
+      ],
+      ladder:{near:'State govt law college (5 yr BA LLB)',state:'Top state NLU or central univ law faculty',india:'NLU via CLAT → judiciary / bar / public interest law'},
+      story:{why:'A legal aid lawyer walked into a session court for a daily-wage worker who would have gone to jail for a crime he didn\'t commit — and walked him out free.',day:'Research precedents · draft petitions · appear in court · counsel clients · argue before judges.',fact:'India has over 40 million pending cases — every new lawyer who enters public legal service directly reduces that backlog.',gov:'NALSA, state legal aid, CBI prosecution, Enforcement Directorate, district prosecution, judiciary (via state judiciary exams).',enter:'CLAT (for NLUs) or state merit → 5 yr BA LLB → enrol Bar Council → practice or state judiciary exam.'},
+      scholarships:['Post-Matric (SC/ST/OBC)','NLU merit scholarships','State law scholarships','NALSA legal scholarship awards'],
+      jobs:['Public Prosecutor (state)','Legal Aid Lawyer (NALSA)','Judicial Service (District Judge via state exam)','UPSC → IPS/IRS (law background valued)'],
+      plan:[
+        {when:'Now',txt:'Register for CLAT — Nov–Dec exam',done:false},
+        {when:'Now',txt:'Identify state NLU and state law college as backups',done:false},
+        {when:'Year 3',txt:'Apply for internships at district courts & legal aid clinics',done:false},
+        {when:'Year 5',txt:'Bar Council enrolment + state judiciary prelims',done:false},
+      ],
+    },
+  },
+
+  /* ── SCI detail ── */
+  sci:{
+    bs_iiser:{
+      institutions:[
+        {nm:'IISERs (7 campuses: Pune, Kolkata, Mohali, Bhopal, Thiruvananthapuram, Tirupati, Berhampur)',tier:'Central · near-free + ₹12,000/month stipend',why:['India\'s best integrated science education','Stipend from Day 1','Research-first culture','INSPIRE fellows prefer this']},
+        {nm:'NISER, Bhubaneswar',tier:'Central (under DAE) · stipended',why:['Atomic Energy Commission-backed','Near-free + stipend','Strong physics & chemistry']},
+        {nm:'IISc, Bangalore — B.S. Research',tier:'Central · INI · stipended',why:['India\'s #1 research institution','Direct research immersion','World-class faculty']},
+      ],
+      feeContrast:{here:'₹ near-free + ₹12k/month stipend (BS-MS at IISER)',priv:'₹3–8L/yr at private science colleges',note:'IISER pays YOU to study science. No debt, no compromise.'},
+      ladder:{near:'B.Sc at central / state university',state:'IISER / NISER → BS-MS (5 yr)',india:'IISc B.S. → PhD fellowship → international research'},
+      story:{why:'You ask the one question no one has asked — and the answer changes a field. Science is the only career where being right for the first time ever is the job.',day:'Design and run experiments · analyse data · read papers · group discussion → revise hypothesis · write it up.',fact:'India\'s INSPIRE scholarship was created so that the top 1% of Class 12 PCB/PCM students would not leave science for engineering or medicine under peer pressure.',gov:'CSIR labs (40+), ISRO, BARC, ICMR, DST, DAE, DBT research labs, DRDO, IITs (faculty pipeline).',enter:'IISER Aptitude Test (IAT) or JEE Advanced score or KVPY → BS-MS (5 yr) with stipend.'},
+      scholarships:['INSPIRE Scholarship (DST — ₹80k/yr for top science students)','KVPY fellowship','IISER institutional stipend','DBT / CSIR-JRF for PhD'],
+      jobs:['Scientist (CSIR / ISRO / BARC / ICMR)','Research Fellow → PhD → faculty','Data scientist (quant research)','DRDO scientist entry via GATE/RAC'],
+      plan:[
+        {when:'Now',txt:'Register for IISER Aptitude Test (IAT) — check dates',done:false},
+        {when:'Now',txt:'Apply for INSPIRE scholarship (top 1% Class 12 PCM/PCB)',done:false},
+        {when:'Now',txt:'Backup: B.Sc at central universities via CUET',done:false},
+        {when:'Year 1',txt:'Shortlist CSIR labs for summer research internship',done:false},
+        {when:'Year 5',txt:'Apply for CSIR-JRF / DBT-JRF for funded PhD',done:false},
+      ],
+    },
+    bsc_central:{
+      institutions:[
+        {nm:'University of Madras / Bharathidasan (TN)',tier:'State · very low fees',why:['Well-resourced science departments','Low fees','Good PG placement record']},
+        {nm:'Loyola College, Chennai (aided)',tier:'Govt-aided · very low',why:['Autonomous · strong science labs','NIRF-ranked','Affordable']},
+        {nm:'Presidency University, Kolkata',tier:'State govt',why:['Historic science faculty','CSIR/DST links','Low fees']},
+        {nm:'Central Universities (via CUET)',tier:'Central · low fees',why:['National-level quality','Residential','Research exposure']},
+      ],
+      ladder:{near:'Govt Arts & Science college (B.Sc Physics/Chemistry/Maths)',state:'Univ of Madras · Loyola · Bharathidasan — autonomous colleges',india:'Central Univ → M.Sc via CUET → IITs (JAM) → IISER → PhD'},
+      story:{why:'Almost every IISER / IIT-JAM / CSIR topper spent their first 3 years in an ordinary B.Sc college — discipline and reading habit matter more than the building.',day:'Attend lectures · lab practicals · problem sheets · study independently · aim for first-class.',fact:'IIT-JAM selects B.Sc students from across India — a top B.Sc + JAM rank gets you an IIT M.Sc identical to the JEE route.',gov:'All CSIR / ISRO / DRDO / BARC / ICMR research doors open after M.Sc / PhD.',enter:'Class 12 PCM/PCB → B.Sc at state/central college → aim for IIT-JAM for M.Sc.'},
+      scholarships:['INSPIRE Scholarship (DST — top 1% Class 12)','Post-Matric (SC/ST/OBC)','State science scholarships','College merit scholarships'],
+      jobs:['IIT-JAM → M.Sc → CSIR / ISRO scientist','GATE → M.Tech / PhD at IIT','UPSC Geo/Chem/Physics specialist exam','CSIR-JRF for funded PhD'],
+      plan:[
+        {when:'Now',txt:'Apply INSPIRE scholarship — top 1% Board exam eligible',done:false},
+        {when:'Now',txt:'Shortlist autonomous B.Sc science colleges via CUET / state merit',done:false},
+        {when:'Year 2',txt:'Start IIT-JAM preparation — 1 year ahead',done:false},
+        {when:'Year 3',txt:'Attempt IIT-JAM → M.Sc at IIT or NIT',done:false},
+      ],
+    },
+  },
+
+  /* ── CREATE detail ── */
+  create:{
+    bdes:{
+      institutions:[
+        {nm:'NID Ahmedabad (+ 8 campuses)',tier:'Central · ₹50k–80k/yr',why:['India\'s premier design school','Govt-funded','Industry placement','Design Council links']},
+        {nm:'IIT IDC (Industrial Design Centre), Bombay',tier:'Central · IIT · govt',why:['Engineering-design integration','Research-grade design','Competitive but merit-based']},
+        {nm:'NIFT (15 campuses across India)',tier:'Central · ₹50k–1.2L/yr',why:['National Institute of Fashion Technology','Govt-funded','Fashion + textile design','Pan-India network']},
+        {nm:'State design institutes (FDDI, IIAD)',tier:'State / govt-aided',why:['Lower fees','Regional design practice','Govt-backed']},
+      ],
+      feeContrast:{here:'₹2–5L total (4 yr NID / NIFT)',priv:'₹10–25L total (private design schools)',note:'NID and NIFT are government institutions. Same creative environment at a fraction of the cost.'},
+      ladder:{near:'State design / art college',state:'NIFT campus in your region',india:'NID Ahmedabad · IIT IDC · NIFT Delhi'},
+      story:{why:'You walk into a hospital and the signage makes patients less scared — because someone designed it. Design is the invisible layer of care in every public space.',day:'Sketch briefs · build prototypes · user research · present to jury · revise based on critique · final portfolio.',fact:'NID graduates designed the Aadhaar card interface, the IRCTC booking flow, and India\'s national election symbols — government hires designers at scale.',gov:'NIC (design), CDAC, Films Division, PSU branding, DRDO product design, Smart Cities, railways.',enter:'NID DAT (Design Aptitude Test) / UCEED (for IIT IDC) / NIFT entrance → B.Des.'},
+      scholarships:['Post-Matric (SC/ST/OBC)','NIFT merit scholarships','NID institutional support','State design scholarships'],
+      jobs:['UX Designer (govt digital services — NIC, DigiLocker)','NIFT → textile/fashion design PSU','NID → design research, govt branding','Films Division / CBFC media design'],
+      plan:[
+        {when:'Now',txt:'Register for UCEED (Jan) and NID DAT (Dec)',done:false},
+        {when:'Now',txt:'Build a sketchbook — document visual observations daily',done:false},
+        {when:'Class 12',txt:'No mandatory stream — PCM / Arts / Commerce all eligible for NID/UCEED',done:false},
+        {when:'Jun',txt:'NIFT entrance as parallel backup — schedule is separate',done:false},
+      ],
+    },
+    ftii:{
+      institutions:[
+        {nm:'Film and Television Institute of India (FTII), Pune',tier:'Central · ₹ low (govt)',why:['India\'s premier film school since 1960','Govt-funded','Satyajit Ray alumni network','Competitive but merit-only']},
+        {nm:'Satyajit Ray Film & Television Institute (SRFTI), Kolkata',tier:'Central · ₹ low (govt)',why:['East India\'s premier film school','Govt-funded','Documentary & cinema tradition']},
+        {nm:'AJK MCRC, Jamia Millia Islamia',tier:'Central Univ · low fees',why:['Mass comm + journalism + film','Central university','Affordable']},
+      ],
+      ladder:{near:'BA Mass Comm at govt college',state:'AJK MCRC Jamia / state film institute',india:'FTII Pune · SRFTI Kolkata'},
+      story:{why:'A 20-minute documentary you made changed how a village thought about a water dispute — film is the most democratic form of truth-telling.',day:'Script sessions · location recce · shoot day (12 hours) · editing suite · festival submission.',fact:'FTII is funded by the Information & Broadcasting Ministry — India\'s government has run a film school since 1960 because cinema shapes culture.',gov:'Films Division of India, NFDC (National Film Development Corporation), Doordarshan, CBFC, state film development bodies.',enter:'BA or any UG degree → FTII/SRFTI entrance (written test + interview) → 2–3 yr PG Diploma.'},
+      scholarships:['Post-Matric (SC/ST/OBC)','FTII institutional fee waivers','NFDC fellowship','National scholarship for film studies'],
+      jobs:['Documentary filmmaker (Films Division · Doordarshan)','Cinematographer / editor (public sector)','NFDC project officer','State information department media production'],
+      plan:[
+        {when:'Now',txt:'Watch classic Indian cinema — Ray, Shyam Benegal, Ritwik Ghatak',done:false},
+        {when:'After 12',txt:'Any UG degree — film is open to all streams',done:false},
+        {when:'Year 2–3',txt:'Make short films with a phone + free software — build a portfolio',done:false},
+        {when:'Year 3',txt:'Register for FTII / SRFTI entrance test',done:false},
+      ],
+    },
+  },
+
+  /* ── SERVE detail ── */
+  serve:{
+    upsc:{
+      institutions:[
+        {nm:'Any UG degree college (UG stream does NOT matter)',tier:'Govt / aided — choose lowest fees',why:['UPSC does not consider which college','Save money for prep','More time for preparation']},
+        {nm:'JNU / Hyderabad Central / Presidency',tier:'Central / state · low fees',why:['Social science background strengthens Mains GS','Optional subject alignment','Affordable + library access']},
+        {nm:'Delhi University colleges',tier:'Central · low fees',why:['UPSC coaching hub nearby','Study circles','Motivation ecosystem']},
+      ],
+      feeContrast:{here:'₹ near-zero (choose cheapest govt UG + self-study)',priv:'₹5–15L (private coaching + private UG)',note:'Rank toppers consistently come from small-town govt colleges. The exam tests what you read, not where you studied.'},
+      ladder:{near:'Local govt college (cheapest UG) + self-study',state:'State PSC Group I (Deputy Collector / DSP) if UPSC doesn\'t work',india:'UPSC CSE → IAS / IPS / IFS / IRS allocation (top ranks choose first)'},
+      story:{why:'An IAS officer signed a single order that gave 10,000 tribals their land titles back. No other career gives one person that kind of reach.',day:'Read files · field visit · chair a district-level meeting · handle emergency · brief the principal secretary.',fact:'IAS officers join at 26–29 on average and retire at 60 — a 30-year arc where they run departments, states and eventually shape national policy.',gov:'District Collectorate, state secretariat, Central Ministries, PSU boards, international postings (MEA), constitutional bodies (CAG, EC, UPSC).',enter:'Any UG degree → UPSC Prelims (Jun) → Mains (Sep) → Interview (Feb–Mar) → allotment.'},
+      scholarships:['Post-Matric (SC/ST/OBC)','State govt UPSC coaching schemes','PM Scholarship','State-run IAS Bano coaching schemes'],
+      jobs:['IAS (Indian Administrative Service)','IPS (Indian Police Service)','IFS (Indian Foreign Service)','IRS, IFoS, IRTS, IRPS and 20+ Group A services'],
+      plan:[
+        {when:'Now',txt:'Choose cheapest govt UG — stream matters less than time for prep',done:false},
+        {when:'Year 1',txt:'Start NCERT foundation + newspaper reading habit',done:false},
+        {when:'Year 2',txt:'Choose UPSC optional subject — align with your UG if possible',done:false},
+        {when:'Year 3',txt:'Attempt UPSC Prelims in final year of UG',done:false},
+        {when:'Backup',txt:'State PSC Group I — same prep, state-level authority',done:false},
+      ],
+    },
+    llb_serve:{
+      institutions:[
+        {nm:'National Law Universities (NLUs) via CLAT',tier:'Central / state · ₹50k–1L/yr',why:['Premier law schools','Judiciary placement','Best faculty','CLAT merit-based']},
+        {nm:'Government Law Colleges (state)',tier:'State · very low fees',why:['Affordable LLB 3-yr or 5-yr','Bar Council approved','Parallel practice possible']},
+        {nm:'BHU / DU Faculty of Law / Aligarh',tier:'Central Univ · very low',why:['Historic law departments','Affordable','Proximity to High Courts']},
+      ],
+      ladder:{near:'State govt law college (5 yr BA LLB or 3 yr LLB)',state:'NLU in your state via CLAT / state merit',india:'NLSIU Bengaluru · NLU Delhi · NALSAR · NUJS → judiciary / public law'},
+      story:{why:'A judge reads 200 pages by 9 AM, hears 50 cases by 5 PM, and writes a judgement that will be cited for decades. Law is the architecture of a just society.',day:'Read case briefs · appear in court · draft petitions · research precedents · negotiate settlements.',fact:'India has only 21 judges per million people — the global average is 50. Every lawyer who enters the judiciary shrinks the 40-million-case backlog.',gov:'High Courts, Supreme Court, District Courts (via state judiciary exam), NALSA, CBI Prosecution, ED, state prosecution directorates.',enter:'CLAT → NLU (5 yr BA LLB) OR any UG → LLB (3 yr) → Bar Council → state judiciary exam.'},
+      scholarships:['Post-Matric (SC/ST/OBC)','NLU merit scholarships','Bar Council trust scholarships','State legal education scholarship'],
+      jobs:['District Judge / Judicial Magistrate (via state exam)','Public Prosecutor (state / CBI)','NALSA Legal Aid Advocate','UPSC → IPS / IRS (law optional preferred)'],
+      plan:[
+        {when:'Now',txt:'Register for CLAT — Nov exam',done:false},
+        {when:'Now',txt:'Identify state law college as backup — same 5 yr path',done:false},
+        {when:'Year 3',txt:'Apply for internships at district courts & High Court',done:false},
+        {when:'Year 5',txt:'Enrol Bar Council → prepare state judiciary exam',done:false},
+        {when:'Backup',txt:'Any UG + 3 yr LLB route if not clearing CLAT',done:false},
+      ],
+    },
+  },
+
+  /* ── UNSURE detail ── */
+  unsure:{
+    ba_liberal:{
+      institutions:[
+        {nm:'JNU (Arts & Social Sciences)',tier:'Central · near-free',why:['Multiple subjects in one programme','Lowest fees in India','MA pipeline strong','UPSC ecosystem']},
+        {nm:'Presidency University, Kolkata / Chennai',tier:'State govt',why:['Historic BA departments','Affordable','Peer culture']},
+        {nm:'Loyola College, Chennai (aided)',tier:'Govt-aided · very low',why:['Autonomous · interdisciplinary BA','Strong alumni','Affordable']},
+        {nm:'Central Universities (via CUET)',tier:'Central · low fees',why:['Wide subject combinations','Research exposure','National peers']},
+      ],
+      ladder:{near:'Govt arts college → BA in a subject you enjoy most',state:'Presidency / Loyola / state central univ',india:'JNU / Hyderabad Central / DU → MA → civil services / research / law'},
+      story:{why:"Not knowing is honest. Every IAS topper, lawyer and scientist had a moment where they weren't sure. A BA buys you three years of legitimate exploration.",day:'Read, discuss, write essays · experiment with different subjects · talk to seniors · slowly zero in.',fact:'More than half of UPSC IAS toppers have a BA — liberal arts is not a weak path, it is the broadest path.',gov:'All govt doors remain open after a BA — civil services, PSC, judiciary, development, teaching, research.',enter:'CUET or state merit → BA at govt / central university → 3 years to find your lane.'},
+      scholarships:['Post-Matric (SC/ST/OBC)','State arts scholarships','Central merit-cum-means','JNU hostel + subsidised fees for all'],
+      jobs:['Civil Services (UPSC / PSC)','Teaching / research (MA → NET → lecturer)','Law (3 yr LLB after BA)','NGO / development sector'],
+      plan:[
+        {when:'Now',txt:'Take the Know Yourself test on Vazhi — 10 minutes, often clarifying',done:false},
+        {when:'Now',txt:'Apply via CUET to central university BA programmes',done:false},
+        {when:'Year 1',txt:'Try at least 2 subjects you haven\'t studied before',done:false},
+        {when:'Year 2',txt:'Talk to 3 seniors in different fields — their stories beat any advice',done:false},
+        {when:'Year 3',txt:'By now you\'ll know — law, civil services, research or specialise further',done:false},
+      ],
+    },
+    bsc_cs:{
+      institutions:[
+        {nm:'State govt arts & science colleges (B.Sc CS/CA)',tier:'State · ₹5k–20k/yr',why:['Very affordable','Strong local job market','Flexible to specialise later']},
+        {nm:'Central Universities (CUET)',tier:'Central · low fees',why:['Higher quality labs','National peers','M.Sc route opens']},
+        {nm:'NIT/IIIT B.Tech CSE (via JEE)',tier:'Central · ₹75k–1.5L/yr',why:['Premium if JEE rank is strong','National brand','Best job placements']},
+      ],
+      ladder:{near:'Govt Arts & Science college — B.Sc CS',state:'Central Univ or state engineering college',india:'NIT / IIIT (JEE) → or M.Sc CS at IIT via JAM from B.Sc'},
+      story:{why:"If you don't know what you want but want to keep doors open, CS is the one subject that has a job in literally every industry on earth.",day:'Code · debug · build small projects · learn a new language or framework · solve algorithmic problems.',fact:"India's Digital India stack — Aadhaar, UPI, CoWIN — was built by computer scientists who work in or for the public sector.",gov:'NIC (National Informatics Centre), CDAC, ISRO (software), DRDO software labs, public sector IT.',enter:'Class 12 PCM → B.Sc CS at state/central college (state merit or CUET) or B.Tech at NIT (JEE Main).'},
+      scholarships:['Post-Matric (SC/ST/OBC)','INSPIRE (if PCM top 1%)','State computer science scholarships','PM Scholarship (PMSS)'],
+      jobs:['NIC / CDAC technical staff','Software Engineer (PSU / govt IT)','ISRO / DRDO software developer','GATE → M.Tech CS at NIT/IIT'],
+      plan:[
+        {when:'Now',txt:'Take the Know Yourself test first — even if "CS as default", know your real interests',done:false},
+        {when:'Now',txt:'Apply state merit or CUET for B.Sc CS at govt college',done:false},
+        {when:'Year 1',txt:'Learn one programming language properly — not 5 halfway',done:false},
+        {when:'Year 2',txt:'If you love it → prepare GATE for M.Tech; if not → explore electives for pivots',done:false},
+      ],
+    },
+  },
+};
+
+/* dream-agnostic fallback so no path ever dead-ends */
+function fallbackDetail(p,dreamName){
+  return {
+    institutions:[{nm:p.anchor,tier:'Government / merit-only'}],
+    ladder:null,
+    story:{why:'A direct, affordable route into this dream — doing work that matters.',day:'Hands-on field, lab or community work, depending on your specialisation.',fact:'Government demand for this skill is steady, and the path avoids a single all-or-nothing exam.',gov:'Government departments, research bodies and public institutions.',enter:p.riskLbl+' → '+p.name+' at a government institution.'},
+    scholarships:['Post-Matric (SC/ST/OBC)','State fee waivers'],
+    jobs:['Government-sector roles','Higher study & specialisation','Research & public service'],
+    plan:[
+      {when:'Now',txt:'Check the admission route: '+p.riskLbl,done:false},
+      {when:'Now',txt:'Shortlist govt institutions for '+p.name,done:false},
+      {when:'Aug',txt:'Apply for eligible scholarships',done:false},
+    ],
+  };
+}
+
+const RISK_ICO={red:'🔴',amber:'🟡',green:'🟢'};
+let currentDream='help';
+let currentLens=null;
+let PATH_BY_ID={};
+function buildIndex(D){ PATH_BY_ID={}; ['primary','alt','backup'].forEach(t=>D.paths[t].forEach(p=>{p._tier=t;PATH_BY_ID[p.id]=p;})); }
+
+
+/* ───────── RENDER DREAM GRID ───────── */
+const grid=document.getElementById('dreamGrid');
+DREAMS.forEach(d=>{
+  const b=document.createElement('button');
+  b.className='dream '+(d.live?'live':'locked');
+  b.innerHTML=`<span class="d-ico">${d.ico}</span><span class="d-txt">${d.txt}</span>
+    <span class="d-anchor">${d.anchor}</span>`;
+  b.addEventListener('click',d.live?()=>openExplorer(d.id):()=>document.querySelector('.dream.live').scrollIntoView({behavior:'smooth',block:'center'}));
+  grid.appendChild(b);
+});
+
+function resolveGoal(){
+  const v=(document.getElementById('goalInput').value||'').toLowerCase();
+  const help=['doctor','mbbs','neet','nurse','nursing','dentist','bds','physio','medicine','medical','health','teacher','hospital'];
+  const nat=['farm','agri','agriculture','forest','nature','animal','vet','geolog','ocean','wildlife','fisher','environment','earth','soil','plant'];
+  const build=['engineer','engineering','architect','architecture','construction','mechanical','civil','electrical','electronics','robotics','btech','b.tech','jee','nit','polytechnic'];
+  const money=['chartered','accountant',' ca ','banker','banking','finance','actuary','actuarial','economics','economist','commerce','stock','invest','ibps','rbi grade'];
+  const sci=['scientist','research','physics','chemistry','biology','maths','mathematics','astronomy','astrophys','iiser','lab','experiment','discover'];
+  const create=['design','designer','art ','artist','film','filmmaker','graphic','fashion','animation','nid','nift','creative','painting','sculpture','media','ftii'];
+  const serve=['ias','ips','ifs','upsc','civil service','police','army','military','navy','defence','law ','lawyer','judge','court',' psc','ssc','nda','cds'];
+  const impact=['policy','development','ngo','welfare','community','social work','international','diplomat','poverty','governance','impact'];
+
+  if(nat.some(k=>v.includes(k))) openExplorer('nature');
+  else if(help.some(k=>v.includes(k))) openExplorer('help');
+  else if(build.some(k=>v.includes(k))) openExplorer('build');
+  else if(serve.some(k=>v.includes(k))) openExplorer('serve');
+  else if(money.some(k=>v.includes(k))) openExplorer('money');
+  else if(sci.some(k=>v.includes(k))) openExplorer('sci');
+  else if(create.some(k=>v.includes(k))) openExplorer('create');
+  else if(impact.some(k=>v.includes(k))) openExplorer('impact');
+  else openExplorer('unsure');
+}
+
+/* ───────── EXPLORER ───────── */
+const X=document.getElementById('explorer');
+function openExplorer(dreamId){
+  currentDream=dreamId;
+  currentLens=null;
+  const D=DREAMDATA[dreamId];
+  buildIndex(D);
+  X.className='explorer open';
+  X.innerHTML=`
+    <div class="x-head reveal">
+      <span class="xh-ico">${D.ico}</span>
+      <span><small>Your dream</small><strong>"${D.dream}"</strong>
+      <span class="anchor">${D.anchor}</span></span>
+    </div>
+    <div class="confidence reveal">
+      <div class="c-ttl">🧭 Not sure this is for you?</div>
+      <div class="c-sub">Tick what genuinely sounds like you — if only one or two do, we'll point you somewhere that may fit better.</div>
+      <div class="c-list">${D.confidence.map(c=>`<span class="c-item" onclick="toggleResonance(this)"><span class="box">✓</span>${c}</span>`).join('')}</div>
+      <div class="c-readout" id="cReadout"></div>
+    </div>
+    <div class="block reveal" id="clusterBlock">
+      <div class="block-top"><span class="lv-badge" style="background:var(--coral)">Careers in this dream</span>
+        <h3>${D.clusterLabel}</h3></div>
+      <div class="lenses" id="lensChips">${(()=>{const readyCount=D.lenses.filter(l=>l.ready).length;return D.lenses.map((l,i)=>`<span class="lens ${l.ready?'on':''}" id="lens_${i}"${l.ready&&readyCount>=2?` onclick="filterLens('${l.n}')" title="Show only ${l.n}"`:''}">${l.n}${l.ready?'':'<span class="soon">soon</span>'}</span>`).join('');})()}</div>
+      <div class="chips" id="clusterChips">${D.cluster.map(c=>`<span class="chip" data-lens="${c.l||''}">${c.e} ${c.n}</span>`).join('')}</div>
+      <div class="unknown">
+        <div class="u-ttl">✨ ${D.unknownHeading||'Same dream. Different careers.'}</div>
+        <div class="u-sub">Careers most students never hear about — tap any card for a 20-second snapshot.</div>
+        <div class="u-cards" id="ucCards">${D.unknown.map((u,i)=>`
+          <div class="u-card" data-lens="${u.l||''}" onclick="openUC(${i})">
+            <div class="uc-top">${u.ico} ${u.label||u.n}</div>
+            ${(u.label&&u.label!==u.n)?`<div class="uc-tech">${u.n}</div>`:''}
+            <div class="uc-one">${u.short}</div>
+            <span class="uc-gov">🏛 ${u.gov}</span>
+            <span class="uc-more">Tap for snapshot →</span>
+          </div>`).join('')}</div>
+      </div>
+      <div style="text-align:center;margin-top:18px">
+        <button class="header-cta" style="margin:0;font-size:.95rem;padding:12px 26px" onclick="showPaths()">Show me the paths →</button>
+      </div>
+    </div>
+    <div id="pathsMount"></div>
+    <div id="detailMount"></div>`;
+  X.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function tierCard(p){
+  return `<div class="pcard${p.lead?' lead':''}" onclick="selectPath('${p.id}')">
+    <span class="pc-open">view ›</span>
+    <div class="pc-name">${p.name}</div>
+    <div class="pc-deg">${p.deg}</div>
+    <div class="pc-fit">${p.fit}</div>
+    <div class="pc-anchor"><span><span class="pc-anchor-lbl">Strong govt institutions</span>🏛 ${p.anchor}</span></div>
+    <div class="pc-metarow">
+      <span class="tag fee">💰 ${p.fee}</span>
+      <span class="tag risk-${p.risk}">${RISK_ICO[p.risk]} ${p.riskLbl}</span>
+    </div>
+    ${p.backups?`<div class="pc-backups">→ ${p.backups} other routes reach this dream</div>`:''}
+  </div>`;
+}
+function showPaths(){
+  const D=DREAMDATA[currentDream];
+  const m=document.getElementById('pathsMount');
+  const tier=(cls,lbl,sub,arr)=>`<div class="ptier ${cls}">
+    <div class="ptier-label"><span class="dot"></span>${lbl}<span class="sub">— ${sub}</span></div>
+    <div class="path-cards">${arr.map(tierCard).join('')}</div></div>`;
+  const prim=D.paths.primary[0];
+  const banner=`<div class="ask-banner">
+    <div class="ab-txt"><span class="ab-eyebrow">⚠️ The question most students ask</span>
+      <strong>"${prim.stressLabel||'What if this doesn\'t work out?'}"</strong></div>
+    <button onclick="stressTest()">Show me →</button></div>`;
+  m.innerHTML=`<div class="connector">↓</div>
+    <div class="block reveal" id="pathsBlock">
+      <div class="block-top"><span class="lv-badge" style="background:var(--brand)">Your paths</span>
+        <h3>You are never stuck with one exam</h3>
+        <span class="hint">primary · alternative · backup</span></div>
+      ${tier('primary','Primary path','the most direct route',D.paths.primary)}
+      ${banner}
+      ${tier('alt','Alternative paths','same dream, different door',D.paths.alt)}
+      ${tier('backup','Backup paths','keep the dream alive',D.paths.backup)}
+    </div>`;
+  m.scrollIntoView({behavior:'smooth',block:'start'});
+}
+function stressTest(){
+  if(!document.getElementById('pathsBlock')) showPaths();
+  const pb=document.getElementById('pathsBlock');
+  pb.querySelector('.ptier.alt').scrollIntoView({behavior:'smooth',block:'center'});
+  [pb.querySelector('.ptier.alt'),pb.querySelector('.ptier.backup')].forEach(el=>{
+    el.style.transition='background .4s';el.style.background='var(--amber-bg)';el.style.borderRadius='10px';el.style.padding='8px';
+    setTimeout(()=>{el.style.background='transparent';},1400);
+  });
+}
+
+const SAVED=new Set();
+function jumpToPath(id){ if(!document.getElementById('pathsBlock'))showPaths(); selectPath(id); }
+
+function selectPath(id){
+  const D=DREAMDATA[currentDream];
+  const path=PATH_BY_ID[id]; if(!path)return;
+  const d=(DETAIL[currentDream]&&DETAIL[currentDream][id])||fallbackDetail(path,D.dream);
+  const others=[...D.paths.primary,...D.paths.alt,...D.paths.backup].filter(x=>x.id!==id);
+  const m=document.getElementById('detailMount');
+  const fc=d.feeContrast?`
+    <div class="feecontrast">
+      <div class="fc-half fc-here"><div class="fc-lbl">Here · government</div><div class="fc-val">${d.feeContrast.here}</div></div>
+      <div class="fc-half fc-priv"><div class="fc-lbl">Private college</div><div class="fc-val">${d.feeContrast.priv}</div></div>
+    </div><div class="feecontrast-note">${d.feeContrast.note}</div>`:'';
+  const ladder=d.ladder?`
+    <button class="ladder-toggle" onclick="var l=this.nextElementSibling;l.classList.toggle('open');this.textContent=l.classList.contains('open')?'Hide the bigger picture':'🌏 Bigger than your district — see state & India options'">🌏 Bigger than your district — see state & India options</button>
+    <div class="ladder">
+      <div class="ring"><div class="r-lbl">Near you</div><div class="r-val">${d.ladder.near}</div></div>
+      <div class="ring"><div class="r-lbl">Tamil Nadu</div><div class="r-val">${d.ladder.state}</div></div>
+      <div class="ring india"><div class="r-lbl">All India</div><div class="r-val">${d.ladder.india}</div>
+        <div class="r-note">Same merit. Same affordable fees. Far bigger ceiling.</div></div>
+    </div>`:'';
+  m.innerHTML=`<div class="connector">↓</div>
+  <div class="pdetail reveal">
+    <div class="pd-head">
+      <div><div class="pdh-name">${path.name}</div><div class="pdh-sub">${path.deg} · ${RISK_ICO[path.risk]} ${path.riskLbl}</div></div>
+      <button class="pd-close" onclick="document.getElementById('detailMount').innerHTML=''">✕</button>
+    </div>
+    <div class="pd-body">
+      <div class="pd-sec"><h4>🏛 Strong institutions for this path</h4>
+        <div class="inst-list">${d.institutions.map(i=>`
+          <div class="inst-wrap${i.why?' has-why':''}"${i.why?` onclick="this.classList.toggle('open')"`:''}>
+            <div class="inst"><span class="i-nm">${i.nm}</span>${i.why?'<span class="i-chev">Why? ▾</span>':''}<span class="i-tier">${i.tier}</span></div>
+            ${i.why?`<div class="inst-why">${i.why.map(w=>`<span>✓ ${w}</span>`).join('')}</div>`:''}
+          </div>`).join('')}</div>
+        ${fc}${ladder}
+      </div>
+      <div class="pd-sec"><h4>💛 What this life actually feels like</h4>
+        <div class="story5">
+          <div class="beat"><div class="b-key">Why</div><div class="b-val">${d.story.why}</div></div>
+          <div class="beat"><div class="b-key">A day</div><div class="b-val">${d.story.day}</div></div>
+          <div class="beat fact"><div class="b-key">Huh!</div><div class="b-val">${d.story.fact}</div></div>
+          <div class="beat"><div class="b-key">Govt</div><div class="b-val">${d.story.gov}</div></div>
+          <div class="beat"><div class="b-key">Enter</div><div class="b-val">${d.story.enter}</div></div>
+        </div>
+      </div>
+      <div class="pd-sec"><h4>🔁 Other paths to the same dream</h4>
+        <div class="otherpaths">
+          <div class="op-ttl">🔁 If ${path.name} doesn't work out…</div>
+          <div class="op-sub">You still reach "${D.dream}" through these — one result never ends the dream.</div>
+          <div class="op-list">${others.map(o=>`<div class="op-item" onclick="selectPath('${o.id}')"><span class="op-nm">${o.name}</span><span class="op-ex">${o.riskLbl}</span></div>`).join('')}</div>
+        </div>
+      </div>
+      <div class="pd-sec"><h4>💰 Scholarships &amp; 🚀 future</h4>
+        <div class="sj">
+          <div class="sj-box scho"><h5>💰 Scholarships</h5><ul>${d.scholarships.map(s=>`<li>${s}</li>`).join('')}</ul></div>
+          <div class="sj-box jobs"><h5>🚀 Jobs &amp; future</h5><ul>${d.jobs.map(s=>`<li>${s}</li>`).join('')}</ul></div>
+        </div>
+      </div>
+      <div class="pd-sec"><h4>📋 Your action plan</h4>
+        <div class="plan">
+          <h5>${path.name} — your next steps</h5>
+          <div class="p-sub">Tap an item to check it off.</div>
+          ${d.plan.map((it,i)=>`<div class="plan-item" onclick="togglePlanItem(this,'${id}',${i})">
+            <span class="plan-box">✓</span><span class="pi-when">${it.when}</span><span class="pi-txt">${it.txt}</span></div>`).join('')}
+          <div class="plan-actions">
+            <button class="primary" onclick="toggleSave('${id}')">⭐ Save plan</button><button onclick="downloadPlan('${id}')">⤓ Download</button><button>📲 Remind me of deadlines</button>
+          </div>
+        </div>
+      </div>
+      <div class="pd-foot">
+        <button class="save" id="saveBtn_${id}" onclick="toggleSave('${id}')">⭐ Save this path</button>
+        <button onclick="document.getElementById('pathsBlock').scrollIntoView({behavior:'smooth'})">↑ Back to all paths</button>
+      </div>
+    </div>
+  </div>`;
+  restorePlanState(id);
+  restoreSaveState(id);
+  m.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+/* ── Dream confidence: tickable self-check tied to real anxiety ── */
+function toggleResonance(el){ el.classList.toggle('on'); renderResonance(); }
+function renderResonance(){
+  const D=DREAMDATA[currentDream];
+  const items=[...document.querySelectorAll('.confidence .c-item')];
+  const count=items.filter(i=>i.classList.contains('on')).length;
+  const out=document.getElementById('cReadout');
+  if(count===0){ out.className='c-readout'; out.innerHTML=''; return; }
+  if(count>=3){
+    out.className='c-readout show fit';
+    out.innerHTML=`Many students who feel this way go on to thrive in "${D.dream}". Worth exploring further — the paths are below ↓`;
+  }else{
+    out.className='c-readout show';
+    out.innerHTML=`<span class="ro-strong">Interests change — that's completely normal.</span> If this doesn't feel quite right, you might also like:
+      <div class="c-related">${D.related.map(r=>`<span class="cr-chip" onclick="openRelated('${r.id}')">${r.label} →</span>`).join('')}</div>`;
+  }
+}
+function openRelated(id){ if(DREAMDATA[id]) openExplorer(id); else document.getElementById('dreamGrid').scrollIntoView({behavior:'smooth',block:'center'}); }
+
+function filterLens(n){
+  currentLens=(currentLens===n)?null:n;
+  const D=DREAMDATA[currentDream];
+  D.lenses.forEach((l,i)=>{
+    const el=document.getElementById('lens_'+i);
+    if(!el||!l.ready) return;
+    el.classList.toggle('sel', currentLens===l.n);
+  });
+  document.querySelectorAll('#clusterChips .chip').forEach(el=>{
+    el.classList.toggle('dim', !!currentLens && el.dataset.lens!==currentLens && el.dataset.lens!=='');
+  });
+  document.querySelectorAll('#ucCards .u-card').forEach(el=>{
+    el.classList.toggle('dim', !!currentLens && el.dataset.lens!==currentLens && el.dataset.lens!=='');
+  });
+}
+
+/* ── Unknown-career snapshot bottom-sheet ── */
+const RISK_TXT={green:'Several routes',amber:'Limited routes',red:'One main route'};
+function openUC(i){
+  const D=DREAMDATA[currentDream], u=D.unknown[i];
+  const m=document.getElementById('ucModal');
+  m.innerHTML=`<div class="ucmodal-card" onclick="event.stopPropagation()">
+    <div class="ucm-head"><span class="ucm-ico">${u.ico}</span>
+      <div><div class="ucm-nm">${u.label||u.n}${(u.label&&u.label!==u.n)?` <span class="ucm-tech">${u.n}</span>`:''}</div><div class="ucm-what">${u.one}</div></div>
+      <button class="ucm-close" onclick="closeUC()">✕</button></div>
+    <div class="ucm-body">
+      <div class="ucm-sec"><h6>Why students choose it</h6><div class="ucm-why">${u.why.map(w=>`<span>✓ ${w}</span>`).join('')}</div></div>
+      <div class="ucm-sec"><h6>Common path</h6><div class="ucm-path">${u.pathline}</div></div>
+      <div class="ucm-sec"><h6>Government opportunities</h6><div class="ucm-gov">🏛 ${u.gov}</div></div>
+      <div class="ucm-sec"><h6>At a glance</h6><div class="ucm-meta">
+        <span class="tag risk-${u.risk}">${RISK_ICO[u.risk]} ${RISK_TXT[u.risk]}</span>
+        <span class="tag fee">💰 ${u.cost}</span></div></div>
+      <div class="ucm-sec"><h6>Other paths to the same dream</h6><div class="ucm-related">${u.related.map(r=>`<span>${r}</span>`).join('')}</div></div>
+      <button class="ucm-cta" onclick="closeUC();jumpToPath('${u.path}')">See this path in the explorer →</button>
+    </div></div>`;
+  m.className='ucmodal show';
+}
+function closeUC(){ document.getElementById('ucModal').className='ucmodal'; }
+
+function scrollToDreams(){
+  document.getElementById('dreamGrid').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function togglePlanItem(el,pathId,idx){
+  el.classList.toggle('done');
+  const key='vazhi_plan_'+pathId;
+  const checked=new Set(JSON.parse(localStorage.getItem(key)||'[]'));
+  if(el.classList.contains('done')) checked.add(idx); else checked.delete(idx);
+  localStorage.setItem(key,JSON.stringify([...checked]));
+}
+
+function restorePlanState(pathId){
+  const checked=new Set(JSON.parse(localStorage.getItem('vazhi_plan_'+pathId)||'[]'));
+  document.querySelectorAll('.plan-item').forEach((el,i)=>{ if(checked.has(i)) el.classList.add('done'); });
+}
+
+function restoreSaveState(id){
+  const saved=JSON.parse(localStorage.getItem('vazhi_saved_paths')||'[]');
+  if(saved.some(s=>s.id===id)){
+    SAVED.add(id);
+    const b=document.getElementById('saveBtn_'+id);
+    if(b){b.classList.add('on');b.textContent='✓ Saved';}
+  }
+}
+
+function toggleSave(id){
+  const b=document.getElementById('saveBtn_'+id);
+  const saved=JSON.parse(localStorage.getItem('vazhi_saved_paths')||'[]');
+  if(SAVED.has(id)){
+    SAVED.delete(id);
+    if(b){b.classList.remove('on');b.textContent='⭐ Save this path';}
+    localStorage.setItem('vazhi_saved_paths',JSON.stringify(saved.filter(s=>s.id!==id)));
+  } else {
+    SAVED.add(id);
+    if(b){b.classList.add('on');b.textContent='✓ Saved';}
+    const path=PATH_BY_ID[id];
+    const dreamName=currentDream?DREAMDATA[currentDream].dream:'';
+    if(!saved.some(s=>s.id===id))
+      localStorage.setItem('vazhi_saved_paths',JSON.stringify([...saved,{id,name:path?path.name:id,dream:dreamName}]));
+  }
+}
+
+function downloadPlan(id){
+  const path=PATH_BY_ID[id]; if(!path) return;
+  const D=DREAMDATA[currentDream];
+  const d=(DETAIL[currentDream]&&DETAIL[currentDream][id])||fallbackDetail(path,D.dream);
+  const checked=new Set(JSON.parse(localStorage.getItem('vazhi_plan_'+id)||'[]'));
+  const lines=[
+    'Vazhi — Your Action Plan',
+    '========================',
+    `Dream: ${D.dream}`,
+    `Path: ${path.name} (${path.deg})`,
+    '',
+    'Next Steps:',
+    ...d.plan.map((it,i)=>`[${checked.has(i)?'✓':' '}] ${it.when.padEnd(5)} ${it.txt}`),
+    '',
+    `Downloaded from kalvivazhi.in on ${new Date().toLocaleDateString('en-IN')}`
+  ];
+  const blob=new Blob([lines.join('\n')],{type:'text/plain'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download=`vazhi-plan-${id}.txt`;
+  a.click();
+}
+
+/* ───────── HOMEPAGE: trending careers (from data/market.js) ───────── */
+(function renderTrendRow(){
+  const el=document.getElementById('trendRow'); if(!el) return;
+  if(typeof TRENDING_COURSES==='undefined'){ el.innerHTML=''; return; }
+  const BADGE={
+    coral:{bg:'#FFEDE8',color:'#BC2D12'}, teal:{bg:'#E5FAFB',color:'#0A686F'},
+    green:{bg:'#E8F8EF',color:'#0D6640'}, purple:{bg:'#F2EBFF',color:'#581F9E'},
+    amber:{bg:'#FFF5E0',color:'#855100'}, accent:{bg:'#E6F7F6',color:'#065750'}
+  };
+  el.innerHTML=TRENDING_COURSES.slice(0,6).map(t=>{
+    const b=BADGE[t.bc]||BADGE.accent;
+    return `<div class="trend-card">
+      <span class="trend-badge" style="background:${b.bg};color:${b.color}">${t.badge}</span>
+      <h5>${t.name}</h5>
+      <p>${t.why}</p>
+    </div>`;
+  }).join('');
+})();
+
+/* ───────── HOMEPAGE: upcoming key dates (from data/announcements.js) ───────── */
+(function renderHomeAnnouncements(){
+  if(typeof ANNOUNCEMENTS==='undefined') return;
+  const el=document.getElementById('annList'); if(!el) return;
+  const today=new Date().toISOString().slice(0,10);
+  const M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const fmt=d=>{const p=d.split('-');return parseInt(p[2],10)+' '+M[parseInt(p[1],10)-1]+' '+p[0];};
+  const up=ANNOUNCEMENTS.filter(a=>(a.endDate||a.date)>=today).sort((a,b)=>a.date<b.date?-1:1).slice(0,6);
+  if(!up.length){ el.innerHTML='<p style="color:var(--text3)">No upcoming dates right now — check back soon.</p>'; return; }
+  el.innerHTML=up.map(a=>`
+    <div class="ann-card">
+      <div class="ann-ico">${a.icon||'📌'}</div>
+      <div class="ann-body">
+        <div class="ann-date">${fmt(a.date)}${a.endDate?' – '+fmt(a.endDate):''}${a.tentative?'<span class="ann-tent">Tentative</span>':''}</div>
+        <div class="ann-ttl">${a.title}</div>
+        <div class="ann-desc">${a.desc||''}</div>
+      </div>
+    </div>`).join('');
+})();
+</script>
+</body>
+</html>
