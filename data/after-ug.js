@@ -84,6 +84,24 @@ const AFTER_UG = [
   },
 
   {
+    id: 'mfa',
+    name: 'MFA (Master of Fine Arts)',
+    category: 'Higher Education',
+    field: 'Visual & Performing Arts',
+    duration: '2 years',
+    ugFor: ['B.A./B.Com', 'Any'],
+    exams: ['CUET-PG', 'University entrance + portfolio/studio test'],
+    examNote: 'Most government fine arts institutes hold their own entrance plus a portfolio review/studio test, in addition to or instead of CUET-PG. A BFA or equivalent portfolio is usually expected.',
+    institutes: 'Faculty of Fine Arts (MSU Baroda), Kala Bhavana (Visva-Bharati), Faculty of Visual Arts (BHU), College of Art Delhi, Govt. College of Fine Arts Chennai, Govt. College of Art & Craft Kolkata',
+    careers: 'Practising Artist, Art Teacher/Lecturer, Illustrator, Animator, Curator, Art Therapist',
+    salary: '₹3–12 LPA',
+    market: 'Niche',
+    badge: 'Visual Arts',
+    bc: 'purple',
+    note: 'Specializations include Painting, Sculpture, Applied Art, Printmaking and Art History — pick a specialization track at the time of application, not after joining.',
+  },
+
+  {
     id: 'llm',
     name: 'LLM (Master of Laws)',
     category: 'Higher Education',

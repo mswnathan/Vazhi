@@ -28,15 +28,22 @@
       <button class="tab-btn" onclick="switchTab('find')">🔍 Search a Career</button>
       <button class="tab-btn" onclick="switchTab('courses')">📚 What Next?</button>
       <button class="tab-btn" onclick="switchTab('after-ug')">🎓 After UG</button>
-<!-- HIDDEN (UG-admission focus) — re-enable any tab by moving it above this comment:
-<button class="tab-btn" onclick="switchTab('psychometric')">🧠 Know Yourself</button>
-      <button class="tab-btn" onclick="switchTab('scholarships')">💰 Scholarships</button>
-      <button class="tab-btn" onclick="switchTab('internships')">🌐 Internships</button>
-      <button class="tab-btn" onclick="switchTab('market')">📈 Salaries & Trends</button>
--->
     </nav>
+    <button id="nav-drawer-btn" class="hamburger-btn" onclick="toggleNavDrawer()" aria-label="More sections" aria-haspopup="true" aria-expanded="false">☰</button>
   </div>
 </header>
+
+<div id="nav-drawer-overlay" class="nav-drawer-overlay" onclick="closeNavDrawer()"></div>
+<aside id="nav-drawer" class="nav-drawer" aria-hidden="true">
+  <div class="nav-drawer-head">
+    <span class="nav-drawer-title">More</span>
+    <button class="nav-drawer-close" onclick="closeNavDrawer()" aria-label="Close menu">✕</button>
+  </div>
+  <button class="nav-drawer-item" data-tab="psychometric" onclick="switchTab('psychometric');closeNavDrawer()">🧠 Know Yourself</button>
+  <button class="nav-drawer-item" data-tab="scholarships" onclick="switchTab('scholarships');closeNavDrawer()">💰 Scholarships</button>
+  <button class="nav-drawer-item" data-tab="internships" onclick="switchTab('internships');closeNavDrawer()">🌐 Internships</button>
+  <button class="nav-drawer-item" data-tab="market" onclick="switchTab('market');closeNavDrawer()">📈 Salaries & Trends</button>
+</aside>
 
 <!-- ═══════════════════════════════════════════════
      COURSES SUB-NAV (shown only when Courses & Exams tab is active)

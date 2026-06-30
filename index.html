@@ -6,6 +6,7 @@
 <title>Vazhi வழி — Every Dream Has More Than One Path</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Noto+Sans+Tamil:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/auth.css?v=1">
 <style>
 :root{
   --bg:#FAF8F3; --surface:#FFFFFF; --surface2:#F2EFE8; --surface3:#E8E4DA;
@@ -41,7 +42,51 @@ body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);c
 .hnav-link:hover{background:rgba(255,255,255,.12);color:#fff}
 .header-cta{background:rgba(255,255,255,.15);color:#fff;border:1.5px solid rgba(255,255,255,.3);font:inherit;font-weight:600;font-size:.88rem;padding:9px 18px;border-radius:999px;cursor:pointer;white-space:nowrap;margin-left:6px}
 .header-cta:hover{background:rgba(255,255,255,.25)}
-@media(max-width:640px){.header-nav{display:none}}
+
+/* Hamburger button — opens the nav drawer for secondary sections.
+   .vz-auth-btn (Sign in) is position:fixed at top:14px;right:18px, anchored
+   to the viewport rather than this flex row, so without a reserve this
+   button would render directly underneath it and be hidden from view. */
+.hamburger-btn{
+  background:rgba(255,255,255,.12);color:#fff;border:none;border-radius:8px;
+  width:34px;height:34px;display:flex;align-items:center;justify-content:center;
+  font-size:16px;cursor:pointer;flex-shrink:0;transition:background .15s;
+  margin-right:120px;
+}
+.hamburger-btn:hover{background:rgba(255,255,255,.22)}
+.hamburger-btn.active{background:rgba(255,255,255,.28)}
+
+/* Nav drawer — secondary sections (Know Yourself, Scholarships, Internships, Market).
+   Opens from the right, same side as the hamburger button. */
+.nav-drawer-overlay{
+  position:fixed;inset:0;background:rgba(20,20,40,.45);
+  opacity:0;visibility:hidden;transition:opacity .2s;z-index:300;
+}
+.nav-drawer-overlay.open{opacity:1;visibility:visible}
+.nav-drawer{
+  position:fixed;top:0;right:0;bottom:0;width:260px;max-width:80vw;
+  background:var(--surface);z-index:301;box-shadow:-2px 0 16px rgba(0,0,0,.15);
+  transform:translateX(100%);transition:transform .25s ease;
+  display:flex;flex-direction:column;padding:8px 0;overflow-y:auto;
+}
+.nav-drawer.open{transform:translateX(0)}
+.nav-drawer-head{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 18px 10px;border-bottom:1px solid var(--border);margin-bottom:6px;
+}
+.nav-drawer-title{font-weight:700;font-size:12px;color:var(--text3);text-transform:uppercase;letter-spacing:.04em}
+.nav-drawer-close{background:none;border:none;font-size:18px;color:var(--text3);cursor:pointer;padding:4px}
+.nav-drawer-item{
+  display:flex;align-items:center;gap:10px;width:100%;text-align:left;
+  background:none;border:none;padding:12px 18px;font-size:14px;font-family:inherit;
+  color:var(--text);cursor:pointer;transition:background .15s;
+}
+.nav-drawer-item:hover{background:var(--surface2)}
+
+@media(max-width:640px){
+  .header-nav{display:none}
+  .hamburger-btn{margin-left:auto;margin-right:50px}
+}
 
 /* HERO */
 .hero{padding:28px 0 14px;text-align:center;background:radial-gradient(1100px 420px at 50% -140px, var(--brand-bg), transparent 70%)}
@@ -344,8 +389,21 @@ footer{padding:32px 0 54px;text-align:center;color:var(--text3);font-size:.85rem
       <a class="hnav-link" onclick="location.href='explore.html#find'">🔍 Search a Career</a>
       <a class="hnav-link" onclick="location.href='explore.html'">What Next?</a>
     </nav>
+    <button id="nav-drawer-btn" class="hamburger-btn" onclick="toggleNavDrawer()" aria-label="More sections" aria-haspopup="true" aria-expanded="false">☰</button>
   </div>
 </header>
+
+<div id="nav-drawer-overlay" class="nav-drawer-overlay" onclick="closeNavDrawer()"></div>
+<aside id="nav-drawer" class="nav-drawer" aria-hidden="true">
+  <div class="nav-drawer-head">
+    <span class="nav-drawer-title">More</span>
+    <button class="nav-drawer-close" onclick="closeNavDrawer()" aria-label="Close menu">✕</button>
+  </div>
+  <button class="nav-drawer-item" onclick="location.href='explore.html#psychometric'">🧠 Know Yourself</button>
+  <button class="nav-drawer-item" onclick="location.href='explore.html#scholarships'">💰 Scholarships</button>
+  <button class="nav-drawer-item" onclick="location.href='explore.html#internships'">🌐 Internships</button>
+  <button class="nav-drawer-item" onclick="location.href='explore.html#market'">📈 Salaries &amp; Trends</button>
+</aside>
 
 <!-- Mission -->
 <section class="sec" id="whoSec" style="padding:40px 0 36px;border-top:none;text-align:center">
@@ -1466,6 +1524,32 @@ function downloadPlan(id){
       </div>
     </div>`).join('');
 })();
+
+/* ───────── NAV DRAWER (hamburger menu for secondary sections) ───────── */
+function toggleNavDrawer(){
+  const drawer=document.getElementById('nav-drawer');
+  const open=!drawer.classList.contains('open');
+  drawer.classList.toggle('open',open);
+  document.getElementById('nav-drawer-overlay').classList.toggle('open',open);
+  drawer.setAttribute('aria-hidden',String(!open));
+  document.getElementById('nav-drawer-btn').setAttribute('aria-expanded',String(open));
+  document.getElementById('nav-drawer-btn').classList.toggle('active',open);
+}
+function closeNavDrawer(){
+  document.getElementById('nav-drawer').classList.remove('open');
+  document.getElementById('nav-drawer-overlay').classList.remove('open');
+  document.getElementById('nav-drawer').setAttribute('aria-hidden','true');
+  document.getElementById('nav-drawer-btn').setAttribute('aria-expanded','false');
+  document.getElementById('nav-drawer-btn').classList.remove('active');
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeNavDrawer()});
 </script>
+
+<!-- Firebase Auth + Firestore (compat SDK — exposes global `firebase`) -->
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore-compat.js"></script>
+<script src="js/firebase-config.js"></script>
+<script src="js/auth.js"></script>
 </body>
 </html>

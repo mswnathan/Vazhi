@@ -114,6 +114,48 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-si
   box-shadow:0 2px 8px rgba(212,88,10,0.4);
 }
 
+/* Hamburger button — opens the nav drawer for secondary tabs.
+   .vz-auth-btn is position:fixed (anchored to the viewport, not the flex
+   row), so it floats outside normal layout — without this reserve, this
+   button would render directly underneath it and be hidden from view. */
+.hamburger-btn{
+  background:rgba(255,255,255,.12);color:#fff;border:none;border-radius:8px;
+  width:34px;height:34px;display:flex;align-items:center;justify-content:center;
+  font-size:16px;cursor:pointer;flex-shrink:0;transition:background .15s;
+  margin-right:120px;
+}
+.hamburger-btn:hover{background:rgba(255,255,255,.22)}
+.hamburger-btn.active{background:rgba(255,255,255,.28)}
+
+/* Nav drawer — secondary tabs (Know Yourself, Scholarships, Internships, Market).
+   Opens from the right, same side as the hamburger button, so it slides out
+   from where the user clicked instead of crossing the screen. */
+.nav-drawer-overlay{
+  position:fixed;inset:0;background:rgba(20,20,40,.45);
+  opacity:0;visibility:hidden;transition:opacity .2s;z-index:300;
+}
+.nav-drawer-overlay.open{opacity:1;visibility:visible}
+.nav-drawer{
+  position:fixed;top:0;right:0;bottom:0;width:260px;max-width:80vw;
+  background:var(--surface);z-index:301;box-shadow:-2px 0 16px rgba(0,0,0,.15);
+  transform:translateX(100%);transition:transform .25s ease;
+  display:flex;flex-direction:column;padding:8px 0;overflow-y:auto;
+}
+.nav-drawer.open{transform:translateX(0)}
+.nav-drawer-head{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 18px 10px;border-bottom:1px solid var(--border);margin-bottom:6px;
+}
+.nav-drawer-title{font-weight:700;font-size:12px;color:var(--text3);text-transform:uppercase;letter-spacing:.04em}
+.nav-drawer-close{background:none;border:none;font-size:18px;color:var(--text3);cursor:pointer;padding:4px}
+.nav-drawer-item{
+  display:flex;align-items:center;gap:10px;width:100%;text-align:left;
+  background:none;border:none;padding:12px 18px;font-size:14px;font-family:var(--font-body);
+  color:var(--text);cursor:pointer;transition:background .15s;
+}
+.nav-drawer-item:hover{background:var(--surface2)}
+.nav-drawer-item.active{background:var(--brand-bg);color:var(--brand-dk);font-weight:600}
+
 /* Home back-link (explore.html → index.html) */
 .hback{color:rgba(255,255,255,.65);font-size:.78rem;font-weight:600;text-decoration:none;padding:5px 11px;border-radius:999px;white-space:nowrap;flex-shrink:0;transition:background .15s,color .15s;display:flex;align-items:center;gap:4px}
 .hback:hover{background:rgba(255,255,255,.12);color:#fff}
@@ -572,10 +614,16 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-si
 }
 @media(max-width:600px){
   .filter-bar{grid-template-columns:1fr}
-  /* Header: let the logo + account button stay put and make the tab strip
-     scroll horizontally inside itself instead of pushing the page wider. */
-  .header-inner{gap:0.75rem}
+  /* Header: logo + back link + account button stay on row 1; the tab strip
+     drops to its own full-width row 2 instead of being squeezed into a
+     ~140px sliver next to them (which hid 2 of the 3 tabs by default). */
+  .header-inner{gap:0.75rem;flex-wrap:wrap;height:auto;padding:0.6rem 1rem;row-gap:0.5rem}
+  .logo-wrap{order:1}
+  .hback{order:2}
+  .hamburger-btn{order:3;margin-right:0}
+  .vz-auth-btn{order:4}
   .tab-nav{
+    order:5;flex:0 0 100%;
     gap:4px;justify-content:flex-start;
     min-width:0;                 /* allow the flex item to shrink below content width */
     overflow-x:auto;
@@ -601,7 +649,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-si
   .tab-nav::-webkit-scrollbar-track{background:transparent}
 }
 @media(max-width:480px){
-  .header-inner{padding:0 1rem}
+  .header-inner{padding:0.6rem 1rem}
   .filter-section{padding:1rem}
   .cards{grid-template-columns:1fr}
 }

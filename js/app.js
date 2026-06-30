@@ -50,6 +50,7 @@ function switchTab(t){
   document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
   const navBtn=document.querySelector(`[onclick="switchTab('${t}')"]`);
   if(navBtn) navBtn.classList.add('active');
+  document.querySelectorAll('.nav-drawer-item').forEach(b=>b.classList.toggle('active',b.dataset.tab===t));
   const tabEl=document.getElementById('tab-'+t);
   if(tabEl) tabEl.classList.add('active');
   // Show courses sub-nav only when Courses & Exams tab is active
@@ -147,6 +148,25 @@ function goToCollegesForExam(examName){
   if(el) el.value=examName;
   renderColleges();
 }
+
+// ── NAV DRAWER (hamburger menu for secondary tabs) ──
+function toggleNavDrawer(){
+  const drawer=document.getElementById('nav-drawer');
+  const open=!drawer.classList.contains('open');
+  drawer.classList.toggle('open',open);
+  document.getElementById('nav-drawer-overlay').classList.toggle('open',open);
+  drawer.setAttribute('aria-hidden',String(!open));
+  document.getElementById('nav-drawer-btn').setAttribute('aria-expanded',String(open));
+  document.getElementById('nav-drawer-btn').classList.toggle('active',open);
+}
+function closeNavDrawer(){
+  document.getElementById('nav-drawer').classList.remove('open');
+  document.getElementById('nav-drawer-overlay').classList.remove('open');
+  document.getElementById('nav-drawer').setAttribute('aria-hidden','true');
+  document.getElementById('nav-drawer-btn').setAttribute('aria-expanded','false');
+  document.getElementById('nav-drawer-btn').classList.remove('active');
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeNavDrawer()});
 
 // ── SCHOLARSHIPS TOGGLE ──
 function toggleScholarships(btn){
