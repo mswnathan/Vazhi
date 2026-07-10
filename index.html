@@ -184,6 +184,11 @@ a.nav-drawer-item{text-decoration:none}
 .who-ta{margin-top:18px;font-size:.95rem;color:var(--text2);background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-lg);padding:15px 18px;line-height:1.75}
 .mission-lead{font-family:'Fraunces';font-size:clamp(1.2rem,2.4vw,1.65rem);font-weight:600;font-style:italic;color:var(--text);margin:0 auto 14px;max-width:38ch;line-height:1.25}
 .mission-body{font-size:.95rem;color:var(--text2);max-width:62ch;margin:0 auto;line-height:1.7}
+.stat-strip{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px 22px;margin:22px auto 0;max-width:640px}
+.stat{display:flex;flex-direction:column;align-items:center;min-width:88px}
+.stat-n{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:1.5rem;color:var(--brand-dk);line-height:1}
+.stat-l{font-size:.78rem;color:var(--text3);font-weight:600;margin-top:3px}
+.stat-badge{justify-content:center;background:var(--surface);border:1.5px solid var(--border);border-radius:999px;padding:8px 16px;font-size:.82rem;font-weight:700;color:var(--text2)}
 .action-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:28px}
 .act-btn{font:inherit;font-weight:700;font-size:.93rem;padding:12px 22px;border-radius:999px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:transform .15s,box-shadow .15s;white-space:nowrap;line-height:1}
 .act-btn:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
@@ -228,6 +233,8 @@ footer{padding:32px 0 54px;text-align:center;color:var(--text3);font-size:.85rem
   <a class="nav-drawer-item" href="explore.html#scholarships">💰 Scholarships</a>
   <a class="nav-drawer-item" href="explore.html#internships">🌐 Internships</a>
   <a class="nav-drawer-item" href="explore.html#market">📈 Salaries &amp; Trends</a>
+  <div class="nav-drawer-sep" role="separator"></div>
+  <a class="nav-drawer-item" href="about.html">ℹ️ About Vazhi</a>
 </aside>
 
 <!-- Mission -->
@@ -236,7 +243,13 @@ footer{padding:32px 0 54px;text-align:center;color:var(--text3);font-size:.85rem
     <img src="images/vazhi-logo-560.jpg" width="560" height="287" alt="Vazhi வழி — Every Dream Deserves the Right Direction" style="max-width:280px;width:80%;height:auto;display:block;margin:0 auto 22px">
     <h1 class="serif" style="margin-bottom:14px;font-size:1.55rem;font-weight:600">Built to help students, not sell courses.</h1>
     <p class="mission-lead">Every dream has more than one path.</p>
-    <p class="mission-body">Most students hear about only a handful of careers. Vazhi helps students and parents discover the many educational and career opportunities available through government and merit-based institutions across India — so they can make informed decisions with confidence.</p>
+    <p class="mission-body">Most students hear about only a handful of careers. Vazhi helps students and parents discover the many options at government and merit-based institutions across India — and choose with confidence.</p>
+    <div class="stat-strip" aria-label="What Vazhi covers">
+      <div class="stat"><span class="stat-n">70+</span><span class="stat-l">UG courses</span></div>
+      <div class="stat"><span class="stat-n">1,800+</span><span class="stat-l">colleges</span></div>
+      <div class="stat"><span class="stat-n">90+</span><span class="stat-l">entrance exams</span></div>
+      <div class="stat stat-badge"><span>✓ Government &amp; merit-based only</span></div>
+    </div>
   </div>
 </section>
 
