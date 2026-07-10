@@ -507,6 +507,36 @@ const PG_COLLEGES = [
     ],
   },
 
+  {
+    name: 'Sindhu Central University',
+    short: 'Sindhu CU, Ladakh',
+    type: 'Central',
+    district: 'Khaltse, Leh',
+    state: 'Ladakh',
+    naac: '',
+    nirf: '',
+    affil: 'Central University — established 2021 under the Central Universities (Amendment) Act; operational since 2023-24',
+    website: 'sindhucu.ac.in',
+    streams: ['Arts & Science', 'Engineering'],
+    specialNote: 'India\'s newest central university, based in Ladakh. Currently offers only PG programs — no UG intake yet. M.Tech in Artificial Intelligence for Sustainability run jointly with IIT Kanpur.',
+    programGroups: [
+      {
+        stream: 'Sciences & Public Policy',
+        programs: [
+          { name: 'M.Tech Atmospheric & Climate Science', exam: 'GATE / CUET-PG', examCss: 'ce-gate' },
+          { name: 'M.Tech Energy Technology & Policy', exam: 'GATE / CUET-PG', examCss: 'ce-gate' },
+          { name: 'M.A. Public Policy', exam: 'CUET-PG', examCss: 'ce-cuetpg' },
+        ],
+      },
+      {
+        stream: 'Engineering & Technology',
+        programs: [
+          { name: 'M.Tech Artificial Intelligence for Sustainability (with IIT Kanpur)', exam: 'GATE', examCss: 'ce-gate' },
+        ],
+      },
+    ],
+  },
+
   // ═══════════════════════════════════════════════
   // TAMIL NADU STATE UNIVERSITIES
   // ═══════════════════════════════════════════════

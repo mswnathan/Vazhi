@@ -174,3 +174,15 @@ function setView(v){
   document.getElementById('vl').classList.toggle('on',v==='list');
   renderExplore();
 }
+
+// Course-search handoff from the homepage lanes (sessionStorage, set by index).
+// Runs on window load so it fires after routeFromHash has landed on #courses.
+window.addEventListener('load', () => {
+  const q = sessionStorage.getItem('vz-course-search');
+  if (!q) return;
+  sessionStorage.removeItem('vz-course-search');
+  const inp = document.getElementById('f-search');
+  if (!inp) return;
+  inp.value = q;
+  applyFilters();
+});

@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All UG Entrance Exams — Reference</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f0f4f8;
+  color: #2d3748;
+  min-height: 100vh;
+}
+
+.header {
+  background: linear-gradient(135deg, #1e3a5f, #2b6cb0);
+  color: white;
+  padding: 18px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.header h1 { font-size: 1.3rem; font-weight: 700; }
+.header .subtitle { font-size: 0.82rem; opacity: 0.8; margin-top: 3px; }
+.session-badge {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 0.8rem;
+}
+
+.tab-bar {
+  background: white;
+  border-bottom: 2px solid #e2e8f0;
+  display: flex;
+  padding: 0 28px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+  overflow-x: auto;
+}
+.tab {
+  padding: 14px 20px;
+  cursor: pointer;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #718096;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.tab.active { color: #2b6cb0; border-bottom-color: #2b6cb0; }
+.tab:hover:not(.active) { color: #4a5568; background: #f7fafc; }
+
+.content { max-width: 1100px; margin: 0 auto; padding: 24px 28px; }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+/* Stats */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 14px;
+  margin-bottom: 24px;
+}
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 18px 16px;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  border-top: 4px solid var(--accent, #2b6cb0);
+}
+.stat-number { font-size: 2rem; font-weight: 800; color: var(--accent); line-height: 1; margin-bottom: 5px; }
+.stat-label { font-size: 0.75rem; color: #718096; font-weight: 600; text-transform: uppercase; letter-spacing: 0.4px; }
+.stat-sub { font-size: 0.72rem; color: #a0aec0; margin-top: 3px; }
+
+/* Section */
+.section {
+  background: white;
+  border-radius: 12px;
+  padding: 22px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+.section-title {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #1a365d;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #edf2f7;
+}
+.section-title .icon {
+  width: 30px; height: 30px;
+  border-radius: 7px;
+  background: #ebf8ff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; flex-shrink: 0;
+}
+
+/* Funnel */
+.funnel { display: flex; flex-direction: column; gap: 6px; }
+.funnel-row { display: flex; align-items: center; gap: 12px; }
+.funnel-label { width: 190px; font-size: 0.8rem; color: #4a5568; text-align: right; font-weight: 500; flex-shrink: 0; }
+.funnel-bar-wrap { flex: 1; }
+.funnel-bar {
+  height: 36px; border-radius: 6px;
+  display: flex; align-items: center; padding-left: 12px;
+  color: white; font-weight: 700; font-size: 0.82rem;
+}
+.funnel-arrow { text-align: center; color: #cbd5e0; font-size: 1rem; padding-left: 202px; }
+
+/* Score / Rank Ladder */
+.score-ladder { display: flex; flex-direction: column; gap: 8px; }
+.score-row { display: grid; grid-template-columns: 130px 1fr; gap: 10px; align-items: stretch; }
+.score-badge {
+  border-radius: 6px; padding: 8px 6px;
+  font-size: 0.76rem; font-weight: 700; text-align: center;
+  font-family: monospace; display: flex; align-items: center; justify-content: center;
+}
+.score-desc {
+  font-size: 0.84rem; color: #4a5568;
+  padding: 8px 12px; background: #f7fafc; border-radius: 6px;
+  border-left: 3px solid; display: flex; align-items: center;
+}
+
+/* Table */
+.ref-table { width: 100%; border-collapse: collapse; font-size: 0.84rem; }
+.ref-table th {
+  background: #edf2f7; text-align: left; padding: 9px 12px;
+  font-weight: 600; color: #4a5568; font-size: 0.77rem;
+  text-transform: uppercase; letter-spacing: 0.4px;
+}
+.ref-table td { padding: 9px 12px; border-bottom: 1px solid #f0f4f8; color: #2d3748; vertical-align: middle; }
+.ref-table tr:hover td { background: #f7fafc; }
+.ref-table tr:last-child td { border-bottom: none; }
+.ref-table th:first-child { border-radius: 6px 0 0 0; }
+.ref-table th:last-child { border-radius: 0 6px 0 0; }
+
+/* Tags */
+.tag {
+  display: inline-block; padding: 2px 8px; border-radius: 10px;
+  font-size: 0.71rem; font-weight: 600; white-space: nowrap;
+}
+.tag-blue { background: #ebf8ff; color: #2b6cb0; }
+.tag-green { background: #f0fff4; color: #276749; }
+.tag-red { background: #fff5f5; color: #c53030; }
+.tag-orange { background: #fffaf0; color: #c05621; }
+.tag-purple { background: #faf5ff; color: #6b46c1; }
+.tag-teal { background: #e6fffa; color: #285e61; }
+.tag-gray { background: #edf2f7; color: #4a5568; }
+
+/* Callout */
+.callout {
+  border-left: 4px solid var(--color, #2b6cb0);
+  background: var(--bg, #ebf8ff);
+  border-radius: 0 8px 8px 0;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  font-size: 0.85rem;
+  color: #2d3748;
+  line-height: 1.55;
+}
+.callout strong {
+  display: block; color: var(--head, #1a365d);
+  margin-bottom: 5px; font-size: 0.82rem;
+}
+
+/* Two / three col */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+
+/* Institute grid */
+.inst-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; }
+.inst-card {
+  border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px;
+  transition: box-shadow 0.2s; cursor: default;
+}
+.inst-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-color: #bee3f8; }
+.inst-card.hi { border-color: #bee3f8; background: #f0f8ff; }
+.inst-name { font-weight: 700; color: #1a365d; font-size: 0.88rem; margin-bottom: 3px; }
+.inst-city { font-size: 0.78rem; color: #718096; margin-bottom: 8px; }
+.inst-tier {
+  font-size: 0.74rem; color: #2b6cb0;
+  background: #ebf8ff; padding: 3px 8px; border-radius: 4px; display: inline-block;
+}
+
+/* Highlight box */
+.highlight-box {
+  background: linear-gradient(135deg, #1e3a5f, #2b6cb0);
+  color: white; border-radius: 12px; padding: 20px 24px; margin-bottom: 20px;
+}
+.highlight-box h3 { font-size: 1rem; margin-bottom: 8px; opacity: 0.85; }
+.highlight-box p { font-size: 0.9rem; line-height: 1.6; opacity: 0.95; }
+
+/* Timeline */
+.timeline { position: relative; padding-left: 18px; }
+.timeline::before {
+  content: ''; position: absolute; left: 5px; top: 8px; bottom: 8px;
+  width: 2px; background: #e2e8f0;
+}
+.timeline-item { position: relative; margin-bottom: 18px; padding-left: 18px; }
+.timeline-item::before {
+  content: ''; position: absolute; left: -13px; top: 5px;
+  width: 10px; height: 10px; border-radius: 50%;
+  background: #2b6cb0; border: 2px solid white;
+  box-shadow: 0 0 0 2px #2b6cb0;
+}
+.timeline-month { font-size: 0.72rem; font-weight: 700; color: #2b6cb0; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
+.timeline-exam { font-size: 0.88rem; font-weight: 600; color: #2d3748; }
+.timeline-detail { font-size: 0.76rem; color: #718096; margin-top: 2px; }
+
+/* Summary bar */
+.summary-bar {
+  background: #1a365d; color: white; border-radius: 10px;
+  padding: 16px 20px; margin-bottom: 20px;
+  display: flex; gap: 24px; align-items: center; flex-wrap: wrap;
+}
+.summary-bar .item { text-align: center; }
+.summary-bar .num { font-size: 1.5rem; font-weight: 800; }
+.summary-bar .lbl { font-size: 0.72rem; opacity: 0.75; text-transform: uppercase; letter-spacing: 0.4px; }
+.summary-bar .divider { width: 1px; background: rgba(255,255,255,0.2); align-self: stretch; }
+
+.disclaimer { margin-top: 10px; font-size: 0.75rem; color: #a0aec0; line-height: 1.5; }
+.subhead { margin: 18px 0 10px; font-size: 0.8rem; font-weight: 700; color: #718096; text-transform: uppercase; letter-spacing: 0.4px; }
+.subhead:first-child { margin-top: 0; }
+
+@media (max-width: 720px) {
+  .two-col, .three-col { grid-template-columns: 1fr; }
+  .funnel-label { width: 130px; }
+  .funnel-arrow { padding-left: 142px; }
+  .content { padding: 14px 14px; }
+  .tab-bar { padding: 0 12px; }
+  .tab { padding: 12px 14px; font-size: 0.8rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <h1>📚 All UG Entrance Exams — Reference</h1>
+    <div class="subtitle">Every stream, after Class 12 &nbsp;·&nbsp; National coverage &nbsp;·&nbsp; Govt &amp; merit-based focus</div>
+  </div>
+  <div class="session-badge">🎯 Counselor's Reference — Draft · Stats verified Jul 2026</div>
+</div>
+
+<div class="tab-bar">
+  <div class="tab active" onclick="switchTab('medical', this)">🩺 Medical</div>
+  <div class="tab" onclick="switchTab('engineering', this)">⚙ Engineering</div>
+  <div class="tab" onclick="switchTab('university', this)">🏛️ CUET</div>
+  <div class="tab" onclick="switchTab('law', this)">⚖ Law</div>
+  <div class="tab" onclick="switchTab('design', this)">✏ Design</div>
+  <div class="tab" onclick="switchTab('management', this)">📊 Management &amp; Commerce</div>
+  <div class="tab" onclick="switchTab('science', this)">⚗ Science &amp; Research</div>
+  <div class="tab" onclick="switchTab('agriculture', this)">🌾 Agriculture</div>
+  <div class="tab" onclick="switchTab('hotel', this)">🏨 Hotel &amp; Tourism</div>
+  <div class="tab" onclick="switchTab('defence', this)">🪖 Defence, Security &amp; Sports</div>
+  <div class="tab" onclick="switchTab('arts', this)">🎨 Arts &amp; Media</div>
+  <div class="tab" onclick="switchTab('other', this)">💊 Pharmacy &amp; Teacher Ed</div>
+  <div class="tab" onclick="switchTab('all', this)">📋 All Exams</div>
+</div>
+
+<div class="content">
+
+  <!-- ══════════════ MEDICAL ══════════════ -->
+  <div id="tab-medical" class="tab-content active">
+
+    <div class="stats-row">
+      <div class="stat-card" style="--accent:#e53e3e">
+        <div class="stat-number">22.8L</div>
+        <div class="stat-label">Register (NEET)</div>
+        <div class="stat-sub">2026 · ~22L appeared</div>
+      </div>
+      <div class="stat-card" style="--accent:#ed8936">
+        <div class="stat-number">824</div>
+        <div class="stat-label">Medical Colleges</div>
+        <div class="stat-sub">Govt + Private, all offer MBBS via NEET</div>
+      </div>
+      <div class="stat-card" style="--accent:#38a169">
+        <div class="stat-number">~1.3L</div>
+        <div class="stat-label">MBBS Seats</div>
+        <div class="stat-sub">~64K of these are govt</div>
+      </div>
+      <div class="stat-card" style="--accent:#2b6cb0">
+        <div class="stat-number">720</div>
+        <div class="stat-label">NEET Total Marks</div>
+        <div class="stat-sub">180 Q × 4 marks</div>
+      </div>
+      <div class="stat-card" style="--accent:#285e61">
+        <div class="stat-number">~53K</div>
+        <div class="stat-label">AYUSH UG Seats</div>
+        <div class="stat-sub">Govt + private, also via NEET score</div>
+      </div>
+      <div class="stat-card" style="--accent:#6b46c1">
+        <div class="stat-number">6</div>
+        <div class="stat-label">Exams in this Family</div>
+        <div class="stat-sub">NEET + 5 specialised nursing/paramedical</div>
+      </div>
+    </div>
+
+    <div class="highlight-box">
+      <h3>Flagship Exam — NEET UG</h3>
+      <p>One exam decides admission to <strong>every</strong> medical, dental, and AYUSH UG seat in India — govt and private. There is no other route into MBBS. Every PCB/PCMB student should register for it, regardless of final career direction, because it also opens BDS, BAMS, BHMS, BSMS, BUMS, BNYS, B.Sc Nursing and BVSc.</p>
+    </div>
+
+    <div class="two-col">
+      <div class="section">
+        <div class="section-title"><div class="icon">📊</div>The Competition Funnel</div>
+        <div class="funnel">
+          <div class="funnel-row"><div class="funnel-label">Register for NEET</div><div class="funnel-bar-wrap"><div class="funnel-bar" style="width:100%;background:#e53e3e;">22.8 lakh</div></div></div>
+          <div class="funnel-arrow">↓</div>
+          <div class="funnel-row"><div class="funnel-label">Actually appear</div><div class="funnel-bar-wrap"><div class="funnel-bar" style="width:96%;background:#f56565;">~22 lakh</div></div></div>
+          <div class="funnel-arrow">↓</div>
+          <div class="funnel-row"><div class="funnel-label">Qualify (above cutoff)</div><div class="funnel-bar-wrap"><div class="funnel-bar" style="width:56%;background:#ed8936;">~13 lakh</div></div></div>
+          <div class="funnel-arrow">↓</div>
+          <div class="funnel-row"><div class="funnel-label">Get any MBBS seat</div><div class="funnel-bar-wrap"><div class="funnel-bar" style="width:18%;min-width:80px;background:#48bb78;">1.3 lakh</div></div></div>
+          <div class="funnel-arrow">↓</div>
+          <div class="funnel-row"><div class="funnel-label">Get Govt MBBS seat</div><div class="funnel-bar-wrap"><div class="funnel-bar" style="width:9%;min-width:65px;background:#38a169;">~64,000</div></div></div>
+        </div>
+        <div class="disclaimer">⚠️ Only the top <strong>~3%</strong> of all test-takers get a govt MBBS seat. <em>(Figures: NTA registration data + NMC seat data, 2026.)</em></div>
+      </div>
+
+      <div class="section">
+        <div class="section-title"><div class="icon">🎯</div>Score vs. What You Get</div>
+        <div class="score-ladder">
+          <div class="score-row"><div class="score-badge" style="background:#c6f6d5;color:#276749;">650–720</div><div class="score-desc" style="border-left-color:#c6f6d5;">AIIMS New Delhi, JIPMER — best govt seats in India</div></div>
+          <div class="score-row"><div class="score-badge" style="background:#bee3f8;color:#2c5282;">580–650</div><div class="score-desc" style="border-left-color:#bee3f8;">Good govt medical colleges in most states. All AIIMS.</div></div>
+          <div class="score-row"><div class="score-badge" style="background:#e9d8fd;color:#553c9a;">520–580</div><div class="score-desc" style="border-left-color:#e9d8fd;">State govt MBBS (OC/BC category) — the main battleground</div></div>
+          <div class="score-row"><div class="score-badge" style="background:#feebc8;color:#c05621;">450–520</div><div class="score-desc" style="border-left-color:#feebc8;">Borderline govt — mostly private MBBS or AYUSH govt colleges</div></div>
+          <div class="score-row"><div class="score-badge" style="background:#fed7e2;color:#97266d;">350–450</div><div class="score-desc" style="border-left-color:#fed7e2;">BAMS / BHMS / BSMS / BUMS govt colleges (AYUSH track)</div></div>
+          <div class="score-row"><div class="score-badge" style="background:#e2e8f0;color:#718096;">Below 350</div><div class="score-desc" style="border-left-color:#e2e8f0;">Very limited — mostly AYUSH private. Honest conversation needed.</div></div>
+        </div>
+        <div class="disclaimer">⚠️ Cutoffs vary by state, category and year — treat these as rough bands, not guarantees.</div>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="section">
+        <div class="section-title"><div class="icon">📐</div>Exam Pattern</div>
+        <table class="ref-table">
+          <thead><tr><th>Subject</th><th>Questions</th><th>Max Marks</th></tr></thead>
+          <tbody>
+            <tr><td>Physics</td><td>45</td><td>180</td></tr>
+            <tr><td>Chemistry</td><td>45</td><td>180</td></tr>
+            <tr><td>Botany</td><td>45</td><td>180</td></tr>
+            <tr><td>Zoology</td><td>45</td><td>180</td></tr>
+            <tr><td><strong>Total</strong></td><td><strong>180</strong></td><td><strong>720</strong></td></tr>
+          </tbody>
+        </table>
+        <div class="callout" style="--color:#e53e3e;--bg:#fff5f5;--head:#c53030;margin-top:14px;"><strong>Marking</strong>+4 correct · −1 wrong · 0 unattempted</div>
+        <div class="callout" style="--color:#4a5568;--bg:#f7fafc;--head:#2d3748;margin-bottom:0;"><strong>Mode &amp; Duration</strong>Offline (pen &amp; paper) · 3 hrs 20 min · 13 languages including Tamil</div>
+      </div>
+      <div class="section">
+        <div class="section-title"><div class="icon">📜</div>Rules &amp; Eligibility</div>
+        <table class="ref-table">
+          <tbody>
+            <tr><td>Min age</td><td>17 years on Dec 31 of admission year</td></tr>
+            <tr><td>Max age</td><td>25 yrs (General) · 30 yrs (Reserved)</td></tr>
+            <tr><td>Attempts</td><td><span class="tag tag-green">No limit</span> — can write every year</td></tr>
+            <tr><td>Min Class 12 %</td><td>50% in PCB (General) · 40% (Reserved)</td></tr>
+            <tr><td>Conducted by</td><td>NTA — National Testing Agency</td></tr>
+            <tr><td>Exam timing</td><td>Usually 2nd Sunday of May</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="icon">🌿</div>NEET Also Opens — AYUSH UG Seats (~53,000 govt + private)</div>
+      <table class="ref-table">
+        <thead><tr><th>Course</th><th>Duration</th><th>Approx Seats (Govt + Pvt)</th><th>Score Range</th></tr></thead>
+        <tbody>
+          <tr><td><strong>BAMS</strong> — Ayurveda</td><td>5.5 yrs</td><td>~31,800 (only ~5,800 govt)</td><td><span class="tag tag-orange">350–450</span></td></tr>
+          <tr><td><strong>BHMS</strong> — Homeopathy</td><td>5.5 yrs</td><td>~15,000+</td><td><span class="tag tag-orange">320–420</span></td></tr>
+          <tr><td><strong>BSMS</strong> — Siddha</td><td>5.5 yrs</td><td>~2,500</td><td><span class="tag tag-orange">350–440</span></td></tr>
+          <tr><td><strong>BUMS</strong> — Unani</td><td>5.5 yrs</td><td>~5,000+</td><td><span class="tag tag-gray">300–400</span></td></tr>
+          <tr><td><strong>BNYS</strong> — Naturopathy &amp; Yoga</td><td>5.5 yrs</td><td>~5,000+</td><td><span class="tag tag-gray">300–400</span></td></tr>
+          <tr><td><strong>BVSc &amp; AH</strong> — Veterinary</td><td>5 yrs</td><td>~4,000+</td><td><span class="tag tag-orange">400–490</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="icon">📋</div>Other Medical &amp; Nursing Entrance Exams</div>
+      <table class="ref-table">
+        <thead><tr><th>Exam</th><th>For</th><th>Level</th><th>Seats</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td><strong>AIIMS Nursing</strong></td><td>B.Sc Nursing at all AIIMS campuses</td><td><span class="tag tag-blue">National</span></td><td>~700 (all AIIMS)</td><td>Separate from NEET. Most competitive nursing admission in India.</td></tr>
+          <tr><td><strong>JIPMER Nursing</strong></td><td>B.Sc Nursing at JIPMER Puducherry</td><td><span class="tag tag-blue">National</span></td><td>~100</td><td>—</td></tr>
+          <tr><td><strong>PGIMER Nursing</strong></td><td>B.Sc Nursing at PGIMER Chandigarh</td><td><span class="tag tag-blue">National</span></td><td>~80</td><td>—</td></tr>
+          <tr><td><strong>CET-PWD</strong></td><td>BPT, BOT, BPO, BASLP at 7 National Institutes for Persons with Disabilities</td><td><span class="tag tag-blue">National</span></td><td>~600</td><td>Open to candidates with and without disabilities (PwD reservation per RPwD Act).</td></tr>
+          <tr><td><strong>Uttarakhand Paramedical Entrance</strong></td><td>BMLT, BPT, nursing diploma, X-ray/OT technician courses</td><td><span class="tag tag-green">State</span></td><td>Varies</td><td>State quota, Uttarakhand domicile + open seats.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <!-- ══════════════ ENGINEERING ══════════════ -->
+  <div id="tab-engineering" class="tab-content">
+
+    <div class="stats-row">
+      <div class="stat-card" style="--accent:#1a4dd6"><div class="stat-number">15–16L</div><div class="stat-label">Register (JEE Main)</div><div class="stat-sub">Unique candidates per year (2026)</div></div>
+      <div class="stat-card" style="--accent:#ed8936"><div class="stat-number">~19K</div><div class="stat-label">IIT Seats</div><div class="stat-sub">Via JEE Advanced (JoSAA 2026)</div></div>
+      <div class="stat-card" style="--accent:#38a169"><div class="stat-number">~48K</div><div class="stat-label">NIT + IIIT + GFTI Seats</div><div class="stat-sub">Via JEE Main alone (JoSAA 2026)</div></div>
+      <div class="stat-card" style="--accent:#6b46c1"><div class="stat-number">19</div><div class="stat-label">Exams in this Family</div><div class="stat-sub">National + every major state CET</div></div>
+    </div>
+
+    <div class="highlight-box">
+      <h3>Flagship Exams — JEE Main &amp; JEE Advanced</h3>
+      <p>JEE Main alone gets you into 31 NITs, 26 IIITs, and GFTIs. Qualifying in the top 2.5 lakh opens JEE Advanced, the gateway to all 23 IITs. Every PCM/PCMB student aiming for a national engineering seat should write JEE Main — most state CETs are a fallback, not a replacement.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="icon">📊</div>The JEE Funnel</div>
+      <div class="funnel">
+        <div class="funnel-row"><div class="funnel-label">Register JEE Main</div><div class="funnel-bar-wrap"><div class="funnel-bar" style="width:100%;background:#1a4dd6;">~16 lakh</div></div></div>
+        <div class="funnel-arrow">↓</div>
+        <div class="funnel-row"><div class="funnel-label">Qualify for JEE Advanced</div><div class="funnel-bar-wrap"><div class="funnel-bar" style="width:21%;min-width:90px;background:#4c6ef5;">2.5 lakh</div></div></div>
+        <div class="funnel-arrow">↓</div>
+        <div class="funnel-row"><div class="funnel-label">Appear for JEE Advanced</div><div class="funnel-bar-wrap"><div class="funnel-bar" style="width:15%;min-width:80px;background:#ed8936;">1.8 lakh</div></div></div>
+        <div class="funnel-arrow">↓</div>
+        <div class="funnel-row"><div class="funnel-label">Get an IIT seat</div><div class="funnel-bar-wrap"><div class="funnel-bar" style="width:1.5%;min-width:60px;background:#38a169;">~19,000</div></div></div>
+      </div>
+      <div class="disclaimer">⚠️ Roughly <strong>1 in 85</strong> JEE Main registrants ends up with an IIT seat. Many more get NITs/IIITs/GFTIs via JEE Main percentile alone, without needing to qualify for Advanced. <em>(Verified 2026: 14.5L Session-1 registrations per NTA; JoSAA 2026 seat matrix — 18,951 IIT · 25,162 NIT · 11,518 IIIT · 11,692 GFTI = 67,323 total.)</em></div>
+    </div>
+
+    <div class="two-col">
+      <div class="section">
+        <div class="section-title"><div class="icon">🎯</div>Percentile / Rank vs. What You Get</div>
+        <div class="score-ladder">
+          <div class="score-row"><div class="score-badge" style="background:#c6f6d5;color:#276749;">AIR &lt; 500</div><div class="score-desc" style="border-left-color:#c6f6d5;">IIT Bombay/Delhi/Madras — CSE at the top IITs</div></div>
+          <div class="score-row"><div class="score-badge" style="background:#bee3f8;color:#2c5282;">AIR 500–5,000</div><div class="score-desc" style="border-left-color:#bee3f8;">Other branches at top IITs, CSE at newer IITs</div></div>
+          <div class="score-row"><div class="score-badge" style="background:#e9d8fd;color:#553c9a;">AIR 5,000–19,000</div><div class="score-desc" style="border-left-color:#e9d8fd;">Any IIT, any branch — the outer edge of IIT admission</div></div>
+          <div class="score-row"><div class="score-badge" style="background:#feebc8;color:#c05621;">JEE Main %ile 99+</div><div class="score-desc" style="border-left-color:#feebc8;">CSE at top NITs (Trichy, Warangal, Surathkal, Calicut)</div></div>
+          <div class="score-row"><div class="score-badge" style="background:#fed7e2;color:#97266d;">JEE Main %ile 90–99</div><div class="score-desc" style="border-left-color:#fed7e2;">Core branches at other NITs/IIITs, or CSE at newer NITs</div></div>
+          <div class="score-row"><div class="score-badge" style="background:#e2e8f0;color:#718096;">JEE Main %ile below 90</div><div class="score-desc" style="border-left-color:#e2e8f0;">State CETs / TNEA / GFTIs / private colleges become the main route</div></div>
+        </div>
+        <div class="disclaimer">⚠️ Cutoffs shift every year with category, home-state quota and branch. Treat as rough orientation only.</div>
+      </div>
+      <div class="section">
+        <div class="section-title"><div class="icon">📜</div>Pattern &amp; Eligibility</div>
+        <table class="ref-table">
+          <tbody>
+            <tr><td>JEE Main pattern</td><td>Physics + Chemistry + Maths, MCQ + numerical value, computer-based</td></tr>
+            <tr><td>JEE Advanced pattern</td><td>2 papers, mixed question types, higher difficulty — format tweaked most years</td></tr>
+            <tr><td>Attempts</td><td>JEE Main: up to 2 sessions/year, across 3 consecutive years. JEE Advanced: max 2 consecutive years, only after qualifying Main</td></tr>
+            <tr><td>Min qualification</td><td>Class 12 with PCM (Computer Science can substitute for one elective at some institutes)</td></tr>
+            <tr><td>Conducted by</td><td>JEE Main — NTA · JEE Advanced — rotating IIT + NTA</td></tr>
+          </tbody>
+        </table>
+        <div class="disclaimer">Exact pattern/marking details change most years — always check the official info bulletin before the exam.</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="icon">🏫</div>Institutes Covered</div>
+      <div class="subhead">IITs (via JEE Advanced)</div>
+      <div class="inst-grid">
+        <div class="inst-card"><div class="inst-name">IIT Bombay</div><div class="inst-city">Mumbai, MH</div><div class="inst-tier">🏆 Premier</div></div>
+        <div class="inst-card"><div class="inst-name">IIT Delhi</div><div class="inst-city">New Delhi</div><div class="inst-tier">🏆 Premier</div></div>
+        <div class="inst-card"><div class="inst-name">IIT Madras</div><div class="inst-city">Chennai, TN</div><div class="inst-tier">🏆 Premier</div></div>
+        <div class="inst-card"><div class="inst-name">IIT Kanpur, Kharagpur, Roorkee, Hyderabad, Guwahati + 16 more</div><div class="inst-city">Pan India</div><div class="inst-tier">✓ 23 IITs total</div></div>
+      </div>
+      <div class="subhead">NITs &amp; IIITs (via JEE Main)</div>
+      <div class="inst-grid">
+        <div class="inst-card"><div class="inst-name">NIT Trichy, Warangal, Surathkal, Calicut</div><div class="inst-city">TN, TS, KA, KL</div><div class="inst-tier">🏆 Top NITs</div></div>
+        <div class="inst-card"><div class="inst-name">All 31 NITs</div><div class="inst-city">Pan India</div><div class="inst-tier">✓ NIT Network</div></div>
+        <div class="inst-card"><div class="inst-name">IIIT Hyderabad, IIIT Delhi</div><div class="inst-city">TS, Delhi</div><div class="inst-tier">🏆 Top IIITs</div></div>
+        <div class="inst-card"><div class="inst-name">All 26 IIITs (Govt + PPP)</div><div class="inst-city">Pan India</div><div class="inst-tier">✓ IIIT Network</div></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="icon">📋</div>Other Engineering Entrance Exams</div>
+      <div class="subhead">National / Institute-level</div>
+      <table class="ref-table" style="margin-bottom:20px;">
+        <thead><tr><th>Exam</th><th>For</th><th>Seats</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td><strong>BITSAT</strong></td><td>BITS Pilani, Goa, Hyderabad — B.Tech/M.Sc(Hons)/B.Pharm</td><td>~3,000</td><td>Online test. Merit-only, no donation seats.</td></tr>
+          <tr><td><strong>IIST Entrance</strong></td><td>B.Tech at IIST Thiruvananthapuram (ISRO)</td><td>~120</td><td>Admission via JEE Advanced rank + IIST cutoff. 5-year ISRO service bond.</td></tr>
+          <tr><td><strong>NATA</strong></td><td>B.Arch at architecture colleges across India</td><td>~10,000+</td><td>Drawing + aesthetic sensitivity + reasoning. No PCM requirement.</td></tr>
+          <tr><td><strong>TANCET</strong></td><td>PG/lateral entry at Anna University colleges</td><td>—</td><td>TN UG B.Tech needs no entrance exam — TNEA uses Class 12 marks.</td></tr>
+        </tbody>
+      </table>
+      <div class="subhead">State CETs (engineering, pharmacy, agriculture)</div>
+      <table class="ref-table">
+        <thead><tr><th>Exam</th><th>State</th><th>Seats</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td><strong>MHT CET</strong></td><td>Maharashtra</td><td>~1.5 lakh+</td><td>COEP, VJTI covered. Separate Engg/Pharmacy papers.</td></tr>
+          <tr><td><strong>KCET</strong></td><td>Karnataka</td><td>~70,000+</td><td>Kannada-medium students get extra weightage.</td></tr>
+          <tr><td><strong>WBJEE</strong></td><td>West Bengal</td><td>~30,000+</td><td>Jadavpur University, IIEST Shibpur covered.</td></tr>
+          <tr><td><strong>KEAM</strong></td><td>Kerala</td><td>~30,000+</td><td>Engineering, architecture, pharmacy. Covers CET Trivandrum, CUSAT.</td></tr>
+          <tr><td><strong>AP EAPCET</strong></td><td>Andhra Pradesh</td><td>~1 lakh+</td><td>Engineering, agriculture, pharmacy combined.</td></tr>
+          <tr><td><strong>TS EAMCET</strong></td><td>Telangana</td><td>~1.2 lakh+</td><td>Osmania University, JNTU Hyderabad covered.</td></tr>
+          <tr><td><strong>GUJCET</strong></td><td>Gujarat</td><td>~60,000+</td><td>LD College, DAIICT covered.</td></tr>
+          <tr><td><strong>OJEE</strong></td><td>Odisha</td><td>~20,000+</td><td>NIT Rourkela uses JEE Main, not OJEE.</td></tr>
+          <tr><td><strong>BCECE</strong></td><td>Bihar</td><td>~15,000+</td><td>NIT Patna uses JEE Main. BCECE covers state colleges.</td></tr>
+          <tr><td><strong>JCECE</strong></td><td>Jharkhand</td><td>~10,000+</td><td>BIT Mesra &amp; NIT Jamshedpur use JEE Main.</td></tr>
+          <tr><td><strong>CG PET</strong></td><td>Chhattisgarh</td><td>~12,000+</td><td>NIT Raipur uses JEE Main.</td></tr>
+          <tr><td><strong>HP CET</strong></td><td>Himachal Pradesh</td><td>~8,000+</td><td>NIT Hamirpur uses JEE Main.</td></tr>
+          <tr><td><strong>GGSIPU CET</strong></td><td>Delhi</td><td>~25,000+</td><td>DTU, NSUT, IGDTUW use JEE Main; this covers the rest of IPU.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <!-- ══════════════ UNIVERSITY ══════════════ -->
+  <div id="tab-university" class="tab-content">
+
+    <div class="stats-row">
+      <div class="stat-card" style="--accent:#1a4dd6"><div class="stat-number">280+</div><div class="stat-label">Participating Universities</div><div class="stat-sub">Via CUET-UG (2026)</div></div>
+      <div class="stat-card" style="--accent:#e53e3e"><div class="stat-number">15.7L</div><div class="stat-label">Registrations</div><div class="stat-sub">CUET-UG 2026</div></div>
+      <div class="stat-card" style="--accent:#38a169"><div class="stat-number">1L+</div><div class="stat-label">Total Seats</div><div class="stat-sub">Across all CUET universities</div></div>
+      <div class="stat-card" style="--accent:#6b46c1"><div class="stat-number">3</div><div class="stat-label">Exams in this Family</div><div class="stat-sub">CUET-UG, TISS BAT, PUCET UG</div></div>
+    </div>
+
+    <div class="highlight-box">
+      <h3>Flagship Exam — CUET-UG</h3>
+      <p>Replaced individual entrance tests for Delhi University, JNU, BHU, Hyderabad Central, Pondicherry University, AMU and 40+ other central universities. It's the main route into a central university for any stream — Science, Commerce or Arts.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="icon">❓</div>Do You Need CUET?</div>
+      <div class="callout" style="--color:#2b6cb0;--bg:#ebf8ff;--head:#1a365d;">
+        <strong>Take CUET if...</strong>
+        You want a UG seat at a Central University — Delhi University, JNU, BHU, Hyderabad Central, or Pondicherry University (the nearest one for TN &amp; Puducherry students). Commerce and Arts students especially — CUET is the main route to top central universities for B.Com, BA Economics and similar degrees.
+      </div>
+      <div class="callout" style="--color:#38a169;--bg:#f0fff4;--head:#276749;margin-bottom:0;">
+        <strong>You do NOT need CUET if...</strong>
+        You're applying to Tamil Nadu government colleges — those admit on Class 12 marks (Arts &amp; Science) or TNEA rank (Engineering).
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="section">
+        <div class="section-title"><div class="icon">📐</div>Pattern &amp; Eligibility</div>
+        <table class="ref-table">
+          <tbody>
+            <tr><td>Format</td><td>Computer-based test — domain subject papers + language + general test</td></tr>
+            <tr><td>Subject choice</td><td>Pick domain papers matching your intended degree; any stream can attempt any domain paper</td></tr>
+            <tr><td>Validity</td><td>Score valid for that admission cycle</td></tr>
+            <tr><td>Conducted by</td><td>NTA</td></tr>
+            <tr><td>When</td><td>May–June</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="section">
+        <div class="section-title"><div class="icon">🏫</div>Key Institutes</div>
+        <div class="inst-grid">
+          <div class="inst-card"><div class="inst-name">Delhi University (DU)</div><div class="inst-city">New Delhi</div><div class="inst-tier">🏆 Premier Central Univ</div></div>
+          <div class="inst-card"><div class="inst-name">JNU</div><div class="inst-city">New Delhi</div><div class="inst-tier">🏆 Premier Central Univ</div></div>
+          <div class="inst-card"><div class="inst-name">BHU</div><div class="inst-city">Varanasi, UP</div><div class="inst-tier">🏆 Premier Central Univ</div></div>
+          <div class="inst-card"><div class="inst-name">Hyderabad Central University</div><div class="inst-city">Hyderabad, TS</div><div class="inst-tier">🏆 Premier Central Univ</div></div>
+          <div class="inst-card hi"><div class="inst-name">Pondicherry Central University</div><div class="inst-city">Puducherry</div><div class="inst-tier">⭐ In TN/PY scope</div></div>
+          <div class="inst-card"><div class="inst-name">AMU, EFLU, Jamia Millia + many more</div><div class="inst-city">Pan India</div><div class="inst-tier">✓ 280+ Universities</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="icon">📋</div>Other University-Admission Exams</div>
+      <table class="ref-table">
+        <thead><tr><th>Exam</th><th>For</th><th>Level</th><th>Seats</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td><strong>TISS BAT</strong></td><td>BA — Social Work, Development Studies, Education, Applied Psychology at TISS</td><td><span class="tag tag-purple">Institute</span></td><td>~300</td><td>Centrally funded deemed university, subsidised fees. Very competitive.</td></tr>
+          <tr><td><strong>PUCET UG</strong></td><td>B.Sc, BA, B.Com, BCA at Pondicherry University</td><td><span class="tag tag-green">State</span></td><td>~2,000</td><td>Directly relevant for TN/PY students; also accepts CUET for some programs.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <!-- ══════════════ LAW ══════════════ -->
+  <div id="tab-law" class="tab-content">
+
+    <div class="stats-row">
+      <div class="stat-card" style="--accent:#18160f"><div class="stat-number">75K</div><div class="stat-label">UG Registrations (CLAT)</div><div class="stat-sub">CLAT 2026</div></div>
+      <div class="stat-card" style="--accent:#1a4dd6"><div class="stat-number">26</div><div class="stat-label">National Law Universities</div><div class="stat-sub">In the CLAT consortium</div></div>
+      <div class="stat-card" style="--accent:#38a169"><div class="stat-number">~4,100</div><div class="stat-label">UG Seats (NLUs)</div><div class="stat-sub">All 26 NLUs combined, incl. quotas</div></div>
+      <div class="stat-card" style="--accent:#6b46c1"><div class="stat-number">4</div><div class="stat-label">Exams in this Family</div><div class="stat-sub">CLAT, AILET + 2 state law CETs</div></div>
+    </div>
+
+    <div class="highlight-box">
+      <h3>Flagship Exam — CLAT</h3>
+      <p>The single entrance test for BA LLB / BBA LLB at all National Law Universities except NLU Delhi (which runs its own AILET). No stream restriction — Science, Commerce and Arts students all compete on the same paper.</p>
+    </div>
+
+    <div class="two-col">
+      <div class="section">
+        <div class="section-title"><div class="icon">🎯</div>Approximate Rank vs. NLU Tier</div>
+        <div class="score-ladder">
+          <div class="score-row"><div class="score-badge" style="background:#c6f6d5;color:#276749;">Rank ~1–100</div><div class="score-desc" style="border-left-color:#c6f6d5;">NLSIU Bengaluru — the #1 NLU</div></div>
+          <div class="score-row"><div class="score-badge" style="background:#bee3f8;color:#2c5282;">Rank ~100–500</div><div class="score-desc" style="border-left-color:#bee3f8;">NALSAR Hyderabad, NUJS Kolkata, NLU Jodhpur</div></div>
+          <div class="score-row"><div class="score-badge" style="background:#e9d8fd;color:#553c9a;">Rank ~500–1,500</div><div class="score-desc" style="border-left-color:#e9d8fd;">NLIU Bhopal, RGNUL, GNLU and other top-10 NLUs</div></div>
+          <div class="score-row"><div class="score-badge" style="background:#feebc8;color:#c05621;">Rank ~1,500–4,000</div><div class="score-desc" style="border-left-color:#feebc8;">Remaining NLUs — still a 5-year integrated law degree at a national institute</div></div>
+        </div>
+        <div class="disclaimer">⚠️ Rank bands are rough and shift every year with category and home-state reservation. Always check the official consortium's cutoff data.</div>
+      </div>
+      <div class="section">
+        <div class="section-title"><div class="icon">📐</div>Pattern &amp; Eligibility</div>
+        <table class="ref-table">
+          <tbody>
+            <tr><td>Format</td><td>Passage-based MCQs — English, Current Affairs/GK, Legal Reasoning, Logical Reasoning, Quantitative Techniques</td></tr>
+            <tr><td>Duration</td><td>2 hours</td></tr>
+            <tr><td>Min Class 12 %</td><td>45% (General) · 40% (Reserved)</td></tr>
+            <tr><td>Conducted by</td><td>Consortium of National Law Universities</td></tr>
+            <tr><td>When</td><td>December</td></tr>
+          </tbody>
+        </table>
+        <div class="disclaimer">Exact marking scheme and question count are set fresh each year by the consortium — check the current year's brochure.</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="icon">📋</div>Other Law Entrance Exams</div>
+      <table class="ref-table">
+        <thead><tr><th>Exam</th><th>For</th><th>Level</th><th>Seats</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td><strong>AILET</strong></td><td>BA LLB at NLU Delhi only</td><td><span class="tag tag-blue">National</span></td><td>~80</td><td>NLU Delhi is not in the CLAT consortium — separate exam required.</td></tr>
+          <tr><td><strong>MH CET Law</strong></td><td>5-year &amp; 3-year law programs in Maharashtra</td><td><span class="tag tag-green">State</span></td><td>~5,000+</td><td>Govt Law College Mumbai, ILS Law College Pune covered.</td></tr>
+          <tr><td><strong>AP &amp; TS LAWCET</strong></td><td>Law colleges in Andhra Pradesh &amp; Telangana</td><td><span class="tag tag-green">State</span></td><td>~5,000+</td><td>Covers NALSAR's TS quota seats.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <!-- ══════════════ DESIGN ══════════════ -->
+  <div id="tab-design" class="tab-content">
+
+    <div class="stats-row">
+      <div class="stat-card" style="--accent:#855100"><div class="stat-number">4</div><div class="stat-label">Exams in this Family</div><div class="stat-sub">UCEED, NID DAT, NIFT, FDDI</div></div>
+      <div class="stat-card" style="--accent:#38a169"><div class="stat-number">~5,000</div><div class="stat-label">NIFT Seats</div><div class="stat-sub">Across 20 campuses (2026)</div></div>
+      <div class="stat-card" style="--accent:#1a4dd6"><div class="stat-number">Any</div><div class="stat-label">Stream Eligible</div><div class="stat-sub">No PCM requirement for any of these</div></div>
+    </div>
+
+    <div class="callout" style="--color:#2b6cb0;--bg:#ebf8ff;--head:#1a365d;">
+      <strong>No score ladders here</strong>
+      Design entrance exams are judged on drawing, visual perception and creative aptitude — not a percentile system that maps cleanly to a rank band. Use the pattern/eligibility facts below instead of a cutoff table.
+    </div>
+
+    <div class="three-col">
+      <div class="section">
+        <div class="section-title"><div class="icon">✏</div>UCEED</div>
+        <table class="ref-table">
+          <tbody>
+            <tr><td>For</td><td>B.Des at IITs</td></tr>
+            <tr><td>Seats</td><td>~245 total (2026)</td></tr>
+            <tr><td>Tests</td><td>Visual perception, drawing, logical reasoning</td></tr>
+            <tr><td>When</td><td>January</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:10px;font-size:0.8rem;color:#4a5568;">IIT Bombay (IDC School of Design), IIT Delhi, IIT Guwahati, IIT Hyderabad, IIT Indore, IIT Roorkee, IIITDM Jabalpur.</div>
+      </div>
+      <div class="section">
+        <div class="section-title"><div class="icon">🎨</div>NID DAT</div>
+        <table class="ref-table">
+          <tbody>
+            <tr><td>For</td><td>B.Des at NID campuses</td></tr>
+            <tr><td>Seats</td><td>~425 (all NIDs, 2026)</td></tr>
+            <tr><td>Tests</td><td>Studio test + written — creative thinking, observation</td></tr>
+            <tr><td>When</td><td>January</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:10px;font-size:0.8rem;color:#4a5568;">NID Ahmedabad, Gandhinagar, Bengaluru + Jorhat, Amaravati, Kurukshetra.</div>
+      </div>
+      <div class="section">
+        <div class="section-title"><div class="icon">👗</div>NIFT Entrance</div>
+        <table class="ref-table">
+          <tbody>
+            <tr><td>For</td><td>B.Des &amp; B.F.Tech at 20 NIFT campuses</td></tr>
+            <tr><td>Seats</td><td>~5,000 (all NIFTs, 2026)</td></tr>
+            <tr><td>Tests</td><td>GAT (written) + CAT (creative) + situation test</td></tr>
+            <tr><td>When</td><td>February</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:10px;font-size:0.8rem;color:#4a5568;">New Delhi, Mumbai, Bengaluru, Chennai, Hyderabad + 12 more.</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="icon">📋</div>Other Design Exams</div>
+      <table class="ref-table">
+        <thead><tr><th>Exam</th><th>For</th><th>Seats</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td><strong>FDDI AIST</strong></td><td>B.Des Footwear Design, Fashion Design &amp; Fashion Management at FDDI</td><td>~1,000+</td><td>Campuses in Noida, Chennai, Kolkata, Chhindwara, Fulapur, Rohtak + more.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <!-- ══════════════ MANAGEMENT & COMMERCE ══════════════ -->
+  <div id="tab-management" class="tab-content">
+
+    <div class="stats-row">
+      <div class="stat-card" style="--accent:#0d6640"><div class="stat-number">7</div><div class="stat-label">Exams in this Family</div><div class="stat-sub">4 IPM routes + 3 professional foundations</div></div>
+      <div class="stat-card" style="--accent:#1a4dd6"><div class="stat-number">150</div><div class="stat-label">IPM Seats (IIM Indore)</div><div class="stat-sub">Tens of thousands apply each year</div></div>
+      <div class="stat-card" style="--accent:#38a169"><div class="stat-number">MBA @ 22</div><div class="stat-label">The IPM Pitch</div><div class="stat-sub">5-year integrated BBA+MBA at an IIM</div></div>
+    </div>
+
+    <div class="highlight-box">
+      <h3>Flagship Exam — IPMAT Indore</h3>
+      <p>The 5-year Integrated Programme in Management (IPM) lets a Class 12 student join an IIM directly and graduate with an MBA by age 22 — years ahead of the usual CAT-after-graduation route.</p>
+    </div>
+
+    <div class="two-col">
+      <div class="section">
+        <div class="section-title"><div class="icon">📊</div>How Competitive Is It?</div>
+        <div class="funnel">
+          <div class="funnel-row"><div class="funnel-label">Apply</div><div class="funnel-bar-wrap"><div class="funnel-bar" style="width:100%;background:#0d6640;">~40,000+ (approx)</div></div></div>
+          <div class="funnel-arrow">↓</div>
+          <div class="funnel-row"><div class="funnel-label">Get a seat at IIM Indore</div><div class="funnel-bar-wrap"><div class="funnel-bar" style="width:0.3%;min-width:60px;background:#38a169;">150</div></div></div>
+        </div>
+        <div class="disclaimer">⚠️ Selection rate well under 1% — one of the most selective UG-level exams in India. Seat count (150 + 5 international) is official; applicant count varies by year and source.</div>
+      </div>
+      <div class="section">
+        <div class="section-title"><div class="icon">📐</div>Pattern &amp; Eligibility</div>
+        <table class="ref-table">
+          <tbody>
+            <tr><td>Format</td><td>Quantitative Ability + Verbal Ability — Maths tested heavily</td></tr>
+            <tr><td>Min qualification</td><td>Class 12 pass with strong Maths background (PCM or Commerce+Maths)</td></tr>
+            <tr><td>Conducted by</td><td>IIM Indore</td></tr>
+            <tr><td>When</td><td>May</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="icon">📋</div>Other Management &amp; Commerce Exams</div>
+      <table class="ref-table">
+        <thead><tr><th>Exam</th><th>For</th><th>Level</th><th>Seats</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td><strong>IPMAT Rohtak</strong></td><td>5-year IPM at IIM Rohtak</td><td><span class="tag tag-blue">National</span></td><td>~198</td><td>Separate paper from IPMAT Indore.</td></tr>
+          <tr><td><strong>JIPMAT</strong></td><td>5-year IPM at IIM Jammu &amp; IIM Bodh Gaya</td><td><span class="tag tag-blue">National</span></td><td>~200 (both)</td><td>One test, two IIM campuses.</td></tr>
+          <tr><td><strong>UGAT</strong></td><td>BBA, BHM, BCA at AIMA-affiliated colleges</td><td><span class="tag tag-blue">National</span></td><td>Many seats</td><td>—</td></tr>
+          <tr><td><strong>CA Foundation</strong></td><td>Entry to Chartered Accountancy</td><td><span class="tag tag-orange">Professional</span></td><td>Open, no limit</td><td>No stream restriction. Leads to CA Intermediate then CA Final.</td></tr>
+          <tr><td><strong>CS Foundation</strong></td><td>Entry to Company Secretary program</td><td><span class="tag tag-orange">Professional</span></td><td>Open</td><td>Can be pursued alongside any UG degree.</td></tr>
+          <tr><td><strong>CMA Foundation</strong></td><td>Entry to Cost &amp; Management Accountancy</td><td><span class="tag tag-orange">Professional</span></td><td>Open</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <!-- ══════════════ SCIENCE & RESEARCH ══════════════ -->
+  <div id="tab-science" class="tab-content">
+
+    <div class="highlight-box">
+      <h3>What is IISER?</h3>
+      <p>Indian Institutes of Science Education and Research — 7 premier institutes, prestige equivalent to the IITs but focused purely on science. The BS-MS is a <strong>fully funded 5-year integrated degree</strong> — low fees, monthly fellowship from Day 1. The best route in India for a student who loves science as a subject, not just as an exam.</p>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-card" style="--accent:#6b46c1"><div class="stat-number">7</div><div class="stat-label">IISERs in India</div><div class="stat-sub">Premier govt institutes</div></div>
+      <div class="stat-card" style="--accent:#2b6cb0"><div class="stat-number">5 yrs</div><div class="stat-label">BS-MS Dual Degree</div><div class="stat-sub">Integrated program</div></div>
+      <div class="stat-card" style="--accent:#38a169"><div class="stat-number">₹5K</div><div class="stat-label">Monthly Fellowship</div><div class="stat-sub">Paid to study science</div></div>
+      <div class="stat-card" style="--accent:#ed8936"><div class="stat-number">~2,360</div><div class="stat-label">Seats via IAT</div><div class="stat-sub">7 IISERs + partner institutes (2026)</div></div>
+      <div class="stat-card" style="--accent:#285e61"><div class="stat-number">6</div><div class="stat-label">Exams in this Family</div><div class="stat-sub">IAT, NEST, ISI, CMI + 2 others</div></div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="icon">🏫</div>Flagship Exam — IISER IAT — Institutes That Accept It</div>
+      <div class="subhead">The 7 IISERs</div>
+      <div class="inst-grid">
+        <div class="inst-card"><div class="inst-name">IISER Pune</div><div class="inst-city">Pune, Maharashtra</div><div class="inst-tier">Oldest &amp; most competitive</div></div>
+        <div class="inst-card"><div class="inst-name">IISER Kolkata</div><div class="inst-city">Mohanpur, West Bengal</div><div class="inst-tier">Strong Physics &amp; Chemistry</div></div>
+        <div class="inst-card"><div class="inst-name">IISER Mohali</div><div class="inst-city">Mohali, Punjab</div><div class="inst-tier">Strong Biology research</div></div>
+        <div class="inst-card"><div class="inst-name">IISER Bhopal</div><div class="inst-city">Bhopal, Madhya Pradesh</div><div class="inst-tier">Growing research output</div></div>
+        <div class="inst-card"><div class="inst-name">IISER Thiruvananthapuram</div><div class="inst-city">Thiruvananthapuram, Kerala</div><div class="inst-tier">Closest to Tamil Nadu</div></div>
+        <div class="inst-card"><div class="inst-name">IISER Tirupati</div><div class="inst-city">Tirupati, Andhra Pradesh</div><div class="inst-tier">Newer, expanding fast</div></div>
+        <div class="inst-card"><div class="inst-name">IISER Berhampur</div><div class="inst-city">Berhampur, Odisha</div><div class="inst-tier">Newest campus</div></div>
+      </div>
+      <div class="subhead">Also accept IAT score — partner institutes (2026)</div>
+      <div class="inst-grid">
+        <div class="inst-card hi"><div class="inst-name">IIT Madras</div><div class="inst-city">Chennai, Tamil Nadu</div><div style="font-size:0.78rem;color:#2d3748;margin-bottom:8px;">Select BS programs — sciences</div><div class="inst-tier" style="background:#bee3f8;color:#1a365d;">Closest top institute for TN students</div></div>
+        <div class="inst-card hi"><div class="inst-name">IIT Guwahati</div><div class="inst-city">Guwahati, Assam</div><div style="font-size:0.78rem;color:#2d3748;margin-bottom:8px;">Select science programs</div><div class="inst-tier" style="background:#bee3f8;color:#1a365d;">New IAT partner (2026)</div></div>
+        <div class="inst-card hi"><div class="inst-name">IACS Kolkata</div><div class="inst-city">Kolkata, West Bengal</div><div style="font-size:0.78rem;color:#2d3748;margin-bottom:8px;">Integrated science degree</div><div class="inst-tier" style="background:#bee3f8;color:#1a365d;">Historic research institute</div></div>
+        <div class="inst-card hi"><div class="inst-name">IIEST Shibpur</div><div class="inst-city">Howrah, West Bengal</div><div style="font-size:0.78rem;color:#2d3748;margin-bottom:8px;">Select science programs</div><div class="inst-tier" style="background:#bee3f8;color:#1a365d;">New IAT partner (2026)</div></div>
+        <div class="inst-card"><div class="inst-name">IISc Bangalore</div><div class="inst-city">Bengaluru, Karnataka</div><div style="font-size:0.78rem;color:#2d3748;margin-bottom:8px;">BS (Research) — 4 years</div><div class="inst-tier">Admits via multiple channels incl. IAT — verify current-year policy</div></div>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="section">
+        <div class="section-title"><div class="icon">📐</div>IAT Exam Pattern</div>
+        <table class="ref-table">
+          <thead><tr><th>Subject</th><th>Questions</th><th>Syllabus</th></tr></thead>
+          <tbody>
+            <tr><td>Biology</td><td>~15</td><td>Class 11 + 12</td></tr>
+            <tr><td>Chemistry</td><td>~15</td><td>Class 11 + 12</td></tr>
+            <tr><td>Mathematics</td><td>~15</td><td>Class 11 + 12</td></tr>
+            <tr><td>Physics</td><td>~15</td><td>Class 11 + 12</td></tr>
+            <tr><td><strong>Total</strong></td><td><strong>~60</strong></td><td>MCQ + NAT format</td></tr>
+          </tbody>
+        </table>
+        <div class="callout" style="--color:#4a5568;--bg:#f7fafc;--head:#2d3748;margin-top:14px;margin-bottom:0;"><strong>Mode &amp; Timing</strong>Online (computer-based) · 3 hours · Usually June</div>
+      </div>
+      <div class="section">
+        <div class="section-title"><div class="icon">📜</div>Eligibility &amp; 3 Routes</div>
+        <table class="ref-table">
+          <tbody>
+            <tr><td>Stream</td><td>PCM or PCB — PCMB fully eligible</td></tr>
+            <tr><td>Class 12 min %</td><td>60% aggregate (55% for SC/ST/OBC-NCL)</td></tr>
+            <tr><td>Fees</td><td>Very low — govt-funded institute</td></tr>
+          </tbody>
+        </table>
+        <div class="callout" style="--color:#6b46c1;--bg:#faf5ff;--head:#553c9a;margin-top:14px;"><strong>1. IAT</strong>The direct exam, written in June after Class 12. Open to all students.</div>
+        <div class="callout" style="--color:#2b6cb0;--bg:#ebf8ff;--head:#1a365d;"><strong>2. JEE Advanced Channel</strong>Strong JEE Advanced rank → direct IISER admission (no IAT needed).</div>
+        <div class="callout" style="--color:#38a169;--bg:#f0fff4;--head:#276749;margin-bottom:0;"><strong>3. SCB — State/Central Board Channel</strong>Top rank in state board (within a cutoff percentile) → eligible without IAT.</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="icon">💡</div>Who Should Consider IISER / the Research Track</div>
+      <div class="callout" style="--color:#38a169;--bg:#f0fff4;--head:#276749;">
+        <strong>✅ A good fit if the student says</strong>
+        "I love this subject, not just for the exam" · "I'm curious about how things work" · "I like lab work" · "I want to go abroad for higher studies" · "I'm okay with a non-clinical / research career"
+      </div>
+      <div class="callout" style="--color:#ed8936;--bg:#fffaf0;--head:#c05621;margin-bottom:0;">
+        <strong>⚠️ Mention, don't push, if</strong>
+        The primary goal is a clinical/industry career, or Maths is weak (extra prep needed for the Maths section on IAT).
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="icon">📋</div>Other Science &amp; Research Entrance Exams</div>
+      <table class="ref-table">
+        <thead><tr><th>Exam</th><th>For</th><th>Seats</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td><strong>NEST</strong></td><td>Integrated M.Sc at NISER Bhubaneswar &amp; UM-DAE CEBS Mumbai</td><td>~260 (200 NISER + 57 CEBS)</td><td>NISER is under Dept of Atomic Energy — strong BARC/ISRO pipeline.</td></tr>
+          <tr><td><strong>ISI Admission Test</strong></td><td>B.Stat &amp; B.Math at ISI Kolkata, Delhi, Bengaluru</td><td>~130</td><td>One of India's hardest exams. Extremely Maths-heavy.</td></tr>
+          <tr><td><strong>CMI Entrance</strong></td><td>B.Sc Hons Maths, Physics &amp; CS at Chennai Mathematical Institute</td><td>~80</td><td>Very rigorous — tests mathematical maturity.</td></tr>
+          <tr><td><strong>Geologist Examination</strong></td><td>Geologist/Geo-Physicist posts at GSI, CGWB, Ministry of Mines</td><td>~50–80 posts/yr</td><td>For B.Sc Geology/Applied Geology/Earth Sciences graduates. ISM Dhanbad is the premier feeder institute.</td></tr>
+          <tr><td><strong>KVPY</strong> <span class="tag tag-gray">Discontinued</span></td><td>Was: scholarship + direct IISc entry</td><td>—</td><td>Discontinued after 2021–22. IISER now uses IAT/JEE Advanced only; INSPIRE Scholarship (DST) continues separately.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <!-- ══════════════ AGRICULTURE ══════════════ -->
+  <div id="tab-agriculture" class="tab-content">
+
+    <div class="stats-row">
+      <div class="stat-card" style="--accent:#0d6640"><div class="stat-number">4</div><div class="stat-label">Exams in this Family</div><div class="stat-sub">1 national + 3 state-level</div></div>
+      <div class="stat-card" style="--accent:#38a169"><div class="stat-number">74</div><div class="stat-label">ICAR-Network Universities</div><div class="stat-sub">15% All-India-Quota seats in each</div></div>
+    </div>
+
+    <div class="highlight-box">
+      <h3>Flagship Route — CUET (ICAR-UG)</h3>
+      <p>The national route into B.Sc Agriculture, Horticulture, Fisheries and Forestry at ICAR-network universities — 15% All India Quota seats at 74 state, central and deemed agricultural universities. <strong>Note:</strong> the old standalone ICAR AIEEA UG exam was discontinued in 2023; ICAR UG admission now runs through CUET-UG conducted by NTA. State-specific tests like TNAU's own entrance continue separately.</p>
+    </div>
+
+    <div class="two-col">
+      <div class="section">
+        <div class="section-title"><div class="icon">📐</div>Pattern &amp; Eligibility</div>
+        <table class="ref-table">
+          <tbody>
+            <tr><td>Eligible streams</td><td>PCB, PCMB, PCM, PCM+CS</td></tr>
+            <tr><td>Conducted by</td><td>NTA — via CUET-UG (pick agriculture domain papers)</td></tr>
+            <tr><td>When</td><td>May–June (CUET window)</td></tr>
+            <tr><td>Note</td><td>ICAR scholarship seats at top agricultural universities</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="section">
+        <div class="section-title"><div class="icon">🏫</div>Key Institutes</div>
+        <div class="inst-grid">
+          <div class="inst-card"><div class="inst-name">IARI New Delhi (IARI-PUSA)</div><div class="inst-city">New Delhi</div><div class="inst-tier">🏆 Premier Agri</div></div>
+          <div class="inst-card"><div class="inst-name">TNAU Coimbatore</div><div class="inst-city">Coimbatore, TN</div><div class="inst-tier">🏆 Premier Agri</div></div>
+          <div class="inst-card"><div class="inst-name">UAS Bengaluru &amp; Dharwad</div><div class="inst-city">Karnataka</div><div class="inst-tier">⭐ Excellent</div></div>
+          <div class="inst-card"><div class="inst-name">All central agricultural universities</div><div class="inst-city">Pan India</div><div class="inst-tier">✓ ICAR Network</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="icon">📋</div>Other Agriculture, Veterinary &amp; Fisheries Exams</div>
+      <table class="ref-table">
+        <thead><tr><th>Exam</th><th>For</th><th>Level</th><th>Seats</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td><strong>TNJFU Entrance</strong></td><td>B.F.Sc, B.Tech Fisheries Engg, B.Sc Nautical Science at TN Fisheries University colleges</td><td><span class="tag tag-green">State</span></td><td>~500</td><td>TN state quota. ICAR quota seats filled via CUET (ICAR-UG).</td></tr>
+          <tr><td><strong>Rajasthan JET</strong></td><td>B.Sc Agriculture at Agriculture University colleges in Rajasthan</td><td><span class="tag tag-green">State</span></td><td>~2,000+</td><td>—</td></tr>
+          <tr><td><strong>RAJUVAS RPVT</strong></td><td>BVSc &amp; AH at veterinary colleges in Rajasthan</td><td><span class="tag tag-green">State</span></td><td>~500</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <!-- ══════════════ HOTEL & TOURISM ══════════════ -->
+  <div id="tab-hotel" class="tab-content">
+
+    <div class="stats-row">
+      <div class="stat-card" style="--accent:#855100"><div class="stat-number">21</div><div class="stat-label">Central IHMs</div><div class="stat-sub">Via NCHM JEE</div></div>
+      <div class="stat-card" style="--accent:#38a169"><div class="stat-number">~12,600</div><div class="stat-label">B.Sc HHA Seats</div><div class="stat-sub">90 institutes via NCHM JEE (central + state + private IHMs)</div></div>
+      <div class="stat-card" style="--accent:#1a4dd6"><div class="stat-number">Any</div><div class="stat-label">Stream Eligible</div><div class="stat-sub">No PCM/PCB requirement</div></div>
+      <div class="stat-card" style="--accent:#6b46c1"><div class="stat-number">3</div><div class="stat-label">Exams in this Family</div></div>
+    </div>
+
+    <div class="highlight-box">
+      <h3>Flagship Exam — NCHM JEE</h3>
+      <p>The national entrance for B.Sc Hospitality &amp; Hotel Administration at the 21 Central Institutes of Hotel Management. Open to any stream — tests numerical ability, reasoning, English and general knowledge, not subject-specific science.</p>
+    </div>
+
+    <div class="two-col">
+      <div class="section">
+        <div class="section-title"><div class="icon">📐</div>Pattern &amp; Eligibility</div>
+        <table class="ref-table">
+          <tbody>
+            <tr><td>Format</td><td>Numerical ability, reasoning, English, general knowledge, service aptitude</td></tr>
+            <tr><td>Eligible streams</td><td>Any — no PCM/PCB requirement</td></tr>
+            <tr><td>Conducted by</td><td>NTA</td></tr>
+            <tr><td>When</td><td>April</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="section">
+        <div class="section-title"><div class="icon">🏫</div>Key Institutes</div>
+        <div class="inst-grid">
+          <div class="inst-card"><div class="inst-name">IHM Pusa New Delhi</div><div class="inst-city">New Delhi</div><div class="inst-tier">🏆 #1 IHM</div></div>
+          <div class="inst-card"><div class="inst-name">IHM Mumbai, Bengaluru, Chennai</div><div class="inst-city">MH, KA, TN</div><div class="inst-tier">🏆 Top IHMs</div></div>
+          <div class="inst-card"><div class="inst-name">IHM Hyderabad, Kolkata</div><div class="inst-city">TS, WB</div><div class="inst-tier">⭐ Excellent IHM</div></div>
+          <div class="inst-card"><div class="inst-name">IHM Chandigarh, Jaipur, Bhopal + 14 more</div><div class="inst-city">Pan India</div><div class="inst-tier">✓ IHM Network (21 total)</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="icon">📋</div>Other Hotel &amp; Tourism Exams</div>
+      <table class="ref-table">
+        <thead><tr><th>Exam</th><th>For</th><th>Seats</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td><strong>IIAT</strong></td><td>BBA Tourism &amp; Travel Management at IITTM campuses</td><td>~300</td><td>Nearest campus to TN is Nellore, AP. CUET-UG also accepted as alternative.</td></tr>
+          <tr><td><strong>AIHMCT WAT</strong></td><td>BHM at Army IHM, Bengaluru</td><td>~120</td><td>Unique — Army-run hotel management institute.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <!-- ══════════════ DEFENCE, SECURITY & SPORTS ══════════════ -->
+  <div id="tab-defence" class="tab-content">
+
+    <div class="stats-row">
+      <div class="stat-card" style="--accent:#18160f"><div class="stat-number">~400</div><div class="stat-label">NDA Seats / Cycle</div><div class="stat-sub">Army, Navy, Air Force</div></div>
+      <div class="stat-card" style="--accent:#1a4dd6"><div class="stat-number">2</div><div class="stat-label">NDA Cycles / Year</div><div class="stat-sub">April &amp; September</div></div>
+      <div class="stat-card" style="--accent:#6b46c1"><div class="stat-number">10</div><div class="stat-label">Exams in this Family</div><div class="stat-sub">Defence + Security + Sports combined</div></div>
+    </div>
+
+    <div class="highlight-box">
+      <h3>Flagship Exam — NDA &amp; NA</h3>
+      <p>India's most prestigious defence entry after Class 12 — direct commission training for Army, Navy and Air Force. PCM is mandatory for Navy and Air Force wings; Army is open to all streams.</p>
+    </div>
+
+    <div class="two-col">
+      <div class="section">
+        <div class="section-title"><div class="icon">📐</div>Pattern &amp; Eligibility</div>
+        <table class="ref-table">
+          <tbody>
+            <tr><td>Format</td><td>Written (Maths + General Ability Test) + SSB interview</td></tr>
+            <tr><td>Eligible streams</td><td>PCM mandatory for Navy &amp; Air Force; Army open to all streams</td></tr>
+            <tr><td>Conducted by</td><td>UPSC</td></tr>
+            <tr><td>When</td><td>Twice a year — April &amp; September</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="section">
+        <div class="section-title"><div class="icon">🏫</div>Key Institutes</div>
+        <div class="inst-grid">
+          <div class="inst-card"><div class="inst-name">National Defence Academy</div><div class="inst-city">Khadakwasla, Pune, MH</div><div class="inst-tier">🏆 Most Prestigious</div></div>
+          <div class="inst-card"><div class="inst-name">Naval Academy</div><div class="inst-city">Ezhimala, Kerala</div><div class="inst-tier">🏆 Naval Training</div></div>
+          <div class="inst-card"><div class="inst-name">Indian Military Academy</div><div class="inst-city">Dehradun, UK</div><div class="inst-tier">🏆 After NDA — Army Commission</div></div>
+          <div class="inst-card"><div class="inst-name">Air Force Academy</div><div class="inst-city">Dundigal, TS</div><div class="inst-tier">🏆 After NDA — Air Force Commission</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="icon">📋</div>Other Defence, Security &amp; Sports Exams</div>
+      <div class="subhead">Defence &amp; Maritime</div>
+      <table class="ref-table" style="margin-bottom:20px;">
+        <thead><tr><th>Exam</th><th>For</th><th>Seats</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td><strong>AISSEE</strong></td><td>Class 6 &amp; 9 entry to Sainik Schools — a feeder pipeline to NDA</td><td>~7,000</td><td>33 classic Sainik Schools + 60+ newly approved schools joining from 2026–27. TN option: Sainik School Amaravathinagar, Coimbatore.</td></tr>
+          <tr><td><strong>IMU CET</strong></td><td>B.Tech Marine Engg, B.Sc Nautical Science at Indian Maritime University</td><td>~2,000</td><td>PCM mandatory. Physical &amp; medical fitness required.</td></tr>
+          <tr><td><strong>Coast Guard Navik/Yantrik</strong></td><td>Navik (GD/DB) &amp; Yantrik (technical) entry in Indian Coast Guard</td><td>~300/cycle</td><td>Written + physical + medical. PCM for Yantrik.</td></tr>
+        </tbody>
+      </table>
+      <div class="subhead">Security</div>
+      <table class="ref-table" style="margin-bottom:20px;">
+        <thead><tr><th>Exam</th><th>For</th><th>Seats</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td><strong>RRU Entrance</strong></td><td>B.Tech/BCA/BA in Cyber Security, Police Science, Internal Security at Rashtriya Raksha University</td><td>~500</td><td>Central university under Ministry of Home Affairs.</td></tr>
+          <tr><td><strong>FACT</strong></td><td>B.Sc Forensic Sciences, BBA Cyber Security at National Forensic Sciences University</td><td>~2,000</td><td>India's only national forensic sciences university.</td></tr>
+        </tbody>
+      </table>
+      <div class="subhead">Sports &amp; Physical Education</div>
+      <table class="ref-table">
+        <thead><tr><th>Exam</th><th>For</th><th>Seats</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td><strong>LNIPE Entrance</strong></td><td>B.P.Ed &amp; B.Sc Health &amp; PE at LNIPE Gwalior &amp; Guwahati</td><td>~400</td><td>Physical fitness test + written. Sports achievement weighted.</td></tr>
+          <tr><td><strong>TNPESU Entrance</strong></td><td>B.P.Ed, B.Sc PE/Yoga/Sports Biomechanics at TNPESU</td><td>~500</td><td>Key for TN students — written + physical efficiency test.</td></tr>
+          <tr><td><strong>TS PECET</strong></td><td>B.P.Ed at PE colleges in Telangana</td><td>~1,000+</td><td>—</td></tr>
+          <tr><td><strong>NIS / NSNIS Selection</strong></td><td>Diploma in Sports Coaching across 20+ disciplines</td><td>~300+</td><td>Selection based on sports achievement + physical tests, not just written exam.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <!-- ══════════════ ARTS & MEDIA ══════════════ -->
+  <div id="tab-arts" class="tab-content">
+
+    <div class="stats-row">
+      <div class="stat-card" style="--accent:#581f9e"><div class="stat-number">4</div><div class="stat-label">Exams in this Family</div><div class="stat-sub">Film, TV, theatre, mass communication</div></div>
+      <div class="stat-card" style="--accent:#1a4dd6"><div class="stat-number">Any</div><div class="stat-label">Stream Eligible</div><div class="stat-sub">No PCM/PCB requirement for any of these</div></div>
+    </div>
+
+    <div class="highlight-box">
+      <h3>Flagship Exam — FTII JET</h3>
+      <p>India's premier film school — direction, cinematography, editing, sound, TV content. Written test + interview, open to any stream, judged on cinematic awareness and creativity rather than academic marks.</p>
+    </div>
+
+    <div class="two-col">
+      <div class="section">
+        <div class="section-title"><div class="icon">📐</div>Pattern &amp; Eligibility</div>
+        <table class="ref-table">
+          <tbody>
+            <tr><td>Format</td><td>Written test + interview</td></tr>
+            <tr><td>Eligible streams</td><td>Any — no restriction</td></tr>
+            <tr><td>Conducted by</td><td>FTII Pune</td></tr>
+            <tr><td>When</td><td>March</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="section">
+        <div class="section-title"><div class="icon">🏫</div>Institute</div>
+        <div class="inst-grid">
+          <div class="inst-card"><div class="inst-name">FTII Pune</div><div class="inst-city">Pune, MH</div><div class="inst-tier">🏆 India's Premier Film School</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="icon">📋</div>Other Arts &amp; Media Exams</div>
+      <table class="ref-table">
+        <thead><tr><th>Exam</th><th>For</th><th>Seats</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td><strong>SRFTI Entrance</strong></td><td>Film &amp; television production at Satyajit Ray Film &amp; TV Institute, Kolkata</td><td>~60</td><td>—</td></tr>
+          <tr><td><strong>NSD Entrance</strong></td><td>3-year Theatre Arts diploma at National School of Drama, New Delhi</td><td>~30</td><td>Audition + interview based.</td></tr>
+          <tr><td><strong>IIMC Entrance</strong></td><td>PG Diploma in Journalism, Advertising at IIMC New Delhi + regional centres</td><td>~200 (PG)</td><td>Primarily PG — UG media aspirants should look at XIC Mumbai / ACJ Chennai's own tests instead.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <!-- ══════════════ PHARMACY & TEACHER ED ══════════════ -->
+  <div id="tab-other" class="tab-content">
+
+    <div class="callout" style="--color:#2b6cb0;--bg:#ebf8ff;--head:#1a365d;">
+      <strong>Why these are grouped together</strong>
+      Neither Pharmacy nor Teacher Education has one clean national flagship exam the way Medicine has NEET or Engineering has JEE — admission routes vary heavily by state, and in Tamil Nadu both are mostly merit/counselling-based rather than a dedicated entrance test. Listed here for completeness.
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="icon">💊</div>Pharmacy</div>
+      <table class="ref-table">
+        <thead><tr><th>Exam</th><th>For</th><th>Level</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td><strong>NEET UG (Pharmacy)</strong></td><td>B.Pharm at govt pharmacy colleges in AP, Telangana, Karnataka + many private colleges nationally</td><td><span class="tag tag-blue">National</span></td><td>Not all states use NEET for B.Pharm — verify with the specific state/college.</td></tr>
+          <tr><td><strong>State CETs for B.Pharm</strong></td><td>B.Pharm at govt &amp; private colleges — MHT CET, KCET, WBJEE, KEAM, AP EAPCET, TS EAMCET all carry a Pharmacy paper</td><td><span class="tag tag-green">State</span></td><td>In Tamil Nadu, B.Pharm admission is via TNEA counselling on Class 12 marks — no separate entrance.</td></tr>
+          <tr><td><strong>GPAT</strong> <span class="tag tag-gray">PG exam</span></td><td>M.Pharm admissions</td><td><span class="tag tag-blue">National</span></td><td>Listed for awareness — the natural next step after B.Pharm.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="icon">📖</div>Teacher Education</div>
+      <table class="ref-table">
+        <thead><tr><th>Exam</th><th>For</th><th>Level</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td><strong>NCET</strong></td><td>4-year Integrated Teacher Education Programme (ITEP) at Central/State Universities, IITs, NITs, RIEs</td><td><span class="tag tag-blue">National</span></td><td>Replaces the old route of UG degree + 2-year B.Ed with one 4-year integrated qualification straight after Class 12.</td></tr>
+          <tr><td><strong>TN B.Ed Entrance</strong> <span class="tag tag-gray">PG-level entry</span></td><td>2-year B.Ed at govt &amp; private teacher education colleges in TN</td><td><span class="tag tag-green">State</span></td><td>Entered after a UG degree — listed for students planning ahead toward teaching.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <!-- ══════════════ ALL EXAMS — MASTER INDEX ══════════════ -->
+  <div id="tab-all" class="tab-content">
+
+    <div class="summary-bar">
+      <div class="item"><div class="num">75</div><div class="lbl">Total Exams Mapped</div></div>
+      <div class="divider"></div>
+      <div class="item"><div class="num">15</div><div class="lbl">Exam Categories</div></div>
+      <div class="divider"></div>
+      <div class="item"><div class="num">National + State</div><div class="lbl">Full Coverage</div></div>
+    </div>
+
+    <div class="callout" style="--color:#2b6cb0;--bg:#ebf8ff;--head:#1a365d;">
+      <strong>How to use this page</strong>
+      Pick the family tab for the student's stream, read the flagship exam deeply, then use the "other exams" table in that tab (or the full index below) to spot backup and add-on options in the same prep window.
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="icon">📅</div>Rough Exam-Season Calendar</div>
+      <div class="timeline">
+        <div class="timeline-item"><div class="timeline-month">January – February</div><div class="timeline-exam">JEE Main Session 1 · NDA (written) · UCEED · NID DAT · CLAT results</div><div class="timeline-detail">Engineering &amp; design season opens</div></div>
+        <div class="timeline-item"><div class="timeline-month">March – April</div><div class="timeline-exam">JEE Main Session 2 · NCHM JEE · NATA · FTII JET · NIFT</div><div class="timeline-detail">Hotel management &amp; arts entrances cluster here</div></div>
+        <div class="timeline-item"><div class="timeline-month">May</div><div class="timeline-exam">NEET-UG ⭐ · JEE Advanced · BITSAT · IPMAT · most state CETs</div><div class="timeline-detail">The heaviest single month of the year</div></div>
+        <div class="timeline-item"><div class="timeline-month">June</div><div class="timeline-exam">CUET-UG (incl. ICAR quota) · TNAU · IISER IAT · NEST</div><div class="timeline-detail">Central university &amp; research-institute window</div></div>
+        <div class="timeline-item"><div class="timeline-month">September</div><div class="timeline-exam">NDA Session 2</div><div class="timeline-detail">Second defence entry window of the year</div></div>
+        <div class="timeline-item"><div class="timeline-month">December</div><div class="timeline-exam">CLAT · AILET</div><div class="timeline-detail">Law entrance season, a full year ahead of admission</div></div>
+      </div>
+      <div class="disclaimer">⚠️ Exact dates shift every year — this is a planning aid, not a substitute for checking each exam's official notification.</div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="icon">🩺</div>Medical, Dental, Nursing &amp; AYUSH</div>
+      <table class="ref-table">
+        <tbody>
+          <tr><td><strong>NEET UG</strong></td><td>National</td><td>Once a year (May)</td><td>MBBS/BDS/BAMS/BHMS/BSMS/BUMS/BVSc/Nursing</td></tr>
+          <tr><td>AIIMS Nursing</td><td>National</td><td>Once a year</td><td>B.Sc Nursing — all AIIMS</td></tr>
+          <tr><td>JIPMER Nursing</td><td>National</td><td>Once a year</td><td>B.Sc Nursing — JIPMER Puducherry</td></tr>
+          <tr><td>PGIMER Nursing</td><td>National</td><td>Once a year</td><td>B.Sc Nursing — PGIMER Chandigarh</td></tr>
+          <tr><td>CET-PWD</td><td>National</td><td>Once a year (Jun)</td><td>BPT/BOT/BPO/BASLP — disability institutes</td></tr>
+          <tr><td>Uttarakhand Paramedical Entrance</td><td>State</td><td>Once a year</td><td>Paramedical diploma/degree — Uttarakhand</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="icon">⚙</div>Engineering &amp; Technology</div>
+      <table class="ref-table">
+        <tbody>
+          <tr><td><strong>JEE Advanced</strong></td><td>National</td><td>Once a year (May–Jun)</td><td>B.Tech at all IITs</td></tr>
+          <tr><td><strong>JEE Main</strong></td><td>National</td><td>Twice a year (Jan &amp; Apr)</td><td>NITs, IIITs, GFTIs, B.Arch/B.Plan Paper 2</td></tr>
+          <tr><td>BITSAT</td><td>Institute</td><td>Once a year (May–Jun)</td><td>BITS Pilani/Goa/Hyderabad</td></tr>
+          <tr><td>IIST Entrance</td><td>National</td><td>Once a year (Jun)</td><td>IIST Thiruvananthapuram (ISRO)</td></tr>
+          <tr><td>NATA</td><td>National</td><td>Twice a year</td><td>B.Arch, pan-India</td></tr>
+          <tr><td>TANCET</td><td>State</td><td>Once a year (Mar)</td><td>PG/lateral entry, Anna University</td></tr>
+          <tr><td>MHT CET</td><td>State</td><td>Once a year (Apr–May)</td><td>Engineering/Pharmacy — Maharashtra</td></tr>
+          <tr><td>KCET</td><td>State</td><td>Once a year (Apr–May)</td><td>Engineering/Pharmacy/Agri — Karnataka</td></tr>
+          <tr><td>WBJEE</td><td>State</td><td>Once a year (Apr)</td><td>Engineering/Pharmacy — West Bengal</td></tr>
+          <tr><td>KEAM</td><td>State</td><td>Once a year (Apr–May)</td><td>Engineering/Architecture/Pharmacy — Kerala</td></tr>
+          <tr><td>AP EAPCET</td><td>State</td><td>Once a year (May)</td><td>Engineering/Agri/Pharmacy — Andhra Pradesh</td></tr>
+          <tr><td>TS EAMCET</td><td>State</td><td>Once a year (May)</td><td>Engineering/Agri/Medicine — Telangana</td></tr>
+          <tr><td>GUJCET</td><td>State</td><td>Once a year (Mar–Apr)</td><td>Engineering/Pharmacy — Gujarat</td></tr>
+          <tr><td>OJEE</td><td>State</td><td>Once a year (May)</td><td>Engineering/Pharmacy — Odisha</td></tr>
+          <tr><td>BCECE</td><td>State</td><td>Once a year (May–Jun)</td><td>Engineering/Pharmacy/Agri — Bihar</td></tr>
+          <tr><td>JCECE</td><td>State</td><td>Once a year (May)</td><td>Engineering/Pharmacy — Jharkhand</td></tr>
+          <tr><td>CG PET</td><td>State</td><td>Once a year (Apr–May)</td><td>Engineering/Pharmacy — Chhattisgarh</td></tr>
+          <tr><td>HP CET</td><td>State</td><td>Once a year (May)</td><td>Engineering/Pharmacy — Himachal Pradesh</td></tr>
+          <tr><td>GGSIPU CET</td><td>State</td><td>Once a year (May–Jun)</td><td>Engineering/Law/Mgmt/Nursing/Pharmacy — Delhi</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="icon">🏛️</div>Central &amp; State University Admissions</div>
+      <table class="ref-table">
+        <tbody>
+          <tr><td><strong>CUET UG</strong></td><td>National</td><td>Once a year (May–Jun)</td><td>280+ universities incl. DU, JNU, BHU</td></tr>
+          <tr><td>TISS BAT</td><td>Institute</td><td>Once a year (Jan–Feb)</td><td>BA — Social Work etc. at TISS</td></tr>
+          <tr><td>PUCET UG</td><td>State</td><td>Once a year (Jun)</td><td>Pondicherry University</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="icon">⚖</div>Law</div>
+      <table class="ref-table">
+        <tbody>
+          <tr><td><strong>CLAT</strong></td><td>National</td><td>Once a year (Dec)</td><td>BA LLB/BBA LLB — 26 NLUs</td></tr>
+          <tr><td>AILET</td><td>National</td><td>Once a year (Dec)</td><td>NLU Delhi only</td></tr>
+          <tr><td>MH CET Law</td><td>State</td><td>Once a year (May)</td><td>Law colleges — Maharashtra</td></tr>
+          <tr><td>AP &amp; TS LAWCET</td><td>State</td><td>Once a year</td><td>Law colleges — AP &amp; Telangana</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="icon">✏</div>Design &amp; Architecture</div>
+      <table class="ref-table">
+        <tbody>
+          <tr><td><strong>UCEED</strong></td><td>National</td><td>Once a year (Jan)</td><td>B.Des — IITs</td></tr>
+          <tr><td><strong>NID DAT</strong></td><td>National</td><td>Once a year (Jan)</td><td>B.Des — NID campuses</td></tr>
+          <tr><td><strong>NIFT Entrance</strong></td><td>National</td><td>Once a year (Feb)</td><td>B.Des/B.F.Tech — 17 NIFT campuses</td></tr>
+          <tr><td>FDDI AIST</td><td>National</td><td>Once a year (Apr)</td><td>Footwear/Fashion Design — FDDI</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="icon">📊</div>Management, BBA &amp; Integrated MBA</div>
+      <table class="ref-table">
+        <tbody>
+          <tr><td><strong>IPMAT Indore</strong></td><td>National</td><td>Once a year (May)</td><td>5-yr IPM — IIM Indore</td></tr>
+          <tr><td>IPMAT Rohtak</td><td>National</td><td>Once a year (May)</td><td>5-yr IPM — IIM Rohtak</td></tr>
+          <tr><td>JIPMAT</td><td>National</td><td>Once a year (Jun)</td><td>5-yr IPM — IIM Jammu &amp; Bodh Gaya</td></tr>
+          <tr><td>UGAT</td><td>National</td><td>Once a year (May)</td><td>BBA/BHM/BCA — AIMA affiliates</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="icon">💹</div>Commerce &amp; Professional Courses</div>
+      <table class="ref-table">
+        <tbody>
+          <tr><td>CA Foundation</td><td>Professional</td><td>Twice a year (May &amp; Nov)</td><td>Entry to Chartered Accountancy</td></tr>
+          <tr><td>CS Foundation</td><td>Professional</td><td>Twice a year (Jun &amp; Dec)</td><td>Entry to Company Secretary</td></tr>
+          <tr><td>CMA Foundation</td><td>Professional</td><td>Twice a year (Jun &amp; Dec)</td><td>Entry to Cost Accountancy</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="icon">⚗</div>Pure Science &amp; Research</div>
+      <table class="ref-table">
+        <tbody>
+          <tr><td><strong>IISER IAT</strong></td><td>National</td><td>Once a year (Jun)</td><td>BS-MS — 7 IISERs</td></tr>
+          <tr><td>NEST</td><td>National</td><td>Once a year (Jun)</td><td>Integrated M.Sc — NISER, UM-DAE CEBS</td></tr>
+          <tr><td>ISI Admission Test</td><td>Institute</td><td>Once a year (May)</td><td>B.Stat/B.Math — ISI</td></tr>
+          <tr><td>CMI Entrance</td><td>Institute</td><td>Once a year (May)</td><td>B.Sc Hons — Chennai Mathematical Institute</td></tr>
+          <tr><td>Geologist Examination</td><td>National</td><td>Once a year</td><td>Geologist posts — GSI, CGWB, Ministry of Mines</td></tr>
+          <tr><td>KVPY</td><td>—</td><td>Discontinued</td><td>Was: scholarship + IISc route</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="icon">🌾</div>Agriculture, Veterinary &amp; Forestry</div>
+      <table class="ref-table">
+        <tbody>
+          <tr><td><strong>CUET (ICAR-UG)</strong></td><td>National</td><td>Once a year (May–Jun)</td><td>B.Sc Agri/Horticulture/Fisheries/Forestry — replaced ICAR AIEEA UG in 2023</td></tr>
+          <tr><td>TNJFU Entrance</td><td>State</td><td>Once a year (Jun–Jul)</td><td>B.F.Sc, Fisheries Engg — TN</td></tr>
+          <tr><td>Rajasthan JET</td><td>State</td><td>Once a year</td><td>B.Sc Agriculture — Rajasthan</td></tr>
+          <tr><td>RAJUVAS RPVT</td><td>State</td><td>Once a year</td><td>BVSc &amp; AH — Rajasthan</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="icon">🏨</div>Hotel Management &amp; Hospitality</div>
+      <table class="ref-table">
+        <tbody>
+          <tr><td><strong>NCHM JEE</strong></td><td>National</td><td>Once a year (Apr)</td><td>B.Sc Hospitality — 21 Central IHMs</td></tr>
+          <tr><td>IIAT</td><td>National</td><td>Once a year (Apr)</td><td>BBA Tourism &amp; Travel — IITTM</td></tr>
+          <tr><td>AIHMCT WAT</td><td>Institute</td><td>Once a year</td><td>BHM — Army IHM Bengaluru</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="icon">🪖</div>Defence &amp; Maritime</div>
+      <table class="ref-table">
+        <tbody>
+          <tr><td>AISSEE</td><td>National</td><td>Once a year (Jan)</td><td>Sainik Schools — Class 6 &amp; 9</td></tr>
+          <tr><td><strong>NDA &amp; NA</strong></td><td>National</td><td>Twice a year (Apr &amp; Sep)</td><td>Army/Navy/Air Force</td></tr>
+          <tr><td>IMU CET</td><td>National</td><td>Once a year (May)</td><td>Marine Engg, Nautical Science</td></tr>
+          <tr><td>Coast Guard Navik/Yantrik</td><td>National</td><td>Twice a year</td><td>Indian Coast Guard entry</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="icon">🔒</div>Cyber Security &amp; National Security</div>
+      <table class="ref-table">
+        <tbody>
+          <tr><td>RRU Entrance</td><td>National</td><td>Once a year</td><td>Cyber Security/Police Science — RRU</td></tr>
+          <tr><td>FACT</td><td>National</td><td>Once a year</td><td>Forensic Sciences — NFSU</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="icon">🎨</div>Fine Arts, Performing Arts &amp; Media</div>
+      <table class="ref-table">
+        <tbody>
+          <tr><td><strong>FTII JET</strong></td><td>National</td><td>Once a year (Mar)</td><td>Film direction/production — FTII Pune</td></tr>
+          <tr><td>SRFTI Entrance</td><td>National</td><td>Once a year</td><td>Film/TV production — SRFTI Kolkata</td></tr>
+          <tr><td>NSD Entrance</td><td>National</td><td>Once a year</td><td>Theatre Arts — NSD New Delhi</td></tr>
+          <tr><td>IIMC Entrance</td><td>National</td><td>Once a year (Mar–Apr)</td><td>Journalism/Mass Comm (mainly PG)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="icon">🏅</div>Sports &amp; Physical Education</div>
+      <table class="ref-table">
+        <tbody>
+          <tr><td>LNIPE Entrance</td><td>Institute</td><td>Once a year</td><td>B.P.Ed — Gwalior &amp; Guwahati</td></tr>
+          <tr><td>TNPESU Entrance</td><td>Institute</td><td>Once a year (Jun)</td><td>B.P.Ed/PE/Yoga — Tamil Nadu</td></tr>
+          <tr><td>TS PECET</td><td>State</td><td>Once a year</td><td>B.P.Ed — Telangana</td></tr>
+          <tr><td>NIS / NSNIS Selection</td><td>Institute</td><td>Once a year</td><td>Sports Coaching Diploma — Patiala</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="icon">💊</div>Pharmacy</div>
+      <table class="ref-table">
+        <tbody>
+          <tr><td>NEET UG (Pharmacy)</td><td>National</td><td>Once a year (May)</td><td>B.Pharm in select states</td></tr>
+          <tr><td>State CETs for B.Pharm</td><td>State</td><td>Once a year (Apr–Jun)</td><td>B.Pharm — via state engineering CETs</td></tr>
+          <tr><td>GPAT</td><td>National</td><td>Once a year (Jan)</td><td>M.Pharm (PG)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><div class="icon">📖</div>Teacher Education</div>
+      <table class="ref-table">
+        <tbody>
+          <tr><td>NCET</td><td>National</td><td>Once a year</td><td>4-yr ITEP — Central Univs, IITs, NITs, RIEs</td></tr>
+          <tr><td>TN B.Ed Entrance</td><td>State</td><td>Once a year</td><td>2-yr B.Ed (PG-level entry) — Tamil Nadu</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+function switchTab(tab, el) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + tab).classList.add('active');
+  el.classList.add('active');
+}
+</script>
+
+</body>
+</html>

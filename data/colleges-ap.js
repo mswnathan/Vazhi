@@ -33,7 +33,7 @@ const COLLEGES_AP=[
   specialNote:'Research-focused BS-MS dual degree. Top choice for science students aiming for research careers.',
   programGroups:[
     {stream:'Arts & Science',programs:[
-      {name:'BS-MS Dual Degree (Physics, Chemistry, Maths, Biology, Earth & Climate)',exam:'JEE Advanced / IAT / KVPY',examCss:'ce-jee'},
+      {name:'BS-MS Dual Degree (Physics, Chemistry, Maths, Biology, Earth & Climate)',exam:'JEE Advanced / IAT',examCss:'ce-jee'},
     ]},
   ]},
 

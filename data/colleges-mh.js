@@ -36,7 +36,7 @@ const COLLEGES_MH=[
   specialNote:'Premier research university for basic sciences. BS-MS dual degree — top choice for research careers.',
   programGroups:[
     {stream:'Arts & Science',programs:[
-      {name:'BS-MS Dual Degree (Physics, Chemistry, Maths, Biology, Earth & Climate Science)',exam:'JEE Advanced / IAT / KVPY',examCss:'ce-jee'},
+      {name:'BS-MS Dual Degree (Physics, Chemistry, Maths, Biology, Earth & Climate Science)',exam:'JEE Advanced / IAT',examCss:'ce-jee'},
     ]},
   ]},
 

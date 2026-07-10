@@ -37,7 +37,7 @@ const COLLEGES_GJ=[
   specialNote:'Research-focused BS-MS. Strong in chemistry, biology and interdisciplinary sciences.',
   programGroups:[
     {stream:'Arts & Science',programs:[
-      {name:'BS-MS Dual Degree (Physics, Chemistry, Maths, Biology, Earth Sciences)',exam:'JEE Advanced / IAT / KVPY',examCss:'ce-jee'},
+      {name:'BS-MS Dual Degree (Physics, Chemistry, Maths, Biology, Earth Sciences)',exam:'JEE Advanced / IAT',examCss:'ce-jee'},
     ]},
   ]},
 

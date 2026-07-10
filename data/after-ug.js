@@ -200,7 +200,7 @@ const AFTER_UG = [
     field: 'Science, Engineering, Design, Management',
     duration: 'M.Tech 2 yr / M.Sc (Research) 2 yr / PhD 4–6 yr',
     ugFor: ['B.Tech/B.E.', 'B.Sc'],
-    exams: ['GATE', 'CSIR-NET', 'UGC-NET', 'JEST', 'KVPY'],
+    exams: ['GATE', 'CSIR-NET', 'UGC-NET', 'JEST'],
     examNote: 'GATE score used for most M.Tech/Research programs. UGC-NET/CSIR-NET for science research.',
     institutes: 'IISc Bangalore (single campus) — India\'s top-ranked research university',
     careers: 'Research Scientist, Professor, Deep Tech Founder, Industry Research Lead',

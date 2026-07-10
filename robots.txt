@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Draft / review copies — not for indexing
+Disallow: /index-v2.html
+Disallow: /index-lite.html
+Disallow: /dreams.html
+Disallow: /vazhi-agent-system.html
+Disallow: /course-scope-ece.html
+Disallow: /course-scope-engineering.html
+Disallow: /my-news.html
+Disallow: /neet-iat-reference.html
+
+# Internal tooling and data sources
+Disallow: /agents/
+Disallow: /tools/
+Disallow: /exam-reference/
+
+Sitemap: https://kalvivazhi.in/sitemap.xml

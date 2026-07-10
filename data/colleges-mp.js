@@ -43,7 +43,7 @@ const COLLEGES_MP=[
   specialNote:'One of the first IISERs. Particularly strong in physics and chemistry research. BS-MS dual degree.',
   programGroups:[
     {stream:'Arts & Science',programs:[
-      {name:'BS-MS Dual Degree (Physics, Chemistry, Maths, Biology, Earth & Environmental Science)',exam:'JEE Advanced / IAT / KVPY',examCss:'ce-jee'},
+      {name:'BS-MS Dual Degree (Physics, Chemistry, Maths, Biology, Earth & Environmental Science)',exam:'JEE Advanced / IAT',examCss:'ce-jee'},
     ]},
   ]},
 

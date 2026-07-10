@@ -34,7 +34,7 @@ const COLLEGES_PB=[
   specialNote:'One of the first IISERs. Particularly strong in biology, chemistry and data science. BS-MS dual degree.',
   programGroups:[
     {stream:'Arts & Science',programs:[
-      {name:'BS-MS Dual Degree (Physics, Chemistry, Maths, Biology, Earth & Environmental Science)',exam:'JEE Advanced / IAT / KVPY',examCss:'ce-jee'},
+      {name:'BS-MS Dual Degree (Physics, Chemistry, Maths, Biology, Earth & Environmental Science)',exam:'JEE Advanced / IAT',examCss:'ce-jee'},
     ]},
   ]},
 
@@ -46,6 +46,16 @@ const COLLEGES_PB=[
     {stream:'Law',programs:[
       {name:'B.A LL.B (Hons) — 5-year integrated',exam:'CLAT',examCss:'ce-clat'},
       {name:'B.Com LL.B (Hons) — 5-year integrated',exam:'CLAT',examCss:'ce-clat'},
+    ]},
+  ]},
+
+{name:'National Institute of Secondary Steel Technology',short:'NISST',type:'Central',district:'Fatehgarh Sahib',state:'Punjab',
+  naac:'Accredited',nirf:'Specialised Institute',affil:'Ministry of Steel, Govt of India',website:'nisst.gov.in',
+  streams:['Engineering'],
+  specialNote:'India\'s only central institute dedicated to the secondary steel sector. Located in Mandi Gobindgarh, the secondary steel hub of north India. B.Tech admission via JEE Main / JoSAA.',
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech Metallurgical & Materials Engineering (4 years)',exam:'JEE Main',examCss:'ce-jee'},
     ]},
   ]},
 

@@ -157,7 +157,7 @@ const CAREER_MAP = [
     summary: 'India has world-class research institutes — IISERs, IISc, TIFR, ISRO, BARC, IGCAR. A PhD is the core qualification. The journey: B.Sc / B.Tech → M.Sc / M.Tech → PhD → Scientist position.',
     class12: {
       subjects: ['PCM', 'PCM+CS', 'PCB', 'PCMB'],
-      tip: 'Strong foundation in Physics, Chemistry, Maths or Biology. IISERs and IISc via KVPY / JEE are prime entry points.',
+      tip: 'Strong foundation in Physics, Chemistry, Maths or Biology. IISERs and IISc via IAT / JEE Advanced are prime entry points.',
     },
     class9_10: {
       stream: 'PCM',
@@ -165,7 +165,7 @@ const CAREER_MAP = [
       tip: 'Curiosity is your greatest asset. Read beyond textbooks — science magazines, Olympiad problems, and YouTube science channels. Winners of Science Olympiads go to IISERs.',
     },
     streamId: 'Science',
-    examNames: ['IISER IAT', 'NEST', 'KVPY / INSPIRE SHE', 'JEE Advanced'],
+    examNames: ['IISER IAT', 'NEST', 'JEE Advanced'],
     augIds: ['phd', 'isro-drdo', 'tifr', 'iisc'],
     careers: ['ISRO Scientist / Engineer', 'DRDO Scientist', 'BARC Scientific Officer', 'TIFR Researcher', 'CSIR Lab Scientist', 'University Professor & Researcher'],
   },

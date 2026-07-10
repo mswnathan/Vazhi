@@ -14,7 +14,7 @@ const COLLEGES_KA=[
   streams:['Engineering','Arts & Science'],
   programGroups:[
     {stream:'Engineering & Technology',programs:[
-      {name:'B.S (Research) — Physics, Chemistry, Maths, Materials, Earth & Climate, Electrical, Mechanical, Chemical, Computational Science',exam:'JEE Advanced / KVPY',examCss:'ce-jee'},
+      {name:'B.S (Research) — Physics, Chemistry, Maths, Materials, Earth & Climate, Electrical, Mechanical, Chemical, Computational Science',exam:'JEE Advanced',examCss:'ce-jee'},
       {name:'B.Tech (Mathematics & Computing; new 2026: Aerospace Engineering, Materials Science & Engineering, Mechanics & Computing)',exam:'JEE Advanced',examCss:'ce-jee'},
     ]},
   ]},
@@ -153,6 +153,17 @@ const COLLEGES_KA=[
     {stream:'Agriculture, Fisheries & Vet',programs:[
       {name:'B.Sc (Agriculture) — 4 years',exam:'CUET-UG (15% all-India quota) / Karnataka Merit',examCss:'ce-cuet'},
       {name:'B.Sc (Horticulture) — 4 years',exam:'CUET-UG (15% all-India quota) / Karnataka Merit',examCss:'ce-cuet'},
+    ]},
+  ]},
+
+{name:'Central Coffee Research Institute (Coffee Board of India)',short:'CCRI Chikkamagaluru',type:'Central',district:'Chikkamagaluru',state:'Karnataka',
+  naac:'Accredited',nirf:'',affil:'Coffee Board of India — Ministry of Commerce & Industry, Govt of India',website:'coffeeboard.gov.in',
+  streams:['Agriculture'],
+  specialNote:'Only central-government institute for coffee plantation training in India. Monthly stipend up to ₹10,000 and free hostel for diploma students.',
+  programGroups:[
+    {stream:'Coffee Plantation & Estate Management',programs:[
+      {name:'Diploma in Coffee Estate Management (D.C.E.M) — 2 years',exam:'Merit (Class 12 pass)',examCss:'ce-merit'},
+      {name:'Certificate Course for Coffee Estate Supervisors — 1 year',exam:'Merit (Class 12 pass)',examCss:'ce-merit'},
     ]},
   ]},
 

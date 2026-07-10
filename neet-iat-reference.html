@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Entrance Exam Reference — Career Guidance</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f0f4f8;
+  color: #2d3748;
+  min-height: 100vh;
+}
+
+.header {
+  background: linear-gradient(135deg, #1e3a5f, #2b6cb0);
+  color: white;
+  padding: 18px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header h1 { font-size: 1.3rem; font-weight: 700; }
+.header .subtitle { font-size: 0.82rem; opacity: 0.8; margin-top: 3px; }
+.session-badge {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 0.8rem;
+}
+
+.tab-bar {
+  background: white;
+  border-bottom: 2px solid #e2e8f0;
+  display: flex;
+  padding: 0 28px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+}
+.tab {
+  padding: 14px 22px;
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #718096;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.tab.active { color: #2b6cb0; border-bottom-color: #2b6cb0; }
+.tab:hover:not(.active) { color: #4a5568; background: #f7fafc; }
+
+.content { max-width: 1100px; margin: 0 auto; padding: 24px 28px; }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+/* Stats */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 14px;
+  margin-bottom: 24px;
+}
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 18px 16px;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  border-top: 4px solid var(--accent, #2b6cb0);
+}
+.stat-number { font-size: 2rem; font-weight: 800; color: var(--accent); line-height: 1; margin-bottom: 5px; }
+.stat-label { font-size: 0.75rem; color: #718096; font-weight: 600; text-transform: uppercase; letter-spacing: 0.4px; }
+.stat-sub { font-size: 0.72rem; color: #a0aec0; margin-top: 3px; }
+
+/* Section */
+.section {
+  background: white;
+  border-radius: 12px;
+  padding: 22px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+.section-title {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #1a365d;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #edf2f7;
+}
+.section-title .icon {
+  width: 30px; height: 30px;
+  border-radius: 7px;
+  background: #ebf8ff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; flex-shrink: 0;
+}
+
+/* Funnel */
+.funnel { display: flex; flex-direction: column; gap: 6px; }
+.funnel-row { display: flex; align-items: center; gap: 12px; }
+.funnel-label { width: 190px; font-size: 0.8rem; color: #4a5568; text-align: right; font-weight: 500; flex-shrink: 0; }
+.funnel-bar-wrap { flex: 1; }
+.funnel-bar {
+  height: 36px; border-radius: 6px;
+  display: flex; align-items: center; padding-left: 12px;
+  color: white; font-weight: 700; font-size: 0.82rem;
+}
+.funnel-arrow { text-align: center; color: #cbd5e0; font-size: 1rem; padding-left: 202px; }
+
+/* Score Ladder */
+.score-ladder { display: flex; flex-direction: column; gap: 8px; }
+.score-row { display: grid; grid-template-columns: 130px 1fr; gap: 10px; align-items: stretch; }
+.score-badge {
+  border-radius: 6px; padding: 8px 6px;
+  font-size: 0.78rem; font-weight: 700; text-align: center;
+  font-family: monospace; display: flex; align-items: center; justify-content: center;
+}
+.score-desc {
+  font-size: 0.84rem; color: #4a5568;
+  padding: 8px 12px; background: #f7fafc; border-radius: 6px;
+  border-left: 3px solid; display: flex; align-items: center;
+}
+
+/* Table */
+.ref-table { width: 100%; border-collapse: collapse; font-size: 0.84rem; }
+.ref-table th {
+  background: #edf2f7; text-align: left; padding: 9px 12px;
+  font-weight: 600; color: #4a5568; font-size: 0.77rem;
+  text-transform: uppercase; letter-spacing: 0.4px;
+}
+.ref-table td { padding: 9px 12px; border-bottom: 1px solid #f0f4f8; color: #2d3748; vertical-align: middle; }
+.ref-table tr:hover td { background: #f7fafc; }
+.ref-table tr:last-child td { border-bottom: none; }
+.ref-table th:first-child { border-radius: 6px 0 0 0; }
+.ref-table th:last-child { border-radius: 0 6px 0 0; }
+
+/* Tags */
+.tag {
+  display: inline-block; padding: 2px 8px; border-radius: 10px;
+  font-size: 0.71rem; font-weight: 600; white-space: nowrap;
+}
+.tag-blue { background: #ebf8ff; color: #2b6cb0; }
+.tag-green { background: #f0fff4; color: #276749; }
+.tag-red { background: #fff5f5; color: #c53030; }
+.tag-orange { background: #fffaf0; color: #c05621; }
+.tag-purple { background: #faf5ff; color: #6b46c1; }
+.tag-teal { background: #e6fffa; color: #285e61; }
+.tag-gray { background: #edf2f7; color: #4a5568; }
+
+/* Callout */
+.callout {
+  border-left: 4px solid var(--color, #2b6cb0);
+  background: var(--bg, #ebf8ff);
+  border-radius: 0 8px 8px 0;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  font-size: 0.85rem;
+  color: #2d3748;
+  line-height: 1.55;
+}
+.callout strong {
+  display: block; color: var(--head, #1a365d);
+  margin-bottom: 5px; font-size: 0.82rem;
+}
+
+/* Two col */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+
+/* IISER grid */
+.iiser-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; }
+.iiser-card {
+  border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px;
+  transition: box-shadow 0.2s; cursor: default;
+}
+.iiser-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-color: #bee3f8; }
+.iiser-name { font-weight: 700; color: #1a365d; font-size: 0.88rem; margin-bottom: 3px; }
+.iiser-city { font-size: 0.78rem; color: #718096; margin-bottom: 8px; }
+.iiser-highlight {
+  font-size: 0.74rem; color: #2b6cb0;
+  background: #ebf8ff; padding: 3px 8px; border-radius: 4px; display: inline-block;
+}
+
+/* Highlight box */
+.highlight-box {
+  background: linear-gradient(135deg, #1e3a5f, #2b6cb0);
+  color: white; border-radius: 12px; padding: 20px 24px; margin-bottom: 20px;
+}
+.highlight-box h3 { font-size: 1rem; margin-bottom: 8px; opacity: 0.85; }
+.highlight-box p { font-size: 0.9rem; line-height: 1.6; opacity: 0.95; }
+
+/* Accordion */
+.tip-item {
+  border: 1px solid #e2e8f0; border-radius: 8px;
+  margin-bottom: 8px; overflow: hidden;
+}
+.tip-header {
+  padding: 12px 16px; cursor: pointer;
+  display: flex; justify-content: space-between; align-items: center;
+  font-weight: 600; font-size: 0.86rem; color: #2d3748;
+  background: #f7fafc; user-select: none;
+}
+.tip-header:hover { background: #edf2f7; }
+.tip-body {
+  display: none; padding: 14px 16px;
+  font-size: 0.84rem; color: #4a5568;
+  line-height: 1.6; border-top: 1px solid #e2e8f0;
+}
+.tip-body.open { display: block; }
+.chevron { transition: transform 0.2s; color: #a0aec0; font-size: 0.8rem; }
+.chevron.open { transform: rotate(180deg); }
+
+/* Timeline */
+.timeline { position: relative; padding-left: 18px; }
+.timeline::before {
+  content: ''; position: absolute; left: 5px; top: 8px; bottom: 8px;
+  width: 2px; background: #e2e8f0;
+}
+.timeline-item { position: relative; margin-bottom: 18px; padding-left: 18px; }
+.timeline-item::before {
+  content: ''; position: absolute; left: -13px; top: 5px;
+  width: 10px; height: 10px; border-radius: 50%;
+  background: #2b6cb0; border: 2px solid white;
+  box-shadow: 0 0 0 2px #2b6cb0;
+}
+.timeline-month { font-size: 0.72rem; font-weight: 700; color: #2b6cb0; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
+.timeline-exam { font-size: 0.88rem; font-weight: 600; color: #2d3748; }
+.timeline-detail { font-size: 0.76rem; color: #718096; margin-top: 2px; }
+
+/* Summary bar */
+.summary-bar {
+  background: #1a365d; color: white; border-radius: 10px;
+  padding: 16px 20px; margin-bottom: 20px;
+  display: flex; gap: 24px; align-items: center; flex-wrap: wrap;
+}
+.summary-bar .item { text-align: center; }
+.summary-bar .num { font-size: 1.5rem; font-weight: 800; }
+.summary-bar .lbl { font-size: 0.72rem; opacity: 0.75; text-transform: uppercase; letter-spacing: 0.4px; }
+.summary-bar .divider { width: 1px; background: rgba(255,255,255,0.2); align-self: stretch; }
+
+@media (max-width: 720px) {
+  .two-col, .three-col { grid-template-columns: 1fr; }
+  .funnel-label { width: 130px; }
+  .funnel-arrow { padding-left: 142px; }
+  .content { padding: 14px 14px; }
+  .tab-bar { padding: 0 12px; overflow-x: auto; }
+  .tab { padding: 12px 14px; font-size: 0.82rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <h1>📚 Entrance Exam Reference</h1>
+    <div class="subtitle">Career Guidance Session &nbsp;·&nbsp; PCMB Student &nbsp;·&nbsp; MBBS Focus</div>
+  </div>
+  <div class="session-badge">🎯 Counselor's Reference</div>
+</div>
+
+<div class="tab-bar">
+  <div class="tab active" onclick="switchTab('neet', this)">🏥 NEET</div>
+  <div class="tab" onclick="switchTab('iat', this)">🔬 IISER IAT</div>
+  <div class="tab" onclick="switchTab('exams', this)">📋 All Exams</div>
+</div>
+
+<div class="content">
+
+  <!-- ══════════════ NEET TAB ══════════════ -->
+  <div id="tab-neet" class="tab-content active">
+
+    <div class="stats-row">
+      <div class="stat-card" style="--accent:#e53e3e">
+        <div class="stat-number">23L</div>
+        <div class="stat-label">Students Appear</div>
+        <div class="stat-sub">Every year</div>
+      </div>
+      <div class="stat-card" style="--accent:#ed8936">
+        <div class="stat-number">1.1L</div>
+        <div class="stat-label">Total MBBS Seats</div>
+        <div class="stat-sub">Govt + Private</div>
+      </div>
+      <div class="stat-card" style="--accent:#38a169">
+        <div class="stat-number">55K</div>
+        <div class="stat-label">Govt MBBS Seats</div>
+        <div class="stat-sub">What families want</div>
+      </div>
+      <div class="stat-card" style="--accent:#2b6cb0">
+        <div class="stat-number">~3K</div>
+        <div class="stat-label">TN Govt MBBS Seats</div>
+        <div class="stat-sub">Tamil Nadu only</div>
+      </div>
+      <div class="stat-card" style="--accent:#6b46c1">
+        <div class="stat-number">720</div>
+        <div class="stat-label">Total Marks</div>
+        <div class="stat-sub">180 Q × 4 marks</div>
+      </div>
+      <div class="stat-card" style="--accent:#285e61">
+        <div class="stat-number">60K+</div>
+        <div class="stat-label">AYUSH Govt Seats</div>
+        <div class="stat-sub">Also via NEET</div>
+      </div>
+    </div>
+
+    <div class="two-col">
+
+      <!-- Funnel -->
+      <div class="section">
+        <div class="section-title">
+          <div class="icon">📊</div>
+          The Competition Funnel
+        </div>
+        <div class="funnel">
+          <div class="funnel-row">
+            <div class="funnel-label">Register for NEET</div>
+            <div class="funnel-bar-wrap">
+              <div class="funnel-bar" style="width:100%;background:#e53e3e;">24 lakh</div>
+            </div>
+          </div>
+          <div class="funnel-arrow">↓</div>
+          <div class="funnel-row">
+            <div class="funnel-label">Actually appear</div>
+            <div class="funnel-bar-wrap">
+              <div class="funnel-bar" style="width:96%;background:#f56565;">23 lakh</div>
+            </div>
+          </div>
+          <div class="funnel-arrow">↓</div>
+          <div class="funnel-row">
+            <div class="funnel-label">Qualify (above cutoff)</div>
+            <div class="funnel-bar-wrap">
+              <div class="funnel-bar" style="width:56%;background:#ed8936;">13 lakh</div>
+            </div>
+          </div>
+          <div class="funnel-arrow">↓</div>
+          <div class="funnel-row">
+            <div class="funnel-label">Get any MBBS seat</div>
+            <div class="funnel-bar-wrap">
+              <div class="funnel-bar" style="width:18%;min-width:80px;background:#48bb78;">1.1 lakh</div>
+            </div>
+          </div>
+          <div class="funnel-arrow">↓</div>
+          <div class="funnel-row">
+            <div class="funnel-label">Get Govt MBBS seat</div>
+            <div class="funnel-bar-wrap">
+              <div class="funnel-bar" style="width:9%;min-width:65px;background:#38a169;">55,000</div>
+            </div>
+          </div>
+          <div class="funnel-arrow">↓</div>
+          <div class="funnel-row">
+            <div class="funnel-label">Get TN Govt MBBS</div>
+            <div class="funnel-bar-wrap">
+              <div class="funnel-bar" style="width:4%;min-width:52px;background:#2b6cb0;">~3,000</div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:16px;font-size:0.78rem;color:#718096;line-height:1.5;">
+          ⚠️ Only the top <strong>~2.5%</strong> of all test-takers get a govt MBBS seat. For TN specifically, roughly <strong>1 in 80</strong> TN students who appear gets a TN govt MBBS seat.
+        </div>
+      </div>
+
+      <!-- Score Ladder -->
+      <div class="section">
+        <div class="section-title">
+          <div class="icon">🎯</div>
+          Score vs. What You Get
+        </div>
+        <div class="score-ladder">
+          <div class="score-row">
+            <div class="score-badge" style="background:#c6f6d5;color:#276749;">650 – 720</div>
+            <div class="score-desc" style="border-left-color:#c6f6d5;">AIIMS New Delhi, JIPMER — best govt seats in India</div>
+          </div>
+          <div class="score-row">
+            <div class="score-badge" style="background:#bee3f8;color:#2c5282;">580 – 650</div>
+            <div class="score-desc" style="border-left-color:#bee3f8;">Good govt medical colleges in most states. All AIIMS.</div>
+          </div>
+          <div class="score-row">
+            <div class="score-badge" style="background:#e9d8fd;color:#553c9a;">520 – 580</div>
+            <div class="score-desc" style="border-left-color:#e9d8fd;">TN / State govt MBBS (OC/BC category) — the main battleground</div>
+          </div>
+          <div class="score-row">
+            <div class="score-badge" style="background:#feebc8;color:#c05621;">450 – 520</div>
+            <div class="score-desc" style="border-left-color:#feebc8;">Borderline govt — mostly private MBBS or AYUSH govt colleges</div>
+          </div>
+          <div class="score-row">
+            <div class="score-badge" style="background:#fed7e2;color:#97266d;">350 – 450</div>
+            <div class="score-desc" style="border-left-color:#fed7e2;">BAMS / BHMS / BSMS / BUMS govt colleges (AYUSH track)</div>
+          </div>
+          <div class="score-row">
+            <div class="score-badge" style="background:#e2e8f0;color:#718096;">Below 350</div>
+            <div class="score-desc" style="border-left-color:#e2e8f0;">Very limited — AYUSH private only. Honest conversation needed.</div>
+          </div>
+        </div>
+        <div style="margin-top:16px;">
+          <div class="callout" style="--color:#2b6cb0;--bg:#ebf8ff;--head:#1a365d;">
+            <strong>What does 550+ actually need?</strong>
+            ~75–80% accuracy across all 180 questions WITH negative marking. Strong preparation across all 4 sections.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TN Counselling -->
+    <div class="section">
+      <div class="section-title">
+        <div class="icon">🏛️</div>
+        Tamil Nadu — Govt MBBS Counselling (Approximate Cutoffs)
+      </div>
+      <table class="ref-table">
+        <thead>
+          <tr><th>Category</th><th>Approx NEET Score</th><th>Percentile</th><th>What It Means</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>OC — General</strong></td>
+            <td><span class="tag tag-red">560 – 590+</span></td>
+            <td>95th – 98th %ile</td>
+            <td>Very high bar. Needs consistent 560+ in mocks.</td>
+          </tr>
+          <tr>
+            <td><strong>BC — Backward Class</strong></td>
+            <td><span class="tag tag-orange">530 – 560</span></td>
+            <td>92nd – 95th %ile</td>
+            <td>Competitive. Strong focused prep needed.</td>
+          </tr>
+          <tr>
+            <td><strong>MBC — Most Backward Class</strong></td>
+            <td><span class="tag tag-orange">510 – 530</span></td>
+            <td>88th – 92nd %ile</td>
+            <td>Achievable with consistent effort.</td>
+          </tr>
+          <tr>
+            <td><strong>SC — Scheduled Caste</strong></td>
+            <td><span class="tag tag-green">450 – 490</span></td>
+            <td>78th – 85th %ile</td>
+            <td>Strong preparation still required.</td>
+          </tr>
+          <tr>
+            <td><strong>ST — Scheduled Tribe</strong></td>
+            <td><span class="tag tag-green">400 – 450</span></td>
+            <td>65th – 78th %ile</td>
+            <td>Manageable target with steady prep.</td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="margin-top:10px;font-size:0.75rem;color:#a0aec0;">⚠️ Cutoffs vary each year. These are approximate based on recent TN counselling data. Always verify with TN MRB / DME official data.</div>
+    </div>
+
+    <!-- Exam Pattern + Rules -->
+    <div class="two-col">
+      <div class="section">
+        <div class="section-title">
+          <div class="icon">📐</div>
+          Exam Pattern
+        </div>
+        <table class="ref-table">
+          <thead><tr><th>Subject</th><th>Questions</th><th>Max Marks</th></tr></thead>
+          <tbody>
+            <tr><td>Physics</td><td>45</td><td>180</td></tr>
+            <tr><td>Chemistry</td><td>45</td><td>180</td></tr>
+            <tr><td>Botany</td><td>45</td><td>180</td></tr>
+            <tr><td>Zoology</td><td>45</td><td>180</td></tr>
+            <tr><td><strong>Total</strong></td><td><strong>180</strong></td><td><strong>720</strong></td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:14px;">
+          <div class="callout" style="--color:#e53e3e;--bg:#fff5f5;--head:#c53030;">
+            <strong>Marking</strong>
+            +4 correct &nbsp;|&nbsp; −1 wrong &nbsp;|&nbsp; 0 unattempted
+          </div>
+          <div class="callout" style="--color:#4a5568;--bg:#f7fafc;--head:#2d3748;margin-bottom:0;">
+            <strong>Mode &amp; Duration</strong>
+            Offline (pen &amp; paper) &nbsp;·&nbsp; 3 hrs 20 min &nbsp;·&nbsp; 13 languages including Tamil
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">
+          <div class="icon">📜</div>
+          Rules &amp; Eligibility
+        </div>
+        <table class="ref-table">
+          <tbody>
+            <tr><td>Min age</td><td>17 years on Dec 31 of admission year</td></tr>
+            <tr><td>Max age</td><td>25 yrs (General) &nbsp;|&nbsp; 30 yrs (Reserved)</td></tr>
+            <tr><td>Attempts</td><td><span class="tag tag-green">No limit</span> — can write every year</td></tr>
+            <tr><td>Min Class 12 %</td><td>50% in PCB (General) &nbsp;|&nbsp; 40% (Reserved)</td></tr>
+            <tr><td>Gap year</td><td><span class="tag tag-green">Fully valid</span> — many toppers crack it in 2nd–3rd attempt</td></tr>
+            <tr><td>Conducted by</td><td>NTA — National Testing Agency</td></tr>
+            <tr><td>Exam timing</td><td>Usually 2nd Sunday of May</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- AYUSH Seats -->
+    <div class="section">
+      <div class="section-title">
+        <div class="icon">🌿</div>
+        NEET Also Opens — AYUSH Govt Seats (~60,000+)
+      </div>
+      <table class="ref-table">
+        <thead><tr><th>Course</th><th>Duration</th><th>Approx Govt Seats</th><th>Score Range</th><th>TN Note</th></tr></thead>
+        <tbody>
+          <tr><td><strong>BAMS</strong> — Ayurveda</td><td>5.5 yrs</td><td>~30,000+</td><td><span class="tag tag-orange">350–450</span></td><td>Available via TN counselling</td></tr>
+          <tr><td><strong>BHMS</strong> — Homeopathy</td><td>5.5 yrs</td><td>~15,000+</td><td><span class="tag tag-orange">320–420</span></td><td>Available</td></tr>
+          <tr><td><strong>BSMS</strong> — Siddha</td><td>5.5 yrs</td><td>~2,500</td><td><span class="tag tag-orange">350–440</span></td><td>Primarily TN — good govt cadre</td></tr>
+          <tr><td><strong>BUMS</strong> — Unani</td><td>5.5 yrs</td><td>~5,000+</td><td><span class="tag tag-gray">300–400</span></td><td>Limited in TN</td></tr>
+          <tr><td><strong>BNYS</strong> — Naturopathy &amp; Yoga</td><td>5.5 yrs</td><td>~5,000+</td><td><span class="tag tag-gray">300–400</span></td><td>Growing wellness sector</td></tr>
+          <tr><td><strong>BVSc &amp; AH</strong> — Veterinary</td><td>5 yrs</td><td>~4,000+</td><td><span class="tag tag-orange">400–490</span></td><td>TANUVAS (TN Vet Univ)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- AIIMS -->
+    <div class="section">
+      <div class="section-title">
+        <div class="icon">🏆</div>
+        AIIMS — The Dream Seats
+      </div>
+      <table class="ref-table">
+        <thead><tr><th>Institute</th><th>MBBS Seats</th><th>Score Needed</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>AIIMS New Delhi</strong></td>
+            <td>~107</td>
+            <td><span class="tag tag-red">680+ (99.9+ %ile)</span></td>
+            <td>Most competitive medical seat in India</td>
+          </tr>
+          <tr>
+            <td><strong>All 23 AIIMS combined</strong></td>
+            <td>~1,800+</td>
+            <td><span class="tag tag-orange">620+</span></td>
+            <td>Uses NEET score — no separate exam</td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="margin-top:12px;" class="callout" style="--color:#6b46c1;--bg:#faf5ff;--head:#553c9a;">
+        <strong>AIIMS uses the NEET score directly — no extra exam needed</strong>
+        She applies to AIIMS through MCC counselling using her NEET rank. No additional registration beyond NEET.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ══════════════ IISER IAT TAB ══════════════ -->
+  <div id="tab-iat" class="tab-content">
+
+    <div class="highlight-box">
+      <h3>What is IISER?</h3>
+      <p>Indian Institutes of Science Education and Research — 7 premier institutes set up by MHRD. Equivalent in prestige to IITs but focused purely on science. The BS-MS here is a <strong>fully funded 5-year integrated degree</strong> — low fees, and students receive a monthly fellowship from Day 1. It is the best route in India for a student who loves Biology as a science, not just as a NEET subject.</p>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-card" style="--accent:#6b46c1">
+        <div class="stat-number">7</div>
+        <div class="stat-label">IISERs in India</div>
+        <div class="stat-sub">Premier govt institutes</div>
+      </div>
+      <div class="stat-card" style="--accent:#2b6cb0">
+        <div class="stat-number">5 yrs</div>
+        <div class="stat-label">BS-MS Dual Degree</div>
+        <div class="stat-sub">Integrated program</div>
+      </div>
+      <div class="stat-card" style="--accent:#38a169">
+        <div class="stat-number">₹5K</div>
+        <div class="stat-label">Monthly Fellowship</div>
+        <div class="stat-sub">Paid to study science</div>
+      </div>
+      <div class="stat-card" style="--accent:#ed8936">
+        <div class="stat-number">~3K</div>
+        <div class="stat-label">Total Seats</div>
+        <div class="stat-sub">IISERs + IISc + IIT Madras</div>
+      </div>
+      <div class="stat-card" style="--accent:#285e61">
+        <div class="stat-number">60+</div>
+        <div class="stat-label">PCMB Questions</div>
+        <div class="stat-sub">All 4 subjects tested</div>
+      </div>
+    </div>
+
+    <!-- Institutes -->
+    <div class="section">
+      <div class="section-title">
+        <div class="icon">🏫</div>
+        Institutes That Accept IAT Score
+      </div>
+
+      <div style="margin-bottom:10px;font-size:0.8rem;font-weight:700;color:#718096;text-transform:uppercase;letter-spacing:0.4px;">The 7 IISERs</div>
+      <div class="iiser-grid">
+        <div class="iiser-card">
+          <div class="iiser-name">IISER Pune</div>
+          <div class="iiser-city">Pune, Maharashtra</div>
+          <div class="iiser-highlight">Oldest &amp; most competitive</div>
+        </div>
+        <div class="iiser-card">
+          <div class="iiser-name">IISER Kolkata</div>
+          <div class="iiser-city">Mohanpur, West Bengal</div>
+          <div class="iiser-highlight">Strong Physics &amp; Chemistry</div>
+        </div>
+        <div class="iiser-card">
+          <div class="iiser-name">IISER Mohali</div>
+          <div class="iiser-city">Mohali, Punjab</div>
+          <div class="iiser-highlight">Strong Biology research</div>
+        </div>
+        <div class="iiser-card">
+          <div class="iiser-name">IISER Bhopal</div>
+          <div class="iiser-city">Bhopal, Madhya Pradesh</div>
+          <div class="iiser-highlight">Growing research output</div>
+        </div>
+        <div class="iiser-card">
+          <div class="iiser-name">IISER Thiruvananthapuram</div>
+          <div class="iiser-city">Thiruvananthapuram, Kerala</div>
+          <div class="iiser-highlight">Closest to Tamil Nadu</div>
+        </div>
+        <div class="iiser-card">
+          <div class="iiser-name">IISER Tirupati</div>
+          <div class="iiser-city">Tirupati, Andhra Pradesh</div>
+          <div class="iiser-highlight">Newer, expanding fast</div>
+        </div>
+        <div class="iiser-card">
+          <div class="iiser-name">IISER Berhampur</div>
+          <div class="iiser-city">Berhampur, Odisha</div>
+          <div class="iiser-highlight">Newest campus</div>
+        </div>
+      </div>
+
+      <div style="margin:18px 0 10px;font-size:0.8rem;font-weight:700;color:#718096;text-transform:uppercase;letter-spacing:0.4px;">Also Accept IAT Score — Premier Institutes</div>
+      <div class="iiser-grid">
+        <div class="iiser-card" style="border-color:#bee3f8;background:#f0f8ff;">
+          <div class="iiser-name" style="color:#1a365d;">IISc Bangalore</div>
+          <div class="iiser-city">Bengaluru, Karnataka</div>
+          <div style="font-size:0.78rem;color:#2d3748;margin-bottom:8px;">BS (Research) — 4 years</div>
+          <div class="iiser-highlight" style="background:#bee3f8;color:#1a365d;">#1 Research University in India</div>
+        </div>
+        <div class="iiser-card" style="border-color:#bee3f8;background:#f0f8ff;">
+          <div class="iiser-name" style="color:#1a365d;">IIT Madras</div>
+          <div class="iiser-city">Chennai, Tamil Nadu</div>
+          <div style="font-size:0.78rem;color:#2d3748;margin-bottom:8px;">BS program — sciences</div>
+          <div class="iiser-highlight" style="background:#bee3f8;color:#1a365d;">Closest top institute for TN students</div>
+        </div>
+      </div>
+      <div style="margin-top:12px;" class="callout" style="--color:#2b6cb0;--bg:#ebf8ff;--head:#1a365d;">
+        <strong>Why this matters</strong>
+        IISc and IIT Madras are arguably more prestigious than most IISERs. The fact that the same IAT exam gives a shot at these institutes makes it a very high-value exam to write — one exam, multiple top institutes.
+      </div>
+    </div>
+
+    <div class="two-col">
+      <!-- Exam Pattern -->
+      <div class="section">
+        <div class="section-title">
+          <div class="icon">📐</div>
+          IAT Exam Pattern
+        </div>
+        <table class="ref-table">
+          <thead><tr><th>Subject</th><th>Questions</th><th>Syllabus</th></tr></thead>
+          <tbody>
+            <tr><td>Biology</td><td>~15</td><td>Class 11 + 12</td></tr>
+            <tr><td>Chemistry</td><td>~15</td><td>Class 11 + 12</td></tr>
+            <tr><td>Mathematics</td><td>~15</td><td>Class 11 + 12</td></tr>
+            <tr><td>Physics</td><td>~15</td><td>Class 11 + 12</td></tr>
+            <tr><td><strong>Total</strong></td><td><strong>~60</strong></td><td>MCQ + NAT format</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:14px;">
+          <div class="callout" style="--color:#6b46c1;--bg:#faf5ff;--head:#553c9a;">
+            <strong>PCMB Advantage — She's Already Prepared</strong>
+            She studies all 4 subjects for NEET. Math is the only additional section — and she already has Math in PCMB. Minimal extra effort needed.
+          </div>
+          <div class="callout" style="--color:#4a5568;--bg:#f7fafc;--head:#2d3748;margin-bottom:0;">
+            <strong>Mode &amp; Timing</strong>
+            Online (computer-based) &nbsp;·&nbsp; 3 hours &nbsp;·&nbsp; Usually June (after boards &amp; NEET)
+          </div>
+        </div>
+      </div>
+
+      <!-- Eligibility -->
+      <div class="section">
+        <div class="section-title">
+          <div class="icon">📜</div>
+          Eligibility &amp; Admission Routes
+        </div>
+        <table class="ref-table">
+          <tbody>
+            <tr><td>Stream</td><td>PCM or PCB — PCMB fully eligible ✓</td></tr>
+            <tr><td>Class 12 min %</td><td>60% aggregate (55% for SC/ST/OBC-NCL)</td></tr>
+            <tr><td>Attempts</td><td>Can write in Class 12 year or after gap year</td></tr>
+            <tr><td>Fees</td><td>Very low — govt-funded institute</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:14px;">
+          <div class="section-title" style="font-size:0.82rem;margin-bottom:10px;padding-bottom:8px;">3 Routes into IISER</div>
+          <div class="callout" style="--color:#6b46c1;--bg:#faf5ff;--head:#553c9a;">
+            <strong>1. IAT — IISER Aptitude Test</strong>
+            The direct exam. Write in June after Class 12. Open to all students.
+          </div>
+          <div class="callout" style="--color:#2b6cb0;--bg:#ebf8ff;--head:#1a365d;">
+            <strong>2. JEE Advanced Channel</strong>
+            Strong JEE Advanced rank → direct IISER admission (no IAT needed).
+          </div>
+          <div class="callout" style="--color:#38a169;--bg:#f0fff4;--head:#276749;margin-bottom:0;">
+            <strong>3. SCB — State / Central Board Channel</strong>
+            Top rank in state board (within a cut-off percentile) → eligible without IAT.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- What you study -->
+    <div class="section">
+      <div class="section-title">
+        <div class="icon">🧪</div>
+        What She Will Study — BS-MS Program
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;">
+        <span class="tag tag-purple">Biology</span>
+        <span class="tag tag-blue">Chemistry</span>
+        <span class="tag tag-teal">Physics</span>
+        <span class="tag tag-green">Mathematics</span>
+        <span class="tag tag-orange">Earth Sciences</span>
+        <span class="tag tag-purple">Neuroscience</span>
+        <span class="tag tag-blue">Data Science</span>
+        <span class="tag tag-teal">Bioinformatics</span>
+        <span class="tag tag-green">Humanities &amp; Social Sci</span>
+      </div>
+      <div class="two-col">
+        <div class="callout" style="--color:#6b46c1;--bg:#faf5ff;--head:#553c9a;margin-bottom:0;">
+          <strong>Years 1–2 — Foundation</strong>
+          All science disciplines together. Interdisciplinary by design. She discovers what she loves most.
+        </div>
+        <div class="callout" style="--color:#2b6cb0;--bg:#ebf8ff;--head:#1a365d;margin-bottom:0;">
+          <strong>Years 3–5 — Specialisation + Thesis</strong>
+          Chooses major. Year 5 MS thesis is original research — often published in international journals.
+        </div>
+      </div>
+    </div>
+
+    <!-- After IISER -->
+    <div class="section">
+      <div class="section-title">
+        <div class="icon">🚀</div>
+        What Happens After IISER BS-MS
+      </div>
+      <table class="ref-table">
+        <thead><tr><th>Path</th><th>How</th><th>Where</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>PhD in India</strong></td>
+            <td>CSIR NET / GATE / direct interview</td>
+            <td>IISc, TIFR, NCBS Bangalore — ₹37K/month fellowship</td>
+          </tr>
+          <tr>
+            <td><strong>PhD abroad</strong> <span class="tag tag-green">Very common</span></td>
+            <td>GRE + IISER transcript (very strong)</td>
+            <td>MIT, Stanford, Johns Hopkins, Max Planck (fully funded)</td>
+          </tr>
+          <tr>
+            <td><strong>Research Scientist</strong></td>
+            <td>CSIR / ICMR / DBT lab positions</td>
+            <td>CSIR labs, DRDO, BARC, ICMR institutes</td>
+          </tr>
+          <tr>
+            <td><strong>Pharma / Biotech</strong></td>
+            <td>Campus placement</td>
+            <td>Sun Pharma, Biocon, Dr. Reddy's, MNC R&amp;D divisions</td>
+          </tr>
+          <tr>
+            <td><strong>Academia</strong></td>
+            <td>NET + faculty application</td>
+            <td>Central universities, IISERs, IITs (Science faculty)</td>
+          </tr>
+          <tr>
+            <td><strong>Civil Services</strong></td>
+            <td>UPSC / TNPSC Science cadre</td>
+            <td>DST, DBT, SERB, Science &amp; Technology ministry roles</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- When to recommend -->
+    <div class="section">
+      <div class="section-title">
+        <div class="icon">💡</div>
+        When to Recommend IISER IAT to This Student
+      </div>
+      <div class="callout" style="--color:#38a169;--bg:#f0fff4;--head:#276749;">
+        <strong>✅ Recommend if she says any of these</strong>
+        "I love Biology as a subject, not just for NEET" &nbsp;·&nbsp; "I'm curious about how things work" &nbsp;·&nbsp; "I like lab work" &nbsp;·&nbsp; "I want to go abroad for higher studies" &nbsp;·&nbsp; "I'm okay with a non-clinical career"
+      </div>
+      <div class="callout" style="--color:#ed8936;--bg:#fffaf0;--head:#c05621;">
+        <strong>⚠️ Mention but don't push if</strong>
+        Primary goal is treating patients &nbsp;·&nbsp; Parents firmly want "Doctor" title &nbsp;·&nbsp; Math is weak (extra prep needed for Math section)
+      </div>
+      <div class="callout" style="--color:#e53e3e;--bg:#fff5f5;--head:#c53030;margin-bottom:0;">
+        <strong>❌ Don't recommend as primary if</strong>
+        She's scoring 550+ consistently in NEET mocks — all energy should go to NEET. IISER is for the student who needs a route that honours her biology preparation without requiring NEET success.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ══════════════ ALL EXAMS TAB ══════════════ -->
+  <div id="tab-exams" class="tab-content">
+
+    <div class="callout" style="--color:#2b6cb0;--bg:#ebf8ff;--head:#1a365d;font-size:0.9rem;">
+      <strong>The core strategy</strong>
+      One year of NEET preparation covers most of these exams. Register early for all relevant ones. Write them all. Results will show the options — then she decides.
+    </div>
+
+    <!-- UG Exams -->
+    <div class="section">
+      <div class="section-title">
+        <div class="icon">📋</div>
+        UG Exams — After Class 12 (PCMB)
+      </div>
+
+      <div style="margin-bottom:14px;font-size:0.82rem;font-weight:700;color:#718096;text-transform:uppercase;letter-spacing:0.4px;">Group A — Same NEET prep, zero extra effort</div>
+      <table class="ref-table" style="margin-bottom:20px;">
+        <thead><tr><th>Exam</th><th>Opens</th><th>Extra Prep</th><th>When</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>NEET-UG</strong> <span class="tag tag-red">Primary Target</span></td>
+            <td>MBBS, BDS, BAMS, BSMS, BHMS, BUMS, BNYS, BVSc</td>
+            <td><span class="tag tag-green">None</span></td>
+            <td>May</td>
+          </tr>
+          <tr>
+            <td><strong>AFMC Pune</strong></td>
+            <td>MBBS with Indian Army (NEET score + SSB interview)</td>
+            <td><span class="tag tag-green">None (apply after NEET)</span></td>
+            <td>After NEET</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div style="margin-bottom:14px;font-size:0.82rem;font-weight:700;color:#718096;text-transform:uppercase;letter-spacing:0.4px;">Group B — High overlap, small extra prep</div>
+      <table class="ref-table" style="margin-bottom:20px;">
+        <thead><tr><th>Exam</th><th>Opens</th><th>Extra Prep</th><th>When</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>CUET-UG</strong> <span class="tag tag-blue">Highly Recommended</span></td>
+            <td>B.Sc at DU, JNU, BHU, Hyderabad Central, Pondicherry Univ</td>
+            <td><span class="tag tag-orange">English + General Test (1 paper)</span></td>
+            <td>May–June</td>
+          </tr>
+          <tr>
+            <td><strong>ICAR AIEEA</strong></td>
+            <td>B.Sc Agri, Horticulture, Fisheries, Forestry — IARI, NDRI, state agri universities</td>
+            <td><span class="tag tag-green">Same PCB syllabus</span></td>
+            <td>June</td>
+          </tr>
+          <tr>
+            <td><strong>TNAU Entrance</strong></td>
+            <td>B.Sc/B.Tech Agri, Food Tech, Fisheries at TNAU Coimbatore</td>
+            <td><span class="tag tag-green">Same PCB (TN syllabus)</span></td>
+            <td>June</td>
+          </tr>
+          <tr>
+            <td><strong>IISER IAT</strong> <span class="tag tag-purple">Research Track</span></td>
+            <td>BS-MS at 7 IISERs — ₹5,000/month funded</td>
+            <td><span class="tag tag-orange">Math section (PCMB students already have Math)</span></td>
+            <td>June</td>
+          </tr>
+          <tr>
+            <td><strong>NEST</strong></td>
+            <td>B.Sc-M.Sc at NISER Bhubaneswar — funded</td>
+            <td><span class="tag tag-orange">Math + slightly broader science</span></td>
+            <td>June</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div style="margin-bottom:14px;font-size:0.82rem;font-weight:700;color:#718096;text-transform:uppercase;letter-spacing:0.4px;">Group C — She has Math (PCMB), so also eligible</div>
+      <table class="ref-table">
+        <thead><tr><th>Exam</th><th>Opens</th><th>Extra Prep</th><th>When</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>JEE Main</strong> <span class="tag tag-gray">Optional</span></td>
+            <td>B.Tech Biomedical Engg, Biotechnology at NITs/IIITs</td>
+            <td><span class="tag tag-red">Separate heavy prep — Math-intensive</span></td>
+            <td>Jan + Apr</td>
+          </tr>
+          <tr>
+            <td><strong>BITSAT</strong> <span class="tag tag-gray">Optional</span></td>
+            <td>BITS Pilani/Goa/Hyderabad — Pharmacy, Biotech</td>
+            <td><span class="tag tag-red">Separate prep — similar to JEE</span></td>
+            <td>May–June</td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="margin-top:10px;font-size:0.77rem;color:#a0aec0;">Note: State CETs (AP EAMCET, TS EAMCET, KCET, MHTCET, KEAM) are relevant mainly for students willing to study in those states and primarily open Pharmacy, Nursing, Agri, and Allied Health — not MBBS (all MBBS is NEET-based now).</div>
+    </div>
+
+    <!-- PG Exams -->
+    <div class="section">
+      <div class="section-title">
+        <div class="icon">🎓</div>
+        PG Exams — After B.Sc (3 Years Later)
+      </div>
+      <div class="callout" style="--color:#6b46c1;--bg:#faf5ff;--head:#553c9a;">
+        <strong>The "slow burn" route</strong>
+        B.Sc from a good college → one of these exams → M.Sc / M.Tech / PhD at IIT, IISc, JNU, TIFR. The biology she's studying for NEET feeds directly into these PG exams.
+      </div>
+      <table class="ref-table">
+        <thead><tr><th>Exam</th><th>Opens</th><th>Fellowship / Stipend</th><th>When</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>IIT JAM</strong> (BT paper)</td>
+            <td>M.Sc at IITs + IISc</td>
+            <td>—</td>
+            <td>February</td>
+          </tr>
+          <tr>
+            <td><strong>GATE XL / BT</strong></td>
+            <td>M.Tech at IITs/NITs + PSU jobs (IOCL, ONGC, BARC)</td>
+            <td>₹12,400/month (M.Tech)</td>
+            <td>February</td>
+          </tr>
+          <tr>
+            <td><strong>CUET-PG</strong></td>
+            <td>M.Sc at DU, JNU, BHU, Hyderabad Central, Pondicherry</td>
+            <td>—</td>
+            <td>March–April</td>
+          </tr>
+          <tr>
+            <td><strong>CSIR-UGC NET</strong> <span class="tag tag-green">Best funded route</span></td>
+            <td>JRF → PhD at IISc, TIFR, NCBS, CCMB, all CSIR labs</td>
+            <td>₹37,000–42,000/month</td>
+            <td>June + December</td>
+          </tr>
+          <tr>
+            <td><strong>DBT JRF</strong></td>
+            <td>PhD in Biotechnology at IISc, JNU, CCMB, NIPGR</td>
+            <td>₹37,000/month</td>
+            <td>June</td>
+          </tr>
+          <tr>
+            <td><strong>ICMR JRF</strong></td>
+            <td>PhD in Medical/Biomedical Sciences at AIIMS, ICMR institutes</td>
+            <td>₹37,000/month</td>
+            <td>Once a year</td>
+          </tr>
+          <tr>
+            <td><strong>TIFR GS</strong></td>
+            <td>Direct PhD at TIFR Mumbai, NCBS Bangalore, TIFR Hyderabad</td>
+            <td>₹37,000–42,000/month</td>
+            <td>December</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Calendar -->
+    <div class="section">
+      <div class="section-title">
+        <div class="icon">📅</div>
+        Exam Calendar — Full Year View
+      </div>
+      <div class="two-col">
+        <div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-month">January – February</div>
+              <div class="timeline-exam">JEE Main Session 1</div>
+              <div class="timeline-detail">Only if she wants Biotech / Biomedical Engineering at NITs</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-month">April</div>
+              <div class="timeline-exam">JEE Main Session 2</div>
+              <div class="timeline-detail">Second attempt if writing JEE</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-month">May</div>
+              <div class="timeline-exam">NEET-UG ⭐</div>
+              <div class="timeline-detail">The primary target — all focus here</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-month">May – June</div>
+              <div class="timeline-exam">CUET-UG</div>
+              <div class="timeline-detail">B.Sc seats at central universities — highly recommended add-on, minimal extra prep</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-month">June</div>
+              <div class="timeline-exam">ICAR AIEEA &nbsp;·&nbsp; TNAU &nbsp;·&nbsp; IISER IAT &nbsp;·&nbsp; NEST</div>
+              <div class="timeline-detail">Agriculture + Research institute track — all in the same window</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="--color:#2b6cb0;--bg:#ebf8ff;--head:#1a365d;">
+            <strong>Minimum 3 exams she must write</strong>
+            1. NEET-UG — primary target<br>
+            2. CUET-UG — B.Sc backup (1 extra paper only)<br>
+            3. IISER IAT — research track (if curious about science)
+          </div>
+          <div class="callout" style="--color:#6b46c1;--bg:#faf5ff;--head:#553c9a;">
+            <strong>Total count</strong>
+            UG exams (same/minimal prep): <strong>7</strong><br>
+            UG exams (separate Math prep): <strong>2</strong><br>
+            PG exams (after B.Sc): <strong>7</strong><br>
+            <strong>Total mapped: 16 exams</strong>
+          </div>
+          <div class="callout" style="--color:#38a169;--bg:#f0fff4;--head:#276749;margin-bottom:0;">
+            <strong>Message for the student</strong>
+            "You don't need to decide anything now. Just write the exams. Results will show you your options — then you choose the best seat you get."
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+function switchTab(tab, el) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + tab).classList.add('active');
+  el.classList.add('active');
+}
+
+function toggleTip(header) {
+  const body = header.nextElementSibling;
+  const chevron = header.querySelector('.chevron');
+  body.classList.toggle('open');
+  chevron.classList.toggle('open');
+}
+</script>
+
+</body>
+</html>

@@ -524,6 +524,23 @@ function renderCareerPath(c) {
 // Initialise category browse grid on first load
 document.addEventListener('DOMContentLoaded', cgInitBrowse);
 
+// Query/category handoff from the homepage (sessionStorage, set by index).
+// Runs on window load so it fires after routeFromHash has switched to #find.
+window.addEventListener('load', () => {
+  const q = sessionStorage.getItem('vz-career-query');
+  if (q) {
+    sessionStorage.removeItem('vz-career-query');
+    const inp = document.getElementById('cg-input');
+    if (inp) { inp.value = q; searchCareer(); }
+    return;
+  }
+  const cat = sessionStorage.getItem('vz-career-cat');
+  if (cat) {
+    sessionStorage.removeItem('vz-career-cat');
+    if (CG_CATEGORIES.some(c => c.id === cat)) cgShowCategory(cat);
+  }
+});
+
 // Compact exam info card for Step 2
 function cgExamCard(e) {
   return `<div class="cg-exam-card">

@@ -16,3 +16,6 @@ mnt/
 # Local backups
 *.bak
 *.bak.*
+
+# Client reports — private counselling documents, not for the live site
+clients/

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Education News</title>
+<style>
+  :root{
+    --bg:#0f1419; --card:#1a2029; --card2:#20272f;
+    --ink:#e7ecf2; --muted:#8b97a6; --line:#2b333d;
+    --accent:#4da3ff; --accent2:#ff7a59;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  }
+  header{
+    position:sticky; top:0; z-index:5;
+    background:rgba(15,20,25,.92); backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line); padding:14px 20px;
+    display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+  }
+  header h1{font-size:18px; margin:0; letter-spacing:.2px}
+  header h1 .dot{color:var(--accent2)}
+  .meta{color:var(--muted); font-size:12px}
+  .btn{
+    margin-left:auto; background:var(--accent); color:#04121f; border:0;
+    padding:8px 16px; border-radius:8px; font-weight:600; cursor:pointer; font-size:13px;
+  }
+  .btn:active{transform:translateY(1px)}
+  .wrap{max-width:920px; margin:0 auto; padding:20px}
+  /* topic filter chips */
+  .chips{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:18px}
+  .chip{
+    background:var(--card); border:1px solid var(--line); color:var(--muted);
+    padding:6px 13px; border-radius:20px; font-size:13px; cursor:pointer; user-select:none;
+  }
+  .chip.on{background:var(--accent); color:#04121f; border-color:var(--accent); font-weight:600}
+  /* news cards */
+  .card{
+    background:var(--card); border:1px solid var(--line); border-radius:12px;
+    padding:15px 17px; margin-bottom:12px; display:block; text-decoration:none; color:inherit;
+    transition:background .15s, border-color .15s;
+  }
+  .card:hover{background:var(--card2); border-color:#3a4551}
+  .card .title{font-size:16px; font-weight:600; margin:0 0 6px}
+  .card .sub{display:flex; gap:10px; flex-wrap:wrap; color:var(--muted); font-size:12px; align-items:center}
+  .card .src{color:var(--accent)}
+  .card .topic{
+    background:var(--card2); border:1px solid var(--line); padding:1px 8px;
+    border-radius:20px; font-size:11px;
+  }
+  /* pinned section */
+  .pinned-head{
+    display:flex; align-items:center; gap:8px; color:var(--accent2);
+    font-size:13px; font-weight:600; text-transform:uppercase; letter-spacing:.5px;
+    margin:0 0 10px;
+  }
+  .card.pin{border-color:#3a2f26; background:linear-gradient(180deg,#241d18,#1a2029)}
+  .card.pin:hover{border-color:var(--accent2)}
+  .card.pin .topic{border-color:#4a3a2c; background:#2a2119; color:#ffb896}
+  .divider{border:0; border-top:1px solid var(--line); margin:22px 0 16px}
+  .status{text-align:center; color:var(--muted); padding:40px 0}
+  .spinner{
+    width:26px; height:26px; border:3px solid var(--line); border-top-color:var(--accent);
+    border-radius:50%; margin:0 auto 12px; animation:spin .8s linear infinite;
+  }
+  @keyframes spin{to{transform:rotate(360deg)}}
+  footer{text-align:center; color:var(--muted); font-size:12px; padding:24px}
+</style>
+</head>
+<body>
+<header>
+  <h1>My Education News <span class="dot">•</span></h1>
+  <span class="meta" id="meta">loading…</span>
+  <button class="btn" id="refresh">↻ Refresh</button>
+</header>
+
+<div class="wrap">
+  <div class="chips" id="chips"></div>
+  <div id="pinned"></div>
+  <div id="feed">
+    <div class="status"><div class="spinner"></div>Fetching the latest headlines…</div>
+  </div>
+</div>
+
+<footer>Personal news board · powered by Google News RSS · edit the TOPICS list in this file to tune it</footer>
+
+<script>
+/* ─────────────────────────────────────────────────────────────
+   EDIT THIS LIST to control what news you see.
+   label  = the chip text + tag shown on cards
+   query  = what to search Google News for
+   ───────────────────────────────────────────────────────────── */
+/* ─────────────────────────────────────────────────────────────
+   PINNED — your own hand-picked items, always shown at the top.
+   Add/remove freely. `date` is optional (used for the "x ago" tag).
+   ───────────────────────────────────────────────────────────── */
+const PINNED = [
+  // { title: 'NEET UG 2026 registration opens', source: 'NTA', topic: 'NEET',
+  //   link: 'https://neet.nta.nic.in', date: '2026-02-01' },
+];
+
+const TOPICS = [
+  { label: 'NEET',        query: 'NEET UG 2026' },
+  { label: 'JEE',         query: 'JEE Main JEE Advanced 2026' },
+  { label: 'CUET',        query: 'CUET UG 2026 admission' },
+  { label: 'Counselling', query: 'JoSAA TNEA counselling seat allotment' },
+  { label: 'Admissions',  query: 'India college admission 2026' },
+  { label: 'Scholarships',query: 'scholarship students India 2026' },
+  { label: 'Exams',       query: 'India entrance exam board results 2026' },
+  { label: 'Policy',      query: 'India education policy UGC NEP' },
+];
+
+// Free CORS proxies (tried in order until one works)
+const PROXIES = [
+  u => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(u),
+  u => 'https://corsproxy.io/?url=' + encodeURIComponent(u),
+];
+
+const gnews = q =>
+  `https://news.google.com/rss/search?q=${encodeURIComponent(q)}&hl=en-IN&gl=IN&ceid=IN:en`;
+
+async function fetchText(url){
+  let lastErr;
+  for(const p of PROXIES){
+    try{
+      const r = await fetch(p(url));
+      if(r.ok) return await r.text();
+    }catch(e){ lastErr = e; }
+  }
+  throw lastErr || new Error('all proxies failed');
+}
+
+function parseRSS(xml, topic){
+  const doc = new DOMParser().parseFromString(xml, 'text/xml');
+  return [...doc.querySelectorAll('item')].map(it => {
+    const t = (s) => it.querySelector(s)?.textContent || '';
+    // Google News titles look like "Headline - Source"
+    const rawTitle = t('title');
+    const dash = rawTitle.lastIndexOf(' - ');
+    return {
+      topic,
+      title:  dash > 0 ? rawTitle.slice(0, dash) : rawTitle,
+      source: t('source') || (dash > 0 ? rawTitle.slice(dash + 3) : ''),
+      link:   t('link'),
+      date:   new Date(t('pubDate') || Date.now()),
+    };
+  });
+}
+
+function timeAgo(d){
+  const s = (Date.now() - d) / 1000;
+  if(s < 3600)  return Math.max(1,Math.round(s/60)) + 'm ago';
+  if(s < 86400) return Math.round(s/3600) + 'h ago';
+  return Math.round(s/86400) + 'd ago';
+}
+
+let ALL = [], active = 'All';
+
+function renderPinned(){
+  const box = document.getElementById('pinned');
+  const items = PINNED.filter(i => active === 'All' || i.topic === active);
+  if(!items.length){ box.innerHTML = ''; return; }
+  box.innerHTML =
+    '<div class="pinned-head">★ Pinned</div>' +
+    items.map(i => {
+      const d = i.date ? new Date(i.date) : null;
+      return `<a class="card pin" href="${i.link}" target="_blank" rel="noopener">
+        <div class="title">${esc(i.title)}</div>
+        <div class="sub">
+          <span class="src">${esc(i.source||'')}</span>
+          ${d ? `<span>·</span><span>${timeAgo(d)}</span>` : ''}
+          ${i.topic ? `<span class="topic">${esc(i.topic)}</span>` : ''}
+        </div></a>`;
+    }).join('') +
+    '<hr class="divider">';
+}
+
+function render(){
+  renderPinned();
+  const feed = document.getElementById('feed');
+  const items = (active === 'All' ? ALL : ALL.filter(i => i.topic === active));
+  if(!items.length){
+    feed.innerHTML = '<div class="status">No headlines found. Try Refresh, or check your connection.</div>';
+    return;
+  }
+  feed.innerHTML = items.map(i => `
+    <a class="card" href="${i.link}" target="_blank" rel="noopener">
+      <div class="title">${esc(i.title)}</div>
+      <div class="sub">
+        <span class="src">${esc(i.source)}</span>
+        <span>·</span><span>${timeAgo(i.date)}</span>
+        <span class="topic">${esc(i.topic)}</span>
+      </div>
+    </a>`).join('');
+}
+
+function esc(s){ return (s||'').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+
+function buildChips(){
+  const chips = document.getElementById('chips');
+  const all = ['All', ...TOPICS.map(t => t.label)];
+  chips.innerHTML = all.map(l =>
+    `<span class="chip ${l===active?'on':''}" data-l="${l}">${l}</span>`).join('');
+  chips.querySelectorAll('.chip').forEach(c =>
+    c.onclick = () => { active = c.dataset.l; buildChips(); render(); });
+}
+
+async function load(){
+  document.getElementById('meta').textContent = 'loading…';
+  document.getElementById('feed').innerHTML =
+    '<div class="status"><div class="spinner"></div>Fetching the latest headlines…</div>';
+  const results = await Promise.allSettled(
+    TOPICS.map(async t => parseRSS(await fetchText(gnews(t.query)), t.label))
+  );
+  const merged = results.flatMap(r => r.status === 'fulfilled' ? r.value : []);
+
+  // de-dupe by title, keep newest, sort desc
+  const seen = new Map();
+  for(const i of merged){
+    const k = i.title.toLowerCase().slice(0,80);
+    if(!seen.has(k) || i.date > seen.get(k).date) seen.set(k, i);
+  }
+  ALL = [...seen.values()].sort((a,b) => b.date - a.date);
+
+  document.getElementById('meta').textContent =
+    `${ALL.length} stories · updated ${new Date().toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})}`;
+  buildChips();
+  render();
+}
+
+document.getElementById('refresh').onclick = load;
+buildChips();
+renderPinned();
+load();
+</script>
+</body>
+</html>
