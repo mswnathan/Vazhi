@@ -283,6 +283,52 @@ const PG_COLLEGES = [
     ],
   },
 
+  {
+    name: 'Sálim Ali Centre for Ornithology & Natural History',
+    short: 'SACON Coimbatore',
+    type: 'Central',
+    district: 'Coimbatore',
+    state: 'Tamil Nadu',
+    naac: '',
+    nirf: 'Specialised Wildlife & Ornithology Research Institute',
+    affil: 'Autonomous research centre under the Ministry of Environment, Forest & Climate Change (MoEFCC). M.Sc degree awarded in collaboration with Central University of Tamil Nadu (CUTN).',
+    website: 'sacon.in',
+    streams: ['Arts & Science'],
+    specialNote: 'India\'s national centre for ornithology & natural history. Offers a 2-year fully residential M.Sc Wildlife Science & Ornithology (12 seats/batch, degree from CUTN) plus research internships up to 6 months.',
+    programGroups: [
+      {
+        stream: 'Wildlife & Environmental Sciences (PG / PhD)',
+        programs: [
+          { name: 'M.Sc Wildlife Science & Ornithology (2 years, residential)', exam: 'SACON–CUTN Entrance', examCss: 'ce-own' },
+          { name: 'PhD — Ornithology / Wildlife Biology / Conservation', exam: 'UGC-NET / Institute Selection', examCss: 'ce-net' },
+        ],
+      },
+    ],
+  },
+
+  {
+    name: 'ICAR — Central Marine Fisheries Research Institute',
+    short: 'CMFRI',
+    type: 'Central',
+    district: 'Kochi',
+    state: 'Kerala',
+    naac: '',
+    nirf: 'Premier Marine Fisheries Research Institute (ICAR)',
+    affil: 'ICAR institute under the Ministry of Agriculture & Farmers Welfare. Established 1947; HQ Kochi with regional/research centres (incl. Chennai, Mandapam & Tuticorin in Tamil Nadu).',
+    website: 'cmfri.org.in',
+    streams: ['Agriculture & Veterinary'],
+    specialNote: 'India\'s premier marine fisheries research institute — mariculture, seaweed farming and marine biodiversity. 300+ Masters and 160+ PhDs produced. Short-term research internships for PG students under ICAR guidelines.',
+    programGroups: [
+      {
+        stream: 'Fisheries & Marine Sciences (PG / PhD)',
+        programs: [
+          { name: 'M.F.Sc (Mariculture)', exam: 'ICAR AIEEA-PG', examCss: 'ce-icar' },
+          { name: 'PhD — Mariculture / Marine Biology / Fishery Resource Management', exam: 'ICAR-NET / Institute Selection', examCss: 'ce-icar' },
+        ],
+      },
+    ],
+  },
+
   // ═══════════════════════════════════════════════
   // INSTITUTES OF NATIONAL IMPORTANCE & PREMIER DEEMED
   // ═══════════════════════════════════════════════

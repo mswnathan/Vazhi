@@ -1,5 +1,5 @@
 // Vazhi — Internships Data
-// Only government, PSU, and research internships. See agents/internship-curator.md.
+// Only government, PSU, and research internships. See agents/editing-data.md.
 // Schema: { id, name, short, body, type, for, ugStream[], duration, stipend, season, deadline, website, note, badge, bc }
 
 const INTERNSHIPS = [
@@ -64,6 +64,24 @@ const INTERNSHIPS = [
     bc: 'teal',
   },
 
+  {
+    id: 'niot-internship',
+    name: 'NIOT Student Project Internship',
+    short: 'NIOT Chennai',
+    body: 'National Institute of Ocean Technology (Ministry of Earth Sciences), Chennai',
+    type: 'Research',
+    for: 'B.Tech / M.Tech / M.Sc students in Ocean, Marine, Mechanical, Electronics, Biotech & Environmental fields',
+    ugStream: ['Engineering', 'Science'],
+    duration: 'Project-based (varies)',
+    stipend: 'No stipend — accommodation not provided',
+    season: 'Year-round',
+    deadline: '',
+    website: 'niot.res.in',
+    note: 'Project internships across deep-sea mining, underwater vehicles/ROVs, marine biotechnology, ocean sensors, energy & fresh water, and coastal engineering. Shortlisted on academic performance and project interest. Separately, NIOT\'s 1-year apprenticeship pays ₹12,000–13,000/month for diploma/graduate apprentices.',
+    badge: 'Ocean Tech',
+    bc: 'teal',
+  },
+
   // ── SPACE & DEFENCE / SPECIALISED RESEARCH ────────────────────────────────
 
   {
@@ -120,6 +138,116 @@ const INTERNSHIPS = [
     note: 'India\'s flagship summer research fellowship — work with Academy Fellows / Associates at IISc, IITs, IISERs, TIFR, NCBS, CSIR labs etc. Applications usually open Nov–Dec; results Feb–Mar. Single application gives access to mentors across three academies.',
     badge: 'National Merit',
     bc: 'purple',
+  },
+
+  // ── AGRICULTURE & ENVIRONMENT RESEARCH ────────────────────────────────────
+
+  {
+    id: 'ifgtb-internship',
+    name: 'IFGTB Internship in Biological Sciences',
+    short: 'IFGTB Coimbatore',
+    body: 'ICAR/ICFRE — Institute of Forest Genetics & Tree Breeding, Coimbatore',
+    type: 'Research',
+    for: 'B.Sc / M.Sc / B.Tech students in Biotechnology, Life Sciences & Forestry — selected on merit',
+    ugStream: ['Science', 'Engineering'],
+    duration: '15 or 21 days',
+    stipend: 'No stipend — fee ₹3,000 (15 days) / ₹4,500 (21 days)',
+    season: 'Year-round (seat-based)',
+    deadline: '',
+    website: 'ifgtb.icfre.gov.in',
+    note: 'Hands-on modules in forest biotechnology — DNA isolation, RAPD & SSR markers, Nanodrop, gel documentation, thermal cyclers. Good fit for biotech students interested in tree genetics & climate-resilient forestry. Certificate on completion.',
+    badge: 'Forestry',
+    bc: 'green',
+  },
+
+  {
+    id: 'sacon-internship',
+    name: 'SACON Internship — Wildlife Science & Ornithology',
+    short: 'SACON Coimbatore',
+    body: 'Sálim Ali Centre for Ornithology & Natural History (MoEFCC), Coimbatore',
+    type: 'Research',
+    for: 'Life-sciences / environmental-science UG & PG students interested in wildlife biology & ornithology',
+    ugStream: ['Science'],
+    duration: 'Up to 6 months',
+    stipend: 'Varies',
+    season: 'Year-round',
+    deadline: '',
+    website: 'sacon.in',
+    note: 'India\'s premier ornithology & natural-history research centre (under Ministry of Environment). Apply in the prescribed format to the Research Coordinator, SACON, Anaikatty, Coimbatore. SACON also runs a 2-year M.Sc Wildlife Science & Ornithology (with Central University of Tamil Nadu).',
+    badge: 'Wildlife',
+    bc: 'green',
+  },
+
+  {
+    id: 'sbi-coimbatore-internship',
+    name: 'ICAR-Sugarcane Breeding Institute Student Training',
+    short: 'ICAR-SBI Coimbatore',
+    body: 'ICAR — Sugarcane Breeding Institute, Coimbatore',
+    type: 'Research',
+    for: 'UG & PG students in Life Sciences, Biotechnology, Plant Breeding, Microbiology & allied fields',
+    ugStream: ['Science', 'Engineering'],
+    duration: 'Short projects 3–6 months / exposure training 3–4 weeks',
+    stipend: 'No stipend — fee ₹20,000 (2 months) / ₹30,000 (3 months)',
+    season: 'Year-round (seat-based)',
+    deadline: '',
+    website: 'sugarcane.icar.gov.in',
+    note: 'Project work in plant breeding, tissue culture, plant physiology, microbiology, biochemistry, soil science and food science — relevant to biofuel and climate-resilient agriculture research. Own accommodation/food arrangements required. Apply to the Director, ICAR-SBI Coimbatore.',
+    badge: 'Agriculture',
+    bc: 'green',
+  },
+
+  {
+    id: 'nrcb-internship',
+    name: 'ICAR-NRC Banana Student Internship Training',
+    short: 'ICAR-NRCB Trichy',
+    body: 'ICAR — National Research Centre for Banana, Tiruchirappalli',
+    type: 'Research',
+    for: 'UG & PG students in Life Sciences, Biotechnology, Agriculture & Horticulture',
+    ugStream: ['Science', 'Engineering'],
+    duration: 'One month (typical)',
+    stipend: 'Varies',
+    season: 'Year-round (seat-based)',
+    deadline: '',
+    website: 'nrcb.icar.gov.in',
+    note: 'India\'s only national research centre dedicated to banana. Well-equipped labs in tissue culture, biotechnology, crop protection and post-harvest technology — exposure to banana genetics and disease-resistance research. Apply to the Director, ICAR-NRCB, Tiruchirappalli.',
+    badge: 'Agriculture',
+    bc: 'green',
+  },
+
+  {
+    id: 'cmfri-internship',
+    name: 'ICAR-CMFRI Research Internship',
+    short: 'ICAR-CMFRI',
+    body: 'ICAR — Central Marine Fisheries Research Institute (HQ Kochi)',
+    type: 'Research',
+    for: 'Postgraduate students in Marine Biology, Fisheries Science, Zoology & allied fields',
+    ugStream: ['Science'],
+    duration: 'Short-term (project-based)',
+    stipend: 'Varies',
+    season: 'Year-round (subject to ICAR guidelines)',
+    deadline: '',
+    website: 'cmfri.org.in',
+    note: 'Premier marine fisheries research institute — mariculture, seaweed farming, marine biodiversity and coastal ecosystems. Short-term research internships for PG students subject to ICAR guidelines. CMFRI has produced 300+ Masters and 160+ PhDs.',
+    badge: 'Marine',
+    bc: 'green',
+  },
+
+  {
+    id: 'mssrf-internship',
+    name: 'MSSRF Student Volunteer Internship',
+    short: 'MSSRF Chennai',
+    body: 'M.S. Swaminathan Research Foundation (non-profit research foundation), Chennai',
+    type: 'Research',
+    for: 'UG & PG students in Life Sciences, Agriculture, Social Sciences & Public Health',
+    ugStream: ['Science', 'Arts'],
+    duration: '3–6 months',
+    stipend: 'Varies',
+    season: 'Year-round',
+    deadline: '',
+    website: 'mssrf.org',
+    note: 'Founded by Dr. M.S. Swaminathan — works on food security, coastal systems, biodiversity, ecotechnology and rural development. Student volunteer internships across its Zero Hunger and public-health projects; also hosts the Borlaug-Ruan International Internship. Non-profit research foundation, not a government body.',
+    badge: 'Food & Rural',
+    bc: 'green',
   },
 
 ];
