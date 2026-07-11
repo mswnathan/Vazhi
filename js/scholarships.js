@@ -135,9 +135,39 @@ function schCard(s) {
       ${deadlineHtml}
     </div>
     ${note}
-    <a href="https://${s.website}" target="_blank" rel="noopener" class="sch-t-link">↗ ${s.website}</a>
+    <div class="sch-t-foot">
+      <a href="https://${s.website}" target="_blank" rel="noopener" class="sch-t-link">↗ ${s.website}</a>
+      <button class="vz-save-btn sch-save-btn" data-save-id="${s.id}" data-save-schol='${encodeURIComponent(JSON.stringify({ name: s.name, short: s.short, amount: s.amount, deadline: s.deadline || '', website: s.website, level: s.level }))}' onclick="vzToggleSaveScholarship(this)">♡ Save</button>
+    </div>
   </div>`;
 }
+
+// ── SAVE (per-user; requires sign-in — mirrors the college save pattern) ──────
+async function vzToggleSaveScholarship(btn) {
+  if (window.VazhiAuth && VazhiAuth.isConfigured() && !VazhiAuth.getUser()) {
+    VazhiAuth.openModal('signin');
+    return;
+  }
+  if (!window.VazhiAuth) return;
+  const schol = JSON.parse(decodeURIComponent(btn.dataset.saveSchol));
+  const nowSaved = await VazhiAuth.toggleSavedItem('savedScholarships', btn.dataset.saveId, schol);
+  if (nowSaved === null) return;
+  btn.classList.toggle('saved', nowSaved);
+  btn.innerHTML = nowSaved ? '♥ Saved' : '♡ Save';
+}
+
+async function vzRefreshSavedScholarships() {
+  if (!window.VazhiAuth) return;
+  const ids = await VazhiAuth.getSavedItemIds('savedScholarships');
+  document.querySelectorAll('.sch-save-btn[data-save-id]').forEach(b => {
+    const saved = ids.has(b.dataset.saveId);
+    b.classList.toggle('saved', saved);
+    b.innerHTML = saved ? '♥ Saved' : '♡ Save';
+  });
+}
+
+if (window.VazhiAuth) VazhiAuth.onAuthChange(() => vzRefreshSavedScholarships());
+else document.addEventListener('DOMContentLoaded', () => { if (window.VazhiAuth) VazhiAuth.onAuthChange(() => vzRefreshSavedScholarships()); });
 
 // ── FILTERS ───────────────────────────────────────────────────────────────────
 

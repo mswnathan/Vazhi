@@ -123,6 +123,28 @@
     return (c.short || c.name).toLowerCase().replace(/[^a-z0-9]+/g, '-');
   }
 
+  // ── Generic saved-items (any users/{uid}/{sub} subcollection) ────────
+  // Signed-in only (no localStorage fallback) — used by the dashboard and by
+  // scholarship saving. Colleges keep their own methods above (guest fallback).
+  async function getSavedDocs(sub) {
+    if (!(currentUser && db)) return [];
+    const snap = await db.collection('users').doc(currentUser.uid).collection(sub).get();
+    return snap.docs.map(d => Object.assign({ id: d.id }, d.data()));
+  }
+  async function getSavedItemIds(sub) {
+    if (!(currentUser && db)) return new Set();
+    const snap = await db.collection('users').doc(currentUser.uid).collection(sub).get();
+    return new Set(snap.docs.map(d => d.id));
+  }
+  async function toggleSavedItem(sub, id, data) {
+    if (!(currentUser && db)) return null;  // caller should prompt sign-in
+    const ref = db.collection('users').doc(currentUser.uid).collection(sub).doc(id);
+    const existing = await ref.get();
+    if (existing.exists) { await ref.delete(); return false; }
+    await ref.set(Object.assign({}, data, { savedAt: firebase.firestore.FieldValue.serverTimestamp() }));
+    return true;
+  }
+
   // ── UI: header button + modal ────────────────────────────────────────
   function mountUI() {
     if (document.getElementById('vz-auth-btn')) return;
@@ -141,6 +163,7 @@
       <div class="vz-user-menu-name" id="vz-user-menu-name"></div>
       <div class="vz-user-menu-email" id="vz-user-menu-email"></div>
       <hr>
+      <a class="vz-user-menu-link" href="dashboard.html">📋 My Dashboard</a>
       <button onclick="VazhiAuth.signOut()">Sign out</button>`;
     document.body.appendChild(menu);
     document.addEventListener('click', e => {
@@ -285,7 +308,8 @@
     init, onAuthChange, getUser, signOut,
     openModal, closeModal, setTab: setAuthTab,
     submitSignIn, submitSignUp, submitReset, googleSignIn,
-    isSaved, toggleSaved, getSavedIds, isConfigured: () => CONFIGURED
+    isSaved, toggleSaved, getSavedIds, isConfigured: () => CONFIGURED,
+    getSavedDocs, getSavedItemIds, toggleSavedItem
   };
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
