@@ -55,7 +55,7 @@ function renderExams(){
   document.getElementById('exam-out').innerHTML=html;
 
   document.getElementById('exam-stats-bar').innerHTML=`
-    <div class="estat"><div class="estat-n">${totalExams}</div><div class="estat-l">Total shown</div></div>
+    <div class="estat"><div class="estat-n">${totalExams}</div><div class="estat-l">Exams</div></div>
     ${Object.entries(lvlCount).filter(([,v])=>v>0).map(([k,v])=>`
       <div class="estat" style="border-color:${LEVEL_BG[k]}">
         <div class="estat-n" style="color:${LEVEL_COLOR[k]}">${v}</div>
@@ -177,7 +177,7 @@ function renderPGExams(){
   if(!total) html=`<div class="no-res"><h3>No exams found</h3><p>Try adjusting or resetting your filters.</p></div>`;
   document.getElementById('exam-out').innerHTML=html;
   document.getElementById('exam-stats-bar').innerHTML=
-    `<div class="estat"><div class="estat-n">${total}</div><div class="estat-l">Total shown</div></div>`;
+    `<div class="estat"><div class="estat-n">${total}</div><div class="estat-l">Exams</div></div>`;
 }
 
 // ── PG Exam card ──────────────────────────────────────────────────────

@@ -75,7 +75,7 @@ function renderPGColleges(){
   const typeCnt={Central:0,State:0,Deemed:0};
   filtered.forEach(c=>{if(typeCnt[c.type]!==undefined)typeCnt[c.type]++;});
   document.getElementById('col-stats').innerHTML=`
-    <div class="col-stat"><div class="col-stat-n">${filtered.length}</div><div class="col-stat-l">Total universities</div></div>
+    <div class="col-stat"><div class="col-stat-n">${filtered.length}</div><div class="col-stat-l">Universities</div></div>
     ${Object.entries(typeCnt).filter(([,v])=>v>0).map(([k,v])=>`
       <div class="col-stat" style="border-color:${TYPE_BG[k]}">
         <div class="col-stat-n" style="color:${TYPE_COLOR[k]}">${v}</div>
@@ -243,7 +243,7 @@ async function renderColleges(){
   const naacCnt={[NAAC_APP]:0,[NAAC_AP]:0};
   filtered.forEach(c=>{if(typeCnt[c.type]!==undefined)typeCnt[c.type]++;if(naacCnt[c.naac]!==undefined)naacCnt[c.naac]++;});
   document.getElementById('col-stats').innerHTML=`
-    <div class="col-stat"><div class="col-stat-n">${filtered.length}</div><div class="col-stat-l">Total colleges</div></div>
+    <div class="col-stat"><div class="col-stat-n">${filtered.length}</div><div class="col-stat-l">Colleges</div></div>
     <div class="col-stat" style="border-color:${TYPE_BG.Central}"><div class="col-stat-n" style="color:${TYPE_COLOR.Central}">${naacCnt[NAAC_APP]+naacCnt[NAAC_AP]}</div><div class="col-stat-l">NAAC A++ & A+</div></div>
     ${Object.entries(typeCnt).filter(([,v])=>v>0).map(([k,v])=>`<div class="col-stat" style="border-color:${TYPE_BG[k]}"><div class="col-stat-n" style="color:${TYPE_COLOR[k]}">${v}</div><div class="col-stat-l">${k}</div></div>`).join('')}`;
 

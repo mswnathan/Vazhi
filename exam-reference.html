@@ -3,36 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>All UG Entrance Exams — Reference</title>
+<title>All UG Entrance Exams — Vazhi வழி</title>
+<meta name="description" content="The full landscape of UG entrance exams in India — Medical, Engineering, CUET, Law, Design, Science and more. Competition funnels, score-vs-seat ladders, and eligibility for each, focused on government &amp; merit-based institutions.">
+<link rel="canonical" href="https://kalvivazhi.in/exam-reference.html">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="theme-color" content="#1A1F4D">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vazhi வழி">
+<meta property="og:title" content="All UG Entrance Exams — the full landscape">
+<meta property="og:description" content="Competition funnels, score-vs-seat ladders and eligibility for every UG entrance exam in India — government &amp; merit-based focus.">
+<meta property="og:url" content="https://kalvivazhi.in/exam-reference.html">
+<meta property="og:image" content="https://kalvivazhi.in/images/vazhi-logo-560.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Tamil:wght@600;700&display=swap" rel="stylesheet">
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: #f0f4f8;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  background: #FAF8F3;
   color: #2d3748;
   min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
 }
 
-.header {
-  background: linear-gradient(135deg, #1e3a5f, #2b6cb0);
-  color: white;
-  padding: 18px 32px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.header h1 { font-size: 1.3rem; font-weight: 700; }
-.header .subtitle { font-size: 0.82rem; opacity: 0.8; margin-top: 3px; }
-.session-badge {
-  background: rgba(255,255,255,0.15);
-  border: 1px solid rgba(255,255,255,0.3);
-  border-radius: 20px;
-  padding: 6px 16px;
-  font-size: 0.8rem;
-}
+/* Vazhi site header (matches about.html / dashboard.html) */
+.vz-header { background: linear-gradient(135deg, #1A1F4D 0%, #2C3580 100%); }
+.vz-header-inner { max-width: 1100px; margin: 0 auto; padding: 0 20px; height: 62px; display: flex; align-items: center; gap: 12px; }
+.vz-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.vz-logo-icon { width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg,#F07020,#D4580A); color: #fff; display: flex; align-items: center; justify-content: center; font-family: 'Noto Sans Tamil', sans-serif; font-size: 14px; font-weight: 700; flex-shrink: 0; }
+.vz-logo-en { font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 20px; color: #fff; line-height: 1; }
+.vz-logo-ta { font-family: 'Noto Sans Tamil', sans-serif; color: #FFD9A8; font-size: 11px; font-weight: 600; }
+.vz-home-link { margin-left: auto; color: rgba(255,255,255,.85); font-size: .9rem; font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 999px; }
+.vz-home-link:hover { background: rgba(255,255,255,.12); color: #fff; }
+
+/* Page intro */
+.page-intro { max-width: 1100px; margin: 0 auto; padding: 26px 20px 8px; }
+.page-intro h1 { font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 1.7rem; line-height: 1.15; color: #1C1A14; }
+.page-intro .subtitle { font-size: .9rem; color: #6F6A5F; margin-top: 6px; }
+.page-intro .db-link { display: inline-block; margin-top: 12px; font-size: .88rem; font-weight: 600; color: #A83E00; text-decoration: none; }
+.page-intro .db-link:hover { text-decoration: underline; }
 
 .tab-bar {
   background: white;
@@ -56,8 +66,8 @@ body {
   transition: all 0.2s;
   white-space: nowrap;
 }
-.tab.active { color: #2b6cb0; border-bottom-color: #2b6cb0; }
-.tab:hover:not(.active) { color: #4a5568; background: #f7fafc; }
+.tab.active { color: #D4580A; border-bottom-color: #D4580A; }
+.tab:hover:not(.active) { color: #4a5568; background: #FFF3E8; }
 
 .content { max-width: 1100px; margin: 0 auto; padding: 24px 28px; }
 .tab-content { display: none; }
@@ -78,7 +88,7 @@ body {
   box-shadow: 0 1px 4px rgba(0,0,0,0.08);
   border-top: 4px solid var(--accent, #2b6cb0);
 }
-.stat-number { font-size: 2rem; font-weight: 800; color: var(--accent); line-height: 1; margin-bottom: 5px; }
+.stat-number { font-family: 'Fraunces', Georgia, serif; font-size: 2rem; font-weight: 700; color: var(--accent); line-height: 1; margin-bottom: 5px; }
 .stat-label { font-size: 0.75rem; color: #718096; font-weight: 600; text-transform: uppercase; letter-spacing: 0.4px; }
 .stat-sub { font-size: 0.72rem; color: #a0aec0; margin-top: 3px; }
 
@@ -89,11 +99,14 @@ body {
   padding: 22px;
   margin-bottom: 20px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  overflow-x: auto;  /* wide tables scroll inside the card, not the page body */
 }
+.ref-table { min-width: 440px; }
 .section-title {
-  font-size: 0.98rem;
-  font-weight: 700;
-  color: #1a365d;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #1C1A14;
   margin-bottom: 16px;
   display: flex;
   align-items: center;
@@ -104,7 +117,7 @@ body {
 .section-title .icon {
   width: 30px; height: 30px;
   border-radius: 7px;
-  background: #ebf8ff;
+  background: #FFF3E8;
   display: flex; align-items: center; justify-content: center;
   font-size: 1rem; flex-shrink: 0;
 }
@@ -116,8 +129,10 @@ body {
 .funnel-bar-wrap { flex: 1; }
 .funnel-bar {
   height: 36px; border-radius: 6px;
-  display: flex; align-items: center; padding-left: 12px;
+  display: flex; align-items: center; padding: 0 12px;
   color: white; font-weight: 700; font-size: 0.82rem;
+  /* Bars carry an inline min-width:65px; override it so the number never clips. */
+  min-width: max-content !important; white-space: nowrap;
 }
 .funnel-arrow { text-align: center; color: #cbd5e0; font-size: 1rem; padding-left: 202px; }
 
@@ -198,10 +213,10 @@ body {
 
 /* Highlight box */
 .highlight-box {
-  background: linear-gradient(135deg, #1e3a5f, #2b6cb0);
+  background: linear-gradient(135deg, #1A1F4D, #2C3580);
   color: white; border-radius: 12px; padding: 20px 24px; margin-bottom: 20px;
 }
-.highlight-box h3 { font-size: 1rem; margin-bottom: 8px; opacity: 0.85; }
+.highlight-box h3 { font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 1.05rem; margin-bottom: 8px; opacity: 0.9; }
 .highlight-box p { font-size: 0.9rem; line-height: 1.6; opacity: 0.95; }
 
 /* Timeline */
@@ -223,12 +238,12 @@ body {
 
 /* Summary bar */
 .summary-bar {
-  background: #1a365d; color: white; border-radius: 10px;
+  background: #1A1F4D; color: white; border-radius: 10px;
   padding: 16px 20px; margin-bottom: 20px;
   display: flex; gap: 24px; align-items: center; flex-wrap: wrap;
 }
 .summary-bar .item { text-align: center; }
-.summary-bar .num { font-size: 1.5rem; font-weight: 800; }
+.summary-bar .num { font-family: 'Fraunces', Georgia, serif; font-size: 1.5rem; font-weight: 700; }
 .summary-bar .lbl { font-size: 0.72rem; opacity: 0.75; text-transform: uppercase; letter-spacing: 0.4px; }
 .summary-bar .divider { width: 1px; background: rgba(255,255,255,0.2); align-self: stretch; }
 
@@ -244,16 +259,53 @@ body {
   .tab-bar { padding: 0 12px; }
   .tab { padding: 12px 14px; font-size: 0.8rem; }
 }
+
+/* Mobile-only affordance that the stream tab bar scrolls horizontally.
+   Base = hidden; the media query BELOW (later in source) shows it on mobile. */
+.tab-swipe-hint {
+  display: none;
+  text-align: center;
+  font-size: .75rem;
+  font-weight: 600;
+  color: #A83E00;
+  background: #FFF3E8;
+  padding: 5px 12px;
+}
+@media (max-width: 720px) { .tab-swipe-hint { display: block; } }
+
+/* "Next step" CTA at the end of each stream — guides exam → colleges */
+.stream-cta { margin: 28px 0 8px; text-align: center; }
+.stream-cta-link {
+  display: inline-block;
+  padding: 12px 22px;
+  background: #D4580A;
+  color: #fff;
+  font-weight: 700;
+  font-size: .95rem;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(212,88,10,.25);
+  transition: background .2s;
+}
+.stream-cta-link:hover { background: #B34808; }
 </style>
 </head>
 <body>
 
-<div class="header">
-  <div>
-    <h1>📚 All UG Entrance Exams — Reference</h1>
-    <div class="subtitle">Every stream, after Class 12 &nbsp;·&nbsp; National coverage &nbsp;·&nbsp; Govt &amp; merit-based focus</div>
+<header class="vz-header">
+  <div class="vz-header-inner">
+    <a class="vz-logo" href="index.html">
+      <span class="vz-logo-icon">வ</span>
+      <span><span class="vz-logo-en">Vazhi</span><br><span class="vz-logo-ta">வழி</span></span>
+    </a>
+    <a class="vz-home-link" href="index.html">← Home</a>
   </div>
-  <div class="session-badge">🎯 Counselor's Reference — Draft · Stats verified Jul 2026</div>
+</header>
+
+<div class="page-intro">
+  <h1>📚 All UG Entrance Exams — the full landscape</h1>
+  <div class="subtitle">Every stream after Class 12 · national coverage · government &amp; merit-based focus · figures indicative, verified Jul 2026</div>
+  <a class="db-link" href="explore.html#exams">Looking for one specific exam? Search the full database →</a>
 </div>
 
 <div class="tab-bar">
@@ -271,6 +323,7 @@ body {
   <div class="tab" onclick="switchTab('other', this)">💊 Pharmacy &amp; Teacher Ed</div>
   <div class="tab" onclick="switchTab('all', this)">📋 All Exams</div>
 </div>
+<div class="tab-swipe-hint">← swipe for all 13 streams →</div>
 
 <div class="content">
 
@@ -1339,15 +1392,44 @@ body {
 
   </div>
 
+  <div id="stream-cta" class="stream-cta"></div>
+
 </div>
 
 <script>
+// Each stream's "next step" → the matching colleges in the database.
+// [college-stream label shown, explore.html hash]. Empty label → generic colleges link.
+const STREAM_CTA = {
+  medical:     ['Medical',                'colleges=Medical'],
+  engineering: ['Engineering',            'colleges=Engineering'],
+  university:  ['Arts & Science',         'colleges=arts-science'],
+  law:         ['Law',                    'colleges=Law'],
+  design:      ['Design',                 'colleges=Design'],
+  management:  ['Management & Commerce',  'colleges=Management'],
+  science:     ['Science',                'colleges=arts-science'],
+  agriculture: ['Agriculture',            'colleges=Agriculture'],
+  hotel:       ['',                       'colleges'],
+  defence:     ['',                       'colleges'],
+  arts:        ['Arts & Media',           'colleges=arts-science'],
+  other:       ['Pharmacy',               'colleges=Pharmacy'],
+  all:         ['',                       'colleges'],
+};
+function updateStreamCta(tab) {
+  const box = document.getElementById('stream-cta');
+  if (!box) return;
+  const [label, hash] = STREAM_CTA[tab] || ['', 'colleges'];
+  const text = label ? `Explore ${label} colleges →` : 'Browse all government colleges →';
+  box.innerHTML = `<a class="stream-cta-link" href="explore.html#${hash}">🏛️ ${text}</a>`;
+}
+
 function switchTab(tab, el) {
   document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
   document.getElementById('tab-' + tab).classList.add('active');
   el.classList.add('active');
+  updateStreamCta(tab);
 }
+updateStreamCta('medical');  // initial active tab
 </script>
 
 </body>

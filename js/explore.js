@@ -37,7 +37,7 @@ function renderExplore(){
   const statsEl=document.getElementById('explore-stats');
   if(statsEl){
     statsEl.innerHTML=total?`<div class="col-stats-row">
-      <div class="col-stat"><div class="col-stat-n">${total}</div><div class="col-stat-l">Total courses</div></div>
+      <div class="col-stat"><div class="col-stat-n">${total}</div><div class="col-stat-l">Courses</div></div>
       <div class="col-stat"><div class="col-stat-n">${highDemand}</div><div class="col-stat-l">High demand</div></div>
       <div class="col-stat"><div class="col-stat-n">${national}</div><div class="col-stat-l">National exam</div></div>
       <div class="col-stat"><div class="col-stat-n">${trending}</div><div class="col-stat-l">Trending</div></div>

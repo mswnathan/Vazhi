@@ -44,6 +44,8 @@
   <button class="nav-drawer-item" data-tab="scholarships" onclick="switchTab('scholarships');closeNavDrawer()">💰 Scholarships</button>
   <button class="nav-drawer-item" data-tab="internships" onclick="switchTab('internships');closeNavDrawer()">🌐 Internships</button>
   <button class="nav-drawer-item" data-tab="market" onclick="switchTab('market');closeNavDrawer()">📈 Salaries & Trends</button>
+  <a class="nav-drawer-item" href="exam-reference.html" style="text-decoration:none">📊 Exam Landscape</a>
+  <a class="nav-drawer-item" href="dashboard.html" style="text-decoration:none">📋 My Dashboard</a>
 </aside>
 
 <!-- ═══════════════════════════════════════════════
@@ -945,7 +947,17 @@ function routeFromHash(){
   if(!h){ switchTab('courses'); return; }  // no hash → land in the course DB, not the (now-retired) home tab
   if(h==='courses'){ switchTab('courses'); }
   else if(h==='exams'){ switchTab('courses'); setCoursesMode('exams'); }
-  else if(h==='colleges'){ switchTab('courses'); setCoursesMode('colleges'); }
+  else if(h==='colleges' || h.indexOf('colleges=')===0){
+    switchTab('courses'); setCoursesMode('colleges');
+    // Optional stream pre-filter: #colleges=Medical (exam-reference "Explore X colleges →" CTAs).
+    let val = h.indexOf('=')>-1 ? decodeURIComponent(h.slice(h.indexOf('=')+1)) : '';
+    if(val==='arts-science') val='Arts & Science';
+    const sel=document.getElementById('cf-stream');
+    if(sel && val && [...sel.options].some(o=>o.value===val)){
+      sel.value=val;
+      if(typeof renderColleges==='function') renderColleges();
+    }
+  }
   else if(h==='predictor'){ switchTab('courses'); setCoursesMode('colleges'); if(typeof setCollegeMode==='function') setCollegeMode('predictor'); }
   else if(h==='scholarships'){ switchTab('scholarships'); }
   else if(h==='internships'){ switchTab('internships'); }
