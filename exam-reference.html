@@ -288,6 +288,21 @@ body {
   transition: background .2s;
 }
 .stream-cta-link:hover { background: #B34808; }
+
+/* ── Nav drawer (hamburger menu) — self-contained ── */
+.hamburger-btn{background:rgba(255,255,255,.12);color:#fff;border:none;border-radius:8px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-size:16px;cursor:pointer;flex-shrink:0;transition:background .15s}
+.hamburger-btn:hover{background:rgba(255,255,255,.22)}
+.hamburger-btn.active{background:rgba(255,255,255,.28)}
+.nav-drawer-overlay{position:fixed;inset:0;background:rgba(20,20,40,.45);opacity:0;visibility:hidden;transition:opacity .2s;z-index:300}
+.nav-drawer-overlay.open{opacity:1;visibility:visible}
+.nav-drawer{position:fixed;top:0;right:0;bottom:0;width:260px;max-width:80vw;background:#fff;z-index:301;box-shadow:-2px 0 16px rgba(0,0,0,.15);transform:translateX(100%);transition:transform .25s ease;display:flex;flex-direction:column;padding:8px 0;overflow-y:auto}
+.nav-drawer.open{transform:translateX(0)}
+.nav-drawer-head{display:flex;align-items:center;justify-content:space-between;padding:14px 18px 10px;border-bottom:1px solid #e2e8f0;margin-bottom:6px}
+.nav-drawer-title{font-weight:700;font-size:12px;color:#718096;text-transform:uppercase;letter-spacing:.04em}
+.nav-drawer-close{background:none;border:none;font-size:18px;color:#718096;cursor:pointer;padding:4px}
+.nav-drawer-item{display:flex;align-items:center;gap:10px;width:100%;text-align:left;background:none;border:none;padding:12px 18px;font-size:14px;color:#2d3748;cursor:pointer;transition:background .15s;text-decoration:none}
+.nav-drawer-item:hover{background:#f7f5ef}
+.nav-drawer-item.active{background:#FFF3E8;color:#A83E00;font-weight:600}
 </style>
 </head>
 <body>
@@ -299,8 +314,26 @@ body {
       <span><span class="vz-logo-en">Vazhi</span><br><span class="vz-logo-ta">வழி</span></span>
     </a>
     <a class="vz-home-link" href="index.html">← Home</a>
+    <button id="nav-drawer-btn" class="hamburger-btn" onclick="toggleNavDrawer()" aria-label="More sections" aria-haspopup="true" aria-expanded="false">☰</button>
   </div>
 </header>
+
+<div id="nav-drawer-overlay" class="nav-drawer-overlay" onclick="closeNavDrawer()"></div>
+<aside id="nav-drawer" class="nav-drawer" aria-hidden="true">
+  <div class="nav-drawer-head">
+    <span class="nav-drawer-title">Menu</span>
+    <button class="nav-drawer-close" onclick="closeNavDrawer()" aria-label="Close menu">✕</button>
+  </div>
+  <a class="nav-drawer-item" href="explore.html#find">🔍 Search a Career</a>
+  <a class="nav-drawer-item" href="explore.html#courses">📚 What Next?</a>
+  <a class="nav-drawer-item" href="explore.html#after-ug">🎓 After UG</a>
+  <a class="nav-drawer-item" href="explore.html#psychometric">🧠 Know Yourself</a>
+  <a class="nav-drawer-item" href="explore.html#scholarships">💰 Scholarships</a>
+  <a class="nav-drawer-item" href="explore.html#internships">🌐 Internships</a>
+  <a class="nav-drawer-item" href="explore.html#market">📈 Salaries &amp; Trends</a>
+  <a class="nav-drawer-item active" href="exam-reference.html">📊 Exam Landscape</a>
+  <a class="nav-drawer-item" href="dashboard.html">📋 My Dashboard</a>
+</aside>
 
 <div class="page-intro">
   <h1>📚 All UG Entrance Exams — the full landscape</h1>
@@ -1430,6 +1463,25 @@ function switchTab(tab, el) {
   updateStreamCta(tab);
 }
 updateStreamCta('medical');  // initial active tab
+
+/* Nav drawer (hamburger) — self-contained; links deep into explore.html */
+function toggleNavDrawer(){
+  const d=document.getElementById('nav-drawer');
+  const open=!d.classList.contains('open');
+  d.classList.toggle('open',open);
+  document.getElementById('nav-drawer-overlay').classList.toggle('open',open);
+  d.setAttribute('aria-hidden',String(!open));
+  const b=document.getElementById('nav-drawer-btn');
+  b.setAttribute('aria-expanded',String(open)); b.classList.toggle('active',open);
+}
+function closeNavDrawer(){
+  document.getElementById('nav-drawer').classList.remove('open');
+  document.getElementById('nav-drawer-overlay').classList.remove('open');
+  document.getElementById('nav-drawer').setAttribute('aria-hidden','true');
+  const b=document.getElementById('nav-drawer-btn');
+  b.setAttribute('aria-expanded','false'); b.classList.remove('active');
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeNavDrawer()});
 </script>
 
 </body>
