@@ -5,7 +5,7 @@
 // Checks: schema completeness, valid enum values, brace balance,
 //         duplicate IDs, and cross-references between data files.
 
-import { readFileSync } from 'fs';
+import { readFileSync, readdirSync } from 'fs';
 
 const issues = [];
 const warn = (file, msg) => issues.push(`[${file}] ${msg}`);
@@ -22,26 +22,23 @@ function loadJS(path, varName) {
   }
 }
 
-// ── 1. BRACE & BRACKET BALANCE ───────────────────────────────────────
-const JS_FILES = [
-  'data/courses.js', 'data/exams.js', 'data/interest.js',
-  'data/colleges-tn.js', 'data/after-ug.js', 'data/career-guide.js',
-  'js/app.js', 'js/explore.js', 'js/interest.js',
-  'js/after-ug.js', 'js/career-guide.js',
-];
-for (const f of JS_FILES) {
+// ── 1. SYNTAX / COMPILE CHECK (every data + js file) ─────────────────
+// Compile-only (never executes) — catches unbalanced braces/brackets and any
+// syntax error in ALL files. More reliable than counting { vs }, which would
+// false-positive on brackets that appear inside description strings, and it
+// covers every file automatically instead of a hand-maintained list.
+const listJs = dir => readdirSync(dir).filter(f => f.endsWith('.js')).map(f => `${dir}/${f}`);
+const ALL_JS = [...listJs('data'), ...listJs('js')];
+let compiled = 0;
+for (const f of ALL_JS) {
   try {
-    const src = readFileSync(f, 'utf8');
-    const ob = (src.match(/{/g) || []).length;
-    const cb = (src.match(/}/g) || []).length;
-    const os = (src.match(/\[/g) || []).length;
-    const cs = (src.match(/\]/g) || []).length;
-    if (ob !== cb) warn(f, `Brace mismatch: ${ob} '{' vs ${cb} '}'`);
-    if (os !== cs) warn(f, `Bracket mismatch: ${os} '[' vs ${cs} ']'`);
+    new Function(readFileSync(f, 'utf8'));   // compile-only: throws on syntax/brace errors
+    compiled++;
   } catch (e) {
-    warn(f, `Cannot read file: ${e.message}`);
+    warn(f, `SYNTAX ERROR: ${e.message}`);
   }
 }
+console.log(`✅ syntax           — ${compiled}/${ALL_JS.length} data+js files compile clean`);
 
 // ── 2. SHARED VALID VALUES ───────────────────────────────────────────
 const validMkt = new Set(['High', 'Growing', 'Stable', 'Niche']);
@@ -188,6 +185,32 @@ if (INTEREST_AREAS) {
   }
   console.log(`✅ interest.js      — ${Object.keys(INTEREST_AREAS).length} subject groups`);
 }
+
+// ── 9. SCOPE BLOCKLIST — no private self-financing colleges ──────────
+// CLAUDE.md's "STRICTLY ENFORCED" scope rule, made deterministic. Flags known
+// private brands appearing in a college name/short field. Edit BANNED to extend
+// or whitelist. NOTE: bare 'MIT' is intentionally NOT banned — 'Anna University
+// — MIT Campus' (AU-MIT) is a legitimate government college.
+const BANNED = [
+  /\bVIT\b/i, /\bSRM\b/i, /\bManipal\b/i, /\bAmrita\b/i, /\bAmity\b/i,
+  /\bSymbiosis\b/i, /\bJindal\b/i, /\bFLAME\b/i, /\bSaveetha\b/i, /\bSASTRA\b/i,
+  /\bAshoka\b/i, /\bJain\b/i, /\bChrist\b/i, /\bJSS\b/i,
+  /Pearl Academy/i, /Arena Animation/i, /MIT-?ID\b/i, /MIT-?WPU/i,
+];
+let scopeChecked = 0;
+for (const f of listJs('data').filter(p => /colleges-|pg-colleges/.test(p))) {
+  const lines = readFileSync(f, 'utf8').split('\n');
+  lines.forEach((line, i) => {
+    for (const fm of line.matchAll(/\b(?:name|short):\s*'([^']*)'/g)) {
+      scopeChecked++;
+      for (const re of BANNED) {
+        if (re.test(fm[1]))
+          warn(f, `SCOPE: line ${i + 1} "${fm[1]}" matches banned private brand /${re.source}/ — remove or whitelist in validate.js`);
+      }
+    }
+  });
+}
+console.log(`✅ scope            — ${scopeChecked} college names screened against blocklist`);
 
 // ── SUMMARY ──────────────────────────────────────────────────────────
 console.log('');

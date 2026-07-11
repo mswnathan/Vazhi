@@ -23,6 +23,15 @@ node agents/validate.js && node agents/functional-test.js || exit 1
 echo ""
 node agents/career-audit.js || echo "\033[33m⚠  Fix gaps above or add terms to the 'game developer / blockchain' skip list in agents/career-audit.js\033[0m"
 
+# ── Link authority + date consistency (advisory, diff-scoped) ──────────────
+# These check only records changed vs what's live, so they're cheap. They warn
+# rather than block — 🟡 findings (corporate .com links, passed deadlines) often
+# need a human call, not a hard stop. Run with --all before a release.
+echo ""
+node agents/link-authority.js   || echo "\033[33m⚠  Review flagged links above (or add verified hosts to ALLOWLIST in agents/link-authority.js)\033[0m"
+echo ""
+node agents/date-consistency.js || echo "\033[33m⚠  Fix broken/future dates above; move passed announcements to archive/announcements-archive.js\033[0m"
+
 # ── Post-pass nudge ────────────────────────────────────────────────────────
 if [ -d .git ]; then
   POST_CHANGES=$(git status --porcelain 2>/dev/null | wc -l | tr -d ' ')

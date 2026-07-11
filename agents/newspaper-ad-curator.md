@@ -30,7 +30,7 @@
    - `grep -l "<name>" data/colleges-*.js data/pg-colleges.js` — check both UG and PG files
    - `grep -l "<name>" data/exams.js data/pg-exams.js data/scholarships.js data/internships.js data/announcements.js data/career-guide.js data/after-ug.js`
    - If already present at both UG and PG level: no action. If present at one level only: add the other.
-5. **For any institution not in the database**: add it with its full programme list and entrance exams. If the ad does not list all courses (e.g. it is a recruitment ad), use your knowledge of that institution to fill in the standard UG/PG offerings — read `agents/data-updater.md` or `agents/pg-data-updater.md` for the exact schema.
+5. **For any institution not in the database**: add it with its full programme list and entrance exams. If the ad does not list all courses (e.g. it is a recruitment ad), use your knowledge of that institution to fill in the standard UG/PG offerings — read `agents/editing-data.md` (and the schema in CLAUDE.md) for the exact format.
 6. **For infographics / social-media screenshots**: extract all institutions, exam names, career roles, and salary data. Check each against career-guide.js, after-ug.js, exams.js, and market.js. Add or update entries that are missing or richer than what we have.
 7. **Unreadable / blurry photos**: if an image cannot be read clearly enough to identify the institution or ad content, do NOT skip it — stop and ask the user what it shows before continuing with the rest of the batch.
 8. **Ask the user** only for genuine ambiguity (unclear scope, two institutes with the same name, course not in any known category, or unreadable image). Never ask about the five standing decisions above.

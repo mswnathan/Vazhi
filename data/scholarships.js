@@ -4,7 +4,7 @@
 // Schema: { id, name, short, body, level, for, ugStream[], class12Pct, amount, duration, deadline, website, note, badge, bc }
 // level: 'Central' | 'State' | 'Corporate' | 'International'
 // ugStream: 'Science' | 'Engineering' | 'Medical' | 'Law' | 'Commerce' | 'Arts' | 'Any'
-// See agents/scholarship-updater.md for full maintenance guide.
+// See agents/editing-data.md for full maintenance guide.
 
 const SCHOLARSHIPS = [
 

@@ -124,30 +124,35 @@ Vazhi/
 
   agents/
     firestore.rules       ← Firestore security rules — paste into Firebase console (reference only, not served)
-    data-updater.md       ← Add/edit UG colleges, exams, courses, interest areas
-    pg-data-updater.md    ← Add/edit PG colleges and PG exams
-    after-ug-updater.md   ← Add/edit After UG pathways
-    content-updater.md    ← Add/edit announcements, career-guide entries, glossary terms
-    counselling-predictor.md ← Add a new counselling rank predictor system
-    annual-refresh.md     ← Yearly data refresh checklist (NIRF, exam dates, salaries)
-    scholarship-updater.md   ← Add/edit scholarship entries
-    internship-curator.md    ← Add/edit internship entries
-    psychometric-updater.md  ← Edit RIASEC questions, career map, profiles
+    editing-data.md       ← THE data-editing guide: add/edit colleges, exams, courses, interest,
+                            PG, after-UG, announcements, career-guide, glossary, scholarships,
+                            internships (schemas live in CLAUDE.md; this holds procedure + scope rules)
+    psychometric-updater.md  ← Edit RIASEC questions, career map, profiles (strict structural + bilingual rules)
     dream-explorer-updater.md ← Add/edit a dream in the dreams-first homepage (index.html)
     newspaper-ad-curator.md  ← Triage newspaper-ad photos from ~/Vazhi/vazhi-ads/ into data files
-    validator.md          ← Check data quality before publishing
-    validate.js           ← Brace-balance checker script
-    functional-tester.md  ← Behavioral correctness tests (filters, search, cross-refs)
-    functional-test.js    ← Node script: run behavioral tests (node agents/functional-test.js)
-    check.sh              ← Full data health check: runs validate.js + functional-test.js
+    counselling-predictor.md ← Add a new counselling rank predictor system (code generation)
+    annual-refresh.md     ← Yearly data refresh checklist (NIRF, exam dates, salaries)
+    prelive.md            ← Pre-live gate: Stage 1 check.sh + Stage 2 content-accuracy checklist (run before pushing live)
+    validate.js           ← Node script: syntax (all files), schema, enums, duplicate IDs, cross-refs, scope blocklist
+    functional-test.js    ← Node script: behavioral tests (node agents/functional-test.js)
+    career-audit.js       ← Node script: career keyword → course/pathway coverage audit
+    changed-records.js    ← Node script: lists only records added/modified vs a git baseline — scopes prelive Stage 2 to the diff
+    link-authority.js     ← Node script: flags website/link fields not on an official-authority domain (diff-scoped; --all, --live)
+    date-consistency.js   ← Node script: flags future/invalid "Last updated" + stale/invalid announcement dates & deadlines (diff-scoped; --all)
+    check.sh              ← ONE command: runs validate + functional-test + career-audit + link-authority + date-consistency
+
+  archive/                ← Reference-only, NOT served & NOT scanned by pre-live scripts
+    announcements-archive.js ← Past announcements moved from data/announcements.js once their date passed
 
   CLAUDE.md               ← This file
+  PIPELINE_PHILOSOPHY.md  ← Why the tooling is shaped this way + what was rejected (read before adding tooling)
 ```
 
 ---
 
 ## Rules — Always Follow
 
+0. **Before adding any agent, script, or tooling, read `PIPELINE_PHILOSOPHY.md`.** It records what was deliberately rejected (orchestrators, event buses, micro-agents, `report.json`, versioned `check.sh`) and why. Don't rebuild removed complexity without new evidence.
 1. **Never edit index.html or CSS for data changes.** Data lives in `data/*.js` only.
 2. **Never edit data files for UI/logic changes.** Logic lives in `js/*.js` only.
 3. **Match the existing schema exactly** when adding new entries.
@@ -352,25 +357,30 @@ Note: `papers[]` replaces `subjects[]` used in UG exams.
 → Edit the relevant `data/colleges-XX.js` only
 
 ### Add a PG college
-→ Edit `data/pg-colleges.js` only — read `agents/pg-data-updater.md` first
+→ Edit `data/pg-colleges.js` only — read `agents/editing-data.md` first
 
 ### Add a UG entrance exam
 → Edit `data/exams.js` — find the right group and add the entry
 
 ### Add a PG entrance exam
-→ Edit `data/pg-exams.js` — read `agents/pg-data-updater.md` first
+→ Edit `data/pg-exams.js` — read `agents/editing-data.md` first
 
 ### Add an After UG pathway
-→ Edit `data/after-ug.js` — read `agents/after-ug-updater.md` first
+→ Edit `data/after-ug.js` — read `agents/editing-data.md` first
 
 ### Add/update an announcement (exam date, result, counselling)
-→ Edit `data/announcements.js` — read `agents/content-updater.md` first
+→ Edit `data/announcements.js` — read `agents/editing-data.md` first
+→ Keep only CURRENT / UPCOMING items in `data/announcements.js`. When an item's date
+   (`endDate || date`) has passed, MOVE it (don't delete) to `archive/announcements-archive.js`
+   so prior cycles stay referenceable. Find passed items with `node agents/date-consistency.js`.
+   The archive lives OUTSIDE `data/` on purpose — the pre-live scripts scan `data/` only,
+   and it is not loaded by any HTML.
 
 ### Add a career guide entry
-→ Edit `data/career-guide.js` — read `agents/content-updater.md` first
+→ Edit `data/career-guide.js` — read `agents/editing-data.md` first
 
 ### Add a glossary term
-→ Edit `data/glossary.js` — read `agents/content-updater.md` first
+→ Edit `data/glossary.js` — read `agents/editing-data.md` first
 
 ### Add a new counselling rank predictor
 → Read `agents/counselling-predictor.md` first — it has the full pattern
@@ -398,10 +408,10 @@ Note: `papers[]` replaces `subjects[]` used in UG exams.
 → Edit the relevant `js/*.js` file only
 
 ### Add/edit a scholarship
-→ Edit `data/scholarships.js` — read `agents/scholarship-updater.md` first
+→ Edit `data/scholarships.js` — read `agents/editing-data.md` first
 
 ### Add/edit an internship
-→ Edit `data/internships.js` — read `agents/internship-curator.md` first
+→ Edit `data/internships.js` — read `agents/editing-data.md` first
 
 ### Edit psychometric test questions or career map
 → Edit `data/psychometric.js` only — read `agents/psychometric-updater.md` first
@@ -418,10 +428,19 @@ Note: `papers[]` replaces `subjects[]` used in UG exams.
 ### Run data health checks
 → `sh agents/check.sh` — runs schema validator + behavioral tests (from project root)
 
+### Verify before pushing live
+→ Read `agents/prelive.md` — two-stage gate: Stage 1 runs `check.sh` (mechanical),
+   Stage 2 is an 8-point content-accuracy checklist (exam names, eligibility, college
+   names, scholarships, course names, fees/reservation, official links, last-updated
+   dates) verified against official sources. Report pass/❌ per item; never push on a ❌.
+→ Stage 2 is **diff-scoped to save tokens**: run `node agents/changed-records.js`
+   first to list only the records added/modified vs what's live, and verify just those.
+   Full-dataset verification is only for the annual refresh.
+
 ### Bulk-check a list (colleges / exams / scholarships / etc.) — STANDARD WORKFLOW
 When the user pastes a list with a prompt like "check and add these colleges:" or "check these exams:":
 
-1. **Read the relevant agent doc first** (`agents/data-updater.md` for colleges/exams/courses; `agents/scholarship-updater.md` for scholarships; etc.) to get the exact schema
+1. **Read `agents/editing-data.md` first** (and the record's schema in CLAUDE.md) to get the exact format and scope rule
 2. **For each item in the list:**
    - Search across ALL relevant data files to check if it's already present (don't add duplicates)
    - Verify it meets the scope rule (government / aided / merit-only — no private self-financing per CLAUDE.md §27)
