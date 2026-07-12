@@ -56,7 +56,7 @@ const COLLEGES_HR=[
   programGroups:[
     {stream:'Management',programs:[
       {name:'MBA (2 years)',exam:'CAT',examCss:'ce-own'},
-      {name:'Integrated Programme in Management — IPM (5-year BBA+MBA)',exam:'IPM Aptitude Test',examCss:'ce-own'},
+      {name:'Integrated Programme in Management — IPM (5-year BBA+MBA)',exam:'IPMAT Rohtak',examCss:'ce-own'},
     ]},
   ]},
 
@@ -100,6 +100,24 @@ const COLLEGES_HR=[
       {name:'B.Sc (Hons) Agriculture (4 years)',exam:'CUET-UG (15% all-India quota)',examCss:'ce-cuet'},
       {name:'B.Sc (Hons) Horticulture (4 years)',exam:'CUET-UG (15% all-India quota)',examCss:'ce-cuet'},
       {name:'B.Tech Food Technology',exam:'CUET-UG (15% all-India quota) / State Entrance',examCss:'ce-cuet'},
+    ]},
+  ]},
+
+{name:'Dr. B.R. Ambedkar National Law University (DBRANLU)',short:'DBRANLU',type:'Central',district:'Sonipat',state:'Haryana',
+  naac:'Accredited',nirf:'National Law University',affil:'National Law University (Haryana)',website:'dbranlu.ac.in',
+  streams:['Law'],
+  programGroups:[
+    {stream:'Law',programs:[
+      {name:'B.A LL.B (Hons) — 5-year integrated',exam:'CLAT',examCss:'ce-clat'},
+    ]},
+  ]},
+
+{name:'NID Haryana',short:'NID HR',type:'Central',district:'Kurukshetra',state:'Haryana',
+  naac:'Accredited',nirf:'Top Design',affil:'National Institute of Design (Ministry of Commerce)',website:'nid.edu',
+  streams:['Design'],
+  programGroups:[
+    {stream:'Design',programs:[
+      {name:'B.Des (Industrial, Communication & Textile Design)',exam:'NID DAT',examCss:'ce-own'},
     ]},
   ]},
 

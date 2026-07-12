@@ -143,4 +143,25 @@ const COLLEGES_BR=[
     ]},
   ]},
 
+{name:'NIFT Patna',short:'NIFT-PAT',type:'Central',district:'Patna',state:'Bihar',
+  naac:'Accredited',nirf:'Top Design',affil:'National Institute of Fashion Technology (Ministry of Textiles)',website:'nift.ac.in/patna',
+  streams:['Design'],
+  programGroups:[
+    {stream:'Design',programs:[
+      {name:'B.Des (Fashion, Textile, Accessory, Communication, Leather)',exam:'NIFT Entrance',examCss:'ce-own'},
+      {name:'B.F.Tech (Apparel Production)',exam:'NIFT Entrance',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'IIM Bodh Gaya',short:'IIMBG',type:'Central',district:'Gaya',state:'Bihar',
+  naac:'Accredited',nirf:'Top Management',affil:'Indian Institute of Management (MoE — Autonomous)',website:'iimbg.ac.in',
+  streams:['Management'],
+  specialNote:'Offers a 5-year Integrated Programme in Management (IPM) admitting via JIPMAT (NTA) — direct UG entry after Class 12.',
+  programGroups:[
+    {stream:'Management',programs:[
+      {name:'IPM — Integrated Programme in Management (5-year, after Class 12)',exam:'JIPMAT',examCss:'ce-own'},
+      {name:'PGP (MBA) — 2 years (post-UG)',exam:'CAT',examCss:'ce-own'},
+    ]},
+  ]},
+
 ];

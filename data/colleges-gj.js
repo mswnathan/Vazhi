@@ -31,16 +31,6 @@ const COLLEGES_GJ=[
     ]},
   ]},
 
-{name:'IISER Ahmedabad',short:'IISERA',type:'Central',district:'Ahmedabad',state:'Gujarat',
-  naac:'Accredited',nirf:'Top Science Research',affil:'Institute of Science Education & Research (MoE)',website:'iisera.ac.in',
-  streams:['Arts & Science'],
-  specialNote:'Research-focused BS-MS. Strong in chemistry, biology and interdisciplinary sciences.',
-  programGroups:[
-    {stream:'Arts & Science',programs:[
-      {name:'BS-MS Dual Degree (Physics, Chemistry, Maths, Biology, Earth Sciences)',exam:'JEE Advanced / IAT',examCss:'ce-jee'},
-    ]},
-  ]},
-
 {name:'NLU Gandhi Nagar (GNLU)',short:'GNLU',type:'Central',district:'Gandhinagar',state:'Gujarat',
   naac:'A',nirf:'Top 10 Law',affil:'National Law University (Gujarat)',website:'gnlu.ac.in',
   streams:['Law'],
@@ -192,6 +182,27 @@ const COLLEGES_GJ=[
       {name:'B.A. Psychology — NCAHP (3 years)',exam:'RCET (RRU Entrance)',examCss:'ce-own'},
       {name:'B.A. Clinical Psychology — RCI (3 years)',exam:'RCET (RRU Entrance)',examCss:'ce-own'},
       {name:'Diploma in Police Science (1 year)',exam:'RCET (RRU Entrance)',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'National Forensic Sciences University — Gandhinagar (Main Campus)',short:'NFSU Gandhinagar',type:'Central',district:'Gandhinagar',state:'Gujarat',
+  naac:'Accredited',nirf:'Top Forensic Sciences',affil:'National Forensic Sciences University (Institute of National Importance — MHA)',website:'nfsu.ac.in',
+  streams:['Engineering','Arts & Science','Law','Management'],
+  specialNote:'India\'s only national university dedicated to forensic sciences (est. 2020). NFSU\'s own entrance test (NFAT/FACT) is discontinued — every programme now admits via a national exam.',
+  programGroups:[
+    {stream:'Forensic & Security Sciences',programs:[
+      {name:'B.Sc. Criminology and Forensic Science — 3 years',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.Sc.–M.Sc. Forensic Science — 5-year integrated',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech–M.Tech Computer Science & Engineering (Cyber Security) — 5-year integrated',exam:'JEE Main',examCss:'ce-jee'},
+      {name:'B.Tech Civil Engineering — 4 years',exam:'JEE Main',examCss:'ce-jee'},
+    ]},
+    {stream:'Law',programs:[
+      {name:'B.Sc. LL.B. (Hons.) — 5-year integrated',exam:'CLAT',examCss:'ce-clat'},
+    ]},
+    {stream:'Management',programs:[
+      {name:'BBA–MBA (Five Year Integrated)',exam:'CUET UG',examCss:'ce-cuet'},
     ]},
   ]},
 

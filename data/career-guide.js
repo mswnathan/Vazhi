@@ -1071,4 +1071,32 @@ const CAREER_MAP = [
     ],
     careers: ['Hotel General Manager (5-star / chain properties)', 'Food & Beverage Manager', 'Front Office / Rooms Division Manager', 'Event & Banquet Manager', 'Tourism Officer (Govt / State Tourism Corp)', 'Cruise / Airline Hospitality Manager'],
   },
+
+  {
+    id: 'forensic-science',
+    keywords: ['forensic', 'forensic science', 'forensics', 'forensic scientist', 'crime lab', 'ballistics', 'dna analysis', 'toxicology', 'crime scene', 'nfsu', 'digital forensics', 'cyber forensics'],
+    title: 'Forensic Science',
+    ico: '🔬',
+    bc: 'purple',
+    summary: 'Forensic science applies science to solving crimes — DNA and serology, toxicology, ballistics, questioned documents, and fast-growing digital & cyber forensics. India\'s dedicated national university is the National Forensic Sciences University (NFSU) — an Institute of National Importance under the Ministry of Home Affairs — where B.Sc Forensic Science is admitted through CUET UG. Every state is expanding its forensic labs, so demand for trained forensic scientists is rising sharply.',
+    class12: {
+      subjects: ['PCB', 'PCM', 'PCMB'],
+      tip: 'A science stream keeps every forensic path open. B.Sc Forensic Science at NFSU is via CUET UG; the B.Tech Cyber Security & Digital Forensics route needs PCM and JEE Main.',
+    },
+    class9_10: {
+      stream: 'Science',
+      focus: ['Biology', 'Chemistry', 'Physics'],
+      tip: 'Build a strong science base and curiosity about how evidence is analysed. Chemistry and Biology matter most for lab forensics; add Computer Science for the digital-forensics track.',
+    },
+    streamId: 'Science',
+    examNames: ['CUET UG', 'JEE Main', 'RRU Entrance'],
+    augIds: [],
+    dayInLife: [
+      '9 am — Receive crime-scene evidence; log it and preserve the chain of custody',
+      '11 am — Lab analysis: DNA profiling, toxicology screen, or fingerprint / ballistics comparison',
+      '2 pm — Digital forensics: recover and examine data from seized devices',
+      '4 pm — Write the forensic report and prepare to depose as an expert witness in court',
+    ],
+    careers: ['Forensic Scientist (State / Central FSL)', 'DNA / Serology Analyst', 'Toxicologist', 'Ballistics & Firearms Expert', 'Questioned Document Examiner', 'Digital / Cyber Forensics Expert', 'Crime Scene Investigator', 'Forensic Psychologist'],
+  },
 ];

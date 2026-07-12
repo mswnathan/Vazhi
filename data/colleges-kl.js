@@ -163,4 +163,32 @@ const COLLEGES_KL=[
     ]},
   ]},
 
+{name:'National University of Advanced Legal Studies (NUALS)',short:'NUALS',type:'Central',district:'Kochi',state:'Kerala',
+  naac:'Accredited',nirf:'Top NLU',affil:'National Law University (Kerala)',website:'nuals.ac.in',
+  streams:['Law'],
+  programGroups:[
+    {stream:'Law',programs:[
+      {name:'B.A LL.B (Hons) — 5-year integrated',exam:'CLAT',examCss:'ce-clat'},
+    ]},
+  ]},
+
+{name:'IISER Thiruvananthapuram',short:'IISER TVM',type:'Central',district:'Thiruvananthapuram',state:'Kerala',
+  naac:'Accredited',nirf:'Top Science Research',affil:'Indian Institute of Science Education & Research (MoE)',website:'iisertvm.ac.in',
+  streams:['Arts & Science'],
+  programGroups:[
+    {stream:'Arts & Science',programs:[
+      {name:'BS-MS Integrated (Physics, Chemistry, Biology, Mathematics, Data Science) — 5-year',exam:'IISER IAT',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'Indian Institute of Space Science & Technology (IIST)',short:'IIST',type:'Central',district:'Thiruvananthapuram',state:'Kerala',
+  naac:'A',nirf:'Top Aerospace / Space',affil:'IIST (Dept of Space, Govt of India)',website:'iist.ac.in',
+  streams:['Engineering'],
+  specialNote:'India\'s space university under ISRO / Dept of Space. Top performers absorbed into ISRO.',
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech (Aerospace, Avionics, Engineering Physics)',exam:'JEE Advanced',examCss:'ce-jee'},
+    ]},
+  ]},
+
 ];

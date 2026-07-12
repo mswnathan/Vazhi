@@ -114,4 +114,14 @@ const COLLEGES_HP=[
     ]},
   ]},
 
+{name:'NIFT Kangra',short:'NIFT-KGA',type:'Central',district:'Kangra',state:'Himachal Pradesh',
+  naac:'Accredited',nirf:'Top Design',affil:'National Institute of Fashion Technology (Ministry of Textiles)',website:'nift.ac.in/kangra',
+  streams:['Design'],
+  programGroups:[
+    {stream:'Design',programs:[
+      {name:'B.Des (Fashion, Textile, Accessory, Communication, Leather)',exam:'NIFT Entrance',examCss:'ce-own'},
+      {name:'B.F.Tech (Apparel Production)',exam:'NIFT Entrance',examCss:'ce-own'},
+    ]},
+  ]},
+
 ];

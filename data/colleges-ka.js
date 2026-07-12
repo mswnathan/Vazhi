@@ -17,6 +17,9 @@ const COLLEGES_KA=[
       {name:'B.S (Research) — Physics, Chemistry, Maths, Materials, Earth & Climate, Electrical, Mechanical, Chemical, Computational Science',exam:'JEE Advanced',examCss:'ce-jee'},
       {name:'B.Tech (Mathematics & Computing; new 2026: Aerospace Engineering, Materials Science & Engineering, Mechanics & Computing)',exam:'JEE Advanced',examCss:'ce-jee'},
     ]},
+    {stream:'Arts & Science',programs:[
+      {name:'B.S (Research) — IAT admission channel (Physics, Chemistry, Maths, Biology, Materials, Earth & Climate)',exam:'IISER IAT',examCss:'ce-own'},
+    ]},
   ]},
 
 {name:'IIT Dharwad',short:'IITDH',type:'Central',district:'Dharwad',state:'Karnataka',
@@ -164,6 +167,19 @@ const COLLEGES_KA=[
     {stream:'Coffee Plantation & Estate Management',programs:[
       {name:'Diploma in Coffee Estate Management (D.C.E.M) — 2 years',exam:'Merit (Class 12 pass)',examCss:'ce-merit'},
       {name:'Certificate Course for Coffee Estate Supervisors — 1 year',exam:'Merit (Class 12 pass)',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'National Forensic Sciences University — Dharwad Campus',short:'NFSU Dharwad',type:'Central',district:'Dharwad',state:'Karnataka',
+  naac:'Accredited',nirf:'Top Forensic Sciences',affil:'National Forensic Sciences University (Institute of National Importance — MHA)',website:'nfsu.ac.in',
+  streams:['Engineering','Arts & Science'],
+  specialNote:'NFSU\'s own entrance test (NFAT/FACT) is discontinued — every programme now admits via a national exam.',
+  programGroups:[
+    {stream:'Forensic & Security Sciences',programs:[
+      {name:'B.Sc.–M.Sc. Forensic Science — 5-year integrated',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech–M.Tech Computer Science & Engineering (Cyber Security) — 5-year integrated',exam:'JEE Main',examCss:'ce-jee'},
     ]},
   ]},
 

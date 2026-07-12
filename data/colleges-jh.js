@@ -84,4 +84,24 @@ const COLLEGES_JH=[
     ]},
   ]},
 
+{name:'National University of Study and Research in Law (NUSRL)',short:'NUSRL',type:'Central',district:'Ranchi',state:'Jharkhand',
+  naac:'Accredited',nirf:'National Law University',affil:'National Law University (Jharkhand)',website:'nusrl.ac.in',
+  streams:['Law'],
+  programGroups:[
+    {stream:'Law',programs:[
+      {name:'B.A LL.B (Hons) — 5-year integrated',exam:'CLAT',examCss:'ce-clat'},
+    ]},
+  ]},
+
+{name:'IIM Ranchi',short:'IIMRAN',type:'Central',district:'Ranchi',state:'Jharkhand',
+  naac:'Accredited',nirf:'Top Management',affil:'Indian Institute of Management (MoE — Autonomous)',website:'iimranchi.ac.in',
+  streams:['Management'],
+  specialNote:'Offers a 5-year Integrated Programme in Management (IPM) admitting via IPMAT Indore score — direct UG entry after Class 12.',
+  programGroups:[
+    {stream:'Management',programs:[
+      {name:'IPM — Integrated Programme in Management (5-year, after Class 12)',exam:'IPMAT Indore',examCss:'ce-own'},
+      {name:'PGP (MBA) — 2 years (post-UG)',exam:'CAT',examCss:'ce-own'},
+    ]},
+  ]},
+
 ];

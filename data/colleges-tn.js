@@ -27,6 +27,10 @@ const COLLEGES=[
     {stream:'Online / Distance',programs:[
       {name:'BS Data Science & Applications (Online)',exam:'Qualifier Exam (no JEE)',examCss:'ce-own'},
     ]},
+    {stream:'Arts & Science',programs:[
+      {name:'BS in Medical Sciences & Engineering (36 seats, via IAT)',exam:'IISER IAT',examCss:'ce-own'},
+      {name:'BS in Chemistry (50 seats, via IAT)',exam:'IISER IAT',examCss:'ce-own'},
+    ]},
   ]},
 
 {name:'NIT Trichy',short:'NITT',type:'Central',district:'Trichy',state:'Tamil Nadu',
@@ -1952,14 +1956,11 @@ const COLLEGES=[
 
 {name:'National Forensic Sciences University — Chennai Campus',short:'NFSU Chennai',type:'Central',district:'Chennai',state:'Tamil Nadu',
   naac:'Accredited',nirf:'Top Forensic Sciences',affil:'National Forensic Sciences University (Institute of National Importance — MHA)',website:'nfsu.ac.in',
-  streams:['Engineering','Arts & Science'],
-  specialNote:'India\'s only national university dedicated to forensic sciences (est. 2020 as NUI). Chennai campus serves South India. Unique interdisciplinary programmes blending law, science and digital technology.',
+  streams:['Arts & Science'],
+  specialNote:'India\'s only national university dedicated to forensic sciences (est. 2020 as NUI). Chennai campus serves South India; the UG offering here is B.Sc. Criminology and Forensic Science — other UG programs (B.Tech Cyber Security, B.Sc Forensic Science-MSc, Law via CLAT) run only at Gandhinagar, Delhi and other campuses, not Chennai.',
   programGroups:[
     {stream:'Forensic & Security Sciences',programs:[
-      {name:'B.Sc Forensic Science — 3 years',exam:'NFSU Entrance',examCss:'ce-own'},
-      {name:'B.Sc Cyber Security & Digital Forensics — 3 years',exam:'NFSU Entrance',examCss:'ce-own'},
-      {name:'B.Tech Computer Science (Cyber Security) — 4 years',exam:'NFSU Entrance',examCss:'ce-own'},
-      {name:'B.Sc Behavioural Science & Forensic Psychology — 3 years',exam:'NFSU Entrance',examCss:'ce-own'},
+      {name:'B.Sc. Criminology and Forensic Science — 3 years',exam:'CUET UG',examCss:'ce-cuet'},
     ]},
   ]},
 

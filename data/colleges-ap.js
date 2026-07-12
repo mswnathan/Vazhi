@@ -33,7 +33,7 @@ const COLLEGES_AP=[
   specialNote:'Research-focused BS-MS dual degree. Top choice for science students aiming for research careers.',
   programGroups:[
     {stream:'Arts & Science',programs:[
-      {name:'BS-MS Dual Degree (Physics, Chemistry, Maths, Biology, Earth & Climate)',exam:'JEE Advanced / IAT',examCss:'ce-jee'},
+      {name:'BS-MS Dual Degree (Physics, Chemistry, Maths, Biology, Earth & Climate)',exam:'IISER IAT',examCss:'ce-own'},
     ]},
   ]},
 
@@ -214,6 +214,15 @@ const COLLEGES_AP=[
     ]},
     {stream:'Commerce & Management',programs:[
       {name:'B.Com / BBA',exam:'University Merit',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'NID Andhra Pradesh',short:'NID AP',type:'Central',district:'Vijayawada',state:'Andhra Pradesh',
+  naac:'Accredited',nirf:'Top Design',affil:'National Institute of Design (Ministry of Commerce)',website:'nid.edu',
+  streams:['Design'],
+  programGroups:[
+    {stream:'Design',programs:[
+      {name:'B.Des (Industrial, Communication & Textile Design)',exam:'NID DAT',examCss:'ce-own'},
     ]},
   ]},
 

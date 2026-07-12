@@ -36,7 +36,7 @@ const COLLEGES_MH=[
   specialNote:'Premier research university for basic sciences. BS-MS dual degree — top choice for research careers.',
   programGroups:[
     {stream:'Arts & Science',programs:[
-      {name:'BS-MS Dual Degree (Physics, Chemistry, Maths, Biology, Earth & Climate Science)',exam:'JEE Advanced / IAT',examCss:'ce-jee'},
+      {name:'BS-MS Dual Degree (Physics, Chemistry, Maths, Biology, Earth & Climate Science)',exam:'IISER IAT',examCss:'ce-own'},
     ]},
   ]},
 
@@ -232,6 +232,15 @@ const COLLEGES_MH=[
   programGroups:[
     {stream:'Allied Health & Rehabilitation',programs:[
       {name:'Bachelor in Audiology & Speech-Language Pathology / BASLP (3 years)',exam:'MoSJE CET',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'UM-DAE Centre for Excellence in Basic Sciences (CEBS)',short:'CEBS Mumbai',type:'Central',district:'Mumbai',state:'Maharashtra',
+  naac:'Accredited',nirf:'Top Science Research',affil:'UM-DAE CEBS (Dept of Atomic Energy — University of Mumbai)',website:'cbs.ac.in',
+  streams:['Arts & Science'],
+  programGroups:[
+    {stream:'Arts & Science',programs:[
+      {name:'Integrated M.Sc (Physics, Chemistry, Biology, Mathematics) — 5-year',exam:'NEST',examCss:'ce-own'},
     ]},
   ]},
 

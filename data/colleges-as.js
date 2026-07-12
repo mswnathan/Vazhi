@@ -20,6 +20,9 @@ const COLLEGES_AS=[
     {stream:'Design',programs:[
       {name:'B.Des (Industrial & Product Design)',exam:'UCEED',examCss:'ce-own'},
     ]},
+    {stream:'Arts & Science',programs:[
+      {name:'4-year B.S in Biomedical Science & Engineering (20 seats, via IAT)',exam:'IISER IAT',examCss:'ce-own'},
+    ]},
   ]},
 
 {name:'NIT Silchar',short:'NITS',type:'Central',district:'Cachar',state:'Assam',
@@ -67,6 +70,34 @@ const COLLEGES_AS=[
   programGroups:[
     {stream:'Allied Health & Rehabilitation',programs:[
       {name:'Bachelor in Audiology & Speech-Language Pathology / BASLP (3 years)',exam:'CET-PWD',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'National Law University and Judicial Academy, Assam (NLUJA)',short:'NLUJA',type:'Central',district:'Guwahati',state:'Assam',
+  naac:'Accredited',nirf:'National Law University',affil:'National Law University (Assam)',website:'nluassam.ac.in',
+  streams:['Law'],
+  programGroups:[
+    {stream:'Law',programs:[
+      {name:'B.A LL.B (Hons) — 5-year integrated',exam:'CLAT',examCss:'ce-clat'},
+    ]},
+  ]},
+
+{name:'NID Assam',short:'NID AS',type:'Central',district:'Jorhat',state:'Assam',
+  naac:'Accredited',nirf:'Top Design',affil:'National Institute of Design (Ministry of Commerce)',website:'nid.edu',
+  streams:['Design'],
+  programGroups:[
+    {stream:'Design',programs:[
+      {name:'B.Des (Industrial, Communication & Textile Design)',exam:'NID DAT',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'National Forensic Sciences University — Guwahati Campus',short:'NFSU Guwahati',type:'Central',district:'Guwahati',state:'Assam',
+  naac:'Accredited',nirf:'Top Forensic Sciences',affil:'National Forensic Sciences University (Institute of National Importance — MHA)',website:'nfsu.ac.in',
+  streams:['Engineering'],
+  specialNote:'NFSU\'s own entrance test (NFAT/FACT) is discontinued — admission is via JEE Main.',
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech–M.Tech Computer Science & Engineering (Cyber Security) — 5-year integrated',exam:'JEE Main',examCss:'ce-jee'},
     ]},
   ]},
 

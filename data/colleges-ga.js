@@ -73,4 +73,14 @@ const COLLEGES_GA=[
     ]},
   ]},
 
+{name:'National Forensic Sciences University — Goa Campus',short:'NFSU Goa',type:'Central',district:'Goa',state:'Goa',
+  naac:'Accredited',nirf:'Top Forensic Sciences',affil:'National Forensic Sciences University (Institute of National Importance — MHA)',website:'nfsu.ac.in',
+  streams:['Arts & Science'],
+  specialNote:'NFSU\'s own entrance test (NFAT/FACT) is discontinued — admission is via CUET UG.',
+  programGroups:[
+    {stream:'Forensic & Security Sciences',programs:[
+      {name:'B.Sc.–M.Sc. Forensic Science — 5-year integrated',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+  ]},
+
 ];

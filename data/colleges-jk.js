@@ -81,7 +81,7 @@ const COLLEGES_JK=[
   programGroups:[
     {stream:'Management',programs:[
       {name:'MBA (2 years)',exam:'CAT',examCss:'ce-own'},
-      {name:'Integrated Programme in Management — IPM (5-year BBA+MBA)',exam:'IPM Aptitude Test',examCss:'ce-own'},
+      {name:'Integrated Programme in Management — IPM (5-year BBA+MBA)',exam:'JIPMAT',examCss:'ce-own'},
     ]},
   ]},
 
@@ -113,6 +113,16 @@ const COLLEGES_JK=[
     ]},
     {stream:'Management',programs:[
       {name:'Integrated BBA–MBA (5 years)',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+  ]},
+
+{name:'NIFT Srinagar',short:'NIFT-SXR',type:'Central',district:'Srinagar',state:'Jammu & Kashmir',
+  naac:'Accredited',nirf:'Top Design',affil:'National Institute of Fashion Technology (Ministry of Textiles)',website:'nift.ac.in/srinagar',
+  streams:['Design'],
+  programGroups:[
+    {stream:'Design',programs:[
+      {name:'B.Des (Fashion, Textile, Accessory, Communication, Leather)',exam:'NIFT Entrance',examCss:'ce-own'},
+      {name:'B.F.Tech (Apparel Production)',exam:'NIFT Entrance',examCss:'ce-own'},
     ]},
   ]},
 

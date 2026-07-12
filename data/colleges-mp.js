@@ -43,7 +43,7 @@ const COLLEGES_MP=[
   specialNote:'One of the first IISERs. Particularly strong in physics and chemistry research. BS-MS dual degree.',
   programGroups:[
     {stream:'Arts & Science',programs:[
-      {name:'BS-MS Dual Degree (Physics, Chemistry, Maths, Biology, Earth & Environmental Science)',exam:'JEE Advanced / IAT',examCss:'ce-jee'},
+      {name:'BS-MS Dual Degree (Physics, Chemistry, Maths, Biology, Earth & Environmental Science)',exam:'IISER IAT',examCss:'ce-own'},
     ]},
   ]},
 
@@ -96,7 +96,7 @@ const COLLEGES_MP=[
   specialNote:'Offers IPM — Integrated Programme in Management (5-year BBA+MBA after Class 12). Direct UG-entry management programme.',
   programGroups:[
     {stream:'Management',programs:[
-      {name:'IPM — Integrated Programme in Management (5-year, after Class 12)',exam:'IPMAT',examCss:'ce-own'},
+      {name:'IPM — Integrated Programme in Management (5-year, after Class 12)',exam:'IPMAT Indore',examCss:'ce-own'},
       {name:'PGP (MBA) — 2 years (post-UG)',exam:'CAT',examCss:'ce-own'},
     ]},
   ]},
@@ -151,6 +151,44 @@ const COLLEGES_MP=[
       {name:'B.Tech CSE / IT',exam:'JEE Main / MP DTE',examCss:'ce-jee'},
       {name:'B.Tech ECE / EEE',exam:'JEE Main / MP DTE',examCss:'ce-jee'},
       {name:'B.Tech Mechanical / Civil / Chemical / Industrial Production',exam:'JEE Main / MP DTE',examCss:'ce-jee'},
+    ]},
+  ]},
+
+{name:'Dharmashastra National Law University (DNLU)',short:'DNLU',type:'Central',district:'Jabalpur',state:'Madhya Pradesh',
+  naac:'Accredited',nirf:'National Law University',affil:'National Law University (Madhya Pradesh)',website:'dnlu.ac.in',
+  streams:['Law'],
+  programGroups:[
+    {stream:'Law',programs:[
+      {name:'B.A LL.B (Hons) — 5-year integrated',exam:'CLAT',examCss:'ce-clat'},
+    ]},
+  ]},
+
+{name:'NID Madhya Pradesh',short:'NID MP',type:'Central',district:'Bhopal',state:'Madhya Pradesh',
+  naac:'Accredited',nirf:'Top Design',affil:'National Institute of Design (Ministry of Commerce)',website:'nid.edu',
+  streams:['Design'],
+  programGroups:[
+    {stream:'Design',programs:[
+      {name:'B.Des (Industrial, Communication & Textile Design)',exam:'NID DAT',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'NIFT Bhopal',short:'NIFT-BPL',type:'Central',district:'Bhopal',state:'Madhya Pradesh',
+  naac:'Accredited',nirf:'Top Design',affil:'National Institute of Fashion Technology (Ministry of Textiles)',website:'nift.ac.in/bhopal',
+  streams:['Design'],
+  programGroups:[
+    {stream:'Design',programs:[
+      {name:'B.Des (Fashion, Textile, Accessory, Communication, Leather)',exam:'NIFT Entrance',examCss:'ce-own'},
+      {name:'B.F.Tech (Apparel Production)',exam:'NIFT Entrance',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'National Forensic Sciences University — Bhopal Campus',short:'NFSU Bhopal',type:'Central',district:'Bhopal',state:'Madhya Pradesh',
+  naac:'Accredited',nirf:'Top Forensic Sciences',affil:'National Forensic Sciences University (Institute of National Importance — MHA)',website:'nfsu.ac.in',
+  streams:['Arts & Science'],
+  specialNote:'NFSU\'s own entrance test (NFAT/FACT) is discontinued — admission is via CUET UG.',
+  programGroups:[
+    {stream:'Forensic & Security Sciences',programs:[
+      {name:'B.Sc.–M.Sc. Forensic Science — 5-year integrated',exam:'CUET UG',examCss:'ce-cuet'},
     ]},
   ]},
 

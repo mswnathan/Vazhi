@@ -60,6 +60,11 @@ const EXAM_GROUPS=[
     {name:'Coast Guard District HQs & Ships',city:'All coastal states',tier:'✓ After training at CG Academy'},
     {name:'Coast Guard Academy',city:'Azhikkal, KL',tier:'🏆 Training Academy'},
   ]},
+  {name:'Agniveer',full:'Agnipath Scheme — Agniveer (Army, Navy & Air Force)',body:'Indian Army / Indian Navy / Indian Air Force',level:'National',freq:'Multiple intakes per year (all three services)',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'Direct entry into the armed forces after Class 10/12 under the 4-year Agnipath scheme. Army Agniveer GD (Class 10) & Clerk/Technical/Tradesman (Class 12); Navy Agniveer SSR (needs PCM) & MR; Air Force Agniveervayu Y (any stream) & X (needs PCM). 25% are retained for permanent service after 4 years.',website:'joinindianarmy.nic.in',note:'A recruitment route into military service, not a college-admission exam. Navy applies via joinindiannavy.gov.in / agniveernavy.cdac.in; Air Force via agnipathvayu.cdac.in. Selection = written test (online/CEE) + physical fitness + medical. Tax-free Seva Nidhi (~₹11.7 lakh) on exit.',seats:'~40,000+ per year across the three services',institutes:[
+    {name:'Indian Army — Agniveer (regimental training centres)',city:'Pan India',tier:'🏆 Army'},
+    {name:'Indian Navy — Agniveer SSR/MR (INS Chilka)',city:'Odisha coast',tier:'🏆 Navy'},
+    {name:'Indian Air Force — Agniveervayu',city:'Pan India',tier:'🏆 Air Force'},
+  ]},
 ]},
 {id:'Design',label:'Design & Architecture',ico:'✏',color:'#855100',bg:'#FFF5E0',exams:[
   {name:'UCEED',full:'Undergraduate Common Entrance Exam for Design',body:'IIT Bombay',level:'National',freq:'Once a year (Jan)',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'B.Des at IITs — open to all streams, no PCM requirement.',website:'uceed.iitb.ac.in',note:'Tests visual perception, drawing, logical reasoning. No PCM requirement — any stream eligible.',seats:'~180 total',institutes:[
@@ -86,6 +91,10 @@ const EXAM_GROUPS=[
     {name:'FDDI Noida',city:'Noida, UP',tier:'⭐ Top FDDI'},
     {name:'FDDI Chennai',city:'Chennai, TN',tier:'⭐ Top FDDI'},
     {name:'FDDI Kolkata, Chhindwara, Fulapur, Rohtak + others',city:'Pan India',tier:'✓ FDDI Network'},
+  ]},
+  {name:'JNAFAU Entrance',full:'Jawaharlal Nehru Architecture & Fine Arts University Entrance (FADEE)',body:'JNAFAU Hyderabad',level:'State',freq:'Once a year',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'B.F.A (Fine Arts) admission via the FADEE entrance conducted by JNAFAU; B.Arch via NATA/JEE + TS EAMCET counselling. Telangana state university for architecture, design & fine arts.',website:'jnafau.ac.in',note:'B.Arch needs Class 12 with Maths + NATA/JEE. B.F.A (painting, sculpture, applied art, animation) is via the FADEE entrance. Highly subsidised state-govt fees.',seats:'~500 across B.Arch, B.Des & B.F.A',institutes:[
+    {name:'JNAFAU School of Planning & Architecture',city:'Hyderabad, TS',tier:'🏆 State Arch & Fine Arts Univ'},
+    {name:'JNAFAU College of Fine Arts',city:'Hyderabad, TS',tier:'⭐ Fine Arts'},
   ]},
 ]},
 {id:'Engineering',label:'Engineering & Technology',ico:'⚙',color:'#1A4DD6',bg:'#EBF0FF',exams:[
@@ -203,6 +212,16 @@ const EXAM_GROUPS=[
     {name:'Chandigarh College of Architecture',city:'Chandigarh',tier:'⭐ Excellent'},
     {name:'500+ private architecture colleges',city:'Pan India',tier:'✓ Via NATA score'},
   ]},
+  {name:'Assam CEE',full:'Assam Combined Entrance Examination',body:'Assam Science & Technology University (ASTU)',level:'State',freq:'Once a year (Jun)',subjects:['PCM','PCM+CS'],for:'B.Tech admission to government & private engineering colleges in Assam.',website:'astu.ac.in',note:'Conducted by ASTU, Guwahati. Single MCQ paper — Maths, Physics, Chemistry — based on the Assam State Board (Div-II) syllabus.',seats:'Govt & private engineering colleges across Assam',institutes:[
+    {name:'Assam Engineering College',city:'Guwahati, AS',tier:'🏆 Top Govt Assam'},
+    {name:'Jorhat Engineering College',city:'Jorhat, AS',tier:'⭐ Top Govt'},
+    {name:'Bongaigaon, Silchar & other govt colleges',city:'Assam',tier:'✓ State Network'},
+  ]},
+  {name:'JKCET',full:'Jammu & Kashmir Common Entrance Test',body:'J&K Board of Professional Entrance Examinations (JKBOPEE)',level:'State',freq:'Once a year (Apr–May)',subjects:['PCM','PCM+CS'],for:'B.E/B.Tech admission to government & private engineering colleges in Jammu & Kashmir.',website:'jkbopee.gov.in',note:'Conducted by JKBOPEE. The same board also runs NEET-based counselling for 85% state-quota medical/dental seats, plus separate paramedical and polytechnic entrance tests.',seats:'Govt & private engineering seats across J&K',institutes:[
+    {name:'Govt College of Engineering & Technology (GCET Jammu)',city:'Jammu, J&K',tier:'🏆 Top Govt'},
+    {name:'University of Kashmir — Institute of Technology',city:'Srinagar, J&K',tier:'⭐ Govt'},
+    {name:'Other J&K govt & private engineering colleges',city:'Jammu & Kashmir',tier:'✓ State Network'},
+  ]},
 ]},
 {id:'University',label:'Central & State University Admissions',ico:'🏛️',color:'#1A4DD6',bg:'#EEF2FF',exams:[
   {name:'CUET UG',full:'Common University Entrance Test (Undergraduate)',body:'NTA',level:'National',freq:'Once a year (May–Jun)',subjects:['PCM','PCB','PCMB','Commerce','Arts','Any'],for:'Class 12 students seeking admission to UG programs (BA, B.Sc, B.Com, B.Voc, B.Tech) at Central Universities and participating state universities across India.',website:'cuet.nta.nic.in',explainer:'<strong>Do you need CUET?</strong> Take CUET if you want a UG seat at a Central University — Delhi University, JNU, BHU, Hyderabad Central, or Pondicherry University (the nearest one for TN &amp; Puducherry students). You do <strong>not</strong> need CUET for Tamil Nadu government colleges — those admit on Class 12 marks (Arts &amp; Science) or TNEA rank (Engineering). Commerce &amp; Arts students: CUET is your main route to top central universities for B.Com, BA Economics and similar degrees.',note:'Replaced individual university entrance tests for DU, JNU, BHU, Hyderabad Central, Pondicherry Central, AMU and 40+ others. Score valid for one year. Any stream eligible depending on domain subjects chosen.',seats:'~1 lakh+ seats across 250+ universities',institutes:[
@@ -222,6 +241,13 @@ const EXAM_GROUPS=[
   ]},
   {name:'PUCET UG',full:'Pondicherry University Common Entrance Test (UG)',body:'Pondicherry University',level:'State',freq:'Once a year (Jun)',subjects:['PCM','PCB','Commerce','Arts','Any'],for:'Class 12 students seeking admission to B.Sc, BA, B.Com, BCA and integrated programs at Pondicherry University.',website:'pondiuni.edu.in',note:'Central University in Puducherry — directly relevant for TN/PY students. Also accepts CUET scores for some programs. Covers sciences, humanities, commerce, and computer applications.',seats:'~2,000 UG seats',institutes:[
     {name:'Pondicherry University',city:'Puducherry',tier:'🏆 Central Univ (in PY scope)'},
+  ]},
+  {name:'AMU Entrance',full:'Aligarh Muslim University Entrance Test (AMUEEE)',body:'Aligarh Muslim University',level:'Institute',freq:'Once a year (Apr–May)',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'UG programs (BA, B.Sc, B.Com, B.Tech, B.Arch and more) at Aligarh Muslim University, a Central University. AMU conducts its own entrance test for most courses; only a few UG programs admit via CUET.',website:'amu.ac.in',note:'Central University with its own admission test (AMUEEE), distinct from CUET. Highly subsidised central-govt fees; internal AMU-school students get reservation in some seats.',seats:'~5,000+ UG seats',institutes:[
+    {name:'Aligarh Muslim University (Main Campus)',city:'Aligarh, UP',tier:'🏆 Premier Central Univ'},
+    {name:'AMU Centres — Malappuram, Murshidabad, Kishanganj',city:'Kerala / WB / Bihar',tier:'⭐ Off-Campus Centres'},
+  ]},
+  {name:'JMI Entrance',full:'Jamia Millia Islamia Entrance Test',body:'Jamia Millia Islamia',level:'Institute',freq:'Once a year (Apr–May)',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'UG programs at Jamia Millia Islamia, a Central University in New Delhi. JMI runs its own entrance test for most courses; only about 8 UG programs admit via CUET UG.',website:'jmi.ac.in',note:'Central University with its own admission test for most programs, distinct from CUET. Strong in mass communication (AJK MCRC), architecture, engineering and humanities. Subsidised central-govt fees.',seats:'~4,000+ UG seats',institutes:[
+    {name:'Jamia Millia Islamia',city:'New Delhi',tier:'🏆 Premier Central Univ'},
   ]},
 ]},
 {id:'Arts',label:'Fine Arts, Performing Arts & Media',ico:'🎨',color:'#581F9E',bg:'#F2EBFF',exams:[
@@ -334,6 +360,10 @@ const EXAM_GROUPS=[
     {name:'HNB Uttarakhand Medical Education University',city:'Dehradun, UK',tier:'⭐ State Medical Univ'},
     {name:'Govt paramedical colleges across Uttarakhand',city:'Uttarakhand',tier:'✓ State govt network'},
   ]},
+  {name:'JENPAS UG',full:'Joint Entrance Test for Nursing, Paramedical & Allied Sciences (UG)',body:'WBJEEB',level:'State',freq:'Once a year (Jun)',subjects:['PCB','PCMB'],for:'B.Sc Nursing, BPT, BOT, BMLS and other paramedical & allied-health UG courses at government & private colleges in West Bengal.',website:'wbjeeb.nic.in',note:'West Bengal state exam conducted by WBJEEB. NEET is not used for these nursing/paramedical seats in WB — JENPAS-UG is the route. ~4,230+ seats across 140+ colleges.',seats:'~4,230+ across 140+ WB colleges',institutes:[
+    {name:'Govt College of Nursing, Kolkata & districts',city:'West Bengal',tier:'⭐ Govt Nursing'},
+    {name:'State paramedical & allied-health colleges',city:'West Bengal',tier:'✓ WB Network'},
+  ]},
 ]},
 {id:'Pharmacy',label:'Pharmacy',ico:'💊',color:'#0A686F',bg:'#E5FAFB',exams:[
   {name:'NEET UG (Pharmacy)',full:'National Eligibility cum Entrance Test — for B.Pharm at some states',body:'NTA',level:'National',freq:'Once a year (May)',subjects:['PCB','PCMB','PCM','PCM+CS'],for:'B.Pharm at govt pharmacy colleges in states like Andhra Pradesh, Telangana, Karnataka. Many private colleges also use NEET for B.Pharm screening.',website:'neet.nta.nic.in',note:'Not all states use NEET for B.Pharm — some use state CETs or merit. Always verify with the specific state/college.',seats:'Varies by state',institutes:[
@@ -353,12 +383,6 @@ const EXAM_GROUPS=[
   {name:'RRU Entrance',full:'Rashtriya Raksha University Entrance Examination',body:'Rashtriya Raksha University',level:'National',freq:'Once a year',subjects:['PCM','PCM+CS','Commerce','Arts','Any'],for:'B.Tech / BCA / BA in Cyber Security, Police Science, Border Management & Internal Security at India\'s only national security university.',website:'rru.ac.in',note:'Fully govt funded central university under Ministry of Home Affairs. Students get security clearance and strong pathway to intelligence, police & cyber defence roles.',seats:'~500 seats across programs',institutes:[
     {name:'Rashtriya Raksha University — Main Campus',city:'Gandhinagar, GJ',tier:'🏆 National Security University'},
     {name:'RRU Sub-Centres',city:'Pan India',tier:'✓ RRU Network'},
-  ]},
-  {name:'FACT',full:'Forensic Aptitude & Calibre Test',body:'National Forensic Sciences University (NFSU)',level:'National',freq:'Once a year',subjects:['PCM','PCB','Commerce','Arts','Any'],for:'UG admissions to B.Sc Forensic Sciences, BBA Cyber Security, BBA Security Management, B.Tech at NFSU Gandhinagar and its campuses across India.',website:'nfsu.ac.in',note:'NFSU is India\'s only national university dedicated to forensic sciences — established as a central university under Ministry of Home Affairs. Strong career pathway to CBI, Forensic Labs, Cyber Cells.',seats:'~2,000 across all NFSU campuses',institutes:[
-    {name:'NFSU Gandhinagar (Main Campus)',city:'Gandhinagar, GJ',tier:'🏆 National Forensic University'},
-    {name:'NFSU Delhi Campus',city:'New Delhi',tier:'⭐ NFSU Campus'},
-    {name:'NFSU Goa Campus',city:'Goa',tier:'⭐ NFSU Campus'},
-    {name:'NFSU Tripura Campus',city:'Agartala, TR',tier:'✓ NFSU Campus'},
   ]},
 ]},
 {id:'Science',label:'Pure Science & Research',ico:'⚗',color:'#581F9E',bg:'#F2EBFF',exams:[
@@ -408,6 +432,10 @@ const EXAM_GROUPS=[
   {name:'NIS / NSNIS Selection',full:'National Institute of Sports Diploma Selection',body:'SAI / NSNIS Patiala',level:'Institute',freq:'Once a year',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'Diploma in Sports Coaching across 20+ disciplines at NSNIS Patiala & sub-centres.',website:'nsnis.org',note:'Selection based on sports achievement + physical tests. Not just a written exam.',seats:'~300+',institutes:[
     {name:'NSNIS Patiala',city:'Patiala, PB',tier:'🏆 Asia\'s Largest Sports Inst.'},
     {name:'SAI Regional Centres — Bengaluru, Kolkata, Gandhi Nagar, Bhopal',city:'Multi-city',tier:'✓ SAI Network'},
+  ]},
+  {name:'AP PECET',full:'Andhra Pradesh Physical Education Common Entrance Test',body:'Acharya Nagarjuna University (for APSCHE)',level:'State',freq:'Once a year (Jun)',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'B.P.Ed (2-yr) & D.P.Ed (2-yr) at physical education colleges in Andhra Pradesh.',website:'cets.apsche.ap.gov.in',note:'AP counterpart to TS PECET. Physical efficiency test + academic eligibility. D.P.Ed is open after Class 12; B.P.Ed needs a UG degree.',seats:'~1,000+ across AP',institutes:[
+    {name:'Govt & university physical-education colleges',city:'Andhra Pradesh',tier:'⭐ Govt PE'},
+    {name:'All AP B.P.Ed / D.P.Ed colleges',city:'Andhra Pradesh',tier:'✓ Wide access'},
   ]},
 ]},
 {id:'TeacherEd',label:'Teacher Education',ico:'📖',color:'#5B2D9E',bg:'#F2EBFF',exams:[

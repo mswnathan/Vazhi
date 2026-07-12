@@ -195,4 +195,33 @@ const COLLEGES_UP=[
     ]},
   ]},
 
+{name:'Dr. Rajendra Prasad National Law University (RPNLU)',short:'RPNLU',type:'Central',district:'Prayagraj',state:'Uttar Pradesh',
+  naac:'Accredited',nirf:'National Law University',affil:'National Law University (Uttar Pradesh)',website:'rpnlup.ac.in',
+  streams:['Law'],
+  programGroups:[
+    {stream:'Law',programs:[
+      {name:'B.A LL.B (Hons) — 5-year integrated',exam:'CLAT',examCss:'ce-clat'},
+    ]},
+  ]},
+
+{name:'NIFT Raebareli',short:'NIFT-RBL',type:'Central',district:'Raebareli',state:'Uttar Pradesh',
+  naac:'Accredited',nirf:'Top Design',affil:'National Institute of Fashion Technology (Ministry of Textiles)',website:'nift.ac.in/raebareli',
+  streams:['Design'],
+  programGroups:[
+    {stream:'Design',programs:[
+      {name:'B.Des (Fashion, Textile, Accessory, Communication, Leather)',exam:'NIFT Entrance',examCss:'ce-own'},
+      {name:'B.F.Tech (Apparel Production)',exam:'NIFT Entrance',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'National Forensic Sciences University — Varanasi Campus',short:'NFSU Varanasi',type:'Central',district:'Varanasi',state:'Uttar Pradesh',
+  naac:'Accredited',nirf:'Top Forensic Sciences',affil:'National Forensic Sciences University (Institute of National Importance — MHA)',website:'nfsu.ac.in',
+  streams:['Arts & Science'],
+  specialNote:'NFSU\'s own entrance test (NFAT/FACT) is discontinued — admission is via CUET UG.',
+  programGroups:[
+    {stream:'Forensic & Security Sciences',programs:[
+      {name:'B.Sc.–M.Sc. Forensic Science — 5-year integrated',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+  ]},
+
 ];

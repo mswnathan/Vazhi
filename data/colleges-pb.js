@@ -34,7 +34,7 @@ const COLLEGES_PB=[
   specialNote:'One of the first IISERs. Particularly strong in biology, chemistry and data science. BS-MS dual degree.',
   programGroups:[
     {stream:'Arts & Science',programs:[
-      {name:'BS-MS Dual Degree (Physics, Chemistry, Maths, Biology, Earth & Environmental Science)',exam:'JEE Advanced / IAT',examCss:'ce-jee'},
+      {name:'BS-MS Dual Degree (Physics, Chemistry, Maths, Biology, Earth & Environmental Science)',exam:'IISER IAT',examCss:'ce-own'},
     ]},
   ]},
 
@@ -88,7 +88,7 @@ const COLLEGES_PB=[
   specialNote:'IPM (Integrated Programme in Management, 5-year after Class 12) available — direct UG-entry route alongside PGP.',
   programGroups:[
     {stream:'Management',programs:[
-      {name:'IPM — Integrated Programme in Management (5-year, after Class 12)',exam:'IPMAT',examCss:'ce-own'},
+      {name:'IPM — Integrated Programme in Management (5-year, after Class 12)',exam:'IPMAT Indore',examCss:'ce-own'},
       {name:'PGP (MBA) — 2 years (post-UG)',exam:'CAT',examCss:'ce-own'},
     ]},
   ]},
@@ -141,6 +141,15 @@ const COLLEGES_PB=[
     ]},
     {stream:'Management',programs:[
       {name:'BBA (Business Administration)',exam:'GNDU Entrance',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'Rajiv Gandhi National University of Law (RGNUL)',short:'RGNUL',type:'Central',district:'Patiala',state:'Punjab',
+  naac:'Accredited',nirf:'Top NLU',affil:'National Law University (Punjab)',website:'rgnul.ac.in',
+  streams:['Law'],
+  programGroups:[
+    {stream:'Law',programs:[
+      {name:'B.A LL.B (Hons) — 5-year integrated',exam:'CLAT',examCss:'ce-clat'},
     ]},
   ]},
 

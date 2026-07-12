@@ -102,4 +102,32 @@ const COLLEGES_OD=[
     ]},
   ]},
 
+{name:'National Law University Odisha (NLUO)',short:'NLUO',type:'Central',district:'Cuttack',state:'Odisha',
+  naac:'Accredited',nirf:'Top NLU',affil:'National Law University (Odisha)',website:'nluo.ac.in',
+  streams:['Law'],
+  programGroups:[
+    {stream:'Law',programs:[
+      {name:'B.A LL.B (Hons) — 5-year integrated',exam:'CLAT',examCss:'ce-clat'},
+    ]},
+  ]},
+
+{name:'IISER Berhampur',short:'IISER BPR',type:'Central',district:'Berhampur',state:'Odisha',
+  naac:'Accredited',nirf:'Top Science Research',affil:'Indian Institute of Science Education & Research (MoE)',website:'iiserbpr.ac.in',
+  streams:['Arts & Science'],
+  programGroups:[
+    {stream:'Arts & Science',programs:[
+      {name:'BS-MS Integrated (Physics, Chemistry, Biology, Mathematics) — 5-year',exam:'IISER IAT',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'NIFT Bhubaneswar',short:'NIFT-BBS',type:'Central',district:'Bhubaneswar',state:'Odisha',
+  naac:'Accredited',nirf:'Top Design',affil:'National Institute of Fashion Technology (Ministry of Textiles)',website:'nift.ac.in/bhubaneswar',
+  streams:['Design'],
+  programGroups:[
+    {stream:'Design',programs:[
+      {name:'B.Des (Fashion, Textile, Accessory, Communication, Leather)',exam:'NIFT Entrance',examCss:'ce-own'},
+      {name:'B.F.Tech (Apparel Production)',exam:'NIFT Entrance',examCss:'ce-own'},
+    ]},
+  ]},
+
 ];

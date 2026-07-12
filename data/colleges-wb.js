@@ -27,11 +27,14 @@ const COLLEGES_WB=[
 
 {name:'IIEST Shibpur',short:'IIEST',type:'Central',district:'Howrah',state:'West Bengal',
   naac:'A',nirf:'Top 30 Engineering',affil:'Institute of Engineering & Management (Institute of National Importance)',website:'iiest.ac.in',
-  streams:['Engineering'],
-  specialNote:'One of India\'s oldest engineering institutes (est. 1856). Admission via JEE Main.',
+  streams:['Engineering','Arts & Science'],
+  specialNote:'One of India\'s oldest engineering institutes (est. 1856). B.Tech via JEE Main; BS-MS science via IAT.',
   programGroups:[
     {stream:'Engineering & Technology',programs:[
       {name:'B.Tech (CSE, ECE, EEE, IT, Mechanical, Civil, Chemical, Mining, Printing)',exam:'JEE Main',examCss:'ce-jee'},
+    ]},
+    {stream:'Arts & Science',programs:[
+      {name:'5-year BS-MS (Physics, Chemistry, Applied Geology — from 2026; 20 IAT seats each)',exam:'IISER IAT',examCss:'ce-own'},
     ]},
   ]},
 
@@ -50,7 +53,7 @@ const COLLEGES_WB=[
   specialNote:'One of the first IISERs. Strong in physics, chemistry and biology research. BS-MS dual degree.',
   programGroups:[
     {stream:'Arts & Science',programs:[
-      {name:'BS-MS Dual Degree (Physics, Chemistry, Maths, Biology, Earth Sciences)',exam:'JEE Advanced / IAT',examCss:'ce-jee'},
+      {name:'BS-MS Dual Degree (Physics, Chemistry, Maths, Biology, Earth Sciences)',exam:'IISER IAT',examCss:'ce-own'},
     ]},
   ]},
 
@@ -169,6 +172,35 @@ const COLLEGES_WB=[
     {stream:'Fine Arts & Music',programs:[
       {name:'BFA (Painting, Sculpture, Graphic Art, Design, History of Art) — Kala-Bhavana',exam:'CUET UG + Practical',examCss:'ce-cuet'},
       {name:'B.Mus (Hindustani Vocal, Rabindra Sangit, Sitar, Tabla, Esraj) — Sangit-Bhavana',exam:'CUET UG + Audition',examCss:'ce-cuet'},
+    ]},
+  ]},
+
+{name:'West Bengal National University of Juridical Sciences (WBNUJS)',short:'NUJS',type:'Central',district:'Kolkata',state:'West Bengal',
+  naac:'Accredited',nirf:'Top NLU',affil:'National Law University (West Bengal)',website:'nujs.edu',
+  streams:['Law'],
+  programGroups:[
+    {stream:'Law',programs:[
+      {name:'B.A LL.B (Hons) — 5-year integrated',exam:'CLAT',examCss:'ce-clat'},
+    ]},
+  ]},
+
+{name:'NIFT Kolkata',short:'NIFT-KOL',type:'Central',district:'Kolkata',state:'West Bengal',
+  naac:'Accredited',nirf:'Top Design',affil:'National Institute of Fashion Technology (Ministry of Textiles)',website:'nift.ac.in/kolkata',
+  streams:['Design'],
+  programGroups:[
+    {stream:'Design',programs:[
+      {name:'B.Des (Fashion, Textile, Accessory, Communication, Leather)',exam:'NIFT Entrance',examCss:'ce-own'},
+      {name:'B.F.Tech (Apparel Production)',exam:'NIFT Entrance',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'Indian Association for the Cultivation of Science (IACS)',short:'IACS Kolkata',type:'Central',district:'Kolkata',state:'West Bengal',
+  naac:'Accredited',nirf:'Top Science Research',affil:'IACS — autonomous research institute (DST)',website:'iacs.res.in',
+  streams:['Arts & Science'],
+  specialNote:'One of India\'s oldest research institutes (est. 1876). From 2026, Integrated BS-MS admission is exclusively via IAT.',
+  programGroups:[
+    {stream:'Arts & Science',programs:[
+      {name:'5-year Integrated BS-MS (Physics, Chemistry, Biological Science, Mathematics & Computer Science) — 80 seats',exam:'IISER IAT',examCss:'ce-own'},
     ]},
   ]},
 

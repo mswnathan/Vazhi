@@ -40,8 +40,11 @@ const COLLEGES_NE=[
 {name:'IIM Shillong',short:'IIMSHIL',type:'Central',district:'East Khasi Hills',state:'Meghalaya',
   naac:'Accredited',nirf:'Top Management',affil:'Indian Institute of Management Shillong (Institute of National Importance)',website:'iimshillong.ac.in',
   streams:['Management'],
-  specialNote:'India\'s first "green" IIM campus (est. 2008). Set amid rolling hills. PGP (MBA) is post-UG, but noted here for Class 12 students planning ahead. Strong focus on sustainability and tribal entrepreneurship.',
+  specialNote:'India\'s first "green" IIM campus (est. 2008). Offers a 5-year Integrated Programme in Management (IPM) via IPMAT Indore — direct UG entry after Class 12 (Maths required in Class 11 & 12).',
   programGroups:[
+    {stream:'Management',programs:[
+      {name:'IPM — Integrated Programme in Management (5-year, after Class 12)',exam:'IPMAT Indore',examCss:'ce-own'},
+    ]},
     {stream:'Management (Post-UG)',programs:[
       {name:'PGP (MBA equivalent) — 2 years',exam:'CAT',examCss:'ce-own'},
     ]},
@@ -228,6 +231,47 @@ const COLLEGES_NE=[
       {name:'B.Sc Nursing (4 years)',exam:'NEET UG / State Merit',examCss:'ce-neet'},
       {name:'B.Sc (Medical Lab Technology, Radiography, OT Technology)',exam:'State Merit',examCss:'ce-merit'},
       {name:'Diploma in Pharmacy (D.Pharm)',exam:'State Merit',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'National Law University Tripura (NLUT)',short:'NLUT',type:'Central',district:'Agartala',state:'Tripura',
+  naac:'Accredited',nirf:'National Law University',affil:'National Law University (Tripura)',website:'nlutripura.ac.in',
+  streams:['Law'],
+  programGroups:[
+    {stream:'Law',programs:[
+      {name:'B.A LL.B (Hons) — 5-year integrated',exam:'CLAT',examCss:'ce-clat'},
+    ]},
+  ]},
+
+{name:'National Law University Meghalaya (NLUM)',short:'NLU Meghalaya',type:'Central',district:'Shillong',state:'Meghalaya',
+  naac:'Accredited',nirf:'National Law University',affil:'National Law University (Meghalaya)',website:'nlumeg.ac.in',
+  streams:['Law'],
+  programGroups:[
+    {stream:'Law',programs:[
+      {name:'B.A LL.B (Hons) — 5-year integrated',exam:'NLU Meghalaya UAT (own test)',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'NIFT Shillong',short:'NIFT-SHI',type:'Central',district:'Shillong',state:'Meghalaya',
+  naac:'Accredited',nirf:'Top Design',affil:'National Institute of Fashion Technology (Ministry of Textiles)',website:'nift.ac.in/shillong',
+  streams:['Design'],
+  programGroups:[
+    {stream:'Design',programs:[
+      {name:'B.Des (Fashion, Textile, Accessory, Communication, Leather)',exam:'NIFT Entrance',examCss:'ce-own'},
+      {name:'B.F.Tech (Apparel Production)',exam:'NIFT Entrance',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'National Forensic Sciences University — Tripura Campus',short:'NFSU Tripura',type:'Central',district:'Agartala',state:'Tripura',
+  naac:'Accredited',nirf:'Top Forensic Sciences',affil:'National Forensic Sciences University (Institute of National Importance — MHA)',website:'nfsu.ac.in',
+  streams:['Engineering','Arts & Science'],
+  specialNote:'NFSU\'s own entrance test (NFAT/FACT) is discontinued — every programme now admits via a national exam. Fee concession available for Tripura-domicile students.',
+  programGroups:[
+    {stream:'Forensic & Security Sciences',programs:[
+      {name:'B.Sc.–M.Sc. Forensic Science — 5-year integrated',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech–M.Tech Computer Science & Engineering (Cyber Security) — 5-year integrated',exam:'JEE Main',examCss:'ce-jee'},
     ]},
   ]},
 

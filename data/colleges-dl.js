@@ -270,4 +270,24 @@ const COLLEGES_DL=[
     ]},
   ]},
 
+{name:'National Forensic Sciences University — Delhi Campus',short:'NFSU Delhi',type:'Central',district:'Delhi',state:'Delhi',
+  naac:'Accredited',nirf:'Top Forensic Sciences',affil:'National Forensic Sciences University (Institute of National Importance — MHA)',website:'nfsu.ac.in',
+  streams:['Engineering','Arts & Science','Law','Management'],
+  specialNote:'NFSU\'s own entrance test (NFAT/FACT) is discontinued — every programme now admits via a national exam. Strategic location near Supreme Court & major law firms benefits the law programme.',
+  programGroups:[
+    {stream:'Forensic & Security Sciences',programs:[
+      {name:'B.Sc. Criminology and Forensic Science — 3 years',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.Sc.–M.Sc. Forensic Science — 5-year integrated',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech–M.Tech Computer Science & Engineering (Cyber Security) — 5-year integrated',exam:'JEE Main',examCss:'ce-jee'},
+    ]},
+    {stream:'Law',programs:[
+      {name:'BBA–LL.B. (Hons.) — 5-year integrated',exam:'CLAT',examCss:'ce-clat'},
+    ]},
+    {stream:'Management',programs:[
+      {name:'BBA–MBA (Five Year Integrated)',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+  ]},
+
 ];
