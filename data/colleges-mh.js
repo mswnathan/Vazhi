@@ -56,6 +56,18 @@ const COLLEGES_MH=[
   programGroups:[
     {stream:'Arts & Science',programs:[
       {name:'B.A (Social Work, Development Studies, Media & Cultural Studies)',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.Sc Analytics and Sustainability Studies (4 years)',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+  ]},
+
+{name:'TISS Tuljapur',short:'TISS Tuljapur',type:'Central',district:'Osmanabad (Dharashiv)',state:'Maharashtra',
+  naac:'A++',nirf:'',affil:'Tata Institute of Social Sciences (Deemed — Central Govt), off-campus',website:'tiss.ac.in',
+  streams:['Arts & Science'],
+  specialNote:'Rural off-campus of TISS Mumbai, focused on rural social work and development. Merit-only via CUET UG. Subsidised fees.',
+  programGroups:[
+    {stream:'Arts & Science',programs:[
+      {name:'B.A Social Sciences (4 years)',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.S.W — Bachelor of Social Work (4 years)',exam:'CUET UG',examCss:'ce-cuet'},
     ]},
   ]},
 
@@ -72,10 +84,10 @@ const COLLEGES_MH=[
 {name:'IIM Mumbai',short:'IIMMUM',type:'Central',district:'Mumbai',state:'Maharashtra',
   naac:'A++',nirf:'Top 10 Management',affil:'Indian Institute of Management Mumbai (formerly NITIE) — Institute of National Importance',website:'iimmumbai.ac.in',
   streams:['Management','Engineering'],
-  specialNote:'Renamed from NITIE Mumbai in 2023. India\'s only IIM with deep roots in industrial engineering and operations research. IPM (5-year after Class 12) available. MBA via CAT; M.Tech via GATE.',
+  specialNote:'Renamed from NITIE Mumbai in 2023. India\'s only IIM with deep roots in industrial engineering and operations research. Launched its first-ever UG program (BS in Digital Science and Business Management) for 2026 — admitted via JEE Main, not IPMAT. MBA via CAT; M.Tech via GATE.',
   programGroups:[
     {stream:'Management',programs:[
-      {name:'IPM — Integrated Programme in Management (5-year, after Class 12)',exam:'IPMAT / IIM Mumbai Entrance',examCss:'ce-own'},
+      {name:'BS in Digital Science and Business Management (4 years)',exam:'JEE Main',examCss:'ce-jee'},
       {name:'MBA (Industrial Management / Operations) — 2 years',exam:'CAT',examCss:'ce-cat'},
     ]},
     {stream:'Engineering & Technology (PG)',programs:[
@@ -241,6 +253,16 @@ const COLLEGES_MH=[
   programGroups:[
     {stream:'Arts & Science',programs:[
       {name:'Integrated M.Sc (Physics, Chemistry, Biology, Mathematics) — 5-year',exam:'NEST',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'Institute of Hotel Management, Catering Technology & Applied Nutrition, Mumbai',short:'IHM Mumbai',type:'Central',district:'Mumbai',state:'Maharashtra',
+  naac:'Accredited',nirf:'Central IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT) — Ministry of Tourism',website:'ihmctan.edu',
+  streams:['Management'],
+  specialNote:'Oldest hotel management school in South-East Asia (est. 1954).',
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
     ]},
   ]},
 

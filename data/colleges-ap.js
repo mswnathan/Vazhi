@@ -226,4 +226,17 @@ const COLLEGES_AP=[
     ]},
   ]},
 
+{name:'Indian Maritime University — Visakhapatnam Campus',short:'IMU Vizag',type:'Central',district:'Visakhapatnam',state:'Andhra Pradesh',
+  naac:'',nirf:'',affil:'Indian Maritime University (Central)',website:'imuv.edu.in',
+  streams:['Engineering','Management'],
+  specialNote:'One of 6 IMU campuses. B.E./B.Tech Naval Architecture & Ocean Engineering (via IMU CET) and BBA (via CUET UG / Class 12 merit) — 80 total UG seats.',
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.E./B.Tech Naval Architecture & Ocean Engineering (4 years)',exam:'IMU CET',examCss:'ce-own'},
+    ]},
+    {stream:'Management',programs:[
+      {name:'BBA — Logistics, Retailing & E-Commerce (3 years)',exam:'Merit (Class 12 marks) / CUET UG',examCss:'ce-merit'},
+    ]},
+  ]},
+
 ];

@@ -52,7 +52,8 @@ const EXAM_GROUPS=[
   {name:'IMU CET',full:'Indian Maritime University Common Entrance Test',body:'Indian Maritime University',level:'National',freq:'Once a year (May)',subjects:['PCM','PCM+CS'],for:'B.Tech Marine Engg, B.Sc Nautical Science, B.Sc Ship Building & other maritime programs.',website:'imu.edu.in',note:'PCM mandatory. Physical & medical fitness required. International career at sea. All maritime programs are DGS (Director General of Shipping) approved — this approval is mandatory for a career as a seafarer under Indian maritime law.',seats:'~2,000 total',institutes:[
     {name:'IMU Chennai',city:'Chennai, TN',tier:'🏆 Flagship Campus'},
     {name:'IMU Kolkata',city:'Kolkata, WB',tier:'⭐ Top Campus'},
-    {name:'IMU Mumbai',city:'Mumbai, MH',tier:'⭐ Top Campus'},
+    {name:'IMU Mumbai (Port Campus)',city:'Mumbai, MH',tier:'⭐ Top Campus'},
+    {name:'IMU Navi Mumbai (formerly T.S. Chanakya)',city:'Navi Mumbai, MH',tier:'✓ Good Campus'},
     {name:'IMU Kochi',city:'Kochi, KL',tier:'⭐ Top Campus'},
     {name:'IMU Visakhapatnam',city:'Vizag, AP',tier:'✓ Good Campus'},
   ]},
@@ -92,7 +93,7 @@ const EXAM_GROUPS=[
     {name:'FDDI Chennai',city:'Chennai, TN',tier:'⭐ Top FDDI'},
     {name:'FDDI Kolkata, Chhindwara, Fulapur, Rohtak + others',city:'Pan India',tier:'✓ FDDI Network'},
   ]},
-  {name:'JNAFAU Entrance',full:'Jawaharlal Nehru Architecture & Fine Arts University Entrance (FADEE)',body:'JNAFAU Hyderabad',level:'State',freq:'Once a year',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'B.F.A (Fine Arts) admission via the FADEE entrance conducted by JNAFAU; B.Arch via NATA/JEE + TS EAMCET counselling. Telangana state university for architecture, design & fine arts.',website:'jnafau.ac.in',note:'B.Arch needs Class 12 with Maths + NATA/JEE. B.F.A (painting, sculpture, applied art, animation) is via the FADEE entrance. Highly subsidised state-govt fees.',seats:'~500 across B.Arch, B.Des & B.F.A',institutes:[
+  {name:'JNAFAU Entrance',full:'Jawaharlal Nehru Architecture & Fine Arts University Entrance (FADEE)',body:'JNAFAU Hyderabad',level:'State',freq:'Once a year',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'B.F.A (Fine Arts) admission via the FADEE entrance conducted by JNAFAU; B.Arch via NATA/JEE + TG EAPCET counselling. Telangana state university for architecture, design & fine arts.',website:'jnafau.ac.in',note:'B.Arch needs Class 12 with Maths + NATA/JEE. B.F.A (painting, sculpture, applied art, animation) is via the FADEE entrance. Highly subsidised state-govt fees.',seats:'~500 across B.Arch, B.Des & B.F.A',institutes:[
     {name:'JNAFAU School of Planning & Architecture',city:'Hyderabad, TS',tier:'🏆 State Arch & Fine Arts Univ'},
     {name:'JNAFAU College of Fine Arts',city:'Hyderabad, TS',tier:'⭐ Fine Arts'},
   ]},
@@ -163,7 +164,7 @@ const EXAM_GROUPS=[
     {name:'AU College of Engineering',city:'Visakhapatnam, AP',tier:'⭐ Top Govt AP'},
     {name:'All AP govt & private engg colleges',city:'Andhra Pradesh',tier:'✓ Wide access'},
   ]},
-  {name:'TS EAMCET',full:'Telangana State EAMCET',body:'JNTU Hyderabad',level:'State',freq:'Once a year (May)',subjects:['PCM','PCM+CS','PCMB'],for:'Engineering, agriculture & medicine in Telangana.',website:'eamcet.tsche.ac.in',note:'',seats:'~1.2 lakh+',institutes:[
+  {name:'TG EAPCET',full:'Telangana Engineering, Agriculture & Pharmacy Common Entrance Test',body:'JNTU Hyderabad (on behalf of TGCHE)',level:'State',freq:'Once a year (May)',subjects:['PCM','PCM+CS','PCMB'],for:'Engineering, agriculture & pharmacy colleges in Telangana.',website:'eapcet.tgche.ac.in',note:'Renamed from TS EAMCET — first to TS EAPCET (2024-25, dropped Medicine since NEET now covers it, added Pharmacy), then to TG EAPCET as the state prefix changed from TS to TG.',seats:'~1.2 lakh+',institutes:[
     {name:'Osmania University',city:'Hyderabad, TS',tier:'⭐ Top Govt TS'},
     {name:'JNTU Hyderabad',city:'Hyderabad, TS',tier:'⭐ Top Govt TS'},
     {name:'All TS govt & aided engg colleges',city:'Telangana',tier:'✓ Wide access'},
@@ -224,7 +225,7 @@ const EXAM_GROUPS=[
   ]},
 ]},
 {id:'University',label:'Central & State University Admissions',ico:'🏛️',color:'#1A4DD6',bg:'#EEF2FF',exams:[
-  {name:'CUET UG',full:'Common University Entrance Test (Undergraduate)',body:'NTA',level:'National',freq:'Once a year (May–Jun)',subjects:['PCM','PCB','PCMB','Commerce','Arts','Any'],for:'Class 12 students seeking admission to UG programs (BA, B.Sc, B.Com, B.Voc, B.Tech) at Central Universities and participating state universities across India.',website:'cuet.nta.nic.in',explainer:'<strong>Do you need CUET?</strong> Take CUET if you want a UG seat at a Central University — Delhi University, JNU, BHU, Hyderabad Central, or Pondicherry University (the nearest one for TN &amp; Puducherry students). You do <strong>not</strong> need CUET for Tamil Nadu government colleges — those admit on Class 12 marks (Arts &amp; Science) or TNEA rank (Engineering). Commerce &amp; Arts students: CUET is your main route to top central universities for B.Com, BA Economics and similar degrees.',note:'Replaced individual university entrance tests for DU, JNU, BHU, Hyderabad Central, Pondicherry Central, AMU and 40+ others. Score valid for one year. Any stream eligible depending on domain subjects chosen.',seats:'~1 lakh+ seats across 250+ universities',institutes:[
+  {name:'CUET UG',full:'Common University Entrance Test (Undergraduate)',body:'NTA',level:'National',freq:'Once a year (May–Jun)',subjects:['PCM','PCB','PCMB','Commerce','Arts','Any'],for:'Class 12 students seeking admission to UG programs (BA, B.Sc, B.Com, B.Voc, B.Tech) at Central Universities and participating state universities across India.',website:'cuet.nta.nic.in',explainer:'<strong>Do you need CUET?</strong> Take CUET if you want a UG seat at a Central University — Delhi University, JNU, BHU, Hyderabad Central, or Pondicherry University (the nearest one for TN &amp; Puducherry students). You do <strong>not</strong> need CUET for Tamil Nadu government colleges — those admit on Class 12 marks (Arts &amp; Science) or TNEA rank (Engineering). Commerce &amp; Arts students: CUET is your main route to top central universities for B.Com, BA Economics and similar degrees. <strong>After results:</strong> a good CUET score alone does not confirm a seat — most universities require a separate counselling registration on their own portal (often a Samarth site) before a results deadline, or the seat is forfeited.',note:'Replaced individual university entrance tests for DU, JNU, BHU, Hyderabad Central, Pondicherry Central, AMU and 40+ others. Score valid for one year. Any stream eligible depending on domain subjects chosen.',seats:'~1 lakh+ seats across 250+ universities',institutes:[
     {name:'Delhi University (DU)',city:'New Delhi',tier:'🏆 Premier Central Univ'},
     {name:'JNU',city:'New Delhi',tier:'🏆 Premier Central Univ'},
     {name:'BHU (Banaras Hindu University)',city:'Varanasi, UP',tier:'🏆 Premier Central Univ'},
@@ -233,14 +234,17 @@ const EXAM_GROUPS=[
     {name:'AMU (Aligarh Muslim University)',city:'Aligarh, UP',tier:'⭐ Central Univ'},
     {name:'EFLU, TISS, Jamia Millia, NIT Arunachal + 240 more',city:'Pan India',tier:'✓ 250+ Participating Universities'},
   ]},
-  {name:'TISS BAT',full:'Tata Institute of Social Sciences Bachelors Admission Test',body:'TISS',level:'Institute',freq:'Once a year (Jan–Feb)',subjects:['Any'],for:'Class 12 students seeking BA programs in Social Work, Development Studies, Education, and Applied Psychology at TISS.',website:'tiss.edu',note:'Centrally funded deemed university with subsidised fees. Highly competitive — tests general awareness, English & analytical reasoning. One of India\'s most prestigious social science institutions.',seats:'~300 seats across campuses',institutes:[
+  {name:'TISS BAT',full:'Tata Institute of Social Sciences Bachelors Admission Test',body:'TISS',level:'Institute',freq:'Once a year (May–Jul, after CUET-UG)',subjects:['Any'],for:'Class 12 students (any stream) seeking BA Social Sciences (Tuljapur & Guwahati), Bachelor of Social Work (Mumbai & Tuljapur), B.Sc Analytics & Sustainability Studies (Mumbai), or BA Public Policy (Hyderabad) at TISS.',website:'admissions.tiss.ac.in',note:'Two-stage process — CUET-UG (English Language + General Test) is now the mandatory first gate; TISS no longer runs its own written screening for the initial cut. Shortlisted candidates then go through TISS-BAT / Group Discussion / Personal Interview, format varies by programme. Centrally funded deemed university, subsidised fees, ~30,000 applicants for ~240 seats.',seats:'~240 UG seats across campuses',institutes:[
     {name:'TISS Mumbai (Main Campus)',city:'Mumbai, MH',tier:'🏆 Premier Deemed Univ'},
     {name:'TISS Hyderabad Off-Campus',city:'Hyderabad, TS',tier:'⭐ Off-Campus Centre'},
     {name:'TISS Guwahati Off-Campus',city:'Guwahati, AS',tier:'⭐ Off-Campus Centre'},
     {name:'TISS Tuljapur Off-Campus',city:'Osmanabad, MH',tier:'⭐ Off-Campus Centre'},
   ]},
-  {name:'PUCET UG',full:'Pondicherry University Common Entrance Test (UG)',body:'Pondicherry University',level:'State',freq:'Once a year (Jun)',subjects:['PCM','PCB','Commerce','Arts','Any'],for:'Class 12 students seeking admission to B.Sc, BA, B.Com, BCA and integrated programs at Pondicherry University.',website:'pondiuni.edu.in',note:'Central University in Puducherry — directly relevant for TN/PY students. Also accepts CUET scores for some programs. Covers sciences, humanities, commerce, and computer applications.',seats:'~2,000 UG seats',institutes:[
-    {name:'Pondicherry University',city:'Puducherry',tier:'🏆 Central Univ (in PY scope)'},
+  {name:'TNGASA',full:'Tamil Nadu Government Arts and Science Colleges Admission',body:'Directorate of Collegiate Education (DCE), Govt of Tamil Nadu',level:'State',freq:'Once a year (Jun–Jul)',subjects:['PCM','PCB','PCMB','Commerce','Arts','Any'],for:'Class 12 students seeking admission to UG programs (BA, B.Sc, B.Com, BCA and more) at Government Arts & Science Colleges across Tamil Nadu.',website:'tngasa.in',note:'No written entrance test — centralised online counselling on Class 12 aggregate marks, run through the TNGASA portal (Admission Facilitation Centres available at every college). Same body also runs PG admissions on a separate cycle.',seats:'~1.27 lakh seats across 181 govt colleges',institutes:[
+    {name:'Presidency College (Autonomous), Chennai',city:'Chennai, TN',tier:'🏆 Premier Govt Arts College'},
+    {name:'Queen Mary\'s College (Autonomous), Chennai',city:'Chennai, TN',tier:'⭐ Excellent'},
+    {name:'Government Arts College (Autonomous), Coimbatore',city:'Coimbatore, TN',tier:'⭐ Excellent'},
+    {name:'Government Arts Colleges — Salem, Trichy, Vellore + 177 more',city:'Tamil Nadu',tier:'✓ TNGASA Network'},
   ]},
   {name:'AMU Entrance',full:'Aligarh Muslim University Entrance Test (AMUEEE)',body:'Aligarh Muslim University',level:'Institute',freq:'Once a year (Apr–May)',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'UG programs (BA, B.Sc, B.Com, B.Tech, B.Arch and more) at Aligarh Muslim University, a Central University. AMU conducts its own entrance test for most courses; only a few UG programs admit via CUET.',website:'amu.ac.in',note:'Central University with its own admission test (AMUEEE), distinct from CUET. Highly subsidised central-govt fees; internal AMU-school students get reservation in some seats.',seats:'~5,000+ UG seats',institutes:[
     {name:'Aligarh Muslim University (Main Campus)',city:'Aligarh, UP',tier:'🏆 Premier Central Univ'},
@@ -268,7 +272,7 @@ const EXAM_GROUPS=[
   ]},
 ]},
 {id:'Hotel',label:'Hotel Management & Hospitality',ico:'🏨',color:'#855100',bg:'#FFF5E0',exams:[
-  {name:'NCHM JEE',full:'National Council for Hotel Management Joint Entrance Exam',body:'NTA',level:'National',freq:'Once a year (Apr)',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'B.Sc Hospitality & Hotel Administration at 21 Central IHMs. Any stream eligible.',website:'nchmct.org',note:'No stream restriction. Tests numerical ability, reasoning, English, GK.',seats:'~7,000 (all IHMs)',institutes:[
+  {name:'NCHM JEE',full:'National Council for Hotel Management Joint Entrance Exam',body:'NTA',level:'National',freq:'Once a year (Apr)',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'B.Sc Hospitality & Hotel Administration at 21 Central IHMs. Any stream eligible.',website:'nchmct.org',note:'No stream restriction. Tests numerical ability, reasoning, English, GK. After the main JEE counselling, NCHMCT runs multiple rounds of OET (Online Entrance Test) — a separate, mobile-friendly spot-admission mechanism to fill residual vacancy seats for candidates without a JEE rank or who missed the main exam. OET rounds are published on nchmcounselling.nic.in through the year.',seats:'~7,000 (all IHMs)',institutes:[
     {name:'IHM Pusa New Delhi',city:'New Delhi',tier:'🏆 #1 IHM'},
     {name:'IHM Mumbai',city:'Mumbai, MH',tier:'🏆 Top IHM'},
     {name:'IHM Bengaluru',city:'Bengaluru, KA',tier:'🏆 Top IHM'},
@@ -370,7 +374,7 @@ const EXAM_GROUPS=[
     {name:'Govt pharmacy colleges in AP, TS, KA',city:'Various',tier:'✓ State Govt Pharmacy'},
     {name:'Private pharmacy colleges using NEET',city:'Pan India',tier:'✓ Many private colleges'},
   ]},
-  {name:'State CETs for B.Pharm',full:'State-level B.Pharm entrance tests',body:'Various State Boards',level:'State',freq:'Once a year (Apr–Jun)',subjects:['PCB','PCMB','PCM','PCM+CS'],for:'B.Pharm at govt & private pharmacy colleges in each state. MHT CET (MH), KCET (KA), WBJEE (WB), KEAM (KL), AP EAPCET (AP), TS EAMCET (TS) — all have a Pharmacy paper.',website:'State exam websites',note:'Tamil Nadu: B.Pharm admission via TNEA counselling using Class 12 PCB/PCM marks. No separate pharmacy entrance in TN.',seats:'Varies',institutes:[
+  {name:'State CETs for B.Pharm',full:'State-level B.Pharm entrance tests',body:'Various State Boards',level:'State',freq:'Once a year (Apr–Jun)',subjects:['PCB','PCMB','PCM','PCM+CS'],for:'B.Pharm at govt & private pharmacy colleges in each state. MHT CET (MH), KCET (KA), WBJEE (WB), KEAM (KL), AP EAPCET (AP), TG EAPCET (TS) — all have a Pharmacy paper.',website:'State exam websites',note:'Tamil Nadu: B.Pharm admission via TNEA counselling using Class 12 PCB/PCM marks. No separate pharmacy entrance in TN.',seats:'Varies',institutes:[
     {name:'Govt College of Pharmacy Chennai',city:'Chennai, TN',tier:'🏆 Top Govt Pharmacy TN'},
     {name:'PSG College of Pharmacy',city:'Coimbatore, TN',tier:'⭐ Top Private Pharmacy TN'},
     {name:'Govt & private pharmacy colleges — state-wise',city:'Pan India',tier:'✓ Via state CET'},
@@ -412,9 +416,6 @@ const EXAM_GROUPS=[
     {name:'Central Ground Water Board (CGWB)',city:'New Delhi + Regional',tier:'⭐ Central Govt'},
     {name:'Ministry of Mines — Technical Cadre',city:'New Delhi',tier:'⭐ Central Govt'},
   ]},
-  {name:'KVPY',full:'Kishore Vaigyanik Protsahan Yojana',body:'DST / IISc',level:'National',freq:'Discontinued after 2021–22',subjects:['PCM','PCM+CS','PCB','PCMB'],for:'Was: Scholarship + direct IISc B.Sc Research entry via SX stream. Now discontinued.',website:'kvpy.iisc.ac.in',note:'KVPY has been discontinued. IISER admissions now use IAT or JEE Advanced only. IISc B.Sc Research uses JEE Advanced. The INSPIRE Scholarship (DST) continues separately for science students.',seats:'Discontinued',institutes:[
-    {name:'IISc Bengaluru (B.Sc Research)',city:'Bengaluru, KA',tier:'🏆 India\'s Top Research Univ'},
-  ]},
 ]},
 {id:'Sports',label:'Sports & Physical Education',ico:'🏅',color:'#BC2D12',bg:'#FFEDE8',exams:[
   {name:'LNIPE Entrance',full:'Lakshmibai National Institute of Physical Education Entrance',body:'LNIPE',level:'Institute',freq:'Once a year',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'B.P.Ed & B.Sc Health & Physical Education at LNIPE Gwalior & Guwahati.',website:'lnipe.edu.in',note:'Physical fitness test + written. Sports achievement given weightage.',seats:'~400',institutes:[
@@ -442,11 +443,17 @@ const EXAM_GROUPS=[
   {name:'NCET',full:'National Common Entrance Test',body:'NTA',level:'National',freq:'Once a year',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'4-year Integrated Teacher Education Programme (ITEP) at selected Central/State Universities, IITs, NITs, RIEs and Govt colleges. Replaces the old 2-year B.Ed after graduation.',website:'ncet.samarth.ac.in',note:'ITEP is a game-changer — students become school teachers with a 4-year integrated UG+teaching qualification directly after Class 12, instead of the old route of UG+2yr B.Ed.',seats:'~7,000 across participating institutes',institutes:[
     {name:'Central Universities — CUTN, BHU, JNU, Hyderabad',city:'Pan India',tier:'✓ Central University ITEP'},
     {name:'RIEs — Regional Institutes of Education (Mysore, Bhopal, Bhubaneswar, Ajmer, Shillong)',city:'Pan India',tier:'🏆 Premier Teacher Ed'},
-    {name:'Selected NITs and State Govt colleges',city:'Pan India',tier:'✓ Via NCET'},
+    {name:'NIT Tiruchirappalli (B.Sc B.Ed)',city:'Trichy, TN',tier:'🏆 Top NIT ITEP'},
+    {name:'Gandhigram Rural Institute (B.Sc B.Ed)',city:'Dindigul, TN',tier:'⭐ Deemed Univ ITEP'},
+    {name:'Avinashilingam University (B.Sc/B.A B.Ed)',city:'Coimbatore, TN',tier:'⭐ Deemed Univ ITEP (Women)'},
+    {name:'223 participating institutes nationwide',city:'Pan India',tier:'✓ Via NCET'},
   ]},
-  {name:'TN B.Ed Entrance',full:'Tamil Nadu B.Ed Entrance (State Level)',body:'TNTEU (Tamil Nadu Teachers Education University)',level:'State',freq:'Once a year',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'2-year B.Ed at government & private teacher education colleges in Tamil Nadu. For graduates who want to become school teachers.',website:'tnteu.ac.in',note:'This is a PG-level entry (after graduation). Listed for awareness since many students plan their UG with teaching career in mind.',seats:'~25,000+ in TN',institutes:[
-    {name:'Govt College of Education, Dharmapuri, Vellore, Coimbatore',city:'Tamil Nadu',tier:'⭐ Govt Teacher Ed'},
-    {name:'Private B.Ed colleges in TN',city:'Tamil Nadu',tier:'✓ Wide access'},
+  {name:'TN B.Ed Entrance',full:'Tamil Nadu B.Ed Entrance (State Level)',body:'TNTEU (Tamil Nadu Teachers Education University)',level:'State',freq:'Once a year',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'2-year B.Ed at government & private teacher education colleges in Tamil Nadu. For graduates who want to become school teachers.',website:'tnteu.ac.in',note:'This is a PG-level entry (after graduation). Listed for awareness since many students plan their UG with teaching career in mind. Only 5 Government-run Colleges of Education exist in TN — most B.Ed seats are at Government-Aided or self-financing colleges. Centralised online counselling for Govt & Govt-Aided seats runs via bed.tngasa.in (a TNGASA/DCE subdomain), separate from the regular TNGASA UG/PG portal.',seats:'~25,000+ in TN',institutes:[
+    {name:'Institute of Advanced Study in Education, Chennai',city:'Chennai, TN',tier:'🏆 Govt Teacher Ed (Men)'},
+    {name:'Lady Willingdon IASE, Chennai',city:'Chennai, TN',tier:'🏆 Govt Teacher Ed (Women)'},
+    {name:'Government College of Education for Women, Coimbatore',city:'Coimbatore, TN',tier:'⭐ Govt Teacher Ed'},
+    {name:'Government College of Education, Pudukkottai / Komarapalayam',city:'Tamil Nadu',tier:'⭐ Govt Teacher Ed'},
+    {name:'Government-Aided & self-financing B.Ed colleges',city:'Tamil Nadu',tier:'✓ Wide access via bed.tngasa.in'},
   ]},
 ]},
 ];

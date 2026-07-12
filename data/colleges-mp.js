@@ -192,4 +192,34 @@ const COLLEGES_MP=[
     ]},
   ]},
 
+{name:'Regional Institute of Education, Bhopal (NCERT)',short:'RIE Bhopal',type:'Central',district:'Bhopal',state:'Madhya Pradesh',
+  naac:'',nirf:'',affil:'NCERT — Ministry of Education, Govt of India',website:'riebhopal.ncert.gov.in',
+  streams:['Education'],
+  specialNote:'One of 5 NCERT Regional Institutes of Education nationwide. 150 total ITEP seats. Admission via NCET percentile.',
+  programGroups:[
+    {stream:'Education',programs:[
+      {name:'B.Sc B.Ed — ITEP (dual major: Education + Physics/Chemistry/Maths/Zoology/Botany, 4 years)',exam:'NCET',examCss:'ce-ncet'},
+      {name:'B.A B.Ed — ITEP (dual major: Education + English/Hindi/Gujarati/Marathi/Urdu/History/Political Science/Geography/Economics, 4 years)',exam:'NCET',examCss:'ce-ncet'},
+    ]},
+  ]},
+
+{name:'Institute of Hotel Management, Bhopal',short:'IHM Bhopal',type:'Central',district:'Bhopal',state:'Madhya Pradesh',
+  naac:'Accredited',nirf:'Central IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT) — Ministry of Tourism',website:'ihmbhopal.ac.in',
+  streams:['Management'],
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
+{name:'Institute of Hotel Management, Gwalior',short:'IHM Gwalior',type:'Central',district:'Gwalior',state:'Madhya Pradesh',
+  naac:'Accredited',nirf:'Central IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT) — Ministry of Tourism',website:'ihmgwalior.org',
+  streams:['Management'],
+  specialNote:'Also offers M.Sc Hospitality Administration and PG Diploma in Accommodation Operations & Management.',
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
 ];

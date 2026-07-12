@@ -191,4 +191,26 @@ const COLLEGES_KL=[
     ]},
   ]},
 
+{name:'Indian Maritime University — Kochi Campus',short:'IMU Kochi',type:'Central',district:'Kochi',state:'Kerala',
+  naac:'',nirf:'',affil:'Indian Maritime University (Central)',website:'imu.edu.in',
+  streams:['Engineering','Management'],
+  specialNote:'One of 6 IMU campuses. BSc Nautical Science / MBA admit via IMU CET; BBA admits via CUET UG or Class 12 merit (IMU CET not compulsory for BBA).',
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Sc Nautical Science (3 years)',exam:'IMU CET',examCss:'ce-own'},
+    ]},
+    {stream:'Management',programs:[
+      {name:'BBA — Logistics, Retailing & E-Commerce (3 years)',exam:'Merit (Class 12 marks) / CUET UG',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Institute of Hotel Management & Catering Technology, Kovalam',short:'IHM Thiruvananthapuram',type:'Central',district:'Thiruvananthapuram',state:'Kerala',
+  naac:'Accredited',nirf:'Central IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT) — Ministry of Tourism',website:'ihmctkovalam.ac.in',
+  streams:['Management'],
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
 ];

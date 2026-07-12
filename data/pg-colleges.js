@@ -1635,4 +1635,143 @@ const PG_COLLEGES = [
     ],
   },
 
+  {
+    name: 'Indian Institute of Mass Communication (IIMC)',
+    short: 'IIMC',
+    type: 'Deemed',
+    district: 'New Delhi',
+    state: 'Delhi',
+    naac: '',
+    nirf: '',
+    affil: 'Deemed-to-be University under Ministry of Information & Broadcasting, Govt of India',
+    website: 'iimc.gov.in',
+    streams: ['Arts & Science'],
+    specialNote: 'India\'s premier govt journalism institute — 6 campuses (New Delhi, Dhenkanal, Aizawl, Amravati, Kottayam, Jammu). English/Hindi/Radio & TV Journalism/Advertising & PR diplomas via CUET-PG; Odia/Marathi/Malayalam/Urdu regional-language diplomas via IIMC\'s own entrance exam.',
+    programGroups: [
+      {
+        stream: 'Journalism & Media (PG Diploma)',
+        programs: [
+          { name: 'PG Diploma in English Journalism (1 year)', exam: 'CUET-PG', examCss: 'ce-cuetpg' },
+          { name: 'PG Diploma in Hindi Journalism (1 year)', exam: 'CUET-PG', examCss: 'ce-cuetpg' },
+          { name: 'PG Diploma in Radio & Television Journalism (1 year)', exam: 'CUET-PG', examCss: 'ce-cuetpg' },
+          { name: 'PG Diploma in Advertising & Public Relations (1 year)', exam: 'CUET-PG', examCss: 'ce-cuetpg' },
+          { name: 'PG Diploma in Journalism — Odia / Marathi / Malayalam / Urdu (1 year, regional campuses)', exam: 'IIMC Entrance Exam', examCss: 'ce-own' },
+        ],
+      },
+    ],
+  },
+
+  {
+    name: 'Sardar Vallabhbhai Patel International School of Textiles and Management',
+    short: 'SVPITM Coimbatore',
+    type: 'Central',
+    district: 'Coimbatore',
+    state: 'Tamil Nadu',
+    naac: 'Accredited',
+    nirf: '#1 Govt B-School Coimbatore (India Today 2024)',
+    affil: 'Autonomous Institute under Ministry of Textiles, Govt of India; in academic collaboration with Central University of Tamil Nadu (CUTN)',
+    website: 'svpistm.ac.in',
+    streams: ['Management'],
+    specialNote: 'Only central-government textile school in South India — 180 total MBA seats across 5 specializations. Admission via CAT/XAT/MAT/TANCET, then SVPISTM\'s own shortlisting (SVPET) + interview.',
+    programGroups: [
+      {
+        stream: 'Management (PG)',
+        programs: [
+          { name: 'MBA — Textile Management (2 years)', exam: 'CAT / XAT / MAT / TANCET', examCss: 'ce-cat' },
+          { name: 'MBA — Apparel Management (2 years)', exam: 'CAT / XAT / MAT / TANCET', examCss: 'ce-cat' },
+          { name: 'MBA — Retail Management (2 years)', exam: 'CAT / XAT / MAT / TANCET', examCss: 'ce-cat' },
+          { name: 'MBA — Technical Textile Management (2 years)', exam: 'CAT / XAT / MAT / TANCET', examCss: 'ce-cat' },
+          { name: 'MBA — Textile Business Analytics (2 years)', exam: 'CAT / XAT / MAT / TANCET', examCss: 'ce-cat' },
+        ],
+      },
+    ],
+  },
+
+  {
+    name: 'Central University of Tamil Nadu (CUTN)',
+    short: 'CUTN',
+    type: 'Central',
+    district: 'Thiruvarur',
+    state: 'Tamil Nadu',
+    naac: 'A+',
+    nirf: '#83 University',
+    affil: 'Central University — UGC Act 2009',
+    website: 'cutn.ac.in',
+    streams: ['Arts & Science', 'Management', 'Law'],
+    specialNote: '27 PG programmes across departments/schools. M.A. Classical Tamil Studies has had a CICT (Central Institute of Classical Tamil)-linked scholarship and spot-admission rounds in some cycles — verify the current cycle\'s exact scholarship amount and admission route (spot vs standard CUET-PG) before relying on it, as this varies cycle to cycle.',
+    programGroups: [
+      {
+        stream: 'Sciences (PG)',
+        programs: [
+          { name: 'M.Sc Chemistry (2 years)', exam: 'CUET-PG', examCss: 'ce-cuetpg' },
+          { name: 'M.Sc Applied Psychology (2 years)', exam: 'CUET-PG', examCss: 'ce-cuetpg' },
+          { name: 'M.Sc Statistics / Applied Mathematics (2 years)', exam: 'CUET-PG', examCss: 'ce-cuetpg' },
+          { name: 'M.Tech Materials Science and Technology (2 years)', exam: 'CUET-PG / GATE', examCss: 'ce-cuetpg' },
+        ],
+      },
+      {
+        stream: 'Arts, Humanities & Commerce (PG)',
+        programs: [
+          { name: 'M.A. Economics (2 years)', exam: 'CUET-PG', examCss: 'ce-cuetpg' },
+          { name: 'M.A. English (2 years)', exam: 'CUET-PG', examCss: 'ce-cuetpg' },
+          { name: 'M.A. History (2 years)', exam: 'CUET-PG', examCss: 'ce-cuetpg' },
+          { name: 'M.A. Classical Tamil Studies (2 years)', exam: 'CUET-PG', examCss: 'ce-cuetpg' },
+          { name: 'M.Com (2 years)', exam: 'CUET-PG', examCss: 'ce-cuetpg' },
+          { name: 'M.S.W — Master of Social Work (2 years)', exam: 'CUET-PG', examCss: 'ce-cuetpg' },
+        ],
+      },
+      {
+        stream: 'Management & Law (PG)',
+        programs: [
+          { name: 'MBA (2 years)', exam: 'CUET-PG', examCss: 'ce-cuetpg' },
+          { name: 'LLM (2 years)', exam: 'CUET-PG', examCss: 'ce-cuetpg' },
+        ],
+      },
+    ],
+  },
+
+  {
+    name: 'The Gandhigram Rural Institute (Deemed)',
+    short: 'Gandhigram',
+    type: 'Deemed',
+    district: 'Dindigul',
+    state: 'Tamil Nadu',
+    naac: 'A+',
+    nirf: 'Top Rural Deemed',
+    affil: 'Deemed University — Ministry of Education (Gandhian institutions)',
+    website: 'ruraluniv.ac.in',
+    streams: ['Arts & Science'],
+    specialNote: 'PG offering distinct from its UG programmes (see UG Colleges tab). M.A. Demography and Development Studies is a rare, near-unique PG programme in India.',
+    programGroups: [
+      {
+        stream: 'Arts & Science (PG)',
+        programs: [
+          { name: 'M.A. Demography and Development Studies (2 years)', exam: 'CUET-PG', examCss: 'ce-cuetpg' },
+        ],
+      },
+    ],
+  },
+
+  {
+    name: 'North-East Regional Institute of Education (NERIE), Shillong',
+    short: 'NERIE Shillong',
+    type: 'Central',
+    district: 'Umiam',
+    state: 'Meghalaya',
+    naac: '',
+    nirf: '',
+    affil: 'NCERT — Ministry of Education, Govt of India',
+    website: 'cee.ncert.gov.in',
+    streams: ['Arts & Science'],
+    specialNote: 'One of 5 NCERT Regional Institutes of Education. Runs the standard 2-year B.Ed (graduate-entry, not the 4-year ITEP offered at the other 4 RIEs) via the Common Entrance Examination (CEE), not NCET. Admission restricted to domicile of Arunachal Pradesh, Assam, Manipur, Meghalaya, Mizoram, Nagaland, Sikkim & Tripura — not open to Tamil Nadu candidates.',
+    programGroups: [
+      {
+        stream: 'Education (PG)',
+        programs: [
+          { name: 'B.Ed (2 years, graduate-entry)', exam: 'CEE (NCERT RIE Common Entrance Exam)', examCss: 'ce-own' },
+        ],
+      },
+    ],
+  },
+
 ];

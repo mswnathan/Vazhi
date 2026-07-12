@@ -206,4 +206,13 @@ const COLLEGES_GJ=[
     ]},
   ]},
 
+{name:'Institute of Hotel Management, Gandhinagar',short:'IHM Gandhinagar',type:'Central',district:'Gandhinagar',state:'Gujarat',
+  naac:'Accredited',nirf:'Central IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT) — Ministry of Tourism',website:'ihmahmedabad.com',
+  streams:['Management'],
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
 ];

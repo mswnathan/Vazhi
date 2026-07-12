@@ -161,6 +161,21 @@ function populateCollegeFilters(){
   }
 }
 
+// Set of every real exam name from EXAM_GROUPS/PG_EXAM_GROUPS, built once and cached.
+// Checked before the generic drop-pattern in normalizeExam() so real exams whose name
+// happens to match "<Word> Entrance/CET/counselling" (NIFT Entrance, MHT CET, HP CET…)
+// aren't mistaken for placeholder text and dropped.
+// A plain hoisted function (not const/let) so it's safe to call from populateExamFilter(),
+// which runs at the top of this file before this declaration's line position.
+function getExamNameSet(){
+  if(getExamNameSet._cache) return getExamNameSet._cache;
+  var s=new Set();
+  (typeof EXAM_GROUPS!=='undefined'?EXAM_GROUPS:[]).forEach(g=>g.exams.forEach(e=>s.add(e.name)));
+  (typeof PG_EXAM_GROUPS!=='undefined'?PG_EXAM_GROUPS:[]).forEach(g=>g.exams.forEach(e=>s.add(e.name)));
+  getExamNameSet._cache=s;
+  return s;
+}
+
 // Normalize one raw exam fragment to a canonical label, or null to drop it.
 // Strips parenthetical qualifiers, "+ X" suffixes, em-dash trailing clauses,
 // normalizes CUET-UG/NEET-UG hyphenation, and drops bare "<state-or-word> Merit/Entrance/CET/counselling" fragments.
@@ -174,6 +189,7 @@ function normalizeExam(raw){
      .replace(/\bNEET-PG\b/gi,'NEET PG');
   t=t.replace(/\s+/g,' ').trim();
   if(!t) return null;
+  if(getExamNameSet().has(t)) return t;
   if(/^[A-Za-z]+\s+(Merit|Entrance|CET|counselling|counseling)$/i.test(t)) return null;
   if(/^(Entrance|Entrance Test|Audition|Interview|Test)$/i.test(t)) return null;
   if(/^Merit$/i.test(t)) return 'Merit (Class 12)';

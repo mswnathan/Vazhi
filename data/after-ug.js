@@ -102,6 +102,24 @@ const AFTER_UG = [
   },
 
   {
+    id: 'llb-3yr',
+    name: 'LL.B. (3-Year Degree)',
+    category: 'Higher Education',
+    field: 'Law',
+    duration: '3 years',
+    ugFor: ['Any'],
+    exams: ['University merit (graduation marks)'],
+    examNote: 'Graduate-entry route — needs a completed Bachelor\'s degree in any discipline. No entrance exam at TNDALU/SOEL and its ~15 affiliated Govt Law Colleges; admission by merit on graduation marks. Distinct from the 5-year integrated BA/BBA/BCA LL.B programs (see the UG Colleges tab), which admit directly after Class 12.',
+    institutes: 'School of Excellence in Law (SOEL), Chennai + TNDALU-affiliated Govt Law Colleges (Tamil Nadu); similar 3-year LLB routes exist at most state law universities',
+    careers: 'Advocate, Judicial Service (after Judiciary exam), Legal Advisor, Corporate Counsel',
+    salary: '₹4–20 LPA',
+    market: 'Stable',
+    badge: 'Graduate entry',
+    bc: 'purple',
+    note: 'A common second-degree route for Commerce/Science/Arts graduates wanting to practice law without redoing an integrated 5-year program.',
+  },
+
+  {
     id: 'llm',
     name: 'LLM (Master of Laws)',
     category: 'Higher Education',

@@ -124,4 +124,13 @@ const COLLEGES_HP=[
     ]},
   ]},
 
+{name:'Institute of Hotel Management, Catering & Nutrition, Shimla',short:'IHM Shimla',type:'Central',district:'Shimla',state:'Himachal Pradesh',
+  naac:'A',nirf:'Central IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT) — Ministry of Tourism',website:'ihmshimla.ac.in',
+  streams:['Management'],
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
 ];

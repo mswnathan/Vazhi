@@ -121,6 +121,17 @@ const COLLEGES_RJ=[
   ]},
 
 
+{name:'Regional Institute of Education, Ajmer (NCERT)',short:'RIE Ajmer',type:'Central',district:'Ajmer',state:'Rajasthan',
+  naac:'',nirf:'',affil:'NCERT — Ministry of Education, Govt of India',website:'rieajmer.raj.nic.in',
+  streams:['Education'],
+  specialNote:'One of 5 NCERT Regional Institutes of Education nationwide. Admission via NCET; seat allocation based solely on NCET percentile.',
+  programGroups:[
+    {stream:'Education',programs:[
+      {name:'B.Sc B.Ed — ITEP (Physical Science: Physics/Chemistry/Maths; Biological Science: Botany/Zoology/Chemistry, 4 years)',exam:'NCET',examCss:'ce-ncet'},
+      {name:'B.A B.Ed — ITEP (Geography/History/English/Hindi/Urdu, 4 years)',exam:'NCET',examCss:'ce-ncet'},
+    ]},
+  ]},
+
 {name:'National Institute of Ayurveda (NIA Jaipur)',short:'NIA',type:'Central',district:'Jaipur',state:'Rajasthan',
   naac:'A',nirf:'',affil:'Ministry of AYUSH (Central)',website:'nia.nic.in',
   streams:['Medical'],
@@ -139,6 +150,15 @@ const COLLEGES_RJ=[
     {stream:'Journalism & Media',programs:[
       {name:'B.A. Journalism and Mass Communication — 4 years',exam:'University Entrance Test (State)',examCss:'ce-own'},
       {name:'B.A. Media Studies — 4 years',exam:'University Entrance Test (State)',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'Institute of Hotel Management, Catering Technology & Applied Nutrition, Jaipur',short:'IHM Jaipur',type:'Central',district:'Jaipur',state:'Rajasthan',
+  naac:'Accredited',nirf:'Central IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT) — Ministry of Tourism',website:'ihmjaipur.com',
+  streams:['Management'],
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
     ]},
   ]},
 

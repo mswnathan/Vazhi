@@ -204,4 +204,13 @@ const COLLEGES_WB=[
     ]},
   ]},
 
+{name:'Institute of Hotel Management, Catering Technology & Applied Nutrition, Kolkata',short:'IHM Kolkata',type:'Central',district:'Kolkata',state:'West Bengal',
+  naac:'Accredited',nirf:'Central IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT) — Ministry of Tourism',website:'ihmkol.org',
+  streams:['Management'],
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
 ];

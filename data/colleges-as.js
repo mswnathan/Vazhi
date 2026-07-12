@@ -101,4 +101,13 @@ const COLLEGES_AS=[
     ]},
   ]},
 
+{name:'Institute of Hotel Management, Catering Technology & Applied Nutrition, Guwahati',short:'IHM Guwahati',type:'Central',district:'Guwahati',state:'Assam',
+  naac:'Accredited',nirf:'Central IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT) — Ministry of Tourism',website:'ihmctanghy.org.in',
+  streams:['Management'],
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
 ];

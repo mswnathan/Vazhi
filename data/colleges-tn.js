@@ -35,11 +35,14 @@ const COLLEGES=[
 
 {name:'NIT Trichy',short:'NITT',type:'Central',district:'Trichy',state:'Tamil Nadu',
   naac:'A++',nirf:'#9 Engineering',affil:'National Institute of Technology',website:'nitt.edu',
-  streams:['Engineering'],
+  streams:['Engineering','Education'],
   programGroups:[
     {stream:'Engineering & Technology',programs:[
       {name:'B.Tech (CSE, ECE, EEE, Civil, Mechanical, Chemical, Production, ICE, Metallurgical)',exam:'JEE Main',examCss:'ce-jee'},
       {name:'B.Arch',exam:'JEE Main Paper 2 / NATA',examCss:'ce-nata'},
+    ]},
+    {stream:'Education',programs:[
+      {name:'B.Sc B.Ed — ITEP (Maths, Physics, Chemistry) (4 years)',exam:'NCET',examCss:'ce-ncet'},
     ]},
   ]},
 
@@ -57,12 +60,43 @@ const COLLEGES=[
 
 {name:'Central University of Tamil Nadu (CUTN)',short:'CUTN',type:'Central',district:'Thiruvarur',state:'Tamil Nadu',
   naac:'A+',nirf:'#83 University',affil:'Central University — UGC Act 2009',website:'cutn.ac.in',
-  streams:['Arts & Science','Law','Education','Management'],
+  streams:['Arts & Science','Law','Education','Management','Engineering','Commerce'],
+  specialNote:'21 official UG Hons./Research 4-year programmes, verified against cutn.ac.in\'s own programme list — note the B.Tech CSE (not a common central-university offering) and the absence of a standalone B.Sc Computer Science (CS only exists via B.Tech).',
   programGroups:[
     {stream:'Arts & Science (UG)',programs:[
-      {name:'B.Sc (Hons) Physics, Chemistry, Mathematics, Biotechnology, Computer Science',exam:'CUET UG',examCss:'ce-cuet'},
-      {name:'B.Sc B.Ed (Integrated 4-year)',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.Sc (Hons) Physics',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.Sc (Hons) Chemistry',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.Sc (Hons) Mathematics',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.Sc (Hons) Biotechnology',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.Sc (Hons) Geology',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.Sc (Hons) Statistics',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.Sc (Hons) Microbiology',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.Sc (Hons) Geography',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.Sc (Hons) Applied Psychology',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.Sc (Hons) Epidemiology & Public Health',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.A (Hons) Economics',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.A (Hons) History',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.A (Hons) English',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.A (Hons) Tamil',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.A (Hons) Mass Communication',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.S.W — Bachelor of Social Work (Hons)',exam:'CUET UG',examCss:'ce-cuet'},
       {name:'B.P.A Music (Integrated)',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+    {stream:'Commerce',programs:[
+      {name:'B.Com (Hons) Commerce',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech Computer Science & Engineering (4 years)',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+    {stream:'Management',programs:[
+      {name:'B.B.A Management',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.B.A Tourism & Hospitality Management',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+    {stream:'Education',programs:[
+      {name:'B.Sc B.Ed — ITEP (Mathematics, 4 years)',exam:'NCET',examCss:'ce-ncet'},
+      {name:'B.A B.Ed — ITEP (Tamil, 4 years)',exam:'NCET',examCss:'ce-ncet'},
+      {name:'B.A B.Ed — ITEP (English, 4 years)',exam:'NCET',examCss:'ce-ncet'},
+      {name:'B.A B.Ed — ITEP (Hindi, 4 years)',exam:'NCET',examCss:'ce-ncet'},
     ]},
     {stream:'Law',programs:[
       {name:'B.A LLB (5-year Integrated)',exam:'CUET UG',examCss:'ce-cuet'},
@@ -418,6 +452,19 @@ const COLLEGES=[
       {name:'B.E Electronics & Communication Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
       {name:'B.E Electrical & Electronics Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
       {name:'B.E Computer Science & Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+    ]},
+  ]},
+
+{name:'University College of Engineering, Kanchipuram',short:'UCE Kanchipuram',type:'State',district:'Kanchipuram',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Engg TN',affil:'Anna University',website:'aucek.in',
+  streams:['Engineering'],
+  specialNote:'Also runs a separate industry-sponsored B.E. (Training Integrated) programme in EEE & Mechanical for existing Diploma holders (lateral entry), sponsored by HL Mando Anand India Pvt Ltd via Anna University\'s CFA — ₹14,500/month stipend + free food, accommodation, transport & medical insurance during training. Admission is separate from TNEA (via cfa.annauniv.edu), not open to direct Class 12 entrants. Re-check cfa.annauniv.edu for the current cycle\'s deadline before applying.',
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.E Computer Science & Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Electrical & Electronics Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Electronics & Communication Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
+      {name:'B.E Mechanical Engineering (4 years)',exam:'TNEA',examCss:'ce-tnea'},
     ]},
   ]},
 
@@ -1441,13 +1488,44 @@ const COLLEGES=[
 {name:'Avinashilingam Institute for Home Science (Deemed)',short:'Avinashilingam',type:'Deemed',district:'Coimbatore',state:'Tamil Nadu',
   naac:'A++',nirf:'Top Women\'s Deemed',affil:'Deemed University — Women only',website:'avinuty.ac.in',
   streams:['Arts & Science','Education'],
+  specialNote:'Programs below are the low-fee Aided category (29 programmes) — the official site also runs a separate, higher-fee Self-Financed category with overlapping + additional subject names, not represented here.',
   programGroups:[
-    {stream:'Arts & Science (UG) — Women only',programs:[
-      {name:'B.Sc (Food Science & Nutrition, CS, Zoology, Physics, Chemistry, Maths)',exam:'Own Entrance + Merit',examCss:'ce-own'},
-      {name:'B.A / B.Com / B.B.A',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+    {stream:'Arts & Science (UG, Aided) — Women only',programs:[
+      {name:'B.A Economics',exam:'Merit (Class 12 marks) / CUET UG',examCss:'ce-merit'},
+      {name:'B.A English',exam:'Merit (Class 12 marks) / CUET UG',examCss:'ce-merit'},
+      {name:'B.A Functional Hindi',exam:'Merit (Class 12 marks) / CUET UG',examCss:'ce-merit'},
+      {name:'B.A Music',exam:'Merit (Class 12 marks) / CUET UG',examCss:'ce-merit'},
+      {name:'B.A Tamil',exam:'Merit (Class 12 marks) / CUET UG',examCss:'ce-merit'},
+      {name:'B.Sc Botany',exam:'Merit (Class 12 marks) / CUET UG',examCss:'ce-merit'},
+      {name:'B.Sc Biochemistry & Biotechnology',exam:'Merit (Class 12 marks) / CUET UG',examCss:'ce-merit'},
+      {name:'B.Sc Chemistry',exam:'Merit (Class 12 marks) / CUET UG',examCss:'ce-merit'},
+      {name:'B.Sc Computer Science',exam:'Merit (Class 12 marks) / CUET UG',examCss:'ce-merit'},
+      {name:'B.Sc Food Service Management & Dietetics',exam:'Merit (Class 12 marks) / CUET UG',examCss:'ce-merit'},
+      {name:'B.Sc Food Science & Nutrition',exam:'Merit (Class 12 marks) / CUET UG',examCss:'ce-merit'},
+      {name:'B.Sc Human Development',exam:'Merit (Class 12 marks) / CUET UG',examCss:'ce-merit'},
+      {name:'B.Sc Interior Design & Resource Management',exam:'Merit (Class 12 marks) / CUET UG',examCss:'ce-merit'},
+      {name:'B.Sc Mathematics',exam:'Merit (Class 12 marks) / CUET UG',examCss:'ce-merit'},
+      {name:'B.Sc Physical Education',exam:'Merit (Class 12 marks) / CUET UG',examCss:'ce-merit'},
+      {name:'B.Sc Physics',exam:'Merit (Class 12 marks) / CUET UG',examCss:'ce-merit'},
+      {name:'B.Sc Psychology',exam:'Merit (Class 12 marks) / CUET UG',examCss:'ce-merit'},
+      {name:'B.Sc Rural Development & Sociology',exam:'Merit (Class 12 marks) / CUET UG',examCss:'ce-merit'},
+      {name:'B.Sc Special Education & Mathematics',exam:'Merit (Class 12 marks) / CUET UG',examCss:'ce-merit'},
+      {name:'B.Sc Textiles & Apparel Designing',exam:'Merit (Class 12 marks) / CUET UG',examCss:'ce-merit'},
+      {name:'B.Sc Visual Communication',exam:'Merit (Class 12 marks) / CUET UG',examCss:'ce-merit'},
+      {name:'B.Sc Zoology',exam:'Merit (Class 12 marks) / CUET UG',examCss:'ce-merit'},
+      {name:'B.Com',exam:'Merit (Class 12 marks) / CUET UG',examCss:'ce-merit'},
+      {name:'B.Com Professional Accounting',exam:'Merit (Class 12 marks) / CUET UG',examCss:'ce-merit'},
+      {name:'B.B.A Tourism',exam:'Merit (Class 12 marks) / CUET UG',examCss:'ce-merit'},
+    ]},
+    {stream:'Vocational (B.Voc, Aided) — Women only',programs:[
+      {name:'B.Voc AI & Machine Learning',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Voc Food Processing & Engineering',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Voc Medical Equipment Technology',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Voc Textile Dyeing & Printing',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
     ]},
     {stream:'Education',programs:[
       {name:'B.Ed (Education)',exam:'Own Entrance',examCss:'ce-own'},
+      {name:'B.Sc / B.A B.Ed — ITEP (4 years)',exam:'NCET',examCss:'ce-ncet'},
     ]},
   ]},
 
@@ -1455,6 +1533,29 @@ const COLLEGES=[
 // DEEMED UNIVERSITIES
 // ──────────────────────────────────────────────
 
+
+{name:'Annamalai University',short:'Annamalai Univ',type:'State',district:'Chidambaram (Cuddalore)',state:'Tamil Nadu',
+  naac:'A+',nirf:'Not Ranked',affil:'State University (Government Aided) — established 1929',website:'annamalaiuniversity.ac.in',
+  streams:['Arts & Science','Engineering','Management','Agriculture'],
+  specialNote:'One of Asia\'s largest residential universities (32,000+ students), 8 faculties (Arts, Science, Engineering & Technology, Agriculture, Management, Education, Fine Arts, Indian Languages, Marine Sciences) and ~49 departments. This is a REPRESENTATIVE listing, not exhaustive — Annamalai runs 600+ UG/PG/diploma programmes; Education, Fine Arts, Indian Languages and Marine Sciences faculties still need dedicated research before adding.',
+  programGroups:[
+    {stream:'Arts & Science (regular, on-campus)',programs:[
+      {name:'B.A (Tamil, English, Economics, History, Political Science)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Sc (Physics, Chemistry, Mathematics, Computer Science, Botany, Zoology)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+      {name:'B.Com',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+    ]},
+    {stream:'Management',programs:[
+      {name:'BBA',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+    ]},
+    {stream:'Engineering & Technology (FEAT)',programs:[
+      {name:'B.E. (Civil, Civil & Structural, Mechanical, Manufacturing, CSE, IT, EEE, ECE, EIE, Chemical — 11 depts total)',exam:'TNEA',examCss:'ce-tnea'},
+    ]},
+    {stream:'Agriculture',programs:[
+      {name:'B.Sc (Hons) Agriculture — Govt Aided (4 years)',exam:'Merit (Class 12 marks) — TNAU Counselling',examCss:'ce-merit'},
+      {name:'B.Sc (Hons) Agriculture — Self Supporting (4 years)',exam:'Merit (Class 12 marks) — TNAU Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Horticulture',exam:'Merit (Class 12 marks) — TNAU Counselling',examCss:'ce-merit'},
+    ]},
+  ]},
 
 {name:'Bharathiar University',short:'BU Coimbatore',type:'State',district:'Coimbatore',state:'Tamil Nadu',
   naac:'A++',nirf:'Top University TN',affil:'State University (Affiliating)',website:'b-u.ac.in',
@@ -1516,6 +1617,10 @@ const COLLEGES=[
     ]},
     {stream:'Law',programs:[
       {name:'B.A LLB (5-year Integrated)',exam:'CUET UG / CLAT',examCss:'ce-cuet'},
+    ]},
+    {stream:'Education',programs:[
+      {name:'B.A B.Ed — ITEP (4 years)',exam:'NCET',examCss:'ce-ncet'},
+      {name:'B.Sc B.Ed — ITEP (4 years)',exam:'NCET',examCss:'ce-ncet'},
     ]},
   ]},
 
@@ -1605,16 +1710,6 @@ const COLLEGES=[
     ]},
   ]},
 
-{name:'IIM Trichy — Indian Institute of Management Tiruchirappalli',short:'IIM Trichy',type:'Central',district:'Trichy',state:'Tamil Nadu',
-  naac:'Accredited',nirf:'#14 Management',affil:'Institute of National Importance — Ministry of Education',website:'iimtrichy.ac.in',
-  streams:['Management'],
-  specialNote:'One of the newer IIMs. Strong placement record. IPM (5-year) and MBA programs. Direct entry after Class 12 via IPM.',
-  programGroups:[
-    {stream:'Management',programs:[
-      {name:'IPM — Integrated Programme in Management (5-year BBA + MBA)',exam:'IPMAT Trichy (own entrance)',examCss:'ce-own'},
-    ]},
-  ]},
-
 {name:'IIIT Trichy — Indian Institute of Information Technology Tiruchirappalli',short:'IIIT Trichy',type:'Central',district:'Trichy',state:'Tamil Nadu',
   naac:'Accredited',nirf:'Top IIITs',affil:'PPP Model IIIT — Ministry of Education (Govt of India)',website:'iiitt.ac.in',
   streams:['Engineering'],
@@ -1650,13 +1745,16 @@ const COLLEGES=[
 
 {name:'Indian Maritime University — Chennai Campus',short:'IMU Chennai',type:'Central',district:'Chennai',state:'Tamil Nadu',
   naac:'A+',nirf:'Top Maritime',affil:'Central University under Ministry of Ports, Shipping & Waterways',website:'imu.edu.in',
-  streams:['Engineering'],
+  streams:['Engineering','Management'],
   specialNote:'Flagship campus of India\'s only maritime university. Graduates become Marine Engineers and Merchant Navy officers. High global salary.',
   programGroups:[
     {stream:'Maritime Engineering & Science',programs:[
       {name:'B.Tech Marine Engineering (4 years)',exam:'IMU CET',examCss:'ce-own'},
       {name:'B.Sc Nautical Science (3 years)',exam:'IMU CET',examCss:'ce-own'},
       {name:'B.Sc Ship Building & Repair (3 years)',exam:'IMU CET',examCss:'ce-own'},
+    ]},
+    {stream:'Management',programs:[
+      {name:'BBA — Logistics, Retailing & E-Commerce (3 years)',exam:'Merit (Class 12 marks) / CUET UG',examCss:'ce-merit'},
     ]},
   ]},
 
@@ -1674,7 +1772,7 @@ const COLLEGES=[
       {name:'B.Sc Information Technology',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
     ]},
     {stream:'Education',programs:[
-      {name:'B.Ed (Education)',exam:'Tamil Nadu B.Ed Entrance / Merit',examCss:'ce-own'},
+      {name:'B.Ed (Education)',exam:'Own Entrance (Alagappa University)',examCss:'ce-own'},
     ]},
   ]},
 
@@ -1746,20 +1844,25 @@ const COLLEGES=[
   programGroups:[
     {stream:'Agriculture & Allied Sciences',programs:[
       {name:'B.Sc (Hons) Agriculture (4 years)',exam:'Merit (Class 12 marks) — TNAU Counselling / CUET-UG (15% all-India quota)',examCss:'ce-merit'},
+      {name:'B.Sc (Hons) Agriculture — Tamil Medium (4 years)',exam:'Merit (Class 12 marks) — TNAU Counselling',examCss:'ce-merit'},
       {name:'B.Sc (Hons) Horticulture (4 years)',exam:'Merit (Class 12 marks) — TNAU Counselling / CUET-UG (15% all-India quota)',examCss:'ce-merit'},
+      {name:'B.Sc Agribusiness Management (4 years)',exam:'Merit (Class 12 marks) — TNAU Counselling / CUET-UG (15% all-India quota)',examCss:'ce-merit'},
       {name:'B.Tech Agricultural Engineering (4 years)',exam:'Merit (Class 12 marks) — TNAU Counselling / JEE Main',examCss:'ce-merit'},
       {name:'B.Sc Forestry (4 years)',exam:'Merit (Class 12 marks) — TNAU Counselling / CUET-UG (15% all-India quota)',examCss:'ce-merit'},
       {name:'B.Tech Food Technology (4 years)',exam:'Merit (Class 12 marks) — TNAU Counselling / JEE Main',examCss:'ce-merit'},
+      {name:'B.Tech Bioinformatics (4 years)',exam:'Merit (Class 12 marks) — TNAU Counselling / JEE Main',examCss:'ce-merit'},
+      {name:'B.Tech Biotechnology (4 years)',exam:'Merit (Class 12 marks) — TNAU Counselling / JEE Main',examCss:'ce-merit'},
     ]},
   ]},
 
 {name:'Forest College & Research Institute, Mettupalayam',short:'FCRI Mettupalayam',type:'State',district:'Coimbatore',state:'Tamil Nadu',
   naac:'A',nirf:'Specialised Forestry',affil:'Tamil Nadu Agricultural University (TNAU)',website:'fcri.tnau.ac.in',
   streams:['Agriculture'],
-  specialNote:'India\'s premier forestry education and research institute in South India. 4-year B.Sc Forestry degree — leads directly to IFS (Indian Forest Service) and TNFD (TN Forest Department). Set in natural forest surroundings in Mettupalayam foothills.',
+  specialNote:'India\'s premier forestry education and research institute in South India. 4-year B.Sc Forestry degree — leads directly to IFS (Indian Forest Service) and TNFD (TN Forest Department). Also home to TNAU\'s Department of Sericulture (relocated here 2014). Set in natural forest surroundings in Mettupalayam foothills.',
   programGroups:[
     {stream:'Forestry & Wildlife Sciences',programs:[
       {name:'B.Sc (Hons) Forestry (4 years)',exam:'Merit (Class 12 marks) — TNAU Counselling / CUET-UG (15% all-India quota)',examCss:'ce-merit'},
+      {name:'B.Sc (Hons) Sericulture (4 years)',exam:'Merit (Class 12 marks) — TNAU Counselling / CUET-UG (15% all-India quota)',examCss:'ce-merit'},
     ]},
   ]},
 
@@ -1807,18 +1910,51 @@ const COLLEGES=[
     ]},
   ]},
 
+{name:'International Institute of Tamil Studies (IITS)',short:'IITS Chennai',type:'Central',district:'Chennai',state:'Tamil Nadu',
+  naac:'',nirf:'',affil:'Jointly established by UNESCO and Govt of Tamil Nadu (1970); Integrated M.A. degree conferred by Tamil University, Thanjavur',website:'ulakaththamizh.in',
+  streams:['Arts & Science'],
+  specialNote:'Unique UNESCO-linked Tamil research institute at CIT Campus, Taramani. Offers a direct-after-Class-12, 5-year Integrated M.A. Tamil (no separate UG needed). No entrance exam — merit on Class 12 marks, postal/in-person application. ₹2,000/month scholarship for 15 selected students; free separate hostels for boys & girls.',
+  programGroups:[
+    {stream:'Tamil Language & Culture',programs:[
+      {name:'5-Year Integrated M.A. Tamil',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},
+    ]},
+  ]},
+
 {name:'The Gandhigram Rural Institute (Deemed)',short:'Gandhigram',type:'Deemed',district:'Dindigul',state:'Tamil Nadu',
   naac:'A+',nirf:'Top Rural Deemed',affil:'Deemed University — Ministry of Education (Gandhian institutions)',website:'ruraluniv.ac.in',
-  streams:['Arts & Science','Education'],
-  specialNote:'Unique Gandhian institution focused on rural development, community science and social work. Unique B.Sc Rural Home Management and social development programs not found elsewhere.',
+  streams:['Arts & Science','Education','Engineering'],
+  specialNote:'Unique Gandhian institution focused on rural development, community science and social work. Unique B.Sc Rural Home Management, social development, B.Voc and Diploma programs not found elsewhere. B.Voc/Diploma programs are Non-CUET — separate merit-based application.',
   programGroups:[
     {stream:'Arts & Science',programs:[
+      {name:'B.Sc (Hons) Agriculture (4 years)',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.Sc Agriculture — Lateral Entry (Diploma holders)',exam:'Non-CUET (Institute Merit)',examCss:'ce-merit'},
+      {name:'B.Sc Botany',exam:'CUET UG',examCss:'ce-cuet'},
       {name:'B.Sc (Maths, Physics, Chemistry, CS, Zoology, Community Science, Rural Home Management)',exam:'CUET UG',examCss:'ce-cuet'},
-      {name:'B.A (Tamil, English, Economics, Social Work)',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.A (Tamil, English, Economics)',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.A. Gandhian Social Work (Hons.)',exam:'CUET UG',examCss:'ce-cuet'},
       {name:'B.Com / B.B.A',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.P.E.S — Bachelor of Physical Education & Sports',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+    {stream:'Vocational (B.Voc — Non-CUET)',programs:[
+      {name:'B.Voc Farm Equipment Operation & Maintenance',exam:'Non-CUET (Institute Merit)',examCss:'ce-merit'},
+      {name:'B.Voc Footwear & Accessories Design',exam:'Non-CUET (Institute Merit)',examCss:'ce-merit'},
+      {name:'B.Voc Dairy Production & Technology',exam:'Non-CUET (Institute Merit)',examCss:'ce-merit'},
+      {name:'B.Voc Food Processing',exam:'Non-CUET (Institute Merit)',examCss:'ce-merit'},
+      {name:'B.Voc Food Testing & Quality Evaluation',exam:'Non-CUET (Institute Merit)',examCss:'ce-merit'},
+      {name:'B.Voc Organic Agriculture & Enterprises Development',exam:'Non-CUET (Institute Merit)',examCss:'ce-merit'},
+      {name:'B.Voc Multimedia Production Technology',exam:'Non-CUET (Institute Merit)',examCss:'ce-merit'},
+      {name:'B.Voc Renewable Energy',exam:'Non-CUET (Institute Merit)',examCss:'ce-merit'},
+    ]},
+    {stream:'Diploma (Non-CUET)',programs:[
+      {name:'Diploma in Agriculture',exam:'Non-CUET (Institute Merit)',examCss:'ce-merit'},
+      {name:'Diploma in Textile Technology',exam:'Non-CUET (Institute Merit)',examCss:'ce-merit'},
     ]},
     {stream:'Education',programs:[
       {name:'B.Ed (Education)',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.Sc B.Ed — ITEP (4 years)',exam:'NCET',examCss:'ce-ncet'},
+    ]},
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech Civil Engineering (4 years)',exam:'CUET UG',examCss:'ce-cuet'},
     ]},
   ]},
 
@@ -2187,6 +2323,71 @@ const COLLEGES=[
     ]},
   ]},
 
+{name:'Dr. M.S. Swaminathan Agricultural College & Research Institute, Thanjavur',short:'MSSAC&RI Thanjavur',type:'State',district:'Thanjavur',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'TNAU Constituent College',affil:'Tamil Nadu Agricultural University (TNAU)',website:'tnau.ac.in/site/college-thanjavur',
+  streams:['Agriculture'],
+  specialNote:'Serves the Cauvery Delta Zone, 15 km from Thanjavur (Eachangkottai). Established 2014.',
+  programGroups:[
+    {stream:'Agriculture',programs:[
+      {name:'B.Sc (Hons) Agriculture (4 years)',exam:'TNAU Admissions (merit-based)',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Agricultural College & Research Institute, Kudumiyanmalai',short:'AC&RI Kudumiyanmalai',type:'State',district:'Pudukkottai',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'TNAU Constituent College',affil:'Tamil Nadu Agricultural University (TNAU)',website:'tnau.ac.in/site/college-acri-kudumiyanmalai',
+  streams:['Agriculture'],
+  programGroups:[
+    {stream:'Agriculture',programs:[
+      {name:'B.Sc (Hons) Agriculture (4 years)',exam:'TNAU Admissions (merit-based)',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Agricultural College & Research Institute, Keezhvelur',short:'AC&RI Keezhvelur',type:'State',district:'Nagapattinam',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'TNAU Constituent College',affil:'Tamil Nadu Agricultural University (TNAU)',website:'tnau.ac.in/site/acri-keezhvelur',
+  streams:['Agriculture'],
+  programGroups:[
+    {stream:'Agriculture',programs:[
+      {name:'B.Sc (Hons) Agriculture (4 years)',exam:'TNAU Admissions (merit-based)',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Agricultural College & Research Institute, Chettinad',short:'AC&RI Chettinad',type:'State',district:'Sivagangai',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'TNAU Constituent College',affil:'Tamil Nadu Agricultural University (TNAU)',website:'tnau.ac.in/site/acri-chettinad',
+  streams:['Agriculture'],
+  programGroups:[
+    {stream:'Agriculture',programs:[
+      {name:'B.Sc (Hons) Agriculture (4 years)',exam:'TNAU Admissions (merit-based)',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Agricultural College & Research Institute, Karur',short:'AC&RI Karur',type:'State',district:'Karur',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'TNAU Constituent College',affil:'Tamil Nadu Agricultural University (TNAU)',website:'tnau.ac.in/site/acri-karur',
+  streams:['Agriculture'],
+  programGroups:[
+    {stream:'Agriculture',programs:[
+      {name:'B.Sc (Hons) Agriculture (4 years)',exam:'TNAU Admissions (merit-based)',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Horticultural College & Research Institute, Paiyur',short:'HC&RI Paiyur',type:'State',district:'Krishnagiri',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'TNAU Constituent College',affil:'Tamil Nadu Agricultural University (TNAU)',website:'tnau.ac.in/site/hcri-paiyur',
+  streams:['Agriculture'],
+  programGroups:[
+    {stream:'Horticulture & Allied Sciences',programs:[
+      {name:'B.Sc (Hons) Horticulture (4 years)',exam:'TNAU Admissions (merit-based)',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Community Science College & Research Institute, Madurai',short:'CSC&RI Madurai',type:'State',district:'Madurai',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'TNAU Constituent College',affil:'Tamil Nadu Agricultural University (TNAU)',website:'tnau.ac.in/site/college-cscmadurai',
+  streams:['Agriculture','Arts & Science'],
+  specialNote:'TNAU\'s dedicated Community Science college focused on food processing, nutrition and dietetics.',
+  programGroups:[
+    {stream:'Home Science & Nutrition',programs:[
+      {name:'B.Sc (Hons) Food Nutrition and Dietetics (4 years)',exam:'TNAU Admissions (merit-based)',examCss:'ce-merit'},
+    ]},
+  ]},
+
 // ──────────────────────────────────────────────
 // BATCH C — Missing Govt Medical Colleges (TNMGRMU)
 // ──────────────────────────────────────────────
@@ -2385,7 +2586,7 @@ const COLLEGES=[
 {name:'Tamil Nadu Government M.G.R. Film and Television Training Institute',short:'MGR Film Institute',type:'State',district:'Chennai',state:'Tamil Nadu',
   naac:'',nirf:'',affil:'Tamil Nadu Dr. J. Jayalalithaa Music and Fine Arts University',website:'filminstitute.tn.gov.in',
   streams:['Design','Arts & Science'],
-  specialNote:'State govt film training institute in Taramani, Chennai. Oldest govt film institute in South India. Offers Bachelor of Visual Arts in 6 film specializations. Admission through state merit / own process via filminstitute.tn.gov.in.',
+  specialNote:'State govt film training institute in Taramani, Chennai. Oldest govt film institute in South India. Offers Bachelor of Visual Arts in 6 film specializations plus a separate AICTE-approved 3-year Diploma tier. Admission through state merit / own process via filminstitute.tn.gov.in.',
   programGroups:[
     {stream:'Film & Visual Arts',programs:[
       {name:'Bachelor of Visual Arts — Cinematography (4 years)',exam:'Own Admission (State Merit)',examCss:'ce-own'},
@@ -2394,6 +2595,10 @@ const COLLEGES=[
       {name:'Bachelor of Visual Arts — Direction & Screenplay Writing (4 years)',exam:'Own Admission (State Merit)',examCss:'ce-own'},
       {name:'Bachelor of Visual Arts — Film Editing (4 years)',exam:'Own Admission (State Merit)',examCss:'ce-own'},
       {name:'Bachelor of Visual Arts — Animation & Visual Effects (4 years)',exam:'Own Admission (State Merit)',examCss:'ce-own'},
+    ]},
+    {stream:'Diploma (AICTE)',programs:[
+      {name:'Diploma in Film Technology & TV Production — Cinematography (3 years)',exam:'Own Admission (State Merit)',examCss:'ce-own'},
+      {name:'Diploma in Film Editing & Television Production (3 years)',exam:'Own Admission (State Merit)',examCss:'ce-own'},
     ]},
   ]},
 
@@ -2405,6 +2610,56 @@ const COLLEGES=[
   programGroups:[
     {stream:'Medical',programs:[
       {name:'BNYS — Bachelor of Naturopathy & Yogic Sciences (5.5 years)',exam:'Merit (Class 12 PCB marks) — TN Medical Selection Counselling',examCss:'ce-merit'},
+    ]},
+  ]},
+
+// BATCH G — Government Colleges of Education (2-year B.Ed, TNTEU-regulated)
+{name:'Institute of Advanced Study in Education, Chennai',short:'IASE Chennai',type:'State',district:'Chennai',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Teacher Ed TN',affil:'Tamil Nadu Teachers Education University (TNTEU)',website:'iasetamilnadu.ac.in',
+  streams:['Education'],
+  specialNote:'Govt teacher training college at Saidapet, Chennai — admits men. Sister institution to Lady Willingdon IASE (women).',
+  programGroups:[
+    {stream:'Education',programs:[
+      {name:'B.Ed (Education) — 2 years',exam:'TN B.Ed Entrance',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'Lady Willingdon Institute of Advanced Study in Education, Chennai',short:'Lady Willingdon IASE',type:'State',district:'Chennai',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Teacher Ed TN',affil:'Tamil Nadu Teachers Education University (TNTEU)',website:'lwiase.ac.in',
+  streams:['Education'],
+  specialNote:'Govt teacher training college at Triplicane, Chennai (est. 1922) — admits women.',
+  programGroups:[
+    {stream:'Education',programs:[
+      {name:'B.Ed (Education) — 2 years',exam:'TN B.Ed Entrance',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'Government College of Education for Women, Coimbatore',short:'GCE Women Coimbatore',type:'State',district:'Coimbatore',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Teacher Ed TN',affil:'Tamil Nadu Teachers Education University (TNTEU)',website:'gcewcbe.ac.in',
+  streams:['Education'],
+  specialNote:'Govt teacher training college for women, Coimbatore (est. 1956).',
+  programGroups:[
+    {stream:'Education',programs:[
+      {name:'B.Ed (Education) — 2 years',exam:'TN B.Ed Entrance',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'Government College of Education, Pudukkottai',short:'GCE Pudukkottai',type:'State',district:'Pudukkottai',state:'Tamil Nadu',
+  naac:'B+',nirf:'Govt Teacher Ed TN',affil:'Tamil Nadu Teachers Education University (TNTEU)',website:'gcepdkt.in',
+  streams:['Education'],
+  specialNote:'Est. 1955-56 as Government Teacher Training College. 100 B.Ed seats, 33% reserved for women.',
+  programGroups:[
+    {stream:'Education',programs:[
+      {name:'B.Ed (Education) — 2 years',exam:'TN B.Ed Entrance',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'Government College of Education, Komarapalayam',short:'GCE Namakkal',type:'State',district:'Namakkal',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Govt Teacher Ed TN',affil:'Tamil Nadu Teachers Education University (TNTEU)',website:'gcekpm.ac.in',
+  streams:['Education'],
+  programGroups:[
+    {stream:'Education',programs:[
+      {name:'B.Ed (Education) — 2 years',exam:'TN B.Ed Entrance',examCss:'ce-own'},
     ]},
   ]},
 

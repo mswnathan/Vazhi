@@ -568,6 +568,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-si
 .ce-merit{background:#F5F3EE;color:#524E45}
 .ce-icar{background:var(--accent-bg);color:var(--accent-dk)}
 .ce-nchm{background:#FFF5E0;color:#6B3F00}
+.ce-ncet{background:#F2EBFF;color:#5B2D9E}
 .col-no-res{text-align:center;padding:3rem 1rem;color:var(--text3)}
 .col-no-res h3{font-size:16px;color:var(--text2);margin-bottom:6px}
 .col-website-link{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:600;color:var(--brand);text-decoration:none;margin-top:4px}
@@ -904,6 +905,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-si
 .ce-merit{background:#F5F3EE;color:#524E45}
 .ce-icar{background:#E5FAFB;color:#07515A}
 .ce-nchm{background:#FFF5E0;color:#6B3F00}
+.ce-ncet{background:#F2EBFF;color:#5B2D9E}
 .ce-gate{background:#EBF0FF;color:#0F3098}
 .ce-cat{background:#FFF5E0;color:#6B3F00}
 .ce-jam{background:#E8F8EF;color:#0A5234}

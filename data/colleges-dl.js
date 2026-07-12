@@ -169,6 +169,37 @@ const COLLEGES_DL=[
     ]},
   ]},
 
+{name:'Sri Ram College of Commerce (University of Delhi)',short:'SRCC',type:'Aided',district:'Delhi',state:'Delhi',
+  naac:'A+',nirf:'#18 College · #1 Commerce College (India Today)',affil:'University of Delhi (Aided)',website:'srcc.edu',
+  streams:['Arts & Science'],
+  specialNote:'DU\'s flagship commerce college. Admission via CUET UG.',
+  programGroups:[
+    {stream:'Arts & Science',programs:[
+      {name:'B.A (Hons) Economics',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.Com (Hons)',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+  ]},
+
+{name:'Delhi School of Journalism (University of Delhi)',short:'DSJ-DU',type:'Central',district:'Delhi',state:'Delhi',
+  naac:'',nirf:'',affil:'University of Delhi — directly-admitting department (not a constituent college)',website:'dsj.du.ac.in',
+  streams:['Arts & Science'],
+  specialNote:'5-year integrated Bachelor + Master of Journalism (BJ+MJ), bilingual (English/Hindi). Admission via CUET UG.',
+  programGroups:[
+    {stream:'Arts & Science',programs:[
+      {name:'Integrated BJ+MJ — Bachelor & Master of Journalism (5 years)',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+  ]},
+
+{name:'University of Delhi — Dept of Germanic & Romance Studies',short:'DU Germanic',type:'Central',district:'Delhi',state:'Delhi',
+  naac:'',nirf:'',affil:'University of Delhi — directly-admitting department (not a constituent college)',website:'du.ac.in',
+  streams:['Arts & Science'],
+  specialNote:'DU\'s own foreign-language department (distinct from JNU\'s School of Language, Literature & Culture Studies). Admission via CUET UG.',
+  programGroups:[
+    {stream:'Arts & Science',programs:[
+      {name:'B.A (Hons) German / French / Spanish / Italian',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+  ]},
+
 {name:'Kirori Mal College (University of Delhi)',short:'KMC',type:'Aided',district:'Delhi',state:'Delhi',
   naac:'A+',nirf:'Top 15 College',affil:'University of Delhi (Aided)',website:'kmc.du.ac.in',
   streams:['Arts & Science'],
@@ -287,6 +318,27 @@ const COLLEGES_DL=[
     ]},
     {stream:'Management',programs:[
       {name:'BBA–MBA (Five Year Integrated)',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+  ]},
+
+{name:'Ashok Institute of Hospitality & Tourism Management (IHM Ashok)',short:'IHM Ashok Delhi',type:'Central',district:'New Delhi',state:'Delhi',
+  naac:'',nirf:'Central PSU IHM',affil:'India Tourism Development Corporation (ITDC) — Govt of India PSU; NCHMCT-affiliated',website:'itdc.co.in',
+  streams:['Management'],
+  specialNote:'The only NCHMCT-network IHM run by a Central PSU (ITDC) rather than directly by the Ministry of Tourism. Located at Hotel Samrat Campus, Chanakyapuri.',
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+      {name:'B.Voc Food Production (3 years)',exam:'Merit (Class 12)',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'Institute of Hotel Management, Catering & Nutrition, Pusa',short:'IHM Pusa',type:'Central',district:'New Delhi',state:'Delhi',
+  naac:'Accredited',nirf:'Central IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT) — Ministry of Tourism',website:'ihmpusa.net',
+  streams:['Management'],
+  specialNote:'Flagship Central IHM, est. 1962. Also offers Diploma in Bakery & Confectionery, Diploma in Food & Beverage Service, PG Diploma in Hotel Consultancy, and M.Sc Hospitality Administration.',
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
     ]},
   ]},
 

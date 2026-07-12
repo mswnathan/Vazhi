@@ -100,7 +100,7 @@ const COLLEGES_TS=[
   specialNote:'One of the oldest universities in India. University College of Engineering (UCE) is highly regarded in Telangana.',
   programGroups:[
     {stream:'Engineering & Technology',programs:[
-      {name:'B.E (CSE, ECE, EEE, Mechanical, Civil, Chemical, Metallurgical)',exam:'TS EAPCET',examCss:'ce-own'},
+      {name:'B.E (CSE, ECE, EEE, Mechanical, Civil, Chemical, Metallurgical)',exam:'TG EAPCET',examCss:'ce-own'},
     ]},
     {stream:'Arts & Science',programs:[
       {name:'B.Sc (Physics, Chemistry, Maths, Computer Science)',exam:'Merit / CUET UG',examCss:'ce-merit'},
@@ -115,10 +115,10 @@ const COLLEGES_TS=[
 {name:'JNTU Hyderabad',short:'JNTUH',type:'State',district:'Hyderabad',state:'Telangana',
   naac:'A',nirf:'Top State Technical',affil:'Jawaharlal Nehru Technological University Hyderabad',website:'jntuh.ac.in',
   streams:['Engineering'],
-  specialNote:'Major affiliating technical university in Telangana. TS EAPCET admission.',
+  specialNote:'Major affiliating technical university in Telangana. TG EAPCET admission.',
   programGroups:[
     {stream:'Engineering & Technology',programs:[
-      {name:'B.Tech (CSE, ECE, EEE, IT, Mechanical, Civil, Chemical)',exam:'TS EAPCET',examCss:'ce-own'},
+      {name:'B.Tech (CSE, ECE, EEE, IT, Mechanical, Civil, Chemical)',exam:'TG EAPCET',examCss:'ce-own'},
     ]},
   ]},
 
@@ -197,6 +197,15 @@ const COLLEGES_TS=[
       {name:'B.A (Hons) English',exam:'CUET UG',examCss:'ce-cuet'},
       {name:'B.A (Hons) in Foreign Languages — Arabic, French, German, Spanish, Russian, Japanese, Chinese',exam:'CUET UG',examCss:'ce-cuet'},
       {name:'B.A (Hons) Linguistics',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+  ]},
+
+{name:'Institute of Hotel Management, Catering Technology & Applied Nutrition, Hyderabad',short:'IHM Hyderabad',type:'Central',district:'Hyderabad',state:'Telangana',
+  naac:'Accredited',nirf:'Central IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT) — Ministry of Tourism',website:'ihmhyd.org',
+  streams:['Management'],
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
     ]},
   ]},
 

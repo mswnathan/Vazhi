@@ -64,4 +64,14 @@ const COLLEGES_CH=[
     ]},
   ]},
 
+{name:'Dr. Ambedkar Institute of Hotel Management, Catering & Nutrition, Chandigarh',short:'IHM Chandigarh',type:'Central',district:'Chandigarh',state:'Chandigarh',
+  naac:'Accredited',nirf:'Central IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT) — Ministry of Tourism',website:'ihmchandigarh.org',
+  streams:['Management'],
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+      {name:'Diploma in Food Production',exam:'Merit (Class 12)',examCss:'ce-merit'},
+    ]},
+  ]},
+
 ];

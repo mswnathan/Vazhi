@@ -452,4 +452,29 @@ const PG_EXAM_GROUPS = [
     ],
   },
 
+  // ── UNIVERSITY / STATE COUNSELLING (PG) ──────────────────────────────
+  {
+    id: 'University',
+    label: 'Central & State University Admissions (PG)',
+    exams: [
+      {
+        name: 'TNGASA PG',
+        full: 'Tamil Nadu Government Arts and Science Colleges Admission (PG)',
+        body: 'Directorate of Collegiate Education (DCE), Govt of Tamil Nadu',
+        level: 'State',
+        freq: 'Once a year (Jun–Jul)',
+        for: 'Graduates seeking M.A./M.Sc./M.Com and other PG programs at Government Arts & Science Colleges across Tamil Nadu.',
+        website: 'pg.tngasa.in',
+        note: 'No written entrance test — centralised online counselling on UG aggregate marks, run through the dedicated pg.tngasa.in subdomain (separate portal from the UG-level tngasa.in). Same DCE body as the UG TNGASA card. Distinct from state Universities\' own PG entrance/merit process (e.g. University of Madras, Bharathiar University) — those remain correctly tagged \'University Entrance / Merit\' since they are not part of the TNGASA-counselled college network.',
+        seats: 'Large — exact figure not yet confirmed',
+        papers: [
+          { code: '', name: 'Merit-based (UG aggregate marks)', topics: [] },
+        ],
+        institutes: [
+          { name: 'Government Arts & Science Colleges (TNGASA network)', city: 'Tamil Nadu', tier: '✓ 181-college network (UG-side; PG availability varies by college)' },
+        ],
+      },
+    ],
+  },
+
 ];

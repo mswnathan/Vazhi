@@ -17,7 +17,7 @@ Vazhi is an education guidance website for Indian students after Class 12.
 - JoSAA Rank Predictor (IIT/NIT/IIIT counselling)
 - Career Guide — search by career goal
 - Announcements — exam dates, results, counselling windows
-- Glossary — 40 key education terms in English + Tamil
+- Glossary — 42 key education terms in English + Tamil
 - Scholarships — government, central, and merit-based scholarships
 - Internships — government, PSU, and research internships
 - Know Yourself (Psychometric) — Holland RIASEC interest test with bilingual (EN/Tamil) support; results saved to localStorage and rendered as a separate career report page (`report.html`)
@@ -88,7 +88,7 @@ Vazhi/
     josaa.js              ← JOSAA_ROWS[] — compact allotment rows for JoSAA predictor
     career-guide.js       ← CAREER_MAP[] — career search keyword → degree/exam/path cards
     announcements.js      ← ANNOUNCEMENTS[] — exam dates, results, counselling windows
-    glossary.js           ← GLOSSARY[] — 40 terms in English + Tamil
+    glossary.js           ← GLOSSARY[] — 42 terms in English + Tamil
     scholarships.js       ← SCHOLARSHIPS[] — government & merit-based scholarship entries
     internships.js        ← INTERNSHIPS[] — government, PSU, and research internship entries
     psychometric.js       ← Holland RIASEC test data: questions, career map, profiles (bilingual)
@@ -194,7 +194,7 @@ Vazhi/
 ```
 
 ### examCss values (UG)
-`ce-tnea | ce-jee | ce-cuet | ce-neet | ce-nata | ce-clat | ce-own | ce-merit | ce-icar | ce-nchm`
+`ce-tnea | ce-jee | ce-cuet | ce-neet | ce-nata | ce-clat | ce-own | ce-merit | ce-icar | ce-nchm | ce-ncet`
 
 ### examCss values (PG — additional)
 `ce-gate | ce-cat | ce-jam | ce-net | ce-cuetpg | ce-neetpg`

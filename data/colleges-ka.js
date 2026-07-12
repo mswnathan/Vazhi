@@ -183,4 +183,36 @@ const COLLEGES_KA=[
     ]},
   ]},
 
+{name:'Regional Institute of Education, Mysuru (NCERT)',short:'RIE Mysuru',type:'Central',district:'Mysuru',state:'Karnataka',
+  naac:'',nirf:'',affil:'NCERT — Ministry of Education, Govt of India',website:'riemysore.ac.in',
+  streams:['Education'],
+  specialNote:'One of 5 NCERT Regional Institutes of Education nationwide. Domicile quota covers Andhra Pradesh, Karnataka, Kerala, Tamil Nadu, Puducherry & Lakshadweep — TN/Puducherry students are eligible. Admission via NCET.',
+  programGroups:[
+    {stream:'Education',programs:[
+      {name:'B.Sc B.Ed — ITEP (PCM / CBZ streams, 4 years)',exam:'NCET',examCss:'ce-ncet'},
+      {name:'B.A B.Ed — ITEP (4 years)',exam:'NCET',examCss:'ce-ncet'},
+    ]},
+  ]},
+
+{name:'Dr. B.R. Ambedkar School of Economics University (BASE University)',short:'BASE University',type:'State',district:'Bengaluru',state:'Karnataka',
+  naac:'',nirf:'',affil:'Karnataka State University (est. 2017, with LSE academic collaboration)',website:'base.ac.in',
+  streams:['Arts & Science'],
+  specialNote:'Karnataka state university dedicated to Economics & Data Analytics, inaugurated by Dr. Manmohan Singh. 60% of seats reserved for Karnataka-domicile candidates. Admission via CUET UG (English + General Test papers).',
+  programGroups:[
+    {stream:'Arts & Science',programs:[
+      {name:'5-Year Integrated M.Sc. Economics',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'5-Year Integrated M.A. Economics',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.Sc. Data Analytics (3 years)',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+  ]},
+
+{name:'Institute of Hotel Management, Bengaluru',short:'IHM Bengaluru',type:'Central',district:'Bengaluru',state:'Karnataka',
+  naac:'Accredited',nirf:'Central IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT) — Ministry of Tourism',website:'ihmbangalore.ac.in',
+  streams:['Management'],
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
 ];

@@ -46,7 +46,7 @@ const validBc  = new Set(['coral', 'teal', 'green', 'purple', 'amber', 'accent']
 const validLvl = new Set(['National', 'State', 'Private', 'Institute', 'Professional']);
 const validExamCss = new Set([
   'ce-tnea', 'ce-jee', 'ce-cuet', 'ce-neet', 'ce-nata',
-  'ce-clat', 'ce-own', 'ce-merit', 'ce-icar', 'ce-nchm',
+  'ce-clat', 'ce-own', 'ce-merit', 'ce-icar', 'ce-nchm', 'ce-ncet',
   'ce-gate', 'ce-cat', 'ce-jam', 'ce-net', 'ce-cuetpg', 'ce-neetpg',
 ]);
 const validCat = new Set([

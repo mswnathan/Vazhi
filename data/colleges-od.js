@@ -130,4 +130,26 @@ const COLLEGES_OD=[
     ]},
   ]},
 
+{name:'Regional Institute of Education, Bhubaneswar (NCERT)',short:'RIE Bhubaneswar',type:'Central',district:'Bhubaneswar',state:'Odisha',
+  naac:'',nirf:'',affil:'NCERT — Ministry of Education, Govt of India',website:'riebbs.ac.in',
+  streams:['Education'],
+  specialNote:'One of 5 NCERT Regional Institutes of Education nationwide. 200 total ITEP seats (50 each across 4 programmes). Admission via NCET percentile.',
+  programGroups:[
+    {stream:'Education',programs:[
+      {name:'B.Sc B.Ed — ITEP (Secondary Stage, 4 years)',exam:'NCET',examCss:'ce-ncet'},
+      {name:'B.Sc B.Ed — ITEP (Middle Stage, 4 years)',exam:'NCET',examCss:'ce-ncet'},
+      {name:'B.A B.Ed — ITEP (Secondary Stage, 4 years)',exam:'NCET',examCss:'ce-ncet'},
+      {name:'B.A B.Ed — ITEP (Middle Stage, 4 years)',exam:'NCET',examCss:'ce-ncet'},
+    ]},
+  ]},
+
+{name:'Institute of Hotel Management, Bhubaneswar',short:'IHM Bhubaneswar',type:'Central',district:'Bhubaneswar',state:'Odisha',
+  naac:'Accredited',nirf:'Central IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT) — Ministry of Tourism',website:'ihmbbs.org',
+  streams:['Management'],
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
 ];
