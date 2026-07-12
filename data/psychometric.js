@@ -552,8 +552,8 @@ const HOLLAND_CAREER_MAP = {
   'RA': ['architect', 'designer', 'animator', 'chef', 'interior-designer'],
   'AR': ['architect', 'animator', 'interior-designer', 'designer', 'footwear-designer'],
   // Realistic + Social
-  'RS': ['farmer', 'nurse', 'sports', 'pharmacist', 'defence'],
-  'SR': ['nurse', 'farmer', 'sports', 'social-work', 'pharmacist'],
+  'RS': ['farmer', 'nurse', 'sports', 'pharmacist', 'defence', 'engineer'],
+  'SR': ['nurse', 'farmer', 'sports', 'social-work', 'pharmacist', 'engineer'],
   // Realistic + Enterprising
   'RE': ['defence', 'pilot', 'sailor', 'engineer', 'chef'],
   'ER': ['defence', 'pilot', 'sailor', 'engineer', 'banker'],

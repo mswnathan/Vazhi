@@ -12,6 +12,7 @@ let psyState = {
   grade:        null,    // null | '8-10' | '11-12'
   lang:         'en',    // 'en' | 'ta'
   name:         '',      // student name (optional, used in report)
+  locked:       false,   // true during the brief delay between an answer tap and the next question rendering — blocks a second tap landing on the new question's buttons
   interestIdx:  0,
   followupQueue: [],      // flat list of follow-up question objects (with .forType added)
   followupIdx:  0,
@@ -113,6 +114,7 @@ function renderProgressDots() {
 
 // ── BACK NAVIGATION ───────────────────────────────────────────────────────────
 function psyGoBack() {
+  if (psyState.locked) return;
   const phase = psyState.phase;
   if (phase === 'interest' && psyState.interestIdx > 0) {
     const prev = psyState.interestAnswers.pop();
@@ -299,15 +301,19 @@ function renderInterestQuestion() {
 }
 
 function psyAnswerInterest(winType) {
+  if (psyState.locked) return;
+  psyState.locked = true;
   psyState.interestAnswers.push(winType);
   psyState.scores[winType]++;
   setTimeout(() => {
+    psyState.locked = false;
     psyState.interestIdx++;
     renderInterestQuestion();
   }, 180);
 }
 
 function psySkipInterest() {
+  if (psyState.locked) return;
   psyState.interestAnswers.push(null);
   psyState.interestIdx++;
   renderInterestQuestion();
@@ -405,9 +411,12 @@ function renderFollowupQuestion() {
 }
 
 function psyAnswerFollowup(forType, subtype) {
+  if (psyState.locked) return;
+  psyState.locked = true;
   psyState.followupAnswers.push({ forType });
   psyState.subtypes[forType] = subtype;
   setTimeout(() => {
+    psyState.locked = false;
     psyState.followupIdx++;
     renderFollowupQuestion();
   }, 180);
@@ -464,9 +473,12 @@ function renderSkillQuestion() {
 }
 
 function psyAnswerSkill(qId, value) {
+  if (psyState.locked) return;
+  psyState.locked = true;
   psyState.skillAnswers.push({ qId });
   psyState.skillRaw[qId] = value;
   setTimeout(() => {
+    psyState.locked = false;
     psyState.skillIdx++;
     renderSkillQuestion();
   }, 180);
@@ -516,9 +528,12 @@ function renderWorkstyleQuestion() {
 }
 
 function psyAnswerWorkstyle(typeWon) {
+  if (psyState.locked) return;
+  psyState.locked = true;
   psyState.workstyleAnswers.push(typeWon);
   psyState.workBonus[typeWon]++;
   setTimeout(() => {
+    psyState.locked = false;
     psyState.workstyleIdx++;
     renderWorkstyleQuestion();
   }, 180);
@@ -693,6 +708,7 @@ function renderPsychometricResults() {
         class9_10: c.class9_10 || null,
         class12:   c.class12   || null,
         keywords:  c.keywords  || [],
+        examNames: c.examNames || [],
       })),
       streamRec: isEarlyGrade ? {
         stream:    CLASS11_STREAM_MAP[top1],
@@ -856,7 +872,7 @@ function openCareerFromPsy(careerId) {
 
 function retakePsyTest() {
   psyState = {
-    phase:'intro', grade: null, lang: psyState.lang, name: psyState.name,
+    phase:'intro', grade: null, lang: psyState.lang, name: psyState.name, locked: false,
     interestIdx:0, followupQueue:[], followupIdx:0, skillIdx:0, workstyleIdx:0,
     scores:{ R:0, I:0, A:0, S:0, E:0, C:0 }, subtypes:{}, skills:{}, skillRaw:{},
     workBonus:{ R:0, I:0, A:0, S:0, E:0, C:0 },

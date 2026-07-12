@@ -105,13 +105,13 @@ const RP_SKILL_DESC = {
     excellent:  'Excellent — this is one of your strongest abilities.',
     good:       'Good — you handle this comfortably and reliably.',
     average:    'Developing — you manage with effort; room to grow.',
-    developing: 'Early stage — keep practising to build this skill.',
+    developing: 'Early stage — very normal at this point, and it improves quickly with practice.',
   },
   ta: {
     excellent:  'சிறந்தது — இது உங்கள் மிகவும் வலிமையான திறன்களில் ஒன்று.',
     good:       'நல்லது — வசதியாகவும் நம்பகமாகவும் செய்கிறீர்கள்.',
     average:    'வளர்ச்சியில் உள்ளது — முயற்சியுடன் சமாளிக்கிறீர்கள்.',
-    developing: 'ஆரம்ப நிலை — தொடர்ந்து பயிற்சி செய்யுங்கள்.',
+    developing: 'ஆரம்ப நிலை — இது இயல்பானது, பயிற்சியுடன் விரைவாக மேம்படும்.',
   },
 };
 
@@ -197,12 +197,13 @@ function renderReport(d, root) {
   root.innerHTML = `
     ${renderActionBar(L)}
     ${renderHeader(d, name, isAnon, p1, p2, top1, top2, L)}
+    ${renderSummaryLine(p1, p2, isTa)}
     ${renderHollandSection(p1, p2, top1, top2, d.subtypes, L, isTa)}
     ${renderRiasecBars(d.normalised, top1, top2, L)}
     ${renderSkillsSection(d.skills, L, isTa)}
     ${renderWorkstyle(d.workBonus, L, isTa)}
     ${isEarlyGrade ? renderStreamSection(d.streamRec, L, isTa) : ''}
-    ${renderCareers(d.careers, d.grade, L, isTa)}
+    ${renderCareers(d.careers, d.grade, top1, top2, L, isTa)}
     ${renderNextSteps(d.grade, top1, top2, L, isTa)}
     ${renderFooter(d, L, isTa)}
   `;
@@ -264,6 +265,18 @@ function renderHeader(d, name, isAnon, p1, p2, top1, top2, L) {
       </span>
     </div>
   </div>`;
+}
+
+// ── Summary line (one sentence, shown right below the header) ─────────────────
+function lcFirst(s) { return s ? s.charAt(0).toLowerCase() + s.slice(1) : s; }
+
+function renderSummaryLine(p1, p2, isTa) {
+  const t1 = isTa ? p1.traits_ta[0] : p1.traits_en[0];
+  const t2 = isTa ? p2.traits_ta[0] : p2.traits_en[0];
+  const line = isTa
+    ? `${t1} · ${t2} — இந்த இரு பலங்களையும் இணைக்கும் தொழில்கள் உங்களைப் போன்றவர்களுக்கு மிகவும் திருப்தி அளிக்கும்.`
+    : `You are ${lcFirst(t1)}, and ${lcFirst(t2)}. Careers that blend both strengths tend to feel the most rewarding for people like you.`;
+  return `<div class="report-summary-line">${line}</div>`;
 }
 
 // ── Section 1: Holland profile ────────────────────────────────────────────────
@@ -432,15 +445,25 @@ function renderStreamSection(streamRec, L, isTa) {
 }
 
 // ── Section 6: Careers ────────────────────────────────────────────────────────
-function renderCareers(careers, grade, L, isTa) {
+function renderCareers(careers, grade, top1, top2, L, isTa) {
   if (!careers || careers.length === 0) return '';
   const isEarlyGrade = grade === '8-10';
+  const p1 = RP_PROFILES[top1];
+  const p2 = RP_PROFILES[top2];
+  const short1 = isTa ? p1.short_ta : p1.short_en;
+  const short2 = isTa ? p2.short_ta : p2.short_en;
+  const whyLine = isTa
+    ? `இவை ஏன்? உங்கள் இரு முக்கிய பலங்களை அடிப்படையாகக் கொண்டவை — <strong>${short1}</strong> மற்றும் <strong>${short2}</strong>.`
+    : `Why these? They draw on your two top strengths — <strong>${short1}</strong> and <strong>${short2}</strong>.`;
 
   const cards = careers.slice(0,6).map(c => {
     const bc = RP_BC[c.bc] || RP_BC.accent;
     const roles = isEarlyGrade
       ? (c.class9_10 ? c.class9_10.tip : (c.class12 ? c.class12.tip : ''))
       : (c.careers || []).slice(0,3).join(' · ');
+    const examLine = (!isEarlyGrade && c.examNames && c.examNames.length)
+      ? `<div class="report-career-exams">🎯 ${(isTa ? 'தேர்வுகள்' : 'Exams')}: ${c.examNames.slice(0,3).join(' · ')}</div>`
+      : '';
 
     return `
       <div class="report-career-card" style="border-top-color:${bc.bd};background:${bc.bg}">
@@ -448,6 +471,7 @@ function renderCareers(careers, grade, L, isTa) {
         <div class="report-career-body">
           <div class="report-career-title" style="color:${bc.c}">${c.title}</div>
           <div class="report-career-roles">${roles}</div>
+          ${examLine}
           <a class="report-career-link no-print"
              href="explore.html#career-${c.id}" target="_blank">
             ${isTa ? 'Vazhi-ல் ஆராயுங்கள் →' : 'Explore on Vazhi →'}
@@ -461,6 +485,7 @@ function renderCareers(careers, grade, L, isTa) {
     <div class="report-section-title">
       ${isTa ? 'உங்களுக்கு பொருத்தமான தொழில்கள்' : 'Career Matches'}
     </div>
+    <div class="report-why-line">${whyLine}</div>
     <div class="report-career-grid">${cards}</div>
   </div>`;
 }
