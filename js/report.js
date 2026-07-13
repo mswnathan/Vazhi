@@ -218,11 +218,20 @@ function renderReport(d, root) {
 }
 
 // ── Action bar ───────────────────────────────────────────────────────────────
+// "Back to Vazhi" tries window.close() first (works when this tab was opened
+// via window.open() from the quiz results, the common case) — browsers
+// silently ignore close() on tabs they didn't script-open (direct visit,
+// bookmark, reload), so if we're still here shortly after, navigate instead.
+function backToVazhi() {
+  window.close();
+  setTimeout(() => { window.location.href = 'index.html'; }, 150);
+}
+
 function renderActionBar(L) {
   const isTa = L === 'ta';
   return `
   <div class="report-action-bar no-print">
-    <button class="btn-back" onclick="window.close()">
+    <button class="btn-back" onclick="backToVazhi()">
       ${isTa ? '← Vazhi திரும்பு' : '← Back to Vazhi'}
     </button>
     <button class="btn-print" onclick="window.print()">
