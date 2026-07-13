@@ -213,4 +213,13 @@ const COLLEGES_WB=[
     ]},
   ]},
 
+{name:'State Institute of Hotel Management, Durgapur',short:'SIHM Durgapur',type:'State',district:'Durgapur',state:'West Bengal',
+  naac:'Accredited',nirf:'State IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT), Dept of Tourism, Govt of West Bengal',website:'wbsihm.in',
+  streams:['Management'],
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
 ];

@@ -162,4 +162,55 @@ const COLLEGES_RJ=[
     ]},
   ]},
 
+{name:'State Institute of Hotel Management, Jodhpur',short:'SIHM Jodhpur',type:'State',district:'Jodhpur',state:'Rajasthan',
+  naac:'Accredited',nirf:'State IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT), Govt of Rajasthan',website:'ihmjodhpur.com',
+  streams:['Management'],
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
+{name:'State Institute of Hotel Management, Udaipur',short:'SIHM Udaipur',type:'State',district:'Udaipur',state:'Rajasthan',
+  naac:'Accredited',nirf:'State IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT), Govt of Rajasthan',website:'sihmudaipur.com',
+  streams:['Management'],
+  specialNote:'Diploma-level courses; B.Sc HHA programme running from 2019-20.',
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
+{name:'State Institute of Hotel Management, Dholpur',short:'SIHM Dholpur',type:'State',district:'Dholpur',state:'Rajasthan',
+  naac:'',nirf:'State IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT), Govt of Rajasthan',website:'sihmdholpur.com',
+  streams:['Management'],
+  specialNote:'First and only govt IHM in the Kota division. First academic session started 2023.',
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
+{name:'State Institute of Hotel Management, Jhalawar',short:'SIHM Jhalawar',type:'State',district:'Jhalawar',state:'Rajasthan',
+  naac:'',nirf:'State IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT), Govt of Rajasthan',website:'sihmjhalawar.com',
+  streams:['Management'],
+  specialNote:'Currently offers Diploma-level courses (Food & Beverage Service, Front Office Operation).',
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'Diploma in Food & Beverage Service',exam:'Merit (Class 12)',examCss:'ce-merit'},
+      {name:'Diploma in Front Office Operation',exam:'Merit (Class 12)',examCss:'ce-merit'},
+    ]},
+  ]},
+
+{name:'State Institute of Hotel Management, Sawai Madhopur',short:'SIHM Sawai Madhopur',type:'State',district:'Sawai Madhopur',state:'Rajasthan',
+  naac:'',nirf:'State IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT), Govt of Rajasthan',website:'sihmsawaimadhopur.com',
+  streams:['Management'],
+  specialNote:'First academic session started 2023. Currently offers Diploma-level courses only (Front Office, Food & Beverage Service).',
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'Diploma in Front Office Operation',exam:'Merit (Class 12)',examCss:'ce-merit'},
+      {name:'Diploma in Food & Beverage Service',exam:'Merit (Class 12)',examCss:'ce-merit'},
+    ]},
+  ]},
+
 ];

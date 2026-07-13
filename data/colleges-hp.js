@@ -133,4 +133,22 @@ const COLLEGES_HP=[
     ]},
   ]},
 
+{name:'State Institute of Hotel Management, Hamirpur',short:'SIHM Hamirpur',type:'State',district:'Hamirpur',state:'Himachal Pradesh',
+  naac:'Accredited',nirf:'State IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT), Govt of Himachal Pradesh',website:'ihmhamirpur.in',
+  streams:['Management'],
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
+{name:'State Institute of Hotel Management, Dharamshala',short:'SIHM Dharamshala',type:'State',district:'Kangra',state:'Himachal Pradesh',
+  naac:'Accredited',nirf:'State IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT), Dept of Tourism & Civil Aviation, Govt of Himachal Pradesh',website:'sihmdharamshala.org',
+  streams:['Management'],
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
 ];

@@ -213,4 +213,13 @@ const COLLEGES_KL=[
     ]},
   ]},
 
+{name:'State Institute of Hospitality Management, Kozhikode',short:'SIHM Kozhikode',type:'State',district:'Kozhikode',state:'Kerala',
+  naac:'Accredited',nirf:'State IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT), Govt of Kerala',website:'sihmkerala.org',
+  streams:['Management'],
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
 ];

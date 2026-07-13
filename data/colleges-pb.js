@@ -163,4 +163,13 @@ const COLLEGES_PB=[
     ]},
   ]},
 
+{name:'Institute of Hotel Management, Catering Technology & Applied Nutrition, Bathinda',short:'IHM Bathinda',type:'State',district:'Bathinda',state:'Punjab',
+  naac:'Accredited',nirf:'State IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT), Dept of Tourism, Govt of Punjab',website:'ihmbti.com',
+  streams:['Management'],
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
 ];

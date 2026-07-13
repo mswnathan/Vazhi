@@ -332,6 +332,15 @@ const COLLEGES_DL=[
     ]},
   ]},
 
+{name:'Delhi Institute of Hotel Management & Catering Technology',short:'DIHM Delhi',type:'State',district:'Lajpat Nagar',state:'Delhi',
+  naac:'Accredited',nirf:'State IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT), jointly sponsored with Govt of Delhi',website:'dihmct.in',
+  streams:['Management'],
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
 {name:'Institute of Hotel Management, Catering & Nutrition, Pusa',short:'IHM Pusa',type:'Central',district:'New Delhi',state:'Delhi',
   naac:'Accredited',nirf:'Central IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT) — Ministry of Tourism',website:'ihmpusa.net',
   streams:['Management'],

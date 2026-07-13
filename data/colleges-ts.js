@@ -209,4 +209,23 @@ const COLLEGES_TS=[
     ]},
   ]},
 
+{name:'Telangana State Institute of Hotel Management',short:'TSIHM Zaheerabad',type:'State',district:'Sangareddy',state:'Telangana',
+  naac:'Accredited',nirf:'State IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT), Govt of Telangana',website:'tsihm.ac.in',
+  streams:['Management'],
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
+{name:'Dr. YSR National Institute of Tourism & Hospitality Management',short:'NITHM Hyderabad',type:'State',district:'Hyderabad',state:'Telangana',
+  naac:'',nirf:'State IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT), Govt of Telangana',website:'nithm.ac.in',
+  streams:['Management'],
+  specialNote:'Also offers BBA and full MBA programmes in Tourism & Hospitality beyond the standard B.Sc HHA track.',
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
 ];

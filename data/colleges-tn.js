@@ -248,6 +248,15 @@ const COLLEGES=[
     ]},
   ]},
 
+{name:'State Institute of Hotel Management & Catering Technology, Tiruchirappalli',short:'SIHM Trichy',type:'State',district:'Trichy',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'State IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT), Govt of Tamil Nadu',website:'sihmct.org',
+  streams:['Management'],
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
 {name:'Government Law College, Tirunelveli',short:'GLC Tirunelveli',type:'State',district:'Tirunelveli',state:'Tamil Nadu',
   naac:'Accredited',nirf:'Law TN',affil:'The Tamil Nadu Dr. Ambedkar Law University',website:'tnadalu.ac.in',
   streams:['Law'],
@@ -1670,6 +1679,15 @@ const COLLEGES=[
       {name:'B.A (Tamil, English, History, Economics)',exam:'CENTAC Puducherry',examCss:'ce-own'},
       {name:'B.Sc (Physics, Chemistry, Maths, Computer Science, Home Science)',exam:'CENTAC Puducherry',examCss:'ce-own'},
       {name:'B.Com',exam:'CENTAC Puducherry',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'Pondicherry Institute of Hotel Management & Catering Technology',short:'PIHMCT',type:'State',district:'Puducherry',state:'Puducherry',
+  naac:'Accredited',nirf:'State IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT), Govt of Puducherry',website:'pihmct.py.gov.in',
+  streams:['Management'],
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
     ]},
   ]},
 

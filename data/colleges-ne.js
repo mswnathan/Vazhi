@@ -284,4 +284,31 @@ const COLLEGES_NE=[
     ]},
   ]},
 
+{name:'Institute of Hotel Management, Gangtok',short:'IHM Gangtok',type:'State',district:'Gangtok',state:'Sikkim',
+  naac:'Accredited',nirf:'State IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT), Govt of Sikkim',website:'ihmgangtok.com',
+  streams:['Management'],
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
+{name:'State Institute of Hotel Management, Dimapur',short:'SIHM Dimapur',type:'State',district:'Dimapur',state:'Nagaland',
+  naac:'Accredited',nirf:'State IHM (PPP)',affil:'National Council for Hotel Management & Catering Technology (NCHMCT), PPP mode — Trade Promotion Council of India + Govt of Nagaland',website:'sihmdimapur.com',
+  streams:['Management'],
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
+{name:'State Institute of Hotel Management, Agartala',short:'SIHM Agartala',type:'State',district:'West Tripura',state:'Tripura',
+  naac:'Accredited',nirf:'State IHM (PPP)',affil:'National Council for Hotel Management & Catering Technology (NCHMCT), PPP mode — Govt of Tripura',website:'sihmtripura.in',
+  streams:['Management'],
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
 ];

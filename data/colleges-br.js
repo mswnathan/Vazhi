@@ -164,4 +164,13 @@ const COLLEGES_BR=[
     ]},
   ]},
 
+{name:'State Institute of Hotel Management, Bodh Gaya',short:'SIHM Gaya',type:'State',district:'Gaya',state:'Bihar',
+  naac:'Accredited',nirf:'State IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT), Dept of Tourism, Govt of Bihar',website:'ihmbodhgaya.com',
+  streams:['Management'],
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
 ];

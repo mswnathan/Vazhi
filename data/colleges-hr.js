@@ -121,4 +121,50 @@ const COLLEGES_HR=[
     ]},
   ]},
 
+{name:'Institute of Hotel Management, Catering Technology & Applied Nutrition, Kurukshetra',short:'IHM Kurukshetra',type:'State',district:'Kurukshetra',state:'Haryana',
+  naac:'Accredited',nirf:'State IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT), Govt of Haryana',website:'ihmkkr.com',
+  streams:['Management'],
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
+{name:'Institute of Hotel Management, Faridabad',short:'IHM Faridabad',type:'State',district:'Faridabad',state:'Haryana',
+  naac:'Accredited',nirf:'State IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT), Govt of Haryana',website:'ihmfaridabad.com',
+  streams:['Management'],
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
+{name:'State Institute of Hotel Management, Rohtak',short:'SIHM Rohtak',type:'State',district:'Rohtak',state:'Haryana',
+  naac:'Accredited',nirf:'State IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT), Govt of Haryana',website:'ihmrohtak.com',
+  streams:['Management'],
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
+{name:'Institute of Hotel Management, Catering Technology & Applied Nutrition, Panipat',short:'IHM Panipat',type:'State',district:'Panipat',state:'Haryana',
+  naac:'Accredited',nirf:'State IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT), Govt of Haryana',website:'ihmpanipat.com',
+  streams:['Management'],
+  specialNote:'First hotel management college in Haryana (est. 1973).',
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
+{name:'Institute of Hotel Management, Catering Technology & Applied Nutrition, Yamuna Nagar',short:'IHM Yamuna Nagar',type:'State',district:'Yamuna Nagar',state:'Haryana',
+  naac:'Accredited',nirf:'State IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT), Govt of Haryana',website:'ihmyamunanagar.com',
+  streams:['Management'],
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
 ];

@@ -266,4 +266,14 @@ const COLLEGES_MH=[
     ]},
   ]},
 
+{name:'Swami Samartha Maharashtra Institute of Hotel Management',short:'SIHM Solapur',type:'State',district:'Solapur',state:'Maharashtra',
+  naac:'',nirf:'State IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT), Govt of Maharashtra',website:'nchm.gov.in',
+  streams:['Management'],
+  specialNote:'No dedicated institute website found — nchm.gov.in listing used as the reference link; re-verify before publishing.',
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
 ];

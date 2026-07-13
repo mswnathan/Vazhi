@@ -92,4 +92,22 @@ const COLLEGES_UK=[
     ]},
   ]},
 
+{name:'Institute of Hotel Management, Catering Technology & Applied Nutrition, Dehradun',short:'IHM Dehradun',type:'State',district:'Dehradun',state:'Uttarakhand',
+  naac:'Accredited',nirf:'State IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT), Govt of Uttarakhand',website:'ihmddn.com',
+  streams:['Management'],
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
+{name:'State Institute of Hotel Management, Ramnagar',short:'SIHM Ramnagar',type:'State',district:'Nainital',state:'Uttarakhand',
+  naac:'Accredited',nirf:'State IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT), Govt of Uttarakhand',website:'ihmramnagar.com',
+  streams:['Management'],
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
 ];

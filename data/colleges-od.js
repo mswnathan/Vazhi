@@ -152,4 +152,13 @@ const COLLEGES_OD=[
     ]},
   ]},
 
+{name:'State Institute of Hotel Management, Balangir',short:'SIHM Balangir',type:'State',district:'Balangir',state:'Odisha',
+  naac:'Accredited',nirf:'State IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT), Dept of Tourism, Govt of Odisha',website:'sihmbalangir.org',
+  streams:['Management'],
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
 ];

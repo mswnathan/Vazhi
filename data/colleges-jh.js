@@ -104,4 +104,14 @@ const COLLEGES_JH=[
     ]},
   ]},
 
+{name:'Institute of Hotel Management, Ranchi',short:'IHM Ranchi',type:'State',district:'Ranchi',state:'Jharkhand',
+  naac:'Accredited',nirf:'State IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT), Dept of Tourism, Govt of Jharkhand',website:'ihmranchi.in',
+  streams:['Management'],
+  specialNote:'First and only NCHMCT-affiliated hotel management institute in Jharkhand (est. 2019).',
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
 ];

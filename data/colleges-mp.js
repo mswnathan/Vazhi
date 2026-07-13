@@ -222,4 +222,22 @@ const COLLEGES_MP=[
     ]},
   ]},
 
+{name:'State Institute of Hotel Management, Indore',short:'SIHM Indore',type:'State',district:'Indore',state:'Madhya Pradesh',
+  naac:'Accredited',nirf:'State IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT), Madhya Pradesh Tourism',website:'sihmind.mp.gov.in',
+  streams:['Management'],
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
+{name:'State Institute of Hotel Management, Jabalpur',short:'SIHM Jabalpur',type:'State',district:'Jabalpur',state:'Madhya Pradesh',
+  naac:'Accredited',nirf:'State IHM',affil:'National Council for Hotel Management & Catering Technology (NCHMCT), Madhya Pradesh Tourism',website:'sihmjbp.mp.gov.in',
+  streams:['Management'],
+  programGroups:[
+    {stream:'Hospitality & Hotel Management',programs:[
+      {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
 ];
