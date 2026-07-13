@@ -63,7 +63,7 @@
   --font-tamil: 'Noto Sans Tamil', sans-serif;
 }
 
-*{box-sizing:border-box;margin:0;padding:0}
+*{box-sizing:border-box;margin:0;padding:0;touch-action:manipulation}
 html{scroll-behavior:smooth}
 body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-size:15px;line-height:1.6;min-height:100vh}
 
@@ -635,13 +635,17 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-si
     overflow-x:auto;
     -webkit-overflow-scrolling:touch;
     scroll-snap-type:x proximity;
-    /* fade the right edge as a "more tabs →" affordance */
-    -webkit-mask-image:linear-gradient(to right,#000 calc(100% - 22px),transparent);
-    mask-image:linear-gradient(to right,#000 calc(100% - 22px),transparent);
     padding-bottom:2px;
   }
-  /* keep the last tab reachable past the fade */
-  .tab-nav::after{content:"";flex:0 0 14px}
+  /* Right-edge fade + trailing spacer are a "more tabs →" affordance —
+     applied only when JS (js/app.js updateTabNavScrollState) has confirmed
+     the tabs actually overflow. Applying it unconditionally washed out the
+     tail of the last tab (e.g. "After UG") even when it fully fit. */
+  .tab-nav--scrollable{
+    -webkit-mask-image:linear-gradient(to right,#000 calc(100% - 22px),transparent);
+    mask-image:linear-gradient(to right,#000 calc(100% - 22px),transparent);
+  }
+  .tab-nav--scrollable::after{content:"";flex:0 0 24px}
   .tab-btn{padding:5px 12px;font-size:12px;scroll-snap-align:start}
   .hero{padding:0 1rem}
   .hero-h1{font-size:22px}

@@ -72,6 +72,26 @@ function switchTab(t){
   if(colTab) colTab.classList.toggle('active',showCollegesDiv);
 }
 
+// ── TAB-NAV OVERFLOW STATE ──
+// The right-edge fade + trailing spacer (css/vazhi.css .tab-nav) are a
+// "scroll for more" affordance for narrow phones. They must only apply
+// when the tabs genuinely don't fit — otherwise the fade washes out the
+// tail of the last real tab (e.g. "After UG") even though it's fully
+// visible and nothing needs scrolling.
+function updateTabNavScrollState(){
+  const nav=document.querySelector('.tab-nav');
+  if(!nav) return;
+  const btns=nav.querySelectorAll('.tab-btn');
+  if(!btns.length) return;
+  const gap=parseFloat(getComputedStyle(nav).gap)||0;
+  let contentWidth=0;
+  btns.forEach(b=>{contentWidth+=b.getBoundingClientRect().width;});
+  contentWidth+=gap*(btns.length-1);
+  nav.classList.toggle('tab-nav--scrollable',contentWidth>nav.clientWidth+1);
+}
+window.addEventListener('load',updateTabNavScrollState);
+window.addEventListener('resize',updateTabNavScrollState);
+
 // ── FIND MY PATH SUB-MODES ──
 function setFindMode(mode){
   findMode=mode;

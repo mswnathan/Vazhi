@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Tamil:wght@600;700&display=swap" rel="stylesheet">
 <style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; touch-action: manipulation; }
 
 body {
   font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
@@ -305,6 +305,7 @@ body {
 .nav-drawer-item{display:flex;align-items:center;gap:10px;width:100%;text-align:left;background:none;border:none;padding:12px 18px;font-size:14px;color:#2d3748;cursor:pointer;transition:background .15s;text-decoration:none}
 .nav-drawer-item:hover{background:#f7f5ef}
 .nav-drawer-item.active{background:#FFF3E8;color:#A83E00;font-weight:600}
+.nav-drawer-sep{border-top:1px solid #e2e8f0;margin:6px 0}
 </style>
 </head>
 <body>
@@ -329,12 +330,15 @@ body {
   <a class="nav-drawer-item" href="explore.html#find">🔍 Search a Career</a>
   <a class="nav-drawer-item" href="explore.html#courses">📚 What Next?</a>
   <a class="nav-drawer-item" href="explore.html#after-ug">🎓 After UG</a>
+  <div class="nav-drawer-sep" role="separator"></div>
   <a class="nav-drawer-item" href="explore.html#psychometric">🧠 Know Yourself</a>
   <a class="nav-drawer-item" href="explore.html#scholarships">💰 Scholarships</a>
   <a class="nav-drawer-item" href="explore.html#internships">🌐 Internships</a>
   <a class="nav-drawer-item" href="explore.html#market">📈 Salaries &amp; Trends</a>
   <a class="nav-drawer-item active" href="exam-reference.html">📊 Exam Landscape</a>
+  <div class="nav-drawer-sep" role="separator"></div>
   <a class="nav-drawer-item" href="dashboard.html">📋 My Dashboard</a>
+  <a class="nav-drawer-item" href="about.html">ℹ️ About Vazhi</a>
 </aside>
 
 <div class="page-intro">
