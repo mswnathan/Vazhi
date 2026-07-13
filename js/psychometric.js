@@ -113,28 +113,24 @@ function renderProgressDots() {
 }
 
 // ── BACK NAVIGATION ───────────────────────────────────────────────────────────
+// Going back only moves the index — it does NOT discard the previous answer.
+// The render functions below highlight that stored answer as `.selected`, and
+// the answer functions overwrite it in place (with the correct score delta) if
+// the student re-taps a different option, rather than pushing a duplicate entry.
 function psyGoBack() {
   if (psyState.locked) return;
   const phase = psyState.phase;
   if (phase === 'interest' && psyState.interestIdx > 0) {
-    const prev = psyState.interestAnswers.pop();
     psyState.interestIdx--;
-    if (prev !== null) psyState.scores[prev]--;
     renderInterestQuestion();
   } else if (phase === 'followup' && psyState.followupIdx > 0) {
-    const prev = psyState.followupAnswers.pop();
     psyState.followupIdx--;
-    if (prev) delete psyState.subtypes[prev.forType];
     renderFollowupQuestion();
   } else if (phase === 'skills' && psyState.skillIdx > 0) {
-    const prev = psyState.skillAnswers.pop();
     psyState.skillIdx--;
-    if (prev) delete psyState.skillRaw[prev.qId];
     renderSkillQuestion();
   } else if (phase === 'workstyle' && psyState.workstyleIdx > 0) {
-    const prev = psyState.workstyleAnswers.pop();
     psyState.workstyleIdx--;
-    if (prev !== null) psyState.workBonus[prev]--;
     renderWorkstyleQuestion();
   }
 }
@@ -264,6 +260,7 @@ function renderInterestQuestion() {
   const questions = psyState.grade === '8-10' ? INTEREST_QUESTIONS_8_10 : INTEREST_QUESTIONS_11_12;
   const q = questions[idx];
   const L = psyState.lang;
+  const prevAnswer = psyState.interestAnswers[idx];
   const prompt = L === 'en'
     ? 'Which would you enjoy more?'
     : 'எது உங்களுக்கு அதிகமாக பிடிக்கும்?';
@@ -282,12 +279,12 @@ function renderInterestQuestion() {
     <p class="psy-choice-prompt">${prompt}</p>
     <p class="psy-q-sub">${sub}</p>
     <div class="psy-choice-btns">
-      <button class="psy-choice-btn" onclick="psyAnswerInterest('${q.a.type}')">
+      <button class="psy-choice-btn${prevAnswer === q.a.type ? ' selected' : ''}" onclick="psyAnswerInterest('${q.a.type}')">
         <span class="psy-choice-label">A</span>
         <span class="psy-choice-text">${L === 'ta' && q.a.text_ta ? `<span class="psy-ta">${q.a.text_ta}</span><span class="psy-en-sub">${q.a.text}</span>` : q.a.text}</span>
       </button>
       <div class="psy-choice-or">${orWord}</div>
-      <button class="psy-choice-btn" onclick="psyAnswerInterest('${q.b.type}')">
+      <button class="psy-choice-btn${prevAnswer === q.b.type ? ' selected' : ''}" onclick="psyAnswerInterest('${q.b.type}')">
         <span class="psy-choice-label">B</span>
         <span class="psy-choice-text">${L === 'ta' && q.b.text_ta ? `<span class="psy-ta">${q.b.text_ta}</span><span class="psy-en-sub">${q.b.text}</span>` : q.b.text}</span>
       </button>
@@ -303,7 +300,14 @@ function renderInterestQuestion() {
 function psyAnswerInterest(winType) {
   if (psyState.locked) return;
   psyState.locked = true;
-  psyState.interestAnswers.push(winType);
+  const idx = psyState.interestIdx;
+  const prevAnswer = psyState.interestAnswers[idx];
+  if (prevAnswer !== undefined) {
+    if (prevAnswer !== null) psyState.scores[prevAnswer]--;
+    psyState.interestAnswers[idx] = winType;
+  } else {
+    psyState.interestAnswers.push(winType);
+  }
   psyState.scores[winType]++;
   setTimeout(() => {
     psyState.locked = false;
@@ -314,7 +318,14 @@ function psyAnswerInterest(winType) {
 
 function psySkipInterest() {
   if (psyState.locked) return;
-  psyState.interestAnswers.push(null);
+  const idx = psyState.interestIdx;
+  const prevAnswer = psyState.interestAnswers[idx];
+  if (prevAnswer !== undefined) {
+    if (prevAnswer !== null) psyState.scores[prevAnswer]--;
+    psyState.interestAnswers[idx] = null;
+  } else {
+    psyState.interestAnswers.push(null);
+  }
   psyState.interestIdx++;
   renderInterestQuestion();
 }
@@ -390,6 +401,7 @@ function renderFollowupQuestion() {
   const q = psyState.followupQueue[idx];
   const L = psyState.lang;
   const total = psyState.followupQueue.length;
+  const prevAnswer = psyState.followupAnswers[idx];
 
   psyEl().innerHTML = `
 <div class="psycho-wrap psycho-test-wrap">
@@ -401,7 +413,7 @@ function renderFollowupQuestion() {
     <p class="psy-choice-prompt">${q.q}</p>
     <div class="psy-fu-options">
       ${q.options.map(opt => `
-        <button class="psy-fu-option" onclick="psyAnswerFollowup('${q.forType}','${opt.subtype}')">
+        <button class="psy-fu-option${prevAnswer && prevAnswer.subtype === opt.subtype ? ' selected' : ''}" onclick="psyAnswerFollowup('${q.forType}','${opt.subtype}')">
           ${opt.text}
         </button>`).join('')}
     </div>
@@ -413,7 +425,12 @@ function renderFollowupQuestion() {
 function psyAnswerFollowup(forType, subtype) {
   if (psyState.locked) return;
   psyState.locked = true;
-  psyState.followupAnswers.push({ forType });
+  const idx = psyState.followupIdx;
+  if (psyState.followupAnswers[idx] !== undefined) {
+    psyState.followupAnswers[idx] = { forType, subtype };
+  } else {
+    psyState.followupAnswers.push({ forType, subtype });
+  }
   psyState.subtypes[forType] = subtype;
   setTimeout(() => {
     psyState.locked = false;
@@ -447,6 +464,7 @@ function renderSkillQuestion() {
   const L = psyState.lang;
   const labels = SKILL_LABELS[L] || SKILL_LABELS.en;
   const qText  = L === 'en' ? q.q_en : q.q_ta;
+  const prevValue = psyState.skillRaw[q.id];
   const prompt = L === 'en'
     ? 'How would you honestly rate yourself at this?'
     : 'இதில் நீங்கள் உங்களை எவ்வாறு மதிப்பிடுவீர்கள்?';
@@ -462,7 +480,7 @@ function renderSkillQuestion() {
     <p class="psy-skill-activity">${qText}</p>
     <div class="psy-skill-anchors">
       ${labels.map((lbl, i) => `
-        <button class="psy-anchor-btn" onclick="psyAnswerSkill('${q.id}', ${i})">
+        <button class="psy-anchor-btn${prevValue === i ? ' selected' : ''}" onclick="psyAnswerSkill('${q.id}', ${i})">
           <span class="psy-anchor-dot"></span>
           <span class="psy-anchor-text">${lbl}</span>
         </button>`).join('')}
@@ -475,7 +493,8 @@ function renderSkillQuestion() {
 function psyAnswerSkill(qId, value) {
   if (psyState.locked) return;
   psyState.locked = true;
-  psyState.skillAnswers.push({ qId });
+  const idx = psyState.skillIdx;
+  if (psyState.skillAnswers[idx] === undefined) psyState.skillAnswers.push({ qId });
   psyState.skillRaw[qId] = value;
   setTimeout(() => {
     psyState.locked = false;
@@ -496,6 +515,7 @@ function renderWorkstyleQuestion() {
   const L = psyState.lang;
   const optA   = L === 'en' ? q.en_a : q.ta_a;
   const optB   = L === 'en' ? q.en_b : q.ta_b;
+  const prevAnswer = psyState.workstyleAnswers[idx];
   const prompt = L === 'en' ? 'Which appeals more to you?' : 'உங்களுக்கு எது அதிகமாக ஈர்க்கிறது?';
   const sub    = L === 'en'
     ? 'Pick whichever feels more like you — even if both partially fit.'
@@ -512,12 +532,12 @@ function renderWorkstyleQuestion() {
     <p class="psy-choice-prompt">${prompt}</p>
     <p class="psy-q-sub">${sub}</p>
     <div class="psy-choice-btns">
-      <button class="psy-choice-btn" onclick="psyAnswerWorkstyle('${q.typeA}')">
+      <button class="psy-choice-btn${prevAnswer === q.typeA ? ' selected' : ''}" onclick="psyAnswerWorkstyle('${q.typeA}')">
         <span class="psy-choice-label">A</span>
         <span class="psy-choice-text">${optA}</span>
       </button>
       <div class="psy-choice-or">${orWord}</div>
-      <button class="psy-choice-btn" onclick="psyAnswerWorkstyle('${q.typeB}')">
+      <button class="psy-choice-btn${prevAnswer === q.typeB ? ' selected' : ''}" onclick="psyAnswerWorkstyle('${q.typeB}')">
         <span class="psy-choice-label">B</span>
         <span class="psy-choice-text">${optB}</span>
       </button>
@@ -530,7 +550,14 @@ function renderWorkstyleQuestion() {
 function psyAnswerWorkstyle(typeWon) {
   if (psyState.locked) return;
   psyState.locked = true;
-  psyState.workstyleAnswers.push(typeWon);
+  const idx = psyState.workstyleIdx;
+  const prevAnswer = psyState.workstyleAnswers[idx];
+  if (prevAnswer !== undefined) {
+    psyState.workBonus[prevAnswer]--;
+    psyState.workstyleAnswers[idx] = typeWon;
+  } else {
+    psyState.workstyleAnswers.push(typeWon);
+  }
   psyState.workBonus[typeWon]++;
   setTimeout(() => {
     psyState.locked = false;
@@ -571,6 +598,7 @@ function renderPsychometricResults() {
   const L    = psyState.lang;
   const top1 = sorted[0][0];
   const top2 = sorted[1][0];
+  const top3 = sorted[2][0];
   const code = top1 + top2;
 
   const p1 = RIASEC_PROFILES[top1];
@@ -632,14 +660,36 @@ function renderPsychometricResults() {
     'C-finance':'நிதி & கணக்கு','C-data':'தரவு மேலாண்மை','C-admin':'நிர்வாகம் & இயக்கம்','C-compliance':'இணக்கம் & தர உறுதி',
   };
   const map = L === 'en' ? subtypeMap : subtypeMapTa;
-  let subtypeHTML = '';
-  if (sub1 || sub2) {
-    const chips = [sub1, sub2].filter(Boolean).map(s =>
-      `<span class="psy-subtype-chip">${map[s] || s}</span>`
-    ).join('');
-    const heading = L === 'en' ? 'Your profile leans toward' : 'உங்கள் சுயவிவரம் இந்த திசையில் சாய்கிறது';
-    subtypeHTML = `<div class="psy-subtype-row"><span class="psy-subtype-heading">${heading}:</span>${chips}</div>`;
-  }
+
+  // Top-3 fits — best fit first, then the next two runner-ups, each with its
+  // % score. Only the top 2 types get a refined subtype (from the follow-up
+  // section); the 3rd shows the plain RIASEC dimension name.
+  const top3Types = [top1, top2, top3];
+  const top3Subs  = [sub1, sub2, null];
+  const fitLabel  = [
+    L === 'en' ? 'Best fit' : 'சிறந்த பொருத்தம்',
+    L === 'en' ? 'Also strong' : 'மற்றொரு பலம்',
+    L === 'en' ? 'Also strong' : 'மற்றொரு பலம்',
+  ];
+  const subtypeHTML = `
+    <div class="psy-top3-row">
+      <span class="psy-subtype-heading">${L === 'en' ? 'Your top fits' : 'உங்கள் சிறந்த பொருத்தங்கள்'}</span>
+      <div class="psy-top3-list">
+        ${top3Types.map((t, i) => {
+          const prof = RIASEC_PROFILES[t];
+          const sub  = top3Subs[i];
+          return `
+          <div class="psy-top3-item${i === 0 ? ' psy-top3-best' : ''}">
+            <span class="psy-top3-icon">${prof.icon}</span>
+            <span class="psy-top3-body">
+              <span class="psy-top3-name">${typeLabels[t][L]}${sub ? ` · ${map[sub] || sub}` : ''}</span>
+              <span class="psy-top3-fitlabel">${fitLabel[i]}</span>
+            </span>
+            <span class="psy-top3-pct">${normalised[t]}%</span>
+          </div>`;
+        }).join('')}
+      </div>
+    </div>`;
 
   // Skills aptitude bars
   const domainLabels = {

@@ -198,7 +198,7 @@ function renderReport(d, root) {
     ${renderActionBar(L)}
     ${renderHeader(d, name, isAnon, p1, p2, top1, top2, L)}
     ${renderSummaryLine(p1, p2, isTa)}
-    ${renderHollandSection(p1, p2, top1, top2, d.subtypes, L, isTa)}
+    ${renderHollandSection(p1, p2, top1, top2, d.subtypes, d.normalised, L, isTa)}
     ${renderRiasecBars(d.normalised, top1, top2, L)}
     ${renderSkillsSection(d.skills, L, isTa)}
     ${renderWorkstyle(d.workBonus, L, isTa)}
@@ -280,7 +280,7 @@ function renderSummaryLine(p1, p2, isTa) {
 }
 
 // ── Section 1: Holland profile ────────────────────────────────────────────────
-function renderHollandSection(p1, p2, top1, top2, subtypes, L, isTa) {
+function renderHollandSection(p1, p2, top1, top2, subtypes, normalised, L, isTa) {
   const traits1 = isTa ? p1.traits_ta : p1.traits_en;
   const traits2 = isTa ? p2.traits_ta : p2.traits_en;
   const allTraits = [...traits1.slice(0,3), ...traits2.slice(0,2)];
@@ -288,12 +288,48 @@ function renderHollandSection(p1, p2, top1, top2, subtypes, L, isTa) {
   const smap = isTa ? RP_SUBTYPE_MAP.ta : RP_SUBTYPE_MAP.en;
   const sub1 = subtypes && subtypes[top1] ? smap[subtypes[top1]] : null;
   const sub2 = subtypes && subtypes[top2] ? smap[subtypes[top2]] : null;
-  const subtypeRow = (sub1 || sub2) ? `
-    <div class="report-subtype-row">
-      <span class="report-subtype-lbl">${isTa ? 'உங்கள் சுயவிவரம் சாய்கிறது:' : 'Your profile leans toward:'}</span>
-      ${sub1 ? `<span class="report-subtype-chip">${sub1}</span>` : ''}
-      ${sub2 ? `<span class="report-subtype-chip">${sub2}</span>` : ''}
-    </div>` : '';
+
+  // Top-3 fits — best fit + 2 runner-ups, each with its % score. Only top1/top2
+  // have a refined subtype (from the follow-up section); #3 shows the plain
+  // RIASEC dimension name.
+  const typeShortNames = { en:{}, ta:{} };
+  Object.keys(RP_PROFILES).forEach(t => {
+    typeShortNames.en[t] = RP_PROFILES[t].name_en.split(' — ')[0];
+    typeShortNames.ta[t] = RP_PROFILES[t].name_ta.split(' — ')[0];
+  });
+  const names = isTa ? typeShortNames.ta : typeShortNames.en;
+  let top3 = null;
+  if (normalised) {
+    top3 = Object.entries(normalised).sort((a, b) => b[1] - a[1])
+      .map(e => e[0]).filter(t => t !== top1 && t !== top2)[0] || null;
+  }
+  const top3Types = top3 ? [top1, top2, top3] : [top1, top2];
+  const top3Subs  = [sub1, sub2, null];
+  const fitLabel  = [
+    isTa ? 'சிறந்த பொருத்தம்' : 'Best fit',
+    isTa ? 'மற்றொரு பலம்'   : 'Also strong',
+    isTa ? 'மற்றொரு பலம்'   : 'Also strong',
+  ];
+  const subtypeRow = `
+    <div class="report-top3-row">
+      <span class="report-subtype-lbl">${isTa ? 'உங்கள் சிறந்த பொருத்தங்கள்:' : 'Your top fits:'}</span>
+      <div class="report-top3-list">
+        ${top3Types.map((t, i) => {
+          const prof = RP_PROFILES[t];
+          const sub  = top3Subs[i];
+          const pct  = normalised ? normalised[t] : null;
+          return `
+          <div class="report-top3-item${i === 0 ? ' report-top3-best' : ''}">
+            <span class="report-top3-icon">${prof.icon}</span>
+            <span class="report-top3-body">
+              <span class="report-top3-name">${names[t]}${sub ? ` · ${sub}` : ''}</span>
+              <span class="report-top3-fitlabel">${fitLabel[i]}</span>
+            </span>
+            ${pct != null ? `<span class="report-top3-pct">${pct}%</span>` : ''}
+          </div>`;
+        }).join('')}
+      </div>
+    </div>`;
 
   return `
   <div class="report-section">

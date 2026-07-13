@@ -1472,6 +1472,11 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-si
 }
 .psycho-test-wrap   { padding-top: 1rem; }
 .psycho-results-wrap { padding-top: 1rem; }
+/* Mobile browsers defer the click event ~300ms after touchend to check for a
+   double-tap-to-zoom gesture. Our quiz re-renders the next question at 180ms,
+   so that deferred click can land on the new question's button in the same
+   screen position — this removes the delay so tap = click immediately. */
+.psycho-wrap button { touch-action: manipulation; }
 
 /* ── Language toggle bar ── */
 .psy-lang-bar { display: flex; justify-content: flex-end; margin-bottom: 1rem; }
@@ -1861,6 +1866,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-si
 }
 .psy-choice-btn:hover { border-color: var(--brand); background: var(--brand-bg); }
 .psy-choice-btn:active { transform: scale(0.98); }
+.psy-choice-btn.selected { border-color: var(--brand); background: var(--brand-bg); }
 .psy-choice-label {
   min-width: 24px; height: 24px; border-radius: 50%;
   background: var(--brand); color: #fff;
@@ -1891,6 +1897,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-si
 }
 .psy-fu-option:hover  { border-color: var(--brand); background: var(--brand-bg); color: var(--brand); }
 .psy-fu-option:active { transform: scale(0.98); }
+.psy-fu-option.selected { border-color: var(--brand); background: var(--brand-bg); color: var(--brand); font-weight: 600; }
 
 /* ── Skills card ── */
 .psy-skill-card {
@@ -1914,6 +1921,8 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-si
 }
 .psy-anchor-btn:hover { border-color: var(--brand); background: var(--brand-bg); }
 .psy-anchor-btn:active { transform: scale(0.98); }
+.psy-anchor-btn.selected { border-color: var(--brand); background: var(--brand-bg); }
+.psy-anchor-btn.selected .psy-anchor-dot { background: var(--brand); border-color: var(--brand); }
 .psy-anchor-dot {
   width: 10px; height: 10px; border-radius: 50%;
   border: 2px solid var(--text3); flex-shrink: 0;
@@ -1943,17 +1952,26 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-si
 }
 .psy-transition-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(212,88,10,0.4); }
 
-/* ── Subtype refinement ── */
-.psy-subtype-row {
-  display: flex; align-items: center; flex-wrap: wrap; gap: 8px;
+/* ── Top-3 fits (best fit + 2 runner-ups, each with a % score) ── */
+.psy-top3-row {
   margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--border);
 }
 .psy-subtype-heading { font-size: 12px; color: var(--text3); font-weight: 600; }
-.psy-subtype-chip {
-  padding: 4px 12px; background: var(--brand-bg); color: var(--brand);
-  border-radius: 20px; font-size: 12px; font-weight: 700;
-  border: 1px solid var(--brand-border);
+.psy-top3-list { display: flex; flex-direction: column; gap: 8px; margin-top: 0.6rem; }
+.psy-top3-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 12px; border-radius: 10px;
+  background: var(--surface2); border: 1px solid var(--border);
 }
+.psy-top3-item.psy-top3-best {
+  background: var(--brand-bg); border-color: var(--brand-border);
+}
+.psy-top3-icon { font-size: 1.1rem; flex-shrink: 0; }
+.psy-top3-body { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+.psy-top3-name { font-size: 13px; font-weight: 700; color: var(--text); }
+.psy-top3-fitlabel { font-size: 11px; color: var(--text3); }
+.psy-top3-best .psy-top3-fitlabel { color: var(--brand); font-weight: 600; }
+.psy-top3-pct { font-size: 13px; font-weight: 800; color: var(--brand); flex-shrink: 0; }
 
 /* ── Skills aptitude bars (results) ── */
 .psy-skills-section {

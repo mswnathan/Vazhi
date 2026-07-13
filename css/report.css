@@ -231,24 +231,24 @@ body {
   margin-top: 1px;
 }
 
-/* ── Subtype chip ─────────────────────────────────────────────────────────── */
-.report-subtype-row {
-  margin-top: 12px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-}
+/* ── Top-3 fits (best fit + 2 runner-ups, each with a % score) ──────────────── */
+.report-top3-row { margin-top: 12px; }
 .report-subtype-lbl { font-size: 0.82rem; color: var(--text3); }
-.report-subtype-chip {
-  background: var(--brand-light);
-  color: var(--brand);
-  font-size: 0.82rem;
-  font-weight: 600;
-  padding: 3px 12px;
-  border-radius: 50px;
-  border: 1px solid #BDD0FF;
+.report-top3-list { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
+.report-top3-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 12px; border-radius: 10px;
+  background: var(--bg); border: 1px solid var(--border);
 }
+.report-top3-item.report-top3-best {
+  background: var(--brand-light); border: 1px solid #BDD0FF;
+}
+.report-top3-icon { font-size: 1.1rem; flex-shrink: 0; }
+.report-top3-body { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+.report-top3-name { font-size: 0.85rem; font-weight: 700; color: var(--text1); }
+.report-top3-fitlabel { font-size: 0.72rem; color: var(--text3); }
+.report-top3-best .report-top3-fitlabel { color: var(--brand); font-weight: 600; }
+.report-top3-pct { font-size: 0.85rem; font-weight: 800; color: var(--brand); flex-shrink: 0; }
 
 /* ── RIASEC bar chart ─────────────────────────────────────────────────────── */
 .report-bars { display: flex; flex-direction: column; gap: 10px; }
