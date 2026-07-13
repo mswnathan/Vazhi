@@ -159,6 +159,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-si
 }
 .nav-drawer-item:hover{background:var(--surface2)}
 .nav-drawer-item.active{background:var(--brand-bg);color:var(--brand-dk);font-weight:600}
+.nav-drawer-sep{border-top:1px solid var(--border);margin:6px 0}
 
 /* Home back-link (explore.html → index.html) */
 .hback{color:rgba(255,255,255,.65);font-size:.78rem;font-weight:600;text-decoration:none;padding:5px 11px;border-radius:999px;white-space:nowrap;flex-shrink:0;transition:background .15s,color .15s;display:flex;align-items:center;gap:4px}
