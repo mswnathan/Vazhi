@@ -159,12 +159,13 @@ const COLLEGES=[
 {name:'Madras Medical College',short:'MMC',type:'State',district:'Chennai',state:'Tamil Nadu',
   naac:'A+',nirf:'Top Medical',affil:'The Tamil Nadu Dr. MGR Medical University',website:'mmc.ac.in',
   streams:['Medical'],
+  specialNote:'TN DME\'s official portal (tnmedicalselection.net) lists a broader roster — 19 degree-level and 24 certificate/diploma-level paramedical courses nationally — exact course/seat availability per college varies by year; see the portal for the current list. A 2026-27 NCAHP mandate reportedly requires NEET UG for allied-health admission nationally — not yet confirmed as adopted by TN DME (TN previously kept merit-only admission against a similar 2023 nursing mandate).',
   programGroups:[
     {stream:'Medical',programs:[
       {name:'MBBS',exam:'NEET UG',examCss:'ce-neet'},
       {name:'BDS',exam:'NEET UG',examCss:'ce-neet'},
       {name:'B.Sc Nursing (4 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
-      {name:'B.Sc Allied Health Sciences — Radiology, MLT, Physiotherapy (4 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Allied Health & Paramedical Sciences — Radiography & Imaging, MLT, Cardiac/Perfusion/Dialysis/Respiratory/Critical Care Technology, OT & Anaesthesia Technology, Physician Assistant, Optometry (4 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
     ]},
     {stream:'Paramedical (Diploma) — Merit-based, no entrance exam',programs:[
       {name:'Diploma in Medical Lab Technology / DMLT (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
@@ -1980,10 +1981,12 @@ const COLLEGES=[
 {name:'Stanley Medical College & Hospital',short:'Stanley MC Chennai',type:'State',district:'Chennai',state:'Tamil Nadu',
   naac:'Accredited',nirf:'Govt Medical TN',affil:'The Tamil Nadu Dr. MGR Medical University',website:'stanleymedicalcollege.edu.in',
   streams:['Medical'],
+  specialNote:'TN DME\'s official portal (tnmedicalselection.net) lists a broader roster — 19 degree-level and 24 certificate/diploma-level paramedical courses nationally — exact course/seat availability per college varies by year.',
   programGroups:[
     {stream:'Medical',programs:[
       {name:'MBBS (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
       {name:'B.Sc Nursing (4 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Allied Health & Paramedical Sciences — Radiography & Imaging, MLT, Cardiac/Perfusion/Dialysis/Respiratory/Critical Care Technology, OT & Anaesthesia Technology, Physician Assistant, Optometry (4 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
     ]},
     {stream:'Paramedical (Diploma) — Merit-based, no entrance exam',programs:[
       {name:'Diploma in Medical Lab Technology / DMLT (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
@@ -1997,9 +2000,12 @@ const COLLEGES=[
 {name:'Kilpauk Medical College & Hospital',short:'KMC Chennai',type:'State',district:'Chennai',state:'Tamil Nadu',
   naac:'Accredited',nirf:'Govt Medical TN',affil:'The Tamil Nadu Dr. MGR Medical University',website:'kilpaukmedicalcollege.com',
   streams:['Medical'],
+  specialNote:'TN DME\'s official portal (tnmedicalselection.net) lists a broader roster — 19 degree-level and 24 certificate/diploma-level paramedical courses nationally — exact course/seat availability per college varies by year.',
   programGroups:[
     {stream:'Medical',programs:[
       {name:'MBBS (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
+      {name:'B.Sc Nursing (4 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Allied Health & Paramedical Sciences — Radiography & Imaging, MLT, Cardiac/Perfusion/Dialysis/Respiratory/Critical Care Technology, OT & Anaesthesia Technology, Physician Assistant, Optometry (4 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
     ]},
     {stream:'Paramedical (Diploma) — Merit-based, no entrance exam',programs:[
       {name:'Diploma in Medical Lab Technology / DMLT (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
@@ -2013,10 +2019,12 @@ const COLLEGES=[
 {name:'Govt. Madurai Medical College & Rajaji Hospital',short:'MMC Madurai',type:'State',district:'Madurai',state:'Tamil Nadu',
   naac:'Accredited',nirf:'Top Govt Medical TN',affil:'The Tamil Nadu Dr. MGR Medical University',website:'maduraimedicalcollege.in',
   streams:['Medical'],
+  specialNote:'TN DME\'s official portal (tnmedicalselection.net) lists a broader roster — 19 degree-level and 24 certificate/diploma-level paramedical courses nationally — exact course/seat availability per college varies by year.',
   programGroups:[
     {stream:'Medical',programs:[
       {name:'MBBS (5.5 years) — 250 seats',exam:'NEET UG',examCss:'ce-neet'},
       {name:'B.Sc Nursing (4 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Allied Health & Paramedical Sciences — Radiography & Imaging, MLT, Cardiac/Perfusion/Dialysis/Respiratory/Critical Care Technology, OT & Anaesthesia Technology, Physician Assistant, Optometry (4 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
     ]},
     {stream:'Paramedical (Diploma) — Merit-based, no entrance exam',programs:[
       {name:'Diploma in Medical Lab Technology / DMLT (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
@@ -2030,18 +2038,31 @@ const COLLEGES=[
 {name:'K.A.P. Viswanatham Govt. Medical College & Hospital (Trichy)',short:'KAPVMCH Trichy',type:'State',district:'Trichy',state:'Tamil Nadu',
   naac:'Accredited',nirf:'Govt Medical TN',affil:'The Tamil Nadu Dr. MGR Medical University',website:'kapvmch.edu.in',
   streams:['Medical'],
+  specialNote:'TN DME\'s official portal (tnmedicalselection.net) lists a broader roster — 19 degree-level and 24 certificate/diploma-level paramedical courses nationally — exact course/seat availability per college varies by year.',
   programGroups:[
     {stream:'Medical',programs:[
       {name:'MBBS (5.5 years)',exam:'NEET UG',examCss:'ce-neet'},
+      {name:'B.Sc Nursing (4 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Allied Health & Paramedical Sciences — Radiography & Imaging, MLT, Cardiac/Perfusion/Dialysis/Respiratory/Critical Care Technology, OT & Anaesthesia Technology, Physician Assistant, Optometry (4 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+    ]},
+    {stream:'Paramedical (Diploma) — Merit-based, no entrance exam',programs:[
+      {name:'Diploma in Medical Lab Technology / DMLT (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Medical Radiography Technology / DMRT (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Operation Theatre Technology / DOTT (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Anaesthesia Technology (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'Diploma in Optometry (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
     ]},
   ]},
 
 {name:'Govt. Coimbatore Medical College & Hospital',short:'CMCH Coimbatore',type:'State',district:'Coimbatore',state:'Tamil Nadu',
   naac:'Accredited',nirf:'Govt Medical TN',affil:'The Tamil Nadu Dr. MGR Medical University',website:'coimbatoremedicalcollege.com',
   streams:['Medical'],
+  specialNote:'TN DME\'s official portal (tnmedicalselection.net) lists a broader roster — 19 degree-level and 24 certificate/diploma-level paramedical courses nationally — exact course/seat availability per college varies by year.',
   programGroups:[
     {stream:'Medical',programs:[
       {name:'MBBS (5.5 years) — 150 seats',exam:'NEET UG',examCss:'ce-neet'},
+      {name:'B.Sc Nursing (4 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Allied Health & Paramedical Sciences — Radiography & Imaging, MLT, Cardiac/Perfusion/Dialysis/Respiratory/Critical Care Technology, OT & Anaesthesia Technology, Physician Assistant, Optometry (4 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
     ]},
     {stream:'Paramedical (Diploma) — Merit-based, no entrance exam',programs:[
       {name:'Diploma in Medical Lab Technology / DMLT (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
@@ -2055,9 +2076,12 @@ const COLLEGES=[
 {name:'Govt. Tirunelveli Medical College & Hospital',short:'TVMCH Tirunelveli',type:'State',district:'Tirunelveli',state:'Tamil Nadu',
   naac:'Accredited',nirf:'Govt Medical TN',affil:'The Tamil Nadu Dr. MGR Medical University',website:'tvmch.ac.in',
   streams:['Medical'],
+  specialNote:'TN DME\'s official portal (tnmedicalselection.net) lists a broader roster — 19 degree-level and 24 certificate/diploma-level paramedical courses nationally — exact course/seat availability per college varies by year.',
   programGroups:[
     {stream:'Medical',programs:[
       {name:'MBBS (5.5 years) — 250 seats',exam:'NEET UG',examCss:'ce-neet'},
+      {name:'B.Sc Nursing (4 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Allied Health & Paramedical Sciences — Radiography & Imaging, MLT, Cardiac/Perfusion/Dialysis/Respiratory/Critical Care Technology, OT & Anaesthesia Technology, Physician Assistant, Optometry (4 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
     ]},
     {stream:'Paramedical (Diploma) — Merit-based, no entrance exam',programs:[
       {name:'Diploma in Medical Lab Technology / DMLT (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
@@ -2071,9 +2095,12 @@ const COLLEGES=[
 {name:'Govt. Thanjavur Medical College & Hospital',short:'TMCH Thanjavur',type:'State',district:'Thanjavur',state:'Tamil Nadu',
   naac:'Accredited',nirf:'Govt Medical TN',affil:'The Tamil Nadu Dr. MGR Medical University',website:'tanjavurmedicalcollege.tn.gov.in',
   streams:['Medical'],
+  specialNote:'TN DME\'s official portal (tnmedicalselection.net) lists a broader roster — 19 degree-level and 24 certificate/diploma-level paramedical courses nationally — exact course/seat availability per college varies by year.',
   programGroups:[
     {stream:'Medical',programs:[
       {name:'MBBS (5.5 years) — 150 seats',exam:'NEET UG',examCss:'ce-neet'},
+      {name:'B.Sc Nursing (4 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
+      {name:'B.Sc Allied Health & Paramedical Sciences — Radiography & Imaging, MLT, Cardiac/Perfusion/Dialysis/Respiratory/Critical Care Technology, OT & Anaesthesia Technology, Physician Assistant, Optometry (4 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
     ]},
     {stream:'Paramedical (Diploma) — Merit-based, no entrance exam',programs:[
       {name:'Diploma in Medical Lab Technology / DMLT (2 years)',exam:'Merit (Class 12 PCB marks) — TN DME Counselling',examCss:'ce-merit'},
