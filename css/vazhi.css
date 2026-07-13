@@ -117,15 +117,19 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-si
 /* Hamburger button — opens the nav drawer for secondary tabs.
    .vz-auth-btn is position:fixed (anchored to the viewport, not the flex
    row), so it floats outside normal layout — without this reserve, this
-   button would render directly underneath it and be hidden from view. */
+   button would render directly underneath it and be hidden from view.
+   Labelled "Menu" (not just an icon) and styled as a bold pill so it's
+   easy to spot on first visit. */
 .hamburger-btn{
-  background:rgba(255,255,255,.12);color:#fff;border:none;border-radius:8px;
-  width:34px;height:34px;display:flex;align-items:center;justify-content:center;
-  font-size:16px;cursor:pointer;flex-shrink:0;transition:background .15s;
-  margin-right:120px;
+  background:rgba(255,255,255,.16);color:#fff;border:1.5px solid rgba(255,255,255,.55);
+  border-radius:999px;display:inline-flex;align-items:center;gap:6px;
+  padding:7px 14px;font:700 13px var(--font-body);
+  cursor:pointer;flex-shrink:0;transition:background .15s;
+  margin-right:120px;white-space:nowrap;
 }
-.hamburger-btn:hover{background:rgba(255,255,255,.22)}
-.hamburger-btn.active{background:rgba(255,255,255,.28)}
+.hamburger-btn .hamburger-icon{font-size:15px;line-height:1}
+.hamburger-btn:hover{background:rgba(255,255,255,.3)}
+.hamburger-btn.active{background:rgba(255,255,255,.3)}
 
 /* Nav drawer — secondary tabs (Know Yourself, Scholarships, Internships, Market).
    Opens from the right, same side as the hamburger button, so it slides out
@@ -1389,6 +1393,10 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-si
 .home-ann-filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
 .ann-filter-btn{padding:5px 14px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;border:1.5px solid var(--border);background:var(--surface);color:var(--text2);font-family:inherit;transition:all 0.15s}
 .ann-filter-btn.active,.ann-filter-btn:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-bg)}
+.ann-filter-sep{width:1px;align-self:stretch;background:var(--border);margin:2px 2px}
+.ann-state-toggle{padding:5px 14px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;border:1.5px solid var(--border);background:var(--surface);color:var(--text2);font-family:inherit;transition:all 0.15s}
+.ann-state-toggle:hover{border-color:#0A686F;color:#0A686F;background:#E5FAFB}
+.ann-state-toggle.active{border-color:#0A686F;color:#0A686F;background:#E5FAFB;font-weight:700}
 
 /* List containers */
 .home-ann-list,.home-ann-past{display:flex;flex-direction:column;border:1.5px solid var(--border);border-radius:14px;overflow:hidden;background:var(--surface)}
@@ -1408,6 +1416,11 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-si
 .ann-cat-application {background:#FFF8E0;color:#7C4A00}
 .ann-cat-admission   {background:#E8F4FF;color:#0A4A8A}
 .ann-cat-news        {background:var(--bg2);color:var(--text3)}
+
+/* Level badge (National / State) */
+.ann-level-badge{display:inline-block;font-size:9px;font-weight:700;border-radius:20px;padding:2px 8px;margin-left:6px;text-transform:uppercase;letter-spacing:0.03em;white-space:nowrap;vertical-align:middle}
+.ann-level-national{color:#1A4DD6;background:#EBF0FF}
+.ann-level-state{color:#0A686F;background:#E5FAFB}
 
 /* Row body */
 .ann-body{flex:1;min-width:0}

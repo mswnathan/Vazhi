@@ -289,10 +289,12 @@ body {
 }
 .stream-cta-link:hover { background: #B34808; }
 
-/* ── Nav drawer (hamburger menu) — self-contained ── */
-.hamburger-btn{background:rgba(255,255,255,.12);color:#fff;border:none;border-radius:8px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-size:16px;cursor:pointer;flex-shrink:0;transition:background .15s}
-.hamburger-btn:hover{background:rgba(255,255,255,.22)}
-.hamburger-btn.active{background:rgba(255,255,255,.28)}
+/* ── Nav drawer (hamburger menu) — self-contained. Labelled "Menu" (not
+   just an icon) and styled as a bold pill so it's easy to spot. ── */
+.hamburger-btn{background:rgba(255,255,255,.16);color:#fff;border:1.5px solid rgba(255,255,255,.55);border-radius:999px;display:inline-flex;align-items:center;gap:6px;padding:7px 14px;font:700 13px 'Plus Jakarta Sans',sans-serif;cursor:pointer;flex-shrink:0;transition:background .15s;white-space:nowrap}
+.hamburger-btn .hamburger-icon{font-size:15px;line-height:1}
+.hamburger-btn:hover{background:rgba(255,255,255,.3)}
+.hamburger-btn.active{background:rgba(255,255,255,.3)}
 .nav-drawer-overlay{position:fixed;inset:0;background:rgba(20,20,40,.45);opacity:0;visibility:hidden;transition:opacity .2s;z-index:300}
 .nav-drawer-overlay.open{opacity:1;visibility:visible}
 .nav-drawer{position:fixed;top:0;right:0;bottom:0;width:260px;max-width:80vw;background:#fff;z-index:301;box-shadow:-2px 0 16px rgba(0,0,0,.15);transform:translateX(100%);transition:transform .25s ease;display:flex;flex-direction:column;padding:8px 0;overflow-y:auto}
@@ -314,7 +316,7 @@ body {
       <span><span class="vz-logo-en">Vazhi</span><br><span class="vz-logo-ta">வழி</span></span>
     </a>
     <a class="vz-home-link" href="index.html">← Home</a>
-    <button id="nav-drawer-btn" class="hamburger-btn" onclick="toggleNavDrawer()" aria-label="More sections" aria-haspopup="true" aria-expanded="false">☰</button>
+    <button id="nav-drawer-btn" class="hamburger-btn" onclick="toggleNavDrawer()" aria-label="More sections" aria-haspopup="true" aria-expanded="false"><span class="hamburger-icon">☰</span><span class="hamburger-label">Menu</span></button>
   </div>
 </header>
 

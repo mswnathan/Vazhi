@@ -53,14 +53,20 @@ body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);c
 
 /* Hamburger button — opens the nav drawer. The Sign in button (.vz-auth-btn,
    injected by auth.js after this element) is overridden below to sit in this
-   flex row instead of position:fixed, so no viewport reserve is needed. */
+   flex row instead of position:fixed, so no viewport reserve is needed.
+   Labelled "Menu" (not just an icon) and placed as the outermost/rightmost
+   item — order:2 puts it after .vz-auth-btn (order:1) regardless of DOM
+   injection order — so it's easy to spot on first visit. */
 .hamburger-btn{
-  background:rgba(255,255,255,.12);color:#fff;border:none;border-radius:8px;
-  width:44px;height:44px;display:flex;align-items:center;justify-content:center;
-  font-size:16px;cursor:pointer;flex-shrink:0;transition:background .15s;
-  margin-left:auto;
+  background:rgba(255,255,255,.16);color:#fff;border:1.5px solid rgba(255,255,255,.55);
+  border-radius:999px;display:inline-flex;align-items:center;gap:6px;
+  padding:9px 16px;font:700 14px 'Plus Jakarta Sans',sans-serif;
+  cursor:pointer;flex-shrink:0;transition:background .15s;
+  margin-left:6px;order:2;white-space:nowrap;
 }
-.vz-auth-btn{position:static;top:auto;right:auto;z-index:auto;margin-left:6px;flex-shrink:0}
+.hamburger-btn .hamburger-icon{font-size:16px;line-height:1}
+.hamburger-btn:hover,.hamburger-btn.active{background:rgba(255,255,255,.3)}
+.vz-auth-btn{position:static;top:auto;right:auto;z-index:auto;margin-left:auto;flex-shrink:0;order:1}
 .hamburger-btn:hover{background:rgba(255,255,255,.22)}
 .hamburger-btn.active{background:rgba(255,255,255,.28)}
 
@@ -172,6 +178,9 @@ a.nav-drawer-item{text-decoration:none}
 .ann-body{flex:1;min-width:0}
 .ann-date{font-size:.78rem;font-weight:700;color:var(--brand-dk)}
 .ann-tent{font-size:.62rem;font-weight:700;color:var(--amber);background:var(--amber-bg);border-radius:999px;padding:1px 7px;margin-left:6px;text-transform:uppercase;letter-spacing:.03em}
+.ann-level-badge{font-size:.62rem;font-weight:700;border-radius:999px;padding:1px 8px;margin-left:6px;text-transform:uppercase;letter-spacing:.03em;white-space:nowrap}
+.ann-level-national{color:#1A4DD6;background:#EBF0FF}
+.ann-level-state{color:#0A686F;background:#E5FAFB}
 .ann-ttl{font-weight:700;font-size:.95rem;margin:3px 0 3px}
 .ann-desc{font-size:.83rem;color:var(--text2);line-height:1.4}
 .ann-note{margin-top:14px;font-size:.8rem;color:var(--text3);font-style:italic}
@@ -215,7 +224,7 @@ footer{padding:32px 0 54px;text-align:center;color:var(--text3);font-size:.85rem
       <div class="logo-icon">வ</div>
       <div><div class="logo-en">Vazhi</div><div class="logo-ta">வழி</div></div>
     </div>
-    <button id="nav-drawer-btn" class="hamburger-btn" onclick="toggleNavDrawer()" aria-label="Menu" aria-haspopup="true" aria-expanded="false">☰</button>
+    <button id="nav-drawer-btn" class="hamburger-btn" onclick="toggleNavDrawer()" aria-label="Menu" aria-haspopup="true" aria-expanded="false"><span class="hamburger-icon">☰</span><span class="hamburger-label">Menu</span></button>
   </div>
 </header>
 
@@ -453,15 +462,19 @@ function setPersona(p,btn){
   const fmt=d=>{const p=d.split('-');return parseInt(p[2],10)+' '+M[parseInt(p[1],10)-1]+' '+p[0];};
   const up=ANNOUNCEMENTS.filter(a=>(a.endDate||a.date)>=today).sort((a,b)=>a.date<b.date?-1:1).slice(0,6);
   if(!up.length){ el.innerHTML='<p style="color:var(--text3)">No upcoming dates right now — check back soon.</p>'; return; }
-  el.innerHTML=up.map(a=>`
+  el.innerHTML=up.map(a=>{
+    const levelTag = a.level==='State'
+      ? `<span class="ann-level-badge ann-level-state">📍 ${a.state||'State'}</span>`
+      : a.level==='National' ? `<span class="ann-level-badge ann-level-national">🇮🇳 National</span>` : '';
+    return `
     <div class="ann-card">
       <div class="ann-ico">${a.icon||'📌'}</div>
       <div class="ann-body">
-        <div class="ann-date">${fmt(a.date)}${a.endDate?' – '+fmt(a.endDate):''}${a.tentative?'<span class="ann-tent">Tentative</span>':''}</div>
+        <div class="ann-date">${fmt(a.date)}${a.endDate?' – '+fmt(a.endDate):''}${a.tentative?'<span class="ann-tent">Tentative</span>':''}${levelTag}</div>
         <div class="ann-ttl">${a.title}</div>
         <div class="ann-desc">${a.desc||''}</div>
       </div>
-    </div>`).join('');
+    </div>`;}).join('');
 })();
 
 /* ───────── NAV DRAWER (hamburger menu for secondary sections) ───────── */

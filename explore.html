@@ -30,7 +30,7 @@
       <button class="tab-btn" onclick="switchTab('courses')">📚 What Next?</button>
       <button class="tab-btn" onclick="switchTab('after-ug')">🎓 After UG</button>
     </nav>
-    <button id="nav-drawer-btn" class="hamburger-btn" onclick="toggleNavDrawer()" aria-label="More sections" aria-haspopup="true" aria-expanded="false">☰</button>
+    <button id="nav-drawer-btn" class="hamburger-btn" onclick="toggleNavDrawer()" aria-label="More sections" aria-haspopup="true" aria-expanded="false"><span class="hamburger-icon">☰</span><span class="hamburger-label">Menu</span></button>
   </div>
 </header>
 
@@ -166,6 +166,8 @@
           <button class="ann-filter-btn" data-cat="counselling"        onclick="setAnnFilter('counselling')">🗓 Counselling</button>
           <button class="ann-filter-btn" data-cat="application"        onclick="setAnnFilter('application')">📋 Applications</button>
           <button class="ann-filter-btn" data-cat="admission"          onclick="setAnnFilter('admission')">🏫 Admissions</button>
+          <span class="ann-filter-sep"></span>
+          <button class="ann-state-toggle" onclick="toggleAnnStateOnly(this)">📍 Tamil Nadu only</button>
         </div>
         <div class="home-ann-list" id="ann-list"></div>
         <div class="home-ann-past-toggle" id="ann-past-toggle" style="display:none">

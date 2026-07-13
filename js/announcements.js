@@ -6,6 +6,7 @@ const ANN_SOON_DAYS = 7;   // ≤ this many days away → 'soon' (urgent highlig
 const ANN_NEAR_DAYS = 30;  // ≤ this many days away → 'near' (upcoming highlight)
 
 let annFilter = 'all';
+let annStateOnly = false;  // true = show only Tamil Nadu (State-level) announcements
 
 // ── DATE HELPERS ─────────────────────────────────────────────────────────────
 // Parse 'YYYY-MM-DD' as LOCAL midnight — avoids UTC off-by-one in IST (+5:30)
@@ -61,8 +62,9 @@ function renderAnnouncements(filter) {
     }
   }
 
-  // Apply category filter
-  const filtered = annFilter === 'all' ? all : all.filter(a => a.category === annFilter);
+  // Apply category filter, then the Tamil Nadu-only toggle
+  let filtered = annFilter === 'all' ? all : all.filter(a => a.category === annFilter);
+  if (annStateOnly) filtered = filtered.filter(a => a.level === 'State' && a.state === 'Tamil Nadu');
 
   // Split into upcoming/ongoing and past
   const today = new Date(); today.setHours(0, 0, 0, 0);
@@ -121,10 +123,14 @@ function annRow(a, isPast) {
     ? `<span class="ann-tentative-tag">Tentative</span>`
     : '';
 
+  const levelTag = a.level === 'State'
+    ? `<span class="ann-level-badge ann-level-state">📍 ${a.state || 'State'}</span>`
+    : a.level === 'National' ? `<span class="ann-level-badge ann-level-national">🇮🇳 National</span>` : '';
+
   return `<div class="ann-row${priorityCls}${pastCls}">
     <span class="ann-cat ann-cat-${a.category}">${catLabel}</span>
     <div class="ann-body">
-      <div class="ann-title">${a.icon ? a.icon + ' ' : ''}${a.title}${tentativeTag}</div>
+      <div class="ann-title">${a.icon ? a.icon + ' ' : ''}${a.title}${tentativeTag}${levelTag}</div>
       <div class="ann-desc">${a.desc}${a.link ? ` <a href="https://${a.link}" target="_blank" rel="noopener" class="ann-link">↗ ${a.link}</a>` : ''}</div>
     </div>
     <div class="ann-date">
@@ -139,6 +145,14 @@ function setAnnFilter(cat) {
   document.querySelectorAll('.ann-filter-btn').forEach(b =>
     b.classList.toggle('active', b.dataset.cat === cat)
   );
+  renderAnnouncements();
+}
+
+// Quick toggle: show only Tamil Nadu (State-level) announcements — layers on
+// top of whatever category filter is currently active.
+function toggleAnnStateOnly(btn) {
+  annStateOnly = !annStateOnly;
+  if (btn) btn.classList.toggle('active', annStateOnly);
   renderAnnouncements();
 }
 

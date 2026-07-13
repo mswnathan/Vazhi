@@ -275,7 +275,9 @@ Note: `papers[]` replaces `subjects[]` used in UG exams.
   desc: 'Short description shown on the card.',
   link: 'jeemain.nta.nic.in',  // no https://
   priority: 'high' | 'normal',
-  tentative: true            // optional — omit if date is confirmed
+  tentative: true,           // optional — omit if date is confirmed
+  level: 'National' | 'State',
+  state: 'Tamil Nadu'        // required when level is 'State'; omit when 'National'
 }
 ```
 

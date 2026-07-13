@@ -1,10 +1,12 @@
 // Vazhi — Announcements Data
 // Exam dates, results, counselling windows, application deadlines
-// Schema: { id, title, category, icon, date, endDate?, desc, link, priority, tentative? }
+// Schema: { id, title, category, icon, date, endDate?, desc, link, priority, tentative?, level, state? }
 // category:  'exam' | 'result' | 'counselling' | 'application' | 'admission' | 'news'
 // priority:  'high' | 'normal'
 // tentative: true — date not yet officially confirmed; shown as "Tentative" label
 // date / endDate: ISO format 'YYYY-MM-DD'
+// level:     'National' | 'State' — who the announcement applies to
+// state:     required when level is 'State' — e.g. 'Tamil Nadu'. Omit when level is 'National'.
 //
 // Only CURRENT / UPCOMING items live here. Once an item's date (endDate || date)
 // has passed, move it to archive/announcements-archive.js (reference only, not
@@ -24,6 +26,7 @@ const ANNOUNCEMENTS = [
     link: 'josaa.nic.in',
     priority: 'high',
     tentative: true,
+    level: 'National',
   },
   {
     id: 'mcc-neet-2026',
@@ -36,6 +39,7 @@ const ANNOUNCEMENTS = [
     link: 'mcc.nic.in',
     priority: 'high',
     tentative: true,
+    level: 'National',
   },
   {
     id: 'tnea-2026-counselling',
@@ -48,6 +52,8 @@ const ANNOUNCEMENTS = [
     link: 'tneaonline.org',
     priority: 'high',
     tentative: true,
+    level: 'State',
+    state: 'Tamil Nadu',
   },
 
   // ── APPLICATIONS ─────────────────────────────────────────────────────────
@@ -61,6 +67,7 @@ const ANNOUNCEMENTS = [
     desc: 'National Power Training Institute (Ministry of Power) invites applications for One-Year PG Diploma courses: Renewable Energy & Grid Interface Technologies, Power Distribution & Communication Technologies, Hydro Power Plant Engineering, and Power Plant Engineering. Campuses: Faridabad, Badarpur, Nagpur, Guwahati, Nangal, Neyveli, Durgapur, Alappuzha, Shivpuri. 10% fee discount for female applicants. Last date: 30 July 2026.',
     link: 'npti.gov.in',
     priority: 'normal',
+    level: 'National',
   },
 
 ];
