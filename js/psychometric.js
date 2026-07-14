@@ -30,6 +30,19 @@ let psyState = {
   workstyleAnswers: [],  // typeWon
 };
 
+// A stray click/tap that lands after `psyState.locked` has already been released
+// (e.g. a duplicate touch event arriving slightly late) can still hit a freshly
+// rendered next question's button at the same screen position and silently
+// answer it. `psyState.locked` only guards the 180ms gap before a question
+// changes — this guard also covers the moment just after, so any late arrival
+// is ignored instead of being read as a genuine tap on the new question.
+function psyInputGuardOk() {
+  return Date.now() >= (psyState.inputGuardUntil || 0);
+}
+function psySetInputGuard() {
+  psyState.inputGuardUntil = Date.now() + 400;
+}
+
 // ── ENTRY POINT ──────────────────────────────────────────────────────────────
 function renderPsychometricTab() {
   // The test itself needs no login — anyone can take it and see their results.
@@ -118,7 +131,7 @@ function renderProgressDots() {
 // the answer functions overwrite it in place (with the correct score delta) if
 // the student re-taps a different option, rather than pushing a duplicate entry.
 function psyGoBack() {
-  if (psyState.locked) return;
+  if (psyState.locked || !psyInputGuardOk()) return;
   const phase = psyState.phase;
   if (phase === 'interest' && psyState.interestIdx > 0) {
     psyState.interestIdx--;
@@ -133,6 +146,7 @@ function psyGoBack() {
     psyState.workstyleIdx--;
     renderWorkstyleQuestion();
   }
+  psySetInputGuard();
 }
 
 // ── INTRO SCREEN ─────────────────────────────────────────────────────────────
@@ -298,7 +312,7 @@ function renderInterestQuestion() {
 }
 
 function psyAnswerInterest(winType) {
-  if (psyState.locked) return;
+  if (psyState.locked || !psyInputGuardOk()) return;
   psyState.locked = true;
   const idx = psyState.interestIdx;
   const prevAnswer = psyState.interestAnswers[idx];
@@ -313,11 +327,12 @@ function psyAnswerInterest(winType) {
     psyState.locked = false;
     psyState.interestIdx++;
     renderInterestQuestion();
+    psySetInputGuard();
   }, 180);
 }
 
 function psySkipInterest() {
-  if (psyState.locked) return;
+  if (psyState.locked || !psyInputGuardOk()) return;
   const idx = psyState.interestIdx;
   const prevAnswer = psyState.interestAnswers[idx];
   if (prevAnswer !== undefined) {
@@ -328,6 +343,7 @@ function psySkipInterest() {
   }
   psyState.interestIdx++;
   renderInterestQuestion();
+  psySetInputGuard();
 }
 
 // ── TRANSITION SCREENS ────────────────────────────────────────────────────────
@@ -423,7 +439,7 @@ function renderFollowupQuestion() {
 }
 
 function psyAnswerFollowup(forType, subtype) {
-  if (psyState.locked) return;
+  if (psyState.locked || !psyInputGuardOk()) return;
   psyState.locked = true;
   const idx = psyState.followupIdx;
   if (psyState.followupAnswers[idx] !== undefined) {
@@ -436,6 +452,7 @@ function psyAnswerFollowup(forType, subtype) {
     psyState.locked = false;
     psyState.followupIdx++;
     renderFollowupQuestion();
+    psySetInputGuard();
   }, 180);
 }
 
@@ -491,7 +508,7 @@ function renderSkillQuestion() {
 }
 
 function psyAnswerSkill(qId, value) {
-  if (psyState.locked) return;
+  if (psyState.locked || !psyInputGuardOk()) return;
   psyState.locked = true;
   const idx = psyState.skillIdx;
   if (psyState.skillAnswers[idx] === undefined) psyState.skillAnswers.push({ qId });
@@ -500,6 +517,7 @@ function psyAnswerSkill(qId, value) {
     psyState.locked = false;
     psyState.skillIdx++;
     renderSkillQuestion();
+    psySetInputGuard();
   }, 180);
 }
 
@@ -548,7 +566,7 @@ function renderWorkstyleQuestion() {
 }
 
 function psyAnswerWorkstyle(typeWon) {
-  if (psyState.locked) return;
+  if (psyState.locked || !psyInputGuardOk()) return;
   psyState.locked = true;
   const idx = psyState.workstyleIdx;
   const prevAnswer = psyState.workstyleAnswers[idx];
@@ -563,6 +581,7 @@ function psyAnswerWorkstyle(typeWon) {
     psyState.locked = false;
     psyState.workstyleIdx++;
     renderWorkstyleQuestion();
+    psySetInputGuard();
   }, 180);
 }
 
