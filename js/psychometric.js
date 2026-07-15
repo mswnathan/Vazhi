@@ -55,6 +55,24 @@ function renderPsychometricTab() {
     });
     renderPsychometricTab._wired = true;
   }
+  // touch-action:manipulation + the input-timing guards above still weren't
+  // enough on real iPhones (both Safari and Chrome — same WebKit engine): the
+  // browser's own delayed/duplicate synthetic click was still occasionally
+  // landing on a freshly-rendered next question's button. Handling the tap on
+  // touchend directly and calling preventDefault() stops the browser from
+  // ever generating that follow-up click at all, instead of racing against
+  // its timing. Wired once on the stable #tab-psychometric container (which
+  // survives re-renders — only its innerHTML is replaced), delegated so it
+  // covers every button rendered inside it, now and in future re-renders.
+  if (!renderPsychometricTab._touchWired) {
+    document.getElementById('tab-psychometric').addEventListener('touchend', function (e) {
+      const btn = e.target.closest('button, [onclick]');
+      if (!btn || !this.contains(btn)) return;
+      e.preventDefault();
+      btn.click();
+    }, { passive: false });
+    renderPsychometricTab._touchWired = true;
+  }
   switch (psyState.phase) {
     case 'intro':                return renderPsychometricIntro();
     case 'interest':             return renderInterestQuestion();
