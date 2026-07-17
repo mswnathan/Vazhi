@@ -173,7 +173,7 @@ if (ANNOUNCEMENTS) {
   for (const a of ANNOUNCEMENTS) {
     assert(isoRe.test(a.date), G7, `Entry "${a.id}" has non-ISO date "${a.date}"`);
     assert(validCats.has(a.category), G7, `Entry "${a.id}" has unknown category "${a.category}"`);
-    if (a.date >= today) upcomingCount++;
+    if ((a.endDate || a.date) >= today) upcomingCount++;
   }
   assert(upcomingCount >= 1, G7, `No upcoming announcements (all dates are in the past)`);
   console.log(`✅ Announcements      — ${ANNOUNCEMENTS.length} entries, ${upcomingCount} upcoming, all dates valid`);
