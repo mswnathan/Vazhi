@@ -147,6 +147,13 @@
 
   // ── UI: header button + modal ────────────────────────────────────────
   function mountUI() {
+    // The modal must exist on every page — pages like dashboard.html have their
+    // own gated "Sign in / Create account" button that calls openModal()
+    // directly, without relying on the floating header button below.
+    if (!document.getElementById('vz-auth-modal')) {
+      document.body.insertAdjacentHTML('beforeend', modalHTML());
+    }
+
     if (document.getElementById('vz-auth-btn')) return;
     const nav = document.querySelector('header.site-header .header-inner');
     if (!nav) return;
@@ -172,7 +179,6 @@
       menu.classList.remove('open');
     });
 
-    document.body.insertAdjacentHTML('beforeend', modalHTML());
     renderHeaderButton();
   }
 

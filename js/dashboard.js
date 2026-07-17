@@ -99,11 +99,12 @@
         'Take the 12-minute Know Yourself test to get a personal career report.',
         'explore.html#psychometric', 'Take the test →');
     }
-    const top = (data.topTypes || data.top || []).slice(0, 3).map(esc).join(' · ');
+    const who = data.name ? esc(data.name) : 'Anonymous';
+    const when = data.date ? esc(data.date) : '';
     return sectionShell('🧠', 'Your career report', null,
       `<div class="dash-report">
-        ${top ? `<div class="dash-report-types">${top}</div>` : ''}
-        <div class="dash-card-meta">Saved on this device.</div>
+        ${data.hollandCode ? `<div class="dash-report-types">Holland Code: ${esc(data.hollandCode)}</div>` : ''}
+        <div class="dash-card-meta">Taken by ${who}${when ? ' on ' + when : ''} — saved on this device, not linked to your account.</div>
       </div>`,
       'report.html', 'View full report →');
   }
