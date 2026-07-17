@@ -222,4 +222,15 @@ const COLLEGES_WB=[
     ]},
   ]},
 
+{name:'Indian Maritime University — Kolkata Campus',short:'IMU Kolkata',type:'Central',district:'Kolkata',state:'West Bengal',
+  naac:'A+',nirf:'Top Maritime',affil:'Central University under Ministry of Ports, Shipping & Waterways',website:'imu.edu.in',
+  streams:['Engineering','Management'],
+  specialNote:'33-acre campus of India\'s only maritime university, with its own PG marine engineering + MBA programmes alongside UG.',
+  programGroups:[
+    {stream:'Maritime Engineering & Science',programs:[
+      {name:'B.Tech Marine Engineering (4 years)',exam:'IMU CET',examCss:'ce-own'},
+      {name:'B.Sc Nautical Science (3 years)',exam:'IMU CET',examCss:'ce-own'},
+    ]},
+  ]},
+
 ];

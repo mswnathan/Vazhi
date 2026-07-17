@@ -1173,6 +1173,28 @@ const PG_COLLEGES = [
   },
 
   {
+    name: 'Indian Institute of Remote Sensing',
+    short: 'IIRS Dehradun',
+    type: 'Central',
+    district: 'Dehradun',
+    state: 'Uttarakhand',
+    naac: 'Accredited',
+    nirf: 'Premier Remote Sensing Institute',
+    affil: 'Indian Space Research Organisation (ISRO), Dept of Space, Govt of India — est. 1966',
+    website: 'iirs.gov.in',
+    streams: ['Arts & Science', 'Engineering'],
+    specialNote: 'India\'s premier remote sensing & geoinformatics training institute under ISRO. Its M.Sc programme is a Joint Education Programme with the Faculty of Geo-Information Science and Earth Observation (ITC) of the University of Twente, Netherlands — year 1 at IIRS Dehradun, part of year 2 at ITC, degree awarded by University of Twente.',
+    programGroups: [
+      {
+        stream: 'Remote Sensing & Geoinformatics (PG)',
+        programs: [
+          { name: 'M.Sc Geo-Information Science & Earth Observation — Joint Programme with University of Twente/ITC, Netherlands (2 years)', exam: 'IIRS Entrance Test + Interview (GATE preferred)', examCss: 'ce-own' },
+        ],
+      },
+    ],
+  },
+
+  {
     name: 'National Institute of Rural Development & Panchayati Raj',
     short: 'NIRD&PR Hyderabad',
     type: 'Central',
@@ -1263,6 +1285,28 @@ const PG_COLLEGES = [
           { name: 'PGDM in Securities Markets (2 years)', exam: 'CAT / NISM Aptitude Test + Interview', examCss: 'ce-cat' },
           { name: 'PG Diploma in Data Science for Securities Markets', exam: 'CAT / NISM Aptitude Test + Interview', examCss: 'ce-cat' },
           { name: 'PhD in Finance / Securities Markets', exam: 'UGC-NET / NISM Entrance + Interview', examCss: 'ce-net' },
+        ],
+      },
+    ],
+  },
+
+  {
+    name: 'National Institute of Bank Management',
+    short: 'NIBM Pune',
+    type: 'Central',
+    district: 'Pune',
+    state: 'Maharashtra',
+    naac: 'Accredited',
+    nirf: 'Specialised Banking',
+    affil: 'Established by Reserve Bank of India (RBI), 1969 — autonomous apex institute',
+    website: 'nibmindia.org',
+    streams: ['Management', 'Commerce'],
+    specialNote: 'RBI\'s apex institute for banking research, training and education. PGDM — Banking & Financial Services is NBA-accredited, with strong placement ties to public & private sector banks.',
+    programGroups: [
+      {
+        stream: 'Management & Finance (PG)',
+        programs: [
+          { name: 'PGDM — Banking & Financial Services (2 years)', exam: 'CAT / XAT / CMAT / GMAT / GRE', examCss: 'ce-cat' },
         ],
       },
     ],

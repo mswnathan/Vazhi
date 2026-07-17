@@ -146,6 +146,25 @@ const SCHOLARSHIPS = [
   },
 
   {
+    id: 'depwd-post-matric',
+    community: ['PwD'],
+    name: 'Post-Matric Scholarship for Students with Disabilities',
+    short: 'DEPwD Post-Matric',
+    body: 'Department of Empowerment of Persons with Disabilities (DEPwD), Ministry of Social Justice & Empowerment, Govt of India',
+    level: 'Central',
+    for: 'Students with 40%+ disability (valid UDID/disability certificate) pursuing recognised post-Class 10 courses — broader than just AICTE technical courses',
+    ugStream: ['Any'],
+    class12Pct: 0,
+    amount: '₹550–₹1,600/month maintenance allowance (course-dependent) + course fee reimbursement',
+    duration: 'Course duration',
+    deadline: '',
+    website: 'depwd.gov.in',
+    note: 'Family income must be below ₹2.5 lakh/year. Covers Intermediate, ITI, Polytechnic, Degree, Diploma and Postgraduate courses — not restricted to technical/engineering like AICTE Saksham. Apply via National Scholarship Portal (scholarships.gov.in) after One-Time Registration (OTR) and obtaining a UDID card.',
+    badge: 'PwD Students',
+    bc: 'purple',
+  },
+
+  {
     id: 'aicte-swanath',
     community: ['Any'],
     name: 'AICTE Swanath Scholarship',

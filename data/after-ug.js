@@ -155,6 +155,24 @@ const AFTER_UG = [
     note: '',
   },
 
+  {
+    id: 'chem-niche',
+    name: 'Niche Chemical & Materials Engineering — Battery Tech, Corrosion Science',
+    category: 'Higher Education',
+    field: 'Chemical & Materials Engineering (M.Tech specialisations)',
+    duration: 'M.Tech 2 years',
+    ugFor: ['B.Tech/B.E.'],
+    exams: ['GATE'],
+    examNote: 'GATE required for M.Tech admission at IITs/NITs. CSIR-CECRI\'s M.Tech (via AcSIR) also accepts UGC-NET/CSIR-NET (JRF).',
+    institutes: 'IIT Bombay & NIT Jamshedpur (M.Tech Corrosion Science & Engineering/Coating Technology), CSIR-CECRI Karaikudi via AcSIR (M.Tech Corrosion Science & Engineering), IIT Delhi/Madras/Bhilai/Hyderabad/Bhubaneswar/Kanpur (M.Tech Electric Vehicle Technology — covers battery systems & battery management)',
+    careers: 'Battery R&D Engineer, EV Systems Engineer, Corrosion Engineer, Materials Scientist — sought after in EV manufacturing, oil & gas, shipping and processing-plant industries',
+    salary: '₹8–20 LPA',
+    market: 'Growing',
+    badge: 'Emerging specialisation',
+    bc: 'amber',
+    note: 'Two of the highest-growth Chemical/Materials Engineering sub-branches right now. Battery Technology ties directly into India\'s EV manufacturing boom; Corrosion Science is core to oil & gas, shipping and infrastructure industries. Perfume & Flavour Technology is also taught at FFDC Kannauj (Ministry of MSME autonomous body) but only as short-term diploma/certificate courses, not a full M.Tech — worth knowing about but not a postgraduate degree pathway.',
+  },
+
   // ── RESEARCH ────────────────────────────────────────────────────────
 
   {
@@ -245,6 +263,24 @@ const AFTER_UG = [
     badge: 'Govt. Scientist',
     bc: 'amber',
     note: 'BARC OCES/DGFS is a 1-year orientation + training program leading to Scientific Officer post. GATE score is the primary criterion for most CSIR/DRDO posts. IGCAR Kalpakkam (Tamil Nadu) is India\'s premier nuclear research centre — especially relevant for TN students in Physics/Chemistry/Engineering.',
+  },
+
+  {
+    id: 'cpri',
+    name: 'CPRI — Central Power Research Institute',
+    category: 'Research',
+    field: 'Power & Electrical Engineering',
+    duration: 'JRF 2 years / SRF 3 years — leads to M.Sc (Engg) / PhD',
+    ugFor: ['B.Tech/B.E.'],
+    exams: ['GATE', 'UGC-NET'],
+    examNote: 'JRF/SRF shortlisting is based on qualifying-degree marks, a valid GATE / UGC-NET score, and a personal interview. First-class Engineering degree required.',
+    institutes: 'CPRI Bangalore (HQ) — Units at Bhopal, Hyderabad, Nagpur, Noida, Kolkata — autonomous Society under Ministry of Power, Govt. of India',
+    careers: 'Junior/Senior Research Fellow, Power Systems Researcher, R&D Engineer — power-sector testing, certification and applied research',
+    salary: '₹20,000–30,000/month (JRF/SRF fellowship stipend)',
+    market: 'Niche',
+    badge: 'Power sector R&D',
+    bc: 'teal',
+    note: 'CPRI\'s Research Centre (est. 2013) runs a JRF/SRF fellowship leading to M.Sc (Engg) / PhD, affiliated to Visvesvaraya Technological University Belagavi or Nagpur University (RTMNU). Fellows work on power-sector R&D and field-oriented projects; CPRI quarters accommodation available on nominal rent. Confirm current stipend/eligibility against the latest notification at cpri.res.in/en/career, as fellowship terms are revised periodically.',
   },
 
   // ── GOVERNMENT JOBS ──────────────────────────────────────────────────
@@ -485,6 +521,24 @@ const AFTER_UG = [
     badge: 'Global career',
     bc: 'coral',
     note: 'Most top MBA programs require 3–5 years of work experience. ISB Hyderabad is India\'s top-ranked MBA (FT Global Rankings).',
+  },
+
+  {
+    id: 'germany-nursing',
+    name: 'Nursing & Allied Health — Germany (Triple Win Programme)',
+    category: 'Study Abroad',
+    field: 'Nursing & Allied Health',
+    duration: '12–24 months (German language + recognition + placement)',
+    ugFor: ['B.Sc'],
+    exams: ['German B1/B2 (Goethe-Institut / telc)', 'Anerkennung — Professional Recognition'],
+    examNote: 'Since Mar 2024, the Anerkennungspartnerschaft (recognition-partnership) visa only needs A2 German to enter Germany; B1/B2 is required for full registration and direct patient-care roles. Basic German-language prep is available free via NPTEL and other govt language modules before you commit to paid coaching.',
+    institutes: 'Triple Win Programme — Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) + German Federal Employment Agency (ZAV), with a dedicated Kerala & Telangana nursing pathway (triple-win-programm.de)',
+    careers: 'Registered Nurse, Geriatric/Elderly Care Specialist, Allied Health Professional — in German hospitals & care homes',
+    salary: '€2,200–3,500/month (lower during the adaptation/recognition phase, higher after full recognition)',
+    market: 'Growing',
+    badge: 'Govt-to-govt pathway',
+    bc: 'green',
+    note: 'Germany faces a shortage of ~30,000–40,000 nurses; over 16,600 Indian nurses already work there (2025), the fastest-growing source country. Triple Win is a free, bilateral government programme (not a private recruitment agency) — 8,000+ nurses placed since 2013. Indian nursing/allied-health qualifications go through a formal Anerkennung (recognition) process before full registration; EU Blue Card and PR follow after recognition.',
   },
 
 ];

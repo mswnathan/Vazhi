@@ -135,6 +135,13 @@ const EXAM_GROUPS=[
   {name:'IIST Entrance',full:'Indian Institute of Space Science and Technology Admission',body:'IIST / ISRO',level:'National',freq:'Once a year (Jun, via JEE Advanced rank)',subjects:['PCM','PCM+CS'],for:'B.Tech at IIST Thiruvananthapuram — India\'s only dedicated space technology university under ISRO.',website:'iist.ac.in',note:'Admission via JEE Advanced rank + IIST cutoff. Graduates bonded to ISRO for 5 years of service. Fully funded by Govt of India — fees, hostel subsidised.',seats:'~120 seats',institutes:[
     {name:'IIST Thiruvananthapuram',city:'Thiruvananthapuram, KL',tier:'🚀 Govt Space Univ (ISRO)'},
   ]},
+  {name:'ISRO ICRB',full:'ISRO Centralised Recruitment Board — Scientist/Engineer \'SC\'',body:'Indian Space Research Organisation (ISRO)',level:'National',freq:'As vacancies arise — not a fixed annual cycle like GATE',subjects:['PCM','PCM+CS'],for:'Direct recruitment of BE/B.Tech graduates as Scientist/Engineer \'SC\' at ISRO centres. A recruitment exam, not a college admission exam.',website:'isro.gov.in',note:'Eligibility: BE/B.Tech in the notified discipline (Electronics, Mechanical, Computer Science, Civil, Electrical & others — varies by cycle) with 65% aggregate marks or CGPA 6.84/10. Age 18–28 (relaxed to 33 for SC/ST, 31 for OBC). Selection: discipline-specific written test + interview.',seats:'Varies per recruitment cycle — typically 50–150 posts nationally',institutes:[
+    {name:'ISRO HQ',city:'Bengaluru, KA',tier:'🚀 ISRO Apex'},
+    {name:'VSSC (Vikram Sarabhai Space Centre)',city:'Thiruvananthapuram, KL',tier:'🚀 Launch Vehicles'},
+    {name:'SAC (Space Applications Centre)',city:'Ahmedabad, GJ',tier:'🚀 Satellite Applications'},
+    {name:'URSC (U R Rao Satellite Centre)',city:'Bengaluru, KA',tier:'🚀 Satellite Design'},
+    {name:'SDSC SHAR',city:'Sriharikota, AP',tier:'🚀 Launch Site'},
+  ]},
   {name:'MHT CET',full:'Maharashtra Common Entrance Test',body:'State CET Cell, Maharashtra',level:'State',freq:'Once a year (Apr–May)',subjects:['PCM','PCM+CS','PCMB'],for:'Engineering & Pharmacy colleges in Maharashtra.',website:'cetcell.mahacet.org',note:'PCM for Engineering. PCB for Pharmacy. Separate papers.',seats:'~1.5 lakh+',institutes:[
     {name:'COEP Technological University',city:'Pune, MH',tier:'🏆 Top Govt MH'},
     {name:'VJTI Mumbai',city:'Mumbai, MH',tier:'🏆 Top Govt MH'},
@@ -212,6 +219,11 @@ const EXAM_GROUPS=[
     {name:'CEPT University',city:'Ahmedabad, GJ',tier:'🏆 Premier'},
     {name:'Chandigarh College of Architecture',city:'Chandigarh',tier:'⭐ Excellent'},
     {name:'500+ private architecture colleges',city:'Pan India',tier:'✓ Via NATA score'},
+  ]},
+  {name:'AAT',full:'Architecture Aptitude Test',body:'IIT Council (via JEE Advanced)',level:'National',freq:'Once a year (Jun, right after JEE Advanced results)',subjects:['PCM'],for:'B.Arch at IIT Kharagpur, IIT Roorkee & IIT (BHU) Varanasi — the only 3 IITs offering B.Arch.',website:'jeeadv.ac.in',note:'Must first qualify JEE Advanced. AAT itself is pass/fail only (drawing, 3D perception, aesthetic sensitivity, freehand sketching) — no separate rank. Final seat allotment uses your JEE Advanced AIR through JoSAA counselling, not an AAT score.',seats:'~108 seats total across the 3 IITs',institutes:[
+    {name:'IIT Kharagpur',city:'Kharagpur, WB',tier:'🏆 Premier'},
+    {name:'IIT Roorkee',city:'Roorkee, UK',tier:'🏆 Premier'},
+    {name:'IIT (BHU) Varanasi',city:'Varanasi, UP',tier:'⭐ Excellent'},
   ]},
   {name:'Assam CEE',full:'Assam Combined Entrance Examination',body:'Assam Science & Technology University (ASTU)',level:'State',freq:'Once a year (Jun)',subjects:['PCM','PCM+CS'],for:'B.Tech admission to government & private engineering colleges in Assam.',website:'astu.ac.in',note:'Conducted by ASTU, Guwahati. Single MCQ paper — Maths, Physics, Chemistry — based on the Assam State Board (Div-II) syllabus.',seats:'Govt & private engineering colleges across Assam',institutes:[
     {name:'Assam Engineering College',city:'Guwahati, AS',tier:'🏆 Top Govt Assam'},

@@ -276,4 +276,18 @@ const COLLEGES_MH=[
     ]},
   ]},
 
+{name:'Indian Maritime University — Mumbai Port Campus',short:'IMU Mumbai',type:'Central',district:'Mumbai',state:'Maharashtra',
+  naac:'A+',nirf:'Top Maritime',affil:'Central University under Ministry of Ports, Shipping & Waterways',website:'imumumbaiport.ac.in',
+  streams:['Engineering','Management'],
+  specialNote:'Seafront campus of India\'s only maritime university, spread over 8 acres.',
+  programGroups:[
+    {stream:'Maritime Engineering & Science',programs:[
+      {name:'B.Tech Marine Engineering (4 years)',exam:'IMU CET',examCss:'ce-own'},
+      {name:'B.Sc Nautical Science (3 years)',exam:'IMU CET',examCss:'ce-own'},
+    ]},
+    {stream:'Management',programs:[
+      {name:'BBA Maritime Logistics (3 years)',exam:'IMU CET',examCss:'ce-own'},
+    ]},
+  ]},
+
 ];

@@ -2465,6 +2465,19 @@ const COLLEGES=[
     ]},
   ]},
 
+{name:'Christian Medical College, Vellore',short:'CMC Vellore',type:'Aided',district:'Vellore',state:'Tamil Nadu',
+  naac:'A+',nirf:'Rank 3 (Medical) — NIRF 2025',affil:'The Tamil Nadu Dr. M.G.R. Medical University — Aided Minority Institution',website:'cmch-vellore.edu',
+  streams:['Medical'],
+  specialNote:'One of India\'s oldest & most reputed medical institutions (est. 1900), consistently top-3 in NIRF Medical rankings. MBBS is via NEET UG; Nursing and Allied Health Sciences admission is via CMC\'s own two-stage entrance (Step 1 written test + Step 2 skill assessment/interview), not NEET.',
+  programGroups:[
+    {stream:'Medical & Health',programs:[
+      {name:'MBBS (5.5 years incl. internship)',exam:'NEET UG',examCss:'ce-neet'},
+      {name:'B.Sc Nursing — Vellore Campus (4 years)',exam:'CMC Entrance (Step 1 + Step 2)',examCss:'ce-own'},
+      {name:'B.Sc Nursing — Chittoor Campus (4 years, women only)',exam:'CMC Entrance (Step 1 + Step 2)',examCss:'ce-own'},
+      {name:'B.Sc Allied Health Sciences',exam:'CMC Entrance (Step 1 + Step 2)',examCss:'ce-own'},
+    ]},
+  ]},
+
 {name:'Government Medical College & Hospital, Pudukkottai',short:'GMC Pudukkottai',type:'State',district:'Pudukkottai',state:'Tamil Nadu',
   naac:'Accredited',nirf:'Govt Medical TN',affil:'The Tamil Nadu Dr. M.G.R. Medical University (TNMGRMU)',website:'gmcpudukkottai.ac.in',
   streams:['Medical'],
