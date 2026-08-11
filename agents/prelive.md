@@ -1,6 +1,6 @@
 # Agent: Pre-Live Verification (Content Accuracy Gate)
 
-**Purpose:** The final gate before anything is pushed live to Netlify. It runs in
+**Purpose:** The final gate before anything is pushed live to kalvivazhi.in. It runs in
 two stages — first the mechanical checks (schema, braces, behaviour), then a
 **content-accuracy checklist** that a human/Claude session works through against
 official sources. Mechanical checks catch broken code; this checklist catches
@@ -13,7 +13,7 @@ official sources. Mechanical checks catch broken code; this checklist catches
 > verification is reserved for the annual refresh or an explicit request.
 
 **When to run:**
-- Before every push to the live branch / Netlify deploy
+- Before every push to the live branch / kalvivazhi.in deploy
 - After any bulk data add (colleges, exams, scholarships, internships)
 - As part of the yearly refresh (see `annual-refresh.md`) — the one time you go full-dataset
 

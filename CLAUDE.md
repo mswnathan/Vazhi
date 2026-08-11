@@ -481,7 +481,7 @@ This workflow applies to ANY bulk-add prompt where the user provides a list and 
 ### Rotate Firebase project / add a new domain
 → Update keys only in `js/firebase-config.js` — no other file needs changes
 → In Firebase console → Authentication → Settings → Authorized domains, add the new domain (no `https://` prefix)
-→ Current project: `vazhi-89b4b`. Authorized domains include `kalvivazhi.netlify.app` + `localhost`
+→ Current project: `vazhi-89b4b`. Authorized domains include `kalvivazhi.in` + `localhost` — site is hosted directly on the custom domain, not Netlify
 
 ### Filter dropdowns and scope rule
 → Filter `<select>` options are derived from the data at render time (`populateCollegeFilters` etc.)
