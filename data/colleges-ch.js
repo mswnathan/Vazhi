@@ -12,7 +12,7 @@ const COLLEGES_CH=[
 {name:'Panjab University',short:'PU',type:'Central',district:'Chandigarh',state:'Chandigarh',
   naac:'A+',nirf:'Top 25 University',affil:'Panjab University (Central — Act of Parliament)',website:'puchd.ac.in',
   streams:['Engineering','Arts & Science','Law','Management'],
-  specialNote:'One of India\'s oldest universities (est. 1882). Admission via JEE Main for engineering; CUET for arts/science.',
+  specialNote:'One of India\'s oldest universities (est. 1882). Admission via JEE Main for engineering; CUET for arts/science. UIET B.E seats are counselled through the Joint Admission Committee, Chandigarh (JAC Chandigarh) using JEE Main rank.',
   programGroups:[
     {stream:'Engineering & Technology',programs:[
       {name:'B.E (CSE, ECE, EEE, Mechanical, Civil, IT) — UIET',exam:'JEE Main / PU CET',examCss:'ce-jee'},

@@ -1783,6 +1783,7 @@ const COLLEGES=[
 {name:'Alagappa University',short:'AU Karaikudi',type:'State',district:'Sivagangai',state:'Tamil Nadu',
   naac:'A+',nirf:'Top State Univ TN',affil:'State University — Affiliating (SE TN region)',website:'alagappauniversity.ac.in',
   streams:['Arts & Science','Management','Education'],
+  specialNote:'For Ph.D admission, the university conducts its own Pre-Ph.D Entrance Exam ahead of research-scholar registration.',
   programGroups:[
     {stream:'Arts & Science (University Departments)',programs:[
       {name:'B.Sc (Physics, Chemistry, Maths, CS, IT, Zoology, Botany, Statistics, Biochemistry)',exam:'Merit (Class 12 marks)',examCss:'ce-merit'},

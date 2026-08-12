@@ -63,6 +63,26 @@ function renderExams(){
       </div>`).join('')}`;
 }
 
+function timelineHtml(e){
+  if(!e.timeline||!e.timeline.length) return '';
+  return `<div class="etimeline">
+    ${e.timeline.map(t=>`<div class="etimeline-cycle">
+      ${t.cycle?`<div class="etimeline-cyclabel">${t.cycle}</div>`:''}
+      <div class="etimeline-steps">
+        <div class="etimeline-step"><span class="etimeline-dot etl-apply"></span><span class="etimeline-slbl">Apply</span><span class="etimeline-sval">${t.apply}</span></div>
+        <div class="etimeline-step"><span class="etimeline-dot etl-test"></span><span class="etimeline-slbl">Exam</span><span class="etimeline-sval">${t.test}</span></div>
+        <div class="etimeline-step"><span class="etimeline-dot etl-result"></span><span class="etimeline-slbl">Result</span><span class="etimeline-sval">${t.result}</span></div>
+      </div>
+    </div>`).join('')}
+    ${e.timelineNote?`<div class="etimeline-note">ℹ️ ${e.timelineNote}</div>`:''}
+    ${e.counselling?`<div class="etimeline-counselling">
+      <div class="etimeline-step"><span class="etimeline-dot etl-counselling"></span><span class="etimeline-slbl">Counselling</span><span class="etimeline-sval">${e.counselling}</span></div>
+      ${e.counsellingNote?`<div class="etimeline-note">ℹ️ ${e.counsellingNote}</div>`:''}
+    </div>`:''}
+    <div class="etimeline-caveat">Typical months based on recent cycles — check the exam's official website or our Announcements tab for this year's exact dates.</div>
+  </div>`;
+}
+
 function examCard(e){
   const lvlClass=LEVEL_CSS[e.level]||'elvl-inst';
   const subjPills=e.subjects.filter(s=>s!=='Any').slice(0,SUBJ_PILL_MAX).map(s=>`<span class="epill">${s}</span>`).join('');
@@ -113,6 +133,7 @@ function examCard(e){
     <div class="ecard-row"><div class="ecard-lbl">For</div><div class="ecard-val">${e.for}</div></div>
     <div class="ecard-row"><div class="ecard-lbl">Freq</div><div class="ecard-val">${e.freq}</div></div>
     <div class="ecard-row"><div class="ecard-lbl">Website</div><div class="ecard-val"><a href="https://${e.website}" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500">${e.website} ↗</a></div></div>
+    ${timelineHtml(e)}
     ${e.explainer?`<div class="ecard-explainer">🧭 ${e.explainer}</div>`:''}
     ${e.note?`<div class="ecard-important">${e.note}</div>`:''}
     ${instHtml}
@@ -243,6 +264,7 @@ function pgExamCard(e){
     <div class="ecard-row"><div class="ecard-lbl">For</div><div class="ecard-val">${e.for}</div></div>
     <div class="ecard-row"><div class="ecard-lbl">Freq</div><div class="ecard-val">${e.freq}</div></div>
     <div class="ecard-row"><div class="ecard-lbl">Website</div><div class="ecard-val"><a href="https://${e.website}" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500">${e.website} ↗</a></div></div>
+    ${timelineHtml(e)}
     ${e.note?`<div class="ecard-important">${e.note}</div>`:''}
     <div class="ecard-row" style="margin-top:4px">
       <div class="ecard-lbl">Syllabus</div>

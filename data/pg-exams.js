@@ -19,6 +19,9 @@ const PG_EXAM_GROUPS = [
         body: 'IIT (rotating) + IISc',
         level: 'National',
         freq: 'Once a year (Feb)',
+        timeline: [{ cycle: '', apply: 'Aug–Oct', test: 'Feb', result: 'Mar' }],
+        counselling: 'May–Jun',
+        counsellingNote: 'M.Tech seats at IITs/IISc are offered via COAP (Common Offer Acceptance Portal) — multi-round, concludes within ~1 month. GATE-score PSU recruitment (BHEL, ONGC, IOCL, NTPC…) is separate and rolling — each PSU sets its own schedule, not a fixed counselling window.',
         for: 'M.Tech/ME admission at IITs, NITs, IISc; PSU recruitment; PhD qualifying',
         website: 'gate2025.iisc.ac.in',
         note: 'Score valid for 3 years. 50+ PSUs (BHEL, ONGC, IOCL, NTPC, PGCIL, EIL) use GATE for direct recruitment. Two papers can be attempted simultaneously in the same year.',
@@ -298,6 +301,7 @@ const PG_EXAM_GROUPS = [
           { name: 'IISER (all 7)',       city: 'Pan-India',     tier: '🏆 Premier Research' },
           { name: 'IMSc Chennai',       city: 'Chennai, TN',   tier: '🏆 Premier (Maths & Physics)' },
           { name: 'ICTS Bangalore',     city: 'Bangalore, KA', tier: '🏆 Premier (Theoretical Sciences)' },
+          { name: 'IOP Bhubaneswar',    city: 'Bhubaneswar, OD', tier: '🏆 Premier (Physics)' },
         ],
       },
       {

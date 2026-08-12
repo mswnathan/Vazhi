@@ -122,6 +122,35 @@ const COLLEGES_UP=[
     ]},
   ]},
 
+{name:'Babasaheb Bhimrao Ambedkar University (BBAU)',short:'BBAU',type:'Central',district:'Lucknow',state:'Uttar Pradesh',
+  naac:'A++',nirf:'#37 University',affil:'Central University — Act of Parliament 1994 (est. 1996)',website:'bbau.ac.in',
+  streams:['Engineering','Arts & Science','Management','Law','Pharmacy'],
+  specialNote:'Named after Dr. B.R. Ambedkar, with a founding social-justice mandate — a large share of seats reserved for SC/ST candidates alongside standard OBC/EWS reservation. Admission to most UG programmes is via CUET UG; B.Tech uses a split between JEE Main and CUET UG scores.',
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech (Civil, Mechanical, Electronics & Communication, Electrical, Computer Engineering)',exam:'JEE Main / CUET UG',examCss:'ce-jee'},
+    ]},
+    {stream:'Arts & Science',programs:[
+      {name:'B.A (Hons) Public Administration / History / Sociology / English',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.A (Hons) Film, Theatre & Media Studies',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.Sc (Hons) Geology',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.Sc Life Sciences (Zoology, Botany, Biotechnology)',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.Sc Food Science & Technology',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.Sc Information Technology',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+    {stream:'Management',programs:[
+      {name:'B.Com (Hons) / B.Com',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'BBA (Bachelor of Business Administration)',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'BCA (Bachelor of Computer Application)',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+    {stream:'Law',programs:[
+      {name:'BBA LL.B (Hons) — 5-year integrated',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+    {stream:'Pharmacy',programs:[
+      {name:'Bachelor of Pharmacy (B.Pharm)',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+  ]},
+
 // ──────────────────────────────────────────────
 // STATE GOVERNMENT
 // ──────────────────────────────────────────────

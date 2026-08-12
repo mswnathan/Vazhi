@@ -134,7 +134,7 @@ const AFTER_UG = [
     market: 'Growing',
     badge: 'Law Masters',
     bc: 'amber',
-    note: '',
+    note: 'Beyond the traditional Corporate/Criminal/Constitutional tracks, newer specialization areas are opening up: Sports Law, AI Ethics & Regulation, Cyber & Cyber Forensic Law, Intellectual Property Law, Environmental Law, Competition Law, Taxation Law, Arbitration & Dispute Resolution, Healthcare Law & Ethics, and Energy & Infrastructure Transit Law — check which NLUs/universities offer these before choosing an LLM track.',
   },
 
   {

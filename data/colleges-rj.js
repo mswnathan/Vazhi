@@ -92,6 +92,17 @@ const COLLEGES_RJ=[
 // ──────────────────────────────────────────────
 // STATE GOVERNMENT
 // ──────────────────────────────────────────────
+{name:'Sardar Patel University of Police, Security and Criminal Justice',short:'SPUP Jodhpur',type:'State',district:'Jodhpur',state:'Rajasthan',
+  naac:'',nirf:'',affil:'State University (Rajasthan) — UGC recognized',website:'policeuniversity.ac.in',
+  streams:['Arts & Science','Law'],
+  specialNote:'India\'s first dedicated police university (est. 2012), focused on policing, security and criminal justice studies. Not yet NAAC accredited (young university).',
+  programGroups:[
+    {stream:'Arts & Science',programs:[
+      {name:'B.A Policing and Law Enforcement',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.A Security Management',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+  ]},
+
 {name:'SMS Medical College Jaipur',short:'SMSMCJ',type:'State',district:'Jaipur',state:'Rajasthan',
   naac:'A',nirf:'Top State Medical',affil:'Rajasthan University of Health Sciences (RUHS)',website:'smsmedicalcollege.com',
   streams:['Medical'],

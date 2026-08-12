@@ -74,6 +74,19 @@ if (STREAMS) {
   console.log(`✅ courses.js       — ${STREAMS.length} streams, ${courseCount} courses`);
 }
 
+// ── Shared: timeline[] / admission shape check (optional fields, exams.js + pg-exams.js) ──
+function checkTimeline(file, e) {
+  if (e.timeline !== undefined) {
+    if (!Array.isArray(e.timeline)) { warn(file, `Exam "${e.name}" timeline is not an array`); }
+    else for (const t of e.timeline) {
+      for (const f of ['apply', 'test', 'result']) {
+        if (!t[f]) warn(file, `Exam "${e.name}" timeline cycle "${t.cycle || '(single)'}" missing ${f}`);
+      }
+    }
+  }
+  if (e.counselling !== undefined && !e.counselling) warn(file, `Exam "${e.name}" has an empty counselling field`);
+}
+
 // ── 4. EXAMS.JS ──────────────────────────────────────────────────────
 const EXAM_GROUPS = loadJS('data/exams.js', 'EXAM_GROUPS');
 if (EXAM_GROUPS) {
@@ -93,6 +106,7 @@ if (EXAM_GROUPS) {
         if (!inst.city) warn('exams.js', `Exam "${e.name}" institute "${inst.name}" missing city`);
         if (!inst.tier) warn('exams.js', `Exam "${e.name}" institute "${inst.name}" missing tier`);
       }
+      if (e.timeline !== undefined || e.counselling !== undefined) checkTimeline('exams.js', e);
     }
   }
   console.log(`✅ exams.js         — ${EXAM_GROUPS.length} groups, ${examCount} exams`);

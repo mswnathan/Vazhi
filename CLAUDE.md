@@ -213,6 +213,9 @@ Same schema as UG colleges. Key differences:
   body: 'IIT (rotating) + IISc',
   level: 'National' | 'State' | 'Private' | 'Institute' | 'Professional',
   freq: 'Once a year (Feb)',
+  timeline: [                          // optional — see "Exam timeline" below
+    { cycle: '', apply: 'Aug–Oct', test: 'Feb', result: 'Mar' }
+  ],
   for: 'Who this exam is for',
   website: 'gate.iitX.ac.in',
   note: 'Important note or empty string',
@@ -235,6 +238,12 @@ Note: `papers[]` replaces `subjects[]` used in UG exams.
   body: 'NTA',
   level: 'National' | 'State' | 'Private' | 'Institute' | 'Professional',
   freq: 'Twice a year (Jan & Apr)',
+  timeline: [                          // optional — see "Exam timeline" below
+    { cycle: 'Session 1', apply: 'Oct–Nov', test: 'Jan', result: 'Feb' },
+    { cycle: 'Session 2', apply: 'Feb', test: 'Apr', result: 'Apr–May' }
+  ],
+  counselling: 'Jun–Jul',               // optional — see "Exam timeline" below
+  counsellingNote: 'JoSAA counselling for NITs/IIITs/GFTIs — 6 rounds, ~7 weeks.',
   subjects: ['PCM', 'PCM+CS', 'PCMB'],
   for: 'Who this exam is for',
   website: 'jeemain.nta.nic.in',
@@ -245,6 +254,41 @@ Note: `papers[]` replaces `subjects[]` used in UG exams.
   ]
 }
 ```
+
+### Exam timeline (`timeline[]` — optional field on UG and PG exam entries)
+Shows students *when* to act, not just *how often* an exam runs.
+```js
+timeline: [
+  { cycle: 'Session 1', apply: 'Oct–Nov', test: 'Jan', result: 'Feb' },
+  { cycle: 'Session 2', apply: 'Feb', test: 'Apr', result: 'Apr–May' }
+],
+timelineNote: '',   // optional — only for naming quirks or one-off anomalies (see CLAT)
+```
+- `cycle`: session/round label, or `''` for a single-cycle exam (renders without a label).
+- `apply` / `test` / `result`: **month or month-range strings** (e.g. `'Jan'`, `'Oct–Nov'`), not exact dates.
+  Exact dates change every year and go stale; the typical month doesn't. For this year's exact
+  dates, point students to `data/announcements.js` instead of hardcoding dates here.
+- Base the months on the **two most recent completed cycles** (currently 2025 and 2026), verified
+  against the exam body's official site or a reliable syndicated tracker (careers360 etc.) — never guess.
+- If a cycle had a one-off anomaly (e.g. NEET UG 2026's paper-leak re-exam, CLAT's court-revised
+  2025 result), use the *normal* cycle's months, not the anomalous one — don't let a one-off become
+  the "typical" pattern.
+- `timelineNote` is for structural quirks worth a permanent footnote (e.g. CLAT's exam-number-names-
+  the-intake-year-not-the-test-year convention) — omit it entirely for exams without such a quirk.
+- Optional field — omit `timeline` entirely for exams that are rolling/merit-based with no fixed
+  admission window (most Professional-body exams, state counselling-only entries).
+
+**`counselling` / `counsellingNote`** — the seat-allotment window *after* results, before a student
+actually joins (matches the `'counselling'` category already used in `announcements.js`). Deliberately
+**exam-level, not per-cycle**: counselling runs once per year (consolidating all sessions/rounds), so
+it doesn't belong to a single `timeline[]` entry.
+- `counselling`: a month or month-range string, same convention as `apply`/`test`/`result` (e.g. `'Jun–Jul'`).
+- `counsellingNote`: free text — body name, round count, or a caveat (e.g. GATE's PSU recruitment is
+  rolling/ongoing per-PSU, not a fixed window — say so rather than inventing one).
+- If the process fragments badly across many independent bodies (state medical counselling, or each
+  university running its own CUET admission on its own schedule), give the outer month-range that
+  covers most of them and say so in `counsellingNote` rather than pretending it's a single tidy window.
+- Omit both fields entirely when there's no follow-on counselling step distinct from the result itself.
 
 ### Course entry (`courses.js`)
 ```js

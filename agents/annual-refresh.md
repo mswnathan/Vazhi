@@ -85,6 +85,31 @@ Seat counts change when new institutes are added or capacity is revised.
 
 ---
 
+## Section 3b — Exam Timeline (`timeline[]` + `counselling` in `data/exams.js` and `data/pg-exams.js`)
+
+Optional `timeline[]` field on exam entries — shows typical Application/Exam/Result **months**, not
+exact dates (see schema in CLAUDE.md → "Exam timeline"). The optional `counselling`/`counsellingNote`
+pair covers the seat-allotment window *after* results (JoSAA, MCC, university-run counselling, COAP,
+etc.) — exam-level, not per-cycle, since counselling runs once a year regardless of how many test
+sessions fed into it. Months drift by a few weeks year to year,
+so re-verify annually against the two most recently completed cycles.
+
+**Tasks:**
+1. For each exam that already has a `timeline[]`, re-check its most recent completed cycle's actual
+   dates against the official site (or careers360/similar tracker) and update the month(s) if they shifted.
+2. Add `timeline[]` to exams that don't have it yet, prioritized: National → Institute → State →
+   Professional (skip Professional/rolling-admission exams with no fixed window — see CLAUDE.md).
+3. If a cycle had a one-off anomaly (re-exam, court-ordered delay, paper leak), use the *prior* normal
+   cycle's months instead — don't let a one-off skew the "typical" pattern. Note the anomaly in the
+   exam's own `note` field if worth flagging, not in `timeline`.
+4. Re-run `sh agents/check.sh` after each file — `checkTimeline()` in `validate.js` flags missing
+   `apply`/`test`/`result` sub-fields but not stale months, so accuracy is still on you.
+
+**Sources:** Same as Section 1 (`nta.ac.in`, `jeeadv.ac.in`, `gate.iitX.ac.in`, `consortiumofnlus.ac.in`,
+plus each exam body's own site) — cross-check with careers360 for a second source per date.
+
+---
+
 ## Section 4 — Salary Data (`data/courses.js` and `data/market.js`)
 
 Salary ranges drift over time. Check every 2 years or when data looks significantly off.
@@ -150,6 +175,7 @@ Run one section per session to keep changes focused and reviewable.
 1. Announcements (most urgent — stale dates are visible to every user)
 2. NIRF Rankings
 3. Exam Seat Counts
+3b. Exam Timeline
 4. JoSAA Data (if new year's data is available)
 5. Salary Data
 6. Market Signals

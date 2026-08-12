@@ -1553,6 +1553,13 @@ const PG_COLLEGES = [
           { name: 'PG Diploma — Power Plant Engineering', exam: 'Merit (Diploma/B.E./B.Tech)', examCss: 'ce-merit' },
         ],
       },
+      {
+        stream: 'Engineering & Management (Degree — NPTI Northern Region, Faridabad)',
+        programs: [
+          { name: 'B.Tech/B.E. Power Engineering — Electrical/Mechanical (4 years, GGSIPU-affiliated)', exam: 'JEE Main', examCss: 'ce-jee' },
+          { name: 'MBA Power Management (2 years, J.C. Bose Univ-affiliated)', exam: 'CAT/GMAT/CUET/XAT/CMAT/MAT or NPTI NAT', examCss: 'ce-cat' },
+        ],
+      },
     ],
   },
 
@@ -1576,6 +1583,53 @@ const PG_COLLEGES = [
           { name: 'Ph.D. — Astronomy & Astrophysics', exam: 'JEST / CSIR-NET JRF', examCss: 'ce-net' },
           { name: 'Ph.D. — Light & Matter Physics', exam: 'JEST / CSIR-NET JRF', examCss: 'ce-net' },
           { name: 'Ph.D. — Soft Condensed Matter', exam: 'JEST / CSIR-NET JRF', examCss: 'ce-net' },
+        ],
+      },
+    ],
+  },
+
+  {
+    name: 'The Institute of Mathematical Sciences',
+    short: 'IMSc Chennai',
+    type: 'INI',
+    district: 'Chennai',
+    state: 'Tamil Nadu',
+    naac: '',
+    nirf: '',
+    affil: 'Constituent Institute of Homi Bhabha National Institute (HBNI), a Deemed University under the Department of Atomic Energy (DAE), Govt of India.',
+    website: 'imsc.res.in',
+    streams: ['Arts & Science'],
+    specialNote: 'National centre for fundamental research in Mathematics, Physics, Theoretical Computer Science and Computational Biology. PhD/Integrated PhD degrees are awarded by HBNI; students receive a fellowship throughout the programme.',
+    programGroups: [
+      {
+        stream: 'Sciences (PG / Integrated PhD)',
+        programs: [
+          { name: 'Integrated Ph.D. — Mathematics', exam: 'NBHM Written Test / CSIR-UGC NET', examCss: 'ce-net' },
+          { name: 'Integrated Ph.D. / Ph.D. — Physics', exam: 'JEST', examCss: 'ce-net' },
+          { name: 'Integrated Ph.D. / Ph.D. — Theoretical Computer Science', exam: 'JEST / GATE', examCss: 'ce-gate' },
+          { name: 'Integrated Ph.D. / Ph.D. — Computational Biology', exam: 'JEST / CSIR-UGC NET / GATE', examCss: 'ce-net' },
+        ],
+      },
+    ],
+  },
+
+  {
+    name: 'Institute of Physics',
+    short: 'IOP Bhubaneswar',
+    type: 'INI',
+    district: 'Bhubaneswar',
+    state: 'Odisha',
+    naac: '',
+    nirf: '',
+    affil: 'Autonomous research institute funded jointly by the Department of Atomic Energy (DAE) and the Government of Odisha. PhD degree awarded by Homi Bhabha National Institute (HBNI), a Deemed University under DAE.',
+    website: 'iopb.res.in',
+    streams: ['Arts & Science'],
+    specialNote: 'Premier centre for theoretical & experimental Physics research (est. 1972). One year of compulsory coursework precedes doctoral research.',
+    programGroups: [
+      {
+        stream: 'Sciences (PhD)',
+        programs: [
+          { name: 'Ph.D. — Physics (M.Sc entry)', exam: 'JEST / CSIR-NET / GATE', examCss: 'ce-net' },
         ],
       },
     ],

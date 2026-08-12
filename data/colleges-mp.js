@@ -104,6 +104,18 @@ const COLLEGES_MP=[
 // ──────────────────────────────────────────────
 // STATE GOVERNMENT
 // ──────────────────────────────────────────────
+{name:'Sanchi University of Buddhist-Indic Studies',short:'SUBIS',type:'State',district:'Raisen',state:'Madhya Pradesh',
+  naac:'',nirf:'',affil:'Sanchi University of Buddhist-Indic Studies Act, 2012 (State)',website:'sanchiuniv.edu.in',
+  streams:['Arts & Science'],
+  specialNote:'India\'s only state university dedicated to Buddhist & Indic studies; campus sits beside the UNESCO World Heritage Sanchi Stupas. Admission via the university\'s own entrance exam.',
+  programGroups:[
+    {stream:'Buddhist & Indic Studies',programs:[
+      {name:'B.A. Buddhist Studies',exam:'University Entrance Exam',examCss:'ce-own'},
+      {name:'B.A. Pali',exam:'University Entrance Exam',examCss:'ce-own'},
+      {name:'B.A. Sanskrit',exam:'University Entrance Exam',examCss:'ce-own'},
+    ]},
+  ]},
+
 {name:'Gandhi Medical College Bhopal',short:'GMCB',type:'State',district:'Bhopal',state:'Madhya Pradesh',
   naac:'A',nirf:'Top State Medical',affil:'Madhya Pradesh Medical Science University (MPMSU)',website:'gmcbhopal.nic.in',
   streams:['Medical'],
