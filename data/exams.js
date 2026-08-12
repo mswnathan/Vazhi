@@ -4,7 +4,7 @@
 
 const EXAM_GROUPS=[
 {id:'Agriculture',label:'Agriculture, Veterinary & Forestry',ico:'🌾',color:'#0D6640',bg:'#E8F8EF',exams:[
-  {name:'ICAR AIEEA UG',full:'ICAR All India Entrance Exam for Admission (UG)',body:'NTA / ICAR',level:'National',freq:'Once a year (Jun)',subjects:['PCB','PCMB','PCM','PCM+CS'],for:'B.Sc Agriculture, Horticulture, Fisheries, Forestry at ICAR universities.',website:'icar.org.in',note:'ICAR scholarship seats at top agricultural universities.',seats:'~2,000 (ICAR quota)',institutes:[
+  {name:'ICAR AIEEA UG',full:'ICAR All India Entrance Exam for Admission (UG)',body:'NTA / ICAR',level:'National',freq:'Once a year (Jun)',timeline:[{cycle:'',apply:'Jan–Mar',test:'May–Jun',result:'Jul'}],timelineNote:'ICAR UG admission uses the CUET-UG exam directly (no separate ICAR AIEEA UG test since 2023), followed by ICAR\'s own counselling.',counselling:'Sep–Nov',counsellingNote:'ICAR runs a separate counselling process (icarcounseling.com) after the CUET-UG result, including a mop-up round as late as November.',subjects:['PCB','PCMB','PCM','PCM+CS'],for:'B.Sc Agriculture, Horticulture, Fisheries, Forestry at ICAR universities.',website:'icar.org.in',note:'ICAR scholarship seats at top agricultural universities.',seats:'~2,000 (ICAR quota)',institutes:[
     {name:'IARI New Delhi (IARI-PUSA)',city:'New Delhi',tier:'🏆 Premier Agri'},
     {name:'TNAU Coimbatore',city:'Coimbatore, TN',tier:'🏆 Premier Agri'},
     {name:'UAS Bengaluru & Dharwad',city:'Karnataka',tier:'⭐ Excellent'},
@@ -39,17 +39,17 @@ const EXAM_GROUPS=[
   ]},
 ]},
 {id:'Defence',label:'Defence & Maritime',ico:'🪖',color:'#18160F',bg:'#EDEBE5',exams:[
-  {name:'AISSEE',full:'All India Sainik School Entrance Examination',body:'NTA',level:'National',freq:'Once a year (Jan)',subjects:['PCM','PCM+CS','PCB','PCMB','Any'],for:'Class 6 & Class 9 entry to 33 Sainik Schools across India. The Sainik School → NDA pipeline is India\'s most structured defence career path.',website:'sainikschooladmission.in',note:'Not a direct UG exam — but starting at Class 6 in a Sainik School prepares students specifically for NDA. Tamil Nadu has Sainik School Amaravathinagar in Coimbatore.',seats:'~7,000 across all 33 schools',institutes:[
+  {name:'AISSEE',full:'All India Sainik School Entrance Examination',body:'NTA',level:'National',freq:'Once a year (Jan)',timeline:[{cycle:'',apply:'Oct–Jan',test:'Jan–Apr',result:'Feb–May'}],timelineNote:'Exam month has shifted between recent cycles (Apr 2025 → Jan 2026) — confirm the current cycle\'s exact date at sainikschooladmission.in.',counselling:'Jun',counsellingNote:'AISSAC-run e-counselling for seat allotment across the 33 Sainik Schools.',subjects:['PCM','PCM+CS','PCB','PCMB','Any'],for:'Class 6 & Class 9 entry to 33 Sainik Schools across India. The Sainik School → NDA pipeline is India\'s most structured defence career path.',website:'sainikschooladmission.in',note:'Not a direct UG exam — but starting at Class 6 in a Sainik School prepares students specifically for NDA. Tamil Nadu has Sainik School Amaravathinagar in Coimbatore.',seats:'~7,000 across all 33 schools',institutes:[
     {name:'Sainik School Amaravathinagar',city:'Coimbatore, TN',tier:'🏆 TN Sainik School'},
     {name:'Sainik School Rewari, Tilaiya, Kazhakootam + 30 more',city:'Pan India (33 schools)',tier:'✓ Sainik School Network'},
   ]},
-  {name:'NDA & NA',full:'National Defence Academy & Naval Academy Examination',body:'UPSC',level:'National',freq:'Twice a year (Apr & Sep)',subjects:['PCM','PCM+CS','PCB','PCMB'],for:'Army, Navy & Air Force wings after Class 12. PCM mandatory for Navy & Air Force.',website:'upsc.gov.in',note:'PCM required for Navy & Air Force. Army open to all streams. SSB interview after written.',seats:'~400 per cycle',institutes:[
+  {name:'NDA & NA',full:'National Defence Academy & Naval Academy Examination',body:'UPSC',level:'National',freq:'Twice a year (Apr & Sep)',timeline:[{cycle:'NDA I',apply:'Dec–Jan',test:'Apr',result:'Apr–May'},{cycle:'NDA II',apply:'Jun–Jul',test:'Sep',result:'Oct'}],subjects:['PCM','PCM+CS','PCB','PCMB'],for:'Army, Navy & Air Force wings after Class 12. PCM mandatory for Navy & Air Force.',website:'upsc.gov.in',note:'PCM required for Navy & Air Force. Army open to all streams. SSB interview after written.',seats:'~400 per cycle',institutes:[
     {name:'National Defence Academy',city:'Khadakwasla, Pune, MH',tier:'🏆 Most Prestigious'},
     {name:'Naval Academy',city:'Ezhimala, Kerala',tier:'🏆 Naval Training'},
     {name:'Indian Military Academy (after NDA)',city:'Dehradun, UK',tier:'🏆 Army Commission'},
     {name:'Air Force Academy (after NDA)',city:'Dundigal, TS',tier:'🏆 Air Force Commission'},
   ]},
-  {name:'IMU CET',full:'Indian Maritime University Common Entrance Test',body:'Indian Maritime University',level:'National',freq:'Once a year (May)',subjects:['PCM','PCM+CS'],for:'B.Tech Marine Engg, B.Sc Nautical Science, B.Sc Ship Building & other maritime programs.',website:'imu.edu.in',note:'PCM mandatory. Physical & medical fitness required. International career at sea. All maritime programs are DGS (Director General of Shipping) approved — this approval is mandatory for a career as a seafarer under Indian maritime law.',seats:'~2,000 total',institutes:[
+  {name:'IMU CET',full:'Indian Maritime University Common Entrance Test',body:'Indian Maritime University',level:'National',freq:'Once a year (May)',timeline:[{cycle:'',apply:'Feb–Apr',test:'May',result:'May–Jun'}],counselling:'Jun–Aug',counsellingNote:'Registration, document verification and a spot round for residual seats, spread across multiple stages.',subjects:['PCM','PCM+CS'],for:'B.Tech Marine Engg, B.Sc Nautical Science, B.Sc Ship Building & other maritime programs.',website:'imu.edu.in',note:'PCM mandatory. Physical & medical fitness required. International career at sea. All maritime programs are DGS (Director General of Shipping) approved — this approval is mandatory for a career as a seafarer under Indian maritime law.',seats:'~2,000 total',institutes:[
     {name:'IMU Chennai',city:'Chennai, TN',tier:'🏆 Flagship Campus'},
     {name:'IMU Kolkata',city:'Kolkata, WB',tier:'⭐ Top Campus'},
     {name:'IMU Mumbai (Port Campus)',city:'Mumbai, MH',tier:'⭐ Top Campus'},
@@ -68,19 +68,19 @@ const EXAM_GROUPS=[
   ]},
 ]},
 {id:'Design',label:'Design & Architecture',ico:'✏',color:'#855100',bg:'#FFF5E0',exams:[
-  {name:'UCEED',full:'Undergraduate Common Entrance Exam for Design',body:'IIT Bombay',level:'National',freq:'Once a year (Jan)',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'B.Des at IITs — open to all streams, no PCM requirement.',website:'uceed.iitb.ac.in',note:'Tests visual perception, drawing, logical reasoning. No PCM requirement — any stream eligible.',seats:'~180 total',institutes:[
+  {name:'UCEED',full:'Undergraduate Common Entrance Exam for Design',body:'IIT Bombay',level:'National',freq:'Once a year (Jan)',timeline:[{cycle:'',apply:'Oct–Nov',test:'Jan',result:'Mar'}],counselling:'Mar–Jul',counsellingNote:'Multi-round B.Des seat allotment across participating IITs, running roughly 4 months.',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'B.Des at IITs — open to all streams, no PCM requirement.',website:'uceed.iitb.ac.in',note:'Tests visual perception, drawing, logical reasoning. No PCM requirement — any stream eligible.',seats:'~180 total',institutes:[
     {name:'IIT Bombay (IDC School of Design)',city:'Mumbai, MH',tier:'🏆 Premier Design'},
     {name:'IIT Guwahati',city:'Guwahati, AS',tier:'🏆 Premier Design'},
     {name:'IIT Hyderabad',city:'Hyderabad, TS',tier:'⭐ Excellent'},
     {name:'IITDM Jabalpur',city:'Jabalpur, MP',tier:'✓ Good'},
   ]},
-  {name:'NID DAT',full:'National Institute of Design Aptitude Test',body:'NID Ahmedabad',level:'National',freq:'Once a year (Jan)',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'B.Des at NID campuses across India.',website:'admissions.nid.edu',note:'Studio test + written. Tests creative thinking, observation, design sense.',seats:'~350 total (all NIDs)',institutes:[
+  {name:'NID DAT',full:'National Institute of Design Aptitude Test',body:'NID Ahmedabad',level:'National',freq:'Once a year (Jan)',timeline:[{cycle:'Prelims',apply:'Sep–Dec',test:'Dec–Jan',result:'Feb'},{cycle:'Mains (B.Des)',apply:'Prelim qualifiers only',test:'May',result:'May'}],counselling:'May–Jul',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'B.Des at NID campuses across India.',website:'admissions.nid.edu',note:'Studio test + written. Tests creative thinking, observation, design sense.',seats:'~350 total (all NIDs)',institutes:[
     {name:'NID Ahmedabad',city:'Ahmedabad, GJ',tier:'🏆 #1 Design School'},
     {name:'NID Gandhinagar',city:'Gandhinagar, GJ',tier:'🏆 Premier'},
     {name:'NID Bengaluru',city:'Bengaluru, KA',tier:'🏆 Premier'},
     {name:'NID Jorhat, Amaravati, Kurukshetra + others',city:'Pan India',tier:'✓ NID Network'},
   ]},
-  {name:'NIFT Entrance',full:'National Institute of Fashion Technology Entrance',body:'NTA',level:'National',freq:'Once a year (Feb)',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'B.Des & B.F.Tech at 17 NIFT campuses across India.',website:'nift.ac.in',note:'GAT (written) + CAT (creative ability) + situation test. Any stream eligible.',seats:'~4,000 (all NIFTs)',institutes:[
+  {name:'NIFT Entrance',full:'National Institute of Fashion Technology Entrance',body:'NTA',level:'National',freq:'Once a year (Feb)',timeline:[{cycle:'',apply:'Oct–Jan',test:'Feb',result:'Jun'}],counselling:'Jun–Aug',counsellingNote:'e-counselling registration, 2 main rounds and a spot round across the 17 campuses.',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'B.Des & B.F.Tech at 17 NIFT campuses across India.',website:'nift.ac.in',note:'GAT (written) + CAT (creative ability) + situation test. Any stream eligible.',seats:'~4,000 (all NIFTs)',institutes:[
     {name:'NIFT New Delhi',city:'New Delhi',tier:'🏆 Top NIFT'},
     {name:'NIFT Mumbai',city:'Mumbai, MH',tier:'🏆 Top NIFT'},
     {name:'NIFT Bengaluru',city:'Bengaluru, KA',tier:'🏆 Top NIFT'},
@@ -88,7 +88,7 @@ const EXAM_GROUPS=[
     {name:'NIFT Hyderabad',city:'Hyderabad, TS',tier:'⭐ Excellent'},
     {name:'NIFT Kolkata, Gandhinagar, Patna + 11 more',city:'Pan India',tier:'✓ NIFT Network (17 campuses)'},
   ]},
-  {name:'FDDI AIST',full:'Footwear Design & Development Institute All India Selection Test',body:'FDDI',level:'National',freq:'Once a year (Apr)',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'B.Des Footwear Design, Fashion Design & Fashion Management at FDDI campuses.',website:'fddiindia.com',note:'',seats:'~1,000+',institutes:[
+  {name:'FDDI AIST',full:'Footwear Design & Development Institute All India Selection Test',body:'FDDI',level:'National',freq:'Once a year (Apr)',timeline:[{cycle:'',apply:'Jan–Apr',test:'May',result:'Jun'}],counselling:'Jun–Jul',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'B.Des Footwear Design, Fashion Design & Fashion Management at FDDI campuses.',website:'fddiindia.com',note:'',seats:'~1,000+',institutes:[
     {name:'FDDI Noida',city:'Noida, UP',tier:'⭐ Top FDDI'},
     {name:'FDDI Chennai',city:'Chennai, TN',tier:'⭐ Top FDDI'},
     {name:'FDDI Kolkata, Chhindwara, Fulapur, Rohtak + others',city:'Pan India',tier:'✓ FDDI Network'},
@@ -99,7 +99,7 @@ const EXAM_GROUPS=[
   ]},
 ]},
 {id:'Engineering',label:'Engineering & Technology',ico:'⚙',color:'#1A4DD6',bg:'#EBF0FF',exams:[
-  {name:'JEE Advanced',full:'Joint Entrance Examination Advanced',body:'IIT Council / NTA',level:'National',freq:'Once a year (May–June)',subjects:['PCM','PCM+CS','PCMB'],for:'B.Tech / B.E / B.S at all 23 IITs. Must qualify JEE Main first (top 2.5 lakh).',website:'jeeadv.ac.in',note:'Hardest engineering exam in India. ~1.8 lakh appear, ~17,000 qualify.',seats:'~17,000 (IITs)',institutes:[
+  {name:'JEE Advanced',full:'Joint Entrance Examination Advanced',body:'IIT Council / NTA',level:'National',freq:'Once a year (May–June)',timeline:[{cycle:'',apply:'Apr–May',test:'May',result:'Jun'}],counselling:'Jun–Jul',counsellingNote:'Same JoSAA counselling as JEE Main — a single joint process for IITs/NITs/IIITs/GFTIs, 6 rounds over ~7 weeks.',subjects:['PCM','PCM+CS','PCMB'],for:'B.Tech / B.E / B.S at all 23 IITs. Must qualify JEE Main first (top 2.5 lakh).',website:'jeeadv.ac.in',note:'Hardest engineering exam in India. ~1.8 lakh appear, ~17,000 qualify.',seats:'~17,000 (IITs)',institutes:[
     {name:'IIT Bombay',city:'Mumbai, MH',tier:'🏆 Premier'},
     {name:'IIT Delhi',city:'New Delhi',tier:'🏆 Premier'},
     {name:'IIT Madras',city:'Chennai, TN',tier:'🏆 Premier'},
@@ -132,7 +132,7 @@ const EXAM_GROUPS=[
     {name:'BITS Goa',city:'Goa',tier:'🏆 Premier Private'},
     {name:'BITS Hyderabad',city:'Hyderabad, TS',tier:'🏆 Premier Private'},
   ]},
-  {name:'IIST Entrance',full:'Indian Institute of Space Science and Technology Admission',body:'IIST / ISRO',level:'National',freq:'Once a year (Jun, via JEE Advanced rank)',subjects:['PCM','PCM+CS'],for:'B.Tech at IIST Thiruvananthapuram — India\'s only dedicated space technology university under ISRO.',website:'iist.ac.in',note:'Admission via JEE Advanced rank + IIST cutoff. Graduates bonded to ISRO for 5 years of service. Fully funded by Govt of India — fees, hostel subsidised.',seats:'~120 seats',institutes:[
+  {name:'IIST Entrance',full:'Indian Institute of Space Science and Technology Admission',body:'IIST / ISRO',level:'National',freq:'Once a year (Jun, via JEE Advanced rank)',counselling:'Jun–Jul',counsellingNote:'No separate exam — IIST uses the JEE Advanced rank. Register directly on IIST\'s own portal (admission.iist.ac.in), not via JoSAA.',subjects:['PCM','PCM+CS'],for:'B.Tech at IIST Thiruvananthapuram — India\'s only dedicated space technology university under ISRO.',website:'iist.ac.in',note:'Admission via JEE Advanced rank + IIST cutoff. Graduates bonded to ISRO for 5 years of service. Fully funded by Govt of India — fees, hostel subsidised.',seats:'~120 seats',institutes:[
     {name:'IIST Thiruvananthapuram',city:'Thiruvananthapuram, KL',tier:'🚀 Govt Space Univ (ISRO)'},
   ]},
   {name:'ISRO ICRB',full:'ISRO Centralised Recruitment Board — Scientist/Engineer \'SC\'',body:'Indian Space Research Organisation (ISRO)',level:'National',freq:'As vacancies arise — not a fixed annual cycle like GATE',subjects:['PCM','PCM+CS'],for:'Direct recruitment of BE/B.Tech graduates as Scientist/Engineer \'SC\' at ISRO centres. A recruitment exam, not a college admission exam.',website:'isro.gov.in',note:'Eligibility: BE/B.Tech in the notified discipline (Electronics, Mechanical, Computer Science, Civil, Electrical & others — varies by cycle) with 65% aggregate marks or CGPA 6.84/10. Age 18–28 (relaxed to 33 for SC/ST, 31 for OBC). Selection: discipline-specific written test + interview.',seats:'Varies per recruitment cycle — typically 50–150 posts nationally',institutes:[
@@ -213,14 +213,14 @@ const EXAM_GROUPS=[
     {name:'USICT Delhi (IP University)',city:'New Delhi',tier:'⭐ Top IP University'},
     {name:'MAIT, MSIT, Maharaja Surajmal Institute',city:'New Delhi',tier:'✓ IP University network'},
   ]},
-  {name:'NATA',full:'National Aptitude Test in Architecture',body:'Council of Architecture',level:'National',freq:'Twice a year',subjects:['PCM','PCM+CS','Any'],for:'B.Arch at architecture colleges across India (NITs use JEE Main Paper 2 instead).',website:'nata.in',note:'Tests drawing, aesthetic sensitivity & logical reasoning. No PCM requirement.',seats:'~10,000+ seats across India',institutes:[
+  {name:'NATA',full:'National Aptitude Test in Architecture',body:'Council of Architecture',level:'National',freq:'Twice a year',timeline:[{cycle:'',apply:'Feb–Mar',test:'Apr–Aug',result:'~2 weeks after each phase'}],timelineNote:'NATA now runs across multiple weekend phases (roughly Apr–Jun, plus an Aug phase) rather than two fixed dates — students can attempt any phase.',subjects:['PCM','PCM+CS','Any'],for:'B.Arch at architecture colleges across India (NITs use JEE Main Paper 2 instead).',website:'nata.in',note:'Tests drawing, aesthetic sensitivity & logical reasoning. No PCM requirement.',seats:'~10,000+ seats across India',institutes:[
     {name:'SPA Delhi (School of Planning & Architecture)',city:'New Delhi',tier:'🏆 Premier'},
     {name:'SPA Bhopal & Vijayawada',city:'MP & AP',tier:'🏆 Premier'},
     {name:'CEPT University',city:'Ahmedabad, GJ',tier:'🏆 Premier'},
     {name:'Chandigarh College of Architecture',city:'Chandigarh',tier:'⭐ Excellent'},
     {name:'500+ private architecture colleges',city:'Pan India',tier:'✓ Via NATA score'},
   ]},
-  {name:'AAT',full:'Architecture Aptitude Test',body:'IIT Council (via JEE Advanced)',level:'National',freq:'Once a year (Jun, right after JEE Advanced results)',subjects:['PCM'],for:'B.Arch at IIT Kharagpur, IIT Roorkee & IIT (BHU) Varanasi — the only 3 IITs offering B.Arch.',website:'jeeadv.ac.in',note:'Must first qualify JEE Advanced. AAT itself is pass/fail only (drawing, 3D perception, aesthetic sensitivity, freehand sketching) — no separate rank. Final seat allotment uses your JEE Advanced AIR through JoSAA counselling, not an AAT score.',seats:'~108 seats total across the 3 IITs',institutes:[
+  {name:'AAT',full:'Architecture Aptitude Test',body:'IIT Council (via JEE Advanced)',level:'National',freq:'Once a year (Jun, right after JEE Advanced results)',timeline:[{cycle:'',apply:'Jun',test:'Jun',result:'Jun'}],counselling:'Jun–Jul',counsellingNote:'Feeds into the same JoSAA counselling as JEE Main/Advanced, for B.Arch seats at IIT Kharagpur, Roorkee & BHU.',subjects:['PCM'],for:'B.Arch at IIT Kharagpur, IIT Roorkee & IIT (BHU) Varanasi — the only 3 IITs offering B.Arch.',website:'jeeadv.ac.in',note:'Must first qualify JEE Advanced. AAT itself is pass/fail only (drawing, 3D perception, aesthetic sensitivity, freehand sketching) — no separate rank. Final seat allotment uses your JEE Advanced AIR through JoSAA counselling, not an AAT score.',seats:'~108 seats total across the 3 IITs',institutes:[
     {name:'IIT Kharagpur',city:'Kharagpur, WB',tier:'🏆 Premier'},
     {name:'IIT Roorkee',city:'Roorkee, UK',tier:'🏆 Premier'},
     {name:'IIT (BHU) Varanasi',city:'Varanasi, UP',tier:'⭐ Excellent'},
@@ -267,16 +267,16 @@ const EXAM_GROUPS=[
   ]},
 ]},
 {id:'Arts',label:'Fine Arts, Performing Arts & Media',ico:'🎨',color:'#581F9E',bg:'#F2EBFF',exams:[
-  {name:'FTII JET',full:'Film & Television Institute of India Joint Entrance Test',body:'FTII Pune',level:'National',freq:'Once a year (Mar)',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'Film direction, cinematography, editing, sound, TV content at FTII Pune.',website:'ftiindia.com',note:'Written + interview. Tests cinematic awareness & creativity. No stream restriction.',seats:'~100',institutes:[
+  {name:'FTII JET',full:'Film & Television Institute of India Joint Entrance Test',body:'FTII Pune',level:'National',freq:'Once a year (Mar)',timeline:[{cycle:'',apply:'Jan–Mar',test:'Apr–Jul',result:'Sep–Oct'}],timelineNote:'Exam month has shifted noticeably between recent cycles (Jul 2025 → Apr 2026) — confirm the current cycle\'s exact date at ftii.ac.in.',counselling:'Sep–Nov',counsellingNote:'FTII-run interview/orientation rounds after the merit list, typically over 1–2 months.',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'Film direction, cinematography, editing, sound, TV content at FTII Pune.',website:'ftiindia.com',note:'Written + interview. Tests cinematic awareness & creativity. No stream restriction.',seats:'~100',institutes:[
     {name:'FTII Pune',city:'Pune, MH',tier:'🏆 India\'s Premier Film School'},
   ]},
   {name:'SRFTI Entrance',full:'Satyajit Ray Film & Television Institute Entrance',body:'SRFTI Kolkata',level:'National',freq:'Once a year',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'Film & television production programs at SRFTI Kolkata.',website:'srfti.ac.in',note:'',seats:'~60',institutes:[
     {name:'Satyajit Ray Film & Television Institute',city:'Kolkata, WB',tier:'🏆 Premier Film School'},
   ]},
-  {name:'NSD Entrance',full:'National School of Drama Entrance Test',body:'NSD New Delhi',level:'National',freq:'Once a year',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'3-year Theatre Arts diploma at NSD New Delhi.',website:'nsd.gov.in',note:'Audition + interview based. Any stream eligible.',seats:'~30',institutes:[
+  {name:'NSD Entrance',full:'National School of Drama Entrance Test',body:'NSD New Delhi',level:'National',freq:'Once a year',timeline:[{cycle:'',apply:'Apr–May',test:'Jun',result:'Jul–Aug'}],counselling:'Aug',counsellingNote:'Final in-person workshop round at the NSD Delhi campus after the written + interview stages.',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'3-year Theatre Arts diploma at NSD New Delhi.',website:'nsd.gov.in',note:'Audition + interview based. Any stream eligible.',seats:'~30',institutes:[
     {name:'National School of Drama',city:'New Delhi',tier:'🏆 Premier Theatre School'},
   ]},
-  {name:'IIMC Entrance',full:'Indian Institute of Mass Communication Entrance',body:'IIMC New Delhi',level:'National',freq:'Once a year (Mar–Apr)',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'PG Diploma in Journalism, Advertising, Hindi Journalism at IIMC. (UG: XIC, ACJ have own tests.)',website:'iimc.nic.in',note:'Primarily PG. For UG media — XIC Mumbai & ACJ Chennai conduct separate own tests.',seats:'~200 (PG programs)',institutes:[
+  {name:'IIMC Entrance',full:'Indian Institute of Mass Communication Entrance',body:'IIMC New Delhi',level:'National',freq:'Once a year (Mar–Apr)',timeline:[{cycle:'',apply:'Dec–Mar',test:'Mar',result:'Mar–Apr'}],timelineNote:'Runs on the CUET PG (NTA) calendar since IIMC\'s main programs are PG diplomas; the small regional-language diploma seats use a separate IIMC-run test.',counselling:'May–Jun',counsellingNote:'IIMC-run counselling rounds after the CUET PG result.',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'PG Diploma in Journalism, Advertising, Hindi Journalism at IIMC. (UG: XIC, ACJ have own tests.)',website:'iimc.nic.in',note:'Primarily PG. For UG media — XIC Mumbai & ACJ Chennai conduct separate own tests.',seats:'~200 (PG programs)',institutes:[
     {name:'IIMC New Delhi (main)',city:'New Delhi',tier:'🏆 Premier Media School'},
     {name:'IIMC regional centres — Dhenkanal, Aizawl, Jammu, Amravati, Kottayam',city:'Pan India',tier:'✓ IIMC Network'},
     {name:'XIC Mumbai (UG — own test)',city:'Mumbai, MH',tier:'🏆 Top UG Media'},
@@ -284,7 +284,7 @@ const EXAM_GROUPS=[
   ]},
 ]},
 {id:'Hotel',label:'Hotel Management & Hospitality',ico:'🏨',color:'#855100',bg:'#FFF5E0',exams:[
-  {name:'NCHM JEE',full:'National Council for Hotel Management Joint Entrance Exam',body:'NTA',level:'National',freq:'Once a year (Apr)',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'B.Sc Hospitality & Hotel Administration at 21 Central IHMs. Any stream eligible.',website:'nchmct.org',note:'No stream restriction. Tests numerical ability, reasoning, English, GK. After the main JEE counselling, NCHMCT runs multiple rounds of OET (Online Entrance Test) — a separate, mobile-friendly spot-admission mechanism to fill residual vacancy seats for candidates without a JEE rank or who missed the main exam. OET rounds are published on nchmcounselling.nic.in through the year.',seats:'~7,000 (all IHMs)',institutes:[
+  {name:'NCHM JEE',full:'National Council for Hotel Management Joint Entrance Exam',body:'NTA',level:'National',freq:'Once a year (Apr)',timeline:[{cycle:'',apply:'Dec–Mar',test:'Apr',result:'May'}],counselling:'Jun',counsellingNote:'Multiple rounds of centralised seat allotment, followed by year-round OET spot-admission rounds for residual vacancies.',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'B.Sc Hospitality & Hotel Administration at 21 Central IHMs. Any stream eligible.',website:'nchmct.org',note:'No stream restriction. Tests numerical ability, reasoning, English, GK. After the main JEE counselling, NCHMCT runs multiple rounds of OET (Online Entrance Test) — a separate, mobile-friendly spot-admission mechanism to fill residual vacancy seats for candidates without a JEE rank or who missed the main exam. OET rounds are published on nchmcounselling.nic.in through the year.',seats:'~7,000 (all IHMs)',institutes:[
     {name:'IHM Pusa New Delhi',city:'New Delhi',tier:'🏆 #1 IHM'},
     {name:'IHM Mumbai',city:'Mumbai, MH',tier:'🏆 Top IHM'},
     {name:'IHM Bengaluru',city:'Bengaluru, KA',tier:'🏆 Top IHM'},
@@ -313,7 +313,7 @@ const EXAM_GROUPS=[
     {name:'NLIU Bhopal',city:'Bhopal, MP',tier:'⭐ Top 10 NLU'},
     {name:'RGNUL, GNLU, RMLNLU + 19 more NLUs',city:'Pan India',tier:'✓ NLU Network'},
   ]},
-  {name:'AILET',full:'All India Law Entrance Test',body:'NLU Delhi',level:'National',freq:'Once a year (Dec)',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'BA LLB at NLU Delhi only — ~80 seats, separate from CLAT.',website:'nludelhi.ac.in',note:'NLU Delhi is not in CLAT consortium. Separate exam required.',seats:'~80 (UG)',institutes:[
+  {name:'AILET',full:'All India Law Entrance Test',body:'NLU Delhi',level:'National',freq:'Once a year (Dec)',timeline:[{cycle:'',apply:'Aug–Nov',test:'Dec',result:'Dec'}],counselling:'Dec',counsellingNote:'4 rounds of seat allotment, concluded within about 2 weeks of the result.',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'BA LLB at NLU Delhi only — ~80 seats, separate from CLAT.',website:'nludelhi.ac.in',note:'NLU Delhi is not in CLAT consortium. Separate exam required.',seats:'~80 (UG)',institutes:[
     {name:'NLU Delhi',city:'New Delhi',tier:'🏆 Premier NLU'},
   ]},
   {name:'MH CET Law',full:'Maharashtra CET for Law',body:'State CET Cell Maharashtra',level:'State',freq:'Once a year (May)',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'5-year and 3-year law programs in Maharashtra.',website:'cetcell.mahacet.org',note:'',seats:'~5,000+',institutes:[
@@ -328,17 +328,17 @@ const EXAM_GROUPS=[
   ]},
 ]},
 {id:'Management',label:'Management, BBA & Integrated MBA',ico:'📊',color:'#0D6640',bg:'#E8F8EF',exams:[
-  {name:'IPMAT Indore',full:'Integrated Program in Management Aptitude Test',body:'IIM Indore',level:'National',freq:'Once a year (May)',subjects:['PCM','PCM+CS','Commerce+Maths'],for:'5-year IPM — BBA + MBA from IIM Indore.',website:'iimindore.ac.in',note:'QA + VA sections. Maths heavily tested. ~50,000 appear for ~150 seats.',seats:'~150',institutes:[
+  {name:'IPMAT Indore',full:'Integrated Program in Management Aptitude Test',body:'IIM Indore',level:'National',freq:'Once a year (May)',timeline:[{cycle:'',apply:'Feb–Mar',test:'May',result:'May–Jun'}],counselling:'Jun–Jul',counsellingNote:'WAT-PI rounds in June, final merit list by early July.',subjects:['PCM','PCM+CS','Commerce+Maths'],for:'5-year IPM — BBA + MBA from IIM Indore.',website:'iimindore.ac.in',note:'QA + VA sections. Maths heavily tested. ~50,000 appear for ~150 seats.',seats:'~150',institutes:[
     {name:'IIM Indore',city:'Indore, MP',tier:'🏆 IIM — MBA at 22'},
   ]},
-  {name:'IPMAT Rohtak',full:'Integrated Program in Management Aptitude Test',body:'IIM Rohtak',level:'National',freq:'Once a year (May)',subjects:['PCM','PCM+CS','Commerce+Maths'],for:'5-year IPM at IIM Rohtak.',website:'iimrohtak.ac.in',note:'',seats:'~120',institutes:[
+  {name:'IPMAT Rohtak',full:'Integrated Program in Management Aptitude Test',body:'IIM Rohtak',level:'National',freq:'Once a year (May)',timeline:[{cycle:'',apply:'Feb–Apr',test:'May',result:'May–Jun'}],counselling:'Jun–Jul',counsellingNote:'PI rounds in June, final merit list by early July.',subjects:['PCM','PCM+CS','Commerce+Maths'],for:'5-year IPM at IIM Rohtak.',website:'iimrohtak.ac.in',note:'',seats:'~120',institutes:[
     {name:'IIM Rohtak',city:'Rohtak, HR',tier:'🏆 IIM — MBA at 22'},
   ]},
-  {name:'JIPMAT',full:'Joint Integrated Program in Management Aptitude Test',body:'NTA',level:'National',freq:'Once a year (June)',subjects:['PCM','PCM+CS','Commerce+Maths'],for:'5-year IPM at IIM Jammu & IIM Bodh Gaya.',website:'jipmat.nta.nic.in',note:'One test, two IIM campuses.',seats:'~200 (both)',institutes:[
+  {name:'JIPMAT',full:'Joint Integrated Program in Management Aptitude Test',body:'NTA',level:'National',freq:'Once a year (June)',timeline:[{cycle:'',apply:'Feb–May',test:'Apr–Jun',result:'May–Jun'}],timelineNote:'Application and exam months have shifted noticeably between recent cycles (exam Apr 2025 → Jun 2026) — confirm the current cycle\'s dates at jipmat.nta.nic.in.',counselling:'Jun–Jul',subjects:['PCM','PCM+CS','Commerce+Maths'],for:'5-year IPM at IIM Jammu & IIM Bodh Gaya.',website:'jipmat.nta.nic.in',note:'One test, two IIM campuses.',seats:'~200 (both)',institutes:[
     {name:'IIM Jammu',city:'Jammu, J&K',tier:'🏆 IIM — MBA at 22'},
     {name:'IIM Bodh Gaya',city:'Bodh Gaya, BR',tier:'🏆 IIM — MBA at 22'},
   ]},
-  {name:'UGAT',full:'Under Graduate Aptitude Test',body:'AIMA',level:'National',freq:'Once a year (May)',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'BBA, BHM, BCA at AIMA-affiliated colleges.',website:'aima.in',note:'',seats:'Many seats across affiliates',institutes:[
+  {name:'UGAT',full:'Under Graduate Aptitude Test',body:'AIMA',level:'National',freq:'Once a year (May)',timeline:[{cycle:'',apply:'Feb–Jun',test:'Jun',result:'Jun'}],counselling:'Jun onwards',counsellingNote:'No central counselling — AIMA publishes a merit list and each participating institute runs its own admission process.',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'BBA, BHM, BCA at AIMA-affiliated colleges.',website:'aima.in',note:'',seats:'Many seats across affiliates',institutes:[
     {name:'AIMA-affiliated BBA colleges',city:'Pan India',tier:'✓ Wide access'},
   ]},
 ]},
@@ -352,17 +352,17 @@ const EXAM_GROUPS=[
     {name:'Govt Medical College Trivandrum, Kozhikode',city:'Kerala',tier:'⭐ Top Govt KL'},
     {name:'All 706 Medical Colleges (Govt + Private)',city:'Pan India',tier:'✓ Full network'},
   ]},
-  {name:'AIIMS Nursing',full:'AIIMS B.Sc Nursing Entrance',body:'AIIMS New Delhi',level:'National',freq:'Once a year',subjects:['PCB','PCMB'],for:'B.Sc Nursing at all AIIMS campuses.',website:'aiimsexams.ac.in',note:'Separate from NEET. Most competitive nursing admission in India.',seats:'~700 (all AIIMS)',institutes:[
+  {name:'AIIMS Nursing',full:'AIIMS B.Sc Nursing Entrance',body:'AIIMS New Delhi',level:'National',freq:'Once a year',timeline:[{cycle:'',apply:'Mar–May',test:'May–Jun',result:'Jun'}],subjects:['PCB','PCMB'],for:'B.Sc Nursing at all AIIMS campuses.',website:'aiimsexams.ac.in',note:'Separate from NEET. Most competitive nursing admission in India.',seats:'~700 (all AIIMS)',institutes:[
     {name:'AIIMS New Delhi',city:'New Delhi',tier:'🏆 Top Nursing'},
     {name:'AIIMS Bhopal, Bhubaneswar, Jodhpur, Patna, Rishikesh, Raipur + others',city:'Pan India',tier:'🏆 AIIMS Network'},
   ]},
   {name:'JIPMER Nursing',full:'JIPMER B.Sc Nursing Entrance',body:'JIPMER Puducherry',level:'National',freq:'Once a year',subjects:['PCB','PCMB'],for:'B.Sc Nursing at JIPMER Puducherry.',website:'jipmer.edu.in',note:'',seats:'~100',institutes:[
     {name:'JIPMER',city:'Puducherry',tier:'🏆 Premier'},
   ]},
-  {name:'PGIMER Nursing',full:'PGIMER B.Sc Nursing Entrance',body:'PGIMER Chandigarh',level:'National',freq:'Once a year',subjects:['PCB','PCMB'],for:'B.Sc Nursing at PGIMER Chandigarh.',website:'pgimer.edu.in',note:'',seats:'~80',institutes:[
+  {name:'PGIMER Nursing',full:'PGIMER B.Sc Nursing Entrance',body:'PGIMER Chandigarh',level:'National',freq:'Once a year',timeline:[{cycle:'',apply:'Jun–Jul',test:'Jul',result:'Aug'}],counselling:'Aug',subjects:['PCB','PCMB'],for:'B.Sc Nursing at PGIMER Chandigarh.',website:'pgimer.edu.in',note:'',seats:'~80',institutes:[
     {name:'PGIMER',city:'Chandigarh',tier:'🏆 Premier'},
   ]},
-  {name:'CET-PWD',full:'Common Entrance Test for Persons with Disabilities',body:'Ministry of Social Justice & Empowerment — jointly conducted by PDUNIPPD / SVNIRTAR / NILD / NIEPMD / AYJNISHD / NIEPID / CRCSRE',level:'National',freq:'Once a year (May–Jun, exam in late Jun)',subjects:['PCB','PCMB','PCM','PCM+CS','Any'],for:'BPT, BOT, BPO and BASLP at the seven National Institutes & Regional Centres for Empowerment of Persons with Disabilities — for candidates with and without disabilities (PwD reservation as per RPwD Act). Eligibility: 10+2 Science with English as compulsory subject.',website:'admission.svnirtar.nic.in',note:'A single common counselling fills seats across all participating institutes. Apply online at the SVNIRTAR / PDUNIPPD admission portal.',seats:'~600 seats across institutes',institutes:[
+  {name:'CET-PWD',full:'Common Entrance Test for Persons with Disabilities',body:'Ministry of Social Justice & Empowerment — jointly conducted by PDUNIPPD / SVNIRTAR / NILD / NIEPMD / AYJNISHD / NIEPID / CRCSRE',level:'National',freq:'Once a year (May–Jun, exam in late Jun)',timeline:[{cycle:'',apply:'Apr',test:'Apr–May',result:'Jun'}],timelineNote:'Dates are sourced from trackers marked "tentative" — confirm at the official SVNIRTAR/NIEPMD admission portal each cycle.',counselling:'Jul',subjects:['PCB','PCMB','PCM','PCM+CS','Any'],for:'BPT, BOT, BPO and BASLP at the seven National Institutes & Regional Centres for Empowerment of Persons with Disabilities — for candidates with and without disabilities (PwD reservation as per RPwD Act). Eligibility: 10+2 Science with English as compulsory subject.',website:'admission.svnirtar.nic.in',note:'A single common counselling fills seats across all participating institutes. Apply online at the SVNIRTAR / PDUNIPPD admission portal.',seats:'~600 seats across institutes',institutes:[
     {name:'PDUNIPPD New Delhi',city:'New Delhi',tier:'🏆 Apex — Physical'},
     {name:'SVNIRTAR Cuttack',city:'Cuttack, OD',tier:'🏆 Apex — Locomotor'},
     {name:'NILD Kolkata',city:'Kolkata, WB',tier:'⭐ National — Locomotor'},
@@ -382,7 +382,7 @@ const EXAM_GROUPS=[
   ]},
 ]},
 {id:'Pharmacy',label:'Pharmacy',ico:'💊',color:'#0A686F',bg:'#E5FAFB',exams:[
-  {name:'NEET UG (Pharmacy)',full:'National Eligibility cum Entrance Test — for B.Pharm at some states',body:'NTA',level:'National',freq:'Once a year (May)',subjects:['PCB','PCMB','PCM','PCM+CS'],for:'B.Pharm at govt pharmacy colleges in states like Andhra Pradesh, Telangana, Karnataka. Many private colleges also use NEET for B.Pharm screening.',website:'neet.nta.nic.in',note:'Not all states use NEET for B.Pharm — some use state CETs or merit. Always verify with the specific state/college.',seats:'Varies by state',institutes:[
+  {name:'NEET UG (Pharmacy)',full:'National Eligibility cum Entrance Test — for B.Pharm at some states',body:'NTA',level:'National',freq:'Once a year (May)',timeline:[{cycle:'',apply:'Feb–Mar',test:'May',result:'Jun'}],timelineNote:'Same exam and dates as NEET UG — there\'s no separate national pharmacy counselling window; B.Pharm admission using this score is run state-by-state (some states use their own CET or Class 12 marks instead).',subjects:['PCB','PCMB','PCM','PCM+CS'],for:'B.Pharm at govt pharmacy colleges in states like Andhra Pradesh, Telangana, Karnataka. Many private colleges also use NEET for B.Pharm screening.',website:'neet.nta.nic.in',note:'Not all states use NEET for B.Pharm — some use state CETs or merit. Always verify with the specific state/college.',seats:'Varies by state',institutes:[
     {name:'Govt pharmacy colleges in AP, TS, KA',city:'Various',tier:'✓ State Govt Pharmacy'},
     {name:'Private pharmacy colleges using NEET',city:'Pan India',tier:'✓ Many private colleges'},
   ]},
@@ -391,7 +391,7 @@ const EXAM_GROUPS=[
     {name:'PSG College of Pharmacy',city:'Coimbatore, TN',tier:'⭐ Top Private Pharmacy TN'},
     {name:'Govt & private pharmacy colleges — state-wise',city:'Pan India',tier:'✓ Via state CET'},
   ]},
-  {name:'GPAT',full:'Graduate Pharmacy Aptitude Test',body:'NTA',level:'National',freq:'Once a year (Jan)',subjects:['PCB','PCMB'],for:'M.Pharm admissions (PG). Listed here as awareness — GPAT is the PG equivalent of JEE for pharmacy students after B.Pharm.',website:'gpat.nta.nic.in',note:'This is a PG exam, not UG. Included for awareness — students starting B.Pharm should know GPAT is the next step.',seats:'M.Pharm seats across India',institutes:[
+  {name:'GPAT',full:'Graduate Pharmacy Aptitude Test',body:'NTA',level:'National',freq:'Once a year (Jan)',timeline:[{cycle:'',apply:'Dec–Jan',test:'Mar',result:'Apr'}],timelineNote:'Application/exam months have shifted between recent cycles (exam May 2025 → Mar 2026) — confirm the current cycle\'s dates at gpat.nta.nic.in.',subjects:['PCB','PCMB'],for:'M.Pharm admissions (PG). Listed here as awareness — GPAT is the PG equivalent of JEE for pharmacy students after B.Pharm.',website:'gpat.nta.nic.in',note:'This is a PG exam, not UG. Included for awareness — students starting B.Pharm should know GPAT is the next step.',seats:'M.Pharm seats across India',institutes:[
     {name:'Jamia Hamdard + all AICTE-approved M.Pharm colleges (govt & aided)',city:'Pan India',tier:'✓ Via GPAT score'},
   ]},
 ]},
@@ -402,7 +402,7 @@ const EXAM_GROUPS=[
   ]},
 ]},
 {id:'Science',label:'Pure Science & Research',ico:'⚗',color:'#581F9E',bg:'#F2EBFF',exams:[
-  {name:'IISER IAT',full:'IISER Aptitude Test',body:'IISERs (joint)',level:'National',freq:'Once a year (June)',subjects:['PCM','PCM+CS','PCMB'],for:'5-year BS-MS at all 7 IISERs.',website:'iiseradmission.in',note:'JEE Advanced score also accepted instead of IAT. KVPY route discontinued after 2021–22.',seats:'~2,800 total (all IISERs)',institutes:[
+  {name:'IISER IAT',full:'IISER Aptitude Test',body:'IISERs (joint)',level:'National',freq:'Once a year (June)',timeline:[{cycle:'',apply:'Mar–Apr',test:'May–Jun',result:'Jun'}],counselling:'Jun–Aug',counsellingNote:'2 rounds of centralised seat allotment across the 7 IISERs.',subjects:['PCM','PCM+CS','PCMB'],for:'5-year BS-MS at all 7 IISERs.',website:'iiseradmission.in',note:'JEE Advanced score also accepted instead of IAT. KVPY route discontinued after 2021–22.',seats:'~2,800 total (all IISERs)',institutes:[
     {name:'IISER Pune',city:'Pune, MH',tier:'🏆 Top IISER'},
     {name:'IISER Kolkata',city:'Kolkata, WB',tier:'🏆 Top IISER'},
     {name:'IISER Mohali',city:'Mohali, PB',tier:'🏆 Top IISER'},
@@ -411,7 +411,7 @@ const EXAM_GROUPS=[
     {name:'IISER Tirupati',city:'AP',tier:'⭐ Excellent'},
     {name:'IISER Berhampur',city:'OD',tier:'✓ Good'},
   ]},
-  {name:'NEST',full:'National Entrance Screening Test',body:'NISER & UM-DAE CEBS',level:'National',freq:'Once a year (June)',subjects:['PCM','PCM+CS','PCMB'],for:'Integrated M.Sc at NISER Bhubaneswar & UM-DAE CEBS Mumbai.',website:'nestexam.in',note:'NISER is under Dept of Atomic Energy — strong BARC/ISRO pipeline.',seats:'~300 total',institutes:[
+  {name:'NEST',full:'National Entrance Screening Test',body:'NISER & UM-DAE CEBS',level:'National',freq:'Once a year (June)',timeline:[{cycle:'',apply:'Jan–May',test:'Jun',result:'Jul'}],counselling:'Jul',subjects:['PCM','PCM+CS','PCMB'],for:'Integrated M.Sc at NISER Bhubaneswar & UM-DAE CEBS Mumbai.',website:'nestexam.in',note:'NISER is under Dept of Atomic Energy — strong BARC/ISRO pipeline.',seats:'~300 total',institutes:[
     {name:'NISER Bhubaneswar',city:'Bhubaneswar, OD',tier:'🏆 DAE Premier'},
     {name:'UM-DAE CEBS Mumbai',city:'Mumbai, MH',tier:'🏆 DAE Premier'},
   ]},
@@ -452,7 +452,7 @@ const EXAM_GROUPS=[
   ]},
 ]},
 {id:'TeacherEd',label:'Teacher Education',ico:'📖',color:'#5B2D9E',bg:'#F2EBFF',exams:[
-  {name:'NCET',full:'National Common Entrance Test',body:'NTA',level:'National',freq:'Once a year',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'4-year Integrated Teacher Education Programme (ITEP) at selected Central/State Universities, IITs, NITs, RIEs and Govt colleges. Replaces the old 2-year B.Ed after graduation.',website:'ncet.samarth.ac.in',note:'ITEP is a game-changer — students become school teachers with a 4-year integrated UG+teaching qualification directly after Class 12, instead of the old route of UG+2yr B.Ed.',seats:'~7,000 across participating institutes',institutes:[
+  {name:'NCET',full:'National Common Entrance Test',body:'NTA',level:'National',freq:'Once a year',timeline:[{cycle:'',apply:'Feb–Mar',test:'Apr',result:'Jun'}],counselling:'Jun',counsellingNote:'Institution-specific, not run centrally by NTA.',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'4-year Integrated Teacher Education Programme (ITEP) at selected Central/State Universities, IITs, NITs, RIEs and Govt colleges. Replaces the old 2-year B.Ed after graduation.',website:'ncet.samarth.ac.in',note:'ITEP is a game-changer — students become school teachers with a 4-year integrated UG+teaching qualification directly after Class 12, instead of the old route of UG+2yr B.Ed.',seats:'~7,000 across participating institutes',institutes:[
     {name:'Central Universities — CUTN, BHU, JNU, Hyderabad',city:'Pan India',tier:'✓ Central University ITEP'},
     {name:'RIEs — Regional Institutes of Education (Mysore, Bhopal, Bhubaneswar, Ajmer, Shillong)',city:'Pan India',tier:'🏆 Premier Teacher Ed'},
     {name:'NIT Tiruchirappalli (B.Sc B.Ed)',city:'Trichy, TN',tier:'🏆 Top NIT ITEP'},
