@@ -300,9 +300,6 @@ const EXAM_GROUPS=[
     {name:'IITTM Noida',city:'Noida, UP',tier:'⭐ Excellent'},
     {name:'IITTM Goa',city:'Goa',tier:'⭐ Excellent'},
   ]},
-  {name:'AIHMCT WAT',full:'Army Institute of Hotel Management & Catering Technology Written Aptitude Test',body:'Army IHM Bengaluru',level:'Institute',freq:'Once a year',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'BHM at Army IHM, Bengaluru.',website:'aihmctbangalore.com',note:'',seats:'~120',institutes:[
-    {name:'Army IHM Bengaluru',city:'Bengaluru, KA',tier:'⭐ Unique — Army HM'},
-  ]},
 ]},
 {id:'Law',label:'Law',ico:'⚖',color:'#18160F',bg:'#EDEBE5',exams:[
   {name:'CLAT',full:'Common Law Admission Test',body:'Consortium of National Law Universities',level:'National',freq:'Once a year (Dec)',timeline:[{cycle:'',apply:'Jul–Oct',test:'Dec',result:'Dec'}],timelineNote:'CLAT is named for its admission-intake year, not the test year — e.g. "CLAT 2026" was conducted in Dec 2025. The months above are relative to the test year (the year before the named intake year).',counselling:'Dec–Feb',counsellingNote:'Run centrally by the Consortium — up to 5 rounds, ₹30,000 seat-lock fee per round. (The 2025 cycle was delayed to May–Jun by litigation — treat Dec–Feb as the normal-year pattern.)',subjects:['PCM','PCM+CS','PCB','PCMB','Commerce','Arts','Any'],for:'BA LLB / BBA LLB (5-year) at all 25 National Law Universities.',website:'consortiumofnlus.ac.in',note:'No stream restriction. Maths PCM background helps logical reasoning section.',seats:'~3,000 (all NLUs)',institutes:[
