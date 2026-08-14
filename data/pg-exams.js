@@ -56,6 +56,10 @@ const PG_EXAM_GROUPS = [
         body: 'Anna University',
         level: 'State',
         freq: 'Once a year (Mar–Apr)',
+        timeline: [{ cycle: '', apply: 'Jan–Apr', test: 'Mar–May', result: 'Apr' }],
+        timelineNote: 'Since 2023-24 this PG engineering exam is branded CEETA-PG (Common Engineering Entrance Test and Admission – PG) — TANCET itself now covers only MBA/MCA. Kept under this name here for continuity with the site\'s existing listing.',
+        counselling: 'Sep',
+        counsellingNote: 'CEETA-PG counselling — allotment and joining conclude within about 2 weeks of the result.',
         for: 'M.E./M.Tech admission at Anna University campuses and affiliated colleges in Tamil Nadu',
         website: 'annauniv.edu/tancet',
         note: 'Required for all Govt., Aided, and Private colleges in Tamil Nadu for PG engineering. Separate from GATE.',
@@ -552,6 +556,7 @@ const PG_EXAM_GROUPS = [
         freq: 'Once a year (Jun–Jul)',
         for: 'Graduates seeking M.A./M.Sc./M.Com and other PG programs at Government Arts & Science Colleges across Tamil Nadu.',
         website: 'pg.tngasa.in',
+        counselling: 'Aug',
         note: 'No written entrance test — centralised online counselling on UG aggregate marks, run through the dedicated pg.tngasa.in subdomain (separate portal from the UG-level tngasa.in). Same DCE body as the UG TNGASA card. Distinct from state Universities\' own PG entrance/merit process (e.g. University of Madras, Bharathiar University) — those remain correctly tagged \'University Entrance / Merit\' since they are not part of the TNGASA-counselled college network.',
         seats: 'Large — exact figure not yet confirmed',
         papers: [
