@@ -176,7 +176,7 @@ const EXAM_GROUPS=[
     {name:'JNTU Hyderabad',city:'Hyderabad, TS',tier:'⭐ Top Govt TS'},
     {name:'All TS govt & aided engg colleges',city:'Telangana',tier:'✓ Wide access'},
   ]},
-  {name:'TANCET',full:'Tamil Nadu Common Entrance Test',body:'Anna University',level:'State',freq:'Once a year (Mar)',subjects:['PCM','PCM+CS','PCMB'],for:'PG & lateral entry at Anna University affiliated colleges. UG admission in TN is via TNEA (Class 12 marks only).',website:'annauniv.edu/tancet',note:'For TN UG B.Tech — no entrance exam needed! TNEA counselling uses Class 12 cutoff marks.',seats:'TN UG via TNEA cutoff',institutes:[
+  {name:'TANCET',full:'Tamil Nadu Common Entrance Test',body:'Anna University',level:'State',freq:'Once a year (Mar)',subjects:['PCM','PCM+CS','PCMB'],for:'MBA & MCA admission at Anna University and affiliated colleges. UG admission in TN is via TNEA (Class 12 marks only) — no entrance exam needed; lateral entry to 2nd-year B.Tech is also diploma-marks merit, not test-based.',website:'annauniv.edu/tancet',note:'PG engineering (M.E./M.Tech/M.Arch/M.Plan) uses a separate exam, CEETA-PG, run alongside TANCET by Anna University — see the PG Exams tab.',seats:'~5,000+ MBA/MCA seats (Anna University-affiliated)',institutes:[
     {name:'Anna University (MIT, CEG, ACT campuses)',city:'Chennai, TN',tier:'🏆 Top Govt TN'},
     {name:'PSG College of Technology',city:'Coimbatore, TN',tier:'🏆 Top Private TN'},
     {name:'Coimbatore Institute of Technology',city:'Coimbatore, TN',tier:'⭐ Excellent TN'},

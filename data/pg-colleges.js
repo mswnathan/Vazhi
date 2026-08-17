@@ -754,11 +754,11 @@ const PG_COLLEGES = [
       {
         stream: 'Engineering & Technology (PG)',
         programs: [
-          { name: 'M.E. Computer Science & Engineering', exam: 'GATE / TANCET', examCss: 'ce-gate' },
-          { name: 'M.E. VLSI Design / Embedded Systems / Communication Systems', exam: 'GATE / TANCET', examCss: 'ce-gate' },
-          { name: 'M.E. Structural Engineering / Environmental Engineering', exam: 'GATE / TANCET', examCss: 'ce-gate' },
-          { name: 'M.E. Manufacturing / Industrial Engineering', exam: 'GATE / TANCET', examCss: 'ce-gate' },
-          { name: 'M.E. Power Electronics & Drives / Energy Engineering', exam: 'GATE / TANCET', examCss: 'ce-gate' },
+          { name: 'M.E. Computer Science & Engineering', exam: 'GATE / CEETA-PG', examCss: 'ce-gate' },
+          { name: 'M.E. VLSI Design / Embedded Systems / Communication Systems', exam: 'GATE / CEETA-PG', examCss: 'ce-gate' },
+          { name: 'M.E. Structural Engineering / Environmental Engineering', exam: 'GATE / CEETA-PG', examCss: 'ce-gate' },
+          { name: 'M.E. Manufacturing / Industrial Engineering', exam: 'GATE / CEETA-PG', examCss: 'ce-gate' },
+          { name: 'M.E. Power Electronics & Drives / Energy Engineering', exam: 'GATE / CEETA-PG', examCss: 'ce-gate' },
         ],
       },
       {
@@ -793,7 +793,7 @@ const PG_COLLEGES = [
       {
         stream: 'Engineering',
         programs: [
-          { name: 'M.E. / M.Tech (all disciplines)', exam: 'GATE / TANCET', examCss: 'ce-gate' },
+          { name: 'M.E. / M.Tech (all disciplines)', exam: 'GATE / CEETA-PG', examCss: 'ce-gate' },
         ],
       },
       {
@@ -1094,7 +1094,7 @@ const PG_COLLEGES = [
       {
         stream: 'Engineering (PG)',
         programs: [
-          { name: 'M.E. / M.Tech (CSE, ECE, Structural, CAD/CAM, Power Electronics — 2 years)', exam: 'GATE / TANCET', examCss: 'ce-gate' },
+          { name: 'M.E. / M.Tech (CSE, ECE, Structural, CAD/CAM, Power Electronics — 2 years)', exam: 'GATE / CEETA-PG', examCss: 'ce-gate' },
         ],
       },
     ],
