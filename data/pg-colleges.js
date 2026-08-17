@@ -1082,15 +1082,9 @@ const PG_COLLEGES = [
     nirf: '',
     affil: 'Anna University (Government-Aided — Thiagarajar group)',
     website: 'tce.edu',
-    streams: ['Arts & Science', 'Engineering'],
-    specialNote: 'Prestigious government-aided engineering college (est. 1957) offering M.Sc Data Science alongside M.E./M.Tech programs. Admission via TANCET or university entrance.',
+    streams: ['Engineering'],
+    specialNote: 'Prestigious government-aided engineering college (est. 1957). Also runs a 5-year Integrated M.Sc (Data Science) admitted straight after Class 12 — see its UG listing, not a PG-entry program.',
     programGroups: [
-      {
-        stream: 'Arts & Science (PG)',
-        programs: [
-          { name: 'M.Sc Data Science (2 years)', exam: 'TANCET / University Entrance', examCss: 'ce-own' },
-        ],
-      },
       {
         stream: 'Engineering (PG)',
         programs: [
@@ -1111,12 +1105,12 @@ const PG_COLLEGES = [
     affil: 'State University — established 2008 under Govt of Tamil Nadu',
     website: 'tnteu.ac.in',
     streams: ['Education'],
-    specialNote: 'TN\'s dedicated teachers education university. M.Ed is mandatory for graduates aspiring to teach at secondary / higher-secondary level in govt schools. Admission via TANCET.',
+    specialNote: 'TN\'s dedicated teachers education university. M.Ed is mandatory for graduates aspiring to teach at secondary / higher-secondary level in govt schools. Admission via TNTEU\'s own entrance exam, not TANCET.',
     programGroups: [
       {
         stream: 'Education (PG)',
         programs: [
-          { name: 'M.Ed (Master of Education)', exam: 'TANCET / University Entrance', examCss: 'ce-own' },
+          { name: 'M.Ed (Master of Education)', exam: 'University Entrance', examCss: 'ce-own' },
           { name: 'M.Phil Education', exam: 'University Entrance', examCss: 'ce-merit' },
           { name: 'PhD Education', exam: 'UGC-NET + University Interview', examCss: 'ce-net' },
         ],

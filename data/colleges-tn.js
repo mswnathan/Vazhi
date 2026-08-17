@@ -1433,11 +1433,14 @@ const COLLEGES=[
 
 {name:'Thiagarajar College of Engineering (Autonomous)',short:'TCE Madurai',type:'Aided',district:'Madurai',state:'Tamil Nadu',
   naac:'A++',nirf:'Top Aided Engg TN',affil:'Anna University',website:'tce.edu',
-  streams:['Engineering'],
+  streams:['Engineering','Arts & Science'],
   programGroups:[
     {stream:'Engineering & Technology',programs:[
       {name:'B.E (CSE, ECE, EEE, Civil, Mechanical, Chemical)',exam:'TNEA',examCss:'ce-tnea'},
       {name:'B.Tech (IT)',exam:'TNEA',examCss:'ce-tnea'},
+    ]},
+    {stream:'Arts & Science',programs:[
+      {name:'M.Sc Data Science — 5-year Integrated (after Class 12)',exam:'Merit (Class 12 PCM aggregate)',examCss:'ce-merit'},
     ]},
   ]},
 
