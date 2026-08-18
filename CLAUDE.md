@@ -237,6 +237,10 @@ Note: `papers[]` replaces `subjects[]` used in UG exams.
   full: 'Joint Entrance Examination Main',
   body: 'NTA',
   level: 'National' | 'State' | 'Private' | 'Institute' | 'Professional',
+  noTest: true,                        // optional — set ONLY for pure marks-based counselling with
+                                        // no written test at all (e.g. TNEA, TNGASA). Suppresses the
+                                        // "Exam site" link on course cards (js/explore.js) — there's
+                                        // no exam to sit, only a counselling portal (same website).
   freq: 'Twice a year (Jan & Apr)',
   timeline: [                          // optional — see "Exam timeline" below
     { cycle: 'Session 1', apply: 'Oct–Nov', test: 'Jan', result: 'Feb' },
@@ -296,6 +300,12 @@ it doesn't belong to a single `timeline[]` entry.
   name: 'B.Tech CSE',
   exam: 'JEE Main / JEE Advanced',
   examLvl: 'National',
+  noExam: true,        // optional — set ONLY when EVERY listed institute admits purely on
+                        // marks/merit with no written test at all (drives the "No entrance
+                        // exam" filter in js/explore.js). Don't set it if the exam field
+                        // combines a real written test with a merit fallback (e.g. 'CUET UG /
+                        // University merit') — CUET itself is a real test, so the course still
+                        // needs one for at least some institutes.
   institutes: 'IITs, NITs, BITS Pilani',
   careers: 'Software Engineer, AI/ML, Product Manager',
   salary: '₹6–35 LPA',

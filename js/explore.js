@@ -3,7 +3,7 @@
 
 // ── RENDER ──
 function renderExplore(){
-  const subj=filters.subj, stream=filters.stream, search=filters.search.toLowerCase();
+  const subj=filters.subj, stream=filters.stream, search=filters.search.toLowerCase(), noExam=filters.noExam;
   let total=0, highDemand=0, national=0, trending=0;
   let html='';
   STREAMS.forEach(s=>{
@@ -11,7 +11,8 @@ function renderExplore(){
     const courses=s.courses.filter(c=>{
       const sm=!subj||c.subjects.includes(subj)||c.subjects.includes('Any');
       const srch=!search||(c.name+c.exam+c.institutes+c.careers).toLowerCase().includes(search);
-      return sm&&srch;
+      const ne=!noExam||c.noExam===true;
+      return sm&&srch&&ne;
     });
     if(!courses.length) return;
     total+=courses.length;
@@ -25,19 +26,19 @@ function renderExplore(){
       <div class="stream-hdr">
         <div class="stream-ico" style="background:${s.bg};color:${s.color}">${s.ico}</div>
         <div class="stream-title">${s.label}</div>
-        <div class="stream-n">${courses.length} course${courses.length>1?'s':''}</div>
+        <div class="stream-n">${courses.length} pathway${courses.length>1?'s':''}</div>
       </div>
       <div class="${gc}">${courses.map(c=>courseCard(c,subj)).join('')}</div>
     </div>`;
   });
-  if(!total) html=`<div class="no-res"><h3>No courses found</h3><p>Try adjusting or resetting your filters.</p></div>`;
+  if(!total) html=`<div class="no-res"><h3>No pathways found</h3><p>Try adjusting or resetting your filters.</p></div>`;
   document.getElementById('explore-out').innerHTML=html;
-  const shown=total?`Showing <b>${total}</b> course${total>1?'s':''}`:'No results';
+  const shown=total?`Showing <b>${total}</b> pathway${total>1?'s':''}`:'No results';
   document.getElementById('res-count').innerHTML=shown;
   const statsEl=document.getElementById('explore-stats');
   if(statsEl){
     statsEl.innerHTML=total?`<div class="col-stats-row">
-      <div class="col-stat"><div class="col-stat-n">${total}</div><div class="col-stat-l">Courses</div></div>
+      <div class="col-stat"><div class="col-stat-n">${total}</div><div class="col-stat-l">Pathways</div></div>
       <div class="col-stat"><div class="col-stat-n">${highDemand}</div><div class="col-stat-l">High demand</div></div>
       <div class="col-stat"><div class="col-stat-n">${national}</div><div class="col-stat-l">National exam</div></div>
       <div class="col-stat"><div class="col-stat-n">${trending}</div><div class="col-stat-l">Trending</div></div>
@@ -46,28 +47,27 @@ function renderExplore(){
 }
 
 // ── Exam link helpers (built lazily from EXAM_GROUPS) ──
-let _examWebMap=null;
-function _buildExamWebMap(){
+let _examMap=null;
+function _buildExamMap(){
   const m={};
-  (typeof EXAM_GROUPS!=='undefined'?EXAM_GROUPS:[]).forEach(g=>g.exams.forEach(e=>{m[e.name]=e.website;}));
+  (typeof EXAM_GROUPS!=='undefined'?EXAM_GROUPS:[]).forEach(g=>g.exams.forEach(e=>{m[e.name]=e;}));
   return m;
 }
-function _examLink(examStr){
-  if(!_examWebMap) _examWebMap=_buildExamWebMap();
-  for(const[name,site] of Object.entries(_examWebMap)){
-    if(examStr.includes(name)) return `<a href="https://${site}" target="_blank" rel="noopener" class="card-exam-link">${name} ↗</a>`;
+function _matchExam(examStr){
+  if(!_examMap) _examMap=_buildExamMap();
+  for(const[name,e] of Object.entries(_examMap)){
+    if(examStr.includes(name)) return e;
   }
   return null;
 }
 function _counselLink(exam){
   const e=exam.toLowerCase();
-  if(e.includes('jee'))            return {label:'JoSAA counselling ↗',url:'josaa.nic.in'};
+  if(/\bjee\b/.test(e))            return {label:'JoSAA counselling ↗',url:'josaa.nic.in'};
   if(e.includes('neet'))           return {label:'MCC NEET counselling ↗',url:'mcc.nic.in'};
   if(e.includes('clat'))           return {label:'Consortium of NLUs ↗',url:'consortiumofnlus.ac.in'};
   if(e.includes('cuet'))           return {label:'CUET admissions ↗',url:'cuet.samarth.ac.in'};
   if(e.includes('iiser iat')||e.includes('iiser')) return {label:'IISER admissions ↗',url:'iiseradmission.in'};
   if(e.includes('cat')||e.includes('iim')) return {label:'IIM CAT ↗',url:'iimcat.ac.in'};
-  if(e.includes('tnea'))           return {label:'TNEA counselling ↗',url:'tneaonline.org'};
   if(e.includes('icar'))           return {label:'ICAR admissions ↗',url:'icar.org.in'};
   if(e.includes('nchm'))           return {label:'NCHMCT admissions ↗',url:'nchm.nic.in'};
   if(e.includes('isi'))            return {label:'ISI admissions ↗',url:'isical.ac.in/admissions'};
@@ -83,6 +83,8 @@ function courseCard(c,activeSubj=''){
   const mc=mktClass(mkt);
   const pills=(c.subjects||[]).filter(s=>s!=='Any').slice(0,5).map(s=>`<span class="spill${activeSubj&&s===activeSubj?' match':''}">${s}</span>`).join('');
   const tband=c.trending?`<div class="trending-stripe">Trending</div>`:'';
+  const matchedExam=_matchExam(c.exam);
+  const examRowLabel=matchedExam&&matchedExam.noTest?'Admission via':'Exam';
   return `<div class="card${c.trending?' trending-card':''}">
     ${tband}
     <div class="card-top">
@@ -90,10 +92,14 @@ function courseCard(c,activeSubj=''){
       <div class="cbadge" style="${badgeStyle(c.bc)}">${c.badge}</div>
     </div>
     <hr class="divider">
-    <div class="crow"><div class="clbl">Exam</div><div class="cval">${c.exam} <span style="display:inline-block;margin-left:5px;font-size:9px;padding:2px 7px;border-radius:20px;font-weight:700;${elStyle}">${els}</span></div></div>
+    <div class="crow"><div class="clbl">${examRowLabel}</div><div class="cval">${c.exam} <span style="display:inline-block;margin-left:5px;font-size:9px;padding:2px 7px;border-radius:20px;font-weight:700;${elStyle}">${els}</span></div></div>
     <div class="crow"><div class="clbl">Institutes</div><div class="cval">${c.institutes}</div></div>
     <div class="crow"><div class="clbl">Careers</div><div class="cval"><strong>${c.careers}</strong></div></div>
-    ${(()=>{const el=_examLink(c.exam);const cl=_counselLink(c.exam);return(el?`<div class="crow"><div class="clbl">Exam site</div><div class="cval">${el}</div></div>`:'')+(cl?`<div class="crow"><div class="clbl">Counselling</div><div class="cval"><a href="https://${cl.url}" target="_blank" rel="noopener" class="card-exam-link">${cl.label}</a></div></div>`:'');})()}
+    ${(()=>{const m=matchedExam;
+      if(m&&m.noTest) return `<div class="crow"><div class="clbl">Portal</div><div class="cval"><a href="https://${m.website}" target="_blank" rel="noopener" class="card-exam-link">${m.name} counselling ↗</a></div></div>`;
+      const el=m?`<a href="https://${m.website}" target="_blank" rel="noopener" class="card-exam-link">${m.name} ↗</a>`:null;
+      const cl=_counselLink(c.exam);
+      return(el?`<div class="crow"><div class="clbl">Exam site</div><div class="cval">${el}</div></div>`:'')+(cl?`<div class="crow"><div class="clbl">Counselling</div><div class="cval"><a href="https://${cl.url}" target="_blank" rel="noopener" class="card-exam-link">${cl.label}</a></div></div>`:'');})()}
     <div class="meta-row">
       <span class="salary-tag">${typeof lpaToMonthly==='function'?lpaToMonthly(c.salary):c.salary}</span>
       <span class="market-tag ${mc}">${mkt} demand</span>
@@ -142,6 +148,7 @@ function applyFilters(){
   filters.subj=document.getElementById('f-subj').value;
   filters.stream=document.getElementById('f-stream').value;
   filters.search=document.getElementById('f-search').value;
+  filters.noExam=document.getElementById('f-noexam').checked;
   updateChips();
   renderExplore();
 }
@@ -151,6 +158,7 @@ function updateChips(){
   if(filters.subj) _chips.push({l:lbl[filters.subj]||filters.subj,clr:()=>{document.getElementById('f-subj').value='';filters.subj='';applyFilters();}});
   if(filters.stream) _chips.push({l:'Stream: '+filters.stream,clr:()=>{document.getElementById('f-stream').value='';filters.stream='';applyFilters();}});
   if(filters.search) _chips.push({l:`Search: "${filters.search}"`,clr:()=>{document.getElementById('f-search').value='';filters.search='';applyFilters();}});
+  if(filters.noExam) _chips.push({l:'No entrance exam',clr:()=>{document.getElementById('f-noexam').checked=false;filters.noExam=false;applyFilters();}});
   document.getElementById('chips').innerHTML=_chips.map((c,i)=>`<div class="chip">${c.l}<button onclick="clrChip(${i})">×</button></div>`).join('');
 }
 function clrChip(i){_chips[i].clr();}
@@ -158,7 +166,8 @@ function resetFilters(){
   document.getElementById('f-subj').value='';
   document.getElementById('f-stream').value='';
   document.getElementById('f-search').value='';
-  filters={subj:'',stream:'',search:''};
+  document.getElementById('f-noexam').checked=false;
+  filters={subj:'',stream:'',search:'',noExam:false};
   updateChips();
   renderExplore();
 }

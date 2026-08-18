@@ -653,6 +653,7 @@ const PG_COLLEGES = [
         programs: [
           { name: 'M.A. Tamil / English / Economics / History', exam: 'University Entrance / Merit', examCss: 'ce-merit' },
           { name: 'M.Sc Psychology', exam: 'University Entrance', examCss: 'ce-merit' },
+          { name: 'M.A. Career Guidance', exam: 'University Entrance / Merit', examCss: 'ce-merit' },
         ],
       },
       {

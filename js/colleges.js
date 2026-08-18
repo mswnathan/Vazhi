@@ -395,6 +395,13 @@ function updateDistrictFilter(){
   sel.value=districts.includes(prev)?prev:'';
 }
 
+// Shared dispatcher for the UG/PG filter bar — routes to whichever renderer
+// matches the current collegeMode, so no filter control accidentally shows
+// UG results while browsing PG (or vice versa).
+function renderCollegesByMode(){
+  if(collegeMode===COL_MODE_PG) renderPGColleges(); else renderColleges();
+}
+
 function resetCollegeFilters(){
   ['cf-state','cf-type','cf-stream','cf-exam','cf-district'].forEach(id=>document.getElementById(id).value='');
   document.getElementById('cf-search').value='';
@@ -402,6 +409,6 @@ function resetCollegeFilters(){
   vzUpdateShortlistToggle();
   populateExamFilter();
   updateDistrictFilter();
-  if(collegeMode===COL_MODE_PG) renderPGColleges(); else renderColleges();
+  renderCollegesByMode();
 }
 

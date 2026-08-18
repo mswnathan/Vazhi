@@ -2,7 +2,7 @@
 // Core navigation logic — rarely needs editing
 
 // ── STATE ──
-let view='grid', filters={subj:'',stream:'',search:''};
+let view='grid', filters={subj:'',stream:'',search:'',noExam:false};
 let ifSubj=null, ifAreas=new Set();
 let _chips=[];
 let findMode='interest';
@@ -13,8 +13,9 @@ function switchTab(t){
   // Reset Explore filters whenever navigating AWAY from Courses tab.
   // Exception: cgGoToStream() calls switchTab('courses') after pre-setting a filter — exempt.
   if(t!=='courses'){
-    filters={subj:'',stream:'',search:''};
+    filters={subj:'',stream:'',search:'',noExam:false};
     ['f-subj','f-stream','f-search'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
+    const noExamEl=document.getElementById('f-noexam');if(noExamEl)noExamEl.checked=false;
     if(typeof updateChips==='function') updateChips();
   }
   // Reset scholarship filters whenever leaving the scholarships tab
@@ -116,7 +117,8 @@ function setCoursesMode(mode){
    'ef-level','ef-stream','ef-subj','ef-search',
    'cf-state','cf-type','cf-stream','cf-exam','cf-district','cf-search'
   ].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
-  filters={subj:'',stream:'',search:''};
+  const noExamEl=document.getElementById('f-noexam');if(noExamEl)noExamEl.checked=false;
+  filters={subj:'',stream:'',search:'',noExam:false};
   if(typeof updateChips==='function') updateChips();
   document.querySelectorAll('[data-cmode]').forEach(b=>b.classList.toggle('active',b.dataset.cmode===mode));
   document.getElementById('courses-panel-explore').style.display=mode==='explore'?'':'none';

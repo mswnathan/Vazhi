@@ -87,6 +87,9 @@
         <label>Search courses, institutes, careers</label>
         <input type="text" id="f-search" placeholder="e.g. B.Des, IISER, law, design…" oninput="applyFilters()">
       </div>
+    </div>
+    <div class="filter-row2">
+      <label class="check-label"><input type="checkbox" id="f-noexam" onchange="applyFilters()"> No entrance exam only</label>
       <button class="btn-reset" onclick="resetFilters()">Reset</button>
     </div>
     <div class="active-chips" id="chips"></div>
@@ -564,35 +567,35 @@
   <div class="col-filter-bar">
     <div class="col-fg">
       <label>State</label>
-      <select id="cf-state" onchange="updateDistrictFilter();populateExamFilter();renderColleges()">
+      <select id="cf-state" onchange="updateDistrictFilter();populateExamFilter();renderCollegesByMode()">
         <option value="">All States</option>
       </select>
     </div>
     <div class="col-fg">
       <label>Type</label>
-      <select id="cf-type" onchange="renderColleges()">
+      <select id="cf-type" onchange="renderCollegesByMode()">
         <option value="">All types</option>
       </select>
     </div>
     <div class="col-fg">
       <label>Stream</label>
-      <select id="cf-stream" onchange="renderColleges()">
+      <select id="cf-stream" onchange="renderCollegesByMode()">
         <option value="">All streams</option>
       </select>
     </div>
     <div class="col-fg">
       <label>Entry Via</label>
-      <select id="cf-exam" onchange="renderColleges()">
+      <select id="cf-exam" onchange="renderCollegesByMode()">
         <option value="">All entry routes</option>
       </select>
     </div>
     <div class="col-fg" id="cf-district-wrap">
       <label>District</label>
-      <select id="cf-district" onchange="renderColleges()">
+      <select id="cf-district" onchange="renderCollegesByMode()">
         <option value="">All districts</option>
       </select>
     </div>
-    <input type="text" id="cf-search" class="col-search" placeholder="Search college name or program…" oninput="renderColleges()">
+    <input type="text" id="cf-search" class="col-search" placeholder="Search college name or program…" oninput="renderCollegesByMode()">
     <button id="cf-shortlist-toggle" class="vz-shortlist-btn" onclick="vzToggleShortlist()" title="Show only the colleges you've saved">♥ My Shortlist (<span class="vz-shortlist-count">0</span>)</button>
     <button class="btn-reset" onclick="resetCollegeFilters()">Reset</button>
   </div>
