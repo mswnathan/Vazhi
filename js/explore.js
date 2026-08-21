@@ -3,14 +3,15 @@
 
 // ── RENDER ──
 function renderExplore(){
-  const subj=filters.subj, stream=filters.stream, search=filters.search.toLowerCase(), noExam=filters.noExam;
+  const subj=filters.subj, stream=filters.stream, searchTerms=filters.search.toLowerCase().split(/[,]+/).map(t=>t.trim()).filter(Boolean), noExam=filters.noExam;
   let total=0, highDemand=0, national=0, trending=0;
   let html='';
   STREAMS.forEach(s=>{
     if(stream&&s.id!==stream) return;
     const courses=s.courses.filter(c=>{
       const sm=!subj||c.subjects.includes(subj)||c.subjects.includes('Any');
-      const srch=!search||(c.name+c.exam+c.institutes+c.careers).toLowerCase().includes(search);
+      const haystack=(c.name+c.exam+c.institutes+c.careers).toLowerCase();
+      const srch=!searchTerms.length||searchTerms.every(t=>haystack.includes(t));
       const ne=!noExam||c.noExam===true;
       return sm&&srch&&ne;
     });
