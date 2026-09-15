@@ -159,7 +159,7 @@ const COLLEGES=[
 {name:'Madras Medical College',short:'MMC',type:'State',district:'Chennai',state:'Tamil Nadu',
   naac:'A+',nirf:'Top Medical',affil:'The Tamil Nadu Dr. MGR Medical University',website:'mmc.ac.in',
   streams:['Medical'],
-  specialNote:'TN DME\'s official portal (tnmedicalselection.net) lists a broader roster — 19 degree-level and 24 certificate/diploma-level paramedical courses nationally — exact course/seat availability per college varies by year; see the portal for the current list. A 2026-27 NCAHP mandate reportedly requires NEET UG for allied-health admission nationally — not yet confirmed as adopted by TN DME (TN previously kept merit-only admission against a similar 2023 nursing mandate).',
+  specialNote:'TN DME\'s official portal (tnmedicalselection.net) lists a broader roster — 19 degree-level and 24 certificate/diploma-level paramedical courses nationally — exact course/seat availability per college varies by year; see the portal for the current list. NCAHP guidelines have announced NEET UG as mandatory for allied-health admission nationally, but this is not yet implemented — admission continues via TN DME merit counselling, the same pattern as the 2023 nursing NEET mandate that TN also did not adopt.',
   programGroups:[
     {stream:'Medical',programs:[
       {name:'MBBS',exam:'NEET UG',examCss:'ce-neet'},
