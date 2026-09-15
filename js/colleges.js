@@ -314,7 +314,7 @@ function collegeCard(c,mode='ug'){
         <span class="col-meta-tag">🏅 <strong>${c.nirf}</strong></span>
         <span class="col-meta-tag">🔗 ${c.affil}</span>
       </div>
-      ${c.specialNote?`<div class="col-special-note">💡 ${c.specialNote}</div>`:''}
+      ${c.specialNote?(typeof VazhiContact!=='undefined'?VazhiContact.gateHTML({source:'college-detail',label:'Contact us for admission notes & details'}):`<div class="col-special-note">💡 ${c.specialNote}</div>`):''}
       <a class="col-website-link" href="https://${c.website}" target="_blank">🌐 ${c.website} ↗</a>
     </div>
     <div class="col-programs-hdr" onclick="toggleCollegeProgs('${tid}')">

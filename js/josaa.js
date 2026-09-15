@@ -149,29 +149,16 @@ function jCard(item) {
   const prog  = JOSAA_META.programs[item.pIdx];
   const itype = JOSAA_META.instType[item.iIdx];
   const state = JOSAA_META.instState[item.iIdx];
-  const sorted = Object.keys(item.years).sort();
-  const latest = item.years[sorted[sorted.length - 1]];
-  const trend  = jTrend(item.years);
-  const trendHtml = {
-    harder: '<span class="j-trend j-trend-harder">↓ More competitive</span>',
-    easier: '<span class="j-trend j-trend-easier">↑ Easier to get</span>',
-    stable: '<span class="j-trend j-trend-stable">→ Stable</span>',
-  }[trend];
-  const yrsLabel = sorted.length > 1 ? `${sorted[0]}–${sorted[sorted.length - 1]}` : sorted[0];
+  const cutoffGate = (typeof VazhiContact!=='undefined')
+    ? VazhiContact.gateHTML({source:'josaa-cutoff', label:'Contact us for exact cutoff ranks & trend'})
+    : '';
   return `<div class="j-card">
     <div class="j-card-top">
       <div class="j-inst">${inst}</div>
       <span class="j-itype">${itype}</span>
     </div>
     <div class="j-prog">${prog}</div>
-    <div class="j-meta">
-      <span class="j-rank-range">OR ${latest.or.toLocaleString('en-IN')} – CR <b>${latest.cr.toLocaleString('en-IN')}</b> (${sorted[sorted.length-1]})</span>
-      ${trendHtml}
-    </div>
-    <div class="j-spark-row">
-      <span class="j-spark-label">${yrsLabel} closing rank</span>
-      ${jSparkline(item.years)}
-    </div>
+    ${cutoffGate}
     <div class="j-state">${state}</div>
   </div>`;
 }
@@ -348,6 +335,15 @@ function jExplore() {
 function jRangeProgBlock(pIdx, rows, rankFrom, rankTo) {
   const prog = JOSAA_META.programs[pIdx];
   rows.sort((a, b) => a.seat - b.seat || a.quota - b.quota);
+
+  if (typeof VazhiContact !== 'undefined') {
+    const catLabels = [...new Set(rows.map(r => JOSAA_META.seatType[r.seat]))].join(', ');
+    return `<div class="j-range-prog">
+      <div class="j-range-prog-name">${prog}</div>
+      <div class="j-range-cats">Categories: ${catLabels}</div>
+      ${VazhiContact.gateHTML({source:'josaa-cutoff-range', label:'Contact us for exact opening/closing ranks'})}
+    </div>`;
+  }
 
   const tableRows = rows.map(r => {
     const seatLabel  = JOSAA_META.seatType[r.seat];

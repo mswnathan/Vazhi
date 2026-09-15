@@ -504,6 +504,11 @@ function renderCareerPath(c) {
     </div>
   </div>`;
 
+  const hasGatedDetail = !!(exams.length || courses.length || augEntries.length || (c.dayInLife && c.dayInLife.length));
+  const gatedDetail = (hasGatedDetail && typeof VazhiContact !== 'undefined')
+    ? VazhiContact.gateHTML({source:'career-guide-detail', label:'Contact us for exam list, degree options & career path'})
+    : `${dayInLife}${step2}${step3}${step4}`;
+
   return `<div class="cg-path">
     <div class="cg-path-hdr" style="${headerStyle}">
       <div class="cg-path-ico">${c.ico}</div>
@@ -512,11 +517,8 @@ function renderCareerPath(c) {
         <div class="cg-path-summary">${c.summary}</div>
       </div>
     </div>
-    ${dayInLife}
     ${step1}
-    ${step2}
-    ${step3}
-    ${step4}
+    ${gatedDetail}
     ${step5}
   </div>`;
 }

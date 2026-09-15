@@ -922,6 +922,9 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-si
 .ce-nchm{background:#FFF5E0;color:#6B3F00}
 .ce-ncet{background:#F2EBFF;color:#5B2D9E}
 .ce-gate{background:#EBF0FF;color:#0F3098}
+.vz-gate{margin-top:6px;padding:8px 10px;background:#EBF0FF;border:1px dashed #B7C6FF;border-radius:8px;text-align:center}
+.vz-gate-btn{background:#0F3098;color:#fff;border:none;border-radius:6px;padding:7px 14px;font-size:12.5px;font-weight:600;cursor:pointer}
+.vz-gate-btn:hover{background:#0B2578}
 .ce-cat{background:#FFF5E0;color:#6B3F00}
 .ce-jam{background:#E8F8EF;color:#0A5234}
 .ce-net{background:#F2EBFF;color:#451880}
@@ -2046,3 +2049,103 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-si
   .psy-dot-line { max-width: 20px; }
   .psy-skill-bar-label { min-width: 62px; font-size: 10px; }
 }
+
+/* ── "Talk to Vazhi" contact form + modal (js/contact.js) ─────────────
+   Shared here so explore.html (colleges/JoSAA/career-guide/PG exams
+   gate CTAs) can open the modal — index-lite.html duplicates these
+   rules in vazhi-lite.css for its own inline/footer contact card. */
+.vc-card {
+  background: var(--surface);
+  border: 1.5px solid var(--accent-border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 22px 24px;
+}
+.vc-title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--accent-dk);
+  margin-bottom: 2px;
+}
+.vc-title-ta {
+  font-family: 'Noto Sans Tamil', sans-serif;
+  font-size: 14px;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.vc-sub { font-size: 13px; color: var(--text2); margin-bottom: 14px; line-height: 1.5; }
+
+.vc-form { display: flex; flex-direction: column; gap: 10px; }
+.vc-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.vc-reach-label { font-size: 12px; color: var(--text2); margin: 2px 0 -4px; font-weight: 500; }
+@media (max-width: 520px) { .vc-row { grid-template-columns: 1fr; } }
+
+.vc-form input,
+.vc-form textarea {
+  font-family: var(--font-body);
+  font-size: 14px;
+  padding: 10px 12px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--r);
+  background: var(--bg);
+  color: var(--text);
+  width: 100%;
+  resize: vertical;
+}
+.vc-form input:focus,
+.vc-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-bg);
+}
+
+.vc-actions { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-top: 4px; }
+.vc-submit {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--font-body);
+  border-radius: var(--r);
+  cursor: pointer;
+  transition: background 0.13s;
+}
+.vc-submit:hover:not(:disabled) { background: var(--accent-dk); }
+.vc-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+.vc-status { font-size: 13px; color: var(--text2); }
+.vc-status-ok  { color: var(--accent-dk); font-weight: 600; }
+.vc-status-err { color: #B23A2A; font-weight: 600; }
+.vc-fine { font-size: 11px; color: var(--text3); margin-top: 4px; }
+
+.vc-modal {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 4000;
+  padding: 60px 16px;
+  overflow-y: auto;
+}
+.vc-modal.open { display: flex; }
+.vc-modal-box {
+  background: var(--surface);
+  border-radius: var(--r-lg);
+  width: 100%;
+  max-width: 540px;
+  padding: 24px 24px 18px;
+  position: relative;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.25);
+}
+.vc-modal-x {
+  position: absolute; top: 12px; right: 14px;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  border: none; background: var(--bg);
+  font-size: 14px; cursor: pointer;
+  color: var(--text2);
+}
+.vc-modal-x:hover { background: var(--border); color: var(--text); }

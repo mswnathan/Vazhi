@@ -141,5 +141,15 @@
     if (m) m.classList.remove('open');
   }
 
-  window.VazhiContact = { mount, submit, openModal, closeModal };
+  // Content gate — "Contact us for full details" CTA reused across tabs
+  // (colleges, JoSAA predictor, career guide, PG exams) instead of a sign-in wall.
+  function gateHTML(opts) {
+    const source = (opts && opts.source) || 'gate';
+    const label = (opts && opts.label) || 'Contact us for full details';
+    return `<div class="vz-gate">
+      <button type="button" class="vz-gate-btn" onclick="VazhiContact.openModal({source:'${source}'})">🔒 ${label}</button>
+    </div>`;
+  }
+
+  window.VazhiContact = { mount, submit, openModal, closeModal, gateHTML };
 })();

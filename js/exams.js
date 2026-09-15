@@ -204,52 +204,11 @@ function renderPGExams(){
 // ── PG Exam card ──────────────────────────────────────────────────────
 function pgExamCard(e){
   const lvlClass=LEVEL_CSS[e.level]||'elvl-inst';
-  const cardId='pg-'+Math.random().toString(36).slice(2,8);
 
-  // Papers / syllabus section
-  const multiPaper=e.papers.length>1||(e.papers.length===1&&e.papers[0].code!=='');
-  let papersHtml='';
-  if(multiPaper){
-    papersHtml=`<div class="pg-papers">
-      ${e.papers.map(p=>`<div class="pg-paper-row">
-        ${p.code?`<span class="pg-paper-code">${p.code}</span>`:''}
-        <div class="pg-topic-pills">${p.topics.map(t=>`<span class="pg-topic-pill">${t}</span>`).join('')}</div>
-      </div>`).join('')}
-    </div>`;
-  } else if(e.papers.length===1){
-    papersHtml=`<div class="pg-topic-pills" style="margin-top:4px">
-      ${e.papers[0].topics.map(t=>`<span class="pg-topic-pill">${t}</span>`).join('')}
-    </div>`;
-  }
-
-  let instHtml='';
-  if(e.institutes&&e.institutes.length){
-    const preview=e.institutes.slice(0,INST_PREVIEW_COUNT);
-    const rest=e.institutes.slice(INST_PREVIEW_COUNT);
-    const renderInst=i=>{
-      const emoji=Object.keys(TIER_COLOR).find(k=>i.tier.startsWith(k))||'✓';
-      return `<div class="inst-row">
-        <div class="inst-name">${i.name}</div>
-        <div class="inst-meta">
-          <span class="inst-city">${i.city}</span>
-          <span class="inst-tier" style="background:${TIER_BG[emoji]};color:${TIER_COLOR[emoji]}">${i.tier}</span>
-        </div>
-      </div>`;
-    };
-    instHtml=`<div class="inst-section">
-      <div class="inst-hdr" onclick="toggleInst('${cardId}')">
-        <span class="inst-hdr-label">🏛 Where can I study?</span>
-        <span class="inst-hdr-count">${e.institutes.length} institute${e.institutes.length>1?'s':''}</span>
-        <span class="inst-toggle" id="tog-${cardId}">▼</span>
-      </div>
-      <div class="inst-list" id="${cardId}">
-        ${preview.map(renderInst).join('')}
-        ${rest.length?`<div class="inst-more" id="more-${cardId}" style="display:none">${rest.map(renderInst).join('')}</div>
-        <button class="inst-show-more" id="smb-${cardId}" onclick="toggleMore('${cardId}')">+${rest.length} more</button>`:''}
-      </div>
-      ${e.seats?`<div class="inst-seats">📊 Approx. seats: <strong>${e.seats}</strong></div>`:''}
-    </div>`;
-  }
+  const hasDetail=(e.institutes&&e.institutes.length)||(e.papers&&e.papers.length&&e.papers[0].topics&&e.papers[0].topics.length)||e.seats;
+  const detailGate=(hasDetail&&typeof VazhiContact!=='undefined')
+    ?`<div class="inst-section">${VazhiContact.gateHTML({source:'pg-exam-detail',label:'Contact us for institute list, seats & syllabus'})}</div>`
+    :'';
 
   return `<div class="ecard">
     <div class="ecard-top">
@@ -266,11 +225,7 @@ function pgExamCard(e){
     <div class="ecard-row"><div class="ecard-lbl">Website</div><div class="ecard-val"><a href="https://${e.website}" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500">${e.website} ↗</a></div></div>
     ${timelineHtml(e)}
     ${e.note?`<div class="ecard-important">${e.note}</div>`:''}
-    <div class="ecard-row" style="margin-top:4px">
-      <div class="ecard-lbl">Syllabus</div>
-      <div style="flex:1">${papersHtml}</div>
-    </div>
-    ${instHtml}
+    ${detailGate}
   </div>`;
 }
 
