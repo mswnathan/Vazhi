@@ -700,6 +700,21 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-si
 .vtbtn{padding:5px 11px;font-size:11px;font-weight:600;border:1.5px solid var(--border2);border-radius:6px;background:var(--surface);cursor:pointer;color:var(--text3);font-family:'Outfit',sans-serif}
 .vtbtn.on{background:var(--text);color:#fff;border-color:var(--text)}
 
+/* ── KNOW YOURSELF NUDGE (Courses tab) ──
+   Students default to picking by Trending/High-demand badges. This banner sits
+   above the course grid to redirect undecided students to the RIASEC test
+   instead of picking by popularity alone. See js/app.js switchTab('psychometric'). */
+.ky-nudge{
+  display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  background:var(--accent-bg);border:1.5px solid var(--accent-border);border-radius:var(--r-lg);
+  padding:14px 18px;margin-bottom:1.1rem;cursor:pointer;
+  transition:box-shadow .15s,transform .15s;
+}
+.ky-nudge:hover{box-shadow:var(--shadow-sm);transform:translateY(-1px)}
+.ky-nudge-txt{font-size:.86rem;color:var(--text2)}
+.ky-nudge-txt strong{color:var(--text);font-weight:700}
+.ky-nudge-cta{font-size:.9rem;color:var(--accent-dk);font-weight:700;white-space:nowrap}
+
 /* ── STREAM SECTIONS ── */
 .stream-sec{margin-bottom:2.2rem}
 .stream-hdr{display:flex;align-items:center;gap:10px;margin-bottom:1rem;padding-bottom:9px;border-bottom:2px solid var(--border)}
@@ -1490,9 +1505,36 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-si
   .ann-filter-btn{font-size:11px;padding:4px 10px}
 }
 
-/* ── COURSES SUB-NAV (outside .main, shown when Courses & Exams active) ── */
-#courses-subnav{background:var(--surface);border-bottom:1px solid var(--border);padding:10px 1.5rem 0}
+/* ── COURSES SUB-NAV (outside .main, shown when Courses & Exams active) ──
+   Sticky so UG Courses/Entrance Exams/Colleges stays reachable while
+   scrolling a long results list. --header-h is measured live by
+   _syncStickyOffsets() in js/app.js since header height can vary. */
+#courses-subnav{
+  background:var(--surface);border-bottom:1px solid var(--border);padding:10px 1.5rem 0;
+  position:sticky;top:var(--header-h,62px);z-index:190;
+}
 #courses-subnav .exam-mode-tabs{max-width:1320px;margin:0 auto;margin-bottom:0}
+
+/* ── STICKY FILTER SUMMARY — compact chip strip pinned below the sub-nav
+   (Explore/Courses mode only) showing the active filters, so students don't
+   lose track of what's selected while scrolling past the full filter form. */
+.sticky-filter-bar{
+  display:none;background:var(--surface);border-bottom:1px solid var(--border);
+  position:sticky;top:calc(var(--header-h,62px) + var(--subnav-h,46px));z-index:180;
+}
+.sticky-filter-bar.filter-active{display:block}
+.sfb-inner{
+  max-width:1320px;margin:0 auto;padding:8px 1.5rem;
+  display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;
+}
+.sfb-inner .active-chips{margin-top:0;min-height:0;flex:1}
+.sfb-empty{font-size:12px;color:var(--text3)}
+.sfb-edit{
+  flex-shrink:0;font-size:12px;font-weight:600;color:var(--accent-dk);
+  background:var(--accent-bg);border:1px solid var(--accent-border);border-radius:20px;
+  padding:5px 12px;cursor:pointer;white-space:nowrap;font-family:var(--font-body);
+}
+.sfb-edit:hover{background:var(--accent-border)}
 
 /* ── AFTER UG — sub-mode panel note ── */
 .aug-mode-tabs{padding:12px 1.5rem 0;background:var(--surface);border-bottom:1px solid var(--border);margin-bottom:0}

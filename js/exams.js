@@ -59,7 +59,7 @@ function renderExams(){
     ${Object.entries(lvlCount).filter(([,v])=>v>0).map(([k,v])=>`
       <div class="estat" style="border-color:${LEVEL_BG[k]}">
         <div class="estat-n" style="color:${LEVEL_COLOR[k]}">${v}</div>
-        <div class="estat-l">${k}</div>
+        <div class="estat-l">${k} exams</div>
       </div>`).join('')}`;
 }
 

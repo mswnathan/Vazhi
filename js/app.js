@@ -8,6 +8,21 @@ let _chips=[];
 let findMode='interest';
 let coursesMode='explore';
 
+// ── STICKY OFFSETS (header + courses sub-nav heights vary with viewport
+// width/font, e.g. sub-nav wraps to 2 lines on narrow phones) — measured
+// live and exposed as CSS vars so the sticky filter bar can stack correctly
+// under both. ──
+function _syncStickyOffsets(){
+  const header=document.querySelector('.site-header');
+  if(header) document.documentElement.style.setProperty('--header-h',header.getBoundingClientRect().height+'px');
+  const subnav=document.getElementById('courses-subnav');
+  if(subnav && getComputedStyle(subnav).display!=='none'){
+    document.documentElement.style.setProperty('--subnav-h',subnav.getBoundingClientRect().height+'px');
+  }
+}
+window.addEventListener('load',_syncStickyOffsets);
+window.addEventListener('resize',_syncStickyOffsets);
+
 // ── TAB SWITCHING ──
 function switchTab(t){
   // Reset Explore filters whenever navigating AWAY from Courses tab.
@@ -59,7 +74,11 @@ function switchTab(t){
   if(csn) csn.style.display=t==='courses'?'':'none';
   // Show filter bar only on Courses tab in explore mode
   const filterSec=document.getElementById('filter-section');
-  if(filterSec) filterSec.classList.toggle('filter-active',t==='courses' && coursesMode==='explore');
+  const isExplore=t==='courses' && coursesMode==='explore';
+  if(filterSec) filterSec.classList.toggle('filter-active',isExplore);
+  const sfb=document.getElementById('sticky-filter-bar');
+  if(sfb) sfb.classList.toggle('filter-active',isExplore);
+  if(t==='courses') _syncStickyOffsets();
   // Re-render when switching to courses/explore
   if(t==='courses' && coursesMode==='explore' && typeof renderExplore==='function') renderExplore();
   // Render psychometric tab whenever activated
@@ -131,6 +150,8 @@ function setCoursesMode(mode){
   if(colTab2) colTab2.classList.toggle('active',inColleges);
   const filterSec=document.getElementById('filter-section');
   if(filterSec) filterSec.classList.toggle('filter-active',mode==='explore');
+  const sfb=document.getElementById('sticky-filter-bar');
+  if(sfb) sfb.classList.toggle('filter-active',mode==='explore');
   if(mode==='explore' && typeof renderExplore==='function') renderExplore();
   if(mode==='exams' && typeof renderExams==='function') renderExams();
 }

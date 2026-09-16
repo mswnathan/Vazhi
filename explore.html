@@ -66,6 +66,18 @@
 </div>
 
 <!-- ═══════════════════════════════════════════════
+     STICKY FILTER SUMMARY (Explore tab only) — a compact, always-visible
+     strip showing the currently active filters while the full filter form
+     (below) scrolls out of view. Tapping it jumps back to the full form.
+════════════════════════════════════════════════ -->
+<div class="sticky-filter-bar" id="sticky-filter-bar">
+  <div class="sfb-inner">
+    <div class="active-chips" id="chips-sticky"><span class="sfb-empty">No filters applied — showing all pathways</span></div>
+    <button class="sfb-edit" onclick="document.getElementById('filter-section').scrollIntoView({behavior:'smooth',block:'start'})">Edit filters ⌄</button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
      FILTER BAR (Explore tab only)
 ════════════════════════════════════════════════ -->
 <div class="filter-section" id="filter-section">
@@ -349,6 +361,10 @@
 
     <!-- UG Courses panel -->
     <div id="courses-panel-explore">
+      <div class="ky-nudge" onclick="switchTab('psychometric')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')switchTab('psychometric')">
+        <div class="ky-nudge-txt"><strong>Not sure which pathway fits you?</strong> Trending &amp; High-demand badges show what's popular — not what suits you.</div>
+        <div class="ky-nudge-cta">🧠 Take the 12-min Know Yourself test →</div>
+      </div>
       <div class="results-bar">
         <div class="results-count" id="res-count">Loading…</div>
         <div class="view-tog">

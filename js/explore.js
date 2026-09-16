@@ -41,7 +41,7 @@ function renderExplore(){
     statsEl.innerHTML=total?`<div class="col-stats-row">
       <div class="col-stat"><div class="col-stat-n">${total}</div><div class="col-stat-l">Pathways</div></div>
       <div class="col-stat"><div class="col-stat-n">${highDemand}</div><div class="col-stat-l">High demand</div></div>
-      <div class="col-stat"><div class="col-stat-n">${national}</div><div class="col-stat-l">National exam</div></div>
+      <div class="col-stat"><div class="col-stat-n">${national}</div><div class="col-stat-l">National-exam pathways</div></div>
       <div class="col-stat"><div class="col-stat-n">${trending}</div><div class="col-stat-l">Trending</div></div>
     </div>`:'';
   }
@@ -56,21 +56,35 @@ function _buildExamMap(){
 }
 function _matchExam(examStr){
   if(!_examMap) _examMap=_buildExamMap();
+  let best=null, bestIdx=Infinity, bestLen=0;
   for(const[name,e] of Object.entries(_examMap)){
-    if(examStr.includes(name)) return e;
+    const idx=examStr.indexOf(name);
+    if(idx===-1) continue;
+    if(idx<bestIdx||(idx===bestIdx&&name.length>bestLen)){ best=e; bestIdx=idx; bestLen=name.length; }
   }
-  return null;
+  return best;
 }
 function _counselLink(exam){
-  const e=exam.toLowerCase();
+  // Specific named-institute exams are checked before the generic jee/neet
+  // checks below, since a compound exam string (e.g. "NCHM JEE", "IISER IAT
+  // or JEE Advanced score") can legitimately contain the word "jee"/"neet"
+  // without that being the actual admission route.
+  // Strip negated mentions ("no NEET needed", "no JEE required") so they
+  // don't falsely trigger the counselling link for an exam route the course
+  // explicitly says it does NOT use.
+  const e=exam.toLowerCase().replace(/\bno\s+(jee|neet|cuet|clat|cat|iim|icar|nchm|isi|nest|iiser)\b/g,'');
+  // Direct armed-forces entry (JEE/NEET score used only for shortlisting,
+  // final selection is via SSB interview + forces recruitment — not a
+  // civilian seat-counselling portal like JoSAA/MCC).
+  if(e.includes('ssb interview')) return null;
+  if(e.includes('iiser iat')||e.includes('iiser')) return {label:'IISER admissions ↗',url:'iiseradmission.in'};
+  if(e.includes('nchm'))           return {label:'NCHMCT admissions ↗',url:'nchm.nic.in'};
   if(/\bjee\b/.test(e))            return {label:'JoSAA counselling ↗',url:'josaa.nic.in'};
   if(e.includes('neet'))           return {label:'MCC NEET counselling ↗',url:'mcc.nic.in'};
   if(e.includes('clat'))           return {label:'Consortium of NLUs ↗',url:'consortiumofnlus.ac.in'};
   if(e.includes('cuet'))           return {label:'CUET admissions ↗',url:'cuet.samarth.ac.in'};
-  if(e.includes('iiser iat')||e.includes('iiser')) return {label:'IISER admissions ↗',url:'iiseradmission.in'};
-  if(e.includes('cat')||e.includes('iim')) return {label:'IIM CAT ↗',url:'iimcat.ac.in'};
+  if(/\bcat\b/.test(e)||/\biim\b/.test(e)) return {label:'IIM CAT ↗',url:'iimcat.ac.in'};
   if(e.includes('icar'))           return {label:'ICAR admissions ↗',url:'icar.org.in'};
-  if(e.includes('nchm'))           return {label:'NCHMCT admissions ↗',url:'nchm.nic.in'};
   if(e.includes('isi'))            return {label:'ISI admissions ↗',url:'isical.ac.in/admissions'};
   if(e.includes('nest'))           return {label:'NEST admissions ↗',url:'nestexam.in'};
   return null;
@@ -160,7 +174,10 @@ function updateChips(){
   if(filters.stream) _chips.push({l:'Stream: '+filters.stream,clr:()=>{document.getElementById('f-stream').value='';filters.stream='';applyFilters();}});
   if(filters.search) _chips.push({l:`Search: "${filters.search}"`,clr:()=>{document.getElementById('f-search').value='';filters.search='';applyFilters();}});
   if(filters.noExam) _chips.push({l:'No entrance exam',clr:()=>{document.getElementById('f-noexam').checked=false;filters.noExam=false;applyFilters();}});
-  document.getElementById('chips').innerHTML=_chips.map((c,i)=>`<div class="chip">${c.l}<button onclick="clrChip(${i})">×</button></div>`).join('');
+  const chipHtml=_chips.map((c,i)=>`<div class="chip">${c.l}<button onclick="clrChip(${i})">×</button></div>`).join('');
+  document.getElementById('chips').innerHTML=chipHtml;
+  const stickyChips=document.getElementById('chips-sticky');
+  if(stickyChips) stickyChips.innerHTML=chipHtml||'<span class="sfb-empty">No filters applied — showing all pathways</span>';
 }
 function clrChip(i){_chips[i].clr();}
 function resetFilters(){
