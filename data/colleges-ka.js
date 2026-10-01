@@ -56,7 +56,7 @@ const COLLEGES_KA=[
   ]},
 
 {name:'NIT Karnataka (NIT Surathkal)',short:'NITK',type:'Central',district:'Mangaluru',state:'Karnataka',
-  naac:'A+',nirf:'#7 Engineering',affil:'National Institute of Technology',website:'nitk.ac.in',
+  naac:'A+',nirf:'#17 Engineering',affil:'National Institute of Technology',website:'nitk.ac.in',
   streams:['Engineering'],
   programGroups:[
     {stream:'Engineering & Technology',programs:[

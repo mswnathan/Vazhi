@@ -10,7 +10,7 @@ const COLLEGES_AS=[
 // CENTRAL GOVERNMENT
 // ──────────────────────────────────────────────
 {name:'IIT Guwahati',short:'IITG',type:'Central',district:'Guwahati',state:'Assam',
-  naac:'A++',nirf:'#7 Engineering · #11 Overall',affil:'Autonomous (Institute of National Importance)',website:'iitg.ac.in',
+  naac:'A++',nirf:'#8 Engineering · #11 Overall',affil:'Autonomous (Institute of National Importance)',website:'iitg.ac.in',
   streams:['Engineering','Arts & Science','Design','Management'],
   specialNote:'Gateway IIT for North-East India. Strong in Biosciences, Data Science and Design.',
   programGroups:[

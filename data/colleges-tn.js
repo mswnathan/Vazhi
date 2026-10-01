@@ -136,7 +136,7 @@ const COLLEGES=[
 // STATE GOVERNMENT
 // ──────────────────────────────────────────────
 {name:'Anna University — CEG Campus',short:'AU-CEG',type:'State',district:'Chennai',state:'Tamil Nadu',
-  naac:'A++',nirf:'#20 University / #14 Engg',affil:'Anna University (State Technical University)',website:'annauniv.edu',
+  naac:'A++',nirf:'#20 University / #20 Engg',affil:'Anna University (State Technical University)',website:'annauniv.edu',
   streams:['Engineering','Design'],
   programGroups:[
     {stream:'Engineering & Technology (B.E / B.Tech)',programs:[
@@ -149,7 +149,7 @@ const COLLEGES=[
   ]},
 
 {name:'Anna University — MIT Campus',short:'AU-MIT',type:'State',district:'Chennai',state:'Tamil Nadu',
-  naac:'A++',nirf:'#14 Engg (Anna Univ)',affil:'Anna University — Madras Institute of Technology',website:'mitindia.edu',
+  naac:'A++',nirf:'#20 Engg (Anna Univ)',affil:'Anna University — Madras Institute of Technology',website:'mitindia.edu',
   streams:['Engineering'],
   programGroups:[
     {stream:'Engineering & Technology',programs:[
@@ -158,7 +158,7 @@ const COLLEGES=[
   ]},
 
 {name:'Anna University — ACT Campus',short:'AU-ACT',type:'State',district:'Chennai',state:'Tamil Nadu',
-  naac:'A++',nirf:'#14 Engg (Anna Univ)',affil:'Anna University — Alagappa College of Technology',website:'actindia.ac.in',
+  naac:'A++',nirf:'#20 Engg (Anna Univ)',affil:'Anna University — Alagappa College of Technology',website:'actindia.ac.in',
   streams:['Engineering'],
   programGroups:[
     {stream:'Engineering & Technology',programs:[
@@ -1627,7 +1627,7 @@ const COLLEGES=[
 // PUDUCHERRY
 // ──────────────────────────────────────────────
 {name:'Pondicherry University',short:'PU',type:'Central',district:'Puducherry',state:'Puducherry',
-  naac:'A+',nirf:'#55 University',affil:'Central University (under MoE)',website:'pondiuni.edu.in',
+  naac:'A+',nirf:'#101 University',affil:'Central University (under MoE)',website:'pondiuni.edu.in',
   streams:['Arts & Science','Engineering','Management','Law','Education'],
   programGroups:[
     {stream:'Arts & Science (UG)',programs:[
@@ -1648,7 +1648,7 @@ const COLLEGES=[
   ]},
 
 {name:'JIPMER — Jawaharlal Institute of Postgraduate Medical Education & Research',short:'JIPMER',type:'Central',district:'Puducherry',state:'Puducherry',
-  naac:'A++',nirf:'#3 Medical',affil:'Autonomous Institute under MoH&FW',website:'jipmer.edu.in',
+  naac:'A++',nirf:'#4 Medical',affil:'Autonomous Institute under MoH&FW',website:'jipmer.edu.in',
   streams:['Medical'],
   programGroups:[
     {stream:'Medical & Health',programs:[

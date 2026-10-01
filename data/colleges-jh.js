@@ -10,7 +10,7 @@ const COLLEGES_JH=[
 // CENTRAL GOVERNMENT
 // ──────────────────────────────────────────────
 {name:'IIT (ISM) Dhanbad',short:'IIT ISM',type:'Central',district:'Dhanbad',state:'Jharkhand',
-  naac:'A++',nirf:'#9 Engineering',affil:'Autonomous (Institute of National Importance — est. 1926 as Indian School of Mines)',website:'iitism.ac.in',
+  naac:'A++',nirf:'#15 Engineering',affil:'Autonomous (Institute of National Importance — est. 1926 as Indian School of Mines)',website:'iitism.ac.in',
   streams:['Engineering','Arts & Science'],
   specialNote:'India\'s oldest mining & petroleum institution. Unique programmes in Mining, Petroleum, Applied Geology and Geophysics not found at other IITs.',
   programGroups:[

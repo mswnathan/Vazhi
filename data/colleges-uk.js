@@ -10,7 +10,7 @@ const COLLEGES_UK=[
 // CENTRAL GOVERNMENT
 // ──────────────────────────────────────────────
 {name:'IIT Roorkee',short:'IITR',type:'Central',district:'Haridwar',state:'Uttarakhand',
-  naac:'A++',nirf:'#6 Engineering · #9 Overall',affil:'Autonomous (Institute of National Importance — India\'s oldest technical university, est. 1847)',website:'iitr.ac.in',
+  naac:'A++',nirf:'#6 Engineering · #7 Overall',affil:'Autonomous (Institute of National Importance — India\'s oldest technical university, est. 1847)',website:'iitr.ac.in',
   streams:['Engineering','Design','Arts & Science'],
   specialNote:'India\'s oldest technical institution. Unique programmes in Earthquake Engineering, Geophysics and Paper Technology.',
   programGroups:[

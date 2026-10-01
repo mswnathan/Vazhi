@@ -10,7 +10,7 @@ const COLLEGES_DL=[
 // CENTRAL GOVERNMENT
 // ──────────────────────────────────────────────
 {name:'IIT Delhi',short:'IITD',type:'Central',district:'Delhi',state:'Delhi',
-  naac:'A++',nirf:'#2 Engineering · #2 Overall',affil:'Autonomous (Institute of National Importance)',website:'iitd.ac.in',
+  naac:'A++',nirf:'#2 Engineering · #4 Overall',affil:'Autonomous (Institute of National Importance)',website:'iitd.ac.in',
   streams:['Engineering','Arts & Science','Design'],
   programGroups:[
     {stream:'Engineering & Technology',programs:[
@@ -84,7 +84,7 @@ const COLLEGES_DL=[
   ]},
 
 {name:'School of Planning & Architecture (SPA) Delhi',short:'SPA',type:'Central',district:'Delhi',state:'Delhi',
-  naac:'A',nirf:'#1 Architecture',affil:'Autonomous (Central Govt — Ministry of Education)',website:'spa.ac.in',
+  naac:'A',nirf:'#8 Architecture',affil:'Autonomous (Central Govt — Ministry of Education)',website:'spa.ac.in',
   streams:['Design'],
   specialNote:'India\'s top architecture and planning school. Very competitive NATA + JEE Paper 2 admission.',
   programGroups:[

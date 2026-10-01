@@ -10,7 +10,7 @@ const COLLEGES_KL=[
 // CENTRAL GOVERNMENT
 // ──────────────────────────────────────────────
 {name:'NIT Calicut',short:'NITC',type:'Central',district:'Kozhikode',state:'Kerala',
-  naac:'A+',nirf:'#8 Engineering',affil:'National Institute of Technology',website:'nitc.ac.in',
+  naac:'A+',nirf:'#21 Engineering',affil:'National Institute of Technology',website:'nitc.ac.in',
   streams:['Engineering'],
   programGroups:[
     {stream:'Engineering & Technology',programs:[
@@ -29,7 +29,7 @@ const COLLEGES_KL=[
   ]},
 
 {name:'IIM Kozhikode',short:'IIMK',type:'Central',district:'Kozhikode',state:'Kerala',
-  naac:'A+',nirf:'#5 Management',affil:'Institute of National Importance',website:'iimk.ac.in',
+  naac:'A+',nirf:'#3 Management',affil:'Institute of National Importance',website:'iimk.ac.in',
   streams:['Management'],
   specialNote:'PGP (MBA equivalent) is post-UG. UG students note for future planning.',
   programGroups:[

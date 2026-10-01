@@ -42,7 +42,7 @@ const COLLEGES_TS=[
   ]},
 
 {name:'University of Hyderabad (UoH)',short:'UoH',type:'Central',district:'Hyderabad',state:'Telangana',
-  naac:'A++',nirf:'#3 University',affil:'Central University — Act of Parliament 1974',website:'uohyd.ac.in',
+  naac:'A++',nirf:'#18 University',affil:'Central University — Act of Parliament 1974',website:'uohyd.ac.in',
   streams:['Arts & Science','Management'],
   specialNote:'Premier research university. Strong in sciences, humanities & social sciences.',
   programGroups:[
@@ -54,7 +54,7 @@ const COLLEGES_TS=[
   ]},
 
 {name:'NALSAR University of Law',short:'NALSAR',type:'Central',district:'Hyderabad',state:'Telangana',
-  naac:'A+',nirf:'#2 Law',affil:'National Law University (Telangana State)',website:'nalsar.ac.in',
+  naac:'A+',nirf:'#3 Law',affil:'National Law University (Telangana State)',website:'nalsar.ac.in',
   streams:['Law'],
   specialNote:'Second-ranked NLU in India. Known for constitutional law and public policy.',
   programGroups:[

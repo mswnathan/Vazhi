@@ -10,7 +10,7 @@ const COLLEGES_WB=[
 // CENTRAL GOVERNMENT
 // ──────────────────────────────────────────────
 {name:'IIT Kharagpur',short:'IITKGP',type:'Central',district:'Kharagpur',state:'West Bengal',
-  naac:'A++',nirf:'#4 Engineering · #5 Overall',affil:'Autonomous (Institute of National Importance — India\'s first IIT)',website:'iitkgp.ac.in',
+  naac:'A++',nirf:'#5 Engineering · #6 Overall',affil:'Autonomous (Institute of National Importance — India\'s first IIT)',website:'iitkgp.ac.in',
   streams:['Engineering','Arts & Science','Design','Law'],
   programGroups:[
     {stream:'Engineering & Technology',programs:[
@@ -111,7 +111,7 @@ const COLLEGES_WB=[
   ]},
 
 {name:'IIM Calcutta',short:'IIMC',type:'Central',district:'Kolkata',state:'West Bengal',
-  naac:'A++',nirf:'#1 Management',affil:'Institute of National Importance',website:'iimcal.ac.in',
+  naac:'A++',nirf:'#7 Management',affil:'Institute of National Importance',website:'iimcal.ac.in',
   streams:['Management'],
   specialNote:'India\'s top-ranked B-School. PGP (MBA) is post-UG. UG students note for future planning.',
   programGroups:[
@@ -135,7 +135,7 @@ const COLLEGES_WB=[
 // STATE GOVERNMENT
 // ──────────────────────────────────────────────
 {name:'Jadavpur University',short:'JU',type:'State',district:'Kolkata',state:'West Bengal',
-  naac:'A++',nirf:'#11 Engineering · #14 University',affil:'Jadavpur University (State)',website:'jadavpur.edu',
+  naac:'A++',nirf:'#18 Engineering · #9 University',affil:'Jadavpur University (State)',website:'jadavpur.edu',
   streams:['Engineering','Arts & Science'],
   specialNote:'Consistently top-ranked state university. Admission via WBJEE for engineering; JU own test for arts/science.',
   programGroups:[

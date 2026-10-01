@@ -10,7 +10,7 @@ const COLLEGES_HR=[
 // CENTRAL GOVERNMENT
 // ──────────────────────────────────────────────
 {name:'NIT Kurukshetra',short:'NITKKR',type:'Central',district:'Kurukshetra',state:'Haryana',
-  naac:'A+',nirf:'#27 Engineering',affil:'National Institute of Technology',website:'nitkkr.ac.in',
+  naac:'A+',nirf:'#85 Engineering',affil:'National Institute of Technology',website:'nitkkr.ac.in',
   streams:['Engineering'],
   specialNote:'One of the older NITs (est. 1963). Strong in ECE, EEE and Computer Science. Good placement record.',
   programGroups:[

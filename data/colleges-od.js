@@ -10,7 +10,7 @@ const COLLEGES_OD=[
 // CENTRAL GOVERNMENT
 // ──────────────────────────────────────────────
 {name:'NIT Rourkela',short:'NITR',type:'Central',district:'Sundargarh',state:'Odisha',
-  naac:'A++',nirf:'#14 Engineering',affil:'National Institute of Technology (Institute of National Importance)',website:'nitrkl.ac.in',
+  naac:'A++',nirf:'#13 Engineering',affil:'National Institute of Technology (Institute of National Importance)',website:'nitrkl.ac.in',
   streams:['Engineering','Design'],
   specialNote:'One of India\'s oldest and largest NITs. Strong placements in core and IT sectors.',
   programGroups:[
