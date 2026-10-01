@@ -92,7 +92,7 @@ const REVIEW = ['.org.in', '.org', '.in'];
 // Known-official exceptions that use a non-standard TLD — extend as you verify links.
 const ALLOWLIST = new Set([
   'sacon.in', 'mssrf.org', 'cmfri.org.in', 'icar.org.in', 'cdac.in',
-  'mahacet.org', 'reliancefoundation.org', 'nid.edu',
+  'mahacet.org', 'reliancefoundation.org', 'nid.edu', 'adityabirla.com',
 ]);
 
 function host(link) {
