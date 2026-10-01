@@ -122,7 +122,7 @@ const COLLEGES_UK=[
   ]},
 
 {name:'Hemwati Nandan Bahuguna Garhwal University (HNBGU)',short:'HNBGU Srinagar',type:'Central',district:'Pauri Garhwal',state:'Uttarakhand',
-  naac:'A',nirf:'Top 150 University',affil:'Central University — HNBGU Act, 2009 (est. 1973)',website:'hnbgu.ac.in',
+  naac:'A',nirf:'Top 150 University',affil:'Central University — Central Universities Act, 2009 (est. 1973 as a state university)',website:'hnbgu.ac.in',
   streams:['Arts & Science','Engineering','Management'],
   specialNote:'Main campus at Srinagar (Garhwal); Pauri and Badshahi Thaul campuses too. Named after former Uttar Pradesh Chief Minister & environmentalist H.N. Bahuguna.',
   programGroups:[

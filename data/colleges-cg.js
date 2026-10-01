@@ -70,7 +70,7 @@ const COLLEGES_CG=[
   ]},
 
 {name:'Guru Ghasidas Vishwavidyalaya (GGV)',short:'GGV Bilaspur',type:'Central',district:'Bilaspur',state:'Chhattisgarh',
-  naac:'A',nirf:'Top 100 University',affil:'Central University — GGV Act, 2009 (est. 1983 as a state university)',website:'ggu.ac.in',
+  naac:'A',nirf:'Top 100 University',affil:'Central University — Central Universities Act, 2009 (est. 1983 as a state university)',website:'ggu.ac.in',
   streams:['Engineering','Arts & Science','Management','Law'],
   specialNote:'Koni campus, Bilaspur. Named after Guru Ghasidas, 18th-century social reformer and founder of the Satnami sect. Distinct from the nearby Central University of Chhattisgarh.',
   programGroups:[

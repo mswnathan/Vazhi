@@ -121,7 +121,7 @@ const COLLEGES_AP=[
   ]},
 
 {name:'The National Sanskrit University',short:'NSU Tirupati',type:'Central',district:'Tirupati',state:'Andhra Pradesh',
-  naac:'Accredited',nirf:'Top Sanskrit University',affil:'Central University — NSU Act, 2020 (formerly Rashtriya Sanskrit Vidyapeetha, est. 1961)',website:'nsktu.ac.in',
+  naac:'Accredited',nirf:'Top Sanskrit University',affil:'Central University — Central Sanskrit Universities Act, 2020 (formerly Rashtriya Sanskrit Vidyapeetha, est. 1961)',website:'nsktu.ac.in',
   streams:['Arts & Science'],
   specialNote:'One of three central Sanskrit universities, alongside the Central Sanskrit University and Shri Lal Bahadur Shastri National Sanskrit University, both in Delhi.',
   programGroups:[

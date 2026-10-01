@@ -301,7 +301,7 @@ const COLLEGES_DL=[
   ]},
 
 {name:'Shri Lal Bahadur Shastri National Sanskrit University',short:'SLBSNSU',type:'Central',district:'Delhi',state:'Delhi',
-  naac:'Accredited',nirf:'Top Sanskrit University',affil:'Central University — SLBSNSU Act, 2020 (formerly Rashtriya Sanskrit Vidyapeeth, est. 1962)',website:'slbsrsv.ac.in',
+  naac:'Accredited',nirf:'Top Sanskrit University',affil:'Central University — Central Sanskrit Universities Act, 2020 (formerly Shri Lal Bahadur Shastri Rashtriya Sanskrit Vidyapeetha, est. 1962)',website:'slbsrsv.ac.in',
   streams:['Arts & Science'],
   specialNote:'Qutub Institutional Area campus, New Delhi. One of three central Sanskrit universities, alongside the Central Sanskrit University (Delhi) and The National Sanskrit University (Tirupati).',
   programGroups:[

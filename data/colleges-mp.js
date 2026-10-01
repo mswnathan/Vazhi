@@ -287,7 +287,7 @@ const COLLEGES_MP=[
   ]},
 
 {name:'Dr. Harisingh Gour Vishwavidyalaya',short:'DHSGSU Sagar',type:'Central',district:'Sagar',state:'Madhya Pradesh',
-  naac:'A+',nirf:'Top 100 University',affil:'Central University — UGC Act (est. 1946)',website:'dhsgsu.ac.in',
+  naac:'A+',nirf:'Top 100 University',affil:'Central University — Central Universities Act, 2009 (est. 1946 as Sagar University)',website:'dhsgsu.ac.in',
   streams:['Arts & Science','Management','Engineering','Law'],
   specialNote:'One of MP\'s oldest universities, elevated to Central University status in 2009. Strong law, pharmacy and science programmes.',
   programGroups:[
