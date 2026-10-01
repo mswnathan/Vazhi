@@ -18,15 +18,15 @@ const TRENDING_COURSES=[
 ];
 
 const SALARY_DATA=[
-  {field:'IIT B.Tech (Top Branch)',min:12,max:35,label:'₹12–35 LPA'},
+  {field:'IIT B.Tech (Top Branch)',min:14,max:45,label:'₹14–45 LPA'},
   {field:'CA / Chartered Accountancy',min:8,max:30,label:'₹8–30 LPA'},
-  {field:'Actuarial Science',min:8,max:50,label:'₹8–50 LPA'},
-  {field:'IPM → IIM MBA',min:12,max:40,label:'₹12–40 LPA'},
+  {field:'Actuarial Science',min:4,max:50,label:'₹4–50 LPA'},
+  {field:'IPM → IIM MBA',min:15,max:40,label:'₹15–40 LPA'},
   {field:'MBBS (Post PG)',min:10,max:80,label:'₹10–80 LPA'},
   {field:'B.Des IIT (UX)',min:6,max:25,label:'₹6–25 LPA'},
   {field:'Merchant Navy',min:5,max:40,label:'₹5–40 LPA'},
   {field:'B.Sc Nursing Abroad',min:15,max:60,label:'₹15–60 LPA equiv'},
-  {field:'NIT B.Tech',min:4,max:18,label:'₹4–18 LPA'},
+  {field:'NIT B.Tech',min:4,max:25,label:'₹4–25 LPA'},
   {field:'BPT Physiotherapy',min:3,max:12,label:'₹3–12 LPA'},
 ];
 
