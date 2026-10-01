@@ -290,6 +290,7 @@ const PG_EXAM_GROUPS = [
         body: 'NTA',
         level: 'National',
         freq: 'Twice a year (Jun & Dec)',
+        timeline: [{ cycle: 'June cycle', apply: 'Apr–May', test: 'Jun', result: 'Jul–Aug' }, { cycle: 'December cycle', apply: 'Sep–Oct', test: 'Dec', result: 'Jan–Feb' }],
         for: 'Assistant Professor eligibility in Indian universities and colleges; JRF for humanities & social sciences',
         website: 'ugcnet.nta.ac.in',
         note: 'Covers 83 subjects. Passing NET is mandatory for Assistant Professor posts in central/state universities.',

@@ -64,16 +64,17 @@ function renderExams(){
 }
 
 function timelineHtml(e){
-  if(!e.timeline||!e.timeline.length) return '';
+  const hasTimeline=e.timeline&&e.timeline.length;
+  if(!hasTimeline&&!e.counselling) return '';
   return `<div class="etimeline">
-    ${e.timeline.map(t=>`<div class="etimeline-cycle">
+    ${hasTimeline?e.timeline.map(t=>`<div class="etimeline-cycle">
       ${t.cycle?`<div class="etimeline-cyclabel">${t.cycle}</div>`:''}
       <div class="etimeline-steps">
         <div class="etimeline-step"><span class="etimeline-dot etl-apply"></span><span class="etimeline-slbl">Apply</span><span class="etimeline-sval">${t.apply}</span></div>
         <div class="etimeline-step"><span class="etimeline-dot etl-test"></span><span class="etimeline-slbl">Exam</span><span class="etimeline-sval">${t.test}</span></div>
         <div class="etimeline-step"><span class="etimeline-dot etl-result"></span><span class="etimeline-slbl">Result</span><span class="etimeline-sval">${t.result}</span></div>
       </div>
-    </div>`).join('')}
+    </div>`).join(''):''}
     ${e.timelineNote?`<div class="etimeline-note">ℹ️ ${e.timelineNote}</div>`:''}
     ${e.counselling?`<div class="etimeline-counselling">
       <div class="etimeline-step"><span class="etimeline-dot etl-counselling"></span><span class="etimeline-slbl">Counselling</span><span class="etimeline-sval">${e.counselling}</span></div>
