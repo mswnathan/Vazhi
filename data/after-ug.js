@@ -173,6 +173,24 @@ const AFTER_UG = [
     note: 'Two of the highest-growth Chemical/Materials Engineering sub-branches right now. Battery Technology ties directly into India\'s EV manufacturing boom; Corrosion Science is core to oil & gas, shipping and infrastructure industries. Perfume & Flavour Technology is also taught at FFDC Kannauj (Ministry of MSME autonomous body) but only as short-term diploma/certificate courses, not a full M.Tech — worth knowing about but not a postgraduate degree pathway.',
   },
 
+  {
+    id: 'md-ms-medical-pg',
+    name: 'MD / MS / DNB (Medical PG)',
+    category: 'Higher Education',
+    field: 'Medicine & Surgery',
+    duration: '3 years',
+    ugFor: ['MBBS'],
+    exams: ['NEET-PG'],
+    examNote: 'NEET-PG remains the entrance exam — the proposed NExT (National Exit Test), meant to eventually replace both the licensing exam and NEET-PG, has been deferred by the NMC until at least 2028–29, pending mock-exam trials. MD/MS are university-awarded; DNB (via NBE) is the parallel diplomate route, mainly at non-teaching hospitals.',
+    institutes: 'AIIMS (all campuses), PGIMER Chandigarh, JIPMER Puducherry, govt medical colleges nationwide, govt-quota seats at deemed universities',
+    careers: 'Specialist Doctor (Surgeon, Physician, Radiologist, Anaesthetist, Dermatologist, etc.), further super-specialisation via DM/MCh, Medical Professor (with additional research/teaching track), Private Practice',
+    salary: '₹14–36 LPA (specialist) · ₹24–80 LPA (super-specialist, post-DM/MCh)',
+    market: 'High',
+    badge: 'NEET-PG pathway',
+    bc: 'coral',
+    note: 'Seats via MCC counselling (All India Quota, 50%) and state counselling (remaining 50%) — far more MBBS graduates each year than PG seats, making this one of India\'s most competitive postgraduate entrances. Clinical branch choice (e.g. Radiology, Dermatology vs General Medicine) significantly affects both competition level and eventual earning potential.',
+  },
+
   // ── RESEARCH ────────────────────────────────────────────────────────
 
   {
@@ -365,14 +383,14 @@ const AFTER_UG = [
     duration: '6–12 months of preparation',
     ugFor: ['Any'],
     exams: ['SSC CGL', 'SSC CHSL', 'SSC MTS', 'SSC JSO (Junior Statistical Officer)'],
-    examNote: 'CGL for Group B/C posts (graduate). CHSL for 12th pass. MTS for matriculate. JSO (Junior Statistical Officer) via SSC CGL — requires Statistics at graduation; places in Ministry of Statistics, RGI.',
+    examNote: 'CGL for Group B/C posts (graduate). CHSL for 12th pass. MTS for matriculate. JSO (Junior Statistical Officer) via SSC CGL — Statistics at graduation, or (from the 2026 cycle) AI, Data Science or IT; places in Ministry of Statistics, RGI. 2026 cycle also added a Tier-2 Paper 3 for AAO/Assistant Accounts Officer posts and fixed 15-minute sectional timing in Tier-1.',
     institutes: 'Ministries, Departments, CAG, Income Tax, CBI, CSS posts across India. SSC JSO: Ministry of Statistics & Programme Implementation (MoSPI), Registrar General of India (RGI).',
     careers: 'Income Tax Inspector, Auditor, Assistant in Ministries, Sub-Inspector CBI, Junior Statistical Officer (Statistician in Govt)',
     salary: '₹25,500–81,100/month',
     market: 'Stable',
     badge: 'Central Govt',
     bc: 'green',
-    note: 'SSC JSO is a hidden gem — very few graduates with Statistics specialisation compete, making it one of the lowest-competition SSC posts with good pay and a technical role in national data collection.',
+    note: 'SSC JSO is a hidden gem — a narrow pool of eligible graduates (Statistics, or AI/Data Science/IT from 2026) compete for it, making it one of the lowest-competition SSC posts with good pay and a technical role in national data collection.',
   },
 
   {
