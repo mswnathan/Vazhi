@@ -23,9 +23,9 @@ const PG_EXAM_GROUPS = [
         counselling: 'May–Jun',
         counsellingNote: 'M.Tech seats at IITs/IISc are offered via COAP (Common Offer Acceptance Portal) — multi-round, concludes within ~1 month. GATE-score PSU recruitment (BHEL, ONGC, IOCL, NTPC…) is separate and rolling — each PSU sets its own schedule, not a fixed counselling window.',
         for: 'M.Tech/ME admission at IITs, NITs, IISc; PSU recruitment; PhD qualifying',
-        website: 'gate2025.iisc.ac.in',
+        website: 'gate2027.iitm.ac.in',
         note: 'Score valid for 3 years. 50+ PSUs (BHEL, ONGC, IOCL, NTPC, PGCIL, EIL) use GATE for direct recruitment. Two papers can be attempted simultaneously in the same year.',
-        seats: '~12,000 M.Tech seats at IITs + NITs; unlimited PSU openings',
+        seats: '~24,000 M.Tech seats at IITs (COAP) + NITs/IIITs/GFTIs (CCMT); unlimited PSU openings',
         papers: [
           { code: 'CS',  name: 'Computer Science & IT',       topics: ['Engineering Maths', 'Digital Logic', 'COA', 'Programming & DS', 'Algorithms', 'TOC', 'Compiler Design', 'OS', 'DBMS', 'Computer Networks'] },
           { code: 'DA',  name: 'Data Science & AI',           topics: ['Probability & Statistics', 'Linear Algebra', 'Calculus', 'Programming & DS', 'Machine Learning', 'AI', 'Database Management', 'Computer Vision basics'] },
