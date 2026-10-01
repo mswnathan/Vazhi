@@ -82,6 +82,17 @@ const COLLEGES_PB=[
     ]},
   ]},
 
+{name:'AIIMS Bathinda',short:'AIIMS Bathinda',type:'Central',district:'Bathinda',state:'Punjab',
+  naac:'Accredited',nirf:'Top 25 Medical',affil:'All India Institute of Medical Sciences (MoHFW)',website:'aiimsbathinda.edu.in',
+  streams:['Medical'],
+  specialNote:'Dedicated to the nation in 2022.',
+  programGroups:[
+    {stream:'Medical',programs:[
+      {name:'MBBS (5.5 years incl. internship)',exam:'NEET UG',examCss:'ce-neet'},
+      {name:'B.Sc Nursing (4 years)',exam:'AIIMS Nursing Entrance',examCss:'ce-own'},
+    ]},
+  ]},
+
 {name:'IIM Amritsar',short:'IIMAMR',type:'Central',district:'Amritsar',state:'Punjab',
   naac:'Accredited',nirf:'Top Management',affil:'Institute of National Importance',website:'iimamritsar.ac.in',
   streams:['Management'],

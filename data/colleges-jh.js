@@ -22,6 +22,16 @@ const COLLEGES_JH=[
     ]},
   ]},
 
+{name:'National Institute of Advanced Manufacturing Technology (NIAMT)',short:'NIAMT Ranchi',type:'Central',district:'Ranchi',state:'Jharkhand',
+  naac:'Accredited',nirf:'Top 100 Engineering',affil:'Institute of National Importance (Ministry of Education, est. 1966, formerly National Institute of Foundry & Forge Technology)',website:'niamt.ac.in',
+  streams:['Engineering'],
+  specialNote:'Hatia campus, Ranchi. India\'s only institute dedicated to foundry, forging and advanced manufacturing technology. Renamed from NIFFT to NIAMT in 2021.',
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech (Metallurgy & Materials, Mechanical, Industrial & Production, Forge Technology)',exam:'JEE Main',examCss:'ce-jee'},
+    ]},
+  ]},
+
 {name:'NIT Jamshedpur',short:'NITJSR',type:'Central',district:'East Singhbhum',state:'Jharkhand',
   naac:'A',nirf:'Top 40 Engineering',affil:'National Institute of Technology',website:'nitjsr.ac.in',
   streams:['Engineering'],
@@ -101,6 +111,16 @@ const COLLEGES_JH=[
     {stream:'Management',programs:[
       {name:'IPM — Integrated Programme in Management (5-year, after Class 12)',exam:'IPMAT Indore',examCss:'ce-own'},
       {name:'PGP (MBA) — 2 years (post-UG)',exam:'CAT',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'IIIT Ranchi',short:'IIITRAN',type:'Central',district:'Ranchi',state:'Jharkhand',
+  naac:'Accredited',nirf:'Emerging IIIT',affil:'Indian Institute of Information Technology (MoE + Govt of Jharkhand — Institute of National Importance)',website:'iiitranchi.ac.in',
+  streams:['Engineering'],
+  specialNote:'Established 2016. Industry partners include Tata Technologies, TCS and Central Coalfields Limited.',
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech (CSE, ECE)',exam:'JEE Main',examCss:'ce-jee'},
     ]},
   ]},
 

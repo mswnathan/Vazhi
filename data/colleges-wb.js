@@ -57,6 +57,49 @@ const COLLEGES_WB=[
     ]},
   ]},
 
+{name:'IIIT Kalyani',short:'IIITKal',type:'Central',district:'Kalyani',state:'West Bengal',
+  naac:'Accredited',nirf:'Emerging IIIT',affil:'Indian Institute of Information Technology (MoE — Institute of National Importance)',website:'iiitkalyani.ac.in',
+  streams:['Engineering'],
+  specialNote:'Established 2014.',
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech (CSE, ECE)',exam:'JEE Main',examCss:'ce-jee'},
+    ]},
+  ]},
+
+{name:'AIIMS Kalyani',short:'AIIMS Kalyani',type:'Central',district:'Kalyani',state:'West Bengal',
+  naac:'Accredited',nirf:'Top 25 Medical',affil:'All India Institute of Medical Sciences (MoHFW)',website:'aiimskalyani.edu.in',
+  streams:['Medical'],
+  specialNote:'Dedicated to the nation in 2020 along with 4 other new AIIMS.',
+  programGroups:[
+    {stream:'Medical',programs:[
+      {name:'MBBS (5.5 years incl. internship)',exam:'NEET UG',examCss:'ce-neet'},
+      {name:'B.Sc Nursing (4 years)',exam:'AIIMS Nursing Entrance',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'National Institute of Homoeopathy',short:'NIH Kolkata',type:'Central',district:'Kolkata',state:'West Bengal',
+  naac:'Accredited',nirf:'Top Homoeopathy Institute',affil:'Institute of National Importance (Ministry of AYUSH, est. 1975)',website:'nih.nic.in',
+  streams:['Medical'],
+  specialNote:'India\'s apex homoeopathy institute. Salt Lake campus, Kolkata. Affiliated to West Bengal University of Health Sciences.',
+  programGroups:[
+    {stream:'Homoeopathic Medicine',programs:[
+      {name:'BHMS — Bachelor of Homoeopathic Medicine and Surgery (5.5 years incl. internship)',exam:'NEET UG',examCss:'ce-neet'},
+    ]},
+  ]},
+
+{name:'National Institute for Locomotor Disabilities (Divyangjan) — NILD',short:'NILD Kolkata',type:'Central',district:'Kolkata',state:'West Bengal',
+  naac:'Accredited',nirf:'Specialised Rehabilitation',affil:'Ministry of Social Justice & Empowerment, Govt of India',website:'nild.nic.in',
+  streams:['Medical'],
+  specialNote:'Apex national institute for locomotor-disability rehabilitation. Admission via Common Entrance Test (CET-PWD) — jointly conducted with NIEPID, NIEPMD, SVNIRTAR, PDUNIPPD.',
+  programGroups:[
+    {stream:'Allied Health & Rehabilitation',programs:[
+      {name:'Bachelor of Physiotherapy / BPT (4.5 years)',exam:'CET-PWD',examCss:'ce-own'},
+      {name:'Bachelor of Occupational Therapy / BOT (4.5 years)',exam:'CET-PWD',examCss:'ce-own'},
+      {name:'Bachelor in Prosthetics & Orthotics / BPO (4.5 years)',exam:'CET-PWD',examCss:'ce-own'},
+    ]},
+  ]},
+
 {name:'NUJS Kolkata',short:'NUJS',type:'Central',district:'Kolkata',state:'West Bengal',
   naac:'A',nirf:'Top 5 Law',affil:'The West Bengal National University of Juridical Sciences',website:'nujs.edu',
   streams:['Law'],

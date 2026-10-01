@@ -22,6 +22,17 @@ const COLLEGES_UK=[
     ]},
   ]},
 
+{name:'National Institute for Empowerment of Persons with Visual Disabilities (Divyangjan) — NIEPVD',short:'NIEPVD Dehradun',type:'Central',district:'Dehradun',state:'Uttarakhand',
+  naac:'Accredited',nirf:'Specialised Rehabilitation',affil:'Ministry of Social Justice & Empowerment, Govt of India',website:'niepvd.nic.in',
+  streams:['Medical'],
+  specialNote:'Apex national institute for visual-disability rehabilitation and special education. Admission via Common Entrance Test (CET-PWD) — jointly conducted with NIEPID, NIEPMD, SVNIRTAR, NILD, PDUNIPPD.',
+  programGroups:[
+    {stream:'Allied Health & Rehabilitation',programs:[
+      {name:'B.Ed Special Education (Visual Impairment) — 2 years',exam:'CET-PWD',examCss:'ce-own'},
+      {name:'Bachelor in Orientation & Mobility / Low Vision — 3 years',exam:'CET-PWD',examCss:'ce-own'},
+    ]},
+  ]},
+
 {name:'NIT Uttarakhand',short:'NITUK',type:'Central',district:'Pauri Garhwal',state:'Uttarakhand',
   naac:'Accredited',nirf:'Top 100 Engineering',affil:'National Institute of Technology',website:'nituk.ac.in',
   streams:['Engineering'],
@@ -107,6 +118,23 @@ const COLLEGES_UK=[
   programGroups:[
     {stream:'Hospitality & Hotel Management',programs:[
       {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
+{name:'Hemwati Nandan Bahuguna Garhwal University (HNBGU)',short:'HNBGU Srinagar',type:'Central',district:'Pauri Garhwal',state:'Uttarakhand',
+  naac:'A',nirf:'Top 150 University',affil:'Central University — HNBGU Act, 2009 (est. 1973)',website:'hnbgu.ac.in',
+  streams:['Arts & Science','Engineering','Management'],
+  specialNote:'Main campus at Srinagar (Garhwal); Pauri and Badshahi Thaul campuses too. Named after former Uttar Pradesh Chief Minister & environmentalist H.N. Bahuguna.',
+  programGroups:[
+    {stream:'Arts & Science',programs:[
+      {name:'B.A / B.Sc / B.Com (Hons)',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.Pharm',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+    {stream:'Engineering',programs:[
+      {name:'B.Tech (CSE, Electronics, Mechanical)',exam:'JEE Main',examCss:'ce-jee'},
+    ]},
+    {stream:'Management',programs:[
+      {name:'BBA / MCA (integrated)',exam:'CUET UG',examCss:'ce-cuet'},
     ]},
   ]},
 

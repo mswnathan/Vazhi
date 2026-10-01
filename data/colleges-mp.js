@@ -47,6 +47,17 @@ const COLLEGES_MP=[
     ]},
   ]},
 
+{name:'National Institute of Mental Health and Rehabilitation (NIMHR)',short:'NIMHR Sehore',type:'Central',district:'Sehore',state:'Madhya Pradesh',
+  naac:'',nirf:'',affil:'Ministry of Social Justice & Empowerment, Govt of India',website:'nimhr.nic.in',
+  streams:['Medical'],
+  specialNote:'Newest of the Divyangjan rehabilitation institutes, focused on psychosocial/mental-health disability. Currently offers diploma & certificate level courses only — no UG degree yet.',
+  programGroups:[
+    {stream:'Allied Health & Rehabilitation',programs:[
+      {name:'Diploma in Community Based Rehabilitation (Mental Health) — 1 year',exam:'Merit + Interview',examCss:'ce-merit'},
+      {name:'Diploma in Vocational Rehabilitation (Mental Health) — 1 year',exam:'Merit + Interview',examCss:'ce-merit'},
+    ]},
+  ]},
+
 {name:'ABV-IIITM Gwalior',short:'IIITMG',type:'Central',district:'Gwalior',state:'Madhya Pradesh',
   naac:'A+',nirf:'Top IIIT',affil:'ABV Indian Institute of IT & Management (Autonomous — MoE)',website:'iiitm.ac.in',
   streams:['Engineering','Management'],
@@ -55,6 +66,29 @@ const COLLEGES_MP=[
     {stream:'Engineering & Technology',programs:[
       {name:'B.Tech (CSE, ECE, IT)',exam:'JEE Main',examCss:'ce-jee'},
       {name:'Integrated B.Tech + MBA (IT & Management)',exam:'JEE Main',examCss:'ce-jee'},
+    ]},
+  ]},
+
+{name:'IIIT Bhopal',short:'IIITB-MP',type:'Central',district:'Bhopal',state:'Madhya Pradesh',
+  naac:'Accredited',nirf:'Emerging IIIT',affil:'Indian Institute of Information Technology (MoE — Institute of National Importance)',website:'iiitbhopal.ac.in',
+  streams:['Engineering'],
+  specialNote:'Established 2017.',
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech (CSE, ECE, Data Science)',exam:'JEE Main',examCss:'ce-jee'},
+    ]},
+  ]},
+
+{name:'IIITDM Jabalpur',short:'IIITDMJ',type:'Central',district:'Jabalpur',state:'Madhya Pradesh',
+  naac:'Accredited',nirf:'Top 100 Engg',affil:'Indian Institute of IT, Design & Manufacturing (Autonomous — Institute of National Importance)',website:'iiitdmj.ac.in',
+  streams:['Engineering','Design'],
+  specialNote:'One of the original 5 MoE-funded IIITDM/IIIT campuses (est. 2005), pre-dating the PPP-mode IIITs.',
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech (CSE, ECE, Mechanical, Smart Manufacturing)',exam:'JEE Main',examCss:'ce-jee'},
+    ]},
+    {stream:'Design',programs:[
+      {name:'B.Des',exam:'JEE Main / UCEED',examCss:'ce-jee'},
     ]},
   ]},
 
@@ -249,6 +283,41 @@ const COLLEGES_MP=[
   programGroups:[
     {stream:'Hospitality & Hotel Management',programs:[
       {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
+{name:'Dr. Harisingh Gour Vishwavidyalaya',short:'DHSGSU Sagar',type:'Central',district:'Sagar',state:'Madhya Pradesh',
+  naac:'A+',nirf:'Top 100 University',affil:'Central University — UGC Act (est. 1946)',website:'dhsgsu.ac.in',
+  streams:['Arts & Science','Management','Engineering','Law'],
+  specialNote:'One of MP\'s oldest universities, elevated to Central University status in 2009. Strong law, pharmacy and science programmes.',
+  programGroups:[
+    {stream:'Arts & Science',programs:[
+      {name:'B.A / B.Sc / B.Com (Hons)',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.Pharm',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+    {stream:'Engineering',programs:[
+      {name:'B.Tech (CSE, Electronics, Mechanical)',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+    {stream:'Law',programs:[
+      {name:'B.A LL.B (Hons) — 5-year integrated',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+    {stream:'Management',programs:[
+      {name:'BBA (3 years)',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+  ]},
+
+{name:'Indira Gandhi National Tribal University (IGNTU)',short:'IGNTU Amarkantak',type:'Central',district:'Anuppur',state:'Madhya Pradesh',
+  naac:'Accredited',nirf:'Top Tribal-Focus University',affil:'Central University — IGNTU Act, 2007',website:'igntu.ac.in',
+  streams:['Arts & Science','Management'],
+  specialNote:'India\'s only central university dedicated to tribal studies and the development of tribal communities. Amarkantak campus, MP.',
+  programGroups:[
+    {stream:'Arts & Science',programs:[
+      {name:'B.A (Hons) Tribal Studies, History, English, Hindi, Linguistics',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.Sc (Hons) Botany, Zoology, Chemistry, Geology, Biotechnology',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.Pharm',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+    {stream:'Management',programs:[
+      {name:'BBA / BCA (3 years)',exam:'CUET UG',examCss:'ce-cuet'},
     ]},
   ]},
 

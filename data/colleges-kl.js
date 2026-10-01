@@ -191,6 +191,16 @@ const COLLEGES_KL=[
     ]},
   ]},
 
+{name:'IIIT Kottayam',short:'IIITKtm',type:'Central',district:'Kottayam',state:'Kerala',
+  naac:'Accredited',nirf:'Emerging IIIT',affil:'Indian Institute of Information Technology (MoE — Institute of National Importance)',website:'iiitkottayam.ac.in',
+  streams:['Engineering'],
+  specialNote:'Established 2015.',
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech (CSE, ECE)',exam:'JEE Main',examCss:'ce-jee'},
+    ]},
+  ]},
+
 {name:'Indian Maritime University — Kochi Campus',short:'IMU Kochi',type:'Central',district:'Kochi',state:'Kerala',
   naac:'',nirf:'',affil:'Indian Maritime University (Central)',website:'imu.edu.in',
   streams:['Engineering','Management'],

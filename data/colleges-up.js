@@ -50,6 +50,40 @@ const COLLEGES_UP=[
     ]},
   ]},
 
+{name:'IIIT Lucknow',short:'IIITL',type:'Central',district:'Lucknow',state:'Uttar Pradesh',
+  naac:'Accredited',nirf:'Emerging IIIT',affil:'Indian Institute of Information Technology (MoE + Govt of UP — Institute of National Importance)',website:'iiitl.ac.in',
+  streams:['Engineering'],
+  specialNote:'Established 2015.',
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech (CSE, ECE)',exam:'JEE Main',examCss:'ce-jee'},
+    ]},
+  ]},
+
+{name:'University of Allahabad',short:'AU Prayagraj',type:'Central',district:'Prayagraj',state:'Uttar Pradesh',
+  naac:'A',nirf:'Top 100 University',affil:'Central University (Constitutional — Seventh Schedule)',website:'allduniv.ac.in',
+  streams:['Arts & Science','Law','Management'],
+  specialNote:'One of India\'s oldest universities (est. 1887), the "Oxford of the East". Five faculties: Arts, Science, Commerce, Law and Management.',
+  programGroups:[
+    {stream:'Arts & Science',programs:[
+      {name:'B.A / B.Sc / B.Com (Hons)',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.F.A / B.P.A',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+    {stream:'Law',programs:[
+      {name:'B.A LL.B (Hons) — 5-year integrated',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+  ]},
+
+{name:'Rani Lakshmi Bai Central Agricultural University (RLBCAU)',short:'RLBCAU',type:'Central',district:'Jhansi',state:'Uttar Pradesh',
+  naac:'Accredited',nirf:'Top Agriculture',affil:'Central Agricultural University (est. 2014, ICAR-affiliated)',website:'rlbcau.ac.in',
+  streams:['Agriculture'],
+  specialNote:'Serves the Bundelkhand region.',
+  programGroups:[
+    {stream:'Agriculture & Allied Sciences',programs:[
+      {name:'B.Sc (Hons) Agriculture (4 years)',exam:'ICAR AIEEA UG (CUET-UG)',examCss:'ce-icar'},
+    ]},
+  ]},
+
 {name:'Banaras Hindu University (BHU)',short:'BHU',type:'Central',district:'Varanasi',state:'Uttar Pradesh',
   naac:'A',nirf:'Top 10 University',affil:'Central University — Act of Parliament 1915',website:'bhu.ac.in',
   streams:['Arts & Science','Medical','Law','Agriculture'],
@@ -224,6 +258,16 @@ const COLLEGES_UP=[
     ]},
   ]},
 
+{name:'Rajiv Gandhi Institute of Petroleum Technology (RGIPT)',short:'RGIPT',type:'Central',district:'Amethi',state:'Uttar Pradesh',
+  naac:'Accredited',nirf:'Top 80 Engineering',affil:'Institute of National Importance (Ministry of Petroleum & Natural Gas, est. 2007)',website:'rgipt.ac.in',
+  streams:['Engineering'],
+  specialNote:'Located at Jais, Amethi. India\'s only dedicated petroleum engineering university. Strong placements at ONGC, GAIL, IOCL, HPCL.',
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech (Petroleum, Chemical, Mechanical, Electrical, CSE)',exam:'JEE Main',examCss:'ce-jee'},
+    ]},
+  ]},
+
 {name:'Dr. Rajendra Prasad National Law University (RPNLU)',short:'RPNLU',type:'Central',district:'Prayagraj',state:'Uttar Pradesh',
   naac:'Accredited',nirf:'National Law University',affil:'National Law University (Uttar Pradesh)',website:'rpnlup.ac.in',
   streams:['Law'],
@@ -240,6 +284,17 @@ const COLLEGES_UP=[
     {stream:'Design',programs:[
       {name:'B.Des (Fashion, Textile, Accessory, Communication, Leather)',exam:'NIFT Entrance',examCss:'ce-own'},
       {name:'B.F.Tech (Apparel Production)',exam:'NIFT Entrance',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'AIIMS Raebareli',short:'AIIMS Raebareli',type:'Central',district:'Raebareli',state:'Uttar Pradesh',
+  naac:'Accredited',nirf:'Top 25 Medical',affil:'All India Institute of Medical Sciences (MoHFW)',website:'aiimsrbl.edu.in',
+  streams:['Medical'],
+  specialNote:'Dedicated to the nation in 2022.',
+  programGroups:[
+    {stream:'Medical',programs:[
+      {name:'MBBS (5.5 years incl. internship)',exam:'NEET UG',examCss:'ce-neet'},
+      {name:'B.Sc Nursing (4 years)',exam:'AIIMS Nursing Entrance',examCss:'ce-own'},
     ]},
   ]},
 

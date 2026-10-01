@@ -27,6 +27,16 @@ const COLLEGES_RJ=[
     ]},
   ]},
 
+{name:'IIIT Kota',short:'IIITKota',type:'Central',district:'Kota',state:'Rajasthan',
+  naac:'Accredited',nirf:'Emerging IIIT',affil:'Indian Institute of Information Technology (MoE + Govt of Rajasthan — Institute of National Importance)',website:'iiitkota.ac.in',
+  streams:['Engineering'],
+  specialNote:'Established 2013. Campus at Ranpur near Kota.',
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech (CSE, ECE, AI & Data Science)',exam:'JEE Main',examCss:'ce-jee'},
+    ]},
+  ]},
+
 {name:'National Law University Jodhpur (NLU Jodhpur)',short:'NLUJ',type:'Central',district:'Jodhpur',state:'Rajasthan',
   naac:'A',nirf:'Top 5 Law',affil:'National Law University (Rajasthan)',website:'nlujodhpur.ac.in',
   streams:['Law'],

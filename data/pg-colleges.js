@@ -1074,6 +1074,138 @@ const PG_COLLEGES = [
   },
 
   {
+    name: 'NITTTR Bhopal — National Institute of Technical Teachers Training & Research',
+    short: 'NITTTR Bhopal',
+    type: 'Central',
+    district: 'Bhopal',
+    state: 'Madhya Pradesh',
+    naac: 'A',
+    nirf: 'Top Technical Education Institute',
+    affil: 'Ministry of Education — Govt of India (est. 1965)',
+    website: 'nitttrbpl.ac.in',
+    streams: ['Engineering', 'Education'],
+    specialNote: 'One of four NITTTR campuses in India (Bhopal serves Central India). Trains serving technical college faculty and runs applied-engineering M.Tech/M.Sc programmes.',
+    programGroups: [
+      {
+        stream: 'Technical Education (PG)',
+        programs: [
+          { name: 'M.Tech (CSE, VLSI & Microelectronics, Green Technology, Transportation Engineering, CAD/CAM & Automation)', exam: 'GATE / NITTTR Entrance', examCss: 'ce-gate' },
+          { name: 'MBA (Public Policy & Management)', exam: 'CAT / NITTTR Entrance', examCss: 'ce-cat' },
+          { name: 'PG Diploma in Technical Education — 1 year', exam: 'NITTTR Entrance', examCss: 'ce-own' },
+          { name: 'PhD (Engineering / Education)', exam: 'GATE / UGC-NET + Interview', examCss: 'ce-net' },
+        ],
+      },
+    ],
+  },
+
+  {
+    name: 'NITTTR Kolkata — National Institute of Technical Teachers Training & Research',
+    short: 'NITTTR Kolkata',
+    type: 'Central',
+    district: 'Kolkata',
+    state: 'West Bengal',
+    naac: 'A',
+    nirf: 'Top Technical Education Institute',
+    affil: 'Ministry of Education — Govt of India (est. 1965)',
+    website: 'nitttrkol.ac.in',
+    streams: ['Engineering', 'Education'],
+    specialNote: 'One of four NITTTR campuses in India (Kolkata serves Eastern India). Trains serving technical college faculty. M.Tech and PG Diploma programmes; no UG intake.',
+    programGroups: [
+      {
+        stream: 'Technical Education (PG)',
+        programs: [
+          { name: 'M.Tech (Mechatronics, Manufacturing Technology, Structural Engineering, Multimedia & Software Systems)', exam: 'GATE / NITTTR Entrance', examCss: 'ce-gate' },
+          { name: 'PG Diploma in Technical Education — 1 year', exam: 'NITTTR Entrance', examCss: 'ce-own' },
+          { name: 'PhD (Engineering / Education)', exam: 'GATE / UGC-NET + Interview', examCss: 'ce-net' },
+        ],
+      },
+    ],
+  },
+
+  {
+    name: 'NITTTR Chandigarh — National Institute of Technical Teachers Training & Research',
+    short: 'NITTTR Chandigarh',
+    type: 'Central',
+    district: 'Chandigarh',
+    state: 'Chandigarh',
+    naac: 'A',
+    nirf: 'Top Technical Education Institute',
+    affil: 'Ministry of Education — Govt of India (est. 1965)',
+    website: 'nitttrchd.ac.in',
+    streams: ['Engineering', 'Education'],
+    specialNote: 'One of four NITTTR campuses in India (Chandigarh serves Northern India). Trains serving technical college faculty. M.Tech and PG Diploma programmes; no UG intake.',
+    programGroups: [
+      {
+        stream: 'Technical Education (PG)',
+        programs: [
+          { name: 'M.Tech (Civil, Electronics & Communication, Mechanical Engineering Education)', exam: 'GATE / NITTTR Entrance', examCss: 'ce-gate' },
+          { name: 'PG Diploma in Technical Education — 1 year', exam: 'NITTTR Entrance', examCss: 'ce-own' },
+          { name: 'PhD (Engineering / Education)', exam: 'GATE / UGC-NET + Interview', examCss: 'ce-net' },
+        ],
+      },
+    ],
+  },
+
+  {
+    name: 'National Centre for Radio Astrophysics (NCRA-TIFR)',
+    short: 'NCRA Pune',
+    type: 'INI',
+    district: 'Pune',
+    state: 'Maharashtra',
+    naac: '',
+    nirf: '',
+    affil: 'Tata Institute of Fundamental Research — Dept of Atomic Energy (Homi Bhabha National Institute)',
+    website: 'ncra.tifr.res.in',
+    streams: ['Arts & Science'],
+    specialNote: 'India\'s premier radio astronomy research centre, home of the Giant Metrewave Radio Telescope (GMRT). PhD/Integrated-PhD only, degree conferred by the TIFR Deemed University (Homi Bhabha National Institute). No UG programme.',
+    programGroups: [
+      { stream: 'Astronomy & Astrophysics (Doctoral)', programs: [
+        { name: 'Integrated PhD (Radio Astronomy) — for BSc/B.Tech graduates', exam: 'JEST / TIFR GS Entrance + Interview', examCss: 'ce-own' },
+        { name: 'PhD (Radio Astronomy / Instrumentation) — for MSc graduates', exam: 'JEST / TIFR GS Entrance + Interview', examCss: 'ce-own' },
+      ] },
+    ],
+  },
+
+  {
+    name: 'Inter-University Centre for Astronomy and Astrophysics (IUCAA)',
+    short: 'IUCAA Pune',
+    type: 'INI',
+    district: 'Pune',
+    state: 'Maharashtra',
+    naac: '',
+    nirf: '',
+    affil: 'Autonomous Inter-University Centre, University Grants Commission (on Savitribai Phule Pune University campus)',
+    website: 'iucaa.in',
+    streams: ['Arts & Science'],
+    specialNote: 'UGC\'s nodal centre for nucleating astronomy & astrophysics research across Indian universities — located next to NCRA on the Pune University campus. PhD only, awarded jointly with Savitribai Phule Pune University. No UG programme.',
+    programGroups: [
+      { stream: 'Astronomy & Astrophysics (Doctoral)', programs: [
+        { name: 'PhD (Astronomy & Astrophysics)', exam: 'INAT / JEST / CSIR-UGC NET-JRF + Interview', examCss: 'ce-own' },
+      ] },
+    ],
+  },
+
+  {
+    name: 'Jawaharlal Nehru Centre for Advanced Scientific Research (JNCASR)',
+    short: 'JNCASR Bengaluru',
+    type: 'INI',
+    district: 'Bengaluru',
+    state: 'Karnataka',
+    naac: 'Accredited',
+    nirf: 'Top Research Institute',
+    affil: 'Autonomous Institute — Dept of Science & Technology, Govt of India (est. 1989)',
+    website: 'jncasr.ac.in',
+    streams: ['Arts & Science'],
+    specialNote: 'Multidisciplinary basic-sciences research centre on the lines of IISc, next door to it in Bengaluru. Integrated PhD (BSc-entry) and PhD (MSc-entry) programmes; no standard UG degree.',
+    programGroups: [
+      { stream: 'Sciences (Integrated PhD / PhD)', programs: [
+        { name: 'Integrated PhD — Chemistry, Physics, Materials, Biology (for BSc graduates)', exam: 'JAM / JNCASR Written Test + Interview', examCss: 'ce-jam' },
+        { name: 'PhD — Chemistry, Physics, Materials, Biology, Engineering (for MSc/BE/BTech graduates)', exam: 'JEST / GATE / NET + Interview', examCss: 'ce-gate' },
+      ] },
+    ],
+  },
+
+  {
     name: 'Thiagarajar College of Engineering',
     short: 'TCE Madurai',
     type: 'Aided',
@@ -1864,6 +1996,473 @@ const PG_COLLEGES = [
           { name: 'B.Ed (2 years, graduate-entry)', exam: 'CEE (NCERT RIE Common Entrance Exam)', examCss: 'ce-own' },
         ],
       },
+    ],
+  },
+
+  // ═══════════════════════════════════════════════
+  // INDIAN INSTITUTES OF MANAGEMENT (IIM) — PGP/MBA via CAT
+  // ═══════════════════════════════════════════════
+
+  {
+    name: 'Indian Institute of Management Ahmedabad',
+    short: 'IIM Ahmedabad',
+    type: 'INI',
+    district: 'Ahmedabad',
+    state: 'Gujarat',
+    naac: 'A++',
+    nirf: 'Top 5 Management',
+    affil: 'Institute of National Importance — IIM Act, 2017',
+    website: 'iima.ac.in',
+    streams: ['Management'],
+    specialNote: 'India\'s oldest and most selective IIM (est. 1961). No UG-level IPM programme — PGP is a post-graduate/post-UG entry only.',
+    programGroups: [
+      { stream: 'Management (Post-UG)', programs: [
+        { name: 'PGP (MBA) — 2 years', exam: 'CAT', examCss: 'ce-cat' },
+      ] },
+    ],
+  },
+
+  {
+    name: 'Indian Institute of Management Bangalore',
+    short: 'IIM Bangalore',
+    type: 'INI',
+    district: 'Bengaluru',
+    state: 'Karnataka',
+    naac: 'A++',
+    nirf: 'Top 5 Management',
+    affil: 'Institute of National Importance — IIM Act, 2017',
+    website: 'iimb.ac.in',
+    streams: ['Management'],
+    specialNote: 'Est. 1973. No UG-level IPM programme — PGP is post-UG entry only.',
+    programGroups: [
+      { stream: 'Management (Post-UG)', programs: [
+        { name: 'PGP (MBA) — 2 years', exam: 'CAT', examCss: 'ce-cat' },
+      ] },
+    ],
+  },
+
+  {
+    name: 'Indian Institute of Management Calcutta',
+    short: 'IIM Calcutta',
+    type: 'INI',
+    district: 'Kolkata',
+    state: 'West Bengal',
+    naac: 'A++',
+    nirf: 'Top 5 Management',
+    affil: 'Institute of National Importance — IIM Act, 2017',
+    website: 'iimcal.ac.in',
+    streams: ['Management'],
+    specialNote: 'Est. 1961, India\'s first IIM. No UG-level IPM programme — PGP is post-UG entry only.',
+    programGroups: [
+      { stream: 'Management (Post-UG)', programs: [
+        { name: 'PGP (MBA) — 2 years', exam: 'CAT', examCss: 'ce-cat' },
+      ] },
+    ],
+  },
+
+  {
+    name: 'Indian Institute of Management Lucknow',
+    short: 'IIM Lucknow',
+    type: 'INI',
+    district: 'Lucknow',
+    state: 'Uttar Pradesh',
+    naac: 'A++',
+    nirf: 'Top 10 Management',
+    affil: 'Institute of National Importance — IIM Act, 2017',
+    website: 'iiml.ac.in',
+    streams: ['Management'],
+    specialNote: 'Est. 1984. Also runs a Noida campus for executive programmes. No UG-level IPM programme.',
+    programGroups: [
+      { stream: 'Management (Post-UG)', programs: [
+        { name: 'PGP (MBA) — 2 years', exam: 'CAT', examCss: 'ce-cat' },
+      ] },
+    ],
+  },
+
+  {
+    name: 'Indian Institute of Management Kozhikode',
+    short: 'IIM Kozhikode',
+    type: 'INI',
+    district: 'Kozhikode',
+    state: 'Kerala',
+    naac: 'A+',
+    nirf: 'Top 10 Management',
+    affil: 'Institute of National Importance — IIM Act, 2017',
+    website: 'iimk.ac.in',
+    streams: ['Management'],
+    specialNote: 'Est. 1996. PGP is post-UG entry only.',
+    programGroups: [
+      { stream: 'Management (Post-UG)', programs: [
+        { name: 'PGP (MBA) — 2 years', exam: 'CAT', examCss: 'ce-cat' },
+      ] },
+    ],
+  },
+
+  {
+    name: 'Indian Institute of Management Indore',
+    short: 'IIM Indore',
+    type: 'INI',
+    district: 'Indore',
+    state: 'Madhya Pradesh',
+    naac: 'A++',
+    nirf: 'Top 10 Management',
+    affil: 'Institute of National Importance — IIM Act, 2017',
+    website: 'iimidr.ac.in',
+    streams: ['Management'],
+    specialNote: 'Est. 1996. First IIM to launch the 5-year Integrated Programme in Management (IPM) admitted directly after Class 12 via IPMAT — see UG Colleges.',
+    programGroups: [
+      { stream: 'Management (Post-UG)', programs: [
+        { name: 'PGP (MBA) — 2 years', exam: 'CAT', examCss: 'ce-cat' },
+      ] },
+    ],
+  },
+
+  {
+    name: 'Indian Institute of Management Tiruchirappalli',
+    short: 'IIM Trichy',
+    type: 'INI',
+    district: 'Tiruchirappalli',
+    state: 'Tamil Nadu',
+    naac: 'Accredited',
+    nirf: 'Top 20 Management',
+    affil: 'Institute of National Importance — IIM Act, 2017',
+    website: 'iimtrichy.ac.in',
+    streams: ['Management'],
+    specialNote: 'Est. 2011. No UG-level IPM programme.',
+    programGroups: [
+      { stream: 'Management (Post-UG)', programs: [
+        { name: 'PGP (MBA) — 2 years', exam: 'CAT', examCss: 'ce-cat' },
+      ] },
+    ],
+  },
+
+  {
+    name: 'Indian Institute of Management Udaipur',
+    short: 'IIM Udaipur',
+    type: 'INI',
+    district: 'Udaipur',
+    state: 'Rajasthan',
+    naac: 'Accredited',
+    nirf: 'Top 20 Management',
+    affil: 'Institute of National Importance — IIM Act, 2017',
+    website: 'iimu.ac.in',
+    streams: ['Management'],
+    specialNote: 'Est. 2011. No UG-level IPM programme.',
+    programGroups: [
+      { stream: 'Management (Post-UG)', programs: [
+        { name: 'PGP (MBA) — 2 years', exam: 'CAT', examCss: 'ce-cat' },
+      ] },
+    ],
+  },
+
+  {
+    name: 'Indian Institute of Management Visakhapatnam',
+    short: 'IIM Visakhapatnam',
+    type: 'INI',
+    district: 'Visakhapatnam',
+    state: 'Andhra Pradesh',
+    naac: 'Accredited',
+    nirf: 'Top 30 Management',
+    affil: 'Institute of National Importance — IIM Act, 2017',
+    website: 'iimv.ac.in',
+    streams: ['Management'],
+    specialNote: 'Est. 2015. No UG-level IPM programme.',
+    programGroups: [
+      { stream: 'Management (Post-UG)', programs: [
+        { name: 'PGP (MBA) — 2 years', exam: 'CAT', examCss: 'ce-cat' },
+      ] },
+    ],
+  },
+
+  {
+    name: 'Indian Institute of Management Rohtak',
+    short: 'IIM Rohtak',
+    type: 'INI',
+    district: 'Rohtak',
+    state: 'Haryana',
+    naac: 'Accredited',
+    nirf: 'Top 15 Management',
+    affil: 'Institute of National Importance — IIM Act, 2017',
+    website: 'iimrohtak.ac.in',
+    streams: ['Management'],
+    specialNote: 'Also offers the 5-year IPM admitted directly after Class 12 — see UG Colleges (Haryana).',
+    programGroups: [
+      { stream: 'Management (Post-UG)', programs: [
+        { name: 'PGP (MBA) — 2 years', exam: 'CAT', examCss: 'ce-cat' },
+      ] },
+    ],
+  },
+
+  {
+    name: 'Indian Institute of Management Raipur',
+    short: 'IIM Raipur',
+    type: 'INI',
+    district: 'Raipur',
+    state: 'Chhattisgarh',
+    naac: 'Accredited',
+    nirf: 'Top 15 Management',
+    affil: 'Institute of National Importance — IIM Act, 2017',
+    website: 'iimraipur.ac.in',
+    streams: ['Management'],
+    specialNote: 'Also offers the 5-year IPM admitted directly after Class 12 — see UG Colleges (Chhattisgarh).',
+    programGroups: [
+      { stream: 'Management (Post-UG)', programs: [
+        { name: 'PGP (MBA) — 2 years', exam: 'CAT', examCss: 'ce-cat' },
+      ] },
+    ],
+  },
+
+  {
+    name: 'Indian Institute of Management Ranchi',
+    short: 'IIM Ranchi',
+    type: 'INI',
+    district: 'Ranchi',
+    state: 'Jharkhand',
+    naac: 'Accredited',
+    nirf: 'Top Management',
+    affil: 'Institute of National Importance — IIM Act, 2017',
+    website: 'iimranchi.ac.in',
+    streams: ['Management'],
+    specialNote: 'Also offers the 5-year IPM (via IPMAT Indore) admitted directly after Class 12 — see UG Colleges (Jharkhand).',
+    programGroups: [
+      { stream: 'Management (Post-UG)', programs: [
+        { name: 'PGP (MBA) — 2 years', exam: 'CAT', examCss: 'ce-cat' },
+      ] },
+    ],
+  },
+
+  {
+    name: 'Indian Institute of Management Kashipur',
+    short: 'IIM Kashipur',
+    type: 'INI',
+    district: 'Udham Singh Nagar',
+    state: 'Uttarakhand',
+    naac: 'Accredited',
+    nirf: 'Top 20 Management',
+    affil: 'Institute of National Importance — IIM Act, 2017',
+    website: 'iimkashipur.ac.in',
+    streams: ['Management'],
+    specialNote: 'Also offers the 5-year IPM admitted directly after Class 12 — see UG Colleges (Uttarakhand).',
+    programGroups: [
+      { stream: 'Management (Post-UG)', programs: [
+        { name: 'PGP (MBA) — 2 years', exam: 'CAT', examCss: 'ce-cat' },
+      ] },
+    ],
+  },
+
+  {
+    name: 'Indian Institute of Management Nagpur',
+    short: 'IIM Nagpur',
+    type: 'INI',
+    district: 'Nagpur',
+    state: 'Maharashtra',
+    naac: 'Accredited',
+    nirf: 'Top Management',
+    affil: 'Institute of National Importance — IIM Act, 2017',
+    website: 'iimnagpur.ac.in',
+    streams: ['Management'],
+    specialNote: 'Also offers the 5-year IPM admitted directly after Class 12 — see UG Colleges (Maharashtra).',
+    programGroups: [
+      { stream: 'Management (Post-UG)', programs: [
+        { name: 'PGP (MBA) — 2 years', exam: 'CAT', examCss: 'ce-cat' },
+      ] },
+    ],
+  },
+
+  {
+    name: 'Indian Institute of Management Sirmaur',
+    short: 'IIM Sirmaur',
+    type: 'INI',
+    district: 'Sirmaur',
+    state: 'Himachal Pradesh',
+    naac: 'Accredited',
+    nirf: 'Emerging IIM',
+    affil: 'Institute of National Importance — IIM Act, 2017',
+    website: 'iimsirmaur.ac.in',
+    streams: ['Management'],
+    specialNote: 'Also offers the 5-year IPM admitted directly after Class 12 — see UG Colleges (Himachal Pradesh).',
+    programGroups: [
+      { stream: 'Management (Post-UG)', programs: [
+        { name: 'PGP (MBA) — 2 years', exam: 'CAT', examCss: 'ce-cat' },
+      ] },
+    ],
+  },
+
+  {
+    name: 'Indian Institute of Management Amritsar',
+    short: 'IIM Amritsar',
+    type: 'INI',
+    district: 'Amritsar',
+    state: 'Punjab',
+    naac: 'Accredited',
+    nirf: 'Top Management',
+    affil: 'Institute of National Importance — IIM Act, 2017',
+    website: 'iimamritsar.ac.in',
+    streams: ['Management'],
+    specialNote: 'Also offers the 5-year IPM admitted directly after Class 12 — see UG Colleges (Punjab).',
+    programGroups: [
+      { stream: 'Management (Post-UG)', programs: [
+        { name: 'PGP (MBA) — 2 years', exam: 'CAT', examCss: 'ce-cat' },
+      ] },
+    ],
+  },
+
+  {
+    name: 'Indian Institute of Management Bodh Gaya',
+    short: 'IIM Bodh Gaya',
+    type: 'INI',
+    district: 'Gaya',
+    state: 'Bihar',
+    naac: 'Accredited',
+    nirf: 'Top Management',
+    affil: 'Institute of National Importance — IIM Act, 2017',
+    website: 'iimbg.ac.in',
+    streams: ['Management'],
+    specialNote: 'Also offers the 5-year IPM admitted directly after Class 12 — see UG Colleges (Bihar).',
+    programGroups: [
+      { stream: 'Management (Post-UG)', programs: [
+        { name: 'PGP (MBA) — 2 years', exam: 'CAT', examCss: 'ce-cat' },
+      ] },
+    ],
+  },
+
+  {
+    name: 'Indian Institute of Management Sambalpur',
+    short: 'IIM Sambalpur',
+    type: 'INI',
+    district: 'Sambalpur',
+    state: 'Odisha',
+    naac: 'Accredited',
+    nirf: 'Emerging IIM',
+    affil: 'Institute of National Importance — IIM Act, 2017',
+    website: 'iimsambalpur.ac.in',
+    streams: ['Management'],
+    specialNote: 'Also offers the 5-year IPM admitted directly after Class 12 — see UG Colleges (Odisha).',
+    programGroups: [
+      { stream: 'Management (Post-UG)', programs: [
+        { name: 'PGP (MBA) — 2 years', exam: 'CAT', examCss: 'ce-cat' },
+      ] },
+    ],
+  },
+
+  {
+    name: 'Indian Institute of Management Jammu',
+    short: 'IIM Jammu',
+    type: 'INI',
+    district: 'Jammu',
+    state: 'Jammu & Kashmir',
+    naac: 'Accredited',
+    nirf: 'Emerging IIM',
+    affil: 'Institute of National Importance — IIM Act, 2017',
+    website: 'iimj.ac.in',
+    streams: ['Management'],
+    specialNote: 'Also offers the 5-year IPM admitted directly after Class 12 — see UG Colleges (Jammu & Kashmir).',
+    programGroups: [
+      { stream: 'Management (Post-UG)', programs: [
+        { name: 'PGP (MBA) — 2 years', exam: 'CAT', examCss: 'ce-cat' },
+      ] },
+    ],
+  },
+
+  {
+    name: 'Indian Institute of Management Mumbai',
+    short: 'IIM Mumbai',
+    type: 'INI',
+    district: 'Mumbai',
+    state: 'Maharashtra',
+    naac: 'A++',
+    nirf: 'Top 10 Management',
+    affil: 'Institute of National Importance — IIM Act, 2017 (formerly NITIE)',
+    website: 'iimmumbai.ac.in',
+    streams: ['Management'],
+    specialNote: 'Re-established as IIM Mumbai in 2023 (formerly NITIE). Also offers a UG-level BS in Digital Science & Business Management via JEE Main — see UG Colleges (Maharashtra).',
+    programGroups: [
+      { stream: 'Management (Post-UG)', programs: [
+        { name: 'PGP (MBA — Industrial Management / Operations) — 2 years', exam: 'CAT', examCss: 'ce-cat' },
+        { name: 'M.Tech (Industrial Engineering & Operations Research)', exam: 'GATE', examCss: 'ce-gate' },
+      ] },
+    ],
+  },
+
+  {
+    name: 'Indian Institute of Management Shillong',
+    short: 'IIM Shillong',
+    type: 'INI',
+    district: 'East Khasi Hills',
+    state: 'Meghalaya',
+    naac: 'Accredited',
+    nirf: 'Top Management',
+    affil: 'Institute of National Importance — IIM Act, 2017',
+    website: 'iimshillong.ac.in',
+    streams: ['Management'],
+    specialNote: 'Est. 2007. No UG-level IPM programme.',
+    programGroups: [
+      { stream: 'Management (Post-UG)', programs: [
+        { name: 'PGP (MBA) — 2 years', exam: 'CAT', examCss: 'ce-cat' },
+      ] },
+    ],
+  },
+
+  // ═══════════════════════════════════════════════
+  // OTHER INSTITUTES OF NATIONAL IMPORTANCE (PG-only)
+  // ═══════════════════════════════════════════════
+
+  {
+    name: 'Sree Chitra Tirunal Institute for Medical Sciences and Technology',
+    short: 'SCTIMST',
+    type: 'INI',
+    district: 'Thiruvananthapuram',
+    state: 'Kerala',
+    naac: '',
+    nirf: 'Top 10 Medical',
+    affil: 'Institute of National Importance (Ministry of Health & Family Welfare, est. 1980)',
+    website: 'sctimst.ac.in',
+    streams: ['Medical', 'Engineering'],
+    specialNote: 'Combines a super-speciality cardiovascular/neuro hospital with a biomedical technology wing. PG-only — no UG programme.',
+    programGroups: [
+      { stream: 'Medicine & Biomedical Technology (PG)', programs: [
+        { name: 'MD / MS / DM / MCh (super-speciality)', exam: 'SCTIMST Entrance / INI-CET', examCss: 'ce-neetpg' },
+        { name: 'M.Tech (Biomedical Technology / Clinical Engineering)', exam: 'SCTIMST Entrance / GATE', examCss: 'ce-gate' },
+      ] },
+    ],
+  },
+
+  {
+    name: 'Academy of Scientific and Innovative Research',
+    short: 'AcSIR',
+    type: 'INI',
+    district: 'Ghaziabad',
+    state: 'Uttar Pradesh',
+    naac: 'Accredited',
+    nirf: '',
+    affil: 'Institute of National Importance (CSIR — Ministry of Science & Technology, est. 2010)',
+    website: 'acsir.res.in',
+    streams: ['Arts & Science', 'Engineering'],
+    specialNote: 'Degree-granting umbrella for all 37 CSIR national laboratories. Teaching happens at the CSIR lab a student is assigned to. PG/doctoral only — no UG programme.',
+    programGroups: [
+      { stream: 'Science & Engineering (PG/Doctoral)', programs: [
+        { name: 'Integrated M.Tech–PhD / M.Sc–PhD (Engineering & Science disciplines)', exam: 'AcSIR Entrance', examCss: 'ce-own' },
+        { name: 'PhD (all CSIR lab disciplines)', exam: 'AcSIR Entrance', examCss: 'ce-own' },
+      ] },
+    ],
+  },
+
+  {
+    name: 'Rajiv Gandhi National Institute of Youth Development',
+    short: 'RGNIYD',
+    type: 'INI',
+    district: 'Kancheepuram',
+    state: 'Tamil Nadu',
+    naac: 'Accredited',
+    nirf: '',
+    affil: 'Institute of National Importance (Ministry of Youth Affairs & Sports, Act No. 35/2012)',
+    website: 'rgniyd.gov.in',
+    streams: ['Arts & Science'],
+    specialNote: 'Sriperumbudur campus. India\'s only INI dedicated to youth development studies. Primarily PG/doctoral — no UG programme.',
+    programGroups: [
+      { stream: 'Youth & Social Development (PG)', programs: [
+        { name: 'M.A (Youth Development, Rural Development, Social Work) / M.Sc (Psychology, Data Science)', exam: 'CUET-PG', examCss: 'ce-cuetpg' },
+      ] },
     ],
   },
 

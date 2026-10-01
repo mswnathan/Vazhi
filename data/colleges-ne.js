@@ -67,12 +67,44 @@ const COLLEGES_NE=[
     ]},
   ]},
 
+{name:'Central Agricultural University (CAU)',short:'CAU Imphal',type:'Central',district:'Imphal West',state:'Manipur',
+  naac:'Accredited',nirf:'Top Agriculture',affil:'Central Agricultural University — CAU Act, 1992 (Ministry of Agriculture)',website:'cau.ac.in',
+  streams:['Agriculture'],
+  specialNote:'India\'s only central university dedicated to agriculture, serving all 8 North-Eastern states via constituent colleges. 85% of UG seats reserved for NE-state nomination, 15% via ICAR AIEEA.',
+  programGroups:[
+    {stream:'Agriculture & Allied Sciences',programs:[
+      {name:'B.Sc (Hons) Agriculture — 4 years',exam:'State Nomination (NE states) / ICAR AIEEA UG',examCss:'ce-icar'},
+      {name:'B.Tech (Agricultural Engineering, Food Technology)',exam:'State Nomination (NE states) / ICAR AIEEA UG',examCss:'ce-icar'},
+    ]},
+  ]},
+
+{name:'National Sports University (NSU)',short:'NSU Imphal',type:'Central',district:'Imphal West',state:'Manipur',
+  naac:'',nirf:'',affil:'Central University — National Sports University Act, 2018 (Ministry of Youth Affairs & Sports)',website:'nsu.ac.in',
+  streams:['Education'],
+  specialNote:'India\'s first and only central university dedicated to sports education and coaching. Koutruk campus, Imphal.',
+  programGroups:[
+    {stream:'Sports Science & Coaching',programs:[
+      {name:'B.P.E.S — Bachelor of Physical Education & Sports (4 years)',exam:'NSU Admission Test (NSU-CAT)',examCss:'ce-own'},
+      {name:'B.Sc (Sports Coaching) — Athletics, Archery, Badminton, Boxing, Football, Hockey, Shooting, Swimming, Weight-Lifting',exam:'NSU Admission Test (NSU-CAT)',examCss:'ce-own'},
+    ]},
+  ]},
+
 {name:'NIT Manipur',short:'NITMan',type:'Central',district:'Imphal West',state:'Manipur',
   naac:'Accredited',nirf:'Top 100 Engineering',affil:'National Institute of Technology',website:'nitmanipur.ac.in',
   streams:['Engineering'],
   programGroups:[
     {stream:'Engineering & Technology',programs:[
       {name:'B.Tech (CSE, ECE, EEE, Mechanical, Civil)',exam:'JEE Main',examCss:'ce-jee'},
+    ]},
+  ]},
+
+{name:'IIIT Manipur',short:'IIITMan',type:'Central',district:'Imphal West',state:'Manipur',
+  naac:'Accredited',nirf:'Emerging IIIT',affil:'Indian Institute of Information Technology (MoE — Institute of National Importance)',website:'iiitmanipur.ac.in',
+  streams:['Engineering'],
+  specialNote:'Established 2015. Currently functioning from a transit campus in Imphal.',
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech (CSE, ECE)',exam:'JEE Main',examCss:'ce-jee'},
     ]},
   ]},
 
@@ -111,6 +143,16 @@ const COLLEGES_NE=[
   programGroups:[
     {stream:'Engineering & Technology',programs:[
       {name:'B.Tech (CSE, ECE, EEE, Mechanical, Civil, Chemical, Production)',exam:'JEE Main',examCss:'ce-jee'},
+    ]},
+  ]},
+
+{name:'IIIT Agartala',short:'IIITA-TR',type:'Central',district:'West Tripura',state:'Tripura',
+  naac:'Accredited',nirf:'Emerging IIIT',affil:'Indian Institute of Information Technology (MoE — Institute of National Importance)',website:'iiitagartala.ac.in',
+  streams:['Engineering'],
+  specialNote:'Established 2018.',
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech (CSE, ECE)',exam:'JEE Main',examCss:'ce-jee'},
     ]},
   ]},
 

@@ -30,6 +30,36 @@ const COLLEGES_MH=[
     ]},
   ]},
 
+{name:'IIIT Nagpur',short:'IIITN',type:'Central',district:'Nagpur',state:'Maharashtra',
+  naac:'Accredited',nirf:'Emerging IIIT',affil:'Indian Institute of Information Technology (MoE + Govt of Maharashtra — Institute of National Importance)',website:'iiitn.ac.in',
+  streams:['Engineering'],
+  specialNote:'Established 2016.',
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech (CSE — AI/ML, Data Science; ECE — IoT)',exam:'JEE Main',examCss:'ce-jee'},
+    ]},
+  ]},
+
+{name:'IIIT Pune',short:'IIITP',type:'Central',district:'Pune',state:'Maharashtra',
+  naac:'Accredited',nirf:'Emerging IIIT',affil:'Indian Institute of Information Technology (MoE + Govt of Maharashtra — Institute of National Importance)',website:'iiitp.ac.in',
+  streams:['Engineering'],
+  specialNote:'Established 2016. Campus at Talegaon, Pune.',
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech (CSE, ECE)',exam:'JEE Main',examCss:'ce-jee'},
+    ]},
+  ]},
+
+{name:'National Institute of Naturopathy',short:'NIN Pune',type:'Central',district:'Pune',state:'Maharashtra',
+  naac:'Accredited',nirf:'Top Naturopathy Institute',affil:'Institute of National Importance (Ministry of AYUSH, est. 1986)',website:'ninpune.ayush.gov.in',
+  streams:['Medical'],
+  specialNote:'India\'s apex naturopathy institute, housed in the historic "Bapu Bhavan" on Tadiwala Road, Pune.',
+  programGroups:[
+    {stream:'Naturopathy & Yoga',programs:[
+      {name:'BNYS — Bachelor of Naturopathy and Yogic Sciences (5.5 years incl. internship)',exam:'NEET UG',examCss:'ce-neet'},
+    ]},
+  ]},
+
 {name:'IISER Pune',short:'IISERP',type:'Central',district:'Pune',state:'Maharashtra',
   naac:'A++',nirf:'Top Science Research',affil:'Institute of Science Education & Research (MoE)',website:'iiserpune.ac.in',
   streams:['Arts & Science'],
@@ -287,6 +317,20 @@ const COLLEGES_MH=[
     ]},
     {stream:'Management',programs:[
       {name:'BBA Maritime Logistics (3 years)',exam:'IMU CET',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'Mahatma Gandhi Antarrashtriya Hindi Vishwavidyalaya (MGAHV)',short:'MGAHV Wardha',type:'Central',district:'Wardha',state:'Maharashtra',
+  naac:'A',nirf:'Top Language University',affil:'Central University — MGAHV Act, 1997',website:'hindivishwa.org',
+  streams:['Arts & Science','Law'],
+  specialNote:'India\'s only central university dedicated to Hindi language, literature and translation studies.',
+  programGroups:[
+    {stream:'Arts & Science',programs:[
+      {name:'B.A (Hons) Hindi, Philosophy, Journalism & Mass Communication',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.Ed (2 years)',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+    {stream:'Law',programs:[
+      {name:'B.A LL.B (Hons) — 5-year integrated',exam:'CUET UG',examCss:'ce-cuet'},
     ]},
   ]},
 

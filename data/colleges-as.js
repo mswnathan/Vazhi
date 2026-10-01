@@ -25,6 +25,16 @@ const COLLEGES_AS=[
     ]},
   ]},
 
+{name:'IIIT Guwahati',short:'IIITG',type:'Central',district:'Guwahati',state:'Assam',
+  naac:'Accredited',nirf:'Emerging IIIT',affil:'Indian Institute of Information Technology (MoE — Institute of National Importance)',website:'iiitg.ac.in',
+  streams:['Engineering'],
+  specialNote:'Established 2013.',
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech (CSE, ECE)',exam:'JEE Main',examCss:'ce-jee'},
+    ]},
+  ]},
+
 {name:'NIT Silchar',short:'NITS',type:'Central',district:'Cachar',state:'Assam',
   naac:'A',nirf:'Top 50 Engineering',affil:'National Institute of Technology',website:'nits.ac.in',
   streams:['Engineering'],
@@ -60,6 +70,27 @@ const COLLEGES_AS=[
     ]},
     {stream:'Management',programs:[
       {name:'B.B.A (3 years)',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+  ]},
+
+{name:'Assam University',short:'AUS Silchar',type:'Central',district:'Cachar',state:'Assam',
+  naac:'A',nirf:'Top University',affil:'Central University — Assam University Act, 1989',website:'aus.ac.in',
+  streams:['Engineering','Arts & Science','Law','Management'],
+  specialNote:'Named after the state rather than a person, but founded in memory of freedom fighters — serves the Barak Valley region from its Silchar campus.',
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech (CSE, ECE, Civil, IT)',exam:'JEE Main',examCss:'ce-jee'},
+    ]},
+    {stream:'Arts & Science',programs:[
+      {name:'B.Sc (Hons) Physics, Chemistry, Mathematics, Life Sciences',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.A (Hons) English, Bengali, History, Political Science',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.Pharm',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+    {stream:'Law',programs:[
+      {name:'B.A LL.B (Hons) — 5-year integrated',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+    {stream:'Management',programs:[
+      {name:'BBA (3 years)',exam:'CUET UG',examCss:'ce-cuet'},
     ]},
   ]},
 

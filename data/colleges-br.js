@@ -94,6 +94,19 @@ const COLLEGES_BR=[
     ]},
   ]},
 
+{name:'Dr. Rajendra Prasad Central Agricultural University (RPCAU)',short:'RPCAU Pusa',type:'Central',district:'Samastipur',state:'Bihar',
+  naac:'Accredited',nirf:'Top Agriculture',affil:'Central Agricultural University (est. 2016, ICAR-affiliated)',website:'rpcau.ac.in',
+  streams:['Agriculture'],
+  specialNote:'Historic Pusa campus (est. 1905). Admission via ICAR AIEEA UG (now merged into CUET-UG).',
+  programGroups:[
+    {stream:'Agriculture, Forestry & Home Science',programs:[
+      {name:'B.Sc (Hons) Agriculture — 4 years',exam:'CUET-UG (15% all-India quota) / ICAR Counselling',examCss:'ce-icar'},
+      {name:'B.Sc (Hons) Horticulture — 4 years',exam:'CUET-UG (15% all-India quota) / ICAR Counselling',examCss:'ce-icar'},
+      {name:'B.Sc Forestry — 4 years',exam:'CUET-UG (15% all-India quota) / ICAR Counselling',examCss:'ce-icar'},
+      {name:'B.Sc (Hons) Community Science — 4 years',exam:'CUET-UG (15% all-India quota) / ICAR Counselling',examCss:'ce-icar'},
+    ]},
+  ]},
+
 
 {name:'Composite Regional Centre for Skill Development, Rehabilitation & Empowerment of Persons with Disabilities (CRCSRE Patna)',short:'CRCSRE Patna',type:'Central',district:'Patna',state:'Bihar',
   naac:'',nirf:'',affil:'Ministry of Social Justice & Empowerment',website:'disabilityaffairs.gov.in',

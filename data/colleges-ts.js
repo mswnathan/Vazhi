@@ -21,6 +21,17 @@ const COLLEGES_TS=[
     ]},
   ]},
 
+{name:'AIIMS Bibinagar',short:'AIIMS Bibinagar',type:'Central',district:'Yadadri Bhuvanagiri',state:'Telangana',
+  naac:'Accredited',nirf:'Top 25 Medical',affil:'All India Institute of Medical Sciences (MoHFW)',website:'aiimsbibinagar.edu.in',
+  streams:['Medical'],
+  specialNote:'Dedicated to the nation in 2019. Located near Hyderabad.',
+  programGroups:[
+    {stream:'Medical',programs:[
+      {name:'MBBS (5.5 years incl. internship)',exam:'NEET UG',examCss:'ce-neet'},
+      {name:'B.Sc Nursing (4 years)',exam:'AIIMS Nursing Entrance',examCss:'ce-own'},
+    ]},
+  ]},
+
 {name:'NIT Warangal',short:'NITW',type:'Central',district:'Warangal',state:'Telangana',
   naac:'A+',nirf:'Top 15 Engineering',affil:'National Institute of Technology',website:'nitw.ac.in',
   streams:['Engineering'],
@@ -225,6 +236,20 @@ const COLLEGES_TS=[
   programGroups:[
     {stream:'Hospitality & Hotel Management',programs:[
       {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
+{name:'Maulana Azad National Urdu University (MANUU)',short:'MANUU Hyderabad',type:'Central',district:'Hyderabad',state:'Telangana',
+  naac:'A+',nirf:'Top Urdu-Medium University',affil:'Central University — MANUU Act, 1998',website:'manuu.edu.in',
+  streams:['Arts & Science','Management'],
+  specialNote:'India\'s only central university offering Urdu-medium instruction across disciplines. Gachibowli campus, Hyderabad. 10th/12th with Urdu as subject/medium required for most programmes.',
+  programGroups:[
+    {stream:'Arts & Science',programs:[
+      {name:'B.A (Hons) Urdu, Arabic, Persian, Journalism & Mass Communication',exam:'MANUU Entrance Test (MANUU-ET)',examCss:'ce-own'},
+      {name:'B.Ed (2 years)',exam:'MANUU-ET',examCss:'ce-own'},
+    ]},
+    {stream:'Management',programs:[
+      {name:'BBA (3 years)',exam:'MANUU-ET',examCss:'ce-own'},
     ]},
   ]},
 

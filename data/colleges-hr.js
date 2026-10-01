@@ -49,6 +49,16 @@ const COLLEGES_HR=[
     ]},
   ]},
 
+{name:'IIIT Sonepat',short:'IIITSNP',type:'Central',district:'Sonipat',state:'Haryana',
+  naac:'Accredited',nirf:'Emerging IIIT',affil:'Indian Institute of Information Technology (MoE + Govt of Haryana — Institute of National Importance)',website:'iiitsonepat.ac.in',
+  streams:['Engineering'],
+  specialNote:'Established 2014.',
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech (CSE, ECE)',exam:'JEE Main',examCss:'ce-jee'},
+    ]},
+  ]},
+
 {name:'IIM Rohtak',short:'IIMR',type:'Central',district:'Rohtak',state:'Haryana',
   naac:'Accredited',nirf:'Top 15 Management',affil:'Indian Institute of Management (MoE — Autonomous)',website:'iimrohtak.ac.in',
   streams:['Management'],

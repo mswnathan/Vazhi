@@ -46,6 +46,16 @@ const COLLEGES=[
     ]},
   ]},
 
+{name:'NIT Puducherry',short:'NITPY',type:'Central',district:'Karaikal',state:'Puducherry',
+  naac:'Accredited',nirf:'Top 100 Engineering',affil:'National Institute of Technology (est. 2010)',website:'nitpy.ac.in',
+  streams:['Engineering'],
+  specialNote:'Campus at Thiruvettakudy, Karaikal. 50% seats reserved for Puducherry/Karaikal/Mahe/Yanam/Andaman & Nicobar home-state candidates.',
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech (CSE, ECE, EEE, Mechanical, Civil, Chemical)',exam:'JEE Main',examCss:'ce-jee'},
+    ]},
+  ]},
+
 {name:'IIITDM Kancheepuram',short:'IIITDM',type:'Central',district:'Kancheepuram',state:'Tamil Nadu',
   naac:'A+',nirf:'Top 100 Engg',affil:'Indian Institute of IT, Design & Manufacturing (Autonomous)',website:'iiitdm.ac.in',
   streams:['Engineering','Design'],
@@ -1762,6 +1772,41 @@ const COLLEGES=[
       {name:'B.A Music (Carnatic — Vocal, Veena, Violin)',exam:'Audition + Merit',examCss:'ce-own'},
       {name:'B.A Dance (Bharatanatyam)',exam:'Audition + Merit',examCss:'ce-own'},
       {name:'Diploma in Traditional Arts & Crafts',exam:'Audition + Merit',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'Dakshina Bharat Hindi Prachar Sabha',short:'DBHPS',type:'Central',district:'Chennai',state:'Tamil Nadu',
+  naac:'B+',nirf:'Unique Language Institute',affil:'Institute of National Importance (est. 1918, founded by Mahatma Gandhi)',website:'dbhpscentral.org',
+  streams:['Arts & Science'],
+  specialNote:'Premier South Indian institution for Hindi language teaching, examinations and teacher training. Praveshika/Rashtrabhasha courses lead up to B.A-equivalent Hindi qualifications.',
+  programGroups:[
+    {stream:'Language & Teacher Education',programs:[
+      {name:'B.A (Hindi)',exam:'Merit (Class 12 + Hindi proficiency levels)',examCss:'ce-merit'},
+      {name:'B.Ed (Hindi)',exam:'Merit + Institute Entrance',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'National Institute of Siddha',short:'NIS Chennai',type:'Central',district:'Chennai',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Top Siddha Institute',affil:'Institute of National Importance (Ministry of AYUSH, est. 2005)',website:'nischennai.org',
+  streams:['Medical'],
+  specialNote:'India\'s apex institute for Siddha medicine — the Tamil traditional medicine system. Attached hospital at Tambaram Sanatorium, Chennai.',
+  programGroups:[
+    {stream:'Siddha Medicine',programs:[
+      {name:'BSMS — Bachelor of Siddha Medicine and Surgery (5.5 years incl. internship)',exam:'NEET UG',examCss:'ce-neet'},
+    ]},
+  ]},
+
+{name:'National Institute for Empowerment of Persons with Multiple Disabilities (Divyangjan) — NIEPMD',short:'NIEPMD Chennai',type:'Central',district:'Chennai',state:'Tamil Nadu',
+  naac:'Accredited',nirf:'Specialised Rehabilitation',affil:'Ministry of Social Justice & Empowerment, Govt of India',website:'niepmd.nic.in',
+  streams:['Medical'],
+  specialNote:'Apex national institute for multiple-disabilities rehabilitation. Admission via Common Entrance Test (CET-PWD) — jointly conducted with NIEPID, SVNIRTAR, PDUNIPPD, NILD.',
+  programGroups:[
+    {stream:'Allied Health & Rehabilitation',programs:[
+      {name:'Bachelor of Physiotherapy / BPT (4.5 years)',exam:'CET-PWD',examCss:'ce-own'},
+      {name:'Bachelor of Occupational Therapy / BOT (4.5 years)',exam:'CET-PWD',examCss:'ce-own'},
+      {name:'Bachelor in Prosthetics & Orthotics / BPO (4.5 years)',exam:'CET-PWD',examCss:'ce-own'},
+      {name:'Bachelor in Audiology & Speech-Language Pathology / BASLP (3 years)',exam:'CET-PWD',examCss:'ce-own'},
+      {name:'B.Ed Special Education',exam:'CET-PWD',examCss:'ce-own'},
     ]},
   ]},
 

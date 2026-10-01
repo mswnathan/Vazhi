@@ -35,6 +35,26 @@ const COLLEGES_KA=[
     ]},
   ]},
 
+{name:'IIIT Dharwad',short:'IIITDWD',type:'Central',district:'Dharwad',state:'Karnataka',
+  naac:'Accredited',nirf:'Emerging IIIT',affil:'Indian Institute of Information Technology (MoE — Institute of National Importance)',website:'iiitdwd.ac.in',
+  streams:['Engineering'],
+  specialNote:'Established 2015. Runs on the IIT Dharwad campus initially, own campus at Sattur.',
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech (CSE, ECE, Data Science & AI)',exam:'JEE Main',examCss:'ce-jee'},
+    ]},
+  ]},
+
+{name:'IIIT Raichur',short:'IIITR',type:'Central',district:'Raichur',state:'Karnataka',
+  naac:'Accredited',nirf:'Emerging IIIT',affil:'Indian Institute of Information Technology (MoE — Institute of National Importance)',website:'iiitr.ac.in',
+  streams:['Engineering'],
+  specialNote:'Established 2019.',
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech (CSE, ECE)',exam:'JEE Main',examCss:'ce-jee'},
+    ]},
+  ]},
+
 {name:'NIT Karnataka (NIT Surathkal)',short:'NITK',type:'Central',district:'Mangaluru',state:'Karnataka',
   naac:'A+',nirf:'#7 Engineering',affil:'National Institute of Technology',website:'nitk.ac.in',
   streams:['Engineering'],
@@ -51,6 +71,16 @@ const COLLEGES_KA=[
   programGroups:[
     {stream:'Engineering & Technology',programs:[
       {name:'Integrated M.Tech (CSE, ECE, Data Science) — 5-year UG entry',exam:'JEE Main / IIITB Entrance',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'National Institute of Unani Medicine',short:'NIUM Bengaluru',type:'Central',district:'Bengaluru',state:'Karnataka',
+  naac:'Accredited',nirf:'Top Unani Institute',affil:'Institute of National Importance (Ministry of AYUSH)',website:'nium.in',
+  streams:['Medical'],
+  specialNote:'India\'s apex Unani medicine institute. Kottigepalya campus, Bengaluru.',
+  programGroups:[
+    {stream:'Unani Medicine',programs:[
+      {name:'BUMS — Bachelor of Unani Medicine and Surgery (5.5 years incl. internship)',exam:'NEET UG',examCss:'ce-neet'},
     ]},
   ]},
 

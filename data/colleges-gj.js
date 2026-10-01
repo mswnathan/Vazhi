@@ -31,6 +31,36 @@ const COLLEGES_GJ=[
     ]},
   ]},
 
+{name:'IIIT Surat',short:'IIITS-GJ',type:'Central',district:'Surat',state:'Gujarat',
+  naac:'Accredited',nirf:'Emerging IIIT',affil:'Indian Institute of Information Technology (MoE + Govt of Gujarat — Institute of National Importance)',website:'iiitsurat.ac.in',
+  streams:['Engineering'],
+  specialNote:'Established 2017.',
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech (CSE, ECE)',exam:'JEE Main',examCss:'ce-jee'},
+    ]},
+  ]},
+
+{name:'IIIT Vadodara',short:'IIITV',type:'Central',district:'Vadodara',state:'Gujarat',
+  naac:'Accredited',nirf:'Top IIIT',affil:'Indian Institute of Information Technology (MoE — Institute of National Importance)',website:'iiitvadodara.ac.in',
+  streams:['Engineering'],
+  specialNote:'Established 2013.',
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech (CSE, ECE, IT)',exam:'JEE Main',examCss:'ce-jee'},
+    ]},
+  ]},
+
+{name:'Institute of Teaching and Research in Ayurveda (ITRA)',short:'ITRA Jamnagar',type:'Central',district:'Jamnagar',state:'Gujarat',
+  naac:'Accredited',nirf:'Top Ayurveda',affil:'Institute of National Importance (Ministry of AYUSH, est. 2020, formerly Gujarat Ayurved University)',website:'itra.ac.in',
+  streams:['Medical'],
+  specialNote:'India\'s foremost Ayurveda teaching & research institute.',
+  programGroups:[
+    {stream:'Ayurveda',programs:[
+      {name:'BAMS (5.5 years incl. internship)',exam:'NEET UG',examCss:'ce-neet'},
+    ]},
+  ]},
+
 {name:'NLU Gandhi Nagar (GNLU)',short:'GNLU',type:'Central',district:'Gandhinagar',state:'Gujarat',
   naac:'A',nirf:'Top 10 Law',affil:'National Law University (Gujarat)',website:'gnlu.ac.in',
   streams:['Law'],
@@ -212,6 +242,19 @@ const COLLEGES_GJ=[
   programGroups:[
     {stream:'Hospitality & Hotel Management',programs:[
       {name:'B.Sc Hospitality & Hotel Administration (3 years)',exam:'NCHM JEE',examCss:'ce-nchm'},
+    ]},
+  ]},
+
+{name:'Gati Shakti Vishwavidyalaya (GSV)',short:'GSV Vadodara',type:'Central',district:'Vadodara',state:'Gujarat',
+  naac:'',nirf:'',affil:'Central University — GSV Act, 2022 (Ministry of Railways, formerly National Rail & Transportation Institute)',website:'gsv.ac.in',
+  streams:['Engineering','Management'],
+  specialNote:'India\'s first and only central university dedicated to transportation, logistics and railway engineering.',
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech (Civil, Mechanical, Electrical, ECE, AI & Data Science, Aviation Engineering — Rail & Transportation specialisation)',exam:'JEE Main',examCss:'ce-jee'},
+    ]},
+    {stream:'Management',programs:[
+      {name:'BBA (Transportation & Logistics)',exam:'CUET UG',examCss:'ce-cuet'},
     ]},
   ]},
 

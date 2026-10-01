@@ -46,6 +46,47 @@ const COLLEGES_AP=[
     ]},
   ]},
 
+{name:'IIIT Sri City',short:'IIITS',type:'Central',district:'Chittoor',state:'Andhra Pradesh',
+  naac:'Accredited',nirf:'Top IIIT',affil:'Indian Institute of Information Technology (MoE — Institute of National Importance)',website:'iiits.ac.in',
+  streams:['Engineering'],
+  specialNote:'Established 2013 in the Sri City industrial cluster.',
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech (CSE, ECE)',exam:'JEE Main',examCss:'ce-jee'},
+    ]},
+  ]},
+
+{name:'Indian Institute of Petroleum and Energy (IIPE)',short:'IIPE',type:'Central',district:'Visakhapatnam',state:'Andhra Pradesh',
+  naac:'Accredited',nirf:'Top 100 Engineering',affil:'Institute of National Importance (Ministry of Petroleum & Natural Gas, est. 2016)',website:'iipe.ac.in',
+  streams:['Engineering'],
+  specialNote:'Domain-specific petroleum & energy institute. Strong placements at ONGC, Shell, ExxonMobil, HPCL, BPCL, GAIL.',
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech (Petroleum, Chemical, Mechanical, Mathematics & Computing)',exam:'JEE Advanced',examCss:'ce-jee'},
+    ]},
+  ]},
+
+{name:'School of Planning and Architecture, Vijayawada (SPAV)',short:'SPAV',type:'Central',district:'Vijayawada',state:'Andhra Pradesh',
+  naac:'Accredited',nirf:'Top Architecture',affil:'School of Planning and Architecture (Autonomous CFTI — MoE, est. 2008)',website:'spav.ac.in',
+  streams:['Engineering'],
+  specialNote:'One of only 3 central SPAs in India (with Delhi and Bhopal).',
+  programGroups:[
+    {stream:'Architecture & Planning',programs:[
+      {name:'B.Arch (5 years)',exam:'JEE Main Paper 2 / NATA',examCss:'ce-nata'},
+    ]},
+  ]},
+
+{name:'AIIMS Mangalagiri',short:'AIIMS Mangalagiri',type:'Central',district:'Guntur',state:'Andhra Pradesh',
+  naac:'Accredited',nirf:'Top 20 Medical',affil:'All India Institute of Medical Sciences (MoHFW)',website:'aiimsmangalagiri.edu.in',
+  streams:['Medical'],
+  specialNote:'Dedicated to the nation in 2020.',
+  programGroups:[
+    {stream:'Medical',programs:[
+      {name:'MBBS (5.5 years incl. internship)',exam:'NEET UG',examCss:'ce-neet'},
+      {name:'B.Sc Nursing (4 years)',exam:'AIIMS Nursing Entrance',examCss:'ce-own'},
+    ]},
+  ]},
+
 {name:'Damodaram Sanjivayya National Law University (DSNLU)',short:'DSNLU',type:'Central',district:'Visakhapatnam',state:'Andhra Pradesh',
   naac:'Accredited',nirf:'Top NLU',affil:'National Law University (Andhra Pradesh)',website:'dsnlu.ac.in',
   streams:['Law'],
@@ -62,6 +103,31 @@ const COLLEGES_AP=[
     {stream:'Arts & Science (UG)',programs:[
       {name:'B.Sc (Physics, Chemistry, Maths, Computer Science)',exam:'CUET UG',examCss:'ce-cuet'},
       {name:'B.A (English, History, Political Science, Economics)',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+  ]},
+
+{name:'Central Tribal University of Andhra Pradesh (CTUAP)',short:'CTUAP',type:'Central',district:'Vizianagaram',state:'Andhra Pradesh',
+  naac:'',nirf:'',affil:'Central University — CTU Act, 2019',website:'ctuap.ac.in',
+  streams:['Arts & Science','Management'],
+  specialNote:'Established 2019, transit campus at Kondakarakam village. Focus on tribal studies alongside regular science and humanities programmes.',
+  programGroups:[
+    {stream:'Arts & Science',programs:[
+      {name:'B.Sc (Physics, Chemistry, Maths, Botany, Zoology)',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.A (Hons) English, Tribal Studies',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+    {stream:'Management',programs:[
+      {name:'BBA (3 years)',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+  ]},
+
+{name:'The National Sanskrit University',short:'NSU Tirupati',type:'Central',district:'Tirupati',state:'Andhra Pradesh',
+  naac:'Accredited',nirf:'Top Sanskrit University',affil:'Central University — NSU Act, 2020 (formerly Rashtriya Sanskrit Vidyapeetha, est. 1961)',website:'nsktu.ac.in',
+  streams:['Arts & Science'],
+  specialNote:'One of three central Sanskrit universities, alongside the Central Sanskrit University and Shri Lal Bahadur Shastri National Sanskrit University, both in Delhi.',
+  programGroups:[
+    {stream:'Arts & Science (UG)',programs:[
+      {name:'Sastri (B.A Sanskrit Hons) — 3 years',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'Siksha Shastri (B.Ed Sanskrit) — 2 years',exam:'NCET',examCss:'ce-ncet'},
     ]},
   ]},
 

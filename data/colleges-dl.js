@@ -255,18 +255,6 @@ const COLLEGES_DL=[
     ]},
   ]},
 
-{name:'Pandit Deendayal Upadhyaya National Institute for Persons with Physical Disabilities (PDUNIPPD)',short:'PDUNIPPD',type:'Central',district:'Delhi',state:'Delhi',
-  naac:'Accredited',nirf:'Specialised Rehabilitation',affil:'Ministry of Social Justice & Empowerment, Govt of India',website:'iphnewdelhi.edu.in',
-  streams:['Medical'],
-  specialNote:'Premier national institute for disability rehabilitation and special education. Offers professional courses for those seeking careers in special education, prosthetics & orthotics, and vocational rehabilitation.',
-  programGroups:[
-    {stream:'Medical & Rehabilitation',programs:[
-      {name:'B.Ed Special Education (Visual / Hearing / Intellectual Disability) — 2 years',exam:'Entrance Test + Interview',examCss:'ce-own'},
-      {name:'B.Sc Prosthetics & Orthotics — 4 years',exam:'Entrance Test',examCss:'ce-own'},
-      {name:'Diploma in Vocational Rehabilitation — 1 year',exam:'Merit',examCss:'ce-merit'},
-    ]},
-  ]},
-
 {name:'Indraprastha Institute of Information Technology Delhi (IIIT-D)',short:'IIITD',type:'State',district:'Delhi',state:'Delhi',
   naac:'A+',nirf:'Top Engineering',affil:'IIIT Delhi (Statutory University — Delhi Govt)',website:'iiitd.ac.in',
   streams:['Engineering'],
@@ -278,15 +266,26 @@ const COLLEGES_DL=[
   ]},
 
 
-{name:'Pt. Deendayal Upadhyaya National Institute for Persons with Physical Disabilities (PDU-NIPPPD)',short:'PDU-NIPPPD',type:'Central',district:'Delhi',state:'Delhi',
-  naac:'',nirf:'',affil:'Ministry of Social Justice & Empowerment',website:'nipppd.nic.in',
+{name:'Pt. Deendayal Upadhyaya National Institute for Persons with Physical Disabilities (PDUNIPPD)',short:'PDUNIPPD',type:'Central',district:'Delhi',state:'Delhi',
+  naac:'Accredited',nirf:'Specialised Rehabilitation',affil:'Ministry of Social Justice & Empowerment, Govt of India',website:'pdunippd.nic.in',
   streams:['Medical'],
-  specialNote:'One of India\'s oldest rehabilitation institutes (est. 1955). Offers BPT, BOT, BPO through centralized MoSJE counselling.',
+  specialNote:'One of India\'s oldest rehabilitation institutes (est. 1955, formerly Institute for the Physically Handicapped). Admission via Common Entrance Test (CET-PWD) — jointly conducted with NIEPID, NIEPMD, SVNIRTAR, NILD.',
   programGroups:[
     {stream:'Allied Health & Rehabilitation',programs:[
-      {name:'Bachelor of Physiotherapy / BPT (4.5 years)',exam:'MoSJE CET',examCss:'ce-own'},
-      {name:'Bachelor of Occupational Therapy / BOT (4.5 years)',exam:'MoSJE CET',examCss:'ce-own'},
-      {name:'Bachelor in Prosthetics & Orthotics / BPO (4.5 years)',exam:'MoSJE CET',examCss:'ce-own'},
+      {name:'Bachelor of Physiotherapy / BPT (4.5 years)',exam:'CET-PWD',examCss:'ce-own'},
+      {name:'Bachelor of Occupational Therapy / BOT (4.5 years)',exam:'CET-PWD',examCss:'ce-own'},
+      {name:'Bachelor in Prosthetics & Orthotics / BPO (4.5 years)',exam:'CET-PWD',examCss:'ce-own'},
+      {name:'B.Ed Special Education',exam:'CET-PWD',examCss:'ce-own'},
+    ]},
+  ]},
+
+{name:'All India Institute of Ayurveda (AIIA)',short:'AIIA Delhi',type:'Central',district:'New Delhi',state:'Delhi',
+  naac:'Accredited',nirf:'Top Ayurveda Institute',affil:'Institute of National Importance (Ministry of AYUSH, est. 2015)',website:'aiia.gov.in',
+  streams:['Medical'],
+  specialNote:'Apex Ayurveda institute, Sarita Vihar campus. BAMS degree awarded in affiliation with University of Delhi.',
+  programGroups:[
+    {stream:'Ayurveda',programs:[
+      {name:'BAMS (5.5 years incl. internship)',exam:'NEET UG',examCss:'ce-neet'},
     ]},
   ]},
 
@@ -298,6 +297,26 @@ const COLLEGES_DL=[
     {stream:'Arts & Science (UG)',programs:[
       {name:'Shastri (B.A Sanskrit Hons) — 3 years (Sahitya, Vyakarana, Nyaya, Vedanta, Jyotish, Dharmashastra)',exam:'CUET UG',examCss:'ce-cuet'},
       {name:'Shiksha Shastri (B.Ed Sanskrit) — 2 years',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+  ]},
+
+{name:'Shri Lal Bahadur Shastri National Sanskrit University',short:'SLBSNSU',type:'Central',district:'Delhi',state:'Delhi',
+  naac:'Accredited',nirf:'Top Sanskrit University',affil:'Central University — SLBSNSU Act, 2020 (formerly Rashtriya Sanskrit Vidyapeeth, est. 1962)',website:'slbsrsv.ac.in',
+  streams:['Arts & Science'],
+  specialNote:'Qutub Institutional Area campus, New Delhi. One of three central Sanskrit universities, alongside the Central Sanskrit University (Delhi) and The National Sanskrit University (Tirupati).',
+  programGroups:[
+    {stream:'Arts & Science (UG)',programs:[
+      {name:'Shastri (B.A Sanskrit Hons) — 3 years',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+  ]},
+
+{name:'Maulana Azad Institute of Dental Sciences (MAIDS)',short:'MAIDS Delhi',type:'Central',district:'Delhi',state:'Delhi',
+  naac:'Accredited',nirf:'#3 Dental',affil:'Govt of NCT Delhi — affiliated to University of Delhi (est. 2003)',website:'maids.ac.in',
+  streams:['Medical'],
+  specialNote:'Campus alongside Maulana Azad Medical College & Lok Nayak Hospital. One of India\'s top-ranked government dental colleges.',
+  programGroups:[
+    {stream:'Dental Sciences',programs:[
+      {name:'BDS (5 years incl. internship)',exam:'NEET UG',examCss:'ce-neet'},
     ]},
   ]},
 

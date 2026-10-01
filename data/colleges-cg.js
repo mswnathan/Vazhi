@@ -9,6 +9,16 @@ const COLLEGES_CG=[
 // ──────────────────────────────────────────────
 // CENTRAL GOVERNMENT
 // ──────────────────────────────────────────────
+{name:'IIT Bhilai',short:'IITBH',type:'Central',district:'Durg',state:'Chhattisgarh',
+  naac:'Accredited',nirf:'Emerging IIT',affil:'Autonomous (Institute of National Importance)',website:'iitbhilai.ac.in',
+  streams:['Engineering'],
+  specialNote:'Established 2016. Permanent campus at Kutelabhata village, Bhilai (Durg district).',
+  programGroups:[
+    {stream:'Engineering & Technology',programs:[
+      {name:'B.Tech (CSE, Data Science & AI, EE, ECE, Mechanical, Materials & Metallurgical, Mechatronics)',exam:'JEE Advanced',examCss:'ce-jee'},
+    ]},
+  ]},
+
 {name:'NIT Raipur',short:'NITRAIPUR',type:'Central',district:'Raipur',state:'Chhattisgarh',
   naac:'A+',nirf:'Top 40 Engineering',affil:'National Institute of Technology (est. 1956 as Govt. Engineering College)',website:'nitrr.ac.in',
   streams:['Engineering'],
@@ -56,6 +66,27 @@ const COLLEGES_CG=[
     ]},
     {stream:'Education',programs:[
       {name:'B.Ed (2 years)',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+  ]},
+
+{name:'Guru Ghasidas Vishwavidyalaya (GGV)',short:'GGV Bilaspur',type:'Central',district:'Bilaspur',state:'Chhattisgarh',
+  naac:'A',nirf:'Top 100 University',affil:'Central University — GGV Act, 2009 (est. 1983 as a state university)',website:'ggu.ac.in',
+  streams:['Engineering','Arts & Science','Management','Law'],
+  specialNote:'Koni campus, Bilaspur. Named after Guru Ghasidas, 18th-century social reformer and founder of the Satnami sect. Distinct from the nearby Central University of Chhattisgarh.',
+  programGroups:[
+    {stream:'Engineering',programs:[
+      {name:'B.Tech (CSE, Electronics, Mechanical)',exam:'JEE Main / CUET UG',examCss:'ce-jee'},
+    ]},
+    {stream:'Arts & Science',programs:[
+      {name:'B.Sc (Hons) Physics, Chemistry, Mathematics, Biotechnology',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.A (Hons) English, History, Political Science, Economics',exam:'CUET UG',examCss:'ce-cuet'},
+      {name:'B.Pharm',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+    {stream:'Law',programs:[
+      {name:'B.A LL.B (Hons) — 5-year integrated',exam:'CUET UG',examCss:'ce-cuet'},
+    ]},
+    {stream:'Management',programs:[
+      {name:'BBA / MBA (integrated)',exam:'CUET UG',examCss:'ce-cuet'},
     ]},
   ]},
 
