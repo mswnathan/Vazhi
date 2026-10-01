@@ -9,9 +9,24 @@
 // so archived entries are not re-flagged as stale. It is not loaded by any HTML.
 //
 // Same schema as data/announcements.js. Newest cycles at the top.
-// Last archived: 2026-08-21 (entries whose dates passed as of this date).
+// Last archived: 2026-10-01 (entries whose dates passed as of this date).
 
 const ANNOUNCEMENTS_ARCHIVE = [
+
+  // ── 2026-27 CYCLE ─────────────────────────────────────────────────────────
+
+  {
+    id: 'cat-2026-application',
+    title: 'CAT 2026 — Registration (IIMs)',
+    category: 'application',
+    icon: '📋',
+    date: '2026-08-03',
+    endDate: '2026-09-15',
+    desc: 'Common Admission Test registration for MBA/PGP admission to IIMs and 1000+ B-schools. Exam on 29 Nov 2026.',
+    link: 'iimcat.ac.in',
+    priority: 'high',
+    level: 'National',
+  },
 
   // ── 2026 CYCLE ────────────────────────────────────────────────────────────
 
