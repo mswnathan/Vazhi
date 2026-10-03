@@ -16,6 +16,18 @@ const ANNOUNCEMENTS = [
 
   // ── APPLICATIONS ─────────────────────────────────────────────────────────
   {
+    id: 'acsir-jan-2027-admission',
+    title: 'AcSIR — PhD & IDDP Admissions (January 2027 session)',
+    category: 'application',
+    icon: '🔬',
+    date: '2026-10-03',
+    endDate: '2026-10-31',
+    desc: 'AcSIR (Institution of National Importance) invites applications for PhD (Science, Medical Research, Engineering) and IDDP (M.Tech + PhD in Engineering) for the January 2027 session. CSIR GATE/GPAT JRF positions available. Application fee ₹1,000 (General/OBC/EWS) or ₹500 (SC/ST/PwD/Women); shortlisted candidates sit a test and/or interview. Reservation as per Govt of India rules.',
+    link: 'acsir.res.in/admissions',
+    priority: 'normal',
+    level: 'National',
+  },
+  {
     id: 'gate-2027-application',
     title: 'GATE 2027 — Registration (Late-Fee Window)',
     category: 'application',

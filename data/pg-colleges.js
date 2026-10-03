@@ -2438,11 +2438,13 @@ const PG_COLLEGES = [
     affil: 'Institute of National Importance (CSIR — Ministry of Science & Technology, est. 2010)',
     website: 'acsir.res.in',
     streams: ['Arts & Science', 'Engineering'],
-    specialNote: 'Degree-granting umbrella for all 37 CSIR national laboratories. Teaching happens at the CSIR lab a student is assigned to. PG/doctoral only — no UG programme.',
+    specialNote: 'Degree-granting umbrella for 78 research institutes — 38 CSIR labs, 28 ICMR institutes and 5 DST institutes, among others. Research happens at the associated institute a student is assigned to. PhD/IDDP only — no UG programme; most PhD routes need a national fellowship (CSIR/UGC NET, GATE, INSPIRE etc.). Shortlisted candidates sit a test and/or interview.',
     programGroups: [
       { stream: 'Science & Engineering (PG/Doctoral)', programs: [
-        { name: 'Integrated M.Tech–PhD / M.Sc–PhD (Engineering & Science disciplines)', exam: 'AcSIR Entrance', examCss: 'ce-own' },
-        { name: 'PhD (all CSIR lab disciplines)', exam: 'AcSIR Entrance', examCss: 'ce-own' },
+        { name: 'IDDP — Integrated M.Tech + PhD in Engineering (B.E./B.Tech, 55%)', exam: 'GATE / GPAT + AcSIR Test/Interview', examCss: 'ce-gate' },
+        { name: 'PhD (Science — Biological, Chemical, Physical, Mathematical & Information, Agricultural)', exam: 'National fellowship + AcSIR Test/Interview', examCss: 'ce-own' },
+        { name: 'PhD (Engineering)', exam: 'National fellowship / GATE + AcSIR Test/Interview', examCss: 'ce-own' },
+        { name: 'PhD (Medical Research — ICMR institutes)', exam: 'National fellowship + AcSIR Test/Interview', examCss: 'ce-own' },
       ] },
     ],
   },
