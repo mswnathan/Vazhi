@@ -9,12 +9,24 @@
 // so archived entries are not re-flagged as stale. It is not loaded by any HTML.
 //
 // Same schema as data/announcements.js. Newest cycles at the top.
-// Last archived: 2026-10-01 (entries whose dates passed as of this date).
+// Last archived: 2026-10-22 (entries whose dates passed as of this date).
 
 const ANNOUNCEMENTS_ARCHIVE = [
 
   // ── 2026-27 CYCLE ─────────────────────────────────────────────────────────
 
+  {
+    id: 'gate-2027-application',
+    title: 'GATE 2027 — Registration (Late-Fee Window)',
+    category: 'application',
+    icon: '📋',
+    date: '2026-08-14',
+    endDate: '2026-10-12',
+    desc: 'GATE 2027 (conducted by IIT Madras) registration via GOAPS. Last date without late fee was 5 Oct 2026; late-fee window (+₹500) extended to 12 Oct 2026. Exam on 6, 7, 13, 14, 20 & 21 Feb 2027.',
+    link: 'gate2027.iitm.ac.in',
+    priority: 'high',
+    level: 'National',
+  },
   {
     id: 'cat-2026-application',
     title: 'CAT 2026 — Registration (IIMs)',
