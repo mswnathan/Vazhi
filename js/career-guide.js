@@ -504,10 +504,7 @@ function renderCareerPath(c) {
     </div>
   </div>`;
 
-  const hasGatedDetail = !!(exams.length || courses.length || augEntries.length || (c.dayInLife && c.dayInLife.length));
-  const gatedDetail = (hasGatedDetail && typeof VazhiContact !== 'undefined')
-    ? VazhiContact.gateHTML({source:'career-guide-detail', label:'Contact us for exam list, degree options & career path'})
-    : `${dayInLife}${step2}${step3}${step4}`;
+  const gatedDetail = `${dayInLife}${step2}${step3}${step4}`;
 
   return `<div class="cg-path">
     <div class="cg-path-hdr" style="${headerStyle}">
