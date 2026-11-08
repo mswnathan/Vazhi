@@ -2191,3 +2191,5 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-si
   color: var(--text2);
 }
 .vc-modal-x:hover { background: var(--border); color: var(--text); }
+.site-logo-img{height:41px;width:auto;display:block;flex-shrink:0}
+@media(max-width:480px){.site-logo-img{height:34px}}
