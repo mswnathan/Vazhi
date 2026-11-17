@@ -22,7 +22,8 @@ function annStatus(entry) {
   const end   = entry.endDate ? annParseDate(entry.endDate) : annParseDate(entry.date);
 
   if (today > end) {
-    return { status: 'past', label: 'Completed' };
+    const isDeadline = entry.category === 'application' || entry.category === 'admission';
+    return { status: 'past', label: isDeadline ? 'Closed' : 'Completed' };
   }
   if (today >= start) {
     return { status: 'ongoing', label: 'Ongoing' };
@@ -77,35 +78,35 @@ function renderAnnouncements(filter) {
 
   // Sort upcoming by date ascending
   upcoming.sort((a, b) => annParseDate(a.date) - annParseDate(b.date));
-  // Sort past by date descending (most recent first)
-  past.sort((a, b) => annParseDate(b.date) - annParseDate(a.date));
+  // Sort closed by end date descending (most recently closed first)
+  past.sort((a, b) => annParseDate(b.endDate || b.date) - annParseDate(a.endDate || a.date));
 
-  const listEl       = document.getElementById('ann-list');
-  const pastEl       = document.getElementById('ann-past');
-  const pastToggleEl = document.getElementById('ann-past-toggle');
+  const listEl      = document.getElementById('ann-list');
+  const pastEl      = document.getElementById('ann-past');
+  const openHdrEl   = document.getElementById('ann-open-hdr');
+  const closedHdrEl = document.getElementById('ann-closed-hdr');
   if (!listEl) return;
 
-  if (!upcoming.length && !past.length) {
-    listEl.innerHTML = `<div class="ann-empty">No announcements in this category yet.</div>`;
-    if (pastEl)       pastEl.style.display = 'none';
-    if (pastToggleEl) pastToggleEl.style.display = 'none';
-    return;
+  // Section 1 — Open & upcoming (always shown)
+  if (openHdrEl) {
+    openHdrEl.innerHTML = `<span class="ann-sec-title">🟢 Open &amp; upcoming</span>` +
+      `<span class="ann-sec-count">${upcoming.length}</span>` +
+      `<span class="ann-sec-sub">Apply or prepare — these are still ahead of you</span>`;
   }
-
   listEl.innerHTML = upcoming.length
     ? upcoming.map(a => annRow(a, false)).join('')
-    : `<div class="ann-empty">No upcoming dates in this category.</div>`;
+    : `<div class="ann-empty">No open or upcoming dates in this category.</div>`;
 
-  if (pastEl) {
-    pastEl.innerHTML = past.length ? past.map(a => annRow(a, true)).join('') : '';
-    // Reset visibility when filter changes
-    pastEl.style.display = 'none';
+  // Section 2 — Already closed (visible; hidden only when there is nothing closed)
+  if (closedHdrEl) {
+    closedHdrEl.style.display = past.length ? '' : 'none';
+    closedHdrEl.innerHTML = `<span class="ann-sec-title">🔴 Already closed</span>` +
+      `<span class="ann-sec-count">${past.length}</span>` +
+      `<span class="ann-sec-sub">Deadlines and exams that have passed — don't plan around these</span>`;
   }
-  if (pastToggleEl) {
-    pastToggleEl.style.display = past.length ? '' : 'none';
-    // Reset button text
-    const btn = pastToggleEl.querySelector('button');
-    if (btn) btn.textContent = '▸ Show completed / past dates';
+  if (pastEl) {
+    pastEl.innerHTML = past.map(a => annRow(a, true)).join('');
+    pastEl.style.display = past.length ? '' : 'none';
   }
 }
 
@@ -154,13 +155,4 @@ function toggleAnnStateOnly(btn) {
   annStateOnly = !annStateOnly;
   if (btn) btn.classList.toggle('active', annStateOnly);
   renderAnnouncements();
-}
-
-// ── PAST TOGGLE ───────────────────────────────────────────────────────────────
-function toggleAnnPast(btn) {
-  const pastEl = document.getElementById('ann-past');
-  if (!pastEl) return;
-  const open = pastEl.style.display === 'none';
-  pastEl.style.display = open ? '' : 'none';
-  btn.textContent = open ? '▾ Hide completed / past dates' : '▸ Show completed / past dates';
 }

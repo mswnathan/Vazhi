@@ -8,13 +8,89 @@
 // level:     'National' | 'State' — who the announcement applies to
 // state:     required when level is 'State' — e.g. 'Tamil Nadu'. Omit when level is 'National'.
 //
-// Only CURRENT / UPCOMING items live here. Once an item's date (endDate || date)
-// has passed, move it to archive/announcements-archive.js (reference only, not
-// served) — use `node agents/date-consistency.js` to find passed entries.
+// CURRENT / UPCOMING items live here, plus items that closed within the last 30 days:
+// the Announcements tab shows those under an "Already closed" section so students can
+// see what they've missed. Once an item's date (endDate || date) is MORE than 30 days
+// past, move it to archive/announcements-archive.js (reference only, not served) —
+// `node agents/date-consistency.js` flags those.
 
 const ANNOUNCEMENTS = [
 
   // ── APPLICATIONS ─────────────────────────────────────────────────────────
+  // (Recently closed items stay here for 30 days so the tab can show them under
+  //  "Already closed"; after that they move to archive/announcements-archive.js.)
+  {
+    id: 'acsir-jan-2027-admission',
+    title: 'AcSIR — PhD & IDDP Admissions (January 2027 session)',
+    category: 'application',
+    icon: '🔬',
+    date: '2026-10-03',
+    endDate: '2026-10-31',
+    desc: 'AcSIR (Institution of National Importance) invites applications for PhD (Science, Medical Research, Engineering) and IDDP (M.Tech + PhD in Engineering) for the January 2027 session. CSIR GATE/GPAT JRF positions available. Application fee ₹1,000 (General/OBC/EWS) or ₹500 (SC/ST/PwD/Women); shortlisted candidates sit a test and/or interview. Reservation as per Govt of India rules.',
+    link: 'acsir.res.in/admissions',
+    priority: 'normal',
+    level: 'National',
+  },
+  {
+    id: 'ugc-net-dec-2026-application',
+    title: 'UGC NET December 2026 — Registration',
+    category: 'application',
+    icon: '📋',
+    date: '2026-10-08',
+    endDate: '2026-10-31',
+    desc: 'NTA registration for UGC NET December 2026 (Assistant Professor / JRF eligibility, after PG). Last date 28 Oct 2026; late-fee window 29–31 Oct 2026. Correction window 2–4 Nov. Computer-based exam 14–19 Dec 2026 (20–21 Dec buffer days).',
+    link: 'ugcnet.nta.nic.in',
+    priority: 'high',
+    level: 'National',
+  },
+  {
+    id: 'csir-net-dec-2026-application',
+    title: 'Joint CSIR-UGC NET December 2026 — Registration',
+    category: 'application',
+    icon: '🔬',
+    date: '2026-10-07',
+    endDate: '2026-11-09',
+    desc: 'NTA registration for Joint CSIR-UGC NET December 2026 (JRF / Assistant Professor in Life, Chemical, Physical, Earth & Mathematical Sciences). Last date 5 Nov 2026; late-fee window 6–9 Nov. Exam in the second half of December 2026 — confirm exact dates in the NTA bulletin.',
+    link: 'csirnet.nta.nic.in',
+    priority: 'normal',
+    level: 'National',
+  },
+  {
+    id: 'uceed-ceed-2027-application',
+    title: 'UCEED & CEED 2027 — Registration (IIT B.Des / M.Des)',
+    category: 'application',
+    icon: '🎨',
+    date: '2026-10-01',
+    endDate: '2026-11-06',
+    desc: 'IIT Bombay registration for UCEED 2027 (B.Des at IIT Bombay, Delhi, Guwahati, Hyderabad, Indore, Roorkee + IIITDM Jabalpur) and CEED 2027 (M.Des / PhD in Design). Regular-fee deadline 31 Oct 2026; late-fee window to 6 Nov 2026, 5 pm. Both exams on 17 Jan 2027 (9 am–12 noon).',
+    link: 'uceed.iitb.ac.in',
+    priority: 'high',
+    level: 'National',
+  },
+  {
+    id: 'ailet-2027-application',
+    title: 'AILET 2027 — Registration (NLU Delhi)',
+    category: 'application',
+    icon: '⚖️',
+    date: '2026-08-07',
+    endDate: '2026-11-10',
+    desc: 'NLU Delhi registration for AILET 2027 — 5-year BA LLB (Hons), LLM and PhD. Last date 10 Nov 2026. Offline exam on 13 Dec 2026, 2–4 PM. Separate from CLAT — apply to both if you want NLU Delhi plus the CLAT NLUs.',
+    link: 'nationallawuniversitydelhi.in',
+    priority: 'normal',
+    level: 'National',
+  },
+  {
+    id: 'clat-2027-application',
+    title: 'CLAT 2027 — Registration (NLUs)',
+    category: 'application',
+    icon: '📋',
+    date: '2026-08-03',
+    endDate: '2026-11-07',
+    desc: 'Common Law Admission Test registration for the 5-year integrated UG law programme (and PG) at 24 National Law Universities. Deadline extended from 31 Oct to 7 Nov 2026 (correction window to 10 Nov). Exam on 6 Dec 2026.',
+    link: 'consortiumofnlus.ac.in',
+    priority: 'high',
+    level: 'National',
+  },
   {
     id: 'jee-main-2027-s1-application',
     title: 'JEE Main 2027 — Session 1 Registration',
@@ -97,6 +173,32 @@ const ANNOUNCEMENTS = [
     desc: 'NTA computer-based test for Assistant Professor / JRF eligibility (after PG). Exam from 14 Dec 2026, with the last days on 18/19 Dec and a buffer day on 21 Dec — the subject-wise schedule, city slip and admit card are released on ugcnet.nta.nic.in. Registration is closed.',
     link: 'ugcnet.nta.nic.in',
     priority: 'normal',
+    tentative: true,
+    level: 'National',
+  },
+  {
+    id: 'csir-net-dec-2026-exam',
+    title: 'CSIR-UGC NET December 2026 — Exam Days',
+    category: 'exam',
+    icon: '🔬',
+    date: '2026-12-20',
+    endDate: '2026-12-21',
+    desc: 'NTA computer-based test for JRF / Assistant Professor in Life, Chemical, Physical, Earth & Mathematical Sciences (after M.Sc). NTA calendar lists 20–21 Dec 2026, but one report gives different days (19, 22 & 27 Dec) — confirm in the NTA bulletin / city slip. Registration is closed.',
+    link: 'csirnet.nta.nic.in',
+    priority: 'normal',
+    tentative: true,
+    level: 'National',
+  },
+  {
+    id: 'cuet-pg-2027-exam',
+    title: 'CUET PG 2027 — Exam (March 2027)',
+    category: 'exam',
+    icon: '📝',
+    date: '2027-03-01',
+    endDate: '2027-03-25',
+    desc: 'NTA entrance test for M.A / M.Sc / M.Com and other PG programmes at central and participating universities. NTA\'s tentative calendar (16 Sep 2026) places the exam in March 2027; the Information Bulletin with registration dates is expected in December 2026 — watch nta.ac.in. Exact exam days may be revised.',
+    link: 'exams.nta.ac.in/cuet-pg',
+    priority: 'high',
     tentative: true,
     level: 'National',
   },

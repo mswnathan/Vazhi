@@ -185,6 +185,19 @@ a.nav-drawer-item{text-decoration:none}
 .ann-ttl{font-weight:700;font-size:.95rem;margin:3px 0 3px}
 .ann-desc{font-size:.83rem;color:var(--text2);line-height:1.4}
 .ann-note{margin-top:14px;font-size:.8rem;color:var(--text3);font-style:italic}
+/* key dates: two sections — open & upcoming / already closed */
+.ann-sec-hdr{display:flex;align-items:baseline;flex-wrap:wrap;gap:2px 10px;margin:4px 0 10px}
+.ann-sec-title{font-weight:800;font-size:1.02rem;color:var(--text)}
+.ann-sec-count{font-size:.72rem;font-weight:700;padding:1px 9px;border-radius:999px;background:var(--bg2);color:var(--text3)}
+.ann-sec-sub{font-size:.8rem;color:var(--text3);flex-basis:100%}
+.ann-sec-closed{margin-top:30px}
+.ann-sec-closed .ann-sec-title{color:#B91C1C}
+.ann-more{margin-top:12px;text-align:center}
+.ann-more button{background:none;border:1px solid var(--border);color:var(--text2);font-weight:600;font-size:.82rem;font-family:inherit;padding:7px 16px;border-radius:999px;cursor:pointer}
+.ann-more button:hover{border-color:var(--brand-dk);color:var(--brand-dk)}
+.ann-card-closed{opacity:.72;background:var(--bg2)}
+.ann-card-closed .ann-ttl{color:var(--text2)}
+.ann-closed-tag{font-size:.62rem;font-weight:700;color:#B91C1C;background:#FEF0F0;border-radius:999px;padding:1px 7px;margin-left:6px;text-transform:uppercase;letter-spacing:.03em}
 /* who is Vazhi */
 .who-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin-top:6px}
 .who-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:16px 17px;box-shadow:var(--shadow-sm)}
@@ -336,8 +349,12 @@ footer{padding:32px 0 54px;text-align:center;color:var(--text3);font-size:.85rem
   <div class="wrap">
     <div class="sec-label">📢 Key dates</div>
     <h2 class="serif">Upcoming exams, results &amp; deadlines</h2>
-    <p class="sub">The dates that matter for getting into a UG course.</p>
+    <p class="sub">The dates that matter for getting into a UG course (after Class 12) or a PG programme (after graduation).</p>
+    <div class="ann-sec-hdr" id="annOpenHdr"></div>
     <div class="ann-list" id="annList"></div>
+    <div class="ann-more" id="annMore" style="display:none"><button type="button" id="annMoreBtn"></button></div>
+    <div class="ann-sec-hdr ann-sec-closed" id="annClosedHdr" style="display:none"></div>
+    <div class="ann-list ann-list-closed" id="annClosedList" style="display:none"></div>
     <p class="ann-note">Dates are indicative — always confirm on the official website before applying.</p>
   </div>
 </section>
@@ -458,24 +475,56 @@ function setPersona(p,btn){
 (function renderHomeAnnouncements(){
   if(typeof ANNOUNCEMENTS==='undefined') return;
   const el=document.getElementById('annList'); if(!el) return;
-  const today=new Date().toISOString().slice(0,10);
+  const today=new Date(); const pad=n=>String(n).padStart(2,'0');
+  const todayISO=today.getFullYear()+'-'+pad(today.getMonth()+1)+'-'+pad(today.getDate());   // local date, not UTC
   const M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   const fmt=d=>{const p=d.split('-');return parseInt(p[2],10)+' '+M[parseInt(p[1],10)-1]+' '+p[0];};
-  const up=ANNOUNCEMENTS.filter(a=>(a.endDate||a.date)>=today).sort((a,b)=>a.date<b.date?-1:1).slice(0,6);
-  if(!up.length){ el.innerHTML='<p style="color:var(--text3)">No upcoming dates right now — check back soon.</p>'; return; }
-  el.innerHTML=up.map(a=>{
-    const levelTag = a.level==='State'
+  const tag=a=>a.level==='State'
       ? `<span class="ann-level-badge ann-level-state">📍 ${a.state||'State'}</span>`
       : a.level==='National' ? `<span class="ann-level-badge ann-level-national">🇮🇳 National</span>` : '';
-    return `
+  const endOf=a=>a.endDate||a.date;
+
+  /* Section 1 — Open & upcoming (first 6, "Show all" reveals the rest) */
+  const up=ANNOUNCEMENTS.filter(a=>endOf(a)>=todayISO).sort((a,b)=>a.date<b.date?-1:1);
+  const openCard=a=>`
     <div class="ann-card">
       <div class="ann-ico">${a.icon||'📌'}</div>
       <div class="ann-body">
-        <div class="ann-date">${fmt(a.date)}${a.endDate?' – '+fmt(a.endDate):''}${a.tentative?'<span class="ann-tent">Tentative</span>':''}${levelTag}</div>
+        <div class="ann-date">${fmt(a.date)}${a.endDate?' – '+fmt(a.endDate):''}${a.tentative?'<span class="ann-tent">Tentative</span>':''}${tag(a)}</div>
         <div class="ann-ttl">${a.title}</div>
         <div class="ann-desc">${a.desc||''}</div>
       </div>
-    </div>`;}).join('');
+    </div>`;
+  const LIMIT=6;
+  const hdr=document.getElementById('annOpenHdr');
+  if(hdr) hdr.innerHTML=`<span class="ann-sec-title">🟢 Open &amp; upcoming</span><span class="ann-sec-count">${up.length}</span><span class="ann-sec-sub">Apply or prepare — these are still ahead of you</span>`;
+  if(!up.length){ el.innerHTML='<p style="color:var(--text3)">No upcoming dates right now — check back soon.</p>'; }
+  else{
+    const draw=all=>{ el.innerHTML=(all?up:up.slice(0,LIMIT)).map(openCard).join(''); };
+    draw(false);
+    const more=document.getElementById('annMore'), btn=document.getElementById('annMoreBtn');
+    if(more && btn && up.length>LIMIT){
+      let all=false; more.style.display=''; btn.textContent='Show all '+up.length+' open dates ▾';
+      btn.onclick=()=>{ all=!all; draw(all); btn.textContent=all?'Show fewer ▴':'Show all '+up.length+' open dates ▾'; };
+    }
+  }
+
+  /* Section 2 — Already closed (recently passed items kept in data for 30 days) */
+  const closed=ANNOUNCEMENTS.filter(a=>endOf(a)<todayISO).sort((a,b)=>endOf(a)<endOf(b)?1:-1);
+  const cHdr=document.getElementById('annClosedHdr'), cEl=document.getElementById('annClosedList');
+  if(cHdr && cEl && closed.length){
+    cHdr.style.display=''; cEl.style.display='';
+    cHdr.innerHTML=`<span class="ann-sec-title">🔴 Already closed</span><span class="ann-sec-count">${closed.length}</span><span class="ann-sec-sub">Deadlines and exams that have passed — don't plan around these</span>`;
+    cEl.innerHTML=closed.map(a=>`
+    <div class="ann-card ann-card-closed">
+      <div class="ann-ico">${a.icon||'📌'}</div>
+      <div class="ann-body">
+        <div class="ann-date">Closed ${fmt(endOf(a))}<span class="ann-closed-tag">${(a.category==='application'||a.category==='admission')?'Closed':'Completed'}</span>${tag(a)}</div>
+        <div class="ann-ttl">${a.title}</div>
+        <div class="ann-desc">${a.desc||''}</div>
+      </div>
+    </div>`).join('');
+  }
 })();
 
 /* ───────── NAV DRAWER (hamburger menu for secondary sections) ───────── */

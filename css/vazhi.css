@@ -1450,7 +1450,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-si
 .ann-row{display:flex;align-items:flex-start;gap:12px;padding:13px 16px;border-bottom:1px solid var(--border);transition:background 0.1s}
 .ann-row:last-child{border-bottom:none}
 .ann-row:hover{background:var(--bg2)}
-.ann-past-row{opacity:0.52}
+.ann-past-row{opacity:0.62}
 .ann-priority-high{border-left:3px solid #D93025}
 
 /* Category pills */
@@ -1489,11 +1489,14 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-si
 /* Empty state */
 .ann-empty{padding:20px 16px;text-align:center;color:var(--text3);font-size:13px}
 
-/* Past toggle */
-.home-ann-past-toggle{margin-top:8px;text-align:center}
-.home-ann-past-toggle button{background:none;border:none;color:var(--text3);font-size:12px;font-weight:600;cursor:pointer;font-family:inherit;padding:4px 8px;border-radius:6px}
-.home-ann-past-toggle button:hover{color:var(--accent);background:var(--bg2)}
-.home-ann-past{margin-top:8px}
+/* Section headers: Open & upcoming / Already closed */
+.ann-sec-hdr{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px;margin:14px 2px 8px}
+.ann-sec-title{font-size:14px;font-weight:800;color:var(--text)}
+.ann-sec-count{font-size:11px;font-weight:700;padding:1px 8px;border-radius:10px;background:var(--bg2);color:var(--text3)}
+.ann-sec-sub{font-size:11px;color:var(--text3);flex-basis:100%}
+.ann-sec-closed{margin-top:22px}
+.ann-sec-closed .ann-sec-title{color:#B91C1C}
+.home-ann-past{margin-top:0}
 
 /* Disclaimer */
 .home-ann-note{font-size:11px;color:var(--text3);margin-top:8px;font-style:italic}
