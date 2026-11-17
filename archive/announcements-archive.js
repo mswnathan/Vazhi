@@ -9,12 +9,84 @@
 // so archived entries are not re-flagged as stale. It is not loaded by any HTML.
 //
 // Same schema as data/announcements.js. Newest cycles at the top.
-// Last archived: 2026-10-22 (entries whose dates passed as of this date).
+// Last archived: 2026-11-17 (entries whose dates passed as of this date).
 
 const ANNOUNCEMENTS_ARCHIVE = [
 
   // ── 2026-27 CYCLE ─────────────────────────────────────────────────────────
 
+  {
+    id: 'acsir-jan-2027-admission',
+    title: 'AcSIR — PhD & IDDP Admissions (January 2027 session)',
+    category: 'application',
+    icon: '🔬',
+    date: '2026-10-03',
+    endDate: '2026-10-31',
+    desc: 'AcSIR (Institution of National Importance) invites applications for PhD (Science, Medical Research, Engineering) and IDDP (M.Tech + PhD in Engineering) for the January 2027 session. CSIR GATE/GPAT JRF positions available. Application fee ₹1,000 (General/OBC/EWS) or ₹500 (SC/ST/PwD/Women); shortlisted candidates sit a test and/or interview. Reservation as per Govt of India rules.',
+    link: 'acsir.res.in/admissions',
+    priority: 'normal',
+    level: 'National',
+  },
+  {
+    id: 'ugc-net-dec-2026-application',
+    title: 'UGC NET December 2026 — Registration',
+    category: 'application',
+    icon: '📋',
+    date: '2026-10-08',
+    endDate: '2026-10-31',
+    desc: 'NTA registration for UGC NET December 2026 (Assistant Professor / JRF eligibility, after PG). Last date 28 Oct 2026; late-fee window 29–31 Oct 2026. Correction window 2–4 Nov. Computer-based exam 14–19 Dec 2026 (20–21 Dec buffer days).',
+    link: 'ugcnet.nta.nic.in',
+    priority: 'high',
+    level: 'National',
+  },
+  {
+    id: 'csir-net-dec-2026-application',
+    title: 'Joint CSIR-UGC NET December 2026 — Registration',
+    category: 'application',
+    icon: '🔬',
+    date: '2026-10-07',
+    endDate: '2026-11-09',
+    desc: 'NTA registration for Joint CSIR-UGC NET December 2026 (JRF / Assistant Professor in Life, Chemical, Physical, Earth & Mathematical Sciences). Last date 5 Nov 2026; late-fee window 6–9 Nov. Exam in the second half of December 2026 — confirm exact dates in the NTA bulletin.',
+    link: 'csirnet.nta.nic.in',
+    priority: 'normal',
+    level: 'National',
+  },
+  {
+    id: 'uceed-ceed-2027-application',
+    title: 'UCEED & CEED 2027 — Registration (IIT B.Des / M.Des)',
+    category: 'application',
+    icon: '🎨',
+    date: '2026-10-01',
+    endDate: '2026-11-06',
+    desc: 'IIT Bombay registration for UCEED 2027 (B.Des at IIT Bombay, Delhi, Guwahati, Hyderabad, Indore, Roorkee + IIITDM Jabalpur) and CEED 2027 (M.Des / PhD in Design). Regular-fee deadline 31 Oct 2026; late-fee window to 6 Nov 2026, 5 pm. Both exams on 17 Jan 2027 (9 am–12 noon).',
+    link: 'uceed.iitb.ac.in',
+    priority: 'high',
+    level: 'National',
+  },
+  {
+    id: 'ailet-2027-application',
+    title: 'AILET 2027 — Registration (NLU Delhi)',
+    category: 'application',
+    icon: '⚖️',
+    date: '2026-08-07',
+    endDate: '2026-11-10',
+    desc: 'NLU Delhi registration for AILET 2027 — 5-year BA LLB (Hons), LLM and PhD. Last date 10 Nov 2026. Offline exam on 13 Dec 2026, 2–4 PM. Separate from CLAT — apply to both if you want NLU Delhi plus the CLAT NLUs.',
+    link: 'nationallawuniversitydelhi.in',
+    priority: 'normal',
+    level: 'National',
+  },
+  {
+    id: 'clat-2027-application',
+    title: 'CLAT 2027 — Registration (NLUs)',
+    category: 'application',
+    icon: '📋',
+    date: '2026-08-03',
+    endDate: '2026-11-07',
+    desc: 'Common Law Admission Test registration for the 5-year integrated UG law programme (and PG) at 24 National Law Universities. Deadline extended from 31 Oct to 7 Nov 2026 (correction window to 10 Nov). Exam on 6 Dec 2026.',
+    link: 'consortiumofnlus.ac.in',
+    priority: 'high',
+    level: 'National',
+  },
   {
     id: 'gate-2027-application',
     title: 'GATE 2027 — Registration (Late-Fee Window)',
