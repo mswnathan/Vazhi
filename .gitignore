@@ -19,3 +19,12 @@ mnt/
 
 # Client reports — private counselling documents, not for the live site
 clients/
+
+# Maintenance tooling & project notes — local only, NOT part of the published website.
+# (Repo = website files only. These stay on disk for validators/agents but are never pushed.)
+agents/
+tools/
+archive/
+exam-reference/
+CLAUDE.md
+PIPELINE_PHILOSOPHY.md
